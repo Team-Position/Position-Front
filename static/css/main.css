@@ -324,3 +324,7 @@ img {
 a {
     text-decoration: none;
 }
+strong,
+b {
+    font-weight: bold;
+}

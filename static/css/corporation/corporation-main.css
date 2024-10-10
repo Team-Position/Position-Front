@@ -301,10 +301,7 @@ button.interested_corp {
     display: flex;
     width: 16px;
     height: 16px;
-    background-image: url(
-        data:image/svg + xml,
-        %0A%3Csvgwidth="16"height="16"viewBox="0 0 16 16"fill="none"xmlns="http://www.w3.org/2000/svg"%3E%3Ccirclecx="8"cy="8"r="7.4"stroke="%238491A7"stroke-width="1.2"/%3E%3Cpathd="M8 6C8.552 6 9 5.552 9 5C9 4.4475 8.552 4 8 4C7.448 4 7 4.4475 7 5C7 5.552 7.448 6 8 6Z"fill="%238491A7"/%3E%3Cpathd="M8.79462 7.9067C8.74841 7.50883 8.41027 7.2 8 7.2C7.55817 7.2 7.2 7.55817 7.2 8V11.6L7.20538 11.6933C7.25159 12.0912 7.58973 12.4 8 12.4C8.44183 12.4 8.8 12.0418 8.8 11.6V8L8.79462 7.9067Z"fill="%238491A7"/%3E%3C/svg%3E%0A
-    );
+    background-image: url(/static/images/corporation/btn_infomation.svg);
 }
 .TipBox .TipCont.TopCenter {
     top: calc(100% + 17px);
@@ -329,10 +326,7 @@ button.interested_corp {
 .TipCont.RightCenter .Tail,
 .TipCont.BottomCenter .Tail,
 .TipCont.LeftCenter .Tail {
-    background: url(
-            data:image/svg + xml,
-            %0A%3Csvgwidth="32"height="32"viewBox="0 0 32 32"fill="none"xmlns="http://www.w3.org/2000/svg"%3E%3Cpathd="M8.5 19L16 9L23.5 19H8.5Z"fill="white"/%3E%3Cpathd="M16 8L23.5 18H32V19H23L16 9.66667L9 19H0V18H8.5L16 8Z"fill="%238491A7"/%3E%3C/svg%3E%0A
-        )
+    background: url("data:image/svg + xml,%0A%3Csvgwidth='32'height='32'viewBox='0 0 32 32'fill='none'xmlns='http://www.w3.org/2000/svg'%3E%3Cpathd='M8.5 19L16 9L23.5 19H8.5Z'fill='white'/%3E%3Cpathd='M16 8L23.5 18H32V19H23L16 9.66667L9 19H0V18H8.5L16 8Z'fill='%238491A7'/%3E%3C/svg%3E%0A")
         50% 0 no-repeat;
 }
 .TipCont .Tail {
@@ -345,10 +339,7 @@ button.interested_corp {
 .TipCont.RightCenter .Tail,
 .TipCont.BottomCenter .Tail,
 .TipCont.LeftCenter .Tail {
-    background: url(
-            data:image/svg + xml,
-            %0A%3Csvgwidth="32"height="32"viewBox="0 0 32 32"fill="none"xmlns="http://www.w3.org/2000/svg"%3E%3Cpathd="M8.5 19L16 9L23.5 19H8.5Z"fill="white"/%3E%3Cpathd="M16 8L23.5 18H32V19H23L16 9.66667L9 19H0V18H8.5L16 8Z"fill="%238491A7"/%3E%3C/svg%3E%0A
-        )
+    background: url("data:image/svg + xml,%0A%3Csvgwidth='32'height='32'viewBox='0 0 32 32'fill='none'xmlns='http://www.w3.org/2000/svg'%3E%3Cpathd='M8.5 19L16 9L23.5 19H8.5Z'fill='white'/%3E%3Cpathd='M16 8L23.5 18H32V19H23L16 9.66667L9 19H0V18H8.5L16 8Z'fill='%238491A7'/%3E%3C/svg%3E%0A")
         50% 0 no-repeat;
 }
 .TipCont.TopCenter .Tail:has(> svg.icon_tail) svg.icon_tail,
@@ -423,6 +414,7 @@ button.interested_corp {
     font-size: 14px;
     line-height: 20px;
 }
+
 .cont_introduce
     .favor_company
     .favor_company_infos
@@ -460,17 +452,6 @@ button.interested_corp {
     margin-left: auto;
     align-items: flex-end;
 }
-.cont_introduce
-    .favor_company
-    .favor_company_infos
-    .favor_company_item
-    .counting
-    .num {
-    margin-right: 2px;
-    color: var(--gray120);
-    font-size: 18px;
-    line-height: 26px;
-}
 .cont_introduce .favor_company .favor_company_infos .favor_company_item {
     display: flex;
     width: 100%;
@@ -495,17 +476,6 @@ button.interested_corp {
     display: flex;
     margin-left: auto;
     align-items: flex-end;
-}
-.cont_introduce
-    .favor_company
-    .favor_company_infos
-    .favor_company_item
-    .counting
-    .num {
-    margin-right: 2px;
-    color: var(--gray120);
-    font-size: 18px;
-    line-height: 26px;
 }
 .cont_introduce .company_curation {
     display: flex;
@@ -854,10 +824,7 @@ button.interested_corp {
     margin-left: 4px;
     width: 16px;
     height: 16px;
-    background-image: url(
-        data:image/svg + xml,
-        %3Csvgxmlns="http://www.w3.org/2000/svg"width="16"height="16"viewBox="0 0 16 16"fill="none"%3E%3Cpathd="M3 5.5L8 10.5L13 5.5"stroke="%2367738E"stroke-linecap="round"stroke-linejoin="round"/%3E%3C/svg%3E
-    );
+    background-image: url("data:image/svg + xml,%3Csvgxmlns='http://www.w3.org/2000/svg' width='16' height='16'viewBox='0 0 16 16' fill='none' %3E%3Cpathd='M3 5.5L8 10.5L13 5.5'stroke='%2367738E'stroke-linecap='round'stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 .cont_introduce .section .citation,
 .cont_introduce .section .citation2 {

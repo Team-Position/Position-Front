@@ -259,3 +259,32 @@ address, caption, cite, code, dfn, em, strong, th, var {
     width: 320px;
 }
 
+.login_input_wrap, .pop_login_layer {
+    --common_a_hover_color: #3769ed;
+}
+
+.login_input_wrap .tab_member_type {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.login_input_wrap .tab_member_type li .btn_tab {
+    position: relative;
+    color: #8491a7;
+    font-size: 24px;
+    line-height: 34px;
+    width: 100%;
+}
+
+.login_input_wrap .tab_member_type li .btn_tab.active {
+    font-weight: 700;
+    color: #373f73;
+}
+
+button, label {
+    cursor: pointer;
+}
+

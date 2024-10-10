@@ -488,6 +488,19 @@ button {
     font-weight: bold;
     line-height: 26px;
 }
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
 
 .login_input_wrap .login-form .btn_login {
     margin-bottom: 12px;
@@ -497,4 +510,99 @@ button {
     font-weight: bold;
     background: #2d65f2;
     border-radius: 4px;
+}
+
+.login_input_wrap .signup-forgotten {
+    margin-bottom: 24px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.login_input_wrap .signup-forgotten .sign_up, .login_input_wrap .signup-forgotten .forgotten, .login_input_wrap .signup-forgotten .link_rater {
+    color: #373f57;
+}
+
+.login_input_wrap .signup-forgotten>a {
+    text-align: center;
+    position: relative;
+}
+
+.login_input_wrap .signup-forgotten>a +a {
+    padding-left: 12px;
+    margin-left: 12px;
+}
+
+.login_input_wrap .signup-forgotten>a {
+    text-align: center;
+    position: relative;
+}
+
+.login_input_wrap .signup-forgotten>a +a:after {
+    position: absolute;
+    content: "";
+    background-color: var(--gray50);
+    width: 1px;
+    height: 14px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.login_input_wrap .signup-forgotten .forgotten:hover, .login_input_wrap .signup-forgotten .link_rater:hover {
+    color: var(--common_a_hover_color);
+}
+
+.login_input_wrap .social_login_tit .tit {
+    text-align: center;
+    font-size: 15px;
+    color: #5c667b;
+    line-height: 24px;
+}
+
+.login_input_wrap .social_login_tit .tit:before {
+    margin-right: 8px;
+}
+
+.login_input_wrap .social_login_tit .tit:before, .login_input_wrap .social_login_tit .tit:after {
+    width: 60px;
+    height: 1px;
+    background-color: #eaedf4;
+    display: inline-block;
+    vertical-align: super;
+    content: '';
+}
+
+.login_input_wrap .social_login_tit .tit:after {
+    margin-left: 8px;
+}
+
+.login_input_wrap .social_login_tit .tit:before, .login_input_wrap .social_login_tit .tit:after {
+    width: 60px;
+    height: 1px;
+    background-color: #eaedf4;
+    display: inline-block;
+    vertical-align: super;
+    content: '';
+}
+
+.login_input_wrap .social_login {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+.icon_kakao{
+    background: url(/static/images/login/kakao_login_medium_wide.png);
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    height: 45px;
+}
+
+.social_login{
+    height: 70px;
 }

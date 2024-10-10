@@ -338,7 +338,6 @@
                                                                         type="checkbox"
                                                                         id="autologin"
                                                                         name="autologin"
-                                                                        onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}"
                                                                         data-gtm-form-interact-field-id="0"
                                                                     />
                                                                     <label
@@ -357,7 +356,6 @@
                                                                         type="checkbox"
                                                                         id="id_save"
                                                                         name="id_save"
-                                                                        onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}"
                                                                         data-gtm-form-interact-field-id="1"
                                                                     />
                                                                     <label
@@ -376,6 +374,58 @@
                                                             로그인
                                                         </button>
                                                     </div>
+                                                    <div
+                                                        class="signup-forgotten"
+                                                    >
+                                                        <a
+                                                            href="/zf_user/helpdesk/idpw-find"
+                                                            class="sign_up"
+                                                            target=""
+                                                            >아이디 찾기</a
+                                                        >
+                                                        <a
+                                                            href="/zf_user/helpdesk/idpw-find"
+                                                            class="forgotten"
+                                                            target=""
+                                                            >비밀번호 찾기</a
+                                                        >
+                                                        <a
+                                                            href="/zf_user/applicant/rater/login-form"
+                                                            class="link_rater"
+                                                            style="
+                                                                display: none;
+                                                            "
+                                                            >협업자 로그인</a
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="social_login_tit"
+                                                    >
+                                                        <p class="tit">
+                                                            소셜 계정으로 간편
+                                                            로그인
+                                                        </p>
+                                                    </div>
+                                                    <ul
+                                                        class="social_login"
+                                                        id="wrap_social_login"
+                                                    >
+                                                        <li class="login_kakao">
+                                                            <a
+                                                                href=""
+                                                                class="sl_kakao ga_data_layer"
+                                                                data-provider="kakao"
+                                                            >
+                                                                <span
+                                                                    class="wrap_icon"
+                                                                >
+                                                                    <svg
+                                                                        class="icon_kakao"
+                                                                    ></svg>
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </form>

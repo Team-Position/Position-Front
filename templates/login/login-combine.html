@@ -252,7 +252,132 @@
                                             class="login_frm"
                                             method="post"
                                         >
-                                            <div class="login_input_wrap"></div>
+                                            <div class="login_input_wrap">
+                                                <ul
+                                                    class="tab_member_type"
+                                                    role="tablist"
+                                                >
+                                                    <li>
+                                                        <button
+                                                            type="button"
+                                                            class="btn_tab t_per active"
+                                                            role="tab selected=true"
+                                                            tabindex="0"
+                                                            area-selected="true"
+                                                        >
+                                                            개인회원
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button
+                                                            type="button"
+                                                            class="btn_tab t_com"
+                                                            role="tab"
+                                                            selected="false"
+                                                            tabindex="-1"
+                                                            area-selected="false"
+                                                        >
+                                                            기업회원
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                                <div
+                                                    class="tab_panel"
+                                                    role="tabpanel"
+                                                    aria-label="개인회원"
+                                                >
+                                                    <div class="login-form">
+                                                        <div
+                                                            class="id-input-box"
+                                                        >
+                                                            <input
+                                                                type="text"
+                                                                id="id"
+                                                                name="id"
+                                                                class="txt_tool"
+                                                                value=""
+                                                                required=""
+                                                            />
+                                                            <label
+                                                                id="id-label"
+                                                                class="id-label"
+                                                                for="id"
+                                                                >아이디</label
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="pw-input-box"
+                                                        >
+                                                            <input
+                                                                type="password"
+                                                                id="password"
+                                                                name="password"
+                                                                class="txt_tool"
+                                                                value=""
+                                                                maxlength="32"
+                                                                required=""
+                                                            />
+                                                            <label
+                                                                id="password-label"
+                                                                for="password"
+                                                                >비밀번호</label
+                                                            >
+                                                        </div>
+                                                        <div class="setting">
+                                                            <div
+                                                                class="InpBox"
+                                                                name="autologin_check_box"
+                                                                style="
+                                                                    display: block;
+                                                                "
+                                                            >
+                                                                <span
+                                                                    class="Chk"
+                                                                >
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        id="autologin"
+                                                                        name="autologin"
+                                                                        onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}"
+                                                                        data-gtm-form-interact-field-id="0"
+                                                                    />
+                                                                    <label
+                                                                        class="Lbl"
+                                                                        for="autologin"
+                                                                        >로그인
+                                                                        유지</label
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                            <div class="InpBox">
+                                                                <span
+                                                                    class="Chk"
+                                                                >
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        id="id_save"
+                                                                        name="id_save"
+                                                                        onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}"
+                                                                        data-gtm-form-interact-field-id="1"
+                                                                    />
+                                                                    <label
+                                                                        class="Lbl"
+                                                                        for="id_save"
+                                                                        >아이디
+                                                                        저장</label
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <button
+                                                            type="submit"
+                                                            class="btn_login BtnType SizeML"
+                                                        >
+                                                            로그인
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>

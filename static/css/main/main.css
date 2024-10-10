@@ -35,7 +35,7 @@ header, footer, section, nav, article {
 
 #sri_header:before {
     position: absolute;
-    top: 96px;
+    top: 80px;
     right: 0;
     left: 0;
     z-index: 1;
@@ -56,8 +56,8 @@ header, footer, section, nav, article {
     grid-template-areas:
         "bi search utility"
         "navigation navigation navigation";
-    grid-template-columns: 161px 554px 1fr;
-    grid-template-rows: 84px 64px;
+    /* grid-template-columns: 161px 554px 1fr;
+    grid-template-rows: 84px 64px; */
     align-items: center;
 }
 
@@ -71,7 +71,7 @@ header, footer, section, nav, article {
     padding-left: 27px;
 }
 
-#sri_header .bi .frame {
+/* #sri_header .bi .frame {
     display: block;
     overflow: hidden;
     width: 134px;
@@ -89,23 +89,34 @@ header, footer, section, nav, article {
     fill='%232D67FF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M109.69 0.757324C107.662 0.757324 106.133 2.23248 106.133 4.18829C106.133 6.16816 107.695 7.71836 109.69 7.71836C111.619 7.71836 113.248 6.10227 113.248 4.18829C113.248 2.26399 111.685 0.757324 109.69 0.757324Z' 
     fill='%232D67FF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M125.257 12.3591C120.297 12.3591 117.601 14.0613 117.1 14.4026C116.436 14.853 116.212 15.2931 116.212 16.1508V30.1837C116.212 31.5269 117.357 32.6621 118.711 32.6621C120.136 32.6621 121.21 31.5964 121.21 30.1837V18.0024L121.263 17.9697C121.992 17.5273 123.469 17.0516 125.101 17.0516C126.987 17.0516 129.002 18.0076 129.002 20.6905V30.1837C129.002 31.5269 130.147 32.6621 131.501 32.6621C132.926 32.6621 134 31.5964 134 30.1837V20.4653C134 15.1621 130.977 12.3591 125.257 12.3591Z' 
     fill='%232D67FF'/%3E%3C/svg%3E) 0 0 no-repeat;
-}
+} */
 
 /* 네비게이션 */
+*:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid #3157dd;
+    outline-offset: 2px;
+}
 #sri_header .navigation .btn_menu:hover {
     color: #2d67ff;
 }
+#sri_header .navigation .wrap_gnb .depth1:hover .txt, 
+#sri_header .navigation .wrap_gnb .depth1:focus-within .txt,
+ #sri_header .navigation .wrap_gnb>div.selected:not(.only) .depth1 .txt {
+    color: #2d65f2;
+}
+
 #sri_header .navigation {
     display: grid;
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 816px;
     grid-template-rows: 64px;
     gap: 15px;
     align-items: center;
-    grid-area: navigation;
+    /* grid-area: navigation; */
     grid-template-areas: "total gnb familysite";
-    grid-template-columns: 60px 1fr auto;
+    grid-template-columns: 35px 1fr auto;
 }
 
 #sri_header .navigation .btn_menu {
@@ -164,6 +175,9 @@ header, footer, section, nav, article {
     grid-auto-flow: column dense;
     gap: 20px;
     align-items: center;
+}
+#sri_header .navigation .wrap_gnb>div:hover, #sri_header .navigation .wrap_gnb>div:focus-within {
+    z-index: 2;
 }
 
 #sri_header .navigation .wrap_gnb .depth1 {
@@ -247,6 +261,9 @@ header, footer, section, nav, article {
     color: #5c667b;
     font-size: 14px;
 }
+#sri_header.bubble .navigation .wrap_gnb .depth2>li>a:hover, #sri_header.bubble .navigation .wrap_gnb .depth2>li>a:focus {
+    background: #f4f6fa;
+}
 
 
 /* 로그인 */
@@ -302,6 +319,10 @@ header, footer, section, nav, article {
     align-items: center;
     justify-content: center;
 }
+#sri_header .utility .btn_service:hover {
+    background: #f4f6fa;
+}
+
 #sri_header .utility .btn_service svg {
     width: 10px;
     height: 6px;
@@ -311,6 +332,13 @@ header, footer, section, nav, article {
 #sri_header .utility .wrap_service .layer_member {
     top: 36px;
     padding: 10px 0;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+:not(svg) {
+    transform-origin: 0px 0px;
 }
 
 #sri_header .utility .layer_member {

@@ -1,0 +1,261 @@
+.integrated_header {
+    display: flex;
+    height: 64px;
+    border-bottom: 1px solid #eaedf4;
+    line-height: 64px;
+    justify-content: space-between;
+}
+
+.integrated_header .area_logo {
+    margin-left: 64px;
+}
+
+.integrated_header .area_logo .link_saramin_logo {
+    margin-right: 6px;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+.integrated_header .area_util {
+    margin-right: 64px;
+}
+
+.integrated_header .area_util .util {
+    display: flex;
+    height: 64px;
+}
+
+.integrated_header .area_util .util_item {
+    display: flex;
+    align-items: center;
+}
+
+.integrated_header .area_util .util_menu {
+    display: flex;
+    color: var(--gray110);
+    font-size: 13px;
+    line-height: 17px;
+    align-items: center;
+}
+
+.integrated_header .area_util .menu_saramin:before{
+    background-image: url(/static/images/login/saramin-home.svg)
+}
+
+.integrated_header .area_util .util_menu:before {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    content: "";
+}
+
+.integrated_header .area_util .util_item+.util_item:before {
+    margin: 0 16px;
+    width: 1px;
+    height: 12px;
+    background-color: var(--gray40);
+    content: "";
+}
+
+.integrated_header .area_util .menu_must:before{
+    background-image: url(/static/images/login/saramin-must.svg);
+}
+
+#sri_section {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#sri_wrap {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    margin: 56px auto 80px auto;
+    width: 960px;
+}
+
+
+#sri_section.layout_wide #content {
+    width: 1260px;
+}
+
+.wrap_intergranted_login_page {
+    display: flex;
+    flex-direction: column;
+    width: 1084px;
+    height: 734px;
+    margin: 0 auto 60px;
+    box-sizing: border-box;
+    padding: 28px 44px;
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+}
+
+.wrap_intergranted_login_page .box_logo {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.wrap_intergranted_login_page .box_logo {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.wrap_intergranted_login_page .box_logo .item_logo {
+    position: relative;
+}
+
+.wrap_intergranted_login_page .box_intergrated_login {
+    display: flex;
+    height: 100%;
+}
+
+.wrap_intergranted_login_page .box_intergrated_login>div {
+    flex: 0 0 50%;
+}
+
+.wrap_intergranted_login_page .box_intergrated_login {
+    display: flex;
+    height: 100%;
+}
+
+.area_intergranted_login {
+    width: 310px;
+    margin: 0 auto;
+}
+
+.area_intergranted_login .tit {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 38px;
+    display: block;
+    margin: 26px 0 45px;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.area_intergranted_login.person .tit:after {
+    display: block;
+    margin: 48px auto 100px;
+    width: 254px;
+    height: 150px;
+    background-image: url(https://www.saraminimage.co.kr/sri/login/ico_login_model1.png);
+    background-size: cover;
+    content: '';
+}
+
+.area_intergranted_login .area_btn {
+    position: relative;
+}
+
+.area_intergranted_login .area_btn>a {
+    width: 100%;
+    position: relative;
+}
+
+
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+
+
+[class*="BtnType"].BlueInvert {
+    border-color: var(--blue90);
+    color: var(--blue90);
+    background: var(--white);
+}
+
+[class*="BtnType"].SizeL {
+    padding: 10px 15px 12px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.area_intergranted_login .area_btn>a {
+    width: 100%;
+    position: relative;
+}
+
+.area_intergranted_login .area_btn {
+    position: relative;
+}
+
+[class*="BtnType"].BlueInvert:hover {
+    background: var(--blue20);
+}
+
+.area_intergranted_login.company .tit:after {
+    display: block;
+    margin: 48px auto 100px;
+    width: 191px;
+    height: 150px;
+    background-image: url(https://www.saraminimage.co.kr/sri/login/ico_login_model2.png);
+    background-size: cover;
+    content: '';
+}
+
+.wrap_intergranted_login_page .box_intergrated_login .box_right {
+    position: relative;
+}
+
+.wrap_intergranted_login_page .box_intergrated_login .box_right:before {
+    width: 1px;
+    height: 100%;
+    background-color: var(--gray40);
+    position: absolute;
+    left: 0;
+    content: '';
+}
+
+.login_page_wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.wrap_intergranted_login_page .box_intergrated_login .box_right .login_frm {
+    margin-top: 0;
+}
+
+.login_frm {
+    width: 320px;
+    margin: 40px 0 24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.login_page_wrap .login_input_wrap {
+    width: 320px;
+}
+

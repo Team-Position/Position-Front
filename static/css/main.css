@@ -271,3 +271,8 @@ button {
     background: transparent;
     cursor: pointer;
 }
+
+
+ol, ul, li {
+    list-style: none;
+}

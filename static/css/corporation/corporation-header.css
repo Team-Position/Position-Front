@@ -141,3 +141,13 @@
     padding-left: 12px;
     width: calc(100% - 70px);
 }
+#header .utility .layer_member .services li.half_col a:first-child:after {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #8491a7;
+    content: "";
+}

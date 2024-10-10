@@ -1,0 +1,291 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: local("Pretendard Bold"),
+        url(/static/fonts/Pretendard-Bold.subset.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: local("Pretendard SemiBold"),
+        url(/static/fonts/Pretendard-SemiBold.subset.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: local("Pretendard Regular"),
+        url(/static/fonts/Pretendard-Regular.subset.woff) format("woff");
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --blue10: #f7fafe;
+    --blue20: #eff5ff;
+    --blue30: #deebff;
+    --blue40: #bcd1fc;
+    --blue50: #94b5fc;
+    --blue60: #6d9cfa;
+    --blue70: #5189fa;
+    --blue80: #4876ef;
+    --blue90: #2d65f2;
+    --blue100: #3157dd;
+    --blue110: #1632a6;
+    --blue120: #15276f;
+    --gray10: #f8fafc;
+    --gray20: #f4f6fa;
+    --gray30: #eaedf4;
+    --gray40: #d7dce5;
+    --gray50: #b4c0d3;
+    --gray60: #96a0b5;
+    --gray70: #8491a7;
+    --gray80: #67738e;
+    --gray90: #5c667b;
+    --gray100: #475067;
+    --gray110: #373f57;
+    --gray120: #292e41;
+    --green10: #f3fffd;
+    --green20: #ebfffc;
+    --green30: #defaf6;
+    --green40: #aff4e5;
+    --green50: #7beed8;
+    --green60: #4fe5c7;
+    --green70: #00deb3;
+    --green80: #00d3ab;
+    --green90: #11be9a;
+    --green100: #17a187;
+    --green110: #2a7c6d;
+    --green120: #286258;
+    --coral10: #fffafa;
+    --coral20: #fff5f7;
+    --coral30: #fce6e6;
+    --coral40: #fec5c5;
+    --coral50: #fea4a3;
+    --coral60: #ff837e;
+    --coral70: #ff7a72;
+    --coral80: #ff6d6a;
+    --coral90: #ff5656;
+    --coral100: #eb413f;
+    --coral110: #d63131;
+    --coral120: #b81d1d;
+    --common_blue90: #2d65f2;
+    --common_blue100: #3157dd;
+    --color_primary: #373f57;
+    --color_secondary: #5c667b;
+}
+
+/* reset & common class */
+html {
+    color: #000;
+    background: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+b,
+strong,
+input,
+textarea,
+button,
+select {
+    margin: 0;
+    padding: 0;
+    font-family: "Pretendard", "Malgun Gothic", dotum, gulim, sans-serif;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: inherit;
+    line-height: 100%;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header,
+footer,
+section,
+nav,
+article {
+    display: block;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+    line-height: normal;
+}
+
+button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}

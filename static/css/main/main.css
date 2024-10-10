@@ -14,7 +14,7 @@ header, footer, section, nav, article {
 }
 
 #sri_header.main {
-    height: 161px;
+    /* height: 161px; */
 }
 
 #sri_header.main.fixed {
@@ -28,7 +28,7 @@ header, footer, section, nav, article {
     z-index: 100;
     width: 100%;
     min-width: 1280px;
-    height: 218px;
+    /* height: 218px; */
     box-sizing: border-box;
     background: #fff;
 }
@@ -384,3 +384,7 @@ svg:not(:root) {
     line-height: 36px;
 }
 
+/* svg */
+.img_svg_layout {
+    display: none;
+}

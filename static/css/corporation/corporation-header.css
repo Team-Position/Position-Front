@@ -151,3 +151,10 @@
     background-color: #8491a7;
     content: "";
 }
+#header .utility .sign hr {
+    display: block;
+    width: 1px;
+    height: 12px;
+    border: 0;
+    background: #d7dce5;
+}

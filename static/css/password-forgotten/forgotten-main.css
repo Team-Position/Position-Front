@@ -1,0 +1,53 @@
+#sri_section.has_banner {
+    min-width: 980px;
+}
+
+#sri_section {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#sri_wrap {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+}
+
+#sri_section.has_banner #content {
+    min-height: 960px;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    margin: 56px auto 80px auto;
+    width: 960px;
+}
+
+.wrap_title_recruit {
+    position: relative;
+    padding: 0 0 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.wrap_title_recruit .title_common {
+    display: inline-block;
+    color: #444;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 36px;
+    vertical-align: top;
+}
+
+#sri_section.has_banner #content {
+    min-height: 960px;
+}

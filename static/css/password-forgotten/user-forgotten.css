@@ -452,3 +452,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .help_find .list_email li:hover {
     background: #f4f4f4;
 }
+
+.help_find .ok {
+    color: #5b76f5;
+}

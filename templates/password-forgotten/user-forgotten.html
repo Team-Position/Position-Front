@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/css/main.css" />
+        <link
+            rel="stylesheet"
+            href="/static/css/password-forgotten/user-forgotten.css"
+        />
+        <title>일반 회원 비밀번호 찾기</title>
+    </head>
+    <body>
+        <div id="sri_section" class="has_banner">
+            <div id="sri_wrap">
+                <div id="content">
+                    <div class="wrap_title_recruit">
+                        <h1 class="title_common">개인회원 비밀번호 찾기</h1>
+                    </div>
+                    <div class="help_find" id="person_find">
+                        <ul class="tab_find">
+                            <li class="on" id="find_sell">
+                                <a href="javascript:;" class="link_find"
+                                    >휴대폰 번호로 찾기</a
+                                >
+                            </li>
+                            <li id="find_mail" class="">
+                                <a href="javascript:;" class="link_find"
+                                    >이메일 주소로 찾기</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="cont_find">
+                            <form action="" id="find_form" method="post">
+                                <fieldset>
+                                    <p class="desc_find">
+                                        회원 정보에 등록된 정보로 비밀번호를
+                                        찾을 수 있습니다.
+                                    </p>
+                                    <ul class="list_find">
+                                        <li>
+                                            <div class="wrap_lab">
+                                                <label for="id" class="lab_find"
+                                                    >아이디</label
+                                                >
+                                            </div>
+                                            <div class="wrap_input">
+                                                <span class="box_input">
+                                                    <input
+                                                        type="text"
+                                                        name="id"
+                                                        id="id"
+                                                        class="inp_find"
+                                                        maxlength="20"
+                                                        data-gtm-form-interact-field-id="0"
+                                                    />
+                                                </span>
+                                                <p
+                                                    class="message_find"
+                                                    id="msg_id"
+                                                    style="display: none"
+                                                >
+                                                    4 ~ 20자의 영문, 숫자와
+                                                    특수문자(_)만 사용 가능
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="wrap_lab">
+                                                <label
+                                                    for="name"
+                                                    class="lab_find"
+                                                    >이름</label
+                                                >
+                                            </div>
+                                            <div class="wrap_input">
+                                                <span class="box_input">
+                                                    <input
+                                                        type="text"
+                                                        name="name"
+                                                        id="name"
+                                                        class="inp_find"
+                                                    />
+                                                </span>
+                                                <p
+                                                    class="message_find"
+                                                    id="msg_name"
+                                                    style="display: none"
+                                                >
+                                                    이름에 특수문자, 숫자는
+                                                    사용하실 수 없습니다.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="wrap_lab">
+                                                <label
+                                                    for="birthday"
+                                                    class="lab_find"
+                                                    >생년월일</label
+                                                >
+                                            </div>
+                                            <div class="wrap_input">
+                                                <span class="box_input">
+                                                    <input
+                                                        type="text"
+                                                        name="birthday"
+                                                        id="birthday"
+                                                        class="inp_find"
+                                                        placeholder="YYYYMMDD"
+                                                        maxlength="8"
+                                                    />
+                                                </span>
+                                                <p
+                                                    class="message_find"
+                                                    id="msg_birthday"
+                                                    style="display: none"
+                                                >
+                                                    생년월일을 입력해주세요
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li id="li_cell">
+                                            <div class="wrap_lab">
+                                                <label
+                                                    for="cell"
+                                                    class="lab_find"
+                                                    >휴대폰 번호</label
+                                                >
+                                            </div>
+                                            <div class="wrap_input">
+                                                <span class="box_input">
+                                                    <input
+                                                        type="text"
+                                                        name="cell"
+                                                        id="cell"
+                                                        class="inp_find"
+                                                        placeholder="‘-’없이 입력"
+                                                    />
+                                                </span>
+                                                <p
+                                                    class="message_find"
+                                                    id="msg_cell"
+                                                    style="display: none"
+                                                >
+                                                    휴대폰번호를 정확하게
+                                                    입력해주세요.
+                                                </p>
+                                                <p
+                                                    class="message_find send"
+                                                    id="msg_cell1"
+                                                    style="display: none"
+                                                >
+                                                    카카오톡으로 인증번호가
+                                                    발송되었습니다 (실패 시 SMS
+                                                    전송)
+                                                </p>
+                                                <button
+                                                    type="button"
+                                                    class="btn_basic2 type03 btn_cert"
+                                                >
+                                                    인증번호 발송
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li id="li_mail" style="display: none">
+                                            <div class="wrap_lab">
+                                                <label
+                                                    for="email"
+                                                    class="lab_find"
+                                                    >이메일 주소</label
+                                                >
+                                            </div>
+                                            <div class="wrap_input">
+                                                <span class="box_input">
+                                                    <input
+                                                        type="text"
+                                                        name="email"
+                                                        id="email"
+                                                        class="inp_find"
+                                                    />
+                                                </span>
+                                                <div
+                                                    class="suggest_email email_list"
+                                                    style="display: none"
+                                                >
+                                                    <ul class="list_email">
+                                                        <li class="auto_list">
+                                                            <a
+                                                                href="javascript:;"
+                                                                class="link_email"
+                                                            >
+                                                                <!-- strong 태그에 입력된 문자 생김-->
+                                                                <strong
+                                                                    class="txt_email"
+                                                                ></strong
+                                                                >@naver.com</a
+                                                            ><!-- 2018-05-02 이메일 자동완성 리스트 a링크 추가 -->
+                                                        </li>
+                                                        <li class="auto_list">
+                                                            <a
+                                                                href="javascript:;"
+                                                                class="link_email"
+                                                                ><strong
+                                                                    class="txt_email"
+                                                                ></strong
+                                                                >@gmail.com</a
+                                                            >
+                                                        </li>
+                                                        <li class="auto_list">
+                                                            <a
+                                                                href="javascript:;"
+                                                                class="link_email"
+                                                                ><strong
+                                                                    class="txt_email"
+                                                                ></strong
+                                                                >@daum.net</a
+                                                            >
+                                                        </li>
+                                                        <li class="auto_list">
+                                                            <a
+                                                                href="javascript:;"
+                                                                class="link_email"
+                                                                ><strong
+                                                                    class="txt_email"
+                                                                ></strong
+                                                                >@nate.com</a
+                                                            >
+                                                        </li>
+                                                        <li class="auto_list">
+                                                            <a
+                                                                href="javascript:;"
+                                                                class="link_email"
+                                                                ><strong
+                                                                    class="txt_email"
+                                                                ></strong
+                                                                >@outlook.com</a
+                                                            >
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <p
+                                                    class="message_find"
+                                                    id="msg_mail"
+                                                    style="display: none"
+                                                >
+                                                    휴대폰번호를 정확하게
+                                                    입력해주세요.
+                                                </p>
+                                                <button
+                                                    type="button"
+                                                    class="btn_basic2 type03 btn_cert"
+                                                >
+                                                    인증번호 발송
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="wrap_lab">
+                                                <label
+                                                    for="findCite"
+                                                    class="lab_find"
+                                                    >인증번호</label
+                                                >
+                                            </div>
+                                            <div class="wrap_input">
+                                                <span class="box_input">
+                                                    <input
+                                                        type="text"
+                                                        name="findCite"
+                                                        id="findCite"
+                                                        class="inp_find"
+                                                    />
+                                                    <span
+                                                        class="message_find time_find"
+                                                        style="display: none"
+                                                        >남은 시간 (3:00)</span
+                                                    >
+                                                </span>
+                                                <p
+                                                    class="message_find"
+                                                    id="msg_cert_num"
+                                                    style="display: none"
+                                                >
+                                                    입력시간이 만료되었습니다.
+                                                    인증번호를 다시
+                                                    발송해주세요.
+                                                </p>
+                                                <p
+                                                    class="message_find ok"
+                                                    style="display: none"
+                                                >
+                                                    인증 성공. 잠시만
+                                                    기다려주세요.
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="wrap_link">
+                                        <button
+                                            type="button"
+                                            class="btn_biggest_type01"
+                                            id="btn_cert_complete"
+                                        >
+                                            인증확인
+                                        </button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="find_method">
+                            <a
+                                href=""
+                                class="btn_basic_type01 btn_login"
+                                title="로그인 바로가기"
+                                >로그인</a
+                            >
+                            <a
+                                href=""
+                                class="btn_basic_type04"
+                                title="회원가입 바로가기"
+                                >회원가입</a
+                            >
+                            <a
+                                href=""
+                                class="btn_basic_type04"
+                                title="자주 묻는 질문 바로가기"
+                                >자주 묻는 질문</a
+                            >
+                            <p class="desc_method">
+                                위 방법으로 계정을 찾을 수 없다면,
+                                <a href="" class="link_ask"
+                                    >비밀번호 분실신고</a
+                                >
+                                를 이용해주세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/password-forgotten/user-forgotten.js"></script>
+</html>

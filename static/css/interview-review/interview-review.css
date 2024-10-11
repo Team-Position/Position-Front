@@ -1,0 +1,251 @@
+#interview-sri-section.interview-layout-full {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#interview-sri-section {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+#interview-sri-wrap {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#interview-sri-section.interview-layout-full #interview-content {
+    margin: 0;
+    width: 100%;
+}
+
+#interview-content {
+    position: relative;
+    z-index: 1;
+    padding: 0
+}
+
+.interview-header-interview-review {
+    width: 100%;
+    height: 372px;
+    background: var(--blue20) url(/static/images/interview-review/bg_review_interview_220322.png) 50% 0 no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-header-interview-review .interview-inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 185px 0 0 0;
+    width: 960px;
+}
+
+.interview-blind {
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-header-interview-review .interview-txt-noti {
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: #494949;
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-header-interview-review .interview-btn-review-write {
+    display: block;
+    position: absolute;
+    top: 276px;
+    left: 10px;
+    width: 246px;
+    height: 44px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 42px;
+    text-align: center;
+    background-color: var(--blue80);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-wrap-interview-review {
+    position: relative;
+    margin: 0 auto 80px auto;
+    padding-bottom: 69px;
+    width: 1260px;
+    background: var(--white);
+    padding: 0;
+}
+
+.interview-wrap-interview-review .interview-review-cont {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.interview-review-cont {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-review-cont .interview-title-area {
+    padding-top: 40px;
+    height: 55px;
+}
+
+.interview-title-area {
+    margin: 0;
+    padding: 0;
+}
+
+.interview-review-cont .interview-title-area .interview-tit-review {
+    display: inline-block;
+    color: #222;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    vertical-align: top;
+}
+
+.interview-tit-review {
+    margin: 0;
+    padding: 0;
+}
+
+.interview-review-cont .interview-search-area {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.interview-search-area {
+    margin: 0;
+    padding: 0;
+}
+
+.interview-review-cont .interview-search-area .interview-search-right {
+    float: right;
+}
+
+.interview-search-right {
+    margin: 0;
+    padding: 0;
+}
+
+.interview-inpSel {
+    display: inline-block;
+    height: 32px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background: #fff;
+}
+
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.interview-inpSel select {
+    width: 127px;
+    padding: 0 29px 1px 11px;
+    height: 30px;
+    border: none;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    line-height: 29px;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: url(/static/images/interview-review/ico_select_arr.png) no-repeat 100% 0;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+*:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--blue100);
+    outline-offset: 2px;
+}
+
+.interview-inpSel select option {
+    height: 32px;
+    font-size: 13px;
+    color: #444;
+    line-height: 16px;
+}
+
+.interview-review-cont .interview-search-area .interview-searchTypoBox {
+    display: inline-block;
+    height: 32px;
+    vertical-align: top;
+    background: var(--white);
+}
+
+.interview-searchTypoBox {
+    width: auto;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-searchTypoBox .interview-inpTypo {
+    display: inline-block;
+    padding-left: 10px;
+    width: 187px;
+    border: 1px solid #ddd;
+    border-right: 0 none;
+    box-sizing: border-box;
+    color: #888;
+}
+
+.interview-inpTypo {
+    padding: 0 11px 1px 11px;
+    height: 32px;
+    font-size: 13px;
+    line-height: 28px;
+    vertical-align: middle;
+    background: #fff;
+}
+
+.interview-searchTypoBox .interview-btnTypoSearch {
+    width: 52px;
+    box-sizing: border-box;
+    background-color: #6d82f3;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: top;
+}
+

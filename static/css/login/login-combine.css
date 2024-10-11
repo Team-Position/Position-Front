@@ -540,7 +540,7 @@ button {
     position: relative;
 }
 
-.login_input_wrap .signup-forgotten>a +a:after {
+.login_input_wrap .signup-forgotten .sign_up + .forgotten:after {
     position: absolute;
     content: "";
     background-color: var(--gray50);
@@ -605,4 +605,9 @@ button {
 
 .social_login{
     height: 70px;
+}
+
+.login_input_wrap .signup-forgotten .link_rater {
+    text-decoration: unset;
+    margin-left: auto;
 }

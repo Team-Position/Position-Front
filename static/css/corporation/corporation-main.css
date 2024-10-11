@@ -263,6 +263,21 @@ button.interested_corp {
     padding-bottom: 48px;
     border-bottom: 1px solid var(--gray30);
 }
+.sidebar .company_navi .menu_list .btn_menu .badge {
+    display: inline-flex;
+    margin-left: 8px;
+    padding: 0 6px;
+    height: 20px;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+    background: var(--blue90);
+    align-items: center;
+}
+.sidebar .company_navi .menu_list .btn_menu .badge_new {
+    background: var(--green90);
+}
 .wrap_company_view .cont_introduce .first_section .section_content {
     margin-top: 0;
 }
@@ -509,6 +524,22 @@ button.interested_corp {
     clear: both;
     content: "";
     table-layout: fixed;
+}
+.wrap_company_view .subway_line102 {
+    background-color: var(--subwayLine102);
+}
+.wrap_company_view .subway_line108 {
+    background-color: var(--subwayLine108);
+}
+.wrap_company_view .subway_line {
+    display: inline-block;
+    margin: 0 0 0 2px;
+    padding: 2px 5px 3px;
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 10px;
+    line-height: 11px;
+    vertical-align: top;
 }
 .wrap_company_view .main_content .banner_area {
     display: flex;
@@ -763,6 +794,7 @@ button.interested_corp {
 .wrap_company_view .content_fold.active .box_btn {
     display: flex;
 }
+/* 그라디언트 */
 .wrap_company_view .content_fold .box_btn.gradient {
     position: absolute;
     bottom: 0;
@@ -792,6 +824,9 @@ button.interested_corp {
     color: var(--blue90);
     background: var(--white);
 }
+[class*="BtnType"].BlueInvert:hover {
+    background: var(--blue20);
+}
 [class*="BtnType"].BtnTypeRd {
     border-radius: 35px;
 }
@@ -800,6 +835,12 @@ button.interested_corp {
     height: 40px;
     font-size: 14px;
     line-height: 24px;
+}
+[class*="BtnType"].SizeXS {
+    padding: 0 3px 1px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 20px;
 }
 [class*="BtnType"] {
     display: inline-flex;
@@ -814,6 +855,14 @@ button.interested_corp {
     justify-content: center;
     align-items: center;
 }
+.cont_introduce .area_company_infos .company_details .link_map {
+    margin-left: 8px;
+    width: 55px;
+    border-color: var(--gray40);
+    color: var(--gray100);
+    background-color: var(--white);
+    flex-shrink: 0;
+}
 .wrap_company_view .content_fold .btn_fold .txt {
     display: flex;
     padding: 0 13px;
@@ -824,7 +873,8 @@ button.interested_corp {
     margin-left: 4px;
     width: 16px;
     height: 16px;
-    background-image: url("data:image/svg + xml,%3Csvgxmlns='http://www.w3.org/2000/svg' width='16' height='16'viewBox='0 0 16 16' fill='none' %3E%3Cpathd='M3 5.5L8 10.5L13 5.5'stroke='%2367738E'stroke-linecap='round'stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-image: url(/static/images/corporation/wrap_company_view_btn_fold.svg);
+    content: "";
 }
 .cont_introduce .section .citation,
 .cont_introduce .section .citation2 {
@@ -843,4 +893,118 @@ cite {
     font-style: normal;
     margin: 0;
     padding: 0;
+}
+/* 연혁 */
+.wrap_company_view .main_content .section .section_tit {
+    display: flex;
+    color: var(--gray120);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+}
+.wrap_company_view .main_content .section .section_content {
+    margin-top: 20px;
+}
+.wrap_company_view .content_fold {
+    overflow-y: hidden;
+    position: relative;
+    max-height: 270px;
+}
+.cont_introduce .list_company_history .company_history_item:last-child {
+    padding-bottom: 0;
+}
+.cont_introduce .list_company_history .company_history_item {
+    position: relative;
+    padding: 0 0 24px 24px;
+}
+.cont_introduce .list_company_history .company_history_item:before {
+    left: 4px;
+    width: 1px;
+    background: var(--gray50);
+}
+.cont_introduce .company_history {
+    display: flex;
+    justify-content: flex-start;
+}
+.cont_introduce .company_history .history_year {
+    color: var(--gray120);
+    font-size: 16px;
+    line-height: 24px;
+    width: 42px;
+}
+.cont_introduce .company_history .list_company_history_cont {
+    margin-left: 28px;
+}
+.cont_introduce .company_history .list_company_history_cont .history_cont_item {
+    display: flex;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    justify-content: flex-start;
+}
+
+.wrap_company_view .main_content .section .section_content:after {
+    display: table;
+    clear: both;
+    content: "";
+    table-layout: fixed;
+}
+.cont_introduce .list_company_history .company_history_item:after {
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--gray80);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: var(--white);
+}
+.cont_introduce .list_company_history .company_history_item:before,
+.cont_introduce .list_company_history .company_history_item:after {
+    display: block;
+    position: absolute;
+    top: 8px;
+    bottom: -8px;
+    content: "";
+}
+.wrap_company_view .main_content .section {
+    position: relative;
+    box-sizing: border-box;
+}
+.cont_introduce .section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--gray30);
+}
+.wrap_company_view .main_content .section .section_tit {
+    display: flex;
+    color: var(--gray120);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+}
+.wrap_company_view .main_content .section .section_content {
+    margin-top: 20px;
+}
+.cont_introduce .list_curation_item {
+    display: flex;
+    gap: 20px;
+}
+.cont_introduce .list_curation_item li {
+    position: relative;
+    padding: 0;
+    width: 306px;
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.cont_introduce .newcomer_link_view {
+    display: block;
+    height: 176px;
+}
+.cont_introduce .list_curation_item .list_curation_slide {
+    position: relative;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
 }

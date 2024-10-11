@@ -413,3 +413,42 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-decoration: underline;
 }
 
+.help_find .list_email {
+    overflow-y: auto;
+    padding: 5px 0;
+    max-height: 178px;
+}
+
+.help_find .list_email li {
+    min-width: 336px;
+    font-size: 15px;
+    line-height: 17px;
+    color: #555;
+    border-bottom: 0;
+    background: #fff;
+    cursor: default;
+}
+
+.help_find .list_email .link_email {
+    display: block;
+    padding: 8px 20px;
+}
+
+.help_find .list_email .txt_email {
+    font-weight: normal;
+    color: #566feb;
+}
+
+.help_find .suggest_email {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 51px;
+    z-index: 10;
+    border: 1px solid #dadada;
+    background: #fff;
+}
+
+.help_find .list_email li:hover {
+    background: #f4f4f4;
+}

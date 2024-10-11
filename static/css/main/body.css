@@ -322,6 +322,10 @@
     box-sizing: content-box;
 }
 
+.main_cont .items .item:hover .inner {
+    box-shadow: 0 4px 10px 0 rgba(14, 12, 31, 0.10);
+}
+
 .main_cont .items .item:first-of-type {
     padding-left: 24px;
 }

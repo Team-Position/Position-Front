@@ -5,3 +5,5 @@ const emailInput = document.querySelector("#li_mail");
 
 cellTab.addEventListener("click", () => toggleTabs(true));
 emailTab.addEventListener("click", () => toggleTabs(false));
+
+const toggleTabs = (isPesron) => {};

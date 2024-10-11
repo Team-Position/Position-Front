@@ -323,10 +323,6 @@ h1 {
     font-weight: bold;
     unicode-bidi: isolate;
 }
-a {
-    color: inherit;
-    text-decoration: none;
-}
 svg:not(:root) {
     overflow-clip-margin: content-box;
     overflow: hidden;
@@ -363,9 +359,6 @@ fieldset,
 img {
     border: 0;
 }
-a {
-    text-decoration: none;
-}
 strong,
 b {
     font-weight: bold;
@@ -391,4 +384,9 @@ b {
 }
 .ScrollBar::-webkit-scrollbar-button {
     display: none;
+}
+*:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--blue100);
+    outline-offset: 2px;
 }

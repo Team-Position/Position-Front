@@ -2209,25 +2209,523 @@
                                 </h2>
                                 <div class="section_content">
                                     <div class="worker_info">
-                                        <div class="worker_info">
-                                            <div class="col">
-                                                <span class="tit"
-                                                    >전체 사원수</span
-                                                >
-                                                <span class="value">
-                                                    <strong class="num"
-                                                        >10,985</strong
-                                                    >명
-                                                </span>
-                                            </div>
+                                        <div class="col">
+                                            <span class="tit">전체 사원수</span>
+                                            <span class="value">
+                                                <strong class="num"
+                                                    >10,985</strong
+                                                >명
+                                            </span>
                                         </div>
                                     </div>
+
                                     <!-- 필터랑 차트 어떻게 할건지? -->
                                 </div>
                             </section>
                             <!-- 기업 관련 궁금한 정보 영역(커뮤니티,면접 경험,기업 리뷰) -->
+                            <section
+                                class="section"
+                                id="companyReviewContainer"
+                            >
+                                <h2 class="section_tit">
+                                    직접 다녀본 사람들이 전해주는 이 회사의
+                                    매력!
+                                </h2>
+                                <div class="section_content">
+                                    <div class="box_company_review">
+                                        <ul class="list_company_review">
+                                            <li class="company_review_item">
+                                                <div class="box_gauge">
+                                                    <div class="gauge_bar">
+                                                        <strong
+                                                            class="gauge_tit"
+                                                            >프리한 복장
+                                                            가능</strong
+                                                        >
+                                                        <div
+                                                            class="gauge type3"
+                                                            style="width: 93%"
+                                                        ></div>
+                                                        <strong
+                                                            class="gauge_percent"
+                                                            >93%</strong
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="company_review_item">
+                                                <div class="box_gauge">
+                                                    <div class="gauge_bar">
+                                                        <strong
+                                                            class="gauge_tit"
+                                                            >자유로운
+                                                            연차</strong
+                                                        >
+                                                        <div
+                                                            class="gauge type3"
+                                                            style="width: 76%"
+                                                        ></div>
+                                                        <strong
+                                                            class="gauge_percent"
+                                                            >76%</strong
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="company_review_item">
+                                                <div class="box_gauge">
+                                                    <div class="gauge_bar">
+                                                        <strong
+                                                            class="gauge_tit"
+                                                            >커리어 발전
+                                                            기회</strong
+                                                        >
+                                                        <div
+                                                            class="gauge type2"
+                                                            style="width: 53%"
+                                                        ></div>
+                                                        <strong
+                                                            class="gauge_percent"
+                                                            >53%</strong
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="company_review_item">
+                                                <div class="box_gauge">
+                                                    <div class="gauge_bar">
+                                                        <strong
+                                                            class="gauge_tit"
+                                                            >야근없는
+                                                            기업</strong
+                                                        >
+                                                        <div
+                                                            class="gauge type2"
+                                                            style="width: 46%"
+                                                        ></div>
+                                                        <strong
+                                                            class="gauge_percent"
+                                                            >46%</strong
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="slide_company_review">
+                                            <div class="slider_controls">
+                                                <button
+                                                    type="button"
+                                                    class="bx-next"
+                                                >
+                                                    <span class="blind"
+                                                        >다음</span
+                                                    >
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="bx-prev"
+                                                >
+                                                    <span class="blind"
+                                                        >이전</span
+                                                    >
+                                                </button>
+                                            </div>
+                                            <div
+                                                class="bx-wrapper"
+                                                style="max-width: 524px"
+                                            >
+                                                <div
+                                                    class="bx-viewport"
+                                                    aria-live="polite"
+                                                    style="
+                                                        width: 100%;
+                                                        overflow: hidden;
+                                                        position: relative;
+                                                        height: 240px;
+                                                    "
+                                                >
+                                                    <ul
+                                                        id="companyReviewSlider"
+                                                        class="review_card_list"
+                                                        style="
+                                                            width: 4215%;
+                                                            position: relative;
+                                                            transition-duration: 0.5s;
+                                                            transform: translate3d(
+                                                                -269.991px,
+                                                                0px,
+                                                                0px
+                                                            );
+                                                        "
+                                                    >
+                                                        <li
+                                                            class="review_item"
+                                                            aria-hidden="true"
+                                                            style="
+                                                                float: left;
+                                                                list-style: none;
+                                                                position: relative;
+                                                                width: 254px;
+                                                                margin-right: 16px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="review_card"
+                                                            >
+                                                                <strong
+                                                                    class="review_worker retired"
+                                                                    >전직원</strong
+                                                                >
+                                                                <p
+                                                                    class="review_txt"
+                                                                >
+                                                                    자유롭게 일
+                                                                    할 수 있는
+                                                                    분위기가
+                                                                    좋습니다
+                                                                </p>
+                                                                <span
+                                                                    class="review_date"
+                                                                    >2024.10.01
+                                                                    작성</span
+                                                                >
+                                                            </div>
+                                                        </li>
+                                                        <li
+                                                            class="review_item"
+                                                            aria-hidden="false"
+                                                            style="
+                                                                float: left;
+                                                                list-style: none;
+                                                                position: relative;
+                                                                width: 254px;
+                                                                margin-right: 16px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="review_card"
+                                                            >
+                                                                <strong
+                                                                    class="review_worker retired"
+                                                                    >전직원</strong
+                                                                >
+                                                                <p
+                                                                    class="review_txt"
+                                                                >
+                                                                    성과제
+                                                                    수평조직제
+                                                                </p>
+                                                                <span
+                                                                    class="review_date"
+                                                                    >2024.09.29
+                                                                    작성</span
+                                                                >
+                                                            </div>
+                                                        </li>
+                                                        <li
+                                                            class="review_item"
+                                                            aria-hidden="false"
+                                                            style="
+                                                                float: left;
+                                                                list-style: none;
+                                                                position: relative;
+                                                                width: 254px;
+                                                                margin-right: 16px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="review_card"
+                                                            >
+                                                                <strong
+                                                                    class="review_worker retired"
+                                                                    >전직원</strong
+                                                                >
+                                                                <p
+                                                                    class="review_txt"
+                                                                >
+                                                                    연차
+                                                                    자유롭게
+                                                                    사용가능
+                                                                </p>
+                                                                <span
+                                                                    class="review_date"
+                                                                    >2024.08.21
+                                                                    작성</span
+                                                                >
+                                                            </div>
+                                                        </li>
+                                                        <li
+                                                            class="review_item"
+                                                            aria-hidden="true"
+                                                            style="
+                                                                float: left;
+                                                                list-style: none;
+                                                                position: relative;
+                                                                width: 254px;
+                                                                margin-right: 16px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="landing_review_card"
+                                                            >
+                                                                <a
+                                                                    href="/zf_user/jobs/theme/it-headhunting"
+                                                                    class="link_box ga_data_layer"
+                                                                    target="_blank"
+                                                                    data-ga_data_layer="ga_lead|company_view|com_intro|road_map_btn"
+                                                                >
+                                                                    <strong
+                                                                        class="review_tit"
+                                                                        >취업하고,<br />축하금
+                                                                        50만원까지<br />동시에
+                                                                        받아가세요!</strong
+                                                                    >
+                                                                    <div
+                                                                        class="looks_button"
+                                                                    >
+                                                                        <span
+                                                                            class="looks_button_txt"
+                                                                            >취업축하금
+                                                                            공고보기</span
+                                                                        >
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="bx-controls"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a
+                                    href=""
+                                    class="BtnType SizeS link_content_more ga_data_layer"
+                                    target="_blank"
+                                    title="새 창 열림"
+                                >
+                                    기업리뷰 바로가기
+                                </a>
+                            </section>
+                            <section
+                                class="section section_type2"
+                                id="interviewReviewContainer"
+                            >
+                                <h2 class="section_tit">
+                                    면접 전 선배님들의 꿀팁 대방출!
+                                </h2>
+                                <div class="section_content">
+                                    <div class="interview_review">
+                                        <div class="interview_card">
+                                            <a
+                                                href="/zf_user/interview-review/detail?idx=43645"
+                                                target="_blank"
+                                                class="link_interview_review ga_data_layer"
+                                                data-ga_data_layer="ga_lead|company_view|com_intro|interview_view"
+                                            >
+                                                <div class="interview_header">
+                                                    <div class="box_tit">
+                                                        <strong
+                                                            >광고마케팅</strong
+                                                        >
+                                                        <span
+                                                            class="badge badge_pass"
+                                                            >합격</span
+                                                        >
+                                                    </div>
+                                                    <div class="box_info">
+                                                        <span class="info_item"
+                                                            >2024년 상반기</span
+                                                        >
+                                                        <span class="info_item"
+                                                            >신입</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="interview_cont">
+                                                    <div class="box_level">
+                                                        <span class="level_tit"
+                                                            >면접 난이도</span
+                                                        >
+                                                        <div class="level_bar">
+                                                            <div
+                                                                class="level_progress"
+                                                                style="
+                                                                    width: 66.6666%;
+                                                                "
+                                                            ></div>
+                                                        </div>
+                                                        <span class="level_txt"
+                                                            >보통</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="box_interview_reivew"
+                                                    >
+                                                        <p
+                                                            class="interview_reivew_txt"
+                                                        >
+                                                            다대다였고 기본적인
+                                                            나올 법한 자소서
+                                                            질문이 나왔습니다.
+                                                            자기소개는 보는
+                                                            사람들이 많아서
+                                                            그런지
+                                                            건너뛰었습니다!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="interview_card">
+                                            <a
+                                                href="/zf_user/interview-review/detail?idx=43292"
+                                                target="_blank"
+                                                class="link_interview_review ga_data_layer"
+                                                data-ga_data_layer="ga_lead|company_view|com_intro|interview_view"
+                                            >
+                                                <div class="interview_header">
+                                                    <div class="box_tit">
+                                                        <strong
+                                                            >AE(광고기획자)</strong
+                                                        >
+                                                        <span
+                                                            class="badge badge_pass"
+                                                            >합격</span
+                                                        >
+                                                    </div>
+                                                    <div class="box_info">
+                                                        <span class="info_item"
+                                                            >2024년 하반기</span
+                                                        >
+                                                        <span class="info_item"
+                                                            >1-3년차</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="interview_cont">
+                                                    <div class="box_level">
+                                                        <span class="level_tit"
+                                                            >면접 난이도</span
+                                                        >
+                                                        <div class="level_bar">
+                                                            <div
+                                                                class="level_progress"
+                                                                style="
+                                                                    width: 66.6666%;
+                                                                "
+                                                            ></div>
+                                                        </div>
+                                                        <span class="level_txt"
+                                                            >보통</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="box_interview_reivew"
+                                                    >
+                                                        <p
+                                                            class="interview_reivew_txt"
+                                                        >
+                                                            기존 경력에 성과를
+                                                            토대로 숫자로
+                                                            얘기하기를 원하며
+                                                            쿠팡에서 생각하는
+                                                            직무와 15개의 쿠팡
+                                                            인재상중 자기와 가장
+                                                            맞는 부분을 얘기하고
+                                                            왜 맞는지에 대해
+                                                            설명하는 방식
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a
+                                    href="/zf_user/interview-review?csn=RzBaRnNqKzJuWVdVeHNDLzlFVjcrQT09"
+                                    class="BtnType SizeS link_content_more ga_data_layer"
+                                    data-ga_data_layer="ga_lead|company_view|com_intro|interview_more"
+                                    target="_blank"
+                                    title="새 창 열림"
+                                    >면접후기 바로가기</a
+                                >
+                            </section>
                             <!-- 유투브/뉴스 -->
                             <!-- 알림 -->
+                            <div class="footer_company_info">
+                                <p>
+                                    본 기업정보는 다양한 정보제공자로부터 제공된
+                                    자료를 기반으로 반영되며, 실시간 업데이트가
+                                    어려울 수 있습니다.<br />
+                                    (주)사람인은 상기 기업정보의 정확성, 진실성,
+                                    최신성에 대하여 책임을 지지 않습니다.
+                                    <br />*정보제공자 : NICE평가정보,
+                                    금융감독원(DART), 국민연금, 기업회원(직접
+                                    수정시) <br />*기업정보는 사업자등록번호
+                                    기준으로 동일하게 관리 됩니다.
+                                </p>
+                                <div class="box_edit">
+                                    <p class="edit_txt">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            class="icon_edit"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M12.6824 15.3147L11.2695 17L13.4771 16.7355L19.6323 13.4213L18.8375 12L12.6824 15.3147Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M6 19.5C5.17157 19.5 4.5 18.8284 4.5 18V6C4.5 5.17157 5.17157 4.5 6 4.5H15.5895C16.4179 4.5 17.0895 5.17157 17.0895 6V18C17.0895 18.8284 16.4179 19.5 15.5895 19.5H6Z"
+                                                stroke="#666666"
+                                                stroke-linejoin="bevel"
+                                            ></path>
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M19.6578 11L13.7251 15.3142L12.3633 17L14.4911 16.7355L20.726 12.3L19.6578 11Z"
+                                                fill="white"
+                                                stroke="#666666"
+                                                stroke-linejoin="bevel"
+                                            ></path>
+                                            <path
+                                                d="M7.13672 8.5H14.4542"
+                                                stroke="#666666"
+                                                stroke-linejoin="bevel"
+                                            ></path>
+                                            <path
+                                                d="M7.13672 10.5H14.4542"
+                                                stroke="#666666"
+                                                stroke-linejoin="bevel"
+                                            ></path>
+                                            <path
+                                                d="M7.13672 12.5H14.4542"
+                                                stroke="#666666"
+                                                stroke-linejoin="bevel"
+                                            ></path>
+                                        </svg>
+                                        기업회원일 경우 직접 수정하실 수
+                                        있습니다
+                                    </p>
+                                    <p class="modified">
+                                        2024-09-07 업데이트 되었습니다
+                                    </p>
+                                    <button
+                                        type="button"
+                                        class="BtnType SizeM GrayInvert btn_edit ga_data_layer"
+                                        data-ga_data_layer="ga_lead|company_view|com_intro|com_edit"
+                                    >
+                                        기업정보 수정이 필요해요
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

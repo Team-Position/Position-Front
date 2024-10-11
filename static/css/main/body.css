@@ -511,3 +511,82 @@
     white-space: nowrap;
 }
 
+/* 배너 광고 이미지 */
+.main_product {
+    display: grid;
+    position: relative;
+    z-index: 1;
+    grid-auto-flow: row;
+    gap: 32px;
+}
+
+.cont_product.prd_platinum {
+    padding: 32px 0;
+}
+
+.cont_product {
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.cont_product .inner_cont {
+    display: grid;
+    position: relative;
+    margin: 0 auto;
+    width: 1260px;
+    grid-auto-flow: row;
+    gap: 24px;
+}
+
+
+.main_product .cont_banner {
+    overflow: hidden;
+    width: 1260px;
+    height: 60px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* 회원님이 꼭 봐야할 목록(플래티넘) */
+.top_poduct {
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.tit_cont {
+    display: inline-block;
+    color: #292e41;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 26px;
+    vertical-align: top;
+}
+
+.cont_product .btn_product {
+    float: right;
+    padding: 2px 0;
+    color: #292e41;
+    font-size: 14px;
+}
+
+.cont_product .btn_product span {
+    display: flex;
+    position: relative;
+}
+
+.cont_product .btn_product .icon_info {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    color: #292e41;
+}
+
+.cont_product .btn_close:after, .cont_product .btn_product:after {
+    display: block;
+    overflow: hidden;
+    background: url(//www.saraminimage.co.kr/sri/main/img_main_spr_200710.png) no-repeat 0 0;
+    content: "";
+}

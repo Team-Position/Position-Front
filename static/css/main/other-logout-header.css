@@ -315,129 +315,66 @@ header, footer, section, nav, article {
     grid-auto-flow: column dense;
 }
 
-#header .utility .wrap_messenger {
-    display: inline-block;
+#header .utility .sign {
+    display: grid;
+    gap: 16px;
+    grid-auto-flow: column dense;
+    align-items: center;
+}
+
+#header .utility .btn_sign {
+    color: #373f57;
+    font-size: 14px;
+    line-height: 24px;
+}
+#header .utility .btn_sign:hover, #header .utility .btn_profile:hover {
+    color: #4875ef;
+}
+
+#header .utility .sign hr {
+    display: block;
+    width: 1px;
+    height: 12px;
+    border: 0;
+    background: #d7dce5;
+}
+#header.fixed .utility .sign hr, #header.fixed .utility .sign .btn_sign.signup {
+    display: none;
+}
+
+#header .utility .wrap_service {
     position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    vertical-align: top;
+    z-index: 2;
 }
 
-#header .utility .wrap_messenger button.btn_messenger {
-    display: inline-block;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 0;
+#header .utility .btn_service {
+    display: grid;
+    padding: 0 13px;
+    height: 32px;
+    border: 1px solid #d7dce5;
+    border-radius: 16px;
+    color: #373f57;
+    font-size: 13px;
+    font-weight: bold;
+    grid-template-columns: auto 10px;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
 }
-#header .utility .wrap_messenger button.btn_messenger:hover {
-    background-color: #f4f6fa;
-}
-
-#header .utility .wrap_messenger button.btn_messenger:before {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(//www.saraminimage.co.kr/sri/message/gnb_icon_messenger.png) no-repeat -50px 0;
-    content: "";
-}
-
-#header .utility .wrap_member {
-    position: relative;
-    z-index: 3;
-}
-
-#header .utility .btn_member:hover {
+#header .utility .btn_service:hover {
     background: #f4f6fa;
 }
 
-#header .utility .btn_member {
-    display: block;
-    position: relative;
-    padding: 10px 27px 12px 46px;
-    border-radius: 20px;
-    font-size: 0;
-}
-
-
-#header .utility .btn_member .user_photo {
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    z-index: 2;
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-    box-sizing: border-box;
-    background: #fff;
-}
-#header .utility .btn_member .user_photo .img_default {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-}
-
-#header .utility .btn_member .user_name {
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-    max-width: 50px;
+#header .utility .btn_service svg {
+    width: 10px;
+    height: 6px;
     color: #5c667b;
-    font-size: 14px;
-    line-height: 18px;
-    text-overflow: ellipsis;
-    vertical-align: top;
-    white-space: nowrap;
 }
 
-#header .utility .btn_member .img_social {
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-    margin: 1px 4px 0;
-    width: 16px;
-    height: 16px;
-    vertical-align: top;
+#header .utility .wrap_service .layer_member {
+    top: 36px;
+    padding: 10px 0;
 }
-
-#header .utility .btn_member .img_arrow {
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 8px;
-    z-index: 2;
-    width: 16px;
-    height: 16px;
-}
-#header .utility .btn_member.expanded .img_arrow {
-    transform: rotate(180deg);
-    transform-origin: center;
-}
-
-#header .utility .btn_member .img_arrow svg {
-    width: 100%;
-    height: 100%;
-}
-
-#header .utility .btn_member:hover .img_arrow svg use {
-    color: #96a0b5;
-}
-
-#header .utility .btn_member .img_arrow svg use {
-    color: #ccd0d6;
-}
-
 svg:not(:root) {
     overflow-clip-margin: content-box;
     overflow: hidden;
@@ -460,82 +397,44 @@ svg:not(:root) {
     box-shadow: 2px 6px 16px 0 rgba(17, 42, 128, 0.08);
 }
 
-
 #header .utility .btn_service.expanded+.layer_member {
     display: block;
 }
 
-#header .utility .layer_member.person {
-    padding: 0;
-    width: 184px;
+#header .utility .layer_member .services li.half_col {
+    display: flex;
 }
-#header .utility .btn_member.expanded+.layer_member {
-    display: block;
+
+#header .utility .layer_member .services li.half_col a:first-child {
+    position: relative;
+    padding: 0 13px 0 16px;
+    width: 70px;
 }
-#header .utility .layer_member.person .stat {
-    display: grid;
-    padding: 15px 15px 8px;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    justify-content: center;
-}
-#header .utility .layer_member.person .stat a:not(.name):hover {
+#header .utility .layer_member .services li a:hover {
     background: #f4f6fa;
 }
-
-#header .utility .layer_member.person .stat a {
-    padding: 8px 11px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-}
-#header .utility .layer_member.person .stat a>span {
+#header .utility .layer_member .services li.half_col a:first-child:after {
     display: block;
-    margin-bottom: 4px;
-    color: #8491a7;
-    font-size: 12px;
-    line-height: 20px;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #8491a7;
+    content: "";
+}
+#header .utility .layer_member .services li.half_col a:last-child {
+    padding-left: 12px;
+    width: calc(100% - 70px);
 }
 
-#header .utility .layer_member.person .stat a>strong {
+#header .utility .layer_member .services li a {
     display: block;
-    color: #15276f;
-    font-size: 22px;
-    line-height: 32px;
-}
-
-#header .utility .layer_member.person .links {
-    padding: 8px 0 4px;
-    border-top: 1px solid #eaedf4;
-}
-
-#header .utility .layer_member.person .links li {
-    text-align: center;
-}
-
-#header .utility .layer_member.person .links li a:hover {
-    background: #f4f6fa;
-}
-
-#header .utility .layer_member.person .links li a {
-    display: block;
-    color: #373f57;
+    padding: 0 16px;
+    height: 36px;
+    color: #5c667b;
     font-size: 14px;
     line-height: 36px;
-}
-#header .utility .layer_member.person .logout:hover {
-    background: #eaedf3;
-}
-
-#header .utility .layer_member.person .logout {
-    display: grid;
-    border-radius: 0 0 4px 4px;
-    box-sizing: border-box;
-    color: #5c667b;
-    font-size: 13px;
-    line-height: 41px;
-    background: #f4f6fa;
-    place-items: center;
 }
 
 /* svg */

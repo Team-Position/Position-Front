@@ -1,3 +1,12 @@
+// document.querySelector(".btn_menu").addEventListener("click", function () {
+//     const naviTotalElement = document.querySelector(".navi_total");
+
+//     // 클래스가 존재하면 토글 (있으면 제거, 없으면 추가)
+//     if (naviTotalElement) {
+//         naviTotalElement.classList.toggle("expanded");
+//     }
+// });
+
 document.querySelector(".btn_menu").addEventListener("click", function () {
     const btnMenu = this; // 클릭된 버튼 요소
     const isExpanded = btnMenu.getAttribute("aria-expanded") === "true"; // 현재 aria-expanded 상태 확인
@@ -11,14 +20,14 @@ document.querySelector(".btn_menu").addEventListener("click", function () {
         naviTotalElement.classList.toggle("expanded");
     }
 
-    const btnService = document.querySelector(".btn_member");
+    const btnService = document.querySelector(".btn_service");
     if (btnService) {
         btnService.setAttribute("aria-expanded", "false");
         btnService.classList.remove("expanded");
     }
 });
 
-document.querySelector(".btn_member").addEventListener("click", function () {
+document.querySelector(".btn_service").addEventListener("click", function () {
     const btnService = this; // 클릭된 버튼 요소
     const isExpanded = btnService.getAttribute("aria-expanded") === "true"; // 현재 aria-expanded 상태 확인
 

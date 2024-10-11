@@ -3,9 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>other header</title>
+        <title>other logout header</title>
         <link rel="stylesheet" href="/static/css/main.css" />
-        <link rel="stylesheet" href="/static/css/main/other-login-header.css" />
+        <link
+            rel="stylesheet"
+            href="/static/css/main/other-logout-header.css"
+        />
     </head>
     <body id="main" class="vsc-initialized">
         <header id="header" class="main bubble">
@@ -335,109 +338,112 @@
                 </div>
                 <!-- header 로그인 -->
                 <div class="utility">
-                    <div
-                        id="gnb_message_badge"
-                        class="wrap_messenger"
-                        data-el="chat_beta"
-                    >
-                        <button
-                            type="button"
-                            class="btn_messenger"
-                            data-nav-track="ga_lead|main-gnb|global_menu|messenger"
-                            onclick="window.location.href='/zf_user/messenger'"
+                    <div class="sign">
+                        <a
+                            href="/zf_user/auth"
+                            data-nav-track="ga_lead|main-gnb|layer_sign|signin"
+                            class="btn_sign signin"
+                            >로그인</a
                         >
-                            메신저
-                        </button>
+                        <hr />
+                        <a
+                            href="/zf_user/member/registration/join"
+                            data-nav-track="ga_lead|main-gnb|layer_sign|join"
+                            class="btn_sign signup"
+                            >회원가입</a
+                        >
                     </div>
-                    <div class="wrap_member" id="gnb_member_person">
+                    <div class="wrap_service">
                         <button
-                            class="btn_member"
+                            class="btn_service"
                             type="button"
-                            aria-label="석상훈 개인화 메뉴"
-                            aria-haspopup="true"
                             aria-expanded="false"
                         >
-                            <span class="user_photo"
-                                ><svg class="img_default">
-                                    <use
-                                        xlink:href="#svg_gnb_member_photo"
-                                    ></use></svg
-                            ></span>
-                            <span class="user_name">석상훈</span>
-                            <svg
-                                class="img_social"
-                                aria-hidden="true"
-                                focusable="false"
-                            >
-                                <use xlink:href="#svg_gnb_social4"></use>
+                            기업서비스
+                            <svg aria-hidden="true" focusable="false">
+                                <use
+                                    xlink:href="#svg_gnb_profile_bracket"
+                                ></use>
                             </svg>
-                            <span class="img_arrow"
-                                ><svg aria-hidden="true" focusable="false">
-                                    <use
-                                        xlink:href="#svg_gnb_profile_arrow"
-                                    ></use></svg
-                            ></span>
                         </button>
-                        <div class="layer_member person">
-                            <div class="stat">
-                                <a
-                                    href="/zf_user/member/suggest/status-list"
-                                    data-nav-track="ga_lead|main-gnb|layer_person|talent-pool"
-                                >
-                                    <span>받은제안</span>
-                                    <strong class="suggest_text">000</strong>
-                                </a>
-                                <a
-                                    href="/zf_user/persons/apply-status-list"
-                                    data-nav-track="ga_lead|main-gnb|layer_person|apply_list"
-                                >
-                                    <span>지원현황</span>
-                                    <strong class="apply_text">000</strong>
-                                </a>
-                            </div>
-                            <ul class="links">
-                                <li>
+                        <div class="layer_member">
+                            <ul class="services">
+                                <li class="half_col">
                                     <a
-                                        href="/zf_user/member/persons/main"
-                                        data-nav-track="ga_lead|main-gnb|layer_person|mylayer_myhome"
-                                        >MY홈</a
+                                        href="/zf_user/auth?ut=c"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|signin_comp"
+                                        >로그인</a
+                                    >
+                                    <a
+                                        href="/zf_user/member/registration/join?ut=c"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|company_join"
+                                        >회원가입</a
                                     >
                                 </li>
                                 <li>
                                     <a
-                                        href="/zf_user/resume/resume-manage"
-                                        data-nav-track="ga_lead|main-gnb|layer_person|resume-manage"
-                                        >이력서/자소서 관리</a
+                                        href="/zf_user/memcom/index/main"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|musthome"
+                                        >기업홈</a
                                     >
                                 </li>
                                 <li>
                                     <a
-                                        href="/zf_user/persons/scrap-recruit"
-                                        data-nav-track="ga_lead|main-gnb|layer_person|scrap"
-                                        >스크랩</a
+                                        href="/zf_user/memcom/recruit/select-recruit-type"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|recruit-add"
+                                        >공고 등록</a
                                     >
                                 </li>
                                 <li>
                                     <a
-                                        href="/zf_user/jobs/read-jobs"
-                                        data-nav-track="ga_lead|main-gnb|layer_person|recent"
-                                        >최근본</a
+                                        href="/zf_user/company/recruit-manage?gnb_main=y"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|recruit-manage"
+                                        >지원자 관리</a
                                     >
                                 </li>
                                 <li>
                                     <a
-                                        href="/zf_user/member/payment/history"
-                                        data-nav-track="ga_lead|main-gnb|layer_person|payment"
-                                        >결제내역</a
+                                        href="/zf_user/memcom/talent-pool/main/search"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|talent_matching"
+                                        >인재풀</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/zf_user/memcom/ai-recruit/introduce"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|smart_recruiter"
+                                        >스마트 리크루터</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/zf_user/memcom/preview/custom-guide"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|verification"
+                                        >인적성 · 평가도구</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/zf_user/hr-magazine/list"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|hr-magazine"
+                                        >HR매거진</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://billing.saramin.co.kr/products?t_ref=main&amp;t_ref_content=member_gnb"
+                                        data-nav-track="ga_lead|main-gnb|layer_comp_service|products"
+                                        >채용상품</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://business.saramin.co.kr?utm_source=saramin&amp;utm_medium=referral&amp;utm_campaign=organic&amp;utm_content=c_drop_menu"
+                                        data-nav-track="ga_lead|home_menu|business|"
+                                        >사람인 비즈니스</a
                                     >
                                 </li>
                             </ul>
-                            <a
-                                href="/zf_user/auth/logout"
-                                class="logout"
-                                data-nav-track="ga_lead|main-gnb|layer_person|logout"
-                                >로그아웃</a
-                            >
                         </div>
                     </div>
                 </div>
@@ -1407,25 +1413,6 @@
                 </symbol>
             </svg>
         </div>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
-        <h1>1111111111111111111111111111</h1>
     </body>
-    <script src="/static/js/main/other-login-header.js"></script>
+    <script src="/static/js/main/other-logout-header.js"></script>
 </html>

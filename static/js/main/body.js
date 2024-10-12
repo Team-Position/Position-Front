@@ -132,3 +132,14 @@ buttons.forEach((button) => {
         button.classList.add("active");
     });
 });
+
+const btnTrack = document.querySelector(".btn_scrap.track_event");
+
+btnTrack.addEventListener("click", (e) => {
+    // Toggle the "on" class
+    btnTrack.classList.toggle("on");
+
+    // Toggle the aria-pressed attribute
+    const isPressed = btnTrack.getAttribute("aria-pressed") === "true";
+    btnTrack.setAttribute("aria-pressed", !isPressed);
+});

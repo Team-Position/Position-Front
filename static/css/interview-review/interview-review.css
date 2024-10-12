@@ -152,6 +152,42 @@ input {
     padding: 0;
 }
 
+.interview-inpSel-1 {
+    display: inline-block;
+    height: 32px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-inpSel-1 select {
+    width: 85px;
+    padding: 0 29px 1px 11px;
+    height: 30px;
+    border: none;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    line-height: 29px;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: url(/static/images/interview-review/ico_select_arr.png) no-repeat 100% 0;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.interview-inpSel-1 select option {
+    height: 32px;
+    font-size: 13px;
+    color: #444;
+    line-height: 16px;
+}
+
 .interview-review-cont .interview-search-area .interview-search-right {
     float: right;
 }
@@ -161,7 +197,7 @@ input {
     padding: 0;
 }
 
-.interview-inpSel {
+.interview-inpSel-2 {
     display: inline-block;
     height: 32px;
     border: 1px solid #dbdbdb;
@@ -175,7 +211,7 @@ span {
     padding: 0;
 }
 
-.interview-inpSel select {
+.interview-inpSel-2 select {
     width: 127px;
     padding: 0 29px 1px 11px;
     height: 30px;
@@ -199,7 +235,7 @@ span {
     outline-offset: 2px;
 }
 
-.interview-inpSel select option {
+.interview-inpSel-2 select option {
     height: 32px;
     font-size: 13px;
     color: #444;
@@ -261,4 +297,21 @@ span {
     clear: both;
     content: "";
     table-layout: fixed;
+}
+
+.interview-review_cont .interview-search-area .interview-num-count {
+    position: absolute;
+    top: -42px;
+    right: 0;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0
+}
+
+.interview-review-cont .interview-search-area .interview-num-count b {
+    color: var(--blue80);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }

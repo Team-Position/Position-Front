@@ -62,6 +62,12 @@ const cellNumberInput = document.querySelector("#cell");
 const cellNumberMessage = document.querySelector("#msg_cell");
 const userEmailInput = document.querySelector("#email");
 const userEmailMessage = document.querySelector("#msg_email");
+const certInput = document.querySelector("#findCite");
+const certMessageFail = document.querySelector("#msg_cert_num_fail");
+const expiredMessage = document.querySelector("#msg_cert_num");
+let timer;
+const certButton = document.querySelector(".btn_cert");
+const timeDisplay = document.querySelector(".time_find");
 
 // *********아이디 유효성 검사 함수************
 const validateId = () => {
@@ -123,3 +129,42 @@ const validateEmail = () => {
 };
 
 userEmailInput.addEventListener("input", validateEmail);
+
+// ******************** 인증번호 유효성 검사 함수 **************
+const validateCertNumber = () => {
+    const certPattern = /^\d{4,6}$/;
+    if (certPattern.test(certInput.value)) {
+        certMessageFail.style.display = "none";
+    } else {
+        certMessageFail.style.display = "block";
+    }
+};
+
+certInput.addEventListener("input", validateCertNumber);
+
+// ********************인증번호 타이머*************************
+const startCountdown = () => {
+    let timeRemaining = 180;
+
+    clearInterval(timer);
+    timeDisplay.style.display = "inline";
+    expiredMessage.style.display = "none";
+
+    timer = setInterval(() => {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        timeDisplay.textContent = `남은 시간 (${minutes}:${
+            seconds < 10 ? "0" : ""
+        }${seconds})`;
+
+        if (timeRemaining <= 0) {
+            clearInterval(timer);
+            timeDisplay.style.display = "none";
+            expiredMessage.style.display = "block";
+        }
+
+        timeRemaining--;
+    }, 1000);
+};
+
+certButton.addEventListener("click", startCountdown);

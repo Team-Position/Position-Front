@@ -584,33 +584,6 @@ button.interested_corp {
     margin-left: auto;
     align-items: flex-end;
 }
-.cont_introduce .company_curation {
-    display: flex;
-    overflow: hidden;
-    margin-top: 24px;
-    max-height: 44px;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-.cont_introduce .company_curation .company_curation_item {
-    display: flex;
-    padding: 0 16px;
-    height: 44px;
-    border-radius: 8px;
-    background: var(--gray20);
-    align-items: center;
-    justify-content: center;
-}
-.cont_introduce .company_curation .company_curation_item .ico {
-    margin-right: 4px;
-    width: 20px;
-    height: 20px;
-}
-.cont_introduce .company_curation .company_curation_item .txt {
-    color: var(--gray100);
-    font-size: 14px;
-    line-height: 20px;
-}
 .wrap_company_view .main_content .section .section_content:after {
     display: table;
     clear: both;
@@ -668,113 +641,7 @@ button.interested_corp {
 .cont_introduce .list_workplace > li {
     margin-right: 8px;
 }
-.cont_introduce .list_workplace .box_workplace {
-    display: flex;
-    padding: 0 12px;
-    height: 32px;
-    border-radius: 32px;
-    background: var(--gray20);
-    align-items: center;
-    justify-content: center;
-}
-.cont_introduce .list_workplace .box_workplace .txt {
-    display: flex;
-    color: var(--gray100);
-    font-size: 12px;
-    line-height: 20px;
-    align-items: center;
-    justify-content: center;
-}
-.cont_introduce .wrap_photo {
-    margin-top: 14px;
-    padding-bottom: 40px;
-}
-.cont_introduce .wrap_photo .list_thumb {
-    display: flex;
-}
-.cont_introduce .wrap_photo .list_thumb li:nth-child(1),
-.cont_introduce .wrap_photo .list_thumb li:nth-child(2),
-.cont_introduce .wrap_photo .list_thumb li:nth-child(3) {
-    display: block;
-}
-.cont_introduce .wrap_photo .list_thumb li {
-    display: none;
-    position: relative;
-    width: 306px;
-    height: 220px;
-}
-.cont_introduce .wrap_photo .list_thumb li .thumb_inner {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    background: #000;
-}
-.cont_introduce .wrap_photo .list_thumb li .cover {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.56);
-    align-items: center;
-    justify-content: center;
-}
-.cont_introduce .wrap_photo .list_thumb li .frame {
-    display: block;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-}
-.cont_introduce .wrap_photo .list_thumb li .frame img.ready {
-    display: block;
-}
-.cont_introduce .wrap_photo .list_thumb li .frame img {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: auto;
-    height: 100%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-.cont_introduce .wrap_photo .list_thumb li .btn_open_company_photo {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-}
-.cont_introduce .wrap_photo .list_thumb li + li {
-    margin-left: 20px;
-}
-.cont_introduce .wrap_photo .list_thumb li:nth-child(1),
-.cont_introduce .wrap_photo .list_thumb li:nth-child(2),
-.cont_introduce .wrap_photo .list_thumb li:nth-child(3) {
-    display: block;
-}
-.cont_introduce .wrap_photo .list_thumb li + li {
-    margin-left: 20px;
-}
-.cont_introduce .wrap_photo .list_thumb li.indicator .cover {
-    display: flex;
-    font-size: 20px;
-    line-height: 28px;
-}
+
 .cont_introduce .area_company_infos .company_summary {
     display: flex;
     margin-bottom: 30px;
@@ -846,34 +713,6 @@ button.interested_corp {
     display: flex;
     position: relative;
     margin-left: 80px;
-}
-.cont_introduce .area_company_infos .company_introduce {
-    margin-top: 40px;
-}
-.cont_introduce .area_company_infos .company_introduce .tit {
-    color: var(--gray120);
-    font-size: 18px;
-    line-height: 26px;
-}
-.cont_introduce .area_company_infos .company_introduce .txt {
-    margin-top: 16px;
-    color: var(--gray100);
-    font-size: 15px;
-    line-height: 24px;
-}
-.cont_introduce .area_company_infos .company_introduce {
-    margin-top: 40px;
-}
-.cont_introduce .area_company_infos .company_introduce .tit {
-    color: var(--gray120);
-    font-size: 18px;
-    line-height: 26px;
-}
-.cont_introduce .area_company_infos .company_introduce .txt {
-    margin-top: 16px;
-    color: var(--gray100);
-    font-size: 15px;
-    line-height: 24px;
 }
 .wrap_company_view .content_fold.active .box_btn {
     display: flex;
@@ -982,39 +821,7 @@ cite {
     margin: 0;
     padding: 0;
 }
-/* 연혁 */
-.cont_introduce .list_company_history .company_history_item:last-child {
-    padding-bottom: 0;
-}
-.cont_introduce .list_company_history .company_history_item {
-    position: relative;
-    padding: 0 0 24px 24px;
-}
-.cont_introduce .list_company_history .company_history_item:before {
-    left: 4px;
-    width: 1px;
-    background: var(--gray50);
-}
-.cont_introduce .company_history {
-    display: flex;
-    justify-content: flex-start;
-}
-.cont_introduce .company_history .history_year {
-    color: var(--gray120);
-    font-size: 16px;
-    line-height: 24px;
-    width: 42px;
-}
-.cont_introduce .company_history .list_company_history_cont {
-    margin-left: 28px;
-}
-.cont_introduce .company_history .list_company_history_cont .history_cont_item {
-    display: flex;
-    margin-bottom: 24px;
-    font-size: 14px;
-    line-height: 20px;
-    justify-content: flex-start;
-}
+
 .cont_introduce .list_company_history .company_history_item:after {
     left: 0;
     width: 10px;
@@ -1224,93 +1031,11 @@ cite {
     margin: 0;
     padding: 0;
 }
-.cont_introduce .affiliate_counting {
-    display: flex;
-    line-height: 24px;
-    align-items: center;
-    justify-content: flex-start;
-}
-.cont_introduce .affiliate_counting .count_tit {
-    color: var(--gray100);
-    font-size: 16px;
-}
-.cont_introduce .list_affiliate {
-    display: flex;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-.cont_introduce .list_affiliate .affiliate_item {
-    margin: 0 10px 10px 0;
-}
-.cont_introduce .list_affiliate .affiliate_item .link_affiliate {
-    display: flex;
-    padding: 0 12px;
-    height: 34px;
-    border-radius: 4px;
-    color: var(--gray100);
-    font-size: 14px;
-    background: var(--gray20);
-    align-items: center;
-    justify-content: center;
-}
-.cont_introduce .list_affiliate .affiliate_item .link_affiliate {
-    display: flex;
-    padding: 0 12px;
-    height: 34px;
-    border-radius: 4px;
-    color: var(--gray100);
-    font-size: 14px;
-    background: var(--gray20);
-    align-items: center;
-    justify-content: center;
-}
 .wrap_company_view .content_fold.expand {
     max-height: none;
 }
-.cont_introduce .list_welfare {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(218px, 1fr));
-    grid-row-gap: 40px;
-    grid-column-gap: 28px;
-}
-.cont_introduce .list_welfare .welfare_tit {
-    display: flex;
-    color: var(--gray120);
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 22px;
-    align-items: center;
-}
-.cont_introduce .list_welfare .welfare_tit .ico {
-    margin-right: 8px;
-    width: 24px;
-    height: 24px;
-}
-.cont_introduce .list_welfare_cate {
-    display: flex;
-    flex-direction: column;
-    margin-top: 12px;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.cont_introduce .list_welfare_cate .cate_item {
-    position: relative;
-    padding-left: 11px;
-    color: var(--gray100);
-    font-size: 15px;
-    line-height: 20px;
-}
-.cont_introduce .list_welfare_cate .cate_item:before {
-    display: block;
-    position: absolute;
-    top: 8px;
-    left: 0;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background: var(--gray80);
-    content: "";
-}
+/* 여기서부터 */
+
 .wrap_company_view .content_fold.expand .box_btn {
     position: static;
 }
@@ -1533,13 +1258,6 @@ cite {
     margin-bottom: 48px;
     padding-bottom: 48px;
     border-bottom: 1px solid var(--gray30);
-}
-.wrap_company_view .main_content .section .section_tit {
-    display: flex;
-    color: var(--gray120);
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 28px;
 }
 .wrap_company_view .main_content .section .section_content {
     margin-top: 20px;

@@ -49,8 +49,24 @@
                                     </h2>
                                 </div>
                                 <div class="interview-search-area">
+                                    <span class="interview-inpSel-1">
+                                        <select
+                                            name="orderby"
+                                            title="정렬 기준 선택"
+                                        >
+                                            <option
+                                                value="registration"
+                                                selected
+                                            >
+                                                등록순
+                                            </option>
+                                            <option value="interview">
+                                                진행순
+                                            </option>
+                                        </select>
+                                    </span>
                                     <div class="interview-search-right">
-                                        <span class="interview-inpsel">
+                                        <span class="interview-inpSel-2">
                                             <select
                                                 name="interview-job-category"
                                                 title="직업 선택"
@@ -117,27 +133,29 @@
                                                 </option>
                                             </select>
                                         </span>
-                                    </div>
-                                    <div class="interview-searchTypoBox">
-                                        <input
-                                            type="text"
-                                            name="company-nm"
-                                            class="interview-inpTypo"
-                                            placeholder="기업명"
-                                            title="기업명을 입력하세요"
-                                            value
-                                        />
-                                        <button
-                                            type="submit"
-                                            class="interview-btnTypoSearch"
-                                        ></button>
-                                        <button
-                                            type="button"
-                                            class="interview-btnTypoReset"
-                                            title="검색 초기화"
-                                        >
-                                            초기화
-                                        </button>
+                                        <div class="interview-searchTypoBox">
+                                            <input
+                                                type="text"
+                                                name="company-nm"
+                                                class="interview-inpTypo"
+                                                placeholder="기업명"
+                                                title="기업명을 입력하세요"
+                                                value
+                                            />
+                                            <button
+                                                type="submit"
+                                                class="interview-btnTypoSearch"
+                                            >
+                                                검색
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="interview-btnTypoReset"
+                                                title="검색 초기화"
+                                            >
+                                                초기화
+                                            </button>
+                                        </div>
                                     </div>
                                     <span class="interview-num-count"
                                         >총

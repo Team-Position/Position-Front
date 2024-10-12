@@ -538,6 +538,15 @@
     grid-auto-flow: row;
     gap: 24px;
 }
+.cont_product .inner_cont>hr {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background: #d7dce5;
+}
 
 
 .main_product .cont_banner {
@@ -1013,3 +1022,210 @@
     content: "";
 }
 
+/* 최고의 인기 공고 */
+.main_product .prd_prime .prd_list {
+    grid-auto-rows: 208px;
+}
+
+.main_product .prd_prime .prd_list li a {
+    grid-template-columns: 1fr auto;
+    gap: 0 8px;
+    grid-template-areas:
+        "logo logo"
+        "c_name c_name"
+        "title title"
+        "badge date";
+    grid-template-rows: 54px 22px 48px 36px;
+}
+
+.main_product .prd_prime .prd_list .logo {
+    width: 144px;
+    height: 38px;
+}
+
+.main_product .prd_prime .prd_list .c_name {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.main_product .prd_prime .prd_list .title {
+    max-height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_product .prd_prime .prd_list li.option:hover {
+    height: 414px;
+}
+
+.main_product .prd_prime .prd_list li.option .title_ex {
+    display: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_product .prd_prime .prd_list .bg_ex {
+    display: none;
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+    grid-area: bg_ex;
+    justify-self: end;
+    align-self: center;
+}
+
+.main_product .prd_prime .prd_list .bg_ex img {
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+}
+
+.main_product .prd_prime .prd_list .tags {
+    display: none;
+}
+
+.main_product .tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+    grid-area: tags;
+}
+
+.main_product .tags span {
+    padding: 2px 6px;
+    border-radius: 12px;
+    color: #373f57;
+    font-size: 13px;
+    line-height: 20px;
+    white-space: nowrap;
+    background: #eff5ff;
+}
+
+.main_product .prd_prime .prd_list .btn_scrap {
+    bottom: 24px;
+}
+
+/* hover */
+.main_product .prd_prime .prd_list.plus li:hover a {
+    box-shadow: 0 4px 20px 0 rgba(14, 12, 31, 0.15);
+}
+.main_product .prd_prime .prd_list li.option:hover a {
+    grid-template-areas:
+        "logo logo"
+        "c_name c_name"
+        "title title"
+        "bg_ex bg_ex"
+        "tags tags"
+        "badge date";
+    grid-template-rows: 54px 22px 72px 128px 56px 32px;
+}
+.main_product .prd_list li.option:hover a {
+    box-shadow: 0 4px 20px 0 rgba(14, 12, 31, 0.15);
+}
+.main_product .prd_list li:hover a {
+    box-shadow: 0 4px 10px 0 rgba(14, 12, 31, 0.10);
+}
+.main_product .prd_prime .prd_list li.option:hover .title {
+    display: none;
+}
+.main_product .prd_prime .prd_list li.option:hover .title_ex {
+    display: -webkit-box;
+    max-height: 72px;
+    -webkit-line-clamp: 3;
+}
+.main_product .prd_prime .prd_list li.option:hover .bg_ex {
+    display: block;
+}
+.main_product .prd_prime .prd_list li.option:hover .tags {
+    display: flex;
+    align-self: end;
+}
+
+/* 요즘 주목받는 공고 */
+.main_product .prd_special .prd_list {
+    grid-auto-rows: 188px;
+}
+.main_product .prd_special .prd_list li.option:hover {
+    height: 362px;
+}
+.main_product .prd_special .prd_list li a {
+    padding: 23px 23px 15px;
+    grid-template-areas:
+        "logo"
+        "c_name"
+        "title"
+        "date";
+    grid-template-rows: 48px 20px 44px 36px;
+}
+.main_product .prd_special .prd_list .logo {
+    width: 144px;
+    height: 32px;
+}
+.main_product .prd_special .prd_list.plus li:hover a {
+    box-shadow: 0 4px 20px 0 rgba(14, 12, 31, 0.15);
+}
+.main_product .prd_special .prd_list li.option:hover a {
+    grid-template-areas:
+        "logo"
+        "c_name"
+        "title"
+        "bg_ex"
+        "tags"
+        "date";
+    grid-template-rows: 48px 20px 76px 88px 56px 32px;
+}
+.main_product .prd_special .prd_list li.option:hover .title {
+    display: none;
+}
+.main_product .prd_special .prd_list li.option:hover .title_ex {
+    display: -webkit-box;
+    max-height: 66px;
+    -webkit-line-clamp: 3;
+}
+.main_product .prd_special .prd_list li.option .title_ex {
+    display: none;
+}
+.main_product .prd_special .prd_list li.option:hover .bg_ex {
+    display: block;
+}
+.main_product .prd_special .prd_list .bg_ex {
+    display: none;
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+    grid-area: bg_ex;
+    justify-self: end;
+}
+.main_product .prd_special .prd_list .bg_ex img {
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+}
+.main_product .prd_special .prd_list li.option:hover .tags {
+    display: flex;
+    align-self: end;
+}
+.main_product .prd_special .prd_list .tags {
+    display: none;
+}
+.main_product .prd_special .prd_list .date {
+    padding-bottom: 2px;
+}
+.main_product .prd_special .prd_list .btn_scrap {
+    bottom: 16px;
+}
+
+.main_product .prd_special .prd_list.plus li:not(.option):hover a {
+    padding: 22px 22px 14px;
+}
+.main_product .prd_list.plus li:not(.option):hover a {
+    padding: 22px;
+    border-width: 2px;
+}
+.main_product .prd_list li:not(.option):hover a {
+    border-color: #2d67ff;
+}
+
+/* 지금 가장 핫한 공고 */

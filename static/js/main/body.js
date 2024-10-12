@@ -133,13 +133,15 @@ buttons.forEach((button) => {
     });
 });
 
-const btnTrack = document.querySelector(".btn_scrap.track_event");
+const btnTrackList = document.querySelectorAll(".btn_scrap.track_event");
 
-btnTrack.addEventListener("click", (e) => {
-    // Toggle the "on" class
-    btnTrack.classList.toggle("on");
+btnTrackList.forEach((btnTrack) => {
+    btnTrack.addEventListener("click", (e) => {
+        // 클릭된 버튼에 대해 "on" 클래스를 토글
+        btnTrack.classList.toggle("on");
 
-    // Toggle the aria-pressed attribute
-    const isPressed = btnTrack.getAttribute("aria-pressed") === "true";
-    btnTrack.setAttribute("aria-pressed", !isPressed);
+        // 클릭된 버튼의 aria-pressed 속성을 토글
+        const isPressed = btnTrack.getAttribute("aria-pressed") === "true";
+        btnTrack.setAttribute("aria-pressed", !isPressed);
+    });
 });

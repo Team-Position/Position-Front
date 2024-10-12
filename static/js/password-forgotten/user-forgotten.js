@@ -62,6 +62,8 @@ const cellNumberInput = document.querySelector("#cell");
 const cellNumberMessage = document.querySelector("#msg_cell");
 const userEmailInput = document.querySelector("#email");
 const userEmailMessage = document.querySelector("#msg_email");
+const certInput = document.querySelector("#findCite");
+const certMessageFail = document.querySelector("#msg_cert_num_fail");
 
 // *********아이디 유효성 검사 함수************
 const validateId = () => {
@@ -123,3 +125,15 @@ const validateEmail = () => {
 };
 
 userEmailInput.addEventListener("input", validateEmail);
+
+// ******************** 인증번호 유효성 검사 함수 **************
+const validateCertNumber = () => {
+    const certPattern = /^\d{4,6}$/;
+    if (certPattern.test(certInput.value)) {
+        certMessageFail.style.display = "none";
+    } else {
+        certMessageFail.style.display = "block";
+    }
+};
+
+certInput.addEventListener("input", validateCertNumber);

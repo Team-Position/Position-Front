@@ -14,11 +14,9 @@ cellTab.addEventListener("click", () => toggleTabs(true));
 emailTab.addEventListener("click", () => toggleTabs(false));
 
 const toggleTabs = (isCell) => {
-    // 클래스 'on' 추가 및 제거
     cellTab.classList.toggle("on", isCell);
     emailTab.classList.toggle("on", !isCell);
 
-    // 휴대폰 번호와 이메일 입력란의 활성화 및 비활성화
     cellInput.style.display = isCell ? "block" : "none";
     emailInput.style.display = isCell ? "none" : "block";
 };
@@ -44,9 +42,9 @@ const updateEmailSuggestions = (inputValue) => {
 emailLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
-        const emailPart = link.querySelector(".txt_email").textContent.trim(); // 공백 제거
-        const domainPart = link.textContent.replace(emailPart, "").trim(); // 도메인 부분에서 공백 제거
-        enterMail.value = `${emailPart}${domainPart}`; // 이메일 주소 결합
+        const emailPart = link.querySelector(".txt_email").textContent.trim();
+        const domainPart = link.textContent.replace(emailPart, "").trim();
+        enterMail.value = `${emailPart}${domainPart}`;
         showAddress.style.display = "none";
     });
 });
@@ -70,6 +68,8 @@ const certButton = document.querySelector(".btn_cert");
 const timeDisplay = document.querySelector(".time_find");
 const remainTimeText = document.querySelector("#confirm_remain_time");
 const sendSMSMessage = document.querySelector("#msg_cell1");
+const certConfirmButton = document.querySelector("#btn_cert_complete");
+const certSuccessMessage = document.querySelector(".message_find.ok");
 
 // *********아이디 유효성 검사 함수************
 const validateId = () => {
@@ -110,7 +110,7 @@ birthdayInput.addEventListener("input", validateBirthday);
 
 // *************** 휴대폰 번호 유효성 검사 함수 *************
 const validateCell = () => {
-    const cellNumberPattern = /^\d{8}$/;
+    const cellNumberPattern = /^\d{11}$/;
     if (cellNumberPattern.test(cellNumberInput.value)) {
         cellNumberMessage.style.display = "none";
     } else {
@@ -145,6 +145,7 @@ const validateCertNumber = () => {
 certInput.addEventListener("input", validateCertNumber);
 
 // ********************인증번호 타이머*************************
+
 const startCountdown = () => {
     let timeRemaining = 180;
 
@@ -170,8 +171,47 @@ const startCountdown = () => {
     }, 1000);
 };
 
-certButton.addEventListener("click", startCountdown);
-
 certButton.addEventListener("click", () => {
-    sendSMSMessage.style.display = "block";
+    if (checkAllInputsValid()) {
+        sendSMSMessage.style.display = "block";
+        startCountdown();
+    }
+});
+
+// *****************입력값 유효성 검사 함수*****************
+const checkAllInputsValid = () => {
+    if (!idInput.value) {
+        alert("아이디를 입력해 주세요.");
+        idInput.focus();
+        return false;
+    }
+    if (!nameInput.value) {
+        alert("이름을 입력해 주세요.");
+        nameInput.focus();
+        return false;
+    }
+    if (!birthdayInput.value) {
+        alert("생년월일을 입력해 주세요.");
+        birthdayInput.focus();
+        return false;
+    }
+    if (!cellNumberInput.value) {
+        alert("휴대폰 번호를 입력해 주세요.");
+        cellNumberInput.focus();
+        return false;
+    }
+    return true;
+};
+
+// *************************인증 성공**********************
+certConfirmButton.addEventListener("click", () => {
+    if (!certInput.value) {
+        alert("인증번호를 입력해 주세요.");
+        certInput.focus();
+    } else {
+        clearInterval(timer);
+        timeDisplay.style.display = "none";
+        certSuccessMessage.style.display = "block";
+        alert("인증이 완료되었습니다.");
+    }
 });

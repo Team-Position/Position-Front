@@ -538,6 +538,15 @@
     grid-auto-flow: row;
     gap: 24px;
 }
+.cont_product .inner_cont>hr {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background: #d7dce5;
+}
 
 
 .main_product .cont_banner {
@@ -1013,3 +1022,635 @@
     content: "";
 }
 
+/* 최고의 인기 공고 */
+.main_product .prd_prime .prd_list {
+    grid-auto-rows: 208px;
+}
+
+.main_product .prd_prime .prd_list li a {
+    grid-template-columns: 1fr auto;
+    gap: 0 8px;
+    grid-template-areas:
+        "logo logo"
+        "c_name c_name"
+        "title title"
+        "badge date";
+    grid-template-rows: 54px 22px 48px 36px;
+}
+
+.main_product .prd_prime .prd_list .logo {
+    width: 144px;
+    height: 38px;
+}
+
+.main_product .prd_prime .prd_list .c_name {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.main_product .prd_prime .prd_list .title {
+    max-height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_product .prd_prime .prd_list li.option:hover {
+    height: 414px;
+}
+
+.main_product .prd_prime .prd_list li.option .title_ex {
+    display: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_product .prd_prime .prd_list .bg_ex {
+    display: none;
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+    grid-area: bg_ex;
+    justify-self: end;
+    align-self: center;
+}
+
+.main_product .prd_prime .prd_list .bg_ex img {
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+}
+
+.main_product .prd_prime .prd_list .tags {
+    display: none;
+}
+
+.main_product .tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+    grid-area: tags;
+}
+
+.main_product .tags span {
+    padding: 2px 6px;
+    border-radius: 12px;
+    color: #373f57;
+    font-size: 13px;
+    line-height: 20px;
+    white-space: nowrap;
+    background: #eff5ff;
+}
+
+.main_product .prd_prime .prd_list .btn_scrap {
+    bottom: 24px;
+}
+
+/* hover */
+.main_product .prd_prime .prd_list.plus li:hover a {
+    box-shadow: 0 4px 20px 0 rgba(14, 12, 31, 0.15);
+}
+.main_product .prd_prime .prd_list li.option:hover a {
+    grid-template-areas:
+        "logo logo"
+        "c_name c_name"
+        "title title"
+        "bg_ex bg_ex"
+        "tags tags"
+        "badge date";
+    grid-template-rows: 54px 22px 72px 128px 56px 32px;
+}
+.main_product .prd_list li.option:hover a {
+    box-shadow: 0 4px 20px 0 rgba(14, 12, 31, 0.15);
+}
+.main_product .prd_list li:hover a {
+    box-shadow: 0 4px 10px 0 rgba(14, 12, 31, 0.10);
+}
+.main_product .prd_prime .prd_list li.option:hover .title {
+    display: none;
+}
+.main_product .prd_prime .prd_list li.option:hover .title_ex {
+    display: -webkit-box;
+    max-height: 72px;
+    -webkit-line-clamp: 3;
+}
+.main_product .prd_prime .prd_list li.option:hover .bg_ex {
+    display: block;
+}
+.main_product .prd_prime .prd_list li.option:hover .tags {
+    display: flex;
+    align-self: end;
+}
+
+/* 요즘 주목받는 공고 */
+.main_product .prd_special .prd_list {
+    grid-auto-rows: 188px;
+}
+.main_product .prd_special .prd_list li.option:hover {
+    height: 362px;
+}
+.main_product .prd_special .prd_list li a {
+    padding: 23px 23px 15px;
+    grid-template-areas:
+        "logo"
+        "c_name"
+        "title"
+        "date";
+    grid-template-rows: 48px 20px 44px 36px;
+}
+.main_product .prd_special .prd_list .logo {
+    width: 144px;
+    height: 32px;
+}
+.main_product .prd_special .prd_list.plus li:hover a {
+    box-shadow: 0 4px 20px 0 rgba(14, 12, 31, 0.15);
+}
+.main_product .prd_special .prd_list li.option:hover a {
+    grid-template-areas:
+        "logo"
+        "c_name"
+        "title"
+        "bg_ex"
+        "tags"
+        "date";
+    grid-template-rows: 48px 20px 76px 88px 56px 32px;
+}
+.main_product .prd_special .prd_list li.option:hover .title {
+    display: none;
+}
+.main_product .prd_special .prd_list li.option:hover .title_ex {
+    display: -webkit-box;
+    max-height: 66px;
+    -webkit-line-clamp: 3;
+}
+.main_product .prd_special .prd_list li.option .title_ex {
+    display: none;
+}
+.main_product .prd_special .prd_list li.option:hover .bg_ex {
+    display: block;
+}
+.main_product .prd_special .prd_list .bg_ex {
+    display: none;
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+    grid-area: bg_ex;
+    justify-self: end;
+}
+.main_product .prd_special .prd_list .bg_ex img {
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+}
+.main_product .prd_special .prd_list li.option:hover .tags {
+    display: flex;
+    align-self: end;
+}
+.main_product .prd_special .prd_list .tags {
+    display: none;
+}
+.main_product .prd_special .prd_list .date {
+    padding-bottom: 2px;
+}
+.main_product .prd_special .prd_list .btn_scrap {
+    bottom: 16px;
+}
+
+.main_product .prd_special .prd_list.plus li:not(.option):hover a {
+    padding: 22px 22px 14px;
+}
+.main_product .prd_list.plus li:not(.option):hover a {
+    padding: 22px;
+    border-width: 2px;
+}
+.main_product .prd_list li:not(.option):hover a {
+    border-color: #2d67ff;
+}
+
+/* 지금 가장 핫한 공고 */
+.cont_product.prd_hotbanner {
+    padding: 32px 0;
+    width: 100%;
+    background: #f4faff;
+}
+
+.main_product .prd_hotbanner .banner_list {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(5, 236px);
+    grid-auto-rows: 236px;
+}
+
+.main_product .prd_hotbanner .banner_list li a {
+    padding: 15px 23px;
+    grid-template-rows: 44px 48px 112px;
+    grid-template-areas:
+        "logo logo"
+        "title title"
+        "badge date";
+}
+
+.main_product .prd_hotbanner .banner_list li:hover a {
+    box-shadow: 0 4px 10px 0 rgba(14, 12, 31, 0.10);
+}
+
+.main_product .prd_hotbanner .banner_list .logo {
+    width: 104px;
+    height: 28px;
+}
+
+.main_product .prd_hotbanner .banner_list .title {
+    max-height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_product .prd_hotbanner .banner_list .date.noscrap {
+    padding-right: 8px;
+}
+
+.main_product .prd_hotbanner .banner_list .date {
+    z-index: 1;
+    padding: 2px 32px 2px 4px;
+    border-radius: 4px;
+    color: #fff;
+    line-height: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateX(8px);
+    align-self: end;
+}
+
+.main_product .prd_hotbanner .banner_list .bg {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 234px;
+    height: 111px;
+}
+
+.main_product .prd_hotbanner .banner_list .bg img {
+    width: 234px;
+    height: 111px;
+    border-radius: 0 0 16px 16px;
+}
+
+.main_product .prd_hotbanner .banner_list .btn_scrap {
+    right: 20px;
+    bottom: 18px;
+    z-index: 2;
+}
+
+.main_product .prd_hotbanner .banner_list .btn_scrap:not(.on) .ic path {
+    stroke: #fff;
+}
+
+/* 놓치면 후회할 공고 */
+.main_product .prd_best .prd_list {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 176px;
+}
+.main_product .prd_best .prd_list li a {
+    padding: 15px 23px;
+    grid-template-rows: 44px 20px 44px 34px;
+    grid-template-areas:
+        "logo"
+        "c_name"
+        "title"
+        "date";
+}
+
+.main_product .prd_best .prd_list .logo {
+    width: 104px;
+    height: 28px;
+}
+
+.main_product .prd_best .prd_list .btn_scrap {
+    bottom: 16px;
+}
+
+.main_product .prd_best .prd_list.plus li:hover a {
+    padding: 14px 22px;
+}
+
+/* 취업TOOL */
+.cont_helper {
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 1260px;
+    height: 170px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.cont_helper .list_helper {
+    margin: 20px 0 0 8px;
+    width: 1280px;
+}
+
+.cont_helper .list_helper li {
+    float: left;
+    margin-right: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.cont_helper .list_helper .link_helper {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: var(--color_primary);
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    background: #f7fafe;
+    -webkit-transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+    -ms-transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+    transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+
+.cont_helper .link_helper.letter:before {
+    background-position: 0 0;
+}
+
+.cont_helper .link_helper.letter:before, .cont_helper .link_helper.photo:before, .cont_helper .link_helper.salary:before, .cont_helper .link_helper.retire:before, .cont_helper .link_helper.unemployment:before, .cont_helper .link_helper.annual:before, .cont_helper .link_helper.graduated:before, .cont_helper .link_helper.grades:before, .cont_helper .link_helper.lang:before, .cont_helper .link_helper.ai_coaching:before {
+    display: block;
+    overflow: hidden;
+    background: url(//www.saraminimage.co.kr/sri/main/img_bottom_spr_220304.png) no-repeat 0 0;
+    content: "";
+}
+
+.cont_helper .link_helper:before {
+    display: block;
+    margin: 22px auto 7px;
+    width: 33px;
+    height: 33px;
+    content: "";
+}
+
+.cont_helper .list_helper .link_helper:hover {
+    color: #fff;
+    background: #3769ed;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.11);
+}
+
+/* 바로가기 바 */
+body.be_curtain_banner .wing {
+    top: 384px;
+}
+.wing {
+    position: fixed;
+    top: 256px;
+    left: 50%;
+    z-index: 3;
+    margin-left: 650px;
+}
+.wing ul {
+    position: relative;
+    width: 100px;
+}
+
+.wing ul:before {
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 6px;
+    width: 1px;
+    background: #8491a7;
+    content: "";
+}
+
+.wing ul li:first-child {
+    margin-top: 0;
+}
+
+.wing ul li {
+    display: block;
+    margin-top: 16px;
+    height: 20px;
+}
+
+.wing ul li button, .wing ul li a {
+    display: block;
+    position: relative;
+    padding-left: 17px;
+    width: 100px;
+    height: 20px;
+    box-sizing: border-box;
+    color: #8491a7;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.wing ul li button:before, .wing ul li a:before {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    background: #8491a7;
+    content: "";
+}
+
+.wing ul li button.on {
+    color: #02c6ff;
+}
+
+.wing ul li a:hover, .wing ul li button:hover {
+    color: #02c6ff;
+}
+.wing ul li button.on:before {
+    background: #02c6ff;
+}
+.wing>.btn_top:hover span {
+    color: #02c6ff;
+}
+
+.wing>.btn_top {
+    display: block;
+    margin-top: 16px;
+    height: 20px;
+}
+.wing>.btn_top span {
+    display: block;
+    position: relative;
+    padding-left: 17px;
+    width: 100px;
+    height: 20px;
+    box-sizing: border-box;
+    color: #8491a7;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+/*푸터*/
+.sri_footer {
+    display: block;
+    clear: both;
+    position: relative;
+    z-index: 1;
+    margin-top: 110px;
+    width: 100%;
+    min-width: 960px;
+    height: 297px;
+}
+.sri_footer .wrap_footer {
+    padding-bottom: 30px;
+    min-width: 960px;
+    border: solid #d7dce5;
+    border-width: 1px 0;
+    background: #f8fafc;
+}
+.sri_footer .links {
+    text-align: center;
+}
+.sri_footer .links ul {
+    display: flex;
+    margin: 10px auto 0;
+    width: 1260px;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.sri_footer .links ul li {
+    box-sizing: border-box;
+}
+.sri_footer .links ul li a:hover {
+    color: var(--common_a_hover_color);
+}
+.sri_footer .links ul li a {
+    display: inline-flex;
+    color: var(--color_secondary);
+    font-size: 13px;
+    line-height: 24px;
+}
+.sri_footer .links ul li.bold a {
+    font-weight: bold;
+}
+.sri_footer .inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 43px 0 21px 214px;
+    width: 960px;
+    box-sizing: border-box;
+}
+.sri_footer .logo {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 158px;
+    height: 31px;
+}
+.sri_footer .customer {
+    margin-bottom: 11px;
+}
+.sri_footer .customer p {
+    color: var(--color_primary);
+}
+.sri_footer .customer p, .sri_footer .customer div {
+    font-size: 12px;
+    line-height: 18px;
+}
+.sri_footer .customer div {
+    color: var(--color_secondary);
+}
+.sri_footer .customer .btns a.link_email {
+    margin-left: 51px;
+}
+.sri_footer .customer .btns a {
+    display: inline-block;
+    zoom: 1;
+    width: 71px;
+    height: 20px;
+    border: #8491a7 1px solid;
+    box-sizing: border-box;
+    color: var(--color_secondary);
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    background: #f8f8f8;
+}
+
+.sri_footer .customer .btns a.type_sns.type_naver {
+    margin-left: 13px;
+    background: url(//www.saraminimage.co.kr/ui/footer/icon_main_blog.png) no-repeat;
+}
+
+.sri_footer .customer .btns a.type_sns {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background: #f8fafc;
+}
+
+.sri_footer .customer .btns a.type_sns.type_facebook {
+    margin-left: 5px;
+    background: url(//www.saraminimage.co.kr/ui/footer/icon_main_facebook.png) no-repeat;
+}
+.sri_footer .copyright {
+    margin-bottom: 12px;
+    color: var(--color_secondary);
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.sri_footer .copyright>p {
+    display: inline-block;
+}
+
+.sri_footer .copyright button {
+    display: inline-block;
+    zoom: 1;
+    margin-top: 17px;
+    width: 80px;
+    height: 20px;
+    border: #8491a7 1px solid;
+    box-sizing: border-box;
+    color: var(--color_secondary);
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    background: #f8f8f8;
+}
+
+.sri_footer .awards {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.sri_footer .btn_mobile_view {
+    display: block;
+    margin: 0 auto;
+    width: 1260px;
+    height: 40px;
+    border: #d7dce5 1px solid;
+    box-sizing: border-box;
+    color: var(--color_secondary);
+    font-size: 16px;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    background: #f4f6fa;
+}

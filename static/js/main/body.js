@@ -133,13 +133,63 @@ buttons.forEach((button) => {
     });
 });
 
-const btnTrack = document.querySelector(".btn_scrap.track_event");
+const btnTrackList = document.querySelectorAll(".btn_scrap.track_event");
 
-btnTrack.addEventListener("click", (e) => {
-    // Toggle the "on" class
-    btnTrack.classList.toggle("on");
+btnTrackList.forEach((btnTrack) => {
+    btnTrack.addEventListener("click", (e) => {
+        // 클릭된 버튼에 대해 "on" 클래스를 토글
+        btnTrack.classList.toggle("on");
 
-    // Toggle the aria-pressed attribute
-    const isPressed = btnTrack.getAttribute("aria-pressed") === "true";
-    btnTrack.setAttribute("aria-pressed", !isPressed);
+        // 클릭된 버튼의 aria-pressed 속성을 토글
+        const isPressed = btnTrack.getAttribute("aria-pressed") === "true";
+        btnTrack.setAttribute("aria-pressed", !isPressed);
+    });
+});
+
+// const btnQuickList = document.querySelectorAll("._ga_quick");
+// btnQuickList.forEach((btnQuick) => {
+//     btnQuick.addEventListener("click", (e) => {
+//         // 모든 버튼에서 'on' 클래스 제거
+//         btnQuickList.forEach((btn) => btn.classList.remove("on"));
+
+//         // 클릭한 버튼에만 'on' 클래스 추가
+//         btnQuick.classList.add("on");
+//     });
+// });
+
+const btnQuickList = document.querySelectorAll("._ga_quick");
+const btnTop = document.querySelector(".btn_top");
+
+// 각 버튼에 클릭 이벤트 추가
+btnQuickList.forEach((btnQuick) => {
+    btnQuick.addEventListener("click", () => {
+        // 모든 버튼에서 'on' 클래스 제거
+        btnQuickList.forEach((btn) => btn.classList.remove("on"));
+
+        // 클릭된 버튼에 'on' 클래스 추가
+        btnQuick.classList.add("on");
+
+        // 클릭된 버튼의 value 속성값으로 대상 섹션 찾기
+        const targetId = `section_${btnQuick.value}`; // 'section_' 접두어 추가
+        const targetElement = document.getElementById(targetId);
+
+        // 해당 위치로 즉시 이동
+        if (targetElement) {
+            targetElement.scrollIntoView(); // 부드러운 스크롤 없이 이동
+        }
+    });
+});
+
+// 'TOP' 버튼 클릭 시 이벤트 처리
+btnTop.addEventListener("click", () => {
+    // 맨 위로 즉시 스크롤
+    window.scrollTo(0, 0);
+
+    // 모든 버튼에서 'on' 클래스 제거
+    btnQuickList.forEach((btn) => btn.classList.remove("on"));
+
+    // 첫 번째 버튼에 'on' 클래스 추가
+    if (btnQuickList.length > 0) {
+        btnQuickList[0].classList.add("on");
+    }
 });

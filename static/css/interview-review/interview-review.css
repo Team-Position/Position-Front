@@ -337,6 +337,12 @@ span {
     border: 1px solid #eaeaea;
     box-sizing: border-box;
     margin: 0;
+    margin-top: 10px;
+}
+
+.interview-list-review .open {
+    border-color: #444;
+    margin-top: -1px;
 }
 
 .interview-list-review .interview-box-review .interview-view-title {
@@ -361,6 +367,10 @@ span {
 
 .interview-list-review .interview-view-title .interview-txt-company .interview-pass {
     color: var(--blue80);
+}
+
+.interview-list-review .interview-view-title .interview-txt-company .interview-fail {
+    color: #ff611a;
 }
 
 .interview-list-review .interview-view-title .interview-txt-company .interview-result {
@@ -432,16 +442,16 @@ span {
     line-height: normal;
 }
 
-.interview-list-review .open .interview-btn-view:after {
-    background-position: -80px 0;
-}
-
 .interview-list-review .interview-view-title .interview-btn-view:after {
     float: right;
     width: 33px;
     height: 33px;
     background-position: -40px 0;
     content: "";
+}
+
+.interview-list-review .open .interview-btn-view:after {
+    background-position: -80px 0;
 }
 
 .interview-wrap-interview-review .interview-spr-review:after {
@@ -471,10 +481,10 @@ span {
 
 .interview-list-review .interview-info-emoticon {
     overflow: hidden;
-    margin-bottom: 40px;
     padding: 30px 0;
     border-bottom: 1px solid #f0f0f0;
     margin: 0;
+    margin-bottom: 40px;
 }
 
 .interview-list-review .interview-info-emoticon .interview-review {
@@ -515,8 +525,16 @@ dt {
     color: var(--blue80);
 }
 
+.interview-list-review .interview-info-emoticon .interview-review.interview-result .interview-sad {
+    color: #f95e45;
+}
+
 .interview-list-review .interview-info-emoticon .interview-review .interview-smile:before {
     background-position: 0 -40px;
+}
+
+.interview-list-review .interview-info-emoticon .interview-review .interview-sad:before {
+    background-position: -80px -40px;
 }
 
 .interview-list-review .interview-info-emoticon .interview-review dd:before {
@@ -525,7 +543,14 @@ dt {
     left: 0;
     width: 33px;
     height: 33px;
+    background-position: -40px -40px;
     content: "";
+}
+
+.interview-wrap-interview-review .interview-spr-review:before {
+    display: inline-block;
+    vertical-align: top;
+    background: url(/static/images/interview-review/spr_review_190220.png) no-repeat;
 }
 
 .interview-list-review .interview-info-emoticon .interview-review.interview-result dd:before {
@@ -533,12 +558,6 @@ dt {
     width: 30px;
     height: 44px;
     background-position: -40px -80px;
-}
-
-.interview-list-review .interview-info-emoticon .interview-review dd:before {
-    position: absolute;
-    left: 0;
-    content: "";
 }
 
 .interview-list-review .interview-info-emoticon .interview-review.interview-difficulty dd:before {
@@ -633,7 +652,6 @@ dt {
     padding-left: 20px;
     list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 .interview-list-review .interview-info-view .interview-list-question li:before {
@@ -657,4 +675,120 @@ dt {
     clear: both;
     content: "";
     table-layout: fixed;
+}
+
+.interview-pagination {
+    margin-top: 30px;
+    font-size: 0;
+    text-align: center;
+    padding: 0;
+}
+
+.interview-pagination span.interview-page {
+    border: 1px solid #444;
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 0 2px;
+    min-width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    line-height: 30px;
+    vertical-align: middle;
+    background: #fff;
+}
+
+.interview-pagination a.interview-page {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 0 2px;
+    min-width: 32px;
+    height: 32px;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 14px;
+    line-height: 30px;
+    vertical-align: middle;
+    background: #fff;
+    text-decoration: none;
+}
+
+.interview-pagination .interview-btnNext {
+    margin-left: 14px;
+    padding-right: 10px;
+    background: url(/static/images/interview-review/bul_page_next.png) 100% 50% no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 33px;
+    vertical-align: middle;
+    color: #444;
+    text-decoration: none;
+}
+
+.interview-wrap-interview-review .interview-review-notice {
+    padding: 45px 50px 47px;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.interview-review-notice .interview-tit-notice {
+    display: block;
+    color: #666;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-review-notice .interview-list-notice {
+    padding-top: 2px;
+    color: #909090;
+    font-size: 13px;
+    line-height: 22px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-review-notice .interview-list-notice li {
+    padding-top: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.interview-review-cont .interview-btn-write {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    padding-top: 7px;
+    width: 130px;
+    height: 32px;
+    box-sizing: border-box;
+    color: var(--white);
+    font-size: 13px;
+    text-align: center;
+    background: #6d82f3;
+    text-decoration: none;
+}
+
+.interview-review-cont .interview-btn-write:before {
+    display: inline-block;
+    vertical-align: top;
+    background: url(/static/images/interview-review/spr_review_190220.png) no-repeat;
+    margin: 3px 9px 0 0;
+    width: 14px;
+    height: 14px;
+    background-position: 0 -20px;
+    content: "";
 }

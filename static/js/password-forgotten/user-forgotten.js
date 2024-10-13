@@ -68,6 +68,8 @@ const expiredMessage = document.querySelector("#msg_cert_num");
 let timer;
 const certButton = document.querySelector(".btn_cert");
 const timeDisplay = document.querySelector(".time_find");
+const remainTimeText = document.querySelector("#confirm_remain_time");
+const sendSMSMessage = document.querySelector("#msg_cell1");
 
 // *********아이디 유효성 검사 함수************
 const validateId = () => {
@@ -147,15 +149,16 @@ const startCountdown = () => {
     let timeRemaining = 180;
 
     clearInterval(timer);
-    timeDisplay.style.display = "inline";
+    timeDisplay.style.display = "block";
     expiredMessage.style.display = "none";
 
     timer = setInterval(() => {
         const minutes = Math.floor(timeRemaining / 60);
         const seconds = timeRemaining % 60;
-        timeDisplay.textContent = `남은 시간 (${minutes}:${
+
+        remainTimeText.textContent = `${minutes}:${
             seconds < 10 ? "0" : ""
-        }${seconds})`;
+        }${seconds}`;
 
         if (timeRemaining <= 0) {
             clearInterval(timer);
@@ -168,3 +171,7 @@ const startCountdown = () => {
 };
 
 certButton.addEventListener("click", startCountdown);
+
+certButton.addEventListener("click", () => {
+    sendSMSMessage.style.display = "block";
+});

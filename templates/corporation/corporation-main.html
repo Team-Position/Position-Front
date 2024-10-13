@@ -39,14 +39,16 @@
                                         <p class="txt_job">전자상거래 소매업</p>
                                     </div>
                                     <div class="box_btns">
-                                        <!-- onclick부분 나중에 js 작업 할 때 참고하기 -->
+                                        <!-- onclick부분 나중에 js 작업 할 때 참고하기 
+                                            interested_on되면 하트-->
                                         <button
                                             type="button"
-                                            class="interested_corp ga_data_layer"
+                                            class="interested_corp ga_data_layer interested_on"
                                             csn="RzBaRnNqKzJuWVdVeHNDLzlFVjcrQT09"
                                             del_fl="n"
                                             first_nudge="off"
                                             onclick="try{Saramin.btnJob('favor', this, '', 'company_view');}catch(e){}"
+                                            aria-pressed="true"
                                         >
                                             <svg
                                                 width="16"
@@ -63,139 +65,11 @@
                                             </svg>
                                             <span>3.2만+ 관심기업</span>
                                         </button>
-                                        <button
-                                            type="button"
-                                            class="btn_share ga_data_layer"
-                                        >
-                                            <svg
-                                                width="16"
-                                                height="16"
-                                                viewBox="0 0 16 16"
-                                                fill="none"
-                                                class="icon_share"
-                                            >
-                                                <path
-                                                    d="M11 3.5L4.625 7.25V8.375L11 12.5"
-                                                    stroke="#8491A7"
-                                                ></path>
-                                                <circle
-                                                    cx="12.127"
-                                                    cy="3.125"
-                                                    r="2.125"
-                                                    fill="white"
-                                                    stroke="#8491A7"
-                                                ></circle>
-                                                <circle
-                                                    cx="12.127"
-                                                    cy="12.875"
-                                                    r="2.125"
-                                                    fill="white"
-                                                    stroke="#8491A7"
-                                                ></circle>
-                                                <circle
-                                                    cx="3.875"
-                                                    cy="7.62476"
-                                                    r="2.125"
-                                                    fill="white"
-                                                    stroke="#8491A7"
-                                                ></circle>
-                                            </svg>
-                                            <span class="blind">공유하기</span>
-                                        </button>
-                                        <div class="layer_share">
-                                            <div class="cont_share">
-                                                <ul class="list_sns">
-                                                    <li class="sns_facebook">
-                                                        <button
-                                                            type="button"
-                                                            class="btn_facebook"
-                                                        >
-                                                            <svg
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                            >
-                                                                <path
-                                                                    d="M13.789 22.4999V12.9208H17.3269L17.8566 9.18765H13.789V6.80415C13.789 5.72334 14.1192 4.98672 15.8248 4.98672L18 4.9858V1.64694C17.6236 1.60161 16.3325 1.5 14.8304 1.5C11.6942 1.5 9.54712 3.23966 9.54712 6.43462V9.18775H6V12.9209H9.54701V22.5L13.789 22.4999Z"
-                                                                    fill="#3C5A9A"
-                                                                ></path>
-                                                            </svg>
-                                                            <span class="blind"
-                                                                >페이스북
-                                                                공유하기</span
-                                                            >
-                                                        </button>
-                                                    </li>
-                                                    <li class="sns_twitter">
-                                                        <button
-                                                            type="button"
-                                                            class="btn_twitter"
-                                                        >
-                                                            <svg
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                            >
-                                                                <path
-                                                                    d="M22.1698 3.34731C20.8415 4.01809 19.6792 4.04603 19.2642 4.18578C18.7107 3.34731 16.3585 2.50883 14.283 3.34731C11.6487 4.41156 11.5157 6.9807 11.7925 8.37816C7.1434 8.37816 3.7673 5.4435 2.66038 3.76655C1 7.53969 3.21384 9.35638 4.32075 10.0551C3.32453 10.0551 2.24528 9.49613 1.83019 9.21664C1.83019 11.8998 4.32075 13.409 5.56604 13.8283C4.56981 14.1636 3.49057 13.968 3.07547 13.8283C3.73962 16.5114 6.1195 17.1822 7.22642 17.1822C4.90189 18.5237 1.96855 19.2783 1 19.2783C14.283 25.1477 20.9245 14.6667 20.5094 7.95892C21.7547 7.12045 22.8616 5.86274 23 5.02426L20.5094 5.86274C21.6542 5.09403 21.9539 4.52187 22.1698 3.34731Z"
-                                                                    fill="#00ACEE"
-                                                                ></path>
-                                                            </svg>
-                                                            <span class="blind"
-                                                                >트위터
-                                                                공유하기</span
-                                                            >
-                                                        </button>
-                                                    </li>
-                                                    <li class="sns_copyurl">
-                                                        <button
-                                                            type="button"
-                                                            class="btn_url"
-                                                        >
-                                                            <svg
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                            >
-                                                                <path
-                                                                    d="M7.30237 18.7765C6.74243 19.046 6.11266 19.1349 5.50004 19.031C4.88741 18.9271 4.32216 18.6355 3.88237 18.1965C3.60269 17.9178 3.38078 17.5867 3.22936 17.222C3.07794 16.8573 3 16.4664 3 16.0715C3 15.6767 3.07794 15.2857 3.22936 14.9211C3.38078 14.5564 3.60269 14.2253 3.88237 13.9465L9.54237 8.29655C10.1049 7.73475 10.8674 7.41919 11.6624 7.41919C12.4574 7.41919 13.2199 7.73475 13.7824 8.29655C14.3442 8.85905 14.6597 9.62155 14.6597 10.4165C14.6597 11.2116 14.3442 11.974 13.7824 12.5365L11.6624 14.6565"
-                                                                    stroke="#67738E"
-                                                                    stroke-width="1.5"
-                                                                    stroke-linecap="round"
-                                                                    stroke-linejoin="round"
-                                                                ></path>
-                                                                <path
-                                                                    d="M16.0214 6.29665C16.5814 6.02724 17.2111 5.93834 17.8237 6.04224C18.4364 6.14613 19.0016 6.43769 19.4414 6.87665C19.7211 7.15536 19.943 7.48654 20.0944 7.85119C20.2458 8.21585 20.3238 8.6068 20.3238 9.00165C20.3238 9.39649 20.2458 9.78745 20.0944 10.1521C19.943 10.5168 19.7211 10.8479 19.4414 11.1266L13.7814 16.7766C13.2189 17.3384 12.4564 17.654 11.6614 17.654C10.8664 17.654 10.1039 17.3384 9.54142 16.7766C8.97962 16.2141 8.66406 15.4516 8.66406 14.6566C8.66406 13.8616 8.97962 13.0991 9.54142 12.5366L11.6614 10.4166"
-                                                                    stroke="#67738E"
-                                                                    stroke-width="1.5"
-                                                                    stroke-linecap="round"
-                                                                    stroke-linejoin="round"
-                                                                ></path>
-                                                            </svg>
-                                                            <span class="blind"
-                                                                >URL
-                                                                공유하기</span
-                                                            >
-                                                        </button>
-                                                    </li>
-                                                </ul>
-                                                <button
-                                                    type="button"
-                                                    class="btn_close"
-                                                >
-                                                    <span class="blind"
-                                                        >닫기</span
-                                                    >
-                                                </button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <nav class="company_navi">
                                     <ul class="menu_list">
+                                        <!-- li가 selected되면 -->
                                         <li class="menu_item selected">
                                             <button
                                                 type="button"
@@ -213,11 +87,11 @@
                                         <li class="menu_item">
                                             <button
                                                 type="button"
-                                                class="btn_menu ga_data_layer"
+                                                class="btn_menu"
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_person"
+                                                        xlink:href="#ico_supporting"
                                                     ></use>
                                                 </svg>
                                                 공고 등록
@@ -233,7 +107,7 @@
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_supporting"
+                                                        xlink:href="#ico_person"
                                                     ></use>
                                                 </svg>
                                                 공고·지원자 관리
@@ -253,7 +127,7 @@
                                                         xlink:href="#ico_chart"
                                                     ></use>
                                                 </svg>
-                                                재무정보
+                                                문의하기
                                             </button>
                                         </li>
                                     </ul>
@@ -348,8 +222,7 @@
                                 </div>
                                 <div class="section_header">
                                     <h2 class="section_tit">
-                                        한눈에 보는 우리 회사, 미리 확인해
-                                        보세요!
+                                        공고 진행사항을 한눈에 확인해 보세요!
                                     </h2>
                                 </div>
                                 <div class="home_row">
@@ -370,7 +243,7 @@
                                             </dd>
                                         </dl>
                                         <dl>
-                                            <dt>진행중 인재풀</dt>
+                                            <dt>미열람 지원자</dt>
                                             <dd>
                                                 <a
                                                     href="/zf_user/memcom/talent-pool/main/candidate-manage"
@@ -382,7 +255,7 @@
                                             </dd>
                                         </dl>
                                         <dl>
-                                            <dt>미열람 지원자</dt>
+                                            <dt>미등록 후기</dt>
                                             <dd>
                                                 <a
                                                     href="/zf_user/company/recruit-manage"
@@ -910,7 +783,7 @@
                                 id="companyIntroduceIngRecruitContainer"
                             >
                                 <h2 class="section_tit">
-                                    현재 채용 중인 공고 놓치지 마세요
+                                    현재 우리회사가 채용 중인 공고
                                 </h2>
                                 <div class="section_content">
                                     <ul class="list_curation_item">
@@ -963,6 +836,7 @@
                                                     >
                                                 </a>
                                             </div>
+                                            <!-- onclick에 on붙음 -->
                                             <button
                                                 type="button"
                                                 onclick="Saramin.btnJob('scrap', this, '', 'list')"
@@ -2590,4 +2464,5 @@
             </svg>
         </div>
     </body>
+    <script src="/static/js/corporation/corporation-main.js"></script>
 </html>

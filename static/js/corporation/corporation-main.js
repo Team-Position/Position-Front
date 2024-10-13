@@ -4,8 +4,6 @@ console.log(menus);
 const bookMarks = document.querySelectorAll(".newcomer_book_mark");
 console.log(bookMarks);
 
-const favorButtons = document.querySelectorAll(".interested_corp");
-
 const nextButton = document.querySelector(".bx-next");
 const prevButton = document.querySelector(".bx-prev");
 const reviewList = document.getElementById("companyReviewSlider");
@@ -20,16 +18,10 @@ menus.forEach((menu) => {
         menu.classList.add("selected");
     });
 });
-// 관심기업 버튼
+// 즐찾 버튼
 bookMarks.forEach((bookMark) => {
     bookMark.addEventListener("click", (e) => {
         e.target.classList.toggle("on");
-    });
-});
-// 관심기업 interested_on
-favorButtons.forEach((favorButton) => {
-    favorButton.addEventListener("click", (e) => {
-        e.target.classList.toggle("interested_on");
     });
 });
 

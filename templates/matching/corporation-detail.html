@@ -39,7 +39,8 @@
                                         <p class="txt_job">전자상거래 소매업</p>
                                     </div>
                                     <div class="box_btns">
-                                        <!-- onclick부분 나중에 js 작업 할 때 참고하기 -->
+                                        <!-- onclick부분 나중에 js 작업 할 때 참고하기 
+                                            interested_on되면 하트-->
                                         <button
                                             type="button"
                                             class="interested_corp ga_data_layer"
@@ -102,6 +103,7 @@
                                             </svg>
                                             <span class="blind">공유하기</span>
                                         </button>
+                                        <!-- layer_share뒤에 show 붙으면 보임 -->
                                         <div class="layer_share">
                                             <div class="cont_share">
                                                 <ul class="list_sns">
@@ -196,6 +198,7 @@
                                 </div>
                                 <nav class="company_navi">
                                     <ul class="menu_list">
+                                        <!-- li가 selected되면 -->
                                         <li class="menu_item selected">
                                             <button
                                                 type="button"
@@ -1788,6 +1791,7 @@
                                                     </span>
                                                 </a>
                                             </div>
+                                            <!-- onclick에 on붙음 -->
                                             <button
                                                 type="button"
                                                 onclick="Saramin.btnJob('scrap', this, '', 'list')"
@@ -3671,4 +3675,5 @@
             </svg>
         </div>
     </body>
+    <script src="/static/js/matching/corporation-main.js"></script>
 </html>

@@ -281,6 +281,9 @@ button.interested_corp {
 .wrap_company_view .cont_introduce .first_section .section_content {
     margin-top: 0;
 }
+.first_section .section_header {
+    margin: 44px 0 0;
+}
 .wrap_company_view .main_content .section .section_content {
     margin-top: 20px;
 }
@@ -682,7 +685,7 @@ button.interested_corp {
 }
 /*  */
 .home_row {
-    margin: 44px 0 0px;
+    margin: 20px 0 0px;
     display: flex;
     justify-content: space-between;
     gap: 32px;

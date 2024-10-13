@@ -383,7 +383,6 @@
     line-height: 24px;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -779,7 +778,6 @@
     line-height: 22px;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     grid-area: title;
 }
@@ -798,7 +796,6 @@
     font-weight: 700;
     line-height: 26px;
     text-align: center;
-    -webkit-line-clamp: 2;
 }
 
 .main_product .prd_platinum .prd_list.plus li.expanded .badge, .main_product .prd_platinum .prd_list.plus li.option:hover .badge {
@@ -939,7 +936,6 @@
     text-align: center;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
     grid-area: cont;
 }
@@ -1133,7 +1129,6 @@
 .main_product .prd_prime .prd_list li.option:hover .title_ex {
     display: -webkit-box;
     max-height: 72px;
-    -webkit-line-clamp: 3;
 }
 .main_product .prd_prime .prd_list li.option:hover .bg_ex {
     display: block;
@@ -1182,7 +1177,6 @@
 .main_product .prd_special .prd_list li.option:hover .title_ex {
     display: -webkit-box;
     max-height: 66px;
-    -webkit-line-clamp: 3;
 }
 .main_product .prd_special .prd_list li.option .title_ex {
     display: none;

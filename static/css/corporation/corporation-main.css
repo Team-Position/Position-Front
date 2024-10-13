@@ -680,6 +680,91 @@ button.interested_corp {
     font-size: 12px;
     line-height: 20px;
 }
+/*  */
+.home_row {
+    margin: 44px 0 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+.recruit_action_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 594px;
+    height: 150px;
+}
+.home_board_box {
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+    background: var(--white);
+    box-sizing: border-box;
+}
+.recruit_action_wrap dl {
+    position: relative;
+    width: 33%;
+    text-align: center;
+}
+.recruit_action_wrap dt {
+    margin: 0 0 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--gray120);
+}
+.recruit_action_wrap dd {
+    min-height: 48px;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--gray50);
+}
+.recruit_action_wrap dl::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--gray40);
+}
+.recruit_action_wrap dl:first-child::before {
+    display: none; /* 첫 번째 dl 요소의 before 제거 */
+}
+.my_benefit_wrap {
+    width: 334px;
+    height: 150px;
+}
+.home_board_box {
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+    background: var(--white);
+    box-sizing: border-box;
+}
+.my_benefit_wrap .none_member {
+    display: block;
+    padding: 32px 0 0 32px;
+    height: 100%;
+    background: url(//www.saraminimage.co.kr/sri/vix/main/my_benefit_default.png)
+        no-repeat 100% 100%;
+    box-sizing: border-box;
+}
+.my_benefit_wrap .none_member .title {
+    display: block;
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--gray120);
+}
+.my_benefit_wrap .none_member .desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray120);
+}
+/* .banner_wrap {
+    width: 336px;
+    height: 150px;
+} */
+
 .wrap_company_view .content_fold {
     overflow-y: hidden;
     position: relative;

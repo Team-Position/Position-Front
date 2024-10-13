@@ -456,3 +456,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .help_find .ok {
     color: #5b76f5;
 }
+
+.help_find #findCite.inp_find {
+    padding: 0 100px 0 18px;
+}
+
+.help_find .time_find {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    z-index: 1;
+    margin-top: 0;
+}
+

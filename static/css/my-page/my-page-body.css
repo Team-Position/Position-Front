@@ -167,10 +167,13 @@
 }
 
 .my_notification .slider.my li:nth-of-type(4n+3), .my_notification .slider.jobs li {
+    border-color: #00d3ab;
+    background: #00d3ab;
+}
+.my_notification .slider.my li:nth-of-type(4n+3), .my_notification .slider.messages li {
     border-color: #00beea;
     background: #00beea;
 }
-
 .my_notification .slider li {
     float: left;
     position: relative;
@@ -390,6 +393,10 @@
     margin-left: 2px;
     border-width: 0 0 2px 2px;
 }
+
+.btn_prev.hidden, .btn_next.hidden {
+            display: none; /* hidden 클래스가 붙은 버튼 숨기기 */
+        }
 
 .my_notification .btn_slider:disabled:after {
     border-color: #afbac8;

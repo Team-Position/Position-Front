@@ -31,40 +31,7 @@
                         <div id="wrap_notification">
                             <div class="my_notification complete">
                                 <ul class="tabWrap TabBox">
-                                    <li class="Select" data-target="slider1">
-                                        <button
-                                            type="button"
-                                            class="BtnType siat tab"
-                                            data-type="siat"
-                                        >
-                                            인적성검사<span class="Badge"
-                                                >0</span
-                                            >
-                                        </button>
-                                    </li>
-                                    <li class="" data-target="slider2">
-                                        <button
-                                            type="button"
-                                            class="BtnType list_market tab"
-                                            data-type="list_market"
-                                        >
-                                            합격마켓<span class="Badge"
-                                                >85</span
-                                            >
-                                        </button>
-                                    </li>
-                                    <li class="" data-target="slider3">
-                                        <button
-                                            type="button"
-                                            class="BtnType notify tab"
-                                            data-type="notify"
-                                        >
-                                            나의 알림<span class="Badge"
-                                                >8</span
-                                            >
-                                        </button>
-                                    </li>
-                                    <li data-target="slider4">
+                                    <li class="Select" data-target="apply">
                                         <button
                                             type="button"
                                             class="BtnType apply tab"
@@ -75,25 +42,26 @@
                                             >
                                         </button>
                                     </li>
-                                    <li data-target="slider5">
+                                    <li class="" data-target="jobs">
                                         <button
                                             type="button"
-                                            class="BtnType request tab"
-                                            data-type="request"
+                                            class="BtnType liked tab"
+                                            data-type="liked"
                                         >
-                                            받은 제안 현황<span class="Badge"
-                                                >0</span
+                                            스크랩한 공고<span class="Badge"
+                                                >20</span
                                             >
                                         </button>
                                     </li>
-                                    <li data-target="slider6">
+                                    <li class="" data-target="message">
                                         <button
                                             type="button"
-                                            class="BtnType jobs tab"
-                                            data-type="jobs"
+                                            class="BtnType message tab"
+                                            data-type="message"
                                         >
-                                            지원할 만한 공고<span class="Badge"
-                                                >20</span
+                                            기업이 작성한 후기<span
+                                                class="Badge"
+                                                >5</span
                                             >
                                         </button>
                                     </li>
@@ -102,7 +70,7 @@
                                     <div class="sliders">
                                         <div
                                             class="wrap_slider active"
-                                            id="slider1"
+                                            id="apply"
                                             style="max-width: 1248px"
                                         >
                                             <div
@@ -268,7 +236,7 @@
                                         </div>
                                         <div
                                             class="wrap_slider"
-                                            id="slider2"
+                                            id="jobs"
                                             style="max-width: 1248px"
                                         >
                                             <div
@@ -1990,19 +1958,452 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                        <div
+                                            class="wrap_slider"
+                                            id="message"
+                                            style="max-width: 1248px"
+                                        >
+                                            <div
+                                                class="bx-viewport"
+                                                aria-live="polite"
+                                                style="
+                                                    width: 100%;
+                                                    overflow: hidden;
+                                                    position: relative;
+                                                    height: 190px;
+                                                "
+                                            >
+                                                <ul
+                                                    class="slider messages"
+                                                    style="
+                                                        width: 20215%;
+                                                        position: relative;
+                                                        transition-duration: 0s;
+                                                        transform: translate3d(
+                                                            0px,
+                                                            0px,
+                                                            0px
+                                                        );
+                                                    "
+                                                >
+                                                    <li
+                                                        aria-hidden="false"
+                                                        style="
+                                                            float: left;
+                                                            list-style: none;
+                                                            position: relative;
+                                                            width: 300px;
+                                                            margin-right: 16px;
+                                                        "
+                                                    >
+                                                        <div class="inner">
+                                                            <a
+                                                                href="/zf_user/jobs/relay/view?view_type=list&amp;isMypage=no&amp;rec_idx=49049934&amp;t_ref=myhome&amp;t_ref_content=card"
+                                                                target="_blank"
+                                                                class="link_card scrap_click"
+                                                                onmousedown="MYHOME.Myhome.gaEvent('card_recruit', 'scrap_card')"
+                                                                data-logging=""
+                                                                data-recidx="49049934"
+                                                            >
+                                                                <span
+                                                                    class="blind"
+                                                                    >공고
+                                                                    보기</span
+                                                                >
+                                                            </a>
+                                                            <div class="flag">
+                                                                <svg>
+                                                                    <use
+                                                                        xlink:href="#svg_my_11"
+                                                                    ></use></svg
+                                                                >후기
+                                                            </div>
+                                                            <dl>
+                                                                <dt
+                                                                    class="title"
+                                                                >
+                                                                    2025
+                                                                    애경그룹 AK
+                                                                    PLAZA
+                                                                    신입사원
+                                                                    공개채용
+                                                                </dt>
+                                                                <dd class="txt">
+                                                                    에이케이플라자(주)
+                                                                </dd>
+                                                                <dd
+                                                                    class="txt list"
+                                                                >
+                                                                    <span>
+                                                                        신입
+                                                                    </span>
+                                                                    <span
+                                                                        >대졸↑</span
+                                                                    >
+                                                                    <span
+                                                                        ><span
+                                                                            class="today"
+                                                                            >오늘마감</span
+                                                                        ></span
+                                                                    >
+                                                                </dd>
+                                                            </dl>
+                                                            <div
+                                                                class="btn_card"
+                                                            >
+                                                                <span>
+                                                                    <a
+                                                                        class="sri_btn_ml"
+                                                                        href="/zf_user/jobs/relay/view?view_type=list&amp;rec_idx=49049934"
+                                                                        onclick=""
+                                                                        target="_blank"
+                                                                        title="홈페이지 지원"
+                                                                        data-gtm_promotion="scrap"
+                                                                        ><span
+                                                                            class="sri_btn_apply_confirm"
+                                                                            >홈페이지
+                                                                            지원</span
+                                                                        ></a
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li
+                                                        aria-hidden="false"
+                                                        style="
+                                                            float: left;
+                                                            list-style: none;
+                                                            position: relative;
+                                                            width: 300px;
+                                                            margin-right: 16px;
+                                                        "
+                                                    >
+                                                        <div class="inner">
+                                                            <a
+                                                                href="/zf_user/jobs/relay/view?view_type=list&amp;isMypage=no&amp;rec_idx=49077552&amp;t_ref=myhome&amp;t_ref_content=card"
+                                                                target="_blank"
+                                                                class="link_card scrap_click"
+                                                                onmousedown="MYHOME.Myhome.gaEvent('card_recruit', 'scrap_card')"
+                                                                data-logging=""
+                                                                data-recidx="49077552"
+                                                            >
+                                                                <span
+                                                                    class="blind"
+                                                                    >공고
+                                                                    보기</span
+                                                                >
+                                                            </a>
+                                                            <div class="flag">
+                                                                <svg>
+                                                                    <use
+                                                                        xlink:href="#svg_my_11"
+                                                                    ></use></svg
+                                                                >후기
+                                                            </div>
+                                                            <dl>
+                                                                <dt
+                                                                    class="title"
+                                                                >
+                                                                    2024 하반기
+                                                                    ASML Korea
+                                                                    신입사원
+                                                                    채용
+                                                                </dt>
+                                                                <dd class="txt">
+                                                                    에이에스엠엘코리아(주)
+                                                                </dd>
+                                                                <dd
+                                                                    class="txt list"
+                                                                >
+                                                                    <span>
+                                                                        경력
+                                                                    </span>
+                                                                    <span
+                                                                        >대졸↑</span
+                                                                    >
+                                                                    <span
+                                                                        ><span
+                                                                            class="today"
+                                                                            >오늘마감</span
+                                                                        ></span
+                                                                    >
+                                                                </dd>
+                                                            </dl>
+                                                            <div
+                                                                class="btn_card"
+                                                            >
+                                                                <span>
+                                                                    <a
+                                                                        class="sri_btn_ml"
+                                                                        href="/zf_user/jobs/relay/view?view_type=list&amp;rec_idx=49077552"
+                                                                        onclick=""
+                                                                        target="_blank"
+                                                                        title="홈페이지 지원"
+                                                                        data-gtm_promotion="scrap"
+                                                                        ><span
+                                                                            class="sri_btn_apply_confirm"
+                                                                            >홈페이지
+                                                                            지원</span
+                                                                        ></a
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li
+                                                        aria-hidden="false"
+                                                        style="
+                                                            float: left;
+                                                            list-style: none;
+                                                            position: relative;
+                                                            width: 300px;
+                                                            margin-right: 16px;
+                                                        "
+                                                    >
+                                                        <div class="inner">
+                                                            <a
+                                                                href="/zf_user/jobs/relay/view?view_type=list&amp;isMypage=no&amp;rec_idx=49079050&amp;t_ref=myhome&amp;t_ref_content=card"
+                                                                target="_blank"
+                                                                class="link_card scrap_click"
+                                                                onmousedown="MYHOME.Myhome.gaEvent('card_recruit', 'scrap_card')"
+                                                                data-logging=""
+                                                                data-recidx="49079050"
+                                                            >
+                                                                <span
+                                                                    class="blind"
+                                                                    >공고
+                                                                    보기</span
+                                                                >
+                                                            </a>
+                                                            <div class="flag">
+                                                                <svg>
+                                                                    <use
+                                                                        xlink:href="#svg_my_11"
+                                                                    ></use></svg
+                                                                >후기
+                                                            </div>
+                                                            <dl>
+                                                                <dt
+                                                                    class="title"
+                                                                >
+                                                                    버거킹
+                                                                    2024년 7차
+                                                                    신입 정규직
+                                                                    운영
+                                                                    관리직(Manager)
+                                                                    채용
+                                                                </dt>
+                                                                <dd class="txt">
+                                                                    (주)비케이알
+                                                                </dd>
+                                                                <dd
+                                                                    class="txt list"
+                                                                >
+                                                                    <span>
+                                                                        신입
+                                                                    </span>
+                                                                    <span
+                                                                        >초대졸↑</span
+                                                                    >
+                                                                    <span
+                                                                        >10/25(금)</span
+                                                                    >
+                                                                </dd>
+                                                            </dl>
+                                                            <div
+                                                                class="btn_card"
+                                                            >
+                                                                <span>
+                                                                    <a
+                                                                        class="sri_btn_ml"
+                                                                        href="/zf_user/jobs/relay/view?view_type=list&amp;rec_idx=49079050"
+                                                                        onclick=""
+                                                                        target="_blank"
+                                                                        title="홈페이지 지원"
+                                                                        data-gtm_promotion="scrap"
+                                                                        ><span
+                                                                            class="sri_btn_apply_confirm"
+                                                                            >홈페이지
+                                                                            지원</span
+                                                                        ></a
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li
+                                                        aria-hidden="false"
+                                                        style="
+                                                            float: left;
+                                                            list-style: none;
+                                                            position: relative;
+                                                            width: 300px;
+                                                            margin-right: 16px;
+                                                        "
+                                                    >
+                                                        <div class="inner">
+                                                            <a
+                                                                href="/zf_user/jobs/relay/view?view_type=list&amp;isMypage=no&amp;rec_idx=49089215&amp;t_ref=myhome&amp;t_ref_content=card"
+                                                                target="_blank"
+                                                                class="link_card scrap_click"
+                                                                onmousedown="MYHOME.Myhome.gaEvent('card_recruit', 'scrap_card')"
+                                                                data-logging=""
+                                                                data-recidx="49089215"
+                                                            >
+                                                                <span
+                                                                    class="blind"
+                                                                    >공고
+                                                                    보기</span
+                                                                >
+                                                            </a>
+                                                            <div class="flag">
+                                                                <svg>
+                                                                    <use
+                                                                        xlink:href="#svg_my_11"
+                                                                    ></use></svg
+                                                                >후기
+                                                            </div>
+                                                            <dl>
+                                                                <dt
+                                                                    class="title"
+                                                                >
+                                                                    2024년
+                                                                    하반기 경력
+                                                                    공채
+                                                                </dt>
+                                                                <dd class="txt">
+                                                                    두산퓨얼셀(주)
+                                                                </dd>
+                                                                <dd
+                                                                    class="txt list"
+                                                                >
+                                                                    <span>
+                                                                        경력
+                                                                    </span>
+                                                                    <span
+                                                                        >대졸↑</span
+                                                                    >
+                                                                    <span
+                                                                        >10/20(일)</span
+                                                                    >
+                                                                </dd>
+                                                            </dl>
+                                                            <div
+                                                                class="btn_card"
+                                                            >
+                                                                <span>
+                                                                    <a
+                                                                        class="sri_btn_ml"
+                                                                        href="/zf_user/jobs/relay/view?view_type=list&amp;rec_idx=49089215"
+                                                                        onclick=""
+                                                                        target="_blank"
+                                                                        title="홈페이지 지원"
+                                                                        data-gtm_promotion="scrap"
+                                                                        ><span
+                                                                            class="sri_btn_apply_confirm"
+                                                                            >홈페이지
+                                                                            지원</span
+                                                                        ></a
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li
+                                                        aria-hidden="true"
+                                                        style="
+                                                            float: left;
+                                                            list-style: none;
+                                                            position: relative;
+                                                            width: 300px;
+                                                            margin-right: 16px;
+                                                        "
+                                                    >
+                                                        <div class="inner">
+                                                            <a
+                                                                href="/zf_user/jobs/relay/view?view_type=list&amp;isMypage=no&amp;rec_idx=49104681&amp;t_ref=myhome&amp;t_ref_content=card"
+                                                                target="_blank"
+                                                                class="link_card scrap_click"
+                                                                onmousedown="MYHOME.Myhome.gaEvent('card_recruit', 'scrap_card')"
+                                                                data-logging=""
+                                                                data-recidx="49104681"
+                                                            >
+                                                                <span
+                                                                    class="blind"
+                                                                    >공고
+                                                                    보기</span
+                                                                >
+                                                            </a>
+                                                            <div class="flag">
+                                                                <svg>
+                                                                    <use
+                                                                        xlink:href="#svg_my_11"
+                                                                    ></use></svg
+                                                                >후기
+                                                            </div>
+                                                            <dl>
+                                                                <dt
+                                                                    class="title"
+                                                                >
+                                                                    [현대자동차
+                                                                    그룹사]
+                                                                    2025년 대졸
+                                                                    신입 채용
+                                                                    모집
+                                                                </dt>
+                                                                <dd class="txt">
+                                                                    테크젠(주)
+                                                                </dd>
+                                                                <dd
+                                                                    class="txt list"
+                                                                >
+                                                                    <span>
+                                                                        신입
+                                                                    </span>
+                                                                    <span
+                                                                        >대졸↑</span
+                                                                    >
+                                                                    <span
+                                                                        >내일마감</span
+                                                                    >
+                                                                </dd>
+                                                            </dl>
+                                                            <div
+                                                                class="btn_card"
+                                                            >
+                                                                <span>
+                                                                    <a
+                                                                        class="sri_btn_ml"
+                                                                        href="/zf_user/jobs/relay/view?view_type=list&amp;rec_idx=49104681"
+                                                                        onclick=""
+                                                                        target="_blank"
+                                                                        title="홈페이지 지원"
+                                                                        data-gtm_promotion="scrap"
+                                                                        ><span
+                                                                            class="sri_btn_apply_confirm"
+                                                                            >홈페이지
+                                                                            지원</span
+                                                                        ></a
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <button
                                         type="button"
                                         class="btn_slider btn_prev"
                                         style=""
-                                        onmousedown="MYHOME.Myhome.gaEvent('card', 'previous')"
                                         disabled=""
                                     ></button>
                                     <button
                                         type="button"
                                         class="btn_slider btn_next"
                                         style=""
-                                        onmousedown="MYHOME.Myhome.gaEvent('card', 'next')"
                                     ></button>
                                 </div>
                             </div>

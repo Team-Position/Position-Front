@@ -171,6 +171,7 @@ body {
     width: 100%;
     height: 100%;
 }
+
 #content {
     position: relative;
     margin: 88px auto 136px;
@@ -180,12 +181,140 @@ body {
 .wrapper_narrow .wrap_title {
     margin-bottom: 45px;
 }
+
 .wrap_title {
     color: #373f57;
     font-size: 36px;
     font-weight: bold;
     line-height: 56px;
 }
+
 .password_confirm_wrap {
     margin-top: 56px;
+}
+
+.password_confirm_subtitle {
+    margin-bottom: 16px;
+    height: 40px;
+    color: var(--gray110);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.42;
+    text-align: center;
+}
+
+.password_confirm_desc {
+    color: var(--gray90);
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center;
+}
+
+.password_confirm_field {
+    margin: 40px auto 64px;
+    width: 500px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: inherit;
+    line-height: 100%;
+}
+
+.password_confirm_field th {
+    margin: 12px 64px 20px 0;
+    width: 144px;
+    color: var(--gray90);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.43;
+}
+
+.password_confirm_field th, .password_confirm_field td {
+    padding: 0;
+    height: 72px;
+    border-bottom: 1px solid var(--gray30);
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.TypoBox {
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.TypoBox .Typo.SizeL {
+    padding: 12px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 320px;
+}
+.TypoBox .Typo {
+    padding: 8px 12px;
+    width: 100%;
+    height: 38px;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: none;
+}
+
+.password_confirm .btn_group {
+    margin: 64px auto 136px;
+    text-align: center;
+}
+
+.password_confirm_caution {
+    margin-bottom: 24px;
+    height: 24px;
+    color: var(--gray70);
+    font-size: 14px;
+    line-height: 1.43;
+}
+
+.password_confirm .icon_exclam {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.password_confirm .btn_submit {
+    width: 104px;
+}
+
+[class*="BtnType"].SizeL {
+    padding: 10px 15px 12px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+[class*="BtnType"]:hover {
+    border-color: var(--blue100);
+    background-color: var(--blue100);
 }

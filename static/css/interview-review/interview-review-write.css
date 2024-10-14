@@ -427,6 +427,11 @@ h2 {
     background: #fff;
 }
 
+.interview-write-option-content.interview-write-job-category-section .interview-write-details .interview-write-wrap-scroll {
+    width: 100%;
+    height: 100%;
+}
+
 .interview-write-wrap-scroll {
     position: relative;
 }
@@ -458,6 +463,10 @@ h2 {
 
 .interview-write-wrap-section-contents .interview-write-select-keyword .interview-write-wrap-result.interview-write-has-result .interview-write-viewport {
     height: 183px;
+}
+
+.option_content.job_category_section .wrap_scroll .viewport {
+    height: 100%;
 }
 
 .interview-write-wrap-scroll .interview-write-viewport {
@@ -593,15 +602,6 @@ h4 {
     box-sizing: border-box;
 }
 
-.interview-write-option-content.interview-write-job-category-section .interview-write-details .interview-write-wrap-scroll {
-    width: 100%;
-    height: 100%;
-}
-
-.interview-write-wrap-scroll {
-    position: relative;
-}
-
 .interview-write-option-content.interview-write-job-category-section .interview-write-wrap-scroll .interview-write-viewport {
     height: 100%;
 }
@@ -700,11 +700,6 @@ li {
     box-sizing: border-box;
 }
 
-.interview-write-option-content.interview-write-job-category-section .interview-write-details .interview-write-wrap-scroll {
-    width: 100%;
-    height: 100%;
-}
-
 .interview-write-box-detail-depth .interview-write-list .interview-write-row-item {
     position: relative;
     padding-left: 172px;
@@ -767,13 +762,6 @@ li {
 .interview-write-common-panel .interview-write-box-detail-depth .interview-write-list .interview-write-row-item:last-of-type {
     border-bottom: 0;
 }
-
-.interview-write-box-detail-depth .interview-write-list .interview-write-row-item {
-    position: relative;
-    padding-left: 172px;
-    box-sizing: border-box;
-}
-
 
 .interview-write-common-panel .interview-write-box-result {
     display: flex;
@@ -1250,7 +1238,7 @@ li {
     background-color: #f8faff;
 }
 
-.interview-write-box-detail-depth .interview-write-list .interview-write-row-item.interview-write-expand dt .interview-write-btn-expand:after {
+.interview-write-box-detail-depth .interview-write-list .interview-write-row-item.expand dt .interview-write-btn-expand:after {
     width: 16px;
     height: 16px;
     background-position: -32px -5px;
@@ -1262,4 +1250,21 @@ li {
     right: 10px;
     background: url(/static/images/interview-review/spr_panel_expand.png) -5px -5px no-repeat;
     content: "";
+}
+
+.interview-write-box-detail-depth .interview-write-list .interview-write-row-item.expand {
+    height: auto;
+    background-color: #f8faff;
+}
+
+.interview-write-option-content.interview-write-job-category-section .interview-write-details .interview-write-box-onedepth.on {
+    height: 241px;
+}
+
+.interview-write-box-detail-depth .interview-write-row.interview-write-list.on {
+    height: 241px;
+}
+
+.common_panel .option_content.job_category_section .details .box_detail_depth {
+    width: calc(100% - 204px);
 }

@@ -234,6 +234,13 @@ button.interested_corp {
     flex-direction: column;
     gap: 10px 0;
 }
+.sidebar .company_info .layer_share .btn_close:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(/static/images/corporation/share-close-logo.svg) no-repeat;
+    content: "";
+}
 /* li가 selected되면 */
 .sidebar .company_navi .menu_list .menu_item.selected .btn_menu {
     font-weight: bold;
@@ -900,6 +907,9 @@ button.interested_corp {
 .wrap_company_view .content_fold.active .box_btn {
     display: flex;
 }
+.wrap_company_view .content_fold.expand .box_btn {
+    position: static;
+}
 /* 그라디언트 */
 .wrap_company_view .content_fold .box_btn.gradient {
     position: absolute;
@@ -924,6 +934,14 @@ button.interested_corp {
     border: 1px solid var(--gray80);
     box-sizing: border-box;
     color: var(--gray100);
+}
+.wrap_company_view .content_fold.expand {
+    max-height: none;
+}
+.wrap_company_view .content_fold {
+    overflow-y: hidden;
+    position: relative;
+    max-height: 270px;
 }
 [class*="BtnType"].BlueInvert {
     border-color: var(--blue90);

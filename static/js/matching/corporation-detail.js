@@ -5,11 +5,20 @@ const bookMarks = document.querySelectorAll(".newcomer_book_mark");
 console.log(bookMarks);
 
 const favorButtons = document.querySelectorAll(".interested_corp");
+console.log(favorButtons);
 
+const shareButton = document.querySelector(".btn_share");
+const shareLayer = document.querySelector(".layer_share");
+console.log(shareButton);
+
+const closeButton = document.querySelector(".btn_close");
 const nextButton = document.querySelector(".bx-next");
 const prevButton = document.querySelector(".bx-prev");
 const reviewList = document.getElementById("companyReviewSlider");
 const reviewItems = document.querySelectorAll(".review_item");
+
+const contentToggleButtons = document.querySelectorAll(".content_fold");
+console.log(contentToggleButtons);
 
 // 사이드바 메뉴
 menus.forEach((menu) => {
@@ -20,16 +29,30 @@ menus.forEach((menu) => {
         menu.classList.add("selected");
     });
 });
-// 관심기업 버튼
+// 즐찾 버튼
 bookMarks.forEach((bookMark) => {
     bookMark.addEventListener("click", (e) => {
         e.target.classList.toggle("on");
     });
 });
-// 관심기업 interested_on
+// 관심기업 버튼
 favorButtons.forEach((favorButton) => {
     favorButton.addEventListener("click", (e) => {
         e.target.classList.toggle("interested_on");
+    });
+});
+// 공유버튼
+shareButton.addEventListener("click", (e) => {
+    shareLayer.classList.add("show");
+});
+closeButton.addEventListener("click", (e) => {
+    shareLayer.classList.remove("show");
+});
+
+// 펼쳐보기 버튼
+contentToggleButtons.forEach((contentToggleButton) => {
+    contentToggleButton.addEventListener("click", (e) => {
+        e.target.classList.toggle("expand");
     });
 });
 
@@ -71,3 +94,15 @@ prevButton.addEventListener("click", () => {
 
 // 초기 상태 업데이트
 updateSlider();
+
+// // 닫기 버튼 선택
+// const closeButton = document.getElementById("pop_login_layer_close");
+// // 로그인 팝업 레이어 선택
+// const loginLayer = document.getElementById("wrap_quick_apply_layer");
+
+// // 닫기 버튼 클릭 이벤트 리스너
+// closeButton.addEventListener("click", function () {
+//     document.body.style.overflow = "auto";
+//     // 로그인 팝업을 숨김
+//     loginLayer.style.display = "none";
+// });

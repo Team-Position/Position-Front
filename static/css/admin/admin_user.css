@@ -15,6 +15,19 @@ body {
 :before {
     box-sizing: border-box;
 }
+.sort-filter-option::after {
+    width: 1px;
+    height: 10px;
+    margin: 0 8px;
+    background: var(--gray50);
+    content: "";
+    display: inline-block;
+    justify-content: center;
+}
+.sort-filter-option:last-child::after {
+    content: none;
+}
+
 #root,
 body {
     height: 100%;
@@ -522,6 +535,7 @@ video {
     padding-bottom: 80px;
     overflow-x: hidden;
     overflow-y: auto;
+    margin-top: 35px;
 }
 
 .MenuItems_section__qApp6 {
@@ -622,7 +636,7 @@ video {
     .AppLayout_expandNavButton__2AQMd {
     display: flex;
     position: fixed;
-    top: 92px;
+    top: 84px;
     left: 12px;
     align-items: center;
     justify-content: center;
@@ -672,13 +686,13 @@ video {
 }
 
 .sort-filter-option.selected {
-    font-weight: 700;
-    line-height: 1.5;
+    color: #000;
 }
 
 .sort-filter-option {
     cursor: pointer;
     font-size: 14px;
+    color: var(--gray50);
 }
 
 .filter_wrap {
@@ -737,7 +751,7 @@ video {
 }
 
 .Filter_searchInput:focus {
-    border-color: #00c4c4;
+    border-color: var(--gray50);
 }
 /* ********************************************************************************************** */
 /* ********************************************************************************************** */
@@ -831,7 +845,8 @@ button {
 }
 .UserTable_header__2WvXj {
     background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6; /*헤더 아래 테두리*/
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 8px 8px 0 0 !important; /*헤더 아래 테두리*/
     font-size: 17px;
     font-weight: 600;
 }
@@ -1235,19 +1250,21 @@ ul {
 }
 
 .pagination-list a:hover {
-    background-color: #000000;
+    background-color: var(--blue80);
+    border: var(--blue80);
     color: #ffffff;
 }
 
 .pagination-list .active a {
-    background-color: #000000; /* 배경을 검정색으로 */
+    background-color: var(--blue80);
+    border: var(--blue80); /* 배경을 검정색으로 */
     color: #ffffff; /* 글자를 하얀색으로 */
 }
 /* 아이콘들 */
-#sri_gnb_wrap .gnb > li > a > svg use {
+#sri_gnb_wrap .gnb_inner .gnb > li > a > svg use {
     color: #afbac8;
 }
-#sri_gnb_wrap .gnb > li > a > svg {
+#sri_gnb_wrap .gnb_inner .gnb > li > a > svg {
     display: block;
     position: absolute;
     top: 10px;

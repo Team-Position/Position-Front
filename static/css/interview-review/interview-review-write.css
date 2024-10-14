@@ -346,6 +346,7 @@ em {
 }
 
 .interview-write-wrap-section-contents .interview-write-option-content {
+    display: none;
     border: 1px solid #444;
     box-sizing: border-box;
 }
@@ -1096,4 +1097,169 @@ li {
 .interview-write-review-write .interview-write-tblType .interview-write-textarea .interview-write-msgInvalid {
     float: left;
     width: auto;
+}
+
+.interview-write-review-write .interview-write-tblType .interview-write-textarea:after {
+    display: table;
+    clear: both;
+    content: "";
+    table-layout: fixed;
+}
+
+.interview-write-review-write .interview-write-list-question li {
+    overflow: hidden;
+    position: relative;
+    padding-top: 2px;
+}
+
+.interview-write-review-write .interview-write-list-question .interview-write-inpTypo {
+    float: left;
+    padding-left: 32px;
+    width: 446px;
+}
+
+.interview-write-review-write .interview-write-list-question .interview-write-btn-basic-type02 {
+    float: left;
+    margin-left: 6px;
+    width: 58px;
+    color: #666;
+}
+
+.interview-write-btn-basic-type02 {
+    padding: 5px 13px 9px;
+    height: 32px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: normal;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+.interview-write-review-write .interview-write-list-question .interview-write-btn-add {
+    padding: 5px 0 9px;
+}
+
+.interview-write-review-write .interview-write-list-question li:before {
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    padding: 6px 0;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    color: var(--blue80);
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    background: var(--white);
+    content: "Q";
+}
+
+.interview-write-review-write .interview-write-tblType .interview-write-txt-attach {
+    font-size: 13px;
+}
+
+.interview-write-review-write .interview-write-tblType .interview-write-txt-attach .interview-write-ex {
+    display: block;
+    padding: 3px 0 9px;
+    color: #949494;
+    font-size: 12px;
+}
+
+.interview-write-review-write .interview-write-wrap-attached {
+    overflow: hidden;
+}
+
+.interview-write-review-write .interview-write-wrap-attached .interview-write-btn-attach {
+    overflow: hidden;
+    float: left;
+    position: relative;
+    z-index: 1;
+    width: 116px;
+}
+
+.interview-write-review-write .interview-write-wrap-attached .interview-write-btn-attach input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.interview-write-review-write .interview-write-wrap-attached .interview-write-btn-attach .interview-write-btn-basic-type02:before {
+    margin: 3px 7px 0 0;
+    width: 16px;
+    height: 16px;
+    background-position: -20px -20px;
+    content: "";
+}
+
+.interview-write-review-write .interview-write-wrap-attached .interview-write-btn-attach .interview-write-btn-basic-type02 {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.interview-write-review-write .interview-write-wrap-attached .interview-write-txt-filename {
+    display: none;
+    overflow: hidden;
+    padding: 6px 10px 9px;
+    height: 32px;
+    box-sizing: border-box;
+    color: #666;
+    font-size: 13px;
+    line-height: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.interview-write-review-write .interview-write-txt-copyright {
+    padding: 26px 0 28px;
+    color: #666;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.interview-write-review-write .interview-write-btn-confirm {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    background: #5f75eb;
+}
+
+.interview-write-box-detail-depth .interview-write-list dt .interview-write-btn-expand:after {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 17px;
+    height: 16px;
+    background: url(/static/images/interview-review/spr_panel_expand.png) -5px -5px no-repeat;
+    content: "";
+}
+
+.interview-write-box-detail-depth .interview-write-list .interview-write-row-item.interview-write-expand {
+    height: auto;
+    background-color: #f8faff;
+}
+
+.interview-write-box-detail-depth .interview-write-list .interview-write-row-item.interview-write-expand dt .interview-write-btn-expand:after {
+    width: 16px;
+    height: 16px;
+    background-position: -32px -5px;
+}
+
+.interview-write-box-detail-depth .interview-write-list dt .interview-write-btn-expand:after {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    background: url(/static/images/interview-review/spr_panel_expand.png) -5px -5px no-repeat;
+    content: "";
 }

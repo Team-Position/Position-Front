@@ -39,14 +39,16 @@
                                         <p class="txt_job">전자상거래 소매업</p>
                                     </div>
                                     <div class="box_btns">
-                                        <!-- onclick부분 나중에 js 작업 할 때 참고하기 -->
+                                        <!-- onclick부분 나중에 js 작업 할 때 참고하기 
+                                            interested_on되면 하트-->
                                         <button
                                             type="button"
-                                            class="interested_corp ga_data_layer"
+                                            class="interested_corp ga_data_layer interested_on"
                                             csn="RzBaRnNqKzJuWVdVeHNDLzlFVjcrQT09"
                                             del_fl="n"
                                             first_nudge="off"
                                             onclick="try{Saramin.btnJob('favor', this, '', 'company_view');}catch(e){}"
+                                            aria-pressed="true"
                                         >
                                             <svg
                                                 width="16"
@@ -63,139 +65,11 @@
                                             </svg>
                                             <span>3.2만+ 관심기업</span>
                                         </button>
-                                        <button
-                                            type="button"
-                                            class="btn_share ga_data_layer"
-                                        >
-                                            <svg
-                                                width="16"
-                                                height="16"
-                                                viewBox="0 0 16 16"
-                                                fill="none"
-                                                class="icon_share"
-                                            >
-                                                <path
-                                                    d="M11 3.5L4.625 7.25V8.375L11 12.5"
-                                                    stroke="#8491A7"
-                                                ></path>
-                                                <circle
-                                                    cx="12.127"
-                                                    cy="3.125"
-                                                    r="2.125"
-                                                    fill="white"
-                                                    stroke="#8491A7"
-                                                ></circle>
-                                                <circle
-                                                    cx="12.127"
-                                                    cy="12.875"
-                                                    r="2.125"
-                                                    fill="white"
-                                                    stroke="#8491A7"
-                                                ></circle>
-                                                <circle
-                                                    cx="3.875"
-                                                    cy="7.62476"
-                                                    r="2.125"
-                                                    fill="white"
-                                                    stroke="#8491A7"
-                                                ></circle>
-                                            </svg>
-                                            <span class="blind">공유하기</span>
-                                        </button>
-                                        <div class="layer_share">
-                                            <div class="cont_share">
-                                                <ul class="list_sns">
-                                                    <li class="sns_facebook">
-                                                        <button
-                                                            type="button"
-                                                            class="btn_facebook"
-                                                        >
-                                                            <svg
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                            >
-                                                                <path
-                                                                    d="M13.789 22.4999V12.9208H17.3269L17.8566 9.18765H13.789V6.80415C13.789 5.72334 14.1192 4.98672 15.8248 4.98672L18 4.9858V1.64694C17.6236 1.60161 16.3325 1.5 14.8304 1.5C11.6942 1.5 9.54712 3.23966 9.54712 6.43462V9.18775H6V12.9209H9.54701V22.5L13.789 22.4999Z"
-                                                                    fill="#3C5A9A"
-                                                                ></path>
-                                                            </svg>
-                                                            <span class="blind"
-                                                                >페이스북
-                                                                공유하기</span
-                                                            >
-                                                        </button>
-                                                    </li>
-                                                    <li class="sns_twitter">
-                                                        <button
-                                                            type="button"
-                                                            class="btn_twitter"
-                                                        >
-                                                            <svg
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                            >
-                                                                <path
-                                                                    d="M22.1698 3.34731C20.8415 4.01809 19.6792 4.04603 19.2642 4.18578C18.7107 3.34731 16.3585 2.50883 14.283 3.34731C11.6487 4.41156 11.5157 6.9807 11.7925 8.37816C7.1434 8.37816 3.7673 5.4435 2.66038 3.76655C1 7.53969 3.21384 9.35638 4.32075 10.0551C3.32453 10.0551 2.24528 9.49613 1.83019 9.21664C1.83019 11.8998 4.32075 13.409 5.56604 13.8283C4.56981 14.1636 3.49057 13.968 3.07547 13.8283C3.73962 16.5114 6.1195 17.1822 7.22642 17.1822C4.90189 18.5237 1.96855 19.2783 1 19.2783C14.283 25.1477 20.9245 14.6667 20.5094 7.95892C21.7547 7.12045 22.8616 5.86274 23 5.02426L20.5094 5.86274C21.6542 5.09403 21.9539 4.52187 22.1698 3.34731Z"
-                                                                    fill="#00ACEE"
-                                                                ></path>
-                                                            </svg>
-                                                            <span class="blind"
-                                                                >트위터
-                                                                공유하기</span
-                                                            >
-                                                        </button>
-                                                    </li>
-                                                    <li class="sns_copyurl">
-                                                        <button
-                                                            type="button"
-                                                            class="btn_url"
-                                                        >
-                                                            <svg
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                            >
-                                                                <path
-                                                                    d="M7.30237 18.7765C6.74243 19.046 6.11266 19.1349 5.50004 19.031C4.88741 18.9271 4.32216 18.6355 3.88237 18.1965C3.60269 17.9178 3.38078 17.5867 3.22936 17.222C3.07794 16.8573 3 16.4664 3 16.0715C3 15.6767 3.07794 15.2857 3.22936 14.9211C3.38078 14.5564 3.60269 14.2253 3.88237 13.9465L9.54237 8.29655C10.1049 7.73475 10.8674 7.41919 11.6624 7.41919C12.4574 7.41919 13.2199 7.73475 13.7824 8.29655C14.3442 8.85905 14.6597 9.62155 14.6597 10.4165C14.6597 11.2116 14.3442 11.974 13.7824 12.5365L11.6624 14.6565"
-                                                                    stroke="#67738E"
-                                                                    stroke-width="1.5"
-                                                                    stroke-linecap="round"
-                                                                    stroke-linejoin="round"
-                                                                ></path>
-                                                                <path
-                                                                    d="M16.0214 6.29665C16.5814 6.02724 17.2111 5.93834 17.8237 6.04224C18.4364 6.14613 19.0016 6.43769 19.4414 6.87665C19.7211 7.15536 19.943 7.48654 20.0944 7.85119C20.2458 8.21585 20.3238 8.6068 20.3238 9.00165C20.3238 9.39649 20.2458 9.78745 20.0944 10.1521C19.943 10.5168 19.7211 10.8479 19.4414 11.1266L13.7814 16.7766C13.2189 17.3384 12.4564 17.654 11.6614 17.654C10.8664 17.654 10.1039 17.3384 9.54142 16.7766C8.97962 16.2141 8.66406 15.4516 8.66406 14.6566C8.66406 13.8616 8.97962 13.0991 9.54142 12.5366L11.6614 10.4166"
-                                                                    stroke="#67738E"
-                                                                    stroke-width="1.5"
-                                                                    stroke-linecap="round"
-                                                                    stroke-linejoin="round"
-                                                                ></path>
-                                                            </svg>
-                                                            <span class="blind"
-                                                                >URL
-                                                                공유하기</span
-                                                            >
-                                                        </button>
-                                                    </li>
-                                                </ul>
-                                                <button
-                                                    type="button"
-                                                    class="btn_close"
-                                                >
-                                                    <span class="blind"
-                                                        >닫기</span
-                                                    >
-                                                </button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <nav class="company_navi">
                                     <ul class="menu_list">
+                                        <!-- li가 selected되면 -->
                                         <li class="menu_item selected">
                                             <button
                                                 type="button"
@@ -213,11 +87,11 @@
                                         <li class="menu_item">
                                             <button
                                                 type="button"
-                                                class="btn_menu ga_data_layer"
+                                                class="btn_menu"
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_person"
+                                                        xlink:href="#ico_supporting"
                                                     ></use>
                                                 </svg>
                                                 공고 등록
@@ -233,7 +107,7 @@
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_supporting"
+                                                        xlink:href="#ico_person"
                                                     ></use>
                                                 </svg>
                                                 공고·지원자 관리
@@ -253,7 +127,7 @@
                                                         xlink:href="#ico_chart"
                                                     ></use>
                                                 </svg>
-                                                재무정보
+                                                문의하기
                                             </button>
                                         </li>
                                     </ul>
@@ -348,8 +222,7 @@
                                 </div>
                                 <div class="section_header">
                                     <h2 class="section_tit">
-                                        한눈에 보는 우리 회사, 미리 확인해
-                                        보세요!
+                                        공고 진행사항을 한눈에 확인해 보세요!
                                     </h2>
                                 </div>
                                 <div class="home_row">
@@ -370,7 +243,7 @@
                                             </dd>
                                         </dl>
                                         <dl>
-                                            <dt>진행중 인재풀</dt>
+                                            <dt>미열람 지원자</dt>
                                             <dd>
                                                 <a
                                                     href="/zf_user/memcom/talent-pool/main/candidate-manage"
@@ -382,7 +255,7 @@
                                             </dd>
                                         </dl>
                                         <dl>
-                                            <dt>미열람 지원자</dt>
+                                            <dt>미등록 후기</dt>
                                             <dd>
                                                 <a
                                                     href="/zf_user/company/recruit-manage"
@@ -414,29 +287,6 @@
                                             </p>
                                         </a>
                                     </div>
-
-                                    <!-- <div
-                                        class="banner_wrap"
-                                        id="companyServiceMainBanner"
-                                    >
-                                        <div
-                                            class="banner ga_data_layer none_member"
-                                            data-ga_data_layer="ga_lead|company_main_logout|ad_banner|default_banner"
-                                        >
-                                            <a
-                                                href="https://business.saramin.co.kr?utm_source=saramin&amp;utm_medium=referral&amp;utm_campaign=organic&amp;utm_content=business&amp;utm_term=banner_right"
-                                                target="_blank"
-                                            >
-                                                <img
-                                                    src="https://www.saraminbanner.co.kr/new/sub/2024/09/skerm5_1jil-2so2aw_banner336x150v2.png"
-                                                    alt="사람인 비즈니스"
-                                                    onerror="this.parentNode.removeChild(this)"
-                                                    width="336"
-                                                    height="150"
-                                                />
-                                            </a>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </section>
 
@@ -910,7 +760,7 @@
                                 id="companyIntroduceIngRecruitContainer"
                             >
                                 <h2 class="section_tit">
-                                    현재 채용 중인 공고 놓치지 마세요
+                                    현재 우리회사가 채용 중인 공고
                                 </h2>
                                 <div class="section_content">
                                     <ul class="list_curation_item">
@@ -963,6 +813,7 @@
                                                     >
                                                 </a>
                                             </div>
+                                            <!-- onclick에 on붙음 -->
                                             <button
                                                 type="button"
                                                 onclick="Saramin.btnJob('scrap', this, '', 'list')"
@@ -1642,6 +1493,322 @@
                                     >
                                         기업정보 수정이 필요해요
                                     </button>
+                                </div>
+                            </div>
+                            <!-- 로그인 팝업 -->
+                            <div
+                                class="wrap_quick_apply_layer"
+                                id="wrap_quick_apply_layer"
+                                style="display: block"
+                            >
+                                <div
+                                    id="pop_login_layer_dimmed"
+                                    style="
+                                        position: fixed;
+                                        top: 0px;
+                                        left: 0px;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: url('//www.saraminimage.co.kr/event_2014/0708_rank1/bg_dimmed.png')
+                                            0px 0px repeat;
+                                        z-index: 9998;
+                                    "
+                                ></div>
+                                <div
+                                    id="pop_login_layer"
+                                    class="pop_login_layer"
+                                    style="
+                                        position: absolute;
+                                        /* top: 1292px;
+                                        left: 392px; */
+                                    "
+                                    role="dialog"
+                                    aria-labelledby="login_title"
+                                >
+                                    <div class="outer">
+                                        <form
+                                            name="loginFrm"
+                                            id="loginFrm"
+                                            action="https://www.saramin.co.kr/zf_user/auth/login"
+                                            method="post"
+                                            onsubmit="return loginCheckMainLayer(this);"
+                                        >
+                                            <input
+                                                type="hidden"
+                                                name="page_url"
+                                                id="page_url"
+                                                value="L3pmX3VzZXIvY29tcGFueS1pbmZvL3ZpZXc/Y3NuPVJ6QmFSbk5xS3pKdVdWZFZlSE5ETHpsRlZqY3JRVDA5"
+                                            />
+                                            <input
+                                                type="hidden"
+                                                name="url"
+                                                value=""
+                                            />
+                                            <input
+                                                type="hidden"
+                                                name="allowType"
+                                                value=""
+                                            />
+                                            <input
+                                                type="hidden"
+                                                name="ut"
+                                                value=""
+                                            />
+                                            <input
+                                                type="hidden"
+                                                name="layerScrapIdx"
+                                                value="48988884"
+                                            />
+                                            <input
+                                                type="hidden"
+                                                name="layerFavorIdx"
+                                                value=""
+                                            />
+                                            <input
+                                                type="hidden"
+                                                name="calNaviFl"
+                                                value=""
+                                            />
+                                            <input
+                                                type="hidden"
+                                                name="rec_apply_fl"
+                                                value="n"
+                                            />
+                                            <fieldset class="inner">
+                                                <h4
+                                                    id="login_title"
+                                                    class="title"
+                                                >
+                                                    <span class="txt_point"
+                                                        >로그인</span
+                                                    >이 필요한 서비스입니다.
+                                                </h4>
+                                                <div
+                                                    id="login_form"
+                                                    class="login-form"
+                                                >
+                                                    <div
+                                                        id="id_input_form"
+                                                        class="id-input-box focus"
+                                                    >
+                                                        <input
+                                                            type="text"
+                                                            name="id"
+                                                            id="ly_id"
+                                                            class="txt_tool"
+                                                            value=""
+                                                            required=""
+                                                        />
+                                                        <label
+                                                            id="ly-id-label"
+                                                            class="id-label"
+                                                            for="ly_id"
+                                                            ><span
+                                                                >아이디</span
+                                                            ></label
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        id="pw_input_form"
+                                                        class="pw-input-box"
+                                                    >
+                                                        <input
+                                                            type="password"
+                                                            name="password"
+                                                            id="ly_password"
+                                                            value=""
+                                                            required=""
+                                                        />
+                                                        <label
+                                                            id="ly-password-label"
+                                                            for="ly_password"
+                                                            ><span
+                                                                >비밀번호</span
+                                                            ></label
+                                                        >
+                                                    </div>
+                                                    <div class="setting">
+                                                        <div class="InpBox">
+                                                            <span class="Chk">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="ly_autologin"
+                                                                    name="autologin"
+                                                                    onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}"
+                                                                />
+                                                                <label
+                                                                    class="Lbl"
+                                                                    for="ly_autologin"
+                                                                    onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}"
+                                                                    >로그인
+                                                                    유지</label
+                                                                >
+                                                            </span>
+                                                        </div>
+                                                        <div class="InpBox">
+                                                            <span class="Chk">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="ly_id_save"
+                                                                    name="id_save"
+                                                                    onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}"
+                                                                />
+                                                                <label
+                                                                    class="Lbl"
+                                                                    for="ly_id_save"
+                                                                    onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}"
+                                                                    >아이디
+                                                                    저장</label
+                                                                >
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <button
+                                                        type="submit"
+                                                        class="BtnType SizeML btn_login"
+                                                        onmousedown="loggingEventAndTagManager(['login','pc_login_layer','per_login',''],['ga_lead','login','pc_login_layer','per_login'])"
+                                                    >
+                                                        <span>로그인</span>
+                                                    </button>
+                                                </div>
+                                                <div class="signup-forgotten">
+                                                    <a
+                                                        href="/zf_user/helpdesk/idpw-find"
+                                                        target="_blank"
+                                                        class="forgotten"
+                                                        >아이디 찾기</a
+                                                    >
+                                                    <a
+                                                        href="/zf_user/helpdesk/idpw-find"
+                                                        target="_blank"
+                                                        class="forgotten"
+                                                        >비밀번호 찾기</a
+                                                    >
+                                                    <a
+                                                        href="/zf_user/member/registration/join"
+                                                        target="_blank"
+                                                        class="sign_up"
+                                                        >회원가입</a
+                                                    >
+                                                </div>
+                                                <div class="social_login_tit">
+                                                    <p class="tit">
+                                                        소셜 계정으로 간편
+                                                        로그인
+                                                    </p>
+                                                </div>
+                                                <ul
+                                                    class="social_login"
+                                                    id="wrap_social_login"
+                                                >
+                                                    <li class="login_kakao">
+                                                        <a
+                                                            href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fcompany-info%2Fview%3Fcsn%3DRzBaRnNqKzJuWVdVeHNDLzlFVjcrQT09&amp;login_type=p"
+                                                            class="sl_kakao ga_data_layer"
+                                                            data-provider="kakao"
+                                                            ><span
+                                                                class="wrap_icon"
+                                                                ><svg
+                                                                    class="icon"
+                                                                >
+                                                                    <use
+                                                                        xlink:href="#icon_login_kakao"
+                                                                    ></use></svg></span
+                                                        ></a>
+                                                    </li>
+                                                </ul>
+                                            </fieldset>
+                                        </form>
+                                        <button
+                                            class="pop_login_layer_close"
+                                            id="pop_login_layer_close"
+                                        >
+                                            닫기
+                                        </button>
+                                    </div>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        style="display: none"
+                                    >
+                                        <symbol
+                                            id="icon_login_naver"
+                                            viewBox="0 0 20 20"
+                                            fill="none"
+                                        >
+                                            <path
+                                                d="M13.5615 10.704L6.14588 0H0V20H6.43845V9.296L13.8541 20H20V0H13.5615V10.704Z"
+                                                fill="white"
+                                            ></path>
+                                        </symbol>
+                                        <symbol
+                                            id="icon_login_kakao"
+                                            viewBox="0 0 24 22"
+                                            fill="none"
+                                        >
+                                            <path
+                                                d="M12 -0.00012207C5.37092 -0.00012207 0 4.23616 0 9.46609C0 12.868 2.27684 15.8528 5.69401 17.5215C5.44314 18.4545 4.78556 20.9082 4.65252 21.4316C4.48907 22.0839 4.89199 22.0725 5.15426 21.8981C5.35952 21.7616 8.44219 19.6681 9.77257 18.7654C10.4948 18.8716 11.2398 18.9285 12 18.9285C18.6291 18.9285 24 14.6922 24 9.4623C24 4.23237 18.6291 -0.00012207 12 -0.00012207Z"
+                                                fill="#181600"
+                                            ></path>
+                                        </symbol>
+                                        <symbol
+                                            id="icon_login_google"
+                                            viewBox="0 0 22 22"
+                                            fill="none"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M21.5593 11.25C21.5593 10.4697 21.4888 9.72048 21.3593 9.00027H10.9998V13.2552H16.9199C16.665 14.6303 15.8899 15.7951 14.7251 16.5754V19.3349H18.2805C20.3603 17.4199 21.5603 14.6002 21.5603 11.25H21.5593Z"
+                                                fill="#4285F4"
+                                            ></path>
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M10.9993 22.0002C13.9692 22.0002 16.4594 21.0147 18.2791 19.3349L14.7236 16.5754C13.7382 17.2355 12.4791 17.6251 10.9983 17.6251C8.133 17.6251 5.70815 15.6904 4.84287 13.0904H1.16931V15.9401C2.97966 19.5349 6.69881 22.0002 10.9993 22.0002Z"
+                                                fill="#34A853"
+                                            ></path>
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M4.84453 13.0895C4.62484 12.4294 4.49946 11.7248 4.49946 10.9994C4.49946 10.274 4.62484 9.56933 4.84453 8.90923V6.05951H1.16994C0.424868 7.54448 0 9.22426 0 10.9994C0 12.7745 0.424868 14.4543 1.16994 15.9392L4.84453 13.0895Z"
+                                                fill="#FBBC05"
+                                            ></path>
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M10.9993 4.37511C12.6138 4.37511 14.0646 4.93054 15.2045 6.01966L18.3599 2.86423C16.4542 1.09015 13.9641 0 10.9993 0C6.69881 0 2.97966 2.46527 1.16931 6.06007L4.8439 8.90979C5.70918 6.30981 8.13404 4.37511 10.9993 4.37511Z"
+                                                fill="#EA4335"
+                                            ></path>
+                                        </symbol>
+                                        <symbol
+                                            id="icon_login_facebook"
+                                            viewBox="0 0 14 26"
+                                            fill="none"
+                                        >
+                                            <path
+                                                d="M4.60526 25.5H8.9386V14.4801H12.9504L13.3677 10.3223C13.3677 10.3223 13.4544 10.118 13.0165 10.118H8.9386V6.97963C8.9386 6.97963 8.75842 4.60805 11.1053 4.60805H13.5V0.937039C13.5 0.937039 12.4691 0.477875 9.97404 0.500833C9.97404 0.500833 7.77316 0.473283 6.05123 2.13086C6.05123 2.13086 4.60526 3.43489 4.60526 4.9134V10.118H0.5V14.4801H4.60526V25.5Z"
+                                                fill="white"
+                                            ></path>
+                                        </symbol>
+                                        <symbol
+                                            id="icon_login_apple"
+                                            viewBox="0 0 22 25"
+                                            fill="none"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M8.48584 5.81313C8.27201 4.15256 9.4239 0.539339 13.4774 0C13.9464 2.78179 11.6001 5.97873 8.48584 5.81313Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M20.7747 8.39829C19.4527 7.15287 18.3008 5.94884 15.8694 5.82349C13.9071 5.7407 13.0115 6.90332 11.1768 6.94472C9.47077 6.98612 9.59836 5.6579 6.0576 6.03164C2.98587 6.36283 0.298109 9.35277 0.511949 13.5467C0.725788 18.073 3.96764 24.3427 6.99566 24.3427C9.12815 24.3013 9.64089 23.3043 11.3894 23.3043C13.5644 23.3043 14.0772 24.5497 15.7832 24.3002C18.7261 23.885 21.499 19.3587 21.499 17.9063C19.878 17.076 18.2571 15.6638 18.0433 13.2972C17.8731 10.9305 19.3653 9.43557 20.7736 8.39714L20.7747 8.39829Z"
+                                                fill="white"
+                                            ></path>
+                                        </symbol>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -2588,6 +2755,21 @@
                     ></path>
                 </symbol>
             </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                <symbol id="icon_login_naver" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M13.5615 10.704L6.14588 0H0V20H6.43845V9.296L13.8541 20H20V0H13.5615V10.704Z"
+                        fill="white"
+                    ></path>
+                </symbol>
+                <symbol id="icon_login_kakao" viewBox="0 0 24 22" fill="none">
+                    <path
+                        d="M12 -0.00012207C5.37092 -0.00012207 0 4.23616 0 9.46609C0 12.868 2.27684 15.8528 5.69401 17.5215C5.44314 18.4545 4.78556 20.9082 4.65252 21.4316C4.48907 22.0839 4.89199 22.0725 5.15426 21.8981C5.35952 21.7616 8.44219 19.6681 9.77257 18.7654C10.4948 18.8716 11.2398 18.9285 12 18.9285C18.6291 18.9285 24 14.6922 24 9.4623C24 4.23237 18.6291 -0.00012207 12 -0.00012207Z"
+                        fill="#181600"
+                    ></path>
+                </symbol>
+            </svg>
         </div>
     </body>
+    <script src="/static/js/corporation/corporation-main.js"></script>
 </html>

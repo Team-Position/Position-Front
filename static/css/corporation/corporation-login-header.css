@@ -51,41 +51,20 @@ article {
     );
     content: "";
 }
-/* #header:before {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    height: 1px;
-    background: #eaedf4;
-    content: "";
-}
-#header:after {
-    position: absolute;
-    top: 161px;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    height: 4px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(55, 63, 87, 0.1) 100%);
-    content: "";
-} */
 
 #header .wrap_header {
     display: grid;
     position: relative;
     z-index: 3;
     margin: 0 auto;
-    padding-top: 12px;
+
     width: 1260px;
     box-sizing: border-box;
     gap: 1px 23px;
     grid-template-areas:
         "bi search utility"
         "navigation navigation navigation";
-    /* grid-template-columns: 161px 554px 1fr;
-    grid-template-rows: 84px 64px; */
+
     align-items: center;
 }
 #header.fixed .wrap_header {

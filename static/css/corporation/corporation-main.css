@@ -2024,3 +2024,8 @@ img {
     font-weight: bold;
     line-height: 26px;
 }
+.nothing_tit {
+    margin: 0 400px;
+    align-content: center;
+    color: #5c667b;
+}

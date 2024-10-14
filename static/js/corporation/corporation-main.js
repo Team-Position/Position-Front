@@ -71,6 +71,7 @@ const loginLayer = document.getElementById("wrap_quick_apply_layer");
 
 // 닫기 버튼 클릭 이벤트 리스너
 closeButton.addEventListener("click", function () {
+    document.body.style.overflow = "auto";
     // 로그인 팝업을 숨김
     loginLayer.style.display = "none";
 });

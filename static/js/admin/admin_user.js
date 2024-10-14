@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     statusCell.style.color = "var(--blue90)";
                     break;
                 case "탈퇴함":
-                    statusCell.style.color = "var(--gray520);";
+                    statusCell.style.color = "var(--gray50)";
                     break;
                 default:
                     statusCell.style.color = "black"; // 기본 색상
@@ -248,9 +248,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 수정-저장버튼 클릭시 모달 닫기
-    saveBtn.addEventListener("click", () => {
-        closeModal("edit");
-    });
+    // saveBtn.addEventListener("click", () => {
+    //     closeModal("edit");
+    // });
 
     // 결제일 수, 결제 수단, 결제 상태 눌렀을 때
     sortFilterOptions.forEach((option) => {

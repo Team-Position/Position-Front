@@ -612,10 +612,86 @@ body {
     font-size: 16px;
     line-height: 24px;
 }
-
+.top_layer_assist .save_list_area .alarm_list>ul>li:hover {
+    background-color: #deebff;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .btn_list li .link_btn:hover {
+    color: #4876ef;
+    box-shadow: 2px 6px 16px 0 rgba(17, 42, 128, 0.08);
+}
 .top_layer_assist .save_list_area .alarm_list {
     width: 312px;
     box-sizing: border-box;
+}
+.top_layer_assist .save_list_area .alarm_list>ul {
+    display: block;
+    width: 100%;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 16px 20px;
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #eff5ff;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .header {
+    margin-bottom: 4px;
+    color: #5c667b;
+    font-size: 0;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .header span {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .tit {
+    display: block;
+    overflow: hidden;
+    height: 20px;
+    color: #373f57;
+    font-size: 14px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .tit span.corp {
+    max-width: 35%;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .tit span {
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    padding-right: 10px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .tit span.sub {
+    max-width: 65%;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .btn_list {
+    display: block;
+    margin-top: 16px;
+    font-size: 0;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .btn_list li {
+    display: inline-block;
+    margin-right: 6px;
+}
+.top_layer_assist .save_list_area .alarm_list>ul>li .btn_list li .link_btn {
+    display: inline-block;
+    padding: 0 9px;
+    height: 24px;
+    border-radius: 12.5px;
+    box-sizing: border-box;
+    color: #6c9cfa;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #fff;
 }
 
 .top_layer_assist .empty_list.alarm_area {

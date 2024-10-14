@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My Page</title>
         <link rel="stylesheet" href="/static/css/main.css" />
-        <link rel="stylesheet" href="/static/css/main/my-page-header.css" />
+        <link rel="stylesheet" href="/static/css/my-page/my-page-header.css" />
     </head>
     <body id="container" class="layout_home vsc-initialized">
         <header id="sri_header" class="sri_header">
             <div class="wrap_top_btns">
-                <div class="rewards_point">
+                <!-- <div class="rewards_point">
                     <a
                         href="/zf_user/member/career-mileage"
                         onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'career_mileage','event-flow': 'icon','event-label': ''});}catch(e){}"
@@ -18,7 +18,7 @@
                         <svg><use xlink:href="#svg_top_rewards"></use></svg>
                         <span id="my_career_mileage">0</span>
                     </a>
-                </div>
+                </div> -->
                 <div
                     id="message_badge"
                     class="wrap_messenger"
@@ -321,11 +321,91 @@
                             <div
                                 class="alarm_list"
                                 id="today_list_content"
-                                style="display: none"
-                            ></div>
+                                style="display: block"
+                            >
+                                <ul>
+                                    <li style="display: block">
+                                        <a
+                                            href="/zf_user/persons/scrap-recruit?sort=PC"
+                                            target=""
+                                            onmousedown='try{dataLayer.push({"event": "ga_lead","category": "mylayer_noti","event-flow": "today","event-label": "apply"});}catch(e){}'
+                                        >
+                                            <div class="header">
+                                                <span class="status"
+                                                    >공고 마감</span
+                                                >
+                                                <span class="time">23:59</span>
+                                            </div>
+                                            <strong class="tit">
+                                                <span class="corp"
+                                                    >에이케이플라자(주)</span
+                                                >
+                                                <span class="sub">
+                                                    외 5건 마감</span
+                                                >
+                                            </strong>
+                                        </a>
+                                        <ul class="btn_list">
+                                            <a
+                                                href="/zf_user/persons/scrap-recruit?sort=PC"
+                                                target=""
+                                                onmousedown='try{dataLayer.push({"event": "ga_lead","category": "mylayer_noti","event-flow": "today","event-label": "apply"});}catch(e){}'
+                                            >
+                                            </a>
+                                            <li>
+                                                <a
+                                                    href="/zf_user/persons/scrap-recruit?sort=PC"
+                                                    target=""
+                                                    onmousedown='try{dataLayer.push({"event": "ga_lead","category": "mylayer_noti","event-flow": "today","event-label": "apply"});}catch(e){}'
+                                                ></a
+                                                ><a
+                                                    href="/zf_user/company-review-qst-and-ans"
+                                                    class="link_btn"
+                                                    target="_blank"
+                                                    onmousedown='try{dataLayer.push({"event": "ga_lead","category": "mylayer_noti","event-flow": "today","event-label": "apply-1"});}catch(e){}'
+                                                    >커뮤니티</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/zf_user/career-information/senior-list"
+                                                    class="link_btn"
+                                                    target="_blank"
+                                                    onmousedown='try{dataLayer.push({"event": "ga_lead","category": "mylayer_noti","event-flow": "today","event-label": "apply-2"});}catch(e){}'
+                                                    >현직자 인터뷰</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <button
+                                    type="button"
+                                    class="more today_more_button"
+                                    onclick="todayMoreButton(this)"
+                                    style="display: none"
+                                    onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'mylayer_noti','event-flow': 'today','event-label': 'more'});}catch(e){}"
+                                >
+                                    더보기<svg>
+                                        <use xlink:href="#svg_gnb_arrow"></use>
+                                    </svg>
+                                </button>
+                                <script type="text/javascript">
+                                    function todayMoreButton(elem) {
+                                        if (!$j(elem).hasClass("on")) {
+                                            $j("#today_list_content")
+                                                .find("ul")
+                                                .find("li")
+                                                .show();
+                                            $j(".today_more_button").hide();
+                                        }
+                                    }
+                                </script>
+                            </div>
+                            <!-- 비어있을 때 -->
                             <div
                                 class="empty_list alarm_area"
                                 id="empty_today_list_content"
+                                style="display: none"
                             >
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
@@ -571,13 +651,6 @@
                                             ></use>
                                         </svg>
                                     </button>
-                                    <script>
-                                        (function ($) {
-                                            $("#myAlarmBlt").html(
-                                                '<span class="blind">내알림 레이어 버튼</span><svg class="img_alarm top_btn_icon"><use xlink:href="#svg_top_alarm_off" class="top_layer_icon"></use></svg>'
-                                            );
-                                        })(jQuery);
-                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -2267,5 +2340,5 @@
             </symbol>
         </svg>
     </body>
-    <script src="/static/js/main/my-page-header.js"></script>
+    <script src="/static/js/my-page/my-page-header.js"></script>
 </html>

@@ -16,10 +16,12 @@ const nextButton = document.querySelector(".bx-next");
 const prevButton = document.querySelector(".bx-prev");
 const reviewList = document.getElementById("companyReviewSlider");
 const reviewItems = document.querySelectorAll(".review_item");
-
-const contentToggleButtons = document.querySelectorAll(".content_fold");
+// 여기서부터
+const contentToggleButtons = document.querySelectorAll(".content_fold.active");
 console.log(contentToggleButtons);
 
+const toggleButtonTit = document.querySelectorAll(".btn_fold > .txt");
+console.log(toggleButtonTit);
 // 사이드바 메뉴
 menus.forEach((menu) => {
     menu.addEventListener("click", (e) => {
@@ -41,6 +43,7 @@ favorButtons.forEach((favorButton) => {
         e.target.classList.toggle("interested_on");
     });
 });
+
 // 공유버튼
 shareButton.addEventListener("click", (e) => {
     shareLayer.classList.add("show");
@@ -49,10 +52,17 @@ closeButton.addEventListener("click", (e) => {
     shareLayer.classList.remove("show");
 });
 
+console.log(toggleButtonTit[1].innerText);
 // 펼쳐보기 버튼
 contentToggleButtons.forEach((contentToggleButton) => {
     contentToggleButton.addEventListener("click", (e) => {
-        e.target.classList.toggle("expand");
+        console.log(e.target);
+        contentToggleButton.classList.toggle("expand");
+        if (e.target.innerText == "펼쳐보기") {
+            e.target.innerText = "접기";
+        } else {
+            e.target.innerText = "펼쳐보기";
+        }
     });
 });
 

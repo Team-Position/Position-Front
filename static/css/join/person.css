@@ -579,3 +579,149 @@ input[type="checkbox"], input[type="radio"] {
     margin-bottom: 0;
 }
 
+.ModalBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 110;
+    padding: 40px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: var(--white);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) translateX(-50%) translateZ(0);
+}
+
+.ModalBox.member_nudge {
+    top: 50%;
+    left: 50%;
+    width: 560px;
+    transform: translate(-50%, -50%);
+}
+
+
+.ModalBox .Tit {
+    margin-bottom: 24px;
+    color: var(--gray120);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.ModalBox .ModalCont {
+    color: var(--gray90);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.ModalBox.member_nudge .id_already {
+    margin-top: 24px;
+    color: #373f57;
+    font-size: 16px;
+}
+
+.ModalBox.member_nudge .id_already strong {
+    margin-left: 8px;
+    color: #2d65f2;
+}
+
+.ModalBox .BtmArea {
+    display: flex;
+    margin-top: 24px;
+    justify-content: center;
+}
+
+.ModalBox.member_nudge .BtmArea .BtnType.search_user {
+    border-color: var(--gray80);
+    color: var(--gray100);
+    background: var(--white);
+}
+
+.ModalBox .BtmArea .BtnType {
+    min-width: 100px;
+}
+
+[class*="BtnType"].SizeM {
+    padding: 6px 11px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+
+.ModalBox .BtmArea .BtnType+.BtnType {
+    margin-left: 8px;
+}
+
+.ModalBox .BtmArea .BtnType {
+    min-width: 100px;
+}
+
+[class*="BtnType"].SizeM {
+    padding: 6px 11px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.ModalBox .BtnClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+}
+
+.ModalBox .BtnClose:after {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(/static/images/join/close.svg) no-repeat;
+    content: "";
+}
+
+.ModalBox.member_nudge .BtmArea .BtnType.search_user {
+    border-color: var(--gray80);
+    color: var(--gray100);
+    background: var(--white);
+}
+
+.ModalBox.member_nudge .BtmArea .BtnType.search_user:hover {
+    background: var(--gray20);
+}
+
+.write_base .item .item_tit strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #373f57;
+    font-size: 16px;
+}
+
+.write_base .item .alert_column.focus_txt {
+    color: #5c667b;
+}
+
+.write_base .item .alert_column {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.write_base .item .wrap_collection_basis .btn_link.on {
+    color: #2d65f2;
+    background: url(/static/images/join/infoOn.svg) 0 50% no-repeat;
+    background-size: 14px 14px;
+}

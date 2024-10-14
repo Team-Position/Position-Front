@@ -182,6 +182,7 @@ button.interested_corp {
     justify-content: center;
     align-items: center;
 }
+
 .sidebar .company_info .layer_share {
     display: none;
     position: absolute;
@@ -935,13 +936,13 @@ button.interested_corp {
     box-sizing: border-box;
     color: var(--gray100);
 }
-.wrap_company_view .content_fold.expand {
-    max-height: none;
-}
 .wrap_company_view .content_fold {
     overflow-y: hidden;
     position: relative;
     max-height: 270px;
+}
+.wrap_company_view .content_fold.expand .btn_fold .txt:after {
+    transform: rotate(-180deg);
 }
 [class*="BtnType"].BlueInvert {
     border-color: var(--blue90);

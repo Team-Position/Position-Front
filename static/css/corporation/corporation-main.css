@@ -147,6 +147,19 @@
 .sidebar .company_info .box_btns .interested_corp .icon_interested {
     margin-right: 4px;
 }
+/* 관심기업 하트 */
+button.interested_on {
+    background-position: -20px 1px;
+}
+.sidebar
+    .company_info
+    .box_btns
+    .interested_corp.interested_on
+    .icon_interested
+    path {
+    fill: #ff6f6c;
+    stroke: #f75855;
+}
 button.interested_corp {
     display: block;
     width: 16px;
@@ -176,6 +189,10 @@ button.interested_corp {
     right: 0;
     z-index: 10;
 }
+.sidebar .company_info .layer_share.show {
+    display: block;
+}
+
 .sidebar .company_info .layer_share .cont_share {
     position: relative;
     padding: 28px 24px 24px;
@@ -216,8 +233,12 @@ button.interested_corp {
     flex-direction: column;
     gap: 10px 0;
 }
+/* li가 selected되면 */
 .sidebar .company_navi .menu_list .menu_item.selected .btn_menu {
     font-weight: bold;
+    background: var(--gray30);
+}
+.sidebar .company_navi .menu_list .menu_item .btn_menu:hover {
     background: var(--gray30);
 }
 .sidebar .company_navi .menu_list .btn_menu {
@@ -971,10 +992,6 @@ cite {
     box-sizing: border-box;
     background: #fff;
 }
-.cont_introduce .newcomer_link_view {
-    display: block;
-    height: 176px;
-}
 .cont_introduce .list_curation_item .list_curation_slide {
     position: relative;
     padding: 20px;
@@ -1089,6 +1106,9 @@ a {
     height: 24px;
     background: url(/static/images/corporation/star_logo.svg) no-repeat 0 0;
 }
+.cont_introduce .list_curation_item li .newcomer_book_mark.on {
+    background-image: url(/static/images/corporation/star-on_logo.svg);
+}
 .cont_introduce .section .link_content_more {
     border-color: var(--gray40);
     color: var(--gray100);
@@ -1175,6 +1195,82 @@ cite {
 .cont_introduce .list_company_review .company_review_item {
     margin-bottom: 16px;
 }
+/* 마지막 카드 */
+.cont_introduce .review_card_list .review_item:last-of-type {
+    margin-right: 0;
+}
+.cont_introduce .review_card_list .review_item {
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+.cont_introduce .review_card_list .landing_review_card:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 102px;
+    height: 138px;
+    background: url(//www.saraminimage.co.kr/sri/company/view/introduce/img_review_card.png);
+    content: "";
+}
+.cont_introduce .review_card_list .landing_review_card .link_box {
+    display: block;
+    color: var(--white);
+    position: relative;
+    padding: 24px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: var(--gray100);
+}
+.cont_introduce .review_card_list .review_card {
+    position: relative;
+    padding: 24px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: var(--gray20);
+}
+.cont_introduce .review_card_list .landing_review_card .review_tit {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+}
+.cont_introduce .review_card_list .landing_review_card .looks_button {
+    display: inline-flex;
+    position: absolute;
+    bottom: 40px;
+    left: 24px;
+    padding: 12px;
+    min-width: 164px;
+    height: 40px;
+    border: 1px solid var(--gray40);
+    border-radius: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+.cont_introduce
+    .review_card_list
+    .landing_review_card
+    .looks_button
+    .looks_button_txt {
+    font-size: 14px;
+    line-height: 20px;
+}
+.cont_introduce .review_card_list .landing_review_card .looks_button:after {
+    margin-left: 2px;
+    width: 16px;
+    height: 16px;
+    background-image: url(/static/images/corporation/next_button_white.svg);
+    content: "";
+}
+/*  */
 .cont_introduce .box_gauge {
     position: relative;
     height: 48px;
@@ -1258,23 +1354,17 @@ cite {
 .wrap_company_view .slider_controls .bx-prev {
     background-image: url(/static/images/corporation/slider_control_prev.svg);
 }
+/* 뒤로가기, 앞으로 가기버튼 disabled */
+.wrap_company_view .slider_controls .bx-prev.disabled,
+.wrap_company_view .slider_controls .bx-next.disabled {
+    display: none;
+}
 .cont_introduce .review_card_list {
     display: flex;
 }
 .cont_introduce .review_card_list .review_item {
     margin-right: 16px;
     flex-shrink: 0;
-}
-.cont_introduce .review_card_list .review_card,
-.cont_introduce .review_card_list .landing_review_card .link_box {
-    position: relative;
-    padding: 24px;
-    width: 250px;
-    height: 240px;
-    border: 1px solid var(--gray40);
-    border-radius: 16px;
-    box-sizing: border-box;
-    background: var(--gray20);
 }
 .cont_introduce .review_card_list .review_card .review_worker.retired {
     color: var(--gray100);
@@ -1645,4 +1735,297 @@ cite {
 }
 [class*="BtnType"].GrayInvert:hover {
     background: var(--gray20);
+}
+/* 로그인 팝업 */
+.login_input_wrap,
+.pop_login_layer {
+    --common_a_hover_color: #3769ed;
+}
+.pop_login_layer .outer {
+    position: relative;
+    padding: 52px 44px;
+    width: 408px;
+    border: 1px solid #666;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.pop_login_layer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    margin-left: -204px;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: left;
+}
+.pop_login_layer .pop_login_layer_close {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 43px;
+    height: 43px;
+    border: 0;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -100%;
+    text-shadow: none;
+    white-space: nowrap;
+    background: url(//www.saraminimage.co.kr/ui/common/btn_login_close.png)
+        no-repeat 50% 50%;
+    cursor: pointer;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+fieldset,
+img {
+    border: 0;
+}
+.pop_login_layer .title {
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+}
+.pop_login_layer .title .txt_point {
+    color: #2d65f2;
+}
+.pop_login_layer .login-form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.pop_login_layer .login-form .id-input-box {
+    margin-bottom: 8px;
+}
+.pop_login_layer .login-form input {
+    width: 100%;
+    border: 1px solid #8491a7;
+    background: #fff;
+    color: #373f57;
+    border-radius: 4px;
+    padding: 24px 12px 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.pop_login_layer .login-form label {
+    position: absolute;
+    left: 12px;
+    top: 18px;
+    font-size: 16px;
+    color: #5c667b;
+    transition: all 300ms ease;
+}
+.pop_login_layer .login-form .id-input-box,
+.pop_login_layer .login-form .pw-input-box {
+    position: relative;
+}
+.pop_login_layer .setting {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 12px 0 24px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.InpBox {
+    display: inline-block;
+    vertical-align: top;
+}
+.InpBox .Chk {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.pop_login_layer .login-form input:focus,
+.pop_login_layer .login-form input:valid,
+.pop_login_layer .login-form input:-webkit-autofill {
+    padding: 24px 12px 9px 12px;
+}
+.pop_login_layer .login-form input {
+    width: 100%;
+    border: 1px solid #8491a7;
+    background: #fff;
+    color: #373f57;
+    border-radius: 4px;
+    padding: 24px 12px 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.InpBox .Chk input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.pop_login_layer .login-form input:focus ~ label,
+.pop_login_layer .login-form input:valid ~ label,
+.pop_login_layer .login-form input:-webkit-autofill ~ label {
+    font-size: 12px;
+    top: 8px;
+    color: #373f57;
+}
+.pop_login_layer .login-form .setting label {
+    position: static;
+}
+.InpBox .Chk .Lbl {
+    display: block;
+    position: relative;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+.InpBox .Chk .Lbl:before {
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    vertical-align: top;
+    background: #fff;
+    content: "";
+}
+.pop_login_layer .setting .InpBox + .InpBox {
+    margin-left: 12px;
+}
+.pop_login_layer .login-form .btn_login {
+    margin: 0 0 12px;
+}
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+.pop_login_layer .signup-forgotten {
+    margin-bottom: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    width: 100%;
+    font-size: 13px;
+    line-height: 24px;
+}
+.pop_login_layer .signup-forgotten .sign_up,
+.pop_login_layer .signup-forgotten .forgotten {
+    color: #373f57;
+}
+.pop_login_layer .signup-forgotten > a {
+    text-align: center;
+    position: relative;
+}
+.pop_login_layer .signup-forgotten > a + a {
+    margin-left: 12px;
+    padding-left: 12px;
+}
+.pop_login_layer .signup-forgotten > a + a:after {
+    position: absolute;
+    content: "";
+    background-color: var(--gray50);
+    width: 1px;
+    height: 14px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.pop_login_layer .social_login_tit .tit {
+    text-align: center;
+    font-size: 15px;
+    color: #5c667b;
+    line-height: 24px;
+}
+.pop_login_layer .social_login_tit .tit:before {
+    margin-right: 8px;
+}
+.pop_login_layer .social_login_tit .tit:before,
+.pop_login_layer .social_login_tit .tit:after {
+    width: 60px;
+    height: 1px;
+    background-color: #eaedf4;
+    display: inline-block;
+    vertical-align: super;
+    content: "";
+}
+.pop_login_layer .social_login {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    position: relative;
+    padding-top: 24px;
+}
+.pop_login_layer .social_login .login_naver,
+.pop_login_layer .social_login .login_kakao,
+.pop_login_layer .social_login .login_google,
+.pop_login_layer .social_login .login_facebook,
+.pop_login_layer .social_login .login_apple {
+    width: 63px;
+    font-size: 13px;
+    line-height: 18px;
+    position: relative;
+}
+.pop_login_layer .social_login .login_naver a,
+.pop_login_layer .social_login .login_kakao a,
+.pop_login_layer .social_login .login_google a,
+.pop_login_layer .social_login .login_facebook a,
+.pop_login_layer .social_login .login_apple a {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    color: #5c667b;
+}
+.pop_login_layer .social_login .login_kakao .wrap_icon {
+    background-color: #fee500;
+    border-color: #fee500;
+}
+.pop_login_layer .social_login li .wrap_icon {
+    margin-bottom: 8px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid;
+    justify-content: center;
+    align-content: center;
+}
+.pop_login_layer .social_login .login_kakao .icon {
+    width: 24px;
+    height: 22px;
+}
+[class*="BtnType"].SizeML {
+    padding: 13px 15px 15px;
+    height: 56px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+}
+.nothing_tit {
+    margin: 0 400px;
+    align-content: center;
+    color: #5c667b;
 }

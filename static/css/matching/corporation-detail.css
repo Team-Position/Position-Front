@@ -147,6 +147,19 @@
 .sidebar .company_info .box_btns .interested_corp .icon_interested {
     margin-right: 4px;
 }
+/* 관심기업 하트 */
+button.interested_on {
+    background-position: -20px 1px;
+}
+.sidebar
+    .company_info
+    .box_btns
+    .interested_corp.interested_on
+    .icon_interested
+    path {
+    fill: #ff6f6c;
+    stroke: #f75855;
+}
 button.interested_corp {
     display: block;
     width: 16px;
@@ -176,6 +189,11 @@ button.interested_corp {
     right: 0;
     z-index: 10;
 }
+/* 공유하기 누르면 show됨 */
+.sidebar .company_info .layer_share.show {
+    display: block;
+}
+
 .sidebar .company_info .layer_share .cont_share {
     position: relative;
     padding: 28px 24px 24px;
@@ -216,8 +234,19 @@ button.interested_corp {
     flex-direction: column;
     gap: 10px 0;
 }
+.sidebar .company_info .layer_share .btn_close:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(/static/images/corporation/share-close-logo.svg) no-repeat;
+    content: "";
+}
+/* li가 selected되면 */
 .sidebar .company_navi .menu_list .menu_item.selected .btn_menu {
     font-weight: bold;
+    background: var(--gray30);
+}
+.sidebar .company_navi .menu_list .menu_item .btn_menu:hover {
     background: var(--gray30);
 }
 .sidebar .company_navi .menu_list .btn_menu {
@@ -878,6 +907,9 @@ button.interested_corp {
 .wrap_company_view .content_fold.active .box_btn {
     display: flex;
 }
+.wrap_company_view .content_fold.expand .box_btn {
+    position: static;
+}
 /* 그라디언트 */
 .wrap_company_view .content_fold .box_btn.gradient {
     position: absolute;
@@ -902,6 +934,14 @@ button.interested_corp {
     border: 1px solid var(--gray80);
     box-sizing: border-box;
     color: var(--gray100);
+}
+.wrap_company_view .content_fold.expand {
+    max-height: none;
+}
+.wrap_company_view .content_fold {
+    overflow-y: hidden;
+    position: relative;
+    max-height: 270px;
 }
 [class*="BtnType"].BlueInvert {
     border-color: var(--blue90);
@@ -1194,6 +1234,10 @@ a {
     height: 24px;
     background: url(/static/images/corporation/star_logo.svg) no-repeat 0 0;
 }
+
+.cont_introduce .list_curation_item li .newcomer_book_mark.on {
+    background-image: url(/static/images/corporation/star-on_logo.svg);
+}
 .cont_introduce .section .link_content_more {
     border-color: var(--gray40);
     color: var(--gray100);
@@ -1362,6 +1406,82 @@ cite {
 .cont_introduce .list_company_review .company_review_item {
     margin-bottom: 16px;
 }
+/* 마지막 카드 */
+.cont_introduce .review_card_list .review_item:last-of-type {
+    margin-right: 0;
+}
+.cont_introduce .review_card_list .review_item {
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+.cont_introduce .review_card_list .landing_review_card:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 102px;
+    height: 138px;
+    background: url(//www.saraminimage.co.kr/sri/company/view/introduce/img_review_card.png);
+    content: "";
+}
+.cont_introduce .review_card_list .landing_review_card .link_box {
+    display: block;
+    color: var(--white);
+    position: relative;
+    padding: 24px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: var(--gray100);
+}
+.cont_introduce .review_card_list .review_card {
+    position: relative;
+    padding: 24px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid var(--gray40);
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: var(--gray20);
+}
+.cont_introduce .review_card_list .landing_review_card .review_tit {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+}
+.cont_introduce .review_card_list .landing_review_card .looks_button {
+    display: inline-flex;
+    position: absolute;
+    bottom: 40px;
+    left: 24px;
+    padding: 12px;
+    min-width: 164px;
+    height: 40px;
+    border: 1px solid var(--gray40);
+    border-radius: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+.cont_introduce
+    .review_card_list
+    .landing_review_card
+    .looks_button
+    .looks_button_txt {
+    font-size: 14px;
+    line-height: 20px;
+}
+.cont_introduce .review_card_list .landing_review_card .looks_button:after {
+    margin-left: 2px;
+    width: 16px;
+    height: 16px;
+    background-image: url(/static/images/corporation/next_button_white.svg);
+    content: "";
+}
+/*  */
 .cont_introduce .box_gauge {
     position: relative;
     height: 48px;
@@ -1433,6 +1553,11 @@ cite {
 .wrap_company_view .slider_controls .bx-next {
     background-image: url(/static/images/corporation/slider_control_next.svg);
 }
+/* 뒤로가기, 앞으로 가기버튼 disabled */
+.wrap_company_view .slider_controls .bx-prev.disabled,
+.wrap_company_view .slider_controls .bx-next.disabled {
+    display: none;
+}
 .wrap_company_view .slider_controls .bx-prev,
 .wrap_company_view .slider_controls .bx-next {
     width: 44px;
@@ -1451,17 +1576,6 @@ cite {
 .cont_introduce .review_card_list .review_item {
     margin-right: 16px;
     flex-shrink: 0;
-}
-.cont_introduce .review_card_list .review_card,
-.cont_introduce .review_card_list .landing_review_card .link_box {
-    position: relative;
-    padding: 24px;
-    width: 250px;
-    height: 240px;
-    border: 1px solid var(--gray40);
-    border-radius: 16px;
-    box-sizing: border-box;
-    background: var(--gray20);
 }
 .cont_introduce .review_card_list .review_card .review_worker.retired {
     color: var(--gray100);

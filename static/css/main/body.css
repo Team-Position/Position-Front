@@ -457,7 +457,7 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #f3f4f8 100%);
 }
 
-.main_banner {
+/* .main_banner {
     overflow: hidden;
     border-radius: 16px;
     grid-area: banner;
@@ -467,6 +467,19 @@
     display: block;
     width: 300px;
     height: 216px;
+} */
+
+.main_banner {
+    overflow: hidden;
+    border-radius: 16px;
+    grid-area: banner;
+    height: 320px; /* 배너의 원하는 높이를 설정 */
+}
+
+.main_banner a, .main_banner img {
+    display: block;
+    width: 100%; /* 이미지를 반응형으로 만듭니다 */
+    height: auto; /* 비율을 유지하도록 높이를 자동으로 조정 */
 }
 
 .main_links {

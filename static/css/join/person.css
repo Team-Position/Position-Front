@@ -1,0 +1,205 @@
+.join_header {
+    display: flex;
+    height: 64px;
+    border-bottom: 1px solid #eaedf4;
+    line-height: 64px;
+    justify-content: space-between;
+}
+
+.join_header .area_logo {
+    margin-left: 64px;
+}
+
+.join_header .area_logo .link_saramin_logo {
+    margin-right: 6px;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
+.join_header .area_util {
+    margin-right: 64px;
+}
+
+.join_header .area_util .util {
+    display: flex;
+    height: 64px;
+}
+
+ol, ul, li {
+    list-style-type: none;
+}
+
+
+.join_header .area_util .util_item {
+    display: flex;
+    align-items: center;
+}
+
+.join_header .area_util .util_menu {
+    display: flex;
+    color: var(--gray110);
+    font-size: 13px;
+    line-height: 17px;
+    align-items: center;
+}
+
+.join_header .area_util .menu_saramin:before {
+    background-image: url(/static/images/login/saramin-home.svg);
+}
+
+.join_header .area_util .util_menu:before {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    content: "";
+}
+
+#join_wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 360px;
+}
+
+.TypoBox .Typo {
+    padding: 8px 12px;
+    width: 100%;
+    height: 38px;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: none;
+}
+
+.write_base .item input.defalt:hover {
+    border: 1px solid #8491a7;
+    background-color: #eff5ff;
+}
+
+.TypoBox .Typo.SizeL {
+    padding: 12px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.write_base .item input {
+    width: 100%;
+}
+
+img, fieldset, button, input {
+    border: 0 none;
+}
+
+.member_cate .tit_join_member {
+    margin-bottom: 32px;
+    padding-top: 55px;
+    color: #373f57;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: center;
+}
+
+.cont_division {
+    position: relative;
+    margin-top: 24px;
+    width: 360px;
+    box-sizing: border-box;
+}
+
+.write_base .item {
+    clear: both;
+    position: relative;
+    padding-top: 24px;
+}
+
+.write_base .item label {
+    display: block;
+}
+
+button, label {
+    cursor: pointer;
+}
+
+.write_base .item label strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #373f57;
+    font-size: 16px;
+}
+
+.write_base .item .TypoBox {
+    width: 100%;
+}
+
+.TypoBox {
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.TypoBox .Typo.SizeL {
+    padding: 12px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.write_base .item input {
+    width: 100%;
+}
+
+.TypoBox .Typo {
+    padding: 8px 12px;
+    width: 100%;
+    height: 38px;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: none;
+}
+
+::placeholder {
+    color: #8491A7; /* 원하는 색상으로 변경 */
+
+}
+
+.write_base .item .TypoBox.invalid {
+    border-color: #dc3434;
+}
+
+*:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--blue100);
+    outline-offset: 2px;
+}
+
+.write_base .item .msgInvalid {
+    display: block;
+    clear: both;
+    margin-top: 8px;
+    color: #d64141;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.write_base .item .alert_column.good_txt {
+    color: #2d65f2;
+}
+
+.write_base .item .alert_column {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}

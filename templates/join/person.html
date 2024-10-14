@@ -124,7 +124,7 @@
                                                     />
                                                 </div>
                                                 <p
-                                                    class="alert_colum focus_txt"
+                                                    class="alert_column focus_txt"
                                                     id="idFocusMsg"
                                                     style="display: none"
                                                 >
@@ -142,22 +142,585 @@
                                                         사용해주세요.</span
                                                     ></em
                                                 >
+                                                <em
+                                                    class="msgInvalid rep"
+                                                    id="idCheckMsg2"
+                                                    style="display: none"
+                                                    >이미 사용중인 ID입니다.</em
+                                                >
                                                 <p
                                                     class="alert_column good_txt"
-                                                    id="idCheckMsg2"
+                                                    id="idCheckMsg3"
                                                     style="display: none"
                                                 >
                                                     사용가능한 ID입니다.
                                                 </p>
                                             </div>
+                                            <!-- 비밀번호 -->
+                                            <div class="item">
+                                                <label for="password1">
+                                                    <strong>비밀번호</strong>
+                                                </label>
+                                                <div class="TypoBox pass_box">
+                                                    <input
+                                                        autocapitalize="off"
+                                                        name="password1"
+                                                        class="Typo SizeL defalt"
+                                                        id="password1"
+                                                        type="password"
+                                                        maxlength="16"
+                                                        autocomplete="off"
+                                                        placeholder="8~16자리/영문 대소문자, 숫자, 특수문자 조합"
+                                                        data-gtm-form-interact-field-id="3"
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        toggle="#password1"
+                                                        id="masking_password"
+                                                        class="toggle_password field_eye"
+                                                        style="display: none"
+                                                    ></button>
+                                                </div>
+                                                <p
+                                                    class="alert_column focus_txt"
+                                                    id="password1FocusMsg
+                                                "
+                                                    style="display: block"
+                                                >
+                                                    8~16자리 영문 대소문자,
+                                                    숫자, 특수문자 중 3가지 이상
+                                                    조합으로 만들어주세요.
+                                                </p>
+                                                <em
+                                                    class="msgInvalid"
+                                                    id="password1_warning_txt"
+                                                    style="display: none"
+                                                    >8~16자리 영문 대소문자,
+                                                    숫자, 특수문자 중 3가지 이상
+                                                    조합으로 만들어주세요.</em
+                                                >
+                                                <em
+                                                    class="msgInvalid"
+                                                    id="password1_warning_txt_rep"
+                                                    style="display: none"
+                                                    >3자리 이상 반복되는 영문,
+                                                    숫자, 특수문자는 비밀번호로
+                                                    사용할 수 없습니다.</em
+                                                >
+                                                <p
+                                                    class="alert_column good_txt"
+                                                    id="password1_good_txt"
+                                                    style="display: none"
+                                                >
+                                                    사용 가능한 비밀번호예요!
+                                                </p>
+                                            </div>
+                                            <!-- 휴대폰 인증 -->
+                                            <div
+                                                class="item identify_phone"
+                                                name="phone_certi_list
+                                             "
+                                                style="display: block"
+                                            >
+                                                <div class="item_tit">
+                                                    <strong>휴대폰</strong>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    id="sms_sent_code"
+                                                    class="BtnType SizeL btn_sert_pop btn_identify_phone"
+                                                >
+                                                    인증요청
+                                                </button>
+                                                <p
+                                                    class="alert_column good_txt"
+                                                    id="sms_cellnum_desc"
+                                                    style="display: none"
+                                                >
+                                                    인증이 완료되었습니다.
+                                                </p>
+                                            </div>
+                                            <!-- 인증 후 뜨는 입력창(입력 불가) -->
+                                            <!-- 이름 -->
+                                            <div
+                                                class="item identify_phone_complete"
+                                                style=""
+                                            >
+                                                <label for="user_nm" class="on"
+                                                    ><strong
+                                                        >이름</strong
+                                                    ></label
+                                                >
+                                                <div class="TypoBox">
+                                                    <input
+                                                        type="text"
+                                                        class="Typo SizeL defalt inp_user_nm"
+                                                        autocapitalize="off"
+                                                        readonly=""
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- 생년월일 -->
+                                            <div
+                                                class="item identify_phone_complete"
+                                                style=""
+                                            >
+                                                <label
+                                                    for="birth_date"
+                                                    class="on"
+                                                >
+                                                    <strong>생년월일</strong>
+                                                </label>
+                                                <div class="TypoBox">
+                                                    <input
+                                                        type="number"
+                                                        class="Typo SizeL defalt inp_birth_date"
+                                                        autocapitalize="off"
+                                                        readonly=""
+                                                    />
+                                                </div>
+                                                <div
+                                                    class="wrap_collection_basis"
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        class="btn_link btn_birth_date_msg"
+                                                        aria-describedby="tootip_content_phone"
+                                                        style="cursor: pointer"
+                                                        aria-expanded="false"
+                                                    >
+                                                        만 15세 이상인지 확인이
+                                                        필요해요
+                                                    </button>
+                                                    <div
+                                                        class="TipBox social_tooltip Click"
+                                                        id="tootip_content_phone"
+                                                    >
+                                                        <div
+                                                            class="TipCont BottomCenter collectionBasisContents"
+                                                            style="
+                                                                display: none;
+                                                            "
+                                                        >
+                                                            <div class="TipTxt">
+                                                                취직 최저 연령에
+                                                                대한 제한<br />
+                                                                (근로기준법 제
+                                                                64조 1항)
+                                                            </div>
+                                                            <button
+                                                                type="button"
+                                                                class="BtnClose btnClose btn_close_birth_date_msg"
+                                                            >
+                                                                <span
+                                                                    class="blind"
+                                                                    >닫기</span
+                                                                >
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <li class="item identify_phone">
+                                                <label
+                                                    for="sms_email_id"
+                                                    class="on"
+                                                    ><strong
+                                                        >이메일</strong
+                                                    ></label
+                                                >
+                                                <div class="TypoBox defalt">
+                                                    <input
+                                                        type="text"
+                                                        id="sms_email_id"
+                                                        name="tmp_email_id"
+                                                        style="
+                                                            ime-mode: inactive;
+                                                        "
+                                                        class="Typo SizeL defalt"
+                                                        placeholder="email@saramin.co.kr"
+                                                        autocomplete="one-time-code"
+                                                        data-gtm-form-interact-field-id="2"
+                                                    />
+                                                </div>
+
+                                                <!-- 자동리스트 영역 -->
+                                                <ul
+                                                    class="auto_list_area email_list"
+                                                    style="display: none"
+                                                >
+                                                    <li class="auto_list">
+                                                        <a
+                                                            href="javascript:;"
+                                                            class="email_domain"
+                                                            ><strong
+                                                                class="txt_input"
+                                                            ></strong
+                                                            >@naver.com</a
+                                                        >
+                                                    </li>
+                                                    <li class="auto_list">
+                                                        <a
+                                                            href="javascript:;"
+                                                            class="email_domain"
+                                                            ><strong
+                                                                class="txt_input"
+                                                            ></strong
+                                                            >@gmail.com</a
+                                                        >
+                                                    </li>
+                                                    <li class="auto_list">
+                                                        <a
+                                                            href="javascript:;"
+                                                            class="email_domain"
+                                                            ><strong
+                                                                class="txt_input"
+                                                            ></strong
+                                                            >@daum.net</a
+                                                        >
+                                                    </li>
+                                                    <li class="auto_list">
+                                                        <a
+                                                            href="javascript:;"
+                                                            class="email_domain"
+                                                            ><strong
+                                                                class="txt_input"
+                                                            ></strong
+                                                            >@nate.com</a
+                                                        >
+                                                    </li>
+                                                    <li class="auto_list">
+                                                        <a
+                                                            href="javascript:;"
+                                                            class="email_domain"
+                                                            ><strong
+                                                                class="txt_input"
+                                                            ></strong
+                                                            >@outlook.com</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                                <em
+                                                    class="msgInvalid"
+                                                    id="sms_msg_email1"
+                                                    name="msg_email1"
+                                                    style="display: none"
+                                                    >잘못된 이메일 주소입니다.
+                                                    이메일 주소를 정확하게
+                                                    입력해주세요.</em
+                                                >
+                                                <p
+                                                    class="alert_column good_txt"
+                                                    id="msg_email2"
+                                                    style="display: none"
+                                                >
+                                                    인증되었습니다
+                                                </p>
+                                                <div
+                                                    class="wrap_collection_basis"
+                                                >
+                                                    <p
+                                                        class="btn_link"
+                                                        id="email_msg"
+                                                    >
+                                                        취업에 관련된 정보를
+                                                        받을 때 필요해요
+                                                    </p>
+                                                </div>
+                                            </li>
                                         </div>
+                                    </div>
+
+                                    <div class="cont_division">
+                                        <span class="terms_agree"
+                                            ><strong>약관</strong></span
+                                        >
+                                        <div class="agree_box">
+                                            <ul class="agree_article">
+                                                <li>
+                                                    <div class="InpBox">
+                                                        <span class="Chk SizeL">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="check_mail"
+                                                                id="agreeAllPersonal"
+                                                            />
+                                                            <label
+                                                                class="check_all check_off Lbl"
+                                                                for="agreeAllPersonal"
+                                                            >
+                                                                <strong
+                                                                    class="all_agree"
+                                                                    >전체
+                                                                    동의</strong
+                                                                >
+                                                            </label>
+                                                            <input
+                                                                type="hidden"
+                                                                name="hidden_check_all"
+                                                                value="0"
+                                                                id="hidden_check_all"
+                                                            />
+                                                        </span>
+                                                    </div>
+                                                    <p class="agree_txt">
+                                                        위치기반 서비스
+                                                        이용약관(선택), 마케팅
+                                                        정보 수신
+                                                        동의(이메일,SMS/MMS)(선택)
+                                                        동의를 포함합니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul class="agree_article depth2">
+                                                <li>
+                                                    <div class="agree_desc">
+                                                        <div class="InpBox">
+                                                            <span class="Chk">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="agree_rule1"
+                                                                />
+                                                                <label
+                                                                    class="Lbl check_custom check_off"
+                                                                    for="agree_rule1"
+                                                                >
+                                                                    <span
+                                                                        ><strong
+                                                                            >(필수)
+                                                                            개인회원
+                                                                            약관에
+                                                                            동의</strong
+                                                                        ></span
+                                                                    >
+                                                                </label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        href=""
+                                                        class="view_indetail"
+                                                        target="_blank"
+                                                    >
+                                                        <span class="blind"
+                                                            >개인회원 약관
+                                                            상세보기</span
+                                                        >
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div class="agree_desc">
+                                                        <div class="InpBox">
+                                                            <span class="Chk">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="agree_take1"
+                                                                />
+                                                                <label
+                                                                    class="Lbl check_custom check_off"
+                                                                    for="agree_take1"
+                                                                >
+                                                                    <span
+                                                                        ><strong
+                                                                            >(필수)
+                                                                            개인정보
+                                                                            수집
+                                                                            및
+                                                                            이용에
+                                                                            동의</strong
+                                                                        ></span
+                                                                    >
+                                                                </label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        id="popupClausePrivacyPerson"
+                                                        href=""
+                                                        class="view_indetail popup_clause_open"
+                                                        target="_blank"
+                                                    >
+                                                        <span class="blind"
+                                                            >개인정보 수집 및
+                                                            이용에 동의 약관
+                                                            상세보기</span
+                                                        >
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div class="agree_desc">
+                                                        <div class="InpBox">
+                                                            <span class="Chk">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="locationBased"
+                                                                    name="locationBased"
+                                                                    value="y"
+                                                                />
+                                                                <label
+                                                                    class="Lbl check_custom check_off"
+                                                                    for="locationBased"
+                                                                >
+                                                                    <span
+                                                                        >(선택)
+                                                                        위치기반서비스
+                                                                        이용약관에
+                                                                        동의</span
+                                                                    >
+                                                                </label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        id="popupTermsAgreeLb"
+                                                        href=""
+                                                        class="view_indetail popup_clause_open"
+                                                        target="_blank"
+                                                    >
+                                                        <span class="blind"
+                                                            >위치기반서비스
+                                                            이용약관에 동의
+                                                            상세보기</span
+                                                        >
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div class="agree_desc">
+                                                        <div class="InpBox">
+                                                            <span class="Chk">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    class="check_mail"
+                                                                    id="termsAgree"
+                                                                    name="termsAgree"
+                                                                    value="y"
+                                                                />
+                                                                <label
+                                                                    class="Lbl check_custom check_off"
+                                                                    for="termsAgree"
+                                                                >
+                                                                    <span
+                                                                        >(선택)
+                                                                        마케팅
+                                                                        정보
+                                                                        수신
+                                                                        동의 -
+                                                                        이메일</span
+                                                                    >
+                                                                </label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        id="popupEmailReceive"
+                                                        href=""
+                                                        class="view_indetail popup_clause_open"
+                                                        target="_blank"
+                                                    >
+                                                        <span class="blind"
+                                                            >마케팅 정보 수신
+                                                            동의 - 이메일 약관
+                                                            상세보기</span
+                                                        >
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div class="agree_desc">
+                                                        <div class="InpBox">
+                                                            <span class="Chk">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="sms_receive_fl"
+                                                                    name="sms_receive_fl"
+                                                                    value="y"
+                                                                    data-gtm-form-interact-field-id="3"
+                                                                />
+                                                                <label
+                                                                    class="Lbl check_custom check_off"
+                                                                    for="sms_receive_fl"
+                                                                >
+                                                                    <span
+                                                                        >(선택)
+                                                                        마케팅
+                                                                        정보
+                                                                        수신
+                                                                        동의 -
+                                                                        SMS/MMS</span
+                                                                    >
+                                                                </label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        id="popupSmsReceive"
+                                                        href=""
+                                                        class="view_indetail popup_clause_open"
+                                                        target="_blank"
+                                                    >
+                                                        <span class="blind"
+                                                            >마케팅 정보 수신
+                                                            동의 - SMS/MMS 약관
+                                                            상세보기</span
+                                                        >
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn_join">
+                                        <button
+                                            type="button"
+                                            id="btn_submit"
+                                            class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete"
+                                            data-ga_data_layer="ga_lead|member_join|join_pc|step_2"
+                                            disabled="disabled"
+                                        >
+                                            회원가입 완료
+                                        </button>
                                     </div>
                                 </fieldset>
                             </form>
+                            <!-- 중복가입 알림 모달창 -->
+                            <div
+                                class="member_nudge ModalBox"
+                                id="p_member_nudge"
+                                style="display: none"
+                            >
+                                <h3 class="Tit">이미 가입된 정보입니다</h3>
+                                <div class="ModalCont">
+                                    <p class="txt_info">
+                                        가입된 아이디에 회원님의 소중한 이력서와
+                                        지원 내역 등이 있을 수 있어요!
+                                    </p>
+                                    <div class="id_already">
+                                        <span>아이디</span>
+                                        <strong id="p_already_id"
+                                            >example</strong
+                                        >
+                                    </div>
+                                    <div class="BtmArea">
+                                        <a
+                                            href=""
+                                            class="BtnType SizeM search_user"
+                                            >비밀번호 찾기</a
+                                        >
+                                        <a href="" class="BtnType SizeM"
+                                            >로그인</a
+                                        >
+                                    </div>
+                                </div>
+                                <button
+                                    type="button"
+                                    class="btnClose BtnClose close_btn"
+                                >
+                                    <span class="blind">닫기</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </body>
+    <script src="/static/js/join/person.js"></script>
 </html>

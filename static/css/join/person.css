@@ -171,8 +171,7 @@ button, label {
 }
 
 ::placeholder {
-    color: #8491A7; /* 원하는 색상으로 변경 */
-
+    color: #8491A7;
 }
 
 .write_base .item .TypoBox.invalid {
@@ -203,3 +202,380 @@ button, label {
     font-size: 14px;
     line-height: 20px;
 }
+
+.write_base .item {
+    clear: both;
+    position: relative;
+    padding-top: 24px;
+}
+
+.write_base .item label {
+    display: block;
+}
+
+.write_base .item .pass_box .field_eye {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    height: 50px;
+    line-height: 54px;
+}
+
+button {
+    overflow: visible;
+    background-color: transparent;
+}
+
+.write_base .item .pass_box .field_eye.on:before {
+    background: url(/static/images/join/oneye.svg) no-repeat;
+}
+
+.write_base .item .pass_box .field_eye:before {
+    display: inline-block;
+    width: 28px;
+    height: 20px;
+    background: url(/static/images/join/eye.svg) no-repeat;
+    content: "";
+}
+
+.write_base .item .alert_column.focus_txt {
+    color: #5c667b;
+}
+
+.write_base .item .msgInvalid {
+    display: block;
+    clear: both;
+    margin-top: 8px;
+    color: #d64141;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+[class*="BtnType"].SizeL {
+    padding: 10px 15px 12px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.btn_identify_phone {
+    width: 100%;
+}
+
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="BtnType"]:hover {
+    border-color: var(--blue100);
+    background-color: var(--blue100);
+}
+
+.write_base .item .alert_column.good_txt {
+    color: #2d65f2;
+}
+
+.write_base .item input.defalt:hover {
+    border: 1px solid #8491a7;
+    background-color: #eff5ff;
+}
+
+.TypoBox:has(.Typo:read-only)>.Typo {
+    color: var(--gray100);
+}
+
+.TypoBox:has(.Typo:read-only) {
+    border-color: var(--gray40);
+    background: var(--gray20);
+}
+
+.write_base .item .wrap_collection_basis {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.write_base .item .wrap_collection_basis .btn_link {
+    display: inline-block;
+    padding-left: 18px;
+    color: #5c667b;
+    font-size: 13px;
+    line-height: 20px;
+    background: url(/static/images/join/info.svg) 0 50% no-repeat;
+    background-size: 14px 14px;
+}
+
+.TipCont {
+    display: none;
+    position: absolute;
+    padding: 12px 16px 14px;
+    white-space: nowrap;
+    border: 1px solid var(--gray70);
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: var(--white);
+    box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+.TipBox .TipCont.BottomCenter {
+    bottom: calc(100% + 17px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.write_base .item .wrap_collection_basis .social_tooltip .TipCont {
+    left: 8px;
+}
+
+.TipBox.Click .TipCont {
+    padding-right: 44px;
+}
+
+.TipCont .TipTxt {
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.TipBox.Click .BtnClose {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+
+.blind {
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+}
+
+.TipBox.Click .BtnClose:after {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(/static/images/join/close.svg) no-repeat;
+    content: "";
+}
+
+.write_base .item .wrap_collection_basis .social_tooltip {
+    top: -20px;
+}
+
+.TipBox {
+    position: relative;
+}
+
+.cont_division .terms_agree, .cont_division .cont_tit {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #373f57;
+    font-size: 16px;
+}
+
+.cont_division .agree_box {
+    padding: 16px;
+    border: 1px solid #d7dce5;
+    border-radius: 4px;
+}
+
+.cont_division .agree_box .agree_article {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d7dce5;
+    color: #5c667b;
+}
+
+.InpBox {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.InpBox .Chk {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: -1px;
+}
+
+.InpBox .Chk input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+body, input, button, textarea, select, table {
+    line-height: 1.0;
+}
+
+.InpBox .Chk .Lbl {
+    display: block;
+    position: relative;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.InpBox .Chk.SizeL .Lbl {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.InpBox .Chk .Lbl:before {
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    vertical-align: top;
+    background: #fff;
+    content: '';
+}
+
+.InpBox .Chk.SizeL .Lbl:before {
+    width: 22px;
+    height: 22px;
+}
+
+.InpBox .Chk input:checked~.Lbl:before {
+    border-color: var(--blue90);
+    background: var(--blue90);
+
+}
+.InpBox .Chk:hover input:checked+.Lbl:before {
+    background: var(--blue100);
+}
+
+.InpBox .Chk input:focus~.Lbl:before {
+    border-radius: 4px;
+    outline: 2px solid var(--blue100);
+    outline-offset: 2px;
+}
+
+.InpBox .Chk input:checked~.Lbl:after {
+    display: inline-block;
+    border-color: var(--white);
+}
+
+.InpBox .Chk .Lbl:after {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 5px;
+    border-bottom: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    content: '';
+}
+
+.InpBox .Chk.SizeL .Lbl:after {
+    top: 7px;
+    left: 6px;
+    width: 10px;
+    height: 5px;
+}
+
+.cont_division .agree_box .agree_article .agree_txt {
+    margin: 8px 0 0 40px;
+    color: var(--gray100);
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.cont_division .agree_box .agree_article {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d7dce5;
+    color: #5c667b;
+}
+
+.cont_division .agree_box .agree_article.depth2 {
+    padding-bottom: 0;
+    border: none;
+}
+
+.cont_division .agree_box .agree_article.depth2 li {
+    position: relative;
+    margin: 16px 0;
+}
+
+.cont_division .agree_box .agree_article.depth2 span {
+    font-size: 15px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: -1px;
+}
+
+
+
+.InpBox .Chk input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cont_division .agree_box .agree_article.depth2 li a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background: url(/static/images/join/arrow.svg) no-repeat;
+    background-position: center right;
+}
+
+.btn_join {
+    margin-top: 24px;
+    padding-bottom: 100px;
+}
+
+[class*="BtnType"]:disabled, [class*="BtnType"].disabled {
+    cursor: default;
+}
+
+[class*="BtnType"].disabled, [class*="BtnType"].disabled:hover, [class*="BtnType"]:disabled, [class*="BtnType"]:disabled:hover {
+    border-color: var(--gray40) !important;
+    color: var(--gray50) !important;
+    background-color: var(--gray20) !important;
+}
+
+.btn_join button {
+    width: 100%;
+}
+
+.cont_division .agree_box .agree_article.depth2 li:last-child {
+    margin-bottom: 0;
+}
+

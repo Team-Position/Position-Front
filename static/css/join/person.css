@@ -227,14 +227,14 @@ button {
 }
 
 .write_base .item .pass_box .field_eye.on:before {
-    background: url(/static/images/join/oneye.svg) no-repeat;
+    background: url(/static/images/join/eye.svg) no-repeat;
 }
 
 .write_base .item .pass_box .field_eye:before {
     display: inline-block;
     width: 28px;
     height: 20px;
-    background: url(/static/images/join/eye.svg) no-repeat;
+    background: url(/static/images/join/oneye.svg) no-repeat;
     content: "";
 }
 
@@ -724,4 +724,31 @@ input[type="checkbox"], input[type="radio"] {
     color: #2d65f2;
     background: url(/static/images/join/infoOn.svg) 0 50% no-repeat;
     background-size: 14px 14px;
+}
+
+.write_base .item .auto_list_area {
+    display: none;
+    overflow-y: auto;
+    position: absolute;
+    top: 96px;
+    z-index: 1000;
+    margin-top: 8px;
+    padding: 9px 24px;
+    width: 100%;
+    max-height: 199px;
+    border: 1px solid #d7dce5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.write_base .item .auto_list_area .auto_list a {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.write_base .item .auto_list_area .auto_list .txt_input {
+    color: #4876ef;
 }

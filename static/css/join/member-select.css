@@ -56,3 +56,239 @@ ol, ul, li {
     content: "";
 }
 
+.join_page_wrap {
+    overflow: hidden;
+}
+
+.join_page_wrap .join_content {
+    float: center;
+    width: 50%;
+}
+
+
+.join_page_wrap .join_content .join_box {
+    float: right;
+    margin-bottom: 150px;
+    padding-right: 104px;
+    width: 320px;
+}
+
+.login_input_wrap, .pop_login_layer {
+    --common_a_hover_color: #3769ed;
+}
+
+.login_input_wrap .tab_member_type {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.login_input_wrap .tab_member_type li {
+    flex: 1 1 50%;
+    text-align: center;
+}
+
+.login_input_wrap .tab_member_type li .btn_tab {
+    position: relative;
+    color: #8491a7;
+    font-size: 24px;
+    line-height: 34px;
+    width: 100%;
+}
+
+.login_input_wrap .tab_member_type li .btn_tab.active {
+    font-weight: 700;
+    color: #373f73;
+}
+
+button {
+    overflow: visible;
+    background-color: transparent;
+}
+
+button, label {
+    cursor: pointer;
+}
+
+.login_input_wrap .tab_member_type li .btn_tab.active:before {
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    content: "";
+    background-color: #4876ef;
+}
+
+.login_input_wrap .tab_member_type li .btn_tab {
+    position: relative;
+    color: #8491a7;
+    font-size: 24px;
+    line-height: 34px;
+    width: 100%;
+}
+
+
+.login_input_wrap .social_login_tit .tit {
+    text-align: center;
+    font-size: 15px;
+    color: #5c667b;
+    line-height: 24px;
+}
+
+.login_input_wrap .social_login_tit .tit:before {
+    margin-right: 8px;
+}
+
+.login_input_wrap .social_login_tit .tit:before, .login_input_wrap .social_login_tit .tit:after {
+    width: 60px;
+    height: 1px;
+    background-color: #eaedf4;
+    display: inline-block;
+    vertical-align: super;
+    content: '';
+}
+
+.login_input_wrap .social_login_tit .tit:after {
+    margin-left: 8px;
+}
+
+.login_input_wrap .social_login_tit .tit:before, .login_input_wrap .social_login_tit .tit:after {
+    width: 60px;
+    height: 1px;
+    background-color: #eaedf4;
+    display: inline-block;
+    vertical-align: super;
+    content: '';
+}
+
+.login_input_wrap .social_login {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+.icon_kakao{
+    background: url(/static/images/login/kakao_login_medium_wide.png);
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    height: 45px;
+}
+
+/* .social_login{
+    height: 70px;
+} */
+
+.login_input_wrap .signup-forgotten .link_rater {
+    text-decoration: unset;
+    margin-left: auto;
+}
+
+.join_page_wrap .join_content .join_box .social_login_box .social_login_tit {
+    padding-top: 20px;
+}
+
+.join_page_wrap .join_content .join_box .join_form {
+    margin: 40px 0;
+}
+
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+
+.join_page_wrap .join_content .join_box .join_form .login_btn {
+    width: 100%;
+    border-color: var(--blue90);
+    color: var(--blue90);
+    background: var(--white);
+}
+
+[class*="BtnType"].SizeL {
+    padding: 10px 15px 12px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.join_page_wrap .join_content .join_box .login_bottom p {
+    color: #5c667b;
+    font-size: 14px;
+}
+
+.join_page_wrap .join_content .join_box .login_bottom {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.join_page_wrap .join_content .join_box .login_bottom p a {
+    display: inline-block;
+    margin-left: 4px;
+    color: #373f57;
+    text-decoration: underline;
+}
+
+.join_page_wrap .join_banner_wrap {
+    overflow: hidden;
+    position: relative;
+    background-color: #deebff;
+}
+
+.join_page_wrap .join_content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.join_page_wrap{
+    display: flex;
+    align-items: center;
+
+}
+.join_page_wrap .join_banner_wrap {
+    overflow: hidden;
+    position: relative;
+    background-color: #deebff;
+}
+
+
+
+.join_page_wrap .join_banner_wrap .intro {
+    height: calc(100vh - 66px);
+}
+.join_page_wrap .join_banner_wrap .intro .section {
+    height: 900px;
+    background-size: 100%;
+}
+.join_page_wrap .join_banner_wrap .intro .section.info04 {
+    background: url(https://www.saraminimage.co.kr/login/onboarding/info4.png) no-repeat;
+    background-position: right center;
+}
+
+#sri_wrap {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center;     /* 수직 가운데 정렬 */
+    height: 100vh;           /* 화면 높이를 100% 채움 */
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* 콘텐츠들을 세로로 나열 */
+}

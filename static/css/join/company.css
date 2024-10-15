@@ -1,0 +1,69 @@
+.join_header {
+    display: flex;
+    height: 64px;
+    border-bottom: 1px solid #eaedf4;
+    line-height: 64px;
+    justify-content: space-between;
+}
+
+.join_header .area_logo {
+    margin-left: 64px;
+}
+
+.join_header .area_logo .link_saramin_logo {
+    margin-right: 6px;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
+.join_header .area_util {
+    margin-right: 64px;
+}
+
+.join_header .area_util .util {
+    display: flex;
+    height: 64px;
+}
+
+ol, ul, li {
+    list-style-type: none;
+}
+
+
+.join_header .area_util .util_item {
+    display: flex;
+    align-items: center;
+}
+
+.join_header .area_util .util_menu {
+    display: flex;
+    color: var(--gray110);
+    font-size: 13px;
+    line-height: 17px;
+    align-items: center;
+}
+
+.join_header .area_util .menu_saramin:before {
+    background-image: url(/static/images/login/saramin-home.svg);
+}
+
+.join_header .area_util .util_menu:before {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    content: "";
+}
+
+.join_header .area_util .util_item+.util_item:before {
+    margin: 0 16px;
+    width: 1px;
+    height: 12px;
+    background-color: var(--gray40);
+    content: "";
+}
+
+.join_header .area_util .menu_must:before {
+    background-image: url(/static/images/login/saramin-must.svg);
+}

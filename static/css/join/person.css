@@ -561,9 +561,6 @@ input[type="checkbox"], input[type="radio"] {
     padding-bottom: 100px;
 }
 
-[class*="BtnType"]:disabled, [class*="BtnType"].disabled {
-    cursor: default;
-}
 
 
 .btn_join button {
@@ -763,4 +760,9 @@ input[type="checkbox"], input[type="radio"] {
     color: var(--white);
     background-color: var(--blue90);
     cursor: pointer; /* 활성화 상태에서 포인터 커서 */
+}
+
+.TypoBox:has(.Typo:read-only) {
+    border-color: var(--gray40);
+    background: var(--gray20);
 }

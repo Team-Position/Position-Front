@@ -1,6 +1,6 @@
-const modalClose = document.querySelector(".close_btn");
-const modal = document.querySelector("#p_member_nudge");
-const basis = document.querySelector(".collectionBasisContents");
+const modalCloseBtn = document.querySelector(".close_btn");
+const modalWindow = document.querySelector("#p_member_nudge");
+const ageBasisContent = document.querySelector(".collectionBasisContents");
 const basisClose = document.querySelector(".btn_close_birth_date_msg");
 const basisOpen = document.querySelector(".btn_birth_date_msg");
 const idInput = document.querySelector("#id");
@@ -11,53 +11,56 @@ const idMessageSafe = document.querySelector("#idCheckMsg3"); // 사용 가능 �
 const idInputBox = document.querySelector(".TypoBox"); // TypoBox 선택
 
 // 아이디 중복 모달창 닫기
-modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
+modalCloseBtn.addEventListener("click", () => {
+    modalWindow.style.display = "none";
 });
 
 // 만 15세 창 열기/닫기
 basisOpen.addEventListener("click", () => {
-    basis.style.display = "block";
+    ageBasisContent.style.display = "block";
 });
 
 basisClose.addEventListener("click", () => {
-    basis.style.display = "none";
+    ageBasisContent.style.display = "none";
 });
 
 // 아이디 입력창 클릭 시 메시지 표시
 idInput.addEventListener("focus", () => {
     idMessage.style.display = "block"; // 아이디 입력 안내 메시지 표시
     idInputBox.classList.remove("invalid"); // 입력창 포커스 시 invalid 제거
-    hideValidationMessages(); // 다른 경고 메시지 숨기기
+    hideIdValidationMessages(); // 다른 경고 메시지 숨기기
 });
 
 // 입력값이 변경될 때 유효성 검사 수행
-idInput.addEventListener("input", () => validateId());
+idInput.addEventListener("input", () => validateUserId());
 
 // 아이디 유효성 검사 함수
-const validateId = () => {
+const validateUserId = () => {
     const idPattern = /^[a-zA-Z0-9_]{4,20}$/; // 4~20자 영문, 숫자, 밑줄 허용
+    let isValid = idPattern.test(idInput.value); // 유효성 검사 결과
 
-    if (idPattern.test(idInput.value)) {
-        hideValidationMessages(); // 유효한 경우 모든 경고 메시지 숨기기
+    if (isValid) {
+        hideIdValidationMessages(); // 유효한 경우 모든 경고 메시지 숨기기
         idMessage.style.display = "none";
         idMessageSafe.style.display = "block"; // 사용 가능 메시지 표시
         idInputBox.classList.remove("invalid"); // invalid 제거
     } else {
-        hideValidationMessages(); // 다른 메시지 숨기기
+        hideIdValidationMessages(); // 다른 메시지 숨기기
         idMessage.style.display = "none";
         idMessageWarn.style.display = "block"; // 경고 메시지 표시
         idInputBox.classList.add("invalid"); // TypoBox에 invalid 추가
     }
+
+    return isValid; // 유효성 검사 결과 반환
 };
 
 // 포커스 해제 시 유효성 검사 결과 유지
 idInput.addEventListener("blur", () => {
-    validateId(); // 값이 있으면 유효성 검사 수행
+    validateUserId(); // 값이 있으면 유효성 검사 수행
 });
 
 // 모든 유효성 검사 메시지 숨기기 함수
-const hideValidationMessages = () => {
+const hideIdValidationMessages = () => {
     idMessageWarn.style.display = "none";
     idMessageRep.style.display = "none";
     idMessageSafe.style.display = "none";
@@ -93,7 +96,7 @@ passwordInput.addEventListener("input", () => {
     } else {
         passwordEye.style.display = "none"; // 값이 없으면 눈알 숨김
     }
-    validatePassword(); // 유효성 검사 실행
+    validateUserPassword(); // 유효성 검사 실행
 });
 
 // 눈알 아이콘 클릭 시 비밀번호 표시 토글
@@ -104,7 +107,7 @@ passwordEye.addEventListener("click", () => {
 });
 
 // 비밀번호 유효성 검사 함수
-const validatePassword = () => {
+const validateUserPassword = () => {
     const password = passwordInput.value;
     const hasUpperCase = /[A-Z]/.test(password); // 대문자 포함 여부
     const hasLowerCase = /[a-z]/.test(password); // 소문자 포함 여부
@@ -120,6 +123,8 @@ const validatePassword = () => {
         hasSpecialChar,
     ].filter(Boolean).length;
 
+    let isValid = isValidLength && validCount >= 3 && !hasRepeatedChars; // 유효성 검사 결과
+
     if (hasRepeatedChars) {
         // 연속된 동일 문자가 있을 때
         passwordRepWarn.style.display = "block"; // 반복 문자 경고 표시
@@ -127,13 +132,12 @@ const validatePassword = () => {
         passwordSafe.style.display = "none"; // 유효 메시지 숨김
         passwordFocus[1].style.display = "none";
         passwordInputBox.classList.add("invalid"); // invalid 클래스 추가
-    } else if (isValidLength && validCount >= 3) {
+    } else if (isValid) {
         // 유효한 비밀번호일 때
         passwordRepWarn.style.display = "none"; // 반복 문자 경고 숨김
         passwordWarn.style.display = "none"; // 기본 경고 숨김
         passwordSafe.style.display = "block"; // 유효 메시지 표시
         passwordFocus[1].style.display = "none";
-
         passwordInputBox.classList.remove("invalid"); // invalid 클래스 제거
     } else {
         // 유효하지 않은 비밀번호일 때
@@ -141,13 +145,14 @@ const validatePassword = () => {
         passwordWarn.style.display = "block"; // 기본 경고 표시
         passwordSafe.style.display = "none"; // 유효 메시지 숨김
         passwordFocus[1].style.display = "none";
-
         passwordInputBox.classList.add("invalid"); // invalid 클래스 추가
     }
+
+    return isValid; // 유효성 검사 결과 반환
 };
 
 // 경고 메시지 숨기기/표시 함수
-const hidePasswordMessages = (show) => {
+const togglePasswordMessages = (show) => {
     passwordWarn.style.display = show ? "block" : "none";
     passwordRepWarn.style.display = show ? "block" : "none";
     passwordSafe.style.display = show ? "none" : "none";
@@ -160,28 +165,52 @@ const hidePasswordMessages = (show) => {
 };
 
 // =========================================================================================
+// 요소 선택
 const descBtn = document.querySelector("#sms_sent_code"); // 인증 요청 버튼
 const phoneComplete = document.querySelector("#name"); // 이름 섹션
-const phoneComplete2 = document.querySelector("#birth"); // 생년월일 섹션
+const birthComplete = document.querySelector("#birth"); // 생년월일 섹션
+const phoneArea = document.querySelector("#sms_cellnum_area"); // 휴대폰 번호 영역
+const phoneInput = document.querySelector("#sms_cellnum"); // 휴대폰 번호 입력 필드
 const completeMessage = document.querySelector("#sms_cellnum_desc"); // 인증 완료 메시지
 
-// 인증 요청 버튼 클릭 이벤트
-descBtn.addEventListener("click", () => {
-    simulateAuthentication(); // 테스트용 함수 호출
-});
-
-// 인증 완료 처리 함수
-const completePhoneVerification = () => {
-    phoneComplete.style.display = "block"; // 이름 섹션 표시
-    phoneComplete2.style.display = "block"; // 생년월일 섹션 표시
-    completeMessage.style.height = "block"; // 인증 완료 메시지 표시
+// 테스트용 가짜 인증 데이터
+const mockUserData = {
+    phone: "01012345678",
+    name: "안수진",
+    birth: "20020730",
 };
 
-// 인증 프로세스 시뮬레이션 (테스트용)
-const simulateAuthentication = () => {
+// 인증 요청 버튼 클릭 시 실행
+descBtn.addEventListener("click", () => {
+    sendAuthenticationRequest(); // 인증 요청 함수 호출
+});
+
+// 인증 요청 함수 (테스트용)
+const sendAuthenticationRequest = () => {
+    // 서버 응답 시뮬레이션 (2초 후 응답)
     setTimeout(() => {
-        completePhoneVerification(); // 인증 성공 처리
-    }, 2000); // 2초 후 인증 완료 처리
+        completeAuthentication(mockUserData); // 인증 완료 처리
+    }, 2000);
+};
+
+// 인증 완료 처리 함수
+const completeAuthentication = (data) => {
+    // 휴대폰 번호, 이름, 생년월일 표시
+    phoneInput.value = data.phone; // 휴대폰 번호 입력
+    phoneArea.style.display = "block"; // 휴대폰 번호 영역 표시
+
+    document.querySelector("#name .TypoBox input").value = data.name; // 이름 표시
+    phoneComplete.style.display = "block"; // 이름 영역 표시
+
+    document.querySelector("#birth .TypoBox input").value = data.birth; // 생년월일 표시
+    birthComplete.style.display = "block"; // 생년월일 영역 표시
+
+    completeMessage.style.display = "block"; // 인증 완료 메시지 표시
+
+    // 인증 요청 버튼 숨기기
+    descBtn.style.display = "none";
+    validationStatus.isPhoneVerified = true; // 상태 업데이트
+    refreshSubmitButtonState(); // 상태 업데이트 후 호출
 };
 
 //  =============================================================================================
@@ -219,11 +248,9 @@ emailInput.addEventListener("input", () => {
     if (emailPattern.test(emailValue)) {
         wrongEmail.style.display = "none"; // 경고 메시지 숨기기
         emailAutoList.style.display = "none"; // 자동완성 숨기기
-        submitBtn.disabled = false; // 유효할 경우 버튼 활성화
     } else {
         wrongEmail.style.display = "block"; // 경고 메시지 표시
         emailAutoList.style.display = emailValue ? "block" : "none"; // 값이 있을 때만 자동완성 표시
-        submitBtn.disabled = true; // 유효하지 않으면 버튼 비활성화
     }
 });
 
@@ -241,6 +268,13 @@ emailDomains.forEach((domainElement) => {
     });
 });
 
+emailInput.addEventListener("input", () => {
+    const emailValue = emailInput.value.trim(); // 공백 제거
+    const isValidEmail = emailPattern.test(emailValue); // 유효성 검사
+    validationStatus.isEmailValid = isValidEmail; // 상태 업데이트
+    refreshSubmitButtonState(); // 상태 업데이트 후 호출
+});
+
 // ==================================체크박스===================================
 const agreeAllCheckbox = document.querySelector("#agreeAllPersonal");
 const mandatoryCheckboxes = document.querySelectorAll(
@@ -249,14 +283,14 @@ const mandatoryCheckboxes = document.querySelectorAll(
 const optionalCheckboxes = document.querySelectorAll(
     ".agree_article.depth2 input[type='checkbox']:not([id^='agree_'])"
 ); // 선택 항목
-const submitBtn2 = document.querySelector("#btn_submit"); // 회원가입 버튼
+const submitBtn2 = document.querySelector(".btn_input_complete"); // 회원가입 버튼
 
 // 전체 동의 클릭 시 모든 항목 체크
 agreeAllCheckbox.addEventListener("change", (e) => {
     const isChecked = e.target.checked;
     mandatoryCheckboxes.forEach((checkbox) => (checkbox.checked = isChecked));
     optionalCheckboxes.forEach((checkbox) => (checkbox.checked = isChecked));
-    toggleSubmitButton(); // 회원가입 버튼 상태 업데이트
+    refreshSubmitButtonState(); // 회원가입 버튼 상태 업데이트
 });
 // 전체 동의 상태 업데이트 함수
 const updateAllAgreeStatus = () => {
@@ -273,7 +307,7 @@ const updateAllAgreeStatus = () => {
 mandatoryCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
         updateAllAgreeStatus();
-        toggleSubmitButton();
+        refreshSubmitButtonState();
     });
 });
 
@@ -282,16 +316,111 @@ optionalCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", updateAllAgreeStatus);
 });
 
-const toggleSubmitButton = () => {
-    const isIdValid = validateId(); // 아이디 유효성 검사
-    const isPasswordValid = validatePassword(); // 비밀번호 유효성 검사
-    const isEmailValid = emailPattern.test(emailInput.value); // 이메일 유효성 검사
-    const isPhoneVerified = phoneComplete.style.display === "block"; // 휴대폰 인증 여부
-    const allMandatoryChecked = [...mandatoryCheckboxes].every(
-        (checkbox) => checkbox.checked
-    ); // 필수 항목 체크 여부
+mandatoryCheckboxes.forEach((checkbox) =>
+    checkbox.addEventListener("change", () => {
+        const allChecked = [...mandatoryCheckboxes].every((box) => box.checked);
+        validationStatus.allMandatoryChecked = allChecked; // 상태 업데이트
+        refreshSubmitButtonState(); // 상태 업데이트 후 호출
+    })
+);
 
-    // 모든 조건이 충족되면 is-disabled 클래스 제거
+agreeAllCheckbox.addEventListener("change", (e) => {
+    const isChecked = e.target.checked;
+    mandatoryCheckboxes.forEach((checkbox) => (checkbox.checked = isChecked));
+    validationStatus.allMandatoryChecked = isChecked; // 상태 업데이트
+    refreshSubmitButtonState(); // 상태 업데이트 후 호출
+});
+
+// 유효성 검사 결과를 저장할 객체
+const validationStatus = {
+    isIdValid: false,
+    isPasswordValid: false,
+    isEmailValid: false,
+    isPhoneVerified: false,
+    allMandatoryChecked: false,
+};
+
+// 아이디 입력 시 유효성 검사 수행
+idInput.addEventListener("input", () => {
+    validationStatus.isIdValid = validateUserId();
+    refreshSubmitButtonState(); // 버튼 활성화 상태 업데이트
+});
+
+// 비밀번호 입력 시 유효성 검사 수행
+passwordInput.addEventListener("input", () => {
+    validationStatus.isPasswordValid = validateUserPassword();
+    refreshSubmitButtonState();
+});
+
+// 이메일 입력 시 유효성 검사 수행
+emailInput.addEventListener("input", () => {
+    validationStatus.isEmailValid = emailPattern.test(emailInput.value);
+    refreshSubmitButtonState();
+});
+
+// 휴대폰 인증 완료 시 처리
+descBtn.addEventListener("click", () => {
+    requestAuthentication(); // 인증 요청 함수 호출
+});
+
+const requestAuthentication = () => {
+    setTimeout(() => {
+        completeAuthentication(mockUserData); // 인증 완료 처리
+    }, 2000);
+};
+
+const processAuthenticationCompletion = (data) => {
+    phoneInput.value = data.phone;
+    phoneArea.style.display = "block";
+    document.querySelector("#name .TypoBox input").value = data.name;
+    phoneComplete.style.display = "block";
+    document.querySelector("#birth .TypoBox input").value = data.birth;
+    birthComplete.style.display = "block";
+    completeMessage.style.display = "block";
+    descBtn.style.display = "none";
+    validationStatus.isPhoneVerified = true; // 인증 완료 상태 업데이트
+    refreshSubmitButtonState(); // 버튼 상태 업데이트
+};
+
+// 필수 체크박스 변경 시 처리
+mandatoryCheckboxes.forEach((checkbox) =>
+    checkbox.addEventListener("change", () => {
+        validationStatus.allMandatoryChecked = [...mandatoryCheckboxes].every(
+            (box) => box.checked
+        );
+        refreshSubmitButtonState();
+    })
+);
+
+// 전체 동의 상태 업데이트 함수
+const refreshAllAgreementStatus = () => {
+    const allMandatoryChecked = [...mandatoryCheckboxes].every(
+        (box) => box.checked
+    );
+    const allOptionalChecked = [...optionalCheckboxes].every(
+        (box) => box.checked
+    );
+    agreeAllCheckbox.checked = allMandatoryChecked && allOptionalChecked;
+};
+
+// 버튼 활성화 상태를 업데이트하는 함수
+const refreshSubmitButtonState = () => {
+    const {
+        isIdValid,
+        isPasswordValid,
+        isEmailValid,
+        isPhoneVerified,
+        allMandatoryChecked,
+    } = validationStatus;
+
+    console.log("----- refreshSubmitButtonState 실행됨 -----");
+    console.log(`isIdValid: ${isIdValid}`);
+    console.log(`isPasswordValid: ${isPasswordValid}`);
+    console.log(`isEmailValid: ${isEmailValid}`);
+    console.log(`isPhoneVerified: ${isPhoneVerified}`);
+    console.log(`allMandatoryChecked: ${allMandatoryChecked}`);
+    console.log("------------------------------------");
+
     if (
         isIdValid &&
         isPasswordValid &&
@@ -299,21 +428,50 @@ const toggleSubmitButton = () => {
         isPhoneVerified &&
         allMandatoryChecked
     ) {
-        if (submitBtn.classList.contains("is-disabled")) {
-            submitBtn.classList.remove("is-disabled");
-        }
+        submitBtn.classList.remove("is-disabled");
     } else {
-        if (!submitBtn.classList.contains("is-disabled")) {
-            submitBtn.classList.add("is-disabled");
-        }
+        submitBtn.classList.add("is-disabled");
     }
 };
 
 // 필드와 체크박스에 이벤트 연결
-[idInput, passwordInput, emailInput].forEach((input) =>
-    input.addEventListener("input", toggleSubmitButton)
+[idInput, passwordInput, emailInput].forEach(
+    (input) => input.addEventListener("input", refreshSubmitButtonState) // 함수명 일관성 유지
 );
 
-mandatoryCheckboxes.forEach((checkbox) =>
-    checkbox.addEventListener("change", toggleSubmitButton)
+mandatoryCheckboxes.forEach(
+    (checkbox) => checkbox.addEventListener("change", refreshSubmitButtonState) // 수정 완료
 );
+// =====================회원 정보 중복 모달=====================
+
+const alreadyIdSpan = document.querySelector("#p_already_id");
+
+// 중복 확인 테스트용 모의 데이터
+const mockServerResponse = {
+    isDuplicate: true, // 중복 여부 플래그
+    duplicateId: "example123", // 중복된 아이디
+};
+
+// 서버 요청 시뮬레이션 (회원가입 버튼 클릭)
+submitBtn.addEventListener("click", () => {
+    checkForDuplicateInfo(); // 중복 검사 함수 호출
+});
+
+// 중복 검사 함수 (모의 서버 응답 사용)
+const checkForDuplicateInfo = () => {
+    setTimeout(() => {
+        // 서버 응답 모의 처리
+        if (mockServerResponse.isDuplicate) {
+            showDuplicateModal(mockServerResponse.duplicateId);
+        } else {
+            alert("회원가입이 완료되었습니다.");
+            // 이후 실제 회원가입 처리 로직 추가
+        }
+    }, 1000); // 1초 지연 후 응답 (서버 응답 시뮬레이션)
+};
+
+// 모달에 중복된 아이디 표시 후 열기
+const showDuplicateModal = (duplicateId) => {
+    alreadyIdSpan.textContent = duplicateId; // 중복된 아이디 표시
+    modalWindow.style.display = "block"; // 모달 열기
+};

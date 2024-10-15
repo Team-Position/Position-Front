@@ -1203,13 +1203,13 @@ video {
 /* 두번째 열 */
 .Post-headerCell:nth-child(3),
 .PostTable_cell:nth-child(3) {
-    width: 10%;
+    width: 12%;
 }
 
 /* 세번째 열 */
 .Post-headerCell:nth-child(4),
 .PostTable_cell:nth-child(4) {
-    width: 15%;
+    width: 17%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1218,7 +1218,7 @@ video {
 /* 네번째 열 */
 .Post-headerCell:nth-child(5),
 .PostTable_cell:nth-child(5) {
-    width: 15%;
+    width: 24%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1227,25 +1227,28 @@ video {
 /* 다섯번째 열 */
 .Post-headerCell:nth-child(6),
 .PostTable_cell:nth-child(6) {
-    width: 11%;
+    width: 8%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* 여섯번째 열 */
 .Post-headerCell:nth-child(7),
 .PostTable_cell:nth-child(7) {
-    width: 8%;
+    width: 9%;
 }
 
 /* 일곱 열 */
 .Post-headerCell:nth-child(8),
 .PostTable_cell:nth-child(8) {
-    width: 9%;
-}
-/* 마지막 열 */
-.Post-headerCell:nth-child(9),
-.PostTable_cell:nth-child(9) {
     width: 8%;
 }
+/* 마지막 열 */
+/* .Post-headerCell:nth-child(9),
+.PostTable_cell:nth-child(9) {
+    width: 8%;
+} */
 
 /* 수정 버튼 */
 .editBtn {

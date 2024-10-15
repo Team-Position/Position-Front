@@ -565,11 +565,6 @@ input[type="checkbox"], input[type="radio"] {
     cursor: default;
 }
 
-[class*="BtnType"].disabled, [class*="BtnType"].disabled:hover, [class*="BtnType"]:disabled, [class*="BtnType"]:disabled:hover {
-    border-color: var(--gray40) !important;
-    color: var(--gray50) !important;
-    background-color: var(--gray20) !important;
-}
 
 .btn_join button {
     width: 100%;
@@ -751,4 +746,21 @@ input[type="checkbox"], input[type="radio"] {
 
 .write_base .item .auto_list_area .auto_list .txt_input {
     color: #4876ef;
+}
+
+/* 비활성화 상태 */
+.BtnType.is-disabled {
+    border-color: var(--gray40) !important;
+    color: var(--gray50) !important;
+    background-color: var(--gray20) !important;
+    cursor: not-allowed; /* 금지 커서 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+/* 활성화 상태 */
+.BtnType {
+    border: 1px solid var(--blue90);
+    color: var(--white);
+    background-color: var(--blue90);
+    cursor: pointer; /* 활성화 상태에서 포인터 커서 */
 }

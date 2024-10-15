@@ -171,7 +171,7 @@ descBtn.addEventListener("click", () => {
 });
 
 // 인증 완료 처리 함수
-const handleAuthenticationSuccess = () => {
+const completePhoneVerification = () => {
     phoneComplete.style.display = "block"; // 이름 섹션 표시
     phoneComplete2.style.display = "block"; // 생년월일 섹션 표시
     completeMessage.style.height = "block"; // 인증 완료 메시지 표시
@@ -180,7 +180,7 @@ const handleAuthenticationSuccess = () => {
 // 인증 프로세스 시뮬레이션 (테스트용)
 const simulateAuthentication = () => {
     setTimeout(() => {
-        handleAuthenticationSuccess(); // 인증 성공 처리
+        completePhoneVerification(); // 인증 성공 처리
     }, 2000); // 2초 후 인증 완료 처리
 };
 
@@ -240,3 +240,80 @@ emailDomains.forEach((domainElement) => {
         emailAutoList.style.display = "none"; // 자동완성 숨기기
     });
 });
+
+// ==================================체크박스===================================
+const agreeAllCheckbox = document.querySelector("#agreeAllPersonal");
+const mandatoryCheckboxes = document.querySelectorAll(
+    ".agree_article.depth2 input[type='checkbox'][id^='agree_']"
+); // 필수 항목
+const optionalCheckboxes = document.querySelectorAll(
+    ".agree_article.depth2 input[type='checkbox']:not([id^='agree_'])"
+); // 선택 항목
+const submitBtn2 = document.querySelector("#btn_submit"); // 회원가입 버튼
+
+// 전체 동의 클릭 시 모든 항목 체크
+agreeAllCheckbox.addEventListener("change", (e) => {
+    const isChecked = e.target.checked;
+    mandatoryCheckboxes.forEach((checkbox) => (checkbox.checked = isChecked));
+    optionalCheckboxes.forEach((checkbox) => (checkbox.checked = isChecked));
+    toggleSubmitButton(); // 회원가입 버튼 상태 업데이트
+});
+// 전체 동의 상태 업데이트 함수
+const updateAllAgreeStatus = () => {
+    const allMandatoryChecked = [...mandatoryCheckboxes].every(
+        (box) => box.checked
+    );
+    const allOptionalChecked = [...optionalCheckboxes].every(
+        (box) => box.checked
+    );
+    agreeAllCheckbox.checked = allMandatoryChecked && allOptionalChecked;
+};
+
+// 필수 항목 변경 시 전체 동의 상태와 버튼 활성화 업데이트
+mandatoryCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+        updateAllAgreeStatus();
+        toggleSubmitButton();
+    });
+});
+
+// 선택 항목 변경 시 전체 동의 상태 업데이트
+optionalCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateAllAgreeStatus);
+});
+
+const toggleSubmitButton = () => {
+    const isIdValid = validateId(); // 아이디 유효성 검사
+    const isPasswordValid = validatePassword(); // 비밀번호 유효성 검사
+    const isEmailValid = emailPattern.test(emailInput.value); // 이메일 유효성 검사
+    const isPhoneVerified = phoneComplete.style.display === "block"; // 휴대폰 인증 여부
+    const allMandatoryChecked = [...mandatoryCheckboxes].every(
+        (checkbox) => checkbox.checked
+    ); // 필수 항목 체크 여부
+
+    // 모든 조건이 충족되면 is-disabled 클래스 제거
+    if (
+        isIdValid &&
+        isPasswordValid &&
+        isEmailValid &&
+        isPhoneVerified &&
+        allMandatoryChecked
+    ) {
+        if (submitBtn.classList.contains("is-disabled")) {
+            submitBtn.classList.remove("is-disabled");
+        }
+    } else {
+        if (!submitBtn.classList.contains("is-disabled")) {
+            submitBtn.classList.add("is-disabled");
+        }
+    }
+};
+
+// 필드와 체크박스에 이벤트 연결
+[idInput, passwordInput, emailInput].forEach((input) =>
+    input.addEventListener("input", toggleSubmitButton)
+);
+
+mandatoryCheckboxes.forEach((checkbox) =>
+    checkbox.addEventListener("change", toggleSubmitButton)
+);

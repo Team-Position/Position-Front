@@ -164,7 +164,7 @@ body {
     position: relative;
 }
 
-/* 바디 */
+/* 바디 제목*/
 #sri_wrap {
     grid-area: main;
     display: table-row;
@@ -186,105 +186,162 @@ body {
     font-weight: bold;
     line-height: 56px;
 }
-.password_confirm_wrap {
+
+/* 바디*/
+.person_update {
     margin-top: 56px;
 }
-.password_confirm_desc {
+.person_update_sidearea {
+    float: left;
+    width: 176px;
+}
+.person_update_sidearea .photo_wrap {
+    position: relative;
+    width: 96px;
+    height: 96px;
+}
+.photo_wrap .photo {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background: var(--gray40) url('/static/images/my-page/profile_noimg.png') no-repeat center center;
+}
+.photo_wrap .photo_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(150, 160, 181, 0.2);
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.photo_wrap .btn_photo {
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--gray40);
+    border-radius: 100%;
+    background: var(--white) url('/static/images/my-page/ico_camera.png') no-repeat center center;
+}
+.photo_wrap:hover .btn_photo {
+    background-color: var(--gray20);
+}
+.photo_edit_btn {
+    display: none;
+    position: absolute;
+    top: 104px;
+    left: 72px;
+    z-index: 2;
+    padding: 9px 1px;
+    width: 114px;
+    border: 1px solid #edeef0;
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: 2px 6px 16px 0 rgba(17, 42, 128, 0.08);
+}
+.photo_edit_btn>button {
+    padding: 8px 0;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
     color: var(--gray90);
     font-size: 14px;
     line-height: 1.43;
     text-align: center;
 }
 
-.password_confirm_field {
-    margin: 40px auto 64px;
-    width: 500px;
+/* 사용자 정보 */
+.person_update.integrated_type .person_update_main {
+    width: 772px;
+}
+.person_update_main {
+    padding-left: 176px;
+    width: 616px;
+}
+
+.field_wrap {
+    margin-top: 45px;
+}
+
+.field_legend {
+    margin-bottom: 12px;
+    height: 24px;
+    color: var(--gray110);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.person_update.integrated_type .field_table {
+    border: 1px solid var(--gray30);
+    padding: 24px;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.field_table {
+    width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
 }
 
-.password_confirm_field.social_join .social_check .InpBox {
-    padding: 22px 0;
-    width: 100%;
-    display: inline-block;
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: inherit;
+    line-height: 100%;
+}
+
+.field_table th {
+    width: 135px;
+    color: var(--gray70);
+    font-size: 14px;
+    line-height: 40px;
+    vertical-align: top;
+}
+
+.field_table th, .field_table td {
     border-bottom: 1px solid var(--gray30);
+    text-align: left;
+    padding: 12px 24px;
 }
 
-.InpBox {
+.field_body {
     display: inline-block;
+    padding: 4px 0;
+    min-height: 32px;
+    box-sizing: border-box;
+    color: var(--gray110);
+    font-size: 15px;
+    line-height: 32px;
     vertical-align: top;
 }
 
-.InpBox .Rdo {
-    position: relative;
+.field .ico_social {
+    vertical-align: middle;
 }
 
-.InpBox .Rdo input {
-    position: absolute;
-    top: 0;
-    width: 1px;
-    height: 1px;
-    outline: none;
-    opacity: 0;
-    pointer-events: none;
+.field_body .empty {
+    color: var(--gray70);
+    font-size: 15px;
+    line-height: 1.43;
 }
 
-.InpBox .Rdo .Lbl {
-    display: block;
-    color: var(--gray100);
-    font-size: 14px;
-    line-height: 20px;
+.field_body.inactive {
+    display: none;
 }
 
-.InpBox .Rdo .Lbl:before {
-    display: inline-block;
-    margin-right: 8px;
-    width: 18px;
-    height: 18px;
-    border: 1px solid var(--gray70);
-    border-radius: 50%;
-    vertical-align: top;
-    background: var(--white);
-    content: '';
+.field .inactive {
+    display: none;
 }
-
-.InpBox .Rdo .Lbl:after {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    content: '';
-}
-
-.password_confirm_field.social_join .social_check ul {
-    padding: 16px 0;
-}
-
-.password_confirm_field.social_join .social_check ul li:first-child {
-    margin-bottom: 8px;
-}
-
-.password_confirm_field.social_join .social_check ul li {
-    display: flex;
-    flex-direction: row;
-}
-
-.password_confirm_field.social_join .social_check .wrap_lab {
-    height: 50px;
-    line-height: 50px;
-    font-size: 14px;
-    color: var(--gray90);
-    width: 25%;
-}
-
-.password_confirm_field.social_join .social_check .wrap_input .box_input {
-    display: flex;
-    align-items: center;
-    width: 337px;
-}
-
 .TypoBox {
     display: inline-block;
     position: relative;
@@ -293,14 +350,6 @@ body {
     box-sizing: border-box;
     background-color: var(--white);
 }
-
-.TypoBox .Typo.SizeL {
-    padding: 12px;
-    height: 46px;
-    font-size: 16px;
-    line-height: 24px;
-}
-
 .TypoBox .Typo {
     padding: 8px 12px;
     width: 100%;
@@ -313,18 +362,39 @@ body {
     line-height: 20px;
     background: none;
 }
-
-.password_confirm_field.social_join .social_check .wrap_input .box_input .BtnType {
-    flex-shrink: 0;
-    margin-right: 4px;
-    width: 80px;
+#change_name{
+    width: 186px;
 }
 
-[class*="BtnType"].SizeM {
-    padding: 6px 11px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 24px;
+.TypoBox:hover {
+    background: var(--gray20);
+}
+.field_btn {
+    float: right;
+    padding: 4px 0;
+}
+
+.person_update.integrated_type .field_table .field_btn button {
+    width: 56px;
+}
+.field_btn button:hover {
+    border-color: var(--gray80);
+    background: var(--gray20);
+}
+[class*="BtnType"]:hover {
+    border-color: var(--blue100);
+    background-color: var(--blue100);
+}
+[class*="BtnType"].SizeS {
+    padding: 4px 7px;
+    height: 32px;
+    font-size: 13px;
+    line-height: 20px;
+}
+field_btn button {
+    color: var(--gray100);
+    border-color: var(--gray80);
+    background: var(--white);
 }
 
 [class*="BtnType"] {
@@ -341,21 +411,9 @@ body {
     align-items: center;
 }
 
-.MsgTxt.Invalid {
-    color: var(--coral110);
+.field_btn button:disabled {
+    display: none;
 }
-.TypoBox:has(.Typo.Invalid) {
-    border-color: var(--coral110);
-}
-
-.MsgTxt {
-    display: inline-block;
-    margin-top: 8px;
-    color: var(--gray80);
-    font-size: 13px;
-    line-height: 20px;
-}
-
 [class*="BtnType"]:disabled, [class*="BtnType"].disabled {
     cursor: default;
 }
@@ -364,33 +422,168 @@ body {
     color: var(--gray50) !important;
     background-color: var(--gray20) !important;
 }
-
-
-.password_confirm_field.social_join .social_check .wrap_input .box_input .expiredin {
-    position: absolute;
-    right: 100px;
-    display: inline-block;
-    font-size: 13px;
-    color: var(--coral110);
-    line-height: 48px;
-    height: 48px;
-}
-
-.password_confirm_field.social_join .social_check.line_bottom {
-    border-bottom: 1px solid var(--gray30);
-}
-.password_confirm_field.social_join .social_check.line {
-    border-top: 1px solid var(--gray30);
-}
-.InpBox .Rdo input:checked~.Lbl:before {
+.field_btn .btn_confirm {
+    color: var(--blue90);
     border-color: var(--blue90);
-    background: var(--blue90);
 }
-
-.InpBox .Rdo input:checked~.Lbl:after {
+.field_btn button {
+    color: var(--gray100);
+    border-color: var(--gray80);
     background: var(--white);
 }
-
-.TypoBox:hover {
-    background: var(--gray20);
+.field_table tr:last-child th, .field_table tr:last-child td {
+    border-bottom: none;
 }
+.field_body .input_group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.field_body .input_group .TypoBox:first-child {
+    width: 64px;
+}
+.field_body .input_group .TypoBox {
+    width: 52px;
+}
+
+.TypoBox label {
+    cursor: unset;
+}
+#select_year{
+    width: 64px;
+}
+#select_month{
+    width:52px;
+}
+.photo_edit_btn>button:hover, .photo_edit_btn>button:focus {
+    background-color: var(--gray20);
+}
+
+#view_cell_empty,
+#view_cell_overseas {
+    display: none;
+}
+
+
+
+.field .badge {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 10px;
+    border-radius: 4px;
+    color: var(--gray70);
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    background-color: var(--gray20);
+}
+.field .badge_verified {
+    color: var(--blue80);
+    background-color: var(--blue20);
+}
+
+.field .type_button {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    line-height: 32px;
+}
+
+.field .type_button input {
+    padding: 0 60px 2px 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.field .type_button .btn_verify, .field .type_button .btn_confirm {
+    position: absolute;
+    top: 4px;
+    right: 3px;
+    z-index: 1;
+}
+
+.field .type_button + .type_button {
+    margin-top: 4px;
+}
+
+.field_sub {
+    margin-top: 4px;
+    padding: 4px 0;
+    min-height: 32px;
+    box-sizing: border-box;
+    line-height: 32px;
+    vertical-align: top;
+}
+
+.field_verify .btn_confirm {
+    width: 75px;
+}
+
+.field .remain_time {
+    display: inline-block;
+    margin-left: 12px;
+    color: var(--coral80);
+    font-size: 13px;
+    line-height: 1.54;
+    vertical-align: middle;
+}
+
+
+.btn_identify_verify {
+    border-color: var(--blue100);
+    background-color: var(--blue100);
+}
+.btn_identify_verify{
+    padding: 4px 7px;
+    height: 32px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.btn_identify_verify {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+
+.person_update_main .privacy_guide {
+    margin-top: 10px;
+}
+
+.person_update_main .ipin_guide {
+    position: relative;
+    margin-top: 88px;
+    padding-left: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    color: var(--gray90);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.person_update_main .ipin_guide .icon_exclam {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -9px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.person_update_main .ipin_guide .ipin_link, .person_update_main .ipin_guide .pay_link {
+    color: var(--blue80);
+}
+

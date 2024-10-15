@@ -1,7 +1,10 @@
 const editButton = document.querySelector(".photo_edit_btn");
 const photoButton = document.querySelector(".btn_photo");
+const txtPhotoOriginal = document.querySelector(".txt_photo_original");
 
 photoButton.addEventListener("click", () => {
+    txtPhotoOriginal.style.display = "block";
+
     if (editButton.style.display === "block") {
         editButton.style.display = "none"; // 이미 열려있으면 닫기
     } else {
@@ -219,7 +222,6 @@ window.onload = () => {
         .addEventListener("click", resetTimer);
 };
 
-// 이미지 없로드
 let uploadedImageSrc = ""; // 이미지 소스를 저장할 변수
 
 // 미리보기 이미지를 표시하는 함수
@@ -231,13 +233,19 @@ function previewImage(event) {
             const originalWrap = document.getElementById("originalWrap"); // ID로 요소 선택
             originalWrap.innerHTML = `<img src="${e.target.result}" 
                 style="max-width: 100%; max-height: 100%;" />`; // 이미지 태그 추가
+
+            // 클래스명으로 선택
+            if (txtPhotoOriginal) {
+                txtPhotoOriginal.style.display = "none"; // display: none으로 숨김
+            }
+
             uploadedImageSrc = e.target.result; // 이미지 소스를 저장
         };
         reader.readAsDataURL(file); // 이미지 파일을 읽어 데이터 URL로 변환
     }
 }
 
-// 사진을 등록하는 함수(테스트)
+// 사진을 등록하는 함수
 function savePhoto() {
     const profilePhotoSpan = document.getElementById("myhome_profile_photo"); // ID로 요소 선택
     profilePhotoSpan.innerHTML = `<img src="${uploadedImageSrc}" 

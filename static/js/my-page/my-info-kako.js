@@ -170,3 +170,16 @@ inpBoxes.forEach((inpBox) => {
         }
     });
 });
+
+// 사이드바 선택
+document.querySelectorAll(".only").forEach((button) => {
+    button.addEventListener("click", function () {
+        // 모든 버튼에서 'selected' 클래스 제거
+        document
+            .querySelectorAll(".only")
+            .forEach((btn) => btn.classList.remove("selected"));
+
+        // 현재 클릭된 버튼에 'selected' 클래스 추가
+        this.classList.add("selected");
+    });
+});

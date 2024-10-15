@@ -433,6 +433,7 @@
                                                                 class="view_mail"
                                                                 >san********@naver.com</b
                                                             >
+                                                            <!-- 인증완료시 클래스명 badge_verified추가-->
                                                             <span
                                                                 id="mailCert"
                                                                 class="badge"
@@ -446,13 +447,6 @@
                                                                 class="BtnType SizeS btn_modify"
                                                             >
                                                                 수정
-                                                            </button>
-                                                            <button
-                                                                type="button"
-                                                                class="BtnType SizeS btn_confirm btn_confirm inactive"
-                                                                disabled=""
-                                                            >
-                                                                확인
                                                             </button>
                                                             <button
                                                                 type="button"
@@ -541,7 +535,7 @@
                                                                     >남은시간
                                                                     <span
                                                                         id="remain_time_mail"
-                                                                        >2:00</span
+                                                                        >3:00</span
                                                                     ></span
                                                                 >
                                                             </div>
@@ -574,6 +568,13 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    <div class="wrap_btn_withdraw">
+                                        <a
+                                            href="/zf_user/persons/person-out"
+                                            class="btn_withdraw"
+                                            >회원 탈퇴</a
+                                        >
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -581,6 +582,130 @@
                 </div>
             </div>
             <!-- 여기에 푸터 -->
+        </div>
+        <div class="layer_pop_manage layer_photo mypage">
+            <div class="layer_manage_wrap" id="my_photo">
+                <h4>사진 올리기</h4>
+                <button
+                    type="button"
+                    class="btn_layer_close btn_close"
+                    onclick="_layerClose();"
+                >
+                    <span>닫기</span>
+                </button>
+                <div class="area_photo_noti">
+                    <ol class="list_photo_noti">
+                        <li>
+                            1. [파일 선택]을 클릭, 등록할 사진을 선택한 후,
+                            이력서 및 회원정보에 첨부할 영역을 마우스로<br />&nbsp;&nbsp;드래그하여
+                            선택해 주십시오.
+                        </li>
+                        <li>
+                            2. 이력서용 사진 칸에 원하는 사진 영역 선택이
+                            완료되면 [등록]을 클릭해주십시오.
+                        </li>
+                        <li>
+                            3. 사진을 새로 등록 또는 변경하면 작성한
+                            이력서에서도 사진이 변경됩니다.
+                        </li>
+                    </ol>
+                </div>
+                <div class="area_photo">
+                    <form
+                        name="imageUpload"
+                        id="imageUpload"
+                        enctype="multipart/form-data"
+                        method="post"
+                    >
+                        <input type="hidden" id="dataX" name="x1" />
+                        <input type="hidden" id="dataY" name="y1" />
+                        <input
+                            type="hidden"
+                            class="form-control"
+                            id="dataWidth"
+                            name="width"
+                        />
+                        <input
+                            type="hidden"
+                            class="form-control"
+                            id="dataHeight"
+                            name="height"
+                        />
+                        <input type="hidden" id="viewWidth" name="viewWidth" />
+                        <input
+                            type="hidden"
+                            id="viewHeight"
+                            name="viewHeight"
+                        />
+                        <input
+                            type="hidden"
+                            id="tempImgFileName"
+                            name="tempImgFileName"
+                            value=""
+                        />
+                        <div class="photo_original">
+                            <p class="txt_title">원본사진</p>
+                            <div class="box_photo_original">
+                                <p class="txt_photo_original">
+                                    편집할 사진을 등록해주세요.
+                                </p>
+                                <div id="originalWrap"></div>
+                            </div>
+                        </div>
+
+                        <div class="photo_upload">
+                            <input
+                                type="file"
+                                class="textareabg"
+                                id="photo"
+                                name="photo"
+                                accept="image/*"
+                                onchange="previewImage(event)"
+                            />
+                            <ul class="list_noti_upload">
+                                <li>
+                                    * 사진 파일은 10MB 미만의 JPG, JPEG, PNG,
+                                    GIF 파일만 업로드 가능
+                                </li>
+                                <li>
+                                    * 사진 크기는 100*140 픽셀이 가장
+                                    아름답습니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div
+                    class="layer_pop_manage layer_progress photo_progress"
+                    style="display: none"
+                >
+                    <h4>파일 등록</h4>
+                    <div class="loading">
+                        <p>
+                            파일 업로드 중입니다.<br />업로드가 완료될 때까지
+                            창을 닫지 마세요.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    id="photo_layer_dim"
+                    class="layer_dim"
+                    style="display: none"
+                ></div>
+
+                <div class="bottom_btn_wrap">
+                    <button
+                        type="button"
+                        class="btn_basic_type05 btn_save"
+                        onclick="savePhoto()"
+                    >
+                        등록
+                    </button>
+                    <button type="button" class="btn_basic_type01 btn_close">
+                        취소
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="svg_pattern" style="display: none">
             <svg xmlns="http://www.w3.org/2000/svg">

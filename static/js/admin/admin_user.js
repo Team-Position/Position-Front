@@ -19,7 +19,7 @@ menuItems.forEach((menuToggle) => {
 // 정보 버튼 클릭 시 정보 박스 표시/숨김
 const infoButton = document.querySelector(".ProjectInfo_infoButton");
 
-infoButton.addEventListener("click", function () {
+infoButton.addEventListener("click", () => {
     const isExpanded = infoButton.getAttribute("aria-expanded") === "true";
     infoButton.setAttribute("aria-expanded", !isExpanded);
 
@@ -140,6 +140,33 @@ document.addEventListener("DOMContentLoaded", () => {
                     break;
                 case "탈퇴함":
                     statusCell.style.color = "var(--gray50)";
+                    break;
+                default:
+                    statusCell.style.color = "black"; // 기본 색상
+                    break;
+            }
+        }
+    });
+    // 지원 완료, 지원 취소 글자 색
+    document.querySelectorAll(".ApplyTable_row").forEach((row) => {
+        const statusCell = row.querySelector(".ApplyTable_cell:nth-child(8)");
+        if (statusCell) {
+            const statusText = statusCell.textContent.trim();
+
+            switch (statusText) {
+                case "지원 합격":
+                case "면접 합격":
+                case "인턴십 수료":
+                    statusCell.style.color = "var(--blue90)";
+                    break;
+                case "지원 취소":
+                case "면접 취소":
+                case "인턴십 미수료":
+                    statusCell.style.color = "var(--gray50)";
+                    break;
+                case "지원 불합격":
+                case "면접 불합격":
+                    statusCell.style.color = "red";
                     break;
                 default:
                     statusCell.style.color = "black"; // 기본 색상

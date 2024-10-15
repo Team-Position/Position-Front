@@ -394,19 +394,19 @@
                     <!-- body (메인 내용) -->
                     <div id="AppLayout_Contents" class="AppLayout_contents">
                         <!-- section1: 일반회원 -->
-                        <section class="user-admin">
+                        <section id="user-section" class="common-section">
                             <!-- body_header -->
-                            <div class="FundingHeader_container">
-                                <h2 class="FundingHeader_title">
+                            <div class="CommonHeader_container">
+                                <h2 class="CommonHeader_title">
                                     일반회원 관리
                                 </h2>
-                                <p class="FundingHeader_description">
+                                <p class="CommonHeader_description">
                                     일반회원 정보를 조회합니다.
                                 </p>
                             </div>
 
                             <!-- body_layout -->
-                            <div class="FundingLayout_container">
+                            <div class="CommonLayout_container">
                                 <div class="filter_wrap">
                                     <div class="SortFilterOptions">
                                         <span
@@ -414,7 +414,7 @@
                                             >가입일 순</span
                                         >
                                         <span class="sort-filter-option"
-                                            >이름 순</span
+                                            >이름순</span
                                         >
                                         <span class="sort-filter-option"
                                             >활동 상태</span
@@ -442,9 +442,7 @@
                                     </div>
                                 </div>
                                 <div class="UserTable_container">
-                                    <div
-                                        class="UserTable_row UserTable_header__2WvXj"
-                                    >
+                                    <div class="UserTable_row UserTable_header">
                                         <div
                                             class="UserTable_cell User-headerCell selectAllCell"
                                         >
@@ -684,19 +682,22 @@
                             </nav>
                         </section>
                         <!-- section2: 기업회원 -->
-                        <section class="user-admin">
+                        <section
+                            id="corporation-section"
+                            class="common-section"
+                        >
                             <!-- body_header -->
-                            <div class="FundingHeader_container">
-                                <h2 class="FundingHeader_title">
+                            <div class="CommonHeader_container">
+                                <h2 class="CommonHeader_title">
                                     기업회원 관리
                                 </h2>
-                                <p class="FundingHeader_description">
+                                <p class="CommonHeader_description">
                                     기업회원 정보를 조회합니다.
                                 </p>
                             </div>
 
                             <!-- body_layout -->
-                            <div class="FundingLayout_container">
+                            <div class="CommonLayout_container">
                                 <div class="filter_wrap">
                                     <div class="SortFilterOptions">
                                         <span
@@ -704,7 +705,7 @@
                                             >가입일 순</span
                                         >
                                         <span class="sort-filter-option"
-                                            >이름 순</span
+                                            >이름순</span
                                         >
                                         <span class="sort-filter-option"
                                             >활동 상태</span
@@ -731,10 +732,9 @@
                                         </button>
                                     </div>
                                 </div>
+                                <!-- 여기까지 -->
                                 <div class="UserTable_container">
-                                    <div
-                                        class="UserTable_row UserTable_header__2WvXj"
-                                    >
+                                    <div class="UserTable_row UserTable_header">
                                         <div
                                             class="UserTable_cell User-headerCell selectAllCell"
                                         >
@@ -795,7 +795,7 @@
                                             />
                                         </div>
                                         <div class="UserTable_cell">
-                                            (주)쿠팡
+                                            쿠팡(주)
                                         </div>
                                         <div class="UserTable_cell">
                                             2024-01-01
@@ -828,7 +828,7 @@
                                             />
                                         </div>
                                         <div class="UserTable_cell">
-                                            (주)롯데자이언츠
+                                            롯데자인언츠(주)
                                         </div>
                                         <div class="UserTable_cell">
                                             1982-02-12
@@ -861,7 +861,7 @@
                                             />
                                         </div>
                                         <div class="UserTable_cell">
-                                            (주)챔프스터디
+                                            챔프스터디(주)
                                         </div>
                                         <div class="UserTable_cell">
                                             2024-01-01
@@ -914,6 +914,942 @@
                                         </div>
                                         <div class="UserTable_cell">활동중</div>
                                         <div class="UserTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="pagination">
+                                <ul class="pagination-list">
+                                    <!-- 처음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-first">
+                                        <a
+                                            href="#"
+                                            class="pagination-first-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-first-icon"
+                                                aria-hidden="true"
+                                                >«</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 이전 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-prev">
+                                        <a
+                                            href="#"
+                                            class="pagination-prev-link"
+                                            rel="prev nofollow"
+                                        >
+                                            <span
+                                                class="pagination-prev-icon"
+                                                aria-hidden="true"
+                                                >‹</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 페이지 번호 버튼 -->
+                                    <li class="pagination-page active">
+                                        <a href="#" class="pagination-page-link"
+                                            >1</a
+                                        >
+                                    </li>
+
+                                    <!-- 다음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-next">
+                                        <a
+                                            href="#"
+                                            class="pagination-next-link"
+                                            rel="next nofollow"
+                                        >
+                                            <span
+                                                class="pagination-next-icon"
+                                                aria-hidden="true"
+                                                >›</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 마지막 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-last">
+                                        <a
+                                            href="#"
+                                            class="pagination-last-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-last-icon"
+                                                aria-hidden="true"
+                                                >»</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                        <!-- section3: 지원 현황 -->
+                        <section id="Apply-section" class="common-section">
+                            <!-- body_header -->
+                            <div class="CommonHeader_container">
+                                <h2 class="CommonHeader_title">
+                                    지원현황 관리
+                                </h2>
+                                <p class="CommonHeader_description">
+                                    사용자들의 공고지원 내역을 조회합니다.
+                                </p>
+                            </div>
+
+                            <!-- body_layout -->
+                            <div class="CommonLayout_container">
+                                <div class="filter_wrap">
+                                    <div class="SortFilterOptions">
+                                        <span
+                                            class="sort-filter-option selected"
+                                            >최신순</span
+                                        >
+                                        <span class="sort-filter-option"
+                                            >지원 완료</span
+                                        >
+                                        <span class="sort-filter-option"
+                                            >지원 취소</span
+                                        >
+                                    </div>
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons">
+                                        <input
+                                            type="text"
+                                            class="Filter_searchInput"
+                                            placeholder="검색어 입력"
+                                        />
+                                        <button
+                                            id="addServiceBtn"
+                                            class="addServiceBtn"
+                                        >
+                                            메일 전송
+                                        </button>
+                                        <button
+                                            id="deleteSelectedBtn"
+                                            class="deleteSelectedBtn"
+                                        >
+                                            문자 전송
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- 지원 내역 테이블 -->
+                                <div class="ApplyTable_container">
+                                    <div
+                                        class="ApplyTable_row ApplyTable_header"
+                                    >
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell selectAllCell"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                id="selectAll"
+                                            />
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            기업명
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            신청일
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            공고 제목
+                                        </div>
+
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            신청자
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            전화번호
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            지원 분야
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            상태
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            Action
+                                        </div>
+                                    </div>
+
+                                    <!-- Example row (Initial data) -->
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            쿠팡(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            [쿠팡CPLB]리테일상품검수/모니터링담당(단순사무/재택근무가능)
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            홍길동
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">-</div>
+                                        <div class="ApplyTable_cell">
+                                            지원 완료
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                환불하기
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            롯데자인언츠(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            1982-02-12
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            [신입모집] 마케팅 및 디자인 담당
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            하민지
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            디자인
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            지원 합격
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                환불하기
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            챔프스터디(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024년 해커스 교육그룹 [신입/경력]
+                                            각 부문별 채용공고
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            안수진
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">연구</div>
+                                        <div class="ApplyTable_cell">
+                                            지원 취소
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                환불하기
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            한국전력공사
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024년도 연구직 채용공고
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            석상훈
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            전력시장분석
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            지원 불합격
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                환불하기
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="pagination">
+                                <ul class="pagination-list">
+                                    <!-- 처음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-first">
+                                        <a
+                                            href="#"
+                                            class="pagination-first-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-first-icon"
+                                                aria-hidden="true"
+                                                >«</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 이전 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-prev">
+                                        <a
+                                            href="#"
+                                            class="pagination-prev-link"
+                                            rel="prev nofollow"
+                                        >
+                                            <span
+                                                class="pagination-prev-icon"
+                                                aria-hidden="true"
+                                                >‹</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 페이지 번호 버튼 -->
+                                    <li class="pagination-page active">
+                                        <a href="#" class="pagination-page-link"
+                                            >1</a
+                                        >
+                                    </li>
+
+                                    <!-- 다음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-next">
+                                        <a
+                                            href="#"
+                                            class="pagination-next-link"
+                                            rel="next nofollow"
+                                        >
+                                            <span
+                                                class="pagination-next-icon"
+                                                aria-hidden="true"
+                                                >›</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 마지막 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-last">
+                                        <a
+                                            href="#"
+                                            class="pagination-last-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-last-icon"
+                                                aria-hidden="true"
+                                                >»</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                        <!-- section4: 면접 현황 -->
+                        <section id="Interview-section" class="common-section">
+                            <!-- body_header -->
+                            <div class="CommonHeader_container">
+                                <h2 class="CommonHeader_title">
+                                    면접현황 관리
+                                </h2>
+                                <p class="CommonHeader_description">
+                                    지원 합격자들의 면접현황을 조회합니다.
+                                </p>
+                            </div>
+
+                            <!-- body_layout -->
+                            <div class="CommonLayout_container">
+                                <div class="filter_wrap">
+                                    <div class="SortFilterOptions">
+                                        <span
+                                            class="sort-filter-option selected"
+                                            >최신순</span
+                                        >
+                                        <span class="sort-filter-option"
+                                            >면접 합격</span
+                                        >
+                                        <span class="sort-filter-option"
+                                            >면접 예정</span
+                                        >
+                                    </div>
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons">
+                                        <input
+                                            type="text"
+                                            class="Filter_searchInput"
+                                            placeholder="검색어 입력"
+                                        />
+                                        <button
+                                            id="addServiceBtn"
+                                            class="addServiceBtn"
+                                        >
+                                            메일 전송
+                                        </button>
+                                        <button
+                                            id="deleteSelectedBtn"
+                                            class="deleteSelectedBtn"
+                                        >
+                                            문자 전송
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- 면접 내역 테이블 -->
+                                <div class="ApplyTable_container">
+                                    <div
+                                        class="ApplyTable_row ApplyTable_header"
+                                    >
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell selectAllCell"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                id="selectAll"
+                                            />
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            기업명
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            지원 합격일
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            공고 제목
+                                        </div>
+
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            면접자
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            전화번호
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            지원 분야
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            상태
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            Action
+                                        </div>
+                                    </div>
+
+                                    <!-- Example row (Initial data) -->
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            쿠팡(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            [쿠팡CPLB]리테일상품검수/모니터링담당(단순사무/재택근무가능)
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            홍길동
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">-</div>
+                                        <div class="ApplyTable_cell">
+                                            면접 예정
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            롯데자인언츠(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            1982-02-12
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            [신입모집] 마케팅 및 디자인 담당
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            하민지
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            디자인
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            면접 합격
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            챔프스터디(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024년 해커스 교육그룹 [신입/경력]
+                                            각 부문별 채용공고
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            안수진
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">연구</div>
+                                        <div class="ApplyTable_cell">
+                                            면접 불합격
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            한국전력공사
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024년도 연구직 채용공고
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            석상훈
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            전력시장분석
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            면접 취소
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="pagination">
+                                <ul class="pagination-list">
+                                    <!-- 처음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-first">
+                                        <a
+                                            href="#"
+                                            class="pagination-first-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-first-icon"
+                                                aria-hidden="true"
+                                                >«</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 이전 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-prev">
+                                        <a
+                                            href="#"
+                                            class="pagination-prev-link"
+                                            rel="prev nofollow"
+                                        >
+                                            <span
+                                                class="pagination-prev-icon"
+                                                aria-hidden="true"
+                                                >‹</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 페이지 번호 버튼 -->
+                                    <li class="pagination-page active">
+                                        <a href="#" class="pagination-page-link"
+                                            >1</a
+                                        >
+                                    </li>
+
+                                    <!-- 다음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-next">
+                                        <a
+                                            href="#"
+                                            class="pagination-next-link"
+                                            rel="next nofollow"
+                                        >
+                                            <span
+                                                class="pagination-next-icon"
+                                                aria-hidden="true"
+                                                >›</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 마지막 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-last">
+                                        <a
+                                            href="#"
+                                            class="pagination-last-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-last-icon"
+                                                aria-hidden="true"
+                                                >»</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                        <!-- section5: 인턴쉽 현황 -->
+                        <section id="Internship-section" class="common-section">
+                            <!-- body_header -->
+                            <div class="CommonHeader_container">
+                                <h2 class="CommonHeader_title">
+                                    인턴십현황 관리
+                                </h2>
+                                <p class="CommonHeader_description">
+                                    사용자들의 인턴십내역을 조회합니다.
+                                </p>
+                            </div>
+
+                            <!-- body_layout -->
+                            <div class="CommonLayout_container">
+                                <div class="filter_wrap">
+                                    <div class="SortFilterOptions">
+                                        <span
+                                            class="sort-filter-option selected"
+                                            >최신순</span
+                                        >
+                                        <span class="sort-filter-option"
+                                            >인턴십 예정</span
+                                        >
+                                        <span class="sort-filter-option"
+                                            >인턴십 수료</span
+                                        >
+                                    </div>
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons">
+                                        <input
+                                            type="text"
+                                            class="Filter_searchInput"
+                                            placeholder="검색어 입력"
+                                        />
+                                        <button
+                                            id="addServiceBtn"
+                                            class="addServiceBtn"
+                                        >
+                                            메일 전송
+                                        </button>
+                                        <button
+                                            id="deleteSelectedBtn"
+                                            class="deleteSelectedBtn"
+                                        >
+                                            문자 전송
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- 면접 내역 테이블 -->
+                                <div class="ApplyTable_container">
+                                    <div
+                                        class="ApplyTable_row ApplyTable_header"
+                                    >
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell selectAllCell"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                id="selectAll"
+                                            />
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            기업명
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            인턴십 근무일
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            공고 제목
+                                        </div>
+
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            면접자
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            전화번호
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            지원 분야
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            상태
+                                        </div>
+                                        <div
+                                            class="ApplyTable_cell Apply-headerCell"
+                                        >
+                                            Action
+                                        </div>
+                                    </div>
+
+                                    <!-- Example row (Initial data) -->
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            쿠팡(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            [쿠팡CPLB]리테일상품검수/모니터링담당(단순사무/재택근무가능)
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            홍길동
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">-</div>
+                                        <div class="ApplyTable_cell">
+                                            인턴십 예정
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            롯데자인언츠(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            1982-02-12
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            [신입모집] 마케팅 및 디자인 담당
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            하민지
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            디자인
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            인턴십 수료
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            챔프스터디(주)
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024년 해커스 교육그룹 [신입/경력]
+                                            각 부문별 채용공고
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            안수진
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">연구</div>
+                                        <div class="ApplyTable_cell">
+                                            인턴십 미수료
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ApplyTable_row">
+                                        <div class="ApplyTable_cell">
+                                            <input
+                                                type="checkbox"
+                                                class="ApplyCheckbox"
+                                            />
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            한국전력공사
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024-01-01
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            2024년도 연구직 채용공고
+                                        </div>
+
+                                        <div class="ApplyTable_cell">
+                                            석상훈
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            전력시장분석
+                                        </div>
+                                        <div class="ApplyTable_cell">
+                                            인턴십 미수료
+                                        </div>
+                                        <div class="ApplyTable_cell">
                                             <button class="editBtn">
                                                 수정
                                             </button>

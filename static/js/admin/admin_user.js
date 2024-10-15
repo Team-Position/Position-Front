@@ -174,7 +174,28 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+    // 채용중, 채용 마감 글자 색
+    document.querySelectorAll(".announcementTable_row").forEach((row) => {
+        const statusCell = row.querySelector(
+            ".announcementTable_cell:nth-child(8)"
+        );
+        if (statusCell) {
+            const statusText = statusCell.textContent.trim();
 
+            switch (statusText) {
+                case "채용중":
+                    statusCell.style.color = "var(--blue90)";
+                    break;
+                case "채용 마감":
+                    statusCell.style.color = "var(--gray50)";
+                    break;
+
+                default:
+                    statusCell.style.color = "black"; // 기본 색상
+                    break;
+            }
+        }
+    });
     // 페이지네이션 기능
     document.querySelectorAll(".pagination-page-link").forEach(function (link) {
         link.addEventListener("click", function (event) {

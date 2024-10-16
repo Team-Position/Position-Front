@@ -185,3 +185,27 @@ document.querySelectorAll(".more_btn, .layer_more_btn").forEach((button) => {
         button.classList.toggle("on");
     });
 });
+
+function showTab(type) {
+    // 모든 영역을 숨기기
+    document.getElementById("scrap_list_area").style.display = "none";
+    document.getElementById("suited_list_area").style.display = "none";
+    document.getElementById("favor_list_area").style.display = "none";
+
+    // 클래스 요소도 모두 숨기기
+    document.querySelectorAll(".BtnType.SizeM.page_link").forEach((element) => {
+        element.style.display = "none";
+    });
+
+    // 선택된 영역 및 관련 클래스 요소 표시
+    if (type === "scrap") {
+        document.getElementById("scrap_list_area").style.display = "block";
+        document.querySelector(".scrap_recruit_view").style.display = "block";
+    } else if (type === "suited") {
+        document.getElementById("suited_list_area").style.display = "block";
+        document.querySelector(".suited_recruit_view").style.display = "block";
+    } else if (type === "favor_company") {
+        document.getElementById("favor_list_area").style.display = "block";
+        document.querySelector(".favor_recruit_view").style.display = "block";
+    }
+}

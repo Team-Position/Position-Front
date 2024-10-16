@@ -842,3 +842,25 @@ option {
     position: relative;
     padding-right: 40px;
 }
+.list_product.list_premium > li {
+    width: 300px;
+    height: 230px;
+}
+.list_product > .item,
+.list_product > .empty {
+    position: relative;
+    height: 208px;
+    border: none;
+    border-radius: 16px;
+}
+/* .wrap_list_banner .area_title {
+    display: flex;
+    position: relative;
+    margin-bottom: 24px;
+    color: #292e41;
+    justify-content: space-between;
+    align-items: flex-end;
+} */
+.list_product.list_grand .item {
+    width: 404px;
+}

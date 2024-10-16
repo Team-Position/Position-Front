@@ -766,3 +766,65 @@ input[type="checkbox"], input[type="radio"] {
     border-color: var(--gray40);
     background: var(--gray20);
 }
+
+.area_corp_certification .btn_close:after {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(/static/images/join/closeBtn.svg) 50% no-repeat;
+    content: "";
+}
+
+
+.area_corp_certification .box_file_upload .file_view:before {
+    display: block;
+    margin: 14px auto 0;
+    width: 53px;
+    height: 68px;
+    background: url(//www.saraminimage.co.kr/sri/join/img_file_upload.png) 0 0 no-repeat;
+    content: "";
+}
+
+.area_corp_certification .file_upload_name {
+    overflow: hidden;
+    margin-top: 12px;
+    width: 100%;
+    color: var(--gray100);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: transparent;
+}
+
+.area_corp_certification .file_txt_guide {
+    margin-top: 12px;
+    color: var(--gray90);
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.area_corp_certification .btn_close:after {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(/static/images/join/closeBtn.svg) 50% no-repeat;
+    content: "";
+}
+
+.area_corp_certification .btn_close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
+button {
+    overflow: visible;
+    background-color: transparent;
+}
+
+.area_corp_certification {
+    position: relative;
+}

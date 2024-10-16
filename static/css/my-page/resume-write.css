@@ -423,209 +423,6 @@ body.no_gnb {
     line-height: 28px;
     align-items: center;
 }
-/* 기본정보 수정 */
-/* .resume_con .resume_tit {
-    display: flex;
-    margin-bottom: 9px;
-    padding: 0 12px 0 20px;
-    height: 40px;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.resume_con .resume_tit .box_tit {
-    display: flex;
-    margin-right: auto;
-    align-items: center;
-}
-
-
-
-
-
-.resume_edit {
-    position: relative;
-    padding: 32px 40px;
-    border-top: 2px solid var(--blue80);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    box-shadow: 0 4px 16px 0 rgba(17, 42, 128, 0.08);
-}
-
-.resume_edit .item_row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.resume_edit .item_m {
-    width: 278px;
-    flex-shrink: 0;
-}
-
-.TypoBox {
-    display: inline-block;
-    position: relative;
-    border: 1px solid var(--gray70);
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: var(--white);
-}
-.TypoBox.LblTop:has(.Typo:focus) .Lbl, .TypoBox.LblTop:has(.Typo:-webkit-autofill) .Lbl, .TypoBox.LblTop:has(.Typo:read-only) .Lbl, .TypoBox.LblTop:has(.Typo:disabled) .Lbl, .TypoBox.LblTop:has(.Typo:valid) .Lbl, .TypoBox.LblTop:has(.Typo.Invalid) .Lbl {
-    top: -10px;
-    padding: 0 4px;
-    border-radius: 4px;
-    font-size: 12px;
-    background-color: var(--white) !important;
-    transform: none;
-}
-
-.TypoBox.LblTop:has(.Typo.SizeXL)>.Lbl, .TypoBox.LblTop:has(.Typo.SizeML)>.Lbl, .TypoBox.LblTop:has(.Typo.SizeL)>.Lbl {
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.TypoBox.LblTop .Lbl {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    color: var(--gray80);
-    font-size: 14px;
-    line-height: 20px;
-    transition: all 300ms ease;
-    transform: translateY(-50%);
-}
-
-.TypoBox label {
-    cursor: unset;
-}
-
-.resume_edit .ability_box .TypoBox, .resume_edit .TypoBox .Typo {
-    width: 100%;
-}
-
-.TypoBox .Typo.SizeL {
-    padding: 12px;
-    height: 46px;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.TypoBox .Typo {
-    padding: 8px 12px;
-    width: 100%;
-    height: 38px;
-    border: 0;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: var(--gray100);
-    font-size: 14px;
-    line-height: 20px;
-    background: none;
-}
-
-.resume_edit .item_s {
-    width: 135px;
-    flex-shrink: 0;
-}
-
-.InpBox.SizeL select {
-    height: 48px;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.TypoBox.LblTop:has(.Typo.DatePic:focus) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:-webkit-autofill) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:read-only) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:disabled) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:valid) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic.Invalid) .Lbl {
-    left: 12px;
-}
-
-.TypoBox.LblTop:has(.Typo.DatePic) .Lbl {
-    position: absolute;
-    left: 36px;
-}
-
-.TypoBox .Typo.DatePic {
-    padding-left: 36px;
-    background: url('/static/images/my-page/resume-date.svg') left 13px center no-repeat;
-}
-
-.resume_edit .item_row+.item_row {
-    margin-top: 20px;
-}
-
-.TypoBox:has(.Typo:read-only) {
-    border-color: var(--gray40);
-    background: var(--gray20);
-}
-
-.TypoBox.TypeBtn {
-    display: flex;
-    align-items: center;
-}
-
-.resume_edit .ability_box.privacy .Typo {
-    padding-right: 35px;
-}
-
-.TypoBox:has(.Typo:read-only)>.Typo {
-    color: var(--gray100);
-}
-
-.resume_edit .ability_box.privacy .badge_privacy {
-    flex-shrink: 0;
-    display: inline-block;
-    margin-right: 8px;
-    width: 24px;
-    height: 24px;
-    background: url('/static/images/my-page/hide-resume.svg') no-repeat;
-    content: '';
-}
-
-.resume_edit .ability_box.privacy.on .badge_privacy {
-    background: url('/static/images/my-page/hide-on-resume.svg') no-repeat;
-}
-
-.resume_edit .ability_box.privacy .badge_privacy+.badge {
-    margin-left: 0;
-}
-
-.resume_con .badge.complete {
-    border-color: var(--blue30);
-    color: var(--blue90);
-}
-
-.resume_con .badge {
-    display: block;
-    margin: 0 12px 0 8px;
-    width: 48px;
-    border: 1px solid var(--gray40);
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: var(--gray100);
-    font-size: 12px;
-    line-height: 22px;
-    text-align: center;
-    background: var(--white);
-    flex-shrink: 0;
-}
-
-[class*="BtnType"].SizeL {
-    padding: 10px 15px 12px;
-    height: 48px;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.btn_gray {
-    border-color: var(--gray40);
-    color: var(--gray100);
-    white-space: nowrap;
-    background: var(--white);
-}
-
-.resume_edit .item_row.item_center {
-    align-items: center;
-} */
 
 /* 학력 */
 .resume_con section+section {
@@ -887,5 +684,211 @@ body.no_gnb {
 
 .resume_edit .resume_save button+button {
     margin-left: 8px;
+}
+
+/* 초등학교 졸업 */
+.resume_edit .item_row.item_career {
+    margin-bottom: 16px;
+}
+
+.resume_edit .item_row.item_center {
+    align-items: center;
+}
+
+.resume_edit .item_row .item_check {
+    margin-left: 4px;
+}
+
+.InpBox .Chk {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.InpBox .Chk input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.InpBox .Chk.SizeL .Lbl {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.InpBox .Chk .Lbl {
+    display: block;
+    position: relative;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.InpBox .Chk.SizeL .Lbl:before {
+    width: 22px;
+    height: 22px;
+}
+
+.InpBox .Chk .Lbl:before {
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    vertical-align: top;
+    background: #fff;
+    content: '';
+}
+
+.resume_edit .item_row+.item_row {
+    margin-top: 20px;
+}
+
+.TypoBox.TypeBtn {
+    display: flex;
+    align-items: center;
+}
+
+.TypoBox.LblTop:has(.Typo.SizeXL)>.Lbl, .TypoBox.LblTop:has(.Typo.SizeML)>.Lbl, .TypoBox.LblTop:has(.Typo.SizeL)>.Lbl {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.TypoBox.LblTop .Lbl {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: var(--gray80);
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 300ms ease;
+    transform: translateY(-50%);
+    background-color: var(--white); /* 배경으로 레이블이 가리지 않게 함 */
+    padding: 0 10px;
+}
+
+
+.TypoBox label {
+    cursor: unset;
+}
+
+.TypoBox {
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.resume_edit .ability_box .TypoBox, .resume_edit .TypoBox .Typo {
+    width: 100%;
+}
+
+.TypoBox .Typo.SizeL {
+    padding: 12px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.TypoBox .Typo {
+    padding: 8px 12px;
+    width: 100%;
+    height: 38px;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: none;
+}
+
+
+.resume_edit .item_s {
+    width: 135px;
+    flex-shrink: 0;
+}
+
+.blind {
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+}
+
+.TypoBox.LblTop:has(.Typo.DatePic) .Lbl {
+    position: absolute;
+    left: 36px;
+}
+
+.TypoBox .Typo.DatePic {
+    padding-left: 36px;
+    background: url('/static/images/my-page/resume-date.svg') left 13px center no-repeat;
+}
+
+.TypoBox.LblTop:has(.Typo.DatePic:focus) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:-webkit-autofill) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:read-only) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:disabled) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:valid) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic.Invalid) .Lbl {
+    left: 12px;
+}
+
+.TypoBox.LblTop:has(.Typo:focus) .Lbl, .TypoBox.LblTop:has(.Typo:-webkit-autofill) .Lbl, .TypoBox.LblTop:has(.Typo:read-only) .Lbl, .TypoBox.LblTop:has(.Typo:disabled) .Lbl, .TypoBox.LblTop:has(.Typo:valid) .Lbl, .TypoBox.LblTop:has(.Typo.Invalid) .Lbl {
+    top: -10px;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: var(--white) !important;
+    transform: none;
+}
+
+.TypoBox:hover {
+    background: var(--gray20);
+
+}
+.TypoBox:hover .Lbl {
+    background-color: var(--gray20); /* 레이블의 배경을 hover 색상으로 변경 */
+
+}
+
+/* 초등 검정고시 */
+.resume_edit .item_close+.item_row {
+    margin-top: 0;
+}
+
+.InpBox .Chk input:checked~.Lbl:before {
+    border-color: var(--blue90);
+    background: var(--blue90);
+}
+
+.InpBox .Chk input:checked~.Lbl:after {
+    display: inline-block;
+    border-color: var(--white);
+}
+
+.InpBox .Chk.SizeL .Lbl:after {
+    top: 7px;
+    left: 6px;
+    width: 10px;
+    height: 5px;
+}
+
+.InpBox .Chk .Lbl:after {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 5px;
+    border-bottom: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    content: '';
 }
 

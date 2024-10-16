@@ -46,235 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     // btn_add evtWriteItem 버튼 선택
-//     const addButton = document.querySelector(".btn_add.evtWriteItem");
-
-//     // btn_modify evtOpenLastSchoolNudge 클래스 요소 선택
-//     const modifyElement = document.querySelector(
-//         ".btn_modify.evtOpenLastSchoolNudge"
-//     );
-
-//     // resume_list 클래스 요소 선택
-//     const resumeList = document.querySelector(".resume_list");
-
-//     // btn_add evtWriteItem 버튼 클릭 이벤트 등록
-//     addButton.addEventListener("click", () => {
-//         // btn_modify evtOpenLastSchoolNudge의 display 속성 토글
-//         if (
-//             modifyElement.style.display === "none" ||
-//             modifyElement.style.display === ""
-//         ) {
-//             modifyElement.style.display = "flex";
-//         } else {
-//             modifyElement.style.display = "none";
-//         }
-
-//         // resume_list의 display 속성 토글
-//         if (
-//             resumeList.style.display === "none" ||
-//             resumeList.style.display === ""
-//         ) {
-//             resumeList.style.display = "block"; // display를 block으로 변경
-//         } else {
-//             resumeList.style.display = "none"; // display를 none으로 변경
-//         }
-//     });
-// });
-
-// const div1 = createElememt("div");
-// div1.innerHTML =`
-
-// `;
-
-// const views = {
-//     A:div1
-// }
-// innerHTML = views["A"];
-
-// // JavaScript 코드: 요소 생성 및 뷰 설정
-// const div1 = document.createElement("div");
-// div1.innerHTML = `
-//   <h1>View A</h1>
-//   <p>This is the content of View A.</p>
-// `;
-
-// const views = {
-//     A: div1,
-//     B: document.createElement("div"),
-//     C: document.createElement("div"),
-// };
-
-// // View B와 C도 필요한 경우 콘텐츠 추가
-// views.B.innerHTML = `<h1>View B</h1><p>This is View B content.</p>`;
-// views.C.innerHTML = `<h1>View C</h1><p>This is View C content.</p>`;
-
-// // 특정 뷰를 선택해 #app 요소에 삽입
-// const app = document.getElementById("app");
-// app.innerHTML = views["B"].outerHTML; // View A를 표시
-
-// // JavaScript 코드: 각 뷰 요소 생성
-// // btn_add evtWriteItem 버튼 선택
-// const addButton = document.querySelector(".btn_add.evtWriteItem");
-
-// // btn_modify evtOpenLastSchoolNudge 클래스 요소 선택
-// const modifyElement = document.querySelector(
-//     ".btn_modify.evtOpenLastSchoolNudge"
-// );
-// // resume_list 클래스 요소 선택
-// const resumeList = document.querySelector(".resume_list");
-// const closeButton = document.querySelector(".evtLayerClose");
-
-// const div1 = document.createElement("div");
-// div1.innerHTML = `
-//     <div
-//                                             id="resumeSchoolItem_1729054917577"
-//                                             class="resume_edit wrapHiddenForm"
-//                                             data-tpl="school-item"
-//                                         >
-//     <div class="item_row">
-//                                                 <div class="InpBox SizeL item_m">
-//                                                     <label
-//                                                         for="schoolType_1729054917577"
-//                                                         class="blind"
-//                                                         >학력구분</label
-//                                                     >
-//                                                     <select
-//                                                         name="school_type"
-//                                                         id="schoolType_1729054917577"
-//                                                         class="evtChangeSchoolType"
-//                                                     >
-//                                                         <option value=""
-//                                                         selected="selected">
-//                                                             학력 구분 선택 *
-//                                                         </option>
-//                                                         <option
-//                                                             value="primary"
-
-//                                                         >
-//                                                             초등학교 졸업
-//                                                         </option>
-//                                                         <option value="middle">
-//                                                             중학교 졸업
-//                                                         </option>
-//                                                         <option value="high">
-//                                                             고등학교 졸업
-//                                                         </option>
-//                                                         <option value="university">
-//                                                             대학ㆍ대학원 이상 졸업
-//                                                         </option>
-//                                                         <option value="academy">
-//                                                             기타 학력 졸업
-//                                                         </option>
-//                                                     </select>
-//                                                 </div>
-//                                             </div>
-//                                             <div class="resume_save notCached">
-//                                                 <button
-//                                                     type="button"
-//                                                     class="BtnType SizeL BlueInvert evtLayerClose w50"
-//                                                 >
-//                                                     취소</button
-//                                                 ><button
-//                                                     type="button"
-//                                                     class="BtnType SizeL evtLayerSave w50"
-//                                                 >
-//                                                     저장
-//                                                 </button>
-//                                             </div>
-//                                             </div>
-//     `;
-
-// const div2 = document.createElement("div");
-// div2.innerHTML = `
-//     <h1>View B</h1>
-//     <p>This is the content of View B.</p>
-//     `;
-
-// const div3 = document.createElement("div");
-// div3.innerHTML = `
-//     <h1>View C</h1>
-//     <p>This is the content of View C.</p>
-//     `;
-
-// // 각 뷰를 객체에 저장
-// const views = {
-//     A: div1,
-//     B: div2,
-//     C: div3,
-// };
-
-// // #app 요소를 가져옴
-// const app = document.getElementById("app");
-
-// // 특정 뷰를 표시하는 함수
-// function showView(viewName) {
-//     app.innerHTML = ""; // 기존 콘텐츠 비우기
-//     app.appendChild(views[viewName]); // 새로운 뷰 추가
-// }
-
-// // // 기본적으로 View A 표시
-// // showView("A");
-
-// // 각 버튼에 클릭 이벤트 추가
-// addButton.addEventListener("click", () => {
-//     addButton.style.display = "none";
-//     // btn_modify evtOpenLastSchoolNudge의 display 속성 토글
-//     modifyElement.style.display = "none";
-//     resumeList.style.display = "none";
-//     showView("A");
-// });
-// // document
-// //     .getElementById("btnViewB")
-// //     .addEventListener("click", () => showView("B"));
-// // document
-// //     .getElementById("btnViewC")
-// //     .addEventListener("click", () => showView("C"));
-
-// // 이벤트 위임을 사용해 동적으로 생성된 취소 버튼 핸들링
-// document.addEventListener("click", (event) => {
-//     if (event.target.classList.contains("evtLayerClose")) {
-//         // 취소 버튼이 포함된 가장 가까운 부모 .resume_edit 요소를 선택
-//         const resumeEdit = event.target.closest(".resume_edit");
-
-//         // 해당 요소가 존재하면 DOM에서 제거
-//         if (resumeEdit) {
-//             resumeEdit.remove();
-//         }
-
-//         // 추가적으로 필요한 UI 상태 변경 처리
-//         modifyElement.style.display = "flex";
-//         resumeList.style.display = "block";
-//         addButton.style.display = "block";
-//     }
-// });
-
-// // document.addEventListener("click", (event) => {
-// //     if (event.target.classList.contains("evtLayerClose")) {
-// //         // 이벤트 발생 시점에 resumeEdit 요소를 선택
-// //         const resumeEdit = document.querySelector(
-// //             ".resume_edit.wrapHiddenForm"
-// //         );
-
-// //         if (resumeEdit) {
-// //             resumeEdit.style.display = "none";
-// //         }
-// //         modifyElement.style.display = "flex";
-// //         resumeList.style.display = "block";
-// //         addButton.style.display = "block";
-// //     }
-// // });
-
-// // closeButton.addEventListener("click", () => {
-// //     resumeEdit.style.display = "none";
-// //     modifyElement.style.display = "flex";
-// //     resumeList.style.display = "block";
-// //     addButton.style.display = "block";
-// // });
-
-// // modifyElement.style.display = "flex";
-// // resumeList.style.display = "block";
-
 const addButton = document.querySelector(".btn_add.evtWriteItem");
 const modifyElement = document.querySelector(
     ".btn_modify.evtOpenLastSchoolNudge"
@@ -282,15 +53,18 @@ const modifyElement = document.querySelector(
 const resumeList = document.querySelector(".resume_list");
 const app = document.getElementById("app");
 
+// UI 상태를 복원하는 함수
+function restoreUI() {
+    modifyElement.style.display = "flex";
+    resumeList.style.display = "block";
+    addButton.style.display = "block";
+}
+
 // View A를 생성하는 함수
 function createViewA() {
     const div1 = document.createElement("div");
     div1.innerHTML = `
-        <div
-            id="resumeSchoolItem_${Date.now()}"
-            class="resume_edit wrapHiddenForm"
-            data-tpl="school-item"
-        >
+        <div id="resumeSchoolItem_${Date.now()}" class="resume_edit wrapHiddenForm" data-tpl="school-item">
             <div class="item_row">
                 <div class="InpBox SizeL item_m">
                     <label for="schoolType" class="blind">학력구분</label>
@@ -310,46 +84,528 @@ function createViewA() {
             </div>
         </div>
     `;
+
+    const selectElement = div1.querySelector("select");
+    selectElement.addEventListener("change", (event) => {
+        if (event.target.value === "primary") {
+            showView("B"); // View B 표시
+        }
+    });
+
     return div1;
+}
+
+// View B를 생성하는 함수
+function createViewB() {
+    const div2 = document.createElement("div");
+    div2.innerHTML = `
+                    <div id="resumeSchoolItem_1729054917577" 
+                class="resume_edit wrapHiddenForm" 
+                data-tpl="school-primary">
+                
+                <div class="item_row item_center item_career" data-row_type="none">
+                    <div class="InpBox SizeL item_m">
+                        <label for="schoolType_1729062897407" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolType_1729062897407" 
+                                class="evtChangeSchoolType">
+                            <option value="">학력 구분 선택 *</option>
+                            <option value="primary" selected="">초등학교 졸업</option>
+                            <option value="middle">중학교 졸업</option>
+                            <option value="high">고등학교 졸업</option>
+                            <option value="university">대학ㆍ대학원 이상 졸업</option>
+                            <option value="academy">기타 학력 졸업</option>
+                        </select>
+                    </div>
+
+                    <div class="InpBox item_check">
+                        <span class="Chk SizeL">
+                            <input type="checkbox" value="n" 
+                                id="qualificationN_1729062897407" 
+                                class="evtChangeQualification" />
+                            <label class="Lbl test1" for="qualificationN_1729062897407">
+                                중입 검정고시(초졸)
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="item_row item_center item_close" data-row_type="qualification" style="display: none;">
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolTypeQualification_1729080866918" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolTypeQualification_1729080866918" class="evtChangeSchoolType">
+                            <option value="">학력 구분 선택 *</option>
+                            <option value="primary" selected="selected">초등학교 졸업</option>
+                            <option value="middle">중학교 졸업</option>
+                            <option value="high">고등학교 졸업</option>
+                            <option value="university">대학ㆍ대학원 이상 졸업</option>
+                            <option value="academy">기타 학력 졸업</option>
+                        </select>
+                    </div>
+
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolAreaCode_1729080866918" class="blind">지역</label>
+                            <select name="school_qual_area_code[]" id="schoolAreaCode_1729080866918">
+                                <option value="" selected="selected">지역 선택</option>
+                                <option value="101000">서울</option>
+                                <option value="102000">경기</option>
+                                <option value="103000">광주</option>
+                                <option value="104000">대구</option>
+                                <option value="105000">대전</option>
+                                <option value="106000">부산</option>
+                                <option value="107000">울산</option>
+                                <option value="108000">인천</option>
+                                <option value="109000">강원</option>
+                                <option value="110000">경남</option>
+                                <option value="111000">경북</option>
+                                <option value="112000">전남</option>
+                                <option value="113000">전북</option>
+                                <option value="114000">충북</option>
+                                <option value="115000">충남</option>
+                                <option value="116000">제주</option>
+                                <option value="117000">전국</option>
+                                <option value="118000">세종</option>
+                                <option value="210000">아시아·중동</option>
+                                <option value="220000">북·중미</option>
+                                <option value="230000">남미</option>
+                                <option value="240000">유럽</option>
+                                <option value="250000">오세아니아</option>
+                                <option value="260000">아프리카</option>
+                                <option value="270000">남극대륙</option>
+                                <option value="280000">기타해외</option>
+                            </select>
+                    </div>
+
+                    <div class="TypoBox item item_s LblTop">
+                        <label for="qualGraduationDt_1729080866918" class="Lbl">합격년월 *</label>
+                        <input type="text" name="qual_graduation_dt[]" value="" id="qualGraduationDt_1729080866918" class="Typo SizeL onlyNumber DatePic datePicker" data-dateformat="yymm" maxlength="6" inputmode="decimal" pattern="[0-9]*" placeholder="YYYYMM" required="">
+                    </div>
+
+                    <div class="InpBox item_check">
+                        <span class="Chk SizeL">
+                            <input type="checkbox" value="y" id="qualificationY_1729080866918" class="evtChangeQualification" checked="">
+                            <label class="Lbl test2" for="qualificationY_1729080866918">중입 검정고시(초졸)</label>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="item_row detail" data-row_type="none">
+                    <div class="TypoBox TypeBtn item_m LblTop">
+                        <label class="Lbl" for="schoolNm_1729062897407">학교명 *</label>
+                        <input type="text" name="school_nm[]" value="" 
+                            id="schoolNm_1729062897407" class="Typo SizeL" 
+                            maxlength="100" placeholder="학교명 *" required="" />
+                    </div>
+
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolGraduationGb_1729062897407" class="blind">졸업여부</label>
+                        <select name="school_graduation_gb[]" 
+                                id="schoolGraduationGb_1729062897407" required="">
+                            <option value="">졸업여부 *</option>
+                            <option value="1">졸업</option>
+                            <option value="5">중퇴</option>
+                        </select>
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label for="schoolEntranceDt_1729062897407" class="Lbl">입학년월</label>
+                        <input type="text" name="school_entrance_dt[]" value="" 
+                            id="schoolEntranceDt_1729062897407" class="Typo SizeL onlyNumber DatePic datePicker" 
+                            data-dateformat="yymm" maxlength="6" inputmode="decimal" 
+                            pattern="[0-9]*" placeholder="YYYYMM" required="" />
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label for="schoolGraduationDt_1729062897407" class="Lbl">졸업년월</label>
+                        <input type="text" name="school_graduation_dt[]" value="" 
+                            id="schoolGraduationDt_1729062897407" class="Typo SizeL onlyNumber DatePic datePicker" 
+                            data-dateformat="yymm" maxlength="6" placeholder="YYYYMM" 
+                            inputmode="decimal" pattern="[0-9]*" required="" />
+                    </div>
+
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolAreaCode_1729062897407" class="blind">지역</label>
+                        <select name="school_area_code[]" id="schoolAreaCode_1729062897407">
+                            <option value="">지역 선택</option>
+                            <option value="101000">서울</option>
+                            <option value="102000">경기</option>
+                            <option value="103000">광주</option>
+                            <option value="104000">대구</option>
+                            <option value="105000">대전</option>
+                            <option value="106000">부산</option>
+                            <option value="107000">울산</option>
+                            <option value="108000">인천</option>
+                            <option value="109000">강원</option>
+                            <option value="110000">경남</option>
+                            <option value="111000">경북</option>
+                            <option value="112000">전남</option>
+                            <option value="113000">전북</option>
+                            <option value="114000">충북</option>
+                            <option value="115000">충남</option>
+                            <option value="116000">제주</option>
+                            <option value="117000">전국</option>
+                            <option value="118000">세종</option>
+                            <option value="210000">아시아·중동</option>
+                            <option value="220000">북·중미</option>
+                            <option value="230000">남미</option>
+                            <option value="240000">유럽</option>
+                            <option value="250000">오세아니아</option>
+                            <option value="260000">아프리카</option>
+                            <option value="270000">남극대륙</option>
+                            <option value="280000">기타해외</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="resume_save notCached">
+                    <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
+                    <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
+                </div>
+            </div>
+    `;
+
+    const selectElement = div2.querySelector("select");
+    selectElement.addEventListener("change", (event) => {
+        if (event.target.value === "") {
+            showView("A"); // View A로 돌아가기
+        }
+    });
+
+    return div2;
 }
 
 // 특정 뷰를 표시하는 함수
 function showView(viewName) {
     app.innerHTML = ""; // 기존 콘텐츠 비우기
-
     if (viewName === "A") {
-        app.appendChild(createViewA()); // 새로운 View A 생성 후 추가
+        app.appendChild(createViewA());
     } else if (viewName === "B") {
-        const div2 = document.createElement("div");
-        div2.innerHTML = `<h1>View B</h1><p>This is the content of View B.</p>`;
-        app.appendChild(div2);
-    } else if (viewName === "C") {
-        const div3 = document.createElement("div");
-        div3.innerHTML = `<h1>View C</h1><p>This is the content of View C.</p>`;
-        app.appendChild(div3);
+        app.appendChild(createViewB());
     }
 }
 
-// addButton 클릭 시 View A 표시
+// Add 버튼 클릭 시 View A 표시
 addButton.addEventListener("click", () => {
     addButton.style.display = "none";
     modifyElement.style.display = "none";
     resumeList.style.display = "none";
-    showView("A");
+    showView("A"); // View A 표시
 });
 
-// 이벤트 위임을 사용해 동적으로 생성된 취소 버튼 핸들링
+// 동적 취소 버튼 이벤트 처리
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("evtLayerClose")) {
         const resumeEdit = event.target.closest(".resume_edit");
-
-        if (resumeEdit) {
-            resumeEdit.remove();
-        }
-
-        // UI 상태 복원
-        modifyElement.style.display = "flex";
-        resumeList.style.display = "block";
-        addButton.style.display = "block";
+        if (resumeEdit) resumeEdit.remove();
+        restoreUI(); // UI 상태 복원
     }
 });
+
+document.addEventListener("click", (event) => {
+    // 클릭된 요소의 클래스 로그
+    console.log("클릭된 요소:", event.target);
+    console.log("클릭된 요소의 클래스:", event.target.className);
+
+    // 클릭된 요소가 "Lbl"인 경우
+    if (event.target.classList.contains("Lbl")) {
+        // "test1" 클래스를 가진 경우
+        if (event.target.classList.contains("test1")) {
+            // item_row item_center item_career 요소 찾기
+            const itemCareer = document.querySelector(
+                ".item_row.item_center.item_career"
+            );
+
+            // item_row item_center item_close 요소 찾기
+            const itemClose = document.querySelector(
+                ".item_row.item_center.item_close"
+            );
+
+            // item_row 요소들 찾기
+            const itemRow = document.querySelector(".item_row.detail");
+
+            itemCareer.classList.add("item_close");
+            itemCareer.style.display = "none";
+
+            // itemClose에서 item_close 제거 및 display flex로 설정
+            if (itemClose) {
+                itemClose.classList.remove("item_close");
+                itemClose.style.display = "flex";
+            }
+
+            if (itemRow) {
+                itemRow.classList.add("item_close");
+                itemRow.style.display = "none";
+            }
+        }
+
+        // "test2" 클래스를 가진 경우
+        if (event.target.classList.contains("test2")) {
+            // itemCareerClose는 item_close 클래스를 포함하는 요소
+            const itemCareerClose = document.querySelector(
+                ".item_row.item_center.item_career.item_close"
+            );
+
+            // itemClose는 item_center만 있는 요소 (item_close가 아닌)
+            const itemClose = document.querySelector(
+                ".item_row.item_center:not(.item_close)"
+            );
+
+            // item_row 요소들 찾기
+            const itemRowClose = document.querySelector(
+                ".item_row.detail.item_close"
+            );
+
+            // 동작
+            if (itemCareerClose) {
+                itemCareerClose.classList.remove("item_close");
+                itemCareerClose.style.display = "flex";
+            } else {
+                console.log("itemCareerClose가 null입니다."); // 이 부분이 로그에 표시될 수 있습니다.
+            }
+
+            if (itemClose) {
+                itemClose.classList.add("item_close");
+                itemClose.style.display = "none";
+            } else {
+                console.log("itemClose가 null입니다."); // 이 부분이 로그에 표시될 수 있습니다.
+            }
+
+            if (itemRowClose) {
+                itemRowClose.classList.remove("item_close");
+                itemRowClose.style.display = "flex";
+            } else {
+                console.log("itemRowClose가 null입니다."); // 이 부분이 로그에 표시될 수 있습니다.
+            }
+        }
+    }
+});
+
+// 검정고시 선택
+// document.addEventListener("click", (event) => {
+//     console.log("클릭된 요소:", event.target);
+//     // 클릭된 요소가 Lbl인 경우
+//     if (event.target.classList.contains("Lbl")) {
+//         // item_row item_center item_career 요소 찾기
+//         const itemCareer = document.querySelector(
+//             ".item_row.item_center.item_career"
+//         );
+//         const itemCareerClose = document.querySelector(
+//             ".item_row.item_center.item_career.item_close"
+//         );
+
+//         // item_row item_center item_close 요소 찾기
+//         const itemClose = document.querySelector(
+//             ".item_row.item_center.item_close"
+//         );
+
+//         // item_row 요소들 찾기
+//         const itemRow = document.querySelector(".item_row.detail");
+
+//         // 클릭 시 동작
+//         if (itemCareer.classList.contains("item_close")) {
+//             // itemCareer에서 item_close 클래스를 제거하고 display를 flex로 설정
+//             itemCareerClose.classList.remove("item_close");
+//             itemCareerClose.style.display = "flex";
+
+//             // itemClose에 item_close 추가 및 display none 설정
+//             if (itemClose) {
+//                 itemClose.classList.add("item_close");
+//                 itemClose.style.display = "none";
+//             }
+//             if (itemRow) {
+//                 itemRow.classList.remove("item_close");
+//                 itemRow.style.display = "flex";
+//             }
+//         } else {
+//             // 다시 클릭한 경우
+//             // itemCareer에 item_close 클래스를 추가하고 display를 none으로 설정
+//             itemCareer.classList.add("item_close");
+//             itemCareer.style.display = "none";
+
+//             // itemClose에서 item_close 제거 및 display flex로 설정
+//             if (itemClose) {
+//                 itemClose.classList.remove("item_close");
+//                 itemClose.style.display = "flex";
+//             }
+
+//             if (itemRow) {
+//                 itemRow.classList.add("item_close");
+//                 itemRow.style.display = "none";
+//             }
+//         }
+//     }
+// });
+
+// 이전 작업
+// const addButton = document.querySelector(".btn_add.evtWriteItem");
+// const modifyElement = document.querySelector(
+//     ".btn_modify.evtOpenLastSchoolNudge"
+// );
+// const resumeList = document.querySelector(".resume_list");
+// const app = document.getElementById("app");
+
+// // View A를 생성하는 함수
+// function createViewA() {
+//     const div1 = document.createElement("div");
+//     div1.innerHTML = `
+//         <div
+//             id="resumeSchoolItem_${Date.now()}"
+//             class="resume_edit wrapHiddenForm"
+//             data-tpl="school-item"
+//         >
+//             <div class="item_row">
+//                 <div class="InpBox SizeL item_m">
+//                     <label for="schoolType" class="blind">학력구분</label>
+//                     <select name="school_type" class="evtChangeSchoolType">
+//                         <option value="" selected>학력 구분 선택 *</option>
+//                         <option value="primary">초등학교 졸업</option>
+//                         <option value="middle">중학교 졸업</option>
+//                         <option value="high">고등학교 졸업</option>
+//                         <option value="university">대학ㆍ대학원 이상 졸업</option>
+//                         <option value="academy">기타 학력 졸업</option>
+//                     </select>
+//                 </div>
+//             </div>
+//             <div class="resume_save notCached">
+//                 <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
+//                 <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
+//             </div>
+//         </div>
+//     `;
+
+//     // select 요소의 change 이벤트 리스너 추가
+//     const selectElement = div1.querySelector("select");
+//     selectElement.addEventListener("change", (event) => {
+//         if (event.target.value === "primary") {
+//             // div1을 숨기고 div2를 표시
+//             app.innerHTML = ""; // 기존 콘텐츠 비우기
+//             showView("B"); // div2를 보여줌
+//         }
+//         if (event.target.value === "middle") {
+//             // 현재 있는거를 숨기고 div3를 표시
+//             app.innerHTML = ""; // 기존 콘텐츠 비우기
+//             showView("C"); // div3를 보여줌
+//         }
+//     });
+
+//     return div1;
+// }
+
+// // 특정 뷰를 표시하는 함수
+// function showView(viewName) {
+//     if (viewName === "B") {
+//         const div2 = document.createElement("div");
+//         div2.innerHTML = `
+//             <h1>View B</h1>
+//             <p>This is the content of View B.</p>
+//         `;
+//         app.appendChild(div2);
+//     } else if (viewName === "C") {
+//         const div3 = document.createElement("div");
+//         div3.innerHTML = `
+//             <h1>View C</h1>
+//             <p>This is the content of View C.</p>
+//         `;
+//         app.appendChild(div3);
+//     }
+// }
+
+// // addButton 클릭 시 View A 표시
+// addButton.addEventListener("click", () => {
+//     addButton.style.display = "none";
+//     modifyElement.style.display = "none";
+//     resumeList.style.display = "none";
+//     app.appendChild(createViewA()); // View A를 추가
+// });
+
+// // 이벤트 위임을 사용해 동적으로 생성된 취소 버튼 핸들링
+// document.addEventListener("click", (event) => {
+//     if (event.target.classList.contains("evtLayerClose")) {
+//         const resumeEdit = event.target.closest(".resume_edit");
+
+//         if (resumeEdit) {
+//             resumeEdit.remove();
+//         }
+
+//         // UI 상태 복원
+//         modifyElement.style.display = "flex";
+//         resumeList.style.display = "block";
+//         addButton.style.display = "block";
+//     }
+// });
+
+// const addButton = document.querySelector(".btn_add.evtWriteItem");
+// const modifyElement = document.querySelector(
+//     ".btn_modify.evtOpenLastSchoolNudge"
+// );
+// const resumeList = document.querySelector(".resume_list");
+// const app = document.getElementById("app");
+
+// // View A를 생성하는 함수
+// function createViewA() {
+//     const div1 = document.createElement("div");
+//     div1.innerHTML = `
+//         <div
+//             id="resumeSchoolItem_${Date.now()}"
+//             class="resume_edit wrapHiddenForm"
+//             data-tpl="school-item"
+//         >
+//             <div class="item_row">
+//                 <div class="InpBox SizeL item_m">
+//                     <label for="schoolType" class="blind">학력구분</label>
+//                     <select name="school_type" class="evtChangeSchoolType">
+//                         <option value="" selected>학력 구분 선택 *</option>
+//                         <option value="primary">초등학교 졸업</option>
+//                         <option value="middle">중학교 졸업</option>
+//                         <option value="high">고등학교 졸업</option>
+//                         <option value="university">대학ㆍ대학원 이상 졸업</option>
+//                         <option value="academy">기타 학력 졸업</option>
+//                     </select>
+//                 </div>
+//             </div>
+//             <div class="resume_save notCached">
+//                 <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
+//                 <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
+//             </div>
+//         </div>
+//     `;
+//     return div1;
+// }
+
+// // 특정 뷰를 표시하는 함수
+// function showView(viewName) {
+//     app.innerHTML = ""; // 기존 콘텐츠 비우기
+
+//     if (viewName === "A") {
+//         app.appendChild(createViewA()); // 새로운 View A 생성 후 추가
+//     } else if (viewName === "B") {
+//         const div2 = document.createElement("div");
+//         div2.innerHTML = `<h1>View B</h1><p>This is the content of View B.</p>`;
+//         app.appendChild(div2);
+//     } else if (viewName === "C") {
+//         const div3 = document.createElement("div");
+//         div3.innerHTML = `<h1>View C</h1><p>This is the content of View C.</p>`;
+//         app.appendChild(div3);
+//     }
+// }
+
+// // addButton 클릭 시 View A 표시
+// addButton.addEventListener("click", () => {
+//     addButton.style.display = "none";
+//     modifyElement.style.display = "none";
+//     resumeList.style.display = "none";
+//     showView("A");
+// });
+
+// // 이벤트 위임을 사용해 동적으로 생성된 취소 버튼 핸들링
+// document.addEventListener("click", (event) => {
+//     if (event.target.classList.contains("evtLayerClose")) {
+//         const resumeEdit = event.target.closest(".resume_edit");
+
+//         if (resumeEdit) {
+//             resumeEdit.remove();
+//         }
+
+//         // UI 상태 복원
+//         modifyElement.style.display = "flex";
+//         resumeList.style.display = "block";
+//         addButton.style.display = "block";
+//     }
+// });

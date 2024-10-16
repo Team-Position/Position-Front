@@ -763,6 +763,15 @@ video {
     overflow-x: auto;
     overflow-y: auto;
 }
+.layout-sections {
+    /* position: relative; */
+    /* -ms-flex: 1 1; */
+    /* flex: 1 1;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06); */
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 /* 여기서부터 user-section */
 /* ******************************************* */
 .user-admin {
@@ -1815,6 +1824,7 @@ ul {
     display: flex;
     padding-left: 0;
     height: auto;
+    justify-content: center;
 }
 
 .pagination-first,

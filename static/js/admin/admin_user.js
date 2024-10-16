@@ -18,10 +18,11 @@ menuItems.forEach((menuToggle) => {
 const subMenus = document.querySelectorAll(
     ".MenuItems_section .MenuItems_submenuContainer .MenuItems_submenu"
 );
-const sections = document.querySelectorAll("#AppLayout_Contents > section");
+const sections = document.querySelectorAll(".layout-sections  > section");
 
-// 초기 상태 설정: 첫 번째 섹션만 보이기
+// 초기 상태 첫 번째 섹션만 보이기
 sections.forEach((section, index) => {
+    //section[0]만 block 나머지는 none
     section.style.display = index === 0 ? "block" : "none";
 });
 
@@ -61,7 +62,7 @@ infoButton.addEventListener("click", () => {
                             <img src="https://static.wadiz.kr/studio/funding/static/media/default-zingugi.de76a099.svg" />
                         </span>
                     </span>
-                    <span class="ProjectInfo_makerName">석상훈</span>
+                    <span class="ProjectInfo_makerName">하민지</span>
                 </dd>
                 <dt class="BlindText_textHidden">상태</dt>
                 <dd class="ProjectInfo_content ProjectInfo_stateBox">
@@ -86,15 +87,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector(".AppLayout_expandNavButton");
     const nav = document.getElementById("AppNavbarLayout_Nav");
     const mainDiv = document.querySelector("div.AppLayout_main");
+    const layoutSections = document.querySelector(".layout-sections");
     let dividerAdded = false;
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", () => {
         button.classList.toggle("AppLayout_expand");
         nav.classList.toggle("AppNavbarLayout_expand");
 
         if (!dividerAdded) {
             const newDivider = document.createElement("div");
             newDivider.className = "AppNavbarLayout_divider";
+            layoutSections.style.marginLeft = "-20px";
             mainDiv.insertBefore(newDivider, nav);
             dividerAdded = true;
         } else {

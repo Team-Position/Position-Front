@@ -1,0 +1,269 @@
+#sri_section {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#sri_wrap {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+}
+#content {
+    position: relative;
+    z-index: 1;
+    margin: 56px auto 80px auto;
+    width: 960px;
+}
+.wrap_interview_part {
+    margin-top: -5px;
+}
+.hidden,
+.blind {
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+}
+.wrap_interview_part .area_intro {
+    overflow: hidden;
+    position: relative;
+    height: 455px;
+}
+.wrap_interview_part .area_intro .mark_img {
+    height: 455px;
+}
+.wrap_interview_part .area_intro .mark_img img {
+    height: auto;
+    min-height: 455px;
+}
+.wrap_interview_part .area_intro .box_info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 50px 30px 80px 40px;
+    width: 360px;
+    height: 455px;
+    box-sizing: border-box;
+    background: #514f5e;
+}
+.area_intro .box_info .company_name {
+    color: var(--white);
+}
+.area_intro .box_info .company_name .label_ing {
+    margin-top: -2px;
+    margin-right: 9px;
+    padding: 1px 8px 3px 8px;
+    height: 24px;
+    box-sizing: border-box;
+    color: var(--white);
+    font-size: 13px;
+    vertical-align: middle;
+    background: #f76a6a;
+}
+.area_intro .box_info .company_name .in_name {
+    display: inline-block;
+    overflow: hidden;
+    width: 215px;
+    font-size: 16px;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.area_intro .box_info .title {
+    padding-top: 9px;
+    color: var(--white);
+    font-size: 30px;
+    line-height: 42px;
+    word-break: break-all;
+}
+.area_intro .box_info .box_txt {
+    padding-top: 32px;
+    color: #e3e3e5;
+}
+.area_intro .box_info .box_txt .company_part {
+    font-size: 16px;
+}
+.area_intro .box_info .box_txt .day_line {
+    padding-top: 7px;
+}
+.area_intro .box_info .day_line span {
+    height: 12px;
+    color: #e3e3e5;
+    font-size: 14px;
+    line-height: 11px;
+}
+.day_line span.day {
+    display: inline-block;
+    position: relative;
+}
+.area_intro .box_info .day_line span.day:after {
+    top: 1px;
+    right: -12px;
+    width: 1px;
+    height: 10px;
+    background: #97959e;
+}
+.day_line span.day:after {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -8px;
+    width: 1px;
+    height: 9px;
+    background: #d1d1d1;
+    content: "";
+}
+.area_intro .box_info .day_line span.view_count {
+    padding-left: 37px;
+}
+.day_line span.view_count {
+    display: inline-block;
+    position: relative;
+    padding-left: 34px;
+}
+.area_intro .box_info .day_line span.view_count:after {
+    top: 1px;
+    background-position: 0 -13px;
+}
+.day_line span.view_count:after {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 14px;
+    width: 15px;
+    height: 10px;
+    background: url(//www.saraminimage.co.kr/sri/common/ico/ico_viewpage.png) 0
+        0 no-repeat;
+    content: "";
+}
+.area_intro .box_info .day_line .box_sns {
+    display: inline-block;
+    position: relative;
+}
+.area_intro .box_info .day_line .btn_share {
+    position: relative;
+    margin-left: 20px;
+    padding-right: 20px;
+    width: 14px;
+    height: 14px;
+    text-indent: -9999em;
+    vertical-align: middle;
+    background: url(//www.saraminimage.co.kr/sri/common/ico/ico_viewpage.png) -111px -7px
+        no-repeat;
+}
+.area_intro .box_info .day_line .list_share {
+    right: -105px;
+    width: auto;
+}
+.share_open .list_share {
+    display: block;
+}
+
+.share .list_share {
+    display: none;
+    position: absolute;
+    top: -3px;
+    right: -135px;
+    padding: 2px;
+    width: 123px;
+    height: 30px;
+    border: 1px solid #eee;
+    background-color: var(--white);
+}
+.share .list_share:before {
+    position: absolute;
+    top: 9px;
+    left: -7px;
+    width: 8px;
+    height: 13px;
+    background-position: -170px 0;
+    content: "";
+}
+.spr_rview:before,
+.spr_rview:after {
+    display: inline-block;
+    vertical-align: top;
+    background: url(//www.saraminimage.co.kr/sri/person/jobs_view/spr_rview_180330.png)
+        no-repeat;
+}
+.share .list_share li:first-child {
+    border-left: 0;
+}
+.share .list_share .spr_rview {
+    display: block;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+.share .list_share .facebook:after {
+    background-position: 0 -40px;
+}
+.share .list_share .spr_rview:after {
+    display: block;
+    width: 22px;
+    height: 22px;
+    content: "";
+}
+.spr_rview:before,
+.spr_rview:after {
+    display: inline-block;
+    vertical-align: top;
+    background: url(//www.saraminimage.co.kr/sri/person/jobs_view/spr_rview_180330.png)
+        no-repeat;
+}
+.share .list_share li {
+    float: left;
+    border-left: 1px solid #eee;
+}
+.area_intro .box_info .day_line .box_sns:after {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 1px;
+    height: 10px;
+    background: #97959e;
+    content: "";
+}
+.share .list_share .twitter:after {
+    background-position: -30px -40px;
+}
+.share .list_share .spr_rview:after {
+    display: block;
+    width: 22px;
+    height: 22px;
+    content: "";
+}
+.share .list_share .copy_url:after {
+    background-position: -60px -40px;
+}
+.share .list_share .spr_rview:after {
+    display: block;
+    width: 22px;
+    height: 22px;
+    content: "";
+}
+.list_share.visible {
+    display: block;
+}
+.area_intro .box_info .tag_line {
+    position: absolute;
+    top: 360px;
+    width: 280px;
+}
+.area_intro .box_info .tag_line a {
+    margin-right: 12px;
+    color: var(--white);
+    font-size: 13px;
+}
+.area_intro .box_info .tag_line a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}

@@ -15,6 +15,25 @@ menuItems.forEach((menuToggle) => {
         downIcon.classList.toggle("MenuItems_open");
     });
 });
+const subMenus = document.querySelectorAll(
+    ".MenuItems_section .MenuItems_submenuContainer .MenuItems_submenu"
+);
+const sections = document.querySelectorAll(".layout-sections  > section");
+
+// 초기 상태 첫 번째 섹션만 보이기
+sections.forEach((section, index) => {
+    //section[0]만 block 나머지는 none
+    section.style.display = index === 0 ? "block" : "none";
+});
+
+subMenus.forEach((subMenu, index) => {
+    subMenu.addEventListener("click", () => {
+        sections.forEach((section) => {
+            section.style.display = "none";
+        });
+        sections[index].style.display = "block"; // 해당 인덱스의 섹션만 보이기
+    });
+});
 
 // 정보 버튼 클릭 시 정보 박스 표시/숨김
 const infoButton = document.querySelector(".ProjectInfo_infoButton");
@@ -43,7 +62,7 @@ infoButton.addEventListener("click", () => {
                             <img src="https://static.wadiz.kr/studio/funding/static/media/default-zingugi.de76a099.svg" />
                         </span>
                     </span>
-                    <span class="ProjectInfo_makerName">석상훈</span>
+                    <span class="ProjectInfo_makerName">하민지</span>
                 </dd>
                 <dt class="BlindText_textHidden">상태</dt>
                 <dd class="ProjectInfo_content ProjectInfo_stateBox">
@@ -68,15 +87,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector(".AppLayout_expandNavButton");
     const nav = document.getElementById("AppNavbarLayout_Nav");
     const mainDiv = document.querySelector("div.AppLayout_main");
+    const layoutSections = document.querySelector(".layout-sections");
     let dividerAdded = false;
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", () => {
         button.classList.toggle("AppLayout_expand");
         nav.classList.toggle("AppNavbarLayout_expand");
 
         if (!dividerAdded) {
             const newDivider = document.createElement("div");
             newDivider.className = "AppNavbarLayout_divider";
+            layoutSections.style.marginLeft = "-20px";
             mainDiv.insertBefore(newDivider, nav);
             dividerAdded = true;
         } else {
@@ -157,15 +178,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "지원 합격":
                 case "면접 합격":
                 case "인턴십 수료":
+                case "작성 완료":
+                case "신고 접수":
                     statusCell.style.color = "var(--blue90)";
                     break;
                 case "지원 취소":
                 case "면접 취소":
                 case "인턴십 미수료":
+                case "작성 예정":
                     statusCell.style.color = "var(--gray50)";
                     break;
                 case "지원 불합격":
                 case "면접 불합격":
+                case "처리 완료":
                     statusCell.style.color = "red";
                     break;
                 default:
@@ -187,6 +212,46 @@ document.addEventListener("DOMContentLoaded", () => {
                     statusCell.style.color = "var(--blue90)";
                     break;
                 case "채용 마감":
+                    statusCell.style.color = "var(--gray50)";
+                    break;
+
+                default:
+                    statusCell.style.color = "black"; // 기본 색상
+                    break;
+            }
+        }
+    });
+    // 결제 완료, 결제 취소 글자 색
+    document.querySelectorAll(".paymentTable_row").forEach((row) => {
+        const statusCell = row.querySelector(".paymentTable_cell:nth-child(8)");
+        if (statusCell) {
+            const statusText = statusCell.textContent.trim();
+
+            switch (statusText) {
+                case "결제 완료":
+                    statusCell.style.color = "var(--blue90)";
+                    break;
+                case "결제 취소":
+                    statusCell.style.color = "var(--gray50)";
+                    break;
+
+                default:
+                    statusCell.style.color = "black"; // 기본 색상
+                    break;
+            }
+        }
+    });
+    // 답변 예정, 답변 완료 취소 글자 색
+    document.querySelectorAll(".inquiryTable_row").forEach((row) => {
+        const statusCell = row.querySelector(".inquiryTable_cell:nth-child(8)");
+        if (statusCell) {
+            const statusText = statusCell.textContent.trim();
+
+            switch (statusText) {
+                case "답변 예정":
+                    statusCell.style.color = "var(--blue90)";
+                    break;
+                case "답변 완료":
                     statusCell.style.color = "var(--gray50)";
                     break;
 

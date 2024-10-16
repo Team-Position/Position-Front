@@ -835,3 +835,386 @@ h4{
     border: 1px solid #8491a7;
     background-color: #eff5ff;
 }
+
+.write_base .item .TypoBox.invalid {
+    border-color: #dc3434;
+}
+
+.flexbox.row_reverse {
+    flex-direction: row-reverse;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.flexbox .BtnType {
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.area_job_category {
+    position: relative;
+    padding: 2px 12px 12px;
+    min-height: 48px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flexbox .form_typobox {
+    width: 100%;
+}
+
+.area_job_category {
+    position: relative;
+    padding: 2px 12px 12px;
+    min-height: 48px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form_placeholder {
+    display: inline-block;
+    color: var(--gray90);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.area_job_category .form_placeholder {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.form_typobox {
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.area_corp_certification .file_upload_next .file_txt_guide3 {
+    margin-top: 18px;
+}
+
+.area_corp_certification .file_txt_guide3 {
+    color: var(--gray100);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.layer_pop_manage .layer_manage_wrap {
+    position: relative;
+    z-index: 100;
+    padding: 25px 30px 30px;
+}
+
+.layer_pop_manage .layer_manage_wrap h4 {
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.layer_hope .area_search_job {
+    margin-bottom: 16px;
+    padding-top: 25px;
+    height: 83px;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.area_search_job {
+    font-size: 13px;
+}
+
+.layer_hope .area_search_job .title_search_job {
+    display: inline-block;
+    margin-right: 20px;
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.layer_hope .area_search_job .sri_input {
+    width: 428px;
+    box-sizing: border-box;
+}
+
+.sri_input[type="text"] {
+    margin-right: 6px;
+    padding: 0 11px 1px 11px;
+    height: 32px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    line-height: 28px;
+    vertical-align: middle;
+    background: #fff;
+}
+
+.layer_pop_manage .txt {
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.layer_hope .area_table_scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 380px;
+    border-top: 1px solid #444;
+}
+
+.sub_depth {
+    margin-top: -1px;
+    border-top: 1px solid #eaeaea;
+}
+
+.sub_depth .title_sub_depth {
+    display: table-cell;
+    padding: 0 0 0 20px;
+    width: 120px;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    background-color: #f7f7f7;
+}
+
+.sub_depth2 {
+    display: table-cell;
+    padding: 6px 0 15px 15px;
+    width: 486px;
+    border-bottom: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
+}
+
+.list_depth2 {
+    background-color: #fff;
+}
+
+.list_depth2 .item_depth2 {
+    float: left;
+    margin-top: 6px;
+    width: 151px;
+    vertical-align: top;
+}
+
+.sri_check.small {
+    height: 15px;
+}
+
+.sri_check {
+    display: inline-block;
+    position: relative;
+    height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.sri_check .inp_check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    outline: 0;
+    opacity: 0.01;
+    filter: alpha(opacity = 0.1);
+}
+.sri_check.small .inp_check {
+    top: 1px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: -1px;
+}
+
+.sri_radio.small .txt_check {
+    background-position: 0 -299px;
+}
+
+.sri_check.small .txt_check {
+    padding: 0 7px 0 20px;
+    height: 15px;
+    font-size: 12px;
+    line-height: 12px;
+    background-position: 0 -99px;
+}
+
+.sri_check .txt_check {
+    display: block;
+    padding: 0 7px 0 29px;
+    height: 18px;
+    color: #444;
+    font-size: 13px;
+    line-height: 15px;
+    background: url(//www.saraminimage.co.kr/ui/form/ico_checkbox.png) 0 0 no-repeat;
+}
+
+.layer_pop_manage.layer_hope {
+    margin: 0 0 0 -0;
+    padding: 0;
+    width: 684px;
+}
+
+.layer_pop_manage {
+    top: 0;
+    left: 50%;
+    width: 630px;
+    transform: translate(-50%, -50%);
+}
+
+.layer_pop_manage {
+    position: absolute;
+    left: 50%;
+    z-index: 102;
+    padding: 35px 30px 30px;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+legend, caption {
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+body, input, button, textarea, select, table {
+    line-height: 1.0;
+}
+
+.sri_radio.small.check_on .txt_check {
+    background-position: 0 -349px;
+}
+
+.sub_depth3 {
+    position: relative;
+    margin: 13px 0 14px;
+    border: 1px solid #bdc5f3;
+    background-color: #f8f9ff;
+}
+
+.sub_depth3 .title_sub_depth3 {
+    display: inline-block;
+    padding: 18px 0 0 20px;
+    color: #566feb;
+    font-size: 13px;
+}
+
+.sub_depth3 .title_sub_depth3 {
+    display: inline-block;
+    padding: 18px 0 0 20px;
+    color: #566feb;
+    font-size: 13px;
+}
+
+.sub_depth3 .list_depth3 {
+    padding: 0 0 20px 20px;
+}
+
+.sub_depth3 .list_depth3 .item_depth3 {
+    float: left;
+    margin-top: 6px;
+    width: 145px;
+    vertical-align: top;
+}
+
+.sri_check.small {
+    height: 15px;
+}
+
+.sub_depth3 .list_depth3 {
+    padding: 0 0 20px 20px;
+}
+
+.sub_depth3 .list_depth3:after {
+    display: table;
+    clear: both;
+    content: "";
+    table-layout: fixed;
+}
+
+.list_depth2:after {
+    display: table;
+    clear: both;
+    content: "";
+    table-layout: fixed;
+}
+
+.sub_depth3:after {
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -8px;
+    width: 16px;
+    height: 10px;
+    background: url(//www.saraminimage.co.kr/sri/person/ico/ico_tooltip_tail_top.png) 0 0 no-repeat;
+    content: "";
+}
+
+.sub_depth .title_sub_depth {
+    display: table-cell;
+    padding: 0 0 0 20px;
+    width: 120px;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    background-color: #f7f7f7;
+}
+
+.sri_check.small.check_on .txt_check {
+    background-position: 0 -149px;
+}
+
+.write_base .item .pass_box .field_eye.on:before {
+    background: url(/static/images/join/oneye.svg) no-repeat;
+}
+
+.write_base .item .pass_box .field_eye:before {
+    display: inline-block;
+    width: 28px;
+    height: 20px;
+    background: url(/static/images/join/eye.svg) no-repeat;
+    content: "";
+}
+
+.write_base .item .pass_box .field_eye {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    height: 50px;
+    line-height: 54px;
+}
+
+button {
+    overflow: visible;
+    background-color: transparent;
+}
+

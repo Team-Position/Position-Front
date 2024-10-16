@@ -142,10 +142,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// (+)버튼 row-item을 클릭하면 expend 클래스를 토글하는 이벤트 리스너
-document.querySelectorAll(".row-item").forEach(function (item) {
-    item.addEventListener("click", function () {
-        // 클릭된 row-item에 expend 클래스 토글
-        item.classList.toggle("expend");
+// 버튼 클릭 이벤트 리스너 등록
+document
+    .querySelector(".interview-write-btn-expand")
+    .addEventListener("click", function () {
+        // dl 태그에 expand 클래스 토글
+        const dlElement = document.querySelector(".interview-write-row-item");
+        dlElement.classList.toggle("expand");
+
+        // div.interview-write-box-onedepth에 on 클래스 토글
+        const boxOnedepth = document.querySelector(
+            ".interview-write-box-onedepth"
+        );
+        boxOnedepth.classList.toggle("on");
+
+        // div.interview-write-row.interview-write-list에 on 클래스 토글
+        const rowList = document.querySelector(
+            ".interview-write-row.interview-write-list"
+        );
+        rowList.classList.toggle("on");
     });
-});
+
+// const listItems = document.querySelectorAll(".interview-write-item-job");
+
+// // 각 리스트 아이템에 클릭 이벤트 추가
+// listItems.forEach(function (item) {
+//     item.addEventListener("click", function () {
+//         // 현재 클릭한 리스트에 'on' 클래스 토글
+//         this.classList.toggle("on");
+//     });
+// });

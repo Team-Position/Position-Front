@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>매칭 페이지</title>
+    </head>
+    <body>
+        <div id="sri_wrap">
+            <div id="content">
+                <div class="wrap_title_recruit">
+                    <h1 class="title_common">직업별(직무)</h1>
+                </div>
+                <div
+                    id="search_panel_wrapper"
+                    class="recruit_search_panel job-category"
+                >
+                    <form
+                        action=""
+                        id="search_panel_form"
+                        name="serch_panel_form"
+                    >
+                        <fieldset>
+                            <div id="sp_main_wrapper" class="wrap_main_panel">
+                                <div class="main_option">
+                                    <ul class="tab_section">
+                                        <li class="category_section on">
+                                            <button
+                                                type="button"
+                                                class="btn_job_category btn_open_layer"
+                                            >
+                                                <span class="input_placeholder"
+                                                    >직업 선택</span
+                                                >
+                                                <span class="input_text"></span>
+                                            </button>
+                                        </li>
+                                        <li class="area_section">
+                                            <button
+                                                type="button"
+                                                class="btn_area btn_open_layer"
+                                            >
+                                                <span class="input_placeholder"
+                                                    >지역 선택</span
+                                                >
+                                                <span class="input_text"></span>
+                                            </button>
+                                        </li>
+                                        <li class="keyword_section">
+                                            <button
+                                                type="button"
+                                                class="btn_keyword btn_open_layer keyword"
+                                            >
+                                                <span class="input_placeholder"
+                                                    >검색어 입력</span
+                                                >
+                                                <span class="input_text"></span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <div class="wrap_section_contents">
+                                        <div
+                                            class="option_content job_category_section"
+                                        >
+                                            <h2 class="blind">직업 선택</h2>
+                                            <div class="select_keyword">
+                                                <div class="wrap_auto_keyword">
+                                                    <span class="ipt_keyword">
+                                                        <label
+                                                            for="job_category_ipt_keyword"
+                                                            class="blind"
+                                                            >직업(직무) 또는
+                                                            전문분야 입력</label
+                                                        >
+                                                        <input
+                                                            type="text"
+                                                            name="cat"
+                                                            id="job_category_ipt_keyword"
+                                                            placeholder="직업(직무) 또는 전문분야 입력"
+                                                            autocomplete="off"
+                                                        />
+                                                        <button
+                                                            type="button"
+                                                            class="btn_delete"
+                                                        >
+                                                            삭제
+                                                        </button>
+                                                    </span>
+                                                    <!-- 검색어가 있을 때 ,display:none 됐다가 block 됐다가 함 -->
+                                                    <div
+                                                        class="wrap_result has_result"
+                                                        id="autocomplete_has_result"
+                                                        style="display: block"
+                                                    >
+                                                        <div
+                                                            class="wrap_scroll"
+                                                            style="
+                                                                height: 183px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="ScrollBar"
+                                                            >
+                                                                <div
+                                                                    class="track"
+                                                                >
+                                                                    <div
+                                                                        class="thumb"
+                                                                    >
+                                                                        <div
+                                                                            class="end"
+                                                                        ></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="viewport"
+                                                            >
+                                                                <div
+                                                                    class="overview"
+                                                                    style="
+                                                                        top: 0px;
+                                                                    "
+                                                                >
+                                                                    <!-- keyword 꽂혀야됨 -->
+                                                                    <ul
+                                                                        class="list_keyword"
+                                                                    ></ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="area_btn">
+                                                            <button
+                                                                type="button"
+                                                                class="btn_close"
+                                                            >
+                                                                닫기
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 검색어가 없을때, display:none 시켜야됨 -->
+                                                    <div
+                                                        class="wrap_result has_result"
+                                                        id="autocomplete_no_result"
+                                                        style="display: block"
+                                                    >
+                                                        <p class="empty">
+                                                            검색결과가 없습니다.
+                                                        </p>
+                                                        <div class="area_btn">
+                                                            <button
+                                                                type="button"
+                                                                class="btn_close"
+                                                            >
+                                                                닫기
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 카테고리 depth -->
+                                            <div class="details">
+                                                <h4 class="blind">
+                                                    카테고리 선택
+                                                </h4>
+                                                <div class="box_jobs">
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        기획·전략
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        마케팅·홍보·조사
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        회계·세무·재무
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        인사·노무·HRD
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        총무·법무·사무
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        IT개발·데이터
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        디자인
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        영업·판매·무역
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        고객상담·TM
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        구매·자재·물류
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        상품기획·MD
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        운전·운송·배송
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        서비스
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        생산
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        건설·건축
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        의료
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        연구·R&D
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        교육
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        미디어·문화·스포츠
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        금융·보험
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn_job"
+                                                        data-mcls_cd_no="16"
+                                                    >
+                                                        공공·복지
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="box_detail_jobs"
+                                                    style="display: none"
+                                                >
+                                                    <div
+                                                        class="box_onedepth"
+                                                        style="height: 202px"
+                                                    >
+                                                        <div
+                                                            class="wrap_scroll"
+                                                        >
+                                                            <div
+                                                                class="scrollbar"
+                                                                style="
+                                                                    height: 202px;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="track"
+                                                                    style="
+                                                                        height: 202px;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="thumb"
+                                                                        style="
+                                                                            top: 0px;
+                                                                            height: 48.5762px;
+                                                                        "
+                                                                    >
+                                                                        <div
+                                                                            class="end"
+                                                                        ></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="viewport"
+                                                            >
+                                                                <ul
+                                                                    class="list overview"
+                                                                    style="
+                                                                        top: 0px;
+                                                                    "
+                                                                >
+                                                                    <!-- list 예시 -->
+                                                                    <li
+                                                                        class="item_job depth1_btn_wrapper on"
+                                                                        id="depth1_btn_16"
+                                                                    >
+                                                                        <button
+                                                                            type="button"
+                                                                            data-mcls_cd_no="16"
+                                                                            class="first_depth depth1_btn_16"
+                                                                        >
+                                                                            <span
+                                                                                class="txt"
+                                                                                >기획·전략
+                                                                            </span>
+                                                                            <span
+                                                                                class="count"
+                                                                                >(10,857)</span
+                                                                            >
+                                                                        </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="box_detail_depth on"
+                                                        id="sp_job_category_subDepth_16"
+                                                        style="display: block"
+                                                    >
+                                                        <div
+                                                            class="row row_all_select"
+                                                        >
+                                                            <input
+                                                                type="checkbox"
+                                                                id="all_check_onedepth_16"
+                                                                name="기획·전략"
+                                                                class="select_all"
+                                                                data-code="16"
+                                                            />
+                                                            <label
+                                                                for="all_check_onedepth_16"
+                                                            >
+                                                                <span
+                                                                    >기획·전략
+                                                                    전체선택</span
+                                                                >
+                                                            </label>
+                                                        </div>
+                                                        <div
+                                                            class="row list"
+                                                            style="
+                                                                height: 162px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="wrap_scroll"
+                                                            >
+                                                                <div
+                                                                    class="scrollbar disable"
+                                                                    style="
+                                                                        height: 162px;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="track"
+                                                                        style="
+                                                                            height: 162px;
+                                                                        "
+                                                                    >
+                                                                        <div
+                                                                            class="thumb"
+                                                                            style="
+                                                                                height: 162px;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="end"
+                                                                            ></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="viewport"
+                                                                >
+                                                                    <div
+                                                                        class="overview"
+                                                                        style="
+                                                                            top: 0px;
+                                                                        "
+                                                                    >
+                                                                        <dl
+                                                                            class="row_item"
+                                                                        >
+                                                                            <dt>
+                                                                                <button
+                                                                                    type="button"
+                                                                                    class="btn_expand"
+                                                                                >
+                                                                                    <span
+                                                                                        class="txt"
+                                                                                        >직무·직업</span
+                                                                                    >
+                                                                                    <!-- after -->
+                                                                                </button>
+                                                                            </dt>
+                                                                            <dd
+                                                                                class="area_list"
+                                                                            ></dd>
+                                                                        </dl>
+                                                                        <dl
+                                                                            class="row_item"
+                                                                        >
+                                                                            <dt>
+                                                                                <button
+                                                                                    type="button"
+                                                                                    class="btn_expand"
+                                                                                >
+                                                                                    <span
+                                                                                        class="txt"
+                                                                                        >전문분야</span
+                                                                                    >
+                                                                                    <!-- after -->
+                                                                                </button>
+                                                                            </dt>
+                                                                            <dd
+                                                                                class="area_list"
+                                                                            ></dd>
+                                                                        </dl>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- after -->
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="option_content area_section"
+                                        >
+                                            <h2 class="blind">지역 선택</h2>
+                                            <div class="select_keyword"></div>
+                                        </div>
+                                        <div
+                                            class="option_content keyword_section"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="bg"></div>
+                                <div
+                                    id="sp_preview"
+                                    class="wrap_search_result preview_v2 resetting"
+                                ></div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -23,7 +23,7 @@
         url(/static/fonts/Pretendard-Regular.subset.woff) format("woff");
 }
 
-:root {
+html {
     --black: #000;
     --white: #fff;
     --blue10: #f7fafe;

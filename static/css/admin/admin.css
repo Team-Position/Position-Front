@@ -763,6 +763,15 @@ video {
     overflow-x: auto;
     overflow-y: auto;
 }
+.layout-sections {
+    /* position: relative; */
+    /* -ms-flex: 1 1; */
+    /* flex: 1 1;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06); */
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 /* 여기서부터 user-section */
 /* ******************************************* */
 .user-admin {
@@ -1265,8 +1274,262 @@ video {
     opacity: 0.8;
 }
 /* section style 끝 */
-/* modal 창 */
+/* payment */
+/* 여기서부터 payment-section */
+/* ******************************************* */
+.common-section {
+    padding: 40px 66px;
+    display: flex;
+    flex-direction: column;
+}
 
+/* payment Table Styles */
+.CommonLayout_container {
+    width: 1400px;
+}
+.paymentTable_container {
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    display: table; /* 테이블처럼 보이도록 설정 */
+    table-layout: fixed; /* 모든 열이 지정된 비율에 맞게 크기를 고정 */
+    text-align: center;
+}
+
+.paymentTable_row {
+    display: table-row;
+    width: 100%;
+    border: 1px solid #dee2e6;
+}
+
+.paymentTable_cell {
+    display: table-cell;
+    box-sizing: border-box; /* padding과 border를 포함한 크기 조정 */
+    padding: 8px; /* 셀 내용과 셀 경계 사이의 간격 */
+    vertical-align: middle; /* 내용이 수직으로 가운데 정렬되도록 */
+    border-bottom: 1px solid #dee2e6; /* 셀 아래 테두리 */
+}
+.paymentTable_header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 8px 8px 0 0 !important; /*헤더 아래 테두리*/
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.paymentTable_cell input[type="checkbox"] {
+    margin: 0 auto;
+}
+
+/* 기존의 너비 설정 유지 */
+/* 체크박스 열 */
+.payment-headerCell:nth-child(1),
+.paymentTable_cell:nth-child(1) {
+    width: 3%;
+}
+
+/* 첫번째 열 */
+.payment-headerCell:nth-child(2),
+.paymentTable_cell:nth-child(2) {
+    width: 12%;
+}
+
+/* 두번째 열 */
+.payment-headerCell:nth-child(3),
+.paymentTable_cell:nth-child(3) {
+    width: 12%;
+}
+
+/* 세번째 열 */
+.payment-headerCell:nth-child(4),
+.paymentTable_cell:nth-child(4) {
+    width: 17%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 네번째 열 */
+.payment-headerCell:nth-child(5),
+.paymentTable_cell:nth-child(5) {
+    width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 다섯번째 열 */
+.payment-headerCell:nth-child(6),
+.paymentTable_cell:nth-child(6) {
+    width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 여섯번째 열 */
+.payment-headerCell:nth-child(7),
+.paymentTable_cell:nth-child(7) {
+    width: 18%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 일곱 열 */
+.payment-headerCell:nth-child(8),
+.paymentTable_cell:nth-child(8) {
+    width: 8%;
+}
+/* 마지막 열 */
+.payment-headerCell:nth-child(9),
+.paymentTable_cell:nth-child(9) {
+    width: 8%;
+}
+
+/* 수정 버튼 */
+.editBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 70%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.editBtn:hover {
+    opacity: 0.8;
+}
+/* section style 끝 */
+/* inquiry */
+/* 여기서부터 inquiry-section */
+/* ******************************************* */
+.common-section {
+    padding: 40px 66px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Post Table Styles */
+.CommonLayout_container {
+    width: 1400px;
+}
+.inquiryTable_container {
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    display: table; /* 테이블처럼 보이도록 설정 */
+    table-layout: fixed; /* 모든 열이 지정된 비율에 맞게 크기를 고정 */
+    text-align: center;
+}
+
+.inquiryTable_row {
+    display: table-row;
+    width: 100%;
+    border: 1px solid #dee2e6;
+}
+
+.inquiryTable_cell {
+    display: table-cell;
+    box-sizing: border-box; /* padding과 border를 포함한 크기 조정 */
+    padding: 8px; /* 셀 내용과 셀 경계 사이의 간격 */
+    vertical-align: middle; /* 내용이 수직으로 가운데 정렬되도록 */
+    border-bottom: 1px solid #dee2e6; /* 셀 아래 테두리 */
+}
+.inquiryTable_header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 8px 8px 0 0 !important; /*헤더 아래 테두리*/
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.inquiryTable_cell input[type="checkbox"] {
+    margin: 0 auto;
+}
+
+/* 기존의 너비 설정 유지 */
+/* 체크박스 열 */
+.inquiry-headerCell:nth-child(1),
+.inquiryTable_cell:nth-child(1) {
+    width: 3%;
+}
+
+/* 첫번째 열 */
+.inquiry-headerCell:nth-child(2),
+.inquiryTable_cell:nth-child(2) {
+    width: 10%;
+}
+
+/* 두번째 열 */
+.inquiry-headerCell:nth-child(3),
+.inquiryTable_cell:nth-child(3) {
+    width: 10%;
+}
+
+/* 세번째 열 */
+.inquiry-headerCell:nth-child(4),
+.inquiryTable_cell:nth-child(4) {
+    width: 17%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 네번째 열 */
+.inquiry-headerCell:nth-child(5),
+.inquiryTable_cell:nth-child(5) {
+    width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 다섯번째 열 */
+.inquiry-headerCell:nth-child(6),
+.inquiryTable_cell:nth-child(6) {
+    width: 12%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 여섯번째 열 */
+.inquiry-headerCell:nth-child(7),
+.inquiryTable_cell:nth-child(7) {
+    width: 13%;
+}
+
+/* 일곱 열 */
+.inquiry-headerCell:nth-child(8),
+.inquiryTable_cell:nth-child(8) {
+    width: 8%;
+}
+/* 마지막 열 */
+.inquiry-headerCell:nth-child(9),
+.inquiryTable_cell:nth-child(9) {
+    width: 8%;
+}
+
+/* 수정 버튼 */
+.editBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 70%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.editBtn:hover {
+    opacity: 0.8;
+}
+/* section style 끝 */
+/* modal 창 */
 /* Modal Styles */
 @keyframes popUp {
     from {
@@ -1561,6 +1824,7 @@ ul {
     display: flex;
     padding-left: 0;
     height: auto;
+    justify-content: center;
 }
 
 .pagination-first,

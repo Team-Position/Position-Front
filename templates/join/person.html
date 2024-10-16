@@ -183,9 +183,8 @@
                                                 </div>
                                                 <p
                                                     class="alert_column focus_txt"
-                                                    id="password1FocusMsg
-                                                "
-                                                    style="display: block"
+                                                    id="password1FocusMsg"
+                                                    style="display: none"
                                                 >
                                                     8~16자리 영문 대소문자,
                                                     숫자, 특수문자 중 3가지 이상
@@ -232,6 +231,19 @@
                                                 >
                                                     인증요청
                                                 </button>
+                                                <div
+                                                    class="TypoBox"
+                                                    id="sms_cellnum_area"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="sms_cellnum"
+                                                        name="tmp_cellnum"
+                                                        class="Typo SizeL join_input defalt"
+                                                        readonly=""
+                                                    />
+                                                </div>
                                                 <p
                                                     class="alert_column good_txt"
                                                     id="sms_cellnum_desc"
@@ -244,7 +256,8 @@
                                             <!-- 이름 -->
                                             <div
                                                 class="item identify_phone_complete"
-                                                style=""
+                                                id="name"
+                                                style="display: none"
                                             >
                                                 <label for="user_nm" class="on"
                                                     ><strong
@@ -263,7 +276,8 @@
                                             <!-- 생년월일 -->
                                             <div
                                                 class="item identify_phone_complete"
-                                                style=""
+                                                id="birth"
+                                                style="display: none"
                                             >
                                                 <label
                                                     for="birth_date"
@@ -671,9 +685,8 @@
                                         <button
                                             type="button"
                                             id="btn_submit"
-                                            class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete"
+                                            class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete is-disabled"
                                             data-ga_data_layer="ga_lead|member_join|join_pc|step_2"
-                                            disabled="disabled"
                                         >
                                             회원가입 완료
                                         </button>

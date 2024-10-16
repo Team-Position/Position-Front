@@ -1,6 +1,6 @@
 body {
     position: relative;
-    padding-top: 0;
+    padding-top: 30px;
     min-width: 1295px;
     box-sizing: border-box;
 }
@@ -39,7 +39,7 @@ article {
 
 #header:before {
     position: absolute;
-    top: 80px;
+    top: 70px;
     right: 0;
     left: 0;
     z-index: 1;

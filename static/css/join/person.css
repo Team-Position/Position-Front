@@ -227,14 +227,14 @@ button {
 }
 
 .write_base .item .pass_box .field_eye.on:before {
-    background: url(/static/images/join/oneye.svg) no-repeat;
+    background: url(/static/images/join/eye.svg) no-repeat;
 }
 
 .write_base .item .pass_box .field_eye:before {
     display: inline-block;
     width: 28px;
     height: 20px;
-    background: url(/static/images/join/eye.svg) no-repeat;
+    background: url(/static/images/join/oneye.svg) no-repeat;
     content: "";
 }
 
@@ -561,15 +561,7 @@ input[type="checkbox"], input[type="radio"] {
     padding-bottom: 100px;
 }
 
-[class*="BtnType"]:disabled, [class*="BtnType"].disabled {
-    cursor: default;
-}
 
-[class*="BtnType"].disabled, [class*="BtnType"].disabled:hover, [class*="BtnType"]:disabled, [class*="BtnType"]:disabled:hover {
-    border-color: var(--gray40) !important;
-    color: var(--gray50) !important;
-    background-color: var(--gray20) !important;
-}
 
 .btn_join button {
     width: 100%;
@@ -724,4 +716,53 @@ input[type="checkbox"], input[type="radio"] {
     color: #2d65f2;
     background: url(/static/images/join/infoOn.svg) 0 50% no-repeat;
     background-size: 14px 14px;
+}
+
+.write_base .item .auto_list_area {
+    display: none;
+    overflow-y: auto;
+    position: absolute;
+    top: 96px;
+    z-index: 1000;
+    margin-top: 8px;
+    padding: 9px 24px;
+    width: 100%;
+    max-height: 199px;
+    border: 1px solid #d7dce5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.write_base .item .auto_list_area .auto_list a {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.write_base .item .auto_list_area .auto_list .txt_input {
+    color: #4876ef;
+}
+
+/* 비활성화 상태 */
+.BtnType.is-disabled {
+    border-color: var(--gray40) !important;
+    color: var(--gray50) !important;
+    background-color: var(--gray20) !important;
+    cursor: not-allowed; /* 금지 커서 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+/* 활성화 상태 */
+.BtnType {
+    border: 1px solid var(--blue90);
+    color: var(--white);
+    background-color: var(--blue90);
+    cursor: pointer; /* 활성화 상태에서 포인터 커서 */
+}
+
+.TypoBox:has(.Typo:read-only) {
+    border-color: var(--gray40);
+    background: var(--gray20);
 }

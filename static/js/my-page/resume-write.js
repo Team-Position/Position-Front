@@ -291,6 +291,13 @@ addButton.addEventListener("click", () => {
 
 // 동적 취소 버튼 이벤트 처리
 document.addEventListener("click", (event) => {
+    // 체크박스 상태 설정
+    const checkboxN = document.getElementById("qualificationN_1729062897407");
+    const checkboxY = document.getElementById("qualificationY_1729080866918");
+
+    // 항상 초기 상태로 설정
+    if (checkboxN) checkboxN.checked = false; // 첫 번째 체크박스: 항상 해제
+    if (checkboxY) checkboxY.checked = true; // 두 번째 체크박스: 항상 선택
     if (event.target.classList.contains("evtLayerClose")) {
         const resumeEdit = event.target.closest(".resume_edit");
         if (resumeEdit) resumeEdit.remove();

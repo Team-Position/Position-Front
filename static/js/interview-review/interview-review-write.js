@@ -1,7 +1,7 @@
 // 버튼 클릭 시 on 클래스 토글
 document
     .getElementById("interview-write-selected-job")
-    .addEventListener("click", (e) => {
+    .addEventListener("click", function () {
         // 대상 요소 선택
         const targetElement = document.querySelector(
             ".interview-write-option-content.interview-write-job-category-section"
@@ -2520,31 +2520,74 @@ const categorys = {
 
 // 대분류 카테고리만 반복
 // forEach 다음에는 변수명 선언..
-// 대카테고리에 클릭이벤트
+// 대카테고리에 클릭이벤트, 클릭이벤트 2번
+
+// let text = ``;
+// Object.keys(categorys).forEach((category) => {
+//     text += `
+//       <li class="item_job depth1_btn_wrapper">
+//         <button type="button" class="first_depth">
+//           <span class="txt">${category}</span>
+//         </button>
+//       </li>
+//     `;
+// });
+
+// console.log(text);
+
+// Object.keys(categorys).forEach((mainCategory) => {
+//     console.log(`대분류 카테고리: ${mainCategory}`);
+
+//     // 하위 항목들 (직무·직업, 전문분야 등) 출력
+//     Object.keys(categorys[mainCategory]).forEach((subCategory) => {
+//         console.log(` 중카테고리: ${subCategory}`);
+
+//         // 각 하위 카테고리에 속하는 세부 항목들 출력
+//         categorys[mainCategory][subCategory].forEach((item) => {
+//             console.log(` 소카테고리: ${item}`);
+//         });
+//     });
+// });
+
+// Object.keys(categorys).forEach((mainCategory) => {
+//     console.log(mainCategory);
+// });
 
 let text = ``;
-Object.keys(categorys).forEach((category) => {
+Object.keys(categorys).forEach((categoryA) => {
     text += `
-      <li class="item_job depth1_btn_wrapper">
-        <button type="button" class="first_depth">
-          <span class="txt">${category}</span>
-        </button>
-      </li>
-    `;
-});
-
-console.log(text);
-
-Object.keys(categorys).forEach((mainCategory) => {
-    console.log(`대분류 카테고리: ${mainCategory}`);
-
-    // 하위 항목들 (직무·직업, 전문분야 등) 출력
-    Object.keys(categorys[mainCategory]).forEach((subCategory) => {
-        console.log(` 중카테고리: ${subCategory}`);
-
-        // 각 하위 카테고리에 속하는 세부 항목들 출력
-        categorys[mainCategory][subCategory].forEach((item) => {
-            console.log(` 소카테고리: ${item}`);
+            <li
+                class="interview-write-item-job interview-write-depth1-btn-wrapper on"
+                data-mcls-cd-no="16"
+            >
+                <button
+                    type="button"
+                    data-mcls-cd-no="16"
+                    class="interview-write-first-depth"
+                >
+                    <span
+                        class="interview-write-txt"
+                        >${categoryA}</span
+                    >
+                </button>
+            </li>
+                `;
+    Object.keys(categorys[categoryA]).forEach((categoryB) => {
+        text += `
+                    <dt>
+                        <button>
+                            <span>${categoryB}</span>
+                        </button>
+                    </dt>
+                `;
+        categorys[categoryA][categoryB].forEach((categoryC) => {
+            text += `
+                    <dd>
+                        <button>${categoryC}</button>
+                    </dd>
+                `;
         });
     });
 });
+
+console.log(text);

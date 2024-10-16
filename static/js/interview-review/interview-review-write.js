@@ -2548,7 +2548,3 @@ Object.keys(categorys).forEach((mainCategory) => {
         });
     });
 });
-
-Object.keys(categorys).forEach((mainCategory) => {
-    console.log(mainCategory);
-});

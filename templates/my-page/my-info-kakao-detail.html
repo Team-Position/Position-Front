@@ -372,6 +372,115 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                <tr class="field">
+                                                    <th scope="row">주소</th>
+                                                    <td>
+                                                        <div class="field_body">
+                                                            <b
+                                                                id="view_address"
+                                                            >
+                                                                서울특별시
+                                                                강남구 테헤란로
+                                                                123</b
+                                                            >
+                                                            <span
+                                                                class="empty"
+                                                                id="view_address_empty"
+                                                                style="
+                                                                    display: none;
+                                                                "
+                                                            >
+                                                                주소를
+                                                                입력해주세요.</span
+                                                            >
+                                                        </div>
+
+                                                        <div
+                                                            class="field_body inactive"
+                                                        >
+                                                            <div
+                                                                class="input_group"
+                                                            >
+                                                                <div
+                                                                    class="TypoBox address"
+                                                                >
+                                                                    <label
+                                                                        class="blind"
+                                                                        for="select_address1"
+                                                                        >기본
+                                                                        주소</label
+                                                                    >
+                                                                    <input
+                                                                        type="text"
+                                                                        name="select_address1"
+                                                                        id="select_address1"
+                                                                        class="Typo"
+                                                                        placeholder="기본 주소"
+                                                                        value=""
+                                                                    />
+                                                                </div>
+                                                                <div
+                                                                    class="TypoBox address"
+                                                                >
+                                                                    <label
+                                                                        class="blind"
+                                                                        for="select_address2"
+                                                                        >상세
+                                                                        주소</label
+                                                                    >
+                                                                    <input
+                                                                        type="text"
+                                                                        name="select_address2"
+                                                                        id="select_address2"
+                                                                        class="Typo"
+                                                                        placeholder="상세 주소"
+                                                                        value=""
+                                                                    />
+                                                                </div>
+                                                                <!-- 서버에서 사용자 주소 가져오기 -->
+                                                                <input
+                                                                    type="hidden"
+                                                                    id="org_select_postcode"
+                                                                    value="12345"
+                                                                />
+                                                                <input
+                                                                    type="hidden"
+                                                                    id="org_select_address1"
+                                                                    value="서울특별시 강남구 테헤란로"
+                                                                />
+                                                                <input
+                                                                    type="hidden"
+                                                                    id="org_select_address2"
+                                                                    value="123"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div class="field_btn">
+                                                            <button
+                                                                type="button"
+                                                                class="BtnType SizeS btn_modify"
+                                                                data-type="address"
+                                                            >
+                                                                수정
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                id="btnAddress"
+                                                                class="BtnType SizeS btn_confirm"
+                                                                disabled=""
+                                                            >
+                                                                확인
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                class="BtnType SizeS btn_modify_cancel"
+                                                                disabled=""
+                                                            >
+                                                                취소
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>

@@ -2520,20 +2520,20 @@ const categorys = {
 
 // 대분류 카테고리만 반복
 // forEach 다음에는 변수명 선언..
-// 대카테고리에 클릭이벤트
+// 대카테고리에 클릭이벤트, 클릭이벤트 2번
 
-let text = ``;
-Object.keys(categorys).forEach((category) => {
-    text += `
-      <li class="item_job depth1_btn_wrapper">
-        <button type="button" class="first_depth">
-          <span class="txt">${category}</span>
-        </button>
-      </li>
-    `;
-});
+// let text = ``;
+// Object.keys(categorys).forEach((category) => {
+//     text += `
+//       <li class="item_job depth1_btn_wrapper">
+//         <button type="button" class="first_depth">
+//           <span class="txt">${category}</span>
+//         </button>
+//       </li>
+//     `;
+// });
 
-console.log(text);
+// console.log(text);
 
 Object.keys(categorys).forEach((mainCategory) => {
     console.log(`대분류 카테고리: ${mainCategory}`);
@@ -2547,4 +2547,8 @@ Object.keys(categorys).forEach((mainCategory) => {
             console.log(` 소카테고리: ${item}`);
         });
     });
+});
+
+Object.keys(categorys).forEach((mainCategory) => {
+    console.log(mainCategory);
 });

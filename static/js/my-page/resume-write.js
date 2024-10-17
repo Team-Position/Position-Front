@@ -64,7 +64,7 @@ function restoreUI() {
 function createViewA() {
     const div1 = document.createElement("div");
     div1.innerHTML = `
-        <div id="resumeSchoolItem_${Date.now()}" class="resume_edit wrapHiddenForm" data-tpl="school-item">
+        <div id="resumeSchoolItem" class="resume_edit wrapHiddenForm"">
             <div class="item_row">
                 <div class="InpBox SizeL item_m">
                     <label for="schoolType" class="blind">학력구분</label>
@@ -87,8 +87,18 @@ function createViewA() {
 
     const selectElement = div1.querySelector("select");
     selectElement.addEventListener("change", (event) => {
-        if (event.target.value === "primary") {
+        const value = event.target.value;
+
+        if (value === "primary") {
             showView("B"); // View B 표시
+        } else if (value === "university") {
+            showView("C"); // View C 표시
+        } else if (value === "academy") {
+            showView("D"); // View D 표시
+        } else if (value === "middle") {
+            showView("B_1"); // View B_1 표시
+        } else if (value === "high") {
+            showView("B_2"); // View B_1 표시
         }
     });
 
@@ -99,16 +109,15 @@ function createViewA() {
 function createViewB() {
     const div2 = document.createElement("div");
     div2.innerHTML = `
-                    <div id="resumeSchoolItem_1729054917577" 
-                class="resume_edit wrapHiddenForm" 
-                data-tpl="school-primary">
+                    <div id="resumeSchoolItem" 
+                class="resume_edit wrapHiddenForm">
                 
-                <div class="item_row item_center item_career" data-row_type="none">
+                <div class="item_row item_center item_career">
                     <div class="InpBox SizeL item_m">
-                        <label for="schoolType_1729062897407" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolType_1729062897407" 
+                        <label for="schoolType" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolType" 
                                 class="evtChangeSchoolType">
-                            <option value="">학력 구분 선택 *</option>
+                            <option value="basic">학력 구분 선택 *</option>
                             <option value="primary" selected="">초등학교 졸업</option>
                             <option value="middle">중학교 졸업</option>
                             <option value="high">고등학교 졸업</option>
@@ -119,20 +128,20 @@ function createViewB() {
 
                     <div class="InpBox item_check">
                         <span class="Chk SizeL">
-                            <input type="checkbox" value="n" 
-                                id="qualificationN_1729062897407" 
+                            <input type="checkbox"
+                                id="qualificationN" 
                                 class="evtChangeQualification" />
-                            <label class="Lbl test1" for="qualificationN_1729062897407">
+                            <label class="Lbl test1" for="qualificationN">
                                 중입 검정고시(초졸)
                             </label>
                         </span>
                     </div>
                 </div>
-                <div class="item_row item_center item_close" data-row_type="qualification" style="display: none;">
-                    <div class="InpBox SizeL item_s">
-                        <label for="schoolTypeQualification_1729080866918" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolTypeQualification_1729080866918" class="evtChangeSchoolType">
-                            <option value="">학력 구분 선택 *</option>
+                <div class="item_row item_center item_close" style="display: none;">
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolTypeQualification" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolTypeQualification" class="evtChangeSchoolType">
+                            <option value="basic">학력 구분 선택 *</option>
                             <option value="primary" selected="selected">초등학교 졸업</option>
                             <option value="middle">중학교 졸업</option>
                             <option value="high">고등학교 졸업</option>
@@ -142,8 +151,8 @@ function createViewB() {
                     </div>
 
                     <div class="InpBox SizeL item_s">
-                        <label for="schoolAreaCode_1729080866918" class="blind">지역</label>
-                            <select name="school_qual_area_code[]" id="schoolAreaCode_1729080866918">
+                        <label for="schoolAreaCode" class="blind">지역</label>
+                            <select id="schoolAreaCode">
                                 <option value="" selected="selected">지역 선택</option>
                                 <option value="101000">서울</option>
                                 <option value="102000">경기</option>
@@ -175,30 +184,29 @@ function createViewB() {
                     </div>
 
                     <div class="TypoBox item item_s LblTop">
-                        <label for="qualGraduationDt_1729080866918" class="Lbl">합격년월 *</label>
-                        <input type="text" name="qual_graduation_dt[]" value="" id="qualGraduationDt_1729080866918" class="Typo SizeL onlyNumber DatePic datePicker" data-dateformat="yymm" maxlength="6" inputmode="decimal" pattern="[0-9]*" placeholder="YYYYMM" required="">
+                        <label for="qualGraduationDt" class="Lbl">합격년월 *</label>
+                        <input type="text" id="qualGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker check" maxlength="6" pattern="[0-9]*" placeholder="YYYYMM" required="">
                     </div>
 
                     <div class="InpBox item_check">
                         <span class="Chk SizeL">
-                            <input type="checkbox" value="y" id="qualificationY_1729080866918" class="evtChangeQualification" checked="">
-                            <label class="Lbl test2" for="qualificationY_1729080866918">중입 검정고시(초졸)</label>
+                            <input type="checkbox" id="qualificationY" class="evtChangeQualification" checked="">
+                            <label class="Lbl test2" for="qualificationY">중입 검정고시(초졸)</label>
                         </span>
                     </div>
                 </div>
 
-                <div class="item_row detail" data-row_type="none">
+                <div class="item_row detail">
                     <div class="TypoBox TypeBtn item_m LblTop">
-                        <label class="Lbl" for="schoolNm_1729062897407">학교명 *</label>
+                        <label class="Lbl" for="schoolNm">학교명 *</label>
                         <input type="text" name="school_nm[]" value="" 
-                            id="schoolNm_1729062897407" class="Typo SizeL" 
+                            id="schoolNm" class="Typo SizeL check" 
                             maxlength="100" placeholder="학교명 *" required="" />
                     </div>
 
-                    <div class="InpBox SizeL item_s">
-                        <label for="schoolGraduationGb_1729062897407" class="blind">졸업여부</label>
-                        <select name="school_graduation_gb[]" 
-                                id="schoolGraduationGb_1729062897407" required="">
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolGraduationGb" class="blind">졸업여부</label>
+                        <select id="schoolGraduationGb" required="">
                             <option value="">졸업여부 *</option>
                             <option value="1">졸업</option>
                             <option value="5">중퇴</option>
@@ -206,24 +214,24 @@ function createViewB() {
                     </div>
 
                     <div class="TypoBox item_s LblTop">
-                        <label for="schoolEntranceDt_1729062897407" class="Lbl">입학년월</label>
-                        <input type="text" name="school_entrance_dt[]" value="" 
-                            id="schoolEntranceDt_1729062897407" class="Typo SizeL onlyNumber DatePic datePicker" 
-                            data-dateformat="yymm" maxlength="6" inputmode="decimal" 
+                        <label for="schoolEntranceDt" class="Lbl">입학년월</label>
+                        <input type="text" 
+                            id="schoolEntranceDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                            maxlength="6" 
                             pattern="[0-9]*" placeholder="YYYYMM" required="" />
                     </div>
 
                     <div class="TypoBox item_s LblTop">
-                        <label for="schoolGraduationDt_1729062897407" class="Lbl">졸업년월</label>
+                        <label for="schoolGraduationDt" class="Lbl">졸업년월</label>
                         <input type="text" name="school_graduation_dt[]" value="" 
-                            id="schoolGraduationDt_1729062897407" class="Typo SizeL onlyNumber DatePic datePicker" 
-                            data-dateformat="yymm" maxlength="6" placeholder="YYYYMM" 
-                            inputmode="decimal" pattern="[0-9]*" required="" />
+                            id="schoolGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                             maxlength="6" placeholder="YYYYMM" 
+                            pattern="[0-9]*" required="" />
                     </div>
 
                     <div class="InpBox SizeL item_s">
-                        <label for="schoolAreaCode_1729062897407" class="blind">지역</label>
-                        <select name="school_area_code[]" id="schoolAreaCode_1729062897407">
+                        <label for="schoolAreaCode" class="blind">지역</label>
+                        <select id="schoolAreaCode">
                             <option value="">지역 선택</option>
                             <option value="101000">서울</option>
                             <option value="102000">경기</option>
@@ -261,23 +269,674 @@ function createViewB() {
             </div>
     `;
 
-    const selectElement = div2.querySelector("select");
-    selectElement.addEventListener("change", (event) => {
-        if (event.target.value === "") {
-            showView("A"); // View A로 돌아가기
-        }
+    const selectElements = div2.querySelectorAll("select"); // 모든 select 요소 선택
+
+    selectElements.forEach((selectElement) => {
+        selectElement.addEventListener("change", (event) => {
+            const value = event.target.value;
+            if (value === "basic") {
+                showView("A"); // View A 표시
+            } else if (value === "primary") {
+                showView("B"); // View B 표시
+            } else if (value === "university") {
+                showView("C"); // View C 표시
+            } else if (value === "academy") {
+                showView("D"); // View D 표시
+            } else if (value === "middle") {
+                showView("B_1"); // View B_1 표시
+            } else if (value === "high") {
+                showView("B_2"); // View B_1 표시
+            }
+        });
     });
 
     return div2;
 }
+// View B를 생성하는 함수
+function createViewB_1() {
+    const div2_1 = document.createElement("div");
+    div2_1.innerHTML = `
+                    <div id="resumeSchoolItem" 
+                class="resume_edit wrapHiddenForm">
+                
+                <div class="item_row item_center item_career">
+                    <div class="InpBox SizeL item_m">
+                        <label for="schoolType" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolType" 
+                                class="evtChangeSchoolType">
+                            <option value="basic">학력 구분 선택 *</option>
+                            <option value="primary">초등학교 졸업</option>
+                            <option value="middle"  selected="">중학교 졸업</option>
+                            <option value="high">고등학교 졸업</option>
+                            <option value="university">대학ㆍ대학원 이상 졸업</option>
+                            <option value="academy">기타 학력 졸업</option>
+                        </select>
+                    </div>
 
+                    <div class="InpBox item_check">
+                        <span class="Chk SizeL">
+                            <input type="checkbox"
+                                id="qualificationN" 
+                                class="evtChangeQualification" />
+                            <label class="Lbl test1" for="qualificationN">
+                                고입 검정고시(중졸)
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="item_row item_center item_close" style="display: none;">
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolTypeQualification" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolTypeQualification" class="evtChangeSchoolType">
+                            <option value="basic">학력 구분 선택 *</option>
+                            <option value="primary">초등학교 졸업</option>
+                            <option value="middle" selected="selected">중학교 졸업</option>
+                            <option value="high">고등학교 졸업</option>
+                            <option value="university">대학ㆍ대학원 이상 졸업</option>
+                            <option value="academy">기타 학력 졸업</option>
+                        </select>
+                    </div>
+
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolAreaCode" class="blind">지역</label>
+                            <select id="schoolAreaCode">
+                                <option value="" selected="selected">지역 선택</option>
+                                <option value="101000">서울</option>
+                                <option value="102000">경기</option>
+                                <option value="103000">광주</option>
+                                <option value="104000">대구</option>
+                                <option value="105000">대전</option>
+                                <option value="106000">부산</option>
+                                <option value="107000">울산</option>
+                                <option value="108000">인천</option>
+                                <option value="109000">강원</option>
+                                <option value="110000">경남</option>
+                                <option value="111000">경북</option>
+                                <option value="112000">전남</option>
+                                <option value="113000">전북</option>
+                                <option value="114000">충북</option>
+                                <option value="115000">충남</option>
+                                <option value="116000">제주</option>
+                                <option value="117000">전국</option>
+                                <option value="118000">세종</option>
+                                <option value="210000">아시아·중동</option>
+                                <option value="220000">북·중미</option>
+                                <option value="230000">남미</option>
+                                <option value="240000">유럽</option>
+                                <option value="250000">오세아니아</option>
+                                <option value="260000">아프리카</option>
+                                <option value="270000">남극대륙</option>
+                                <option value="280000">기타해외</option>
+                            </select>
+                    </div>
+
+                    <div class="TypoBox item item_s LblTop">
+                        <label for="qualGraduationDt" class="Lbl">합격년월 *</label>
+                        <input type="text" id="qualGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker check" maxlength="6" pattern="[0-9]*" placeholder="YYYYMM" required="">
+                    </div>
+
+                    <div class="InpBox item_check">
+                        <span class="Chk SizeL">
+                            <input type="checkbox" id="qualificationY" class="evtChangeQualification" checked="">
+                            <label class="Lbl test2" for="qualificationY">고입 검정고시(중졸)</label>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="item_row detail">
+                    <div class="TypoBox TypeBtn item_m LblTop">
+                        <label class="Lbl" for="schoolNm">학교명 *</label>
+                        <input type="text" name="school_nm[]" value="" 
+                            id="schoolNm" class="Typo SizeL check" 
+                            maxlength="100" placeholder="학교명 *" required="" />
+                    </div>
+
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolGraduationGb" class="blind">졸업여부</label>
+                        <select id="schoolGraduationGb" required="">
+                            <option value="">졸업여부 *</option>
+                            <option value="1">졸업</option>
+                            <option value="5">중퇴</option>
+                        </select>
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label for="schoolEntranceDt" class="Lbl">입학년월</label>
+                        <input type="text" 
+                            id="schoolEntranceDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                            maxlength="6" 
+                            pattern="[0-9]*" placeholder="YYYYMM" required="" />
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label for="schoolGraduationDt" class="Lbl">졸업년월</label>
+                        <input type="text" name="school_graduation_dt[]" value="" 
+                            id="schoolGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                             maxlength="6" placeholder="YYYYMM" 
+                            pattern="[0-9]*" required="" />
+                    </div>
+
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolAreaCode" class="blind">지역</label>
+                        <select id="schoolAreaCode">
+                            <option value="">지역 선택</option>
+                            <option value="101000">서울</option>
+                            <option value="102000">경기</option>
+                            <option value="103000">광주</option>
+                            <option value="104000">대구</option>
+                            <option value="105000">대전</option>
+                            <option value="106000">부산</option>
+                            <option value="107000">울산</option>
+                            <option value="108000">인천</option>
+                            <option value="109000">강원</option>
+                            <option value="110000">경남</option>
+                            <option value="111000">경북</option>
+                            <option value="112000">전남</option>
+                            <option value="113000">전북</option>
+                            <option value="114000">충북</option>
+                            <option value="115000">충남</option>
+                            <option value="116000">제주</option>
+                            <option value="117000">전국</option>
+                            <option value="118000">세종</option>
+                            <option value="210000">아시아·중동</option>
+                            <option value="220000">북·중미</option>
+                            <option value="230000">남미</option>
+                            <option value="240000">유럽</option>
+                            <option value="250000">오세아니아</option>
+                            <option value="260000">아프리카</option>
+                            <option value="270000">남극대륙</option>
+                            <option value="280000">기타해외</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="resume_save notCached">
+                    <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
+                    <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
+                </div>
+            </div>
+    `;
+
+    const selectElements = div2_1.querySelectorAll("select"); // 모든 select 요소 선택
+
+    selectElements.forEach((selectElement) => {
+        selectElement.addEventListener("change", (event) => {
+            const value = event.target.value;
+            if (value === "basic") {
+                showView("A"); // View A 표시
+            } else if (value === "primary") {
+                showView("B"); // View B 표시
+            } else if (value === "university") {
+                showView("C"); // View C 표시
+            } else if (value === "academy") {
+                showView("D"); // View D 표시
+            } else if (value === "middle") {
+                showView("B_1"); // View B_1 표시
+            } else if (value === "high") {
+                showView("B_2"); // View B_1 표시
+            }
+        });
+    });
+
+    return div2_1;
+}
+// View B를 생성하는 함수
+function createViewB_2() {
+    const div2_2 = document.createElement("div");
+    div2_2.innerHTML = `
+                    <div id="resumeSchoolItem" 
+                class="resume_edit wrapHiddenForm">
+                
+                <div class="item_row item_center item_career">
+                    <div class="InpBox SizeL item_m">
+                        <label for="schoolType" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolType" 
+                                class="evtChangeSchoolType">
+                            <option value="basic">학력 구분 선택 *</option>
+                            <option value="primary">초등학교 졸업</option>
+                            <option value="middle">중학교 졸업</option>
+                            <option value="high"   selected="">고등학교 졸업</option>
+                            <option value="university">대학ㆍ대학원 이상 졸업</option>
+                            <option value="academy">기타 학력 졸업</option>
+                        </select>
+                    </div>
+
+                    <div class="InpBox item_check">
+                        <span class="Chk SizeL">
+                            <input type="checkbox"
+                                id="qualificationN" 
+                                class="evtChangeQualification" />
+                            <label class="Lbl test1" for="qualificationN">
+                                대입 검정고시(고졸)
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="item_row item_center item_close" style="display: none;">
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolTypeQualification" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolTypeQualification" class="evtChangeSchoolType">
+                            <option value="basic">학력 구분 선택 *</option>
+                            <option value="primary">초등학교 졸업</option>
+                            <option value="middle" >중학교 졸업</option>
+                            <option value="high" selected="selected">고등학교 졸업</option>
+                            <option value="university">대학ㆍ대학원 이상 졸업</option>
+                            <option value="academy">기타 학력 졸업</option>
+                        </select>
+                    </div>
+
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolAreaCode" class="blind">지역</label>
+                            <select id="schoolAreaCode">
+                                <option value="" selected="selected">지역 선택</option>
+                                <option value="101000">서울</option>
+                                <option value="102000">경기</option>
+                                <option value="103000">광주</option>
+                                <option value="104000">대구</option>
+                                <option value="105000">대전</option>
+                                <option value="106000">부산</option>
+                                <option value="107000">울산</option>
+                                <option value="108000">인천</option>
+                                <option value="109000">강원</option>
+                                <option value="110000">경남</option>
+                                <option value="111000">경북</option>
+                                <option value="112000">전남</option>
+                                <option value="113000">전북</option>
+                                <option value="114000">충북</option>
+                                <option value="115000">충남</option>
+                                <option value="116000">제주</option>
+                                <option value="117000">전국</option>
+                                <option value="118000">세종</option>
+                                <option value="210000">아시아·중동</option>
+                                <option value="220000">북·중미</option>
+                                <option value="230000">남미</option>
+                                <option value="240000">유럽</option>
+                                <option value="250000">오세아니아</option>
+                                <option value="260000">아프리카</option>
+                                <option value="270000">남극대륙</option>
+                                <option value="280000">기타해외</option>
+                            </select>
+                    </div>
+
+                    <div class="TypoBox item item_s LblTop">
+                        <label for="qualGraduationDt" class="Lbl">합격년월 *</label>
+                        <input type="text" id="qualGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker check" maxlength="6" pattern="[0-9]*" placeholder="YYYYMM" required="">
+                    </div>
+
+                    <div class="InpBox item_check">
+                        <span class="Chk SizeL">
+                            <input type="checkbox" id="qualificationY" class="evtChangeQualification" checked="">
+                            <label class="Lbl test2" for="qualificationY">대입 검정고시(고졸)</label>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="item_row detail">
+                    <div class="TypoBox TypeBtn item_m LblTop">
+                        <label class="Lbl" for="schoolNm">학교명 *</label>
+                        <input type="text" name="school_nm[]" value="" 
+                            id="schoolNm" class="Typo SizeL check" 
+                            maxlength="100" placeholder="학교명 *" required="" />
+                    </div>
+
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolGraduationGb" class="blind">졸업여부</label>
+                        <select id="schoolGraduationGb" required="">
+                            <option value="">졸업여부 *</option>
+                            <option value="1">졸업</option>
+                            <option value="5">중퇴</option>
+                        </select>
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label for="schoolEntranceDt" class="Lbl">입학년월</label>
+                        <input type="text" 
+                            id="schoolEntranceDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                            maxlength="6" 
+                            pattern="[0-9]*" placeholder="YYYYMM" required="" />
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label for="schoolGraduationDt" class="Lbl">졸업년월</label>
+                        <input type="text" name="school_graduation_dt[]" value="" 
+                            id="schoolGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                             maxlength="6" placeholder="YYYYMM" 
+                            pattern="[0-9]*" required="" />
+                    </div>
+
+                    <div class="InpBox SizeL item_s">
+                        <label for="schoolAreaCode" class="blind">지역</label>
+                        <select id="schoolAreaCode">
+                            <option value="">지역 선택</option>
+                            <option value="101000">서울</option>
+                            <option value="102000">경기</option>
+                            <option value="103000">광주</option>
+                            <option value="104000">대구</option>
+                            <option value="105000">대전</option>
+                            <option value="106000">부산</option>
+                            <option value="107000">울산</option>
+                            <option value="108000">인천</option>
+                            <option value="109000">강원</option>
+                            <option value="110000">경남</option>
+                            <option value="111000">경북</option>
+                            <option value="112000">전남</option>
+                            <option value="113000">전북</option>
+                            <option value="114000">충북</option>
+                            <option value="115000">충남</option>
+                            <option value="116000">제주</option>
+                            <option value="117000">전국</option>
+                            <option value="118000">세종</option>
+                            <option value="210000">아시아·중동</option>
+                            <option value="220000">북·중미</option>
+                            <option value="230000">남미</option>
+                            <option value="240000">유럽</option>
+                            <option value="250000">오세아니아</option>
+                            <option value="260000">아프리카</option>
+                            <option value="270000">남극대륙</option>
+                            <option value="280000">기타해외</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="resume_save notCached">
+                    <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
+                    <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
+                </div>
+            </div>
+    `;
+
+    const selectElements = div2_2.querySelectorAll("select"); // 모든 select 요소 선택
+
+    selectElements.forEach((selectElement) => {
+        selectElement.addEventListener("change", (event) => {
+            const value = event.target.value;
+            if (value === "basic") {
+                showView("A"); // View A 표시
+            } else if (value === "primary") {
+                showView("B"); // View B 표시
+            } else if (value === "university") {
+                showView("C"); // View C 표시
+            } else if (value === "academy") {
+                showView("D"); // View D 표시
+            } else if (value === "middle") {
+                showView("B_1"); // View B_1 표시
+            } else if (value === "high") {
+                showView("B_2"); // View B_1 표시
+            }
+        });
+    });
+
+    return div2_2;
+}
+// View C를 생성하는 함수
+function createViewC() {
+    const div3 = document.createElement("div");
+    div3.innerHTML = `
+            <div id="resumeSchoolItem" class="resume_edit wrapHiddenForm">
+                <div class="item_row item_center">
+                    <div class="InpBox SizeL item_m">
+                        <label for="schoolType" class="blind">학력구분</label>
+                        <select name="school_type" id="schoolType" class="evtChangeSchoolType">
+                            <option value="basic">학력 구분 선택 *</option>
+                            <option value="primary">초등학교 졸업</option>
+                            <option value="middle">중학교 졸업</option>
+                            <option value="high">고등학교 졸업</option>
+                            <option value="university" selected="">대학ㆍ대학원 이상 졸업</option>
+                            <option value="academy">기타 학력 졸업</option>
+                        </select>
+                    </div>
+
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolGb" class="blind">대학구분</label>
+                        <select id="schoolGb">
+                            <option value="">대학구분 *</option>
+                            <option value="college">대학(2,3년)</option>
+                            <option value="university">대학교(4년)</option>
+                            <option value="master">대학원(석사)</option>
+                            <option value="doctor">대학원(박사)</option>
+                        </select>
+                    </div>
+
+                    <div class="TypoBox TypeBtn item_m">
+                        <label class="blind" for="schoolNm">학교명 *</label>
+                        <input 
+                            type="text" 
+                            id="schoolNm" class="Typo SizeL check" 
+                            maxlength="100" placeholder="학교명 *" required="" 
+                            
+                        />
+                    </div>
+
+                    <div class="InpBox item_check">
+                        <span class="Chk SizeL">
+                            <input 
+                                type="checkbox" id="btnEntranceGb" 
+                                class="evtClickEntranceGb"
+                            />
+                            <label for="btnEntranceGb" class="Lbl">편입</label>
+                        </span>
+                        <input type="hidden" value="1" />
+                    </div>
+                </div>
+
+                <div class="item_row">
+                    <div class="TypoBox item_m LblTop">
+                        <label class="Lbl" for="schoolMajor">전공 *</label>
+                        <input 
+                            type="text" 
+                            id="schoolMajor" class="Typo SizeL check" 
+                            maxlength="50" placeholder="전공 *" required="" 
+                        />
+                    </div>
+
+                    <div class="InpBox SizeL item_s check">
+                        <label for="schoolGraduationGb" class="blind"></label>
+                        <select id="schoolGraduationGb" required="">
+                            <option value="">졸업여부 *</option>
+                            <option value="1">졸업</option>
+                            <option value="2">재학중</option>
+                            <option value="3">휴학중</option>
+                            <option value="4">수료</option>
+                            <option value="5">중퇴</option>
+                            <option value="7">자퇴</option>
+                            <option value="6">졸업예정</option>
+                        </select>
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label class="Lbl" for="schoolEntranceDt">입학년월</label>
+                        <input 
+                            type="text"
+                            id="schoolEntranceDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                             maxlength="6" placeholder="YYYYMM" 
+                            pattern="[0-9]*" required="" 
+                        />
+                    </div>
+
+                    <div class="TypoBox item_s LblTop">
+                        <label class="Lbl" for="schoolGraduationDt">졸업년월</label>
+                        <input 
+                            type="text" 
+                            id="schoolGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker" 
+                             maxlength="6" placeholder="YYYYMM" 
+                            pattern="[0-9]*" required="" 
+                        />
+                    </div>
+
+                    <div class="InpBox SizeL item_s" style="display: none">
+                        <label for="schoolDayNight" class="blind">주/야간</label>
+                        <select id="schoolDayNight" class="additionalItem">
+                            <option value="">주/야간 선택</option>
+                            <option value="day">주간</option>
+                            <option value="night">야간</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="resume_save notCached">
+                    <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
+                    <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
+                </div>
+        </div>
+
+    `;
+
+    const selectElement = div3.querySelector("select");
+    selectElement.addEventListener("change", (event) => {
+        const value = event.target.value;
+        if (value === "basic") {
+            showView("A"); // View A 표시
+        } else if (value === "primary") {
+            showView("B"); // View B 표시
+        } else if (value === "university") {
+            showView("C"); // View C 표시
+        } else if (value === "academy") {
+            showView("D"); // View D 표시
+        } else if (value === "middle") {
+            showView("B_1"); // View B_1 표시
+        } else if (value === "high") {
+            showView("B_2"); // View B_1 표시
+        }
+    });
+
+    return div3;
+}
+
+// View D를 생성하는 함수
+function createViewD() {
+    const div4 = document.createElement("div");
+    div4.innerHTML = `
+        <div id="resumeSchoolItem" class="resume_edit wrapHiddenForm">
+            <div class="item_row item_center">
+                <div class="InpBox SizeL item_m">
+                    <label for="schoolType_1729132115363" class="blind">학력구분</label>
+                    <select name="school_type" id="schoolType_1729132115363" class="evtChangeSchoolType">
+                        <option value="basic">학력 구분 선택 *</option>
+                        <option value="primary">초등학교 졸업</option>
+                        <option value="middle">중학교 졸업</option>
+                        <option value="high">고등학교 졸업</option>
+                        <option value="university">대학ㆍ대학원 이상 졸업</option>
+                        <option value="academy" selected="">직업전문학원ㆍ학교 및 기타학력 졸업</option>
+                    </select>
+                </div>
+                <div class="InpBox SizeL item_s check">
+                    <label for="academyAdmittedEducationCd_1729132115363" class="blind"></label>
+                    <select name="academy_admitted_education_cd[]" id="academyAdmittedEducationCd_1729132115363">
+                        <option value="">인정학력 *</option>
+                        <option value="2">대학(2,3년)</option>
+                        <option value="3">대학교(4년)</option>
+                    </select>
+                </div>
+                <div class="TypoBox TypeBtn item_m">
+                    <label for="academyNm_1729132115363" class="blind">학교/학원명 *</label>
+                    <input type="text" name="academy_nm[]" id="academyNm_1729132115363" 
+                        class="Typo SizeL check" maxlength="100" placeholder="학교/학원명 *" />
+                </div>
+            </div>
+            <div class="item_row">
+                <div class="TypoBox item_m">
+                    <label for="academyMajor_1729132115363" class="blind">전공분야</label>
+                    <input type="text" name="academy_major[]" id="academyMajor_1729132115363" 
+                        class="Typo SizeL check" maxlength="50" placeholder="전공분야 *" />
+                </div>
+                <div class="InpBox SizeL item_s check">
+                    <label for="academyGraduationGb_1729132115363" class="blind">졸업구분</label>
+                    <select name="academy_graduation_gb[]" id="academyGraduationGb_1729132115363" required="">
+                        <option value="">졸업구분 *</option>
+                        <option value="1">졸업</option>
+                        <option value="2">재학중</option>
+                        <option value="3">휴학중</option>
+                        <option value="4">수료</option>
+                        <option value="5">중퇴</option>
+                        <option value="7">자퇴</option>
+                        <option value="6">졸업예정</option>
+                    </select>
+                </div>
+                <div class="TypoBox item_s LblTop">
+                    <label for="academyEntranceDt_1729132115363" class="Lbl">입학년월 *</label>
+                    <input type="text" name="academy_entrance_dt[]" id="academyEntranceDt_1729132115363" 
+                        class="Typo SizeL onlyNumber DatePic datePicker check" data-dateformat="yymm" 
+                        maxlength="6" placeholder="YYYYMM" inputmode="numeric" pattern="[0-9]*" required="" />
+                </div>
+                <div class="TypoBox item_s LblTop">
+                    <label for="academyGraduationDt_1729132115363" class="Lbl">졸업년월 *</label>
+                    <input type="text" name="academy_graduation_dt[]" id="academyGraduationDt_1729132115363" 
+                        class="Typo SizeL onlyNumber DatePic datePicker check" data-dateformat="yymm" 
+                        maxlength="6" placeholder="YYYYMM" inputmode="numeric" pattern="[0-9]*" required="" />
+                </div>
+                <div class="InpBox SizeL item_s check">
+                    <label for="academyAreaCode_1729132115363" class="blind">지역</label>
+                    <select name="academy_area_code[]" id="academyAreaCode_1729132115363">
+                        <option value="">지역 *</option>
+                        <option value="101000">서울</option>
+                        <option value="102000">경기</option>
+                        <option value="103000">광주</option>
+                        <option value="104000">대구</option>
+                        <option value="105000">대전</option>
+                        <option value="106000">부산</option>
+                        <option value="107000">울산</option>
+                        <option value="108000">인천</option>
+                        <option value="109000">강원</option>
+                        <option value="110000">경남</option>
+                        <option value="111000">경북</option>
+                        <option value="112000">전남</option>
+                        <option value="113000">전북</option>
+                        <option value="114000">충북</option>
+                        <option value="115000">충남</option>
+                        <option value="116000">제주</option>
+                        <option value="117000">전국</option>
+                        <option value="118000">세종</option>
+                        <option value="210000">아시아·중동</option>
+                        <option value="220000">북·중미</option>
+                        <option value="230000">남미</option>
+                        <option value="240000">유럽</option>
+                        <option value="250000">오세아니아</option>
+                        <option value="260000">아프리카</option>
+                        <option value="270000">남극대륙</option>
+                        <option value="280000">기타해외</option>
+                    </select>
+                </div>
+            </div>
+            <div class="resume_save notCached">
+                <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
+                <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
+            </div>
+        </div>
+    `;
+
+    const selectElement = div4.querySelector("select");
+    selectElement.addEventListener("change", (event) => {
+        const value = event.target.value;
+        if (value === "basic") {
+            showView("A"); // View A 표시
+        } else if (value === "primary") {
+            showView("B"); // View B 표시
+        } else if (value === "university") {
+            showView("C"); // View C 표시
+        } else if (value === "academy") {
+            showView("D"); // View D 표시
+        } else if (value === "middle") {
+            showView("B_1"); // View B_1 표시
+        } else if (value === "high") {
+            showView("B_2"); // View B_1 표시
+        }
+    });
+
+    return div4;
+}
 // 특정 뷰를 표시하는 함수
 function showView(viewName) {
     app.innerHTML = ""; // 기존 콘텐츠 비우기
-    if (viewName === "A") {
-        app.appendChild(createViewA());
-    } else if (viewName === "B") {
-        app.appendChild(createViewB());
+    const views = {
+        A: createViewA,
+        B: createViewB,
+        C: createViewC,
+        D: createViewD,
+        B_1: createViewB_1,
+        B_2: createViewB_2,
+    };
+
+    const viewFunction = views[viewName];
+    if (viewFunction) {
+        app.appendChild(viewFunction());
     }
 }
 
@@ -288,13 +947,87 @@ addButton.addEventListener("click", () => {
     resumeList.style.display = "none";
     showView("A"); // View A 표시
 });
+// 1. Typo SizeL input 요소들에 실시간 입력 이벤트 위임
+document.addEventListener("input", (event) => {
+    if (event.target.matches("input.Typo.SizeL.check")) {
+        const input = event.target;
+        if (!input.value.trim()) {
+            input.classList.add("Invalid"); // 값이 비어있으면 Invalid 추가
+        } else {
+            input.classList.remove("Invalid"); // 값이 있으면 Invalid 제거
+        }
+    }
+    if (
+        event.target.matches(".Typo.SizeL.onlyNumber.DatePic.datePicker.check")
+    ) {
+        const input = event.target;
+        if (!input.value.trim()) {
+            input.classList.add("Invalid"); // 값이 비어있으면 Invalid 추가
+        } else {
+            input.classList.remove("Invalid"); // 값이 있으면 Invalid 제거
+        }
+    }
+});
+
+// 2. InpBox SizeL item_s 내부 select 요소들에 실시간 변경 이벤트 위임
+document.addEventListener("change", (event) => {
+    if (event.target.matches(".InpBox.SizeL.item_s.check select")) {
+        const selectElement = event.target;
+        const closestInpBox = selectElement.closest(".InpBox.SizeL.item_s");
+
+        if (selectElement.value === "") {
+            // 값이 선택되지 않은 경우 Invalid 추가
+            if (closestInpBox) closestInpBox.classList.add("Invalid");
+        } else {
+            // 값이 선택된 경우 Invalid 제거
+            if (closestInpBox) closestInpBox.classList.remove("Invalid");
+        }
+    }
+});
 
 // 동적 취소 버튼 이벤트 처리
 document.addEventListener("click", (event) => {
+    // 체크박스 상태 설정
+    const checkboxN = document.getElementById("qualificationN");
+    const checkboxY = document.getElementById("qualificationY");
+
+    // 항상 초기 상태로 설정
+    if (checkboxN) checkboxN.checked = false; // 첫 번째 체크박스: 항상 해제
+    if (checkboxY) checkboxY.checked = true; // 두 번째 체크박스: 항상 선택
+
     if (event.target.classList.contains("evtLayerClose")) {
         const resumeEdit = event.target.closest(".resume_edit");
         if (resumeEdit) resumeEdit.remove();
         restoreUI(); // UI 상태 복원
+    }
+
+    // 버튼에 클릭 이벤트 추가
+    if (event.target.classList.contains("evtLayerSave")) {
+        // 1. Typo SizeL 클래스가 있는 input 요소들 검사
+        const typoInputs = document.querySelectorAll("input.Typo.SizeL.check");
+        typoInputs.forEach((input) => {
+            if (!input.value.trim()) {
+                // 값이 비어있을 경우
+                input.classList.add("Invalid"); // input에 Invalid 추가
+            } else {
+                input.classList.remove("Invalid"); // 값이 있으면 Invalid 제거
+            }
+        });
+
+        // 2. InpBox SizeL item_s 내부의 select 요소들 검사
+        const inpBoxSelects = document.querySelectorAll(
+            ".InpBox.SizeL.item_s.check select"
+        );
+        inpBoxSelects.forEach((selectElement) => {
+            const closestInpBox = selectElement.closest(".InpBox.SizeL.item_s");
+            if (selectElement.value === "") {
+                // 값이 선택되지 않은 경우
+                if (closestInpBox) closestInpBox.classList.add("Invalid");
+            } else {
+                // 값이 선택된 경우 Invalid 제거
+                if (closestInpBox) closestInpBox.classList.remove("Invalid");
+            }
+        });
     }
 });
 

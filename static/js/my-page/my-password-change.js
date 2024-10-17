@@ -1,7 +1,7 @@
-// 모든 btn_toggle 버튼과 그 부모 요소를 선택합니다.
-document.querySelectorAll(".type_button").forEach((wrapper) => {
+// 모든 btn-toggle 버튼과 그 부모 요소를 선택합니다.
+document.querySelectorAll(".type-button").forEach((wrapper) => {
     const input = wrapper.querySelector("input"); // 해당 버튼의 input
-    const button = wrapper.querySelector(".btn_toggle"); // 해당 버튼
+    const button = wrapper.querySelector(".btn-toggle"); // 해당 버튼
     const icon = button.querySelector("use"); // 아이콘 SVG
 
     button.addEventListener("click", () => {
@@ -9,25 +9,25 @@ document.querySelectorAll(".type_button").forEach((wrapper) => {
         const isPassword = input.type === "password";
         input.type = isPassword ? "text" : "password";
 
-        // 아이콘을 #svg_my_57과 #svg_my_56으로 변경
+        // 아이콘을 #svg-my-57과 #svg-my-56으로 변경
         icon.setAttribute(
             "xlink:href",
-            isPassword ? "#svg_my_56" : "#svg_my_57"
+            isPassword ? "#svg-my-56" : "#svg-my-57"
         );
     });
 });
 
 // 비밀번호 유효성 검사
 const passwordInput = document.getElementById("password1");
-const verifiedResult = document.querySelector(".verified_result");
-const verifiedText = document.querySelector(".verified_result_text");
-const icon = document.querySelector(".btn_toggle use");
+const verifiedResult = document.querySelector(".verified-result");
+const verifiedText = document.querySelector(".verified-result-text");
+const icon = document.querySelector(".btn-toggle use");
 
 // 비밀번호 토글 기능
-document.querySelector(".btn_toggle").addEventListener("click", () => {
+document.querySelector(".btn-toggle").addEventListener("click", () => {
     const isPassword = passwordInput.type === "password";
     passwordInput.type = isPassword ? "text" : "password";
-    icon.setAttribute("xlink:href", isPassword ? "#svg_my_56" : "#svg_my_57");
+    icon.setAttribute("xlink:href", isPassword ? "#svg-my-56" : "#svg-my-57");
 });
 
 // 비밀번호 입력 시 유효성 검사
@@ -54,7 +54,7 @@ function validatePassword(password) {
 
 // 단계별 클래스 및 메시지 업데이트 함수
 function updateVerifiedResult(level) {
-    verifiedResult.className = `verified_result level_${level}`;
+    verifiedResult.className = `verified-result level-${level}`;
     let message = "";
 
     switch (level) {

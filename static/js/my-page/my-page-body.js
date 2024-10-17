@@ -1,7 +1,7 @@
 // 고정 슬라이드 이동 거리
 const slideWidth = 316;
 
-let activeSlider = document.querySelector(".wrap_slider.active .slider");
+let activeSlider = document.querySelector(".wrap-slider.active .slider");
 let activeSlides = activeSlider.querySelectorAll("li");
 
 let count = 1; // 현재 슬라이드 인덱스
@@ -14,8 +14,8 @@ const updateSlidePosition = () => {
     activeSlider.style.transition = "transform 0.5s";
     activeSlider.style.transform = `translateX(${translateX}px)`;
 
-    const prevButton = document.querySelector(".btn_prev");
-    const nextButton = document.querySelector(".btn_next");
+    const prevButton = document.querySelector(".btn-prev");
+    const nextButton = document.querySelector(".btn-next");
 
     // 버튼 상태 업데이트
     const isPrevDisabled = count === 1;
@@ -38,14 +38,14 @@ const updateSlidePosition = () => {
 };
 
 // 버튼 클릭 이벤트
-document.querySelector(".btn_prev").addEventListener("click", () => {
+document.querySelector(".btn-prev").addEventListener("click", () => {
     if (count > 1) {
         count--;
         updateSlidePosition();
     }
 });
 
-document.querySelector(".btn_next").addEventListener("click", () => {
+document.querySelector(".btn-next").addEventListener("click", () => {
     if (count < totalSlides) {
         count++;
         updateSlidePosition();
@@ -62,7 +62,7 @@ tabs.forEach((tab) => {
         tab.classList.add("Select"); // 클릭한 탭에 'Select' 클래스 추가
 
         // 모든 슬라이더 숨기기
-        document.querySelectorAll(".wrap_slider").forEach((slider) => {
+        document.querySelectorAll(".wrap-slider").forEach((slider) => {
             slider.classList.remove("active");
         });
 

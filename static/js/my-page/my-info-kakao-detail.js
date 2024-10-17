@@ -1,6 +1,6 @@
-const editButton = document.querySelector(".photo_edit_btn");
-const photoButton = document.querySelector(".btn_photo");
-const txtPhotoOriginal = document.querySelector(".txt_photo_original");
+const editButton = document.querySelector(".photo-edit-btn");
+const photoButton = document.querySelector(".btn-photo");
+const txtPhotoOriginal = document.querySelector(".txt-photo-original");
 
 photoButton.addEventListener("click", () => {
     txtPhotoOriginal.style.display = "block";
@@ -13,7 +13,7 @@ photoButton.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
-    // 클릭한 영역이 photo_edit_btn이나 btn_photo가 아닌 경우
+    // 클릭한 영역이 photo-edit-btn이나 btn-photo가 아닌 경우
     if (
         !editButton.contains(event.target) &&
         !photoButton.contains(event.target)
@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCertConfirmMail = document.getElementById("btnCertConfirmMail");
     const btnCertEmail = document.getElementById("btnCertEmail");
     const emailInput = document.getElementById("email");
-    const fieldSubVerify = document.querySelector(".field_sub.field_verify");
+    const fieldSubVerify = document.querySelector(".field-sub.field-verify");
     const btnEmail = document.getElementById("btnEmail");
     const btnEmailCancel = document.getElementById("btnEmailCancel");
-    const fieldBody = document.getElementById("person_email_form");
-    const fieldEdit = document.getElementById("edit_email");
-    const privacyGuideEmail = document.getElementById("privacy_guide_email");
-    const personEmail = document.getElementById("person_email");
-    const personMaskingEmail = document.getElementById("person_masking_email");
+    const fieldBody = document.getElementById("person-email-form");
+    const fieldEdit = document.getElementById("edit-email");
+    const privacyGuideEmail = document.getElementById("privacy-guide-email");
+    const personEmail = document.getElementById("person-email");
+    const personMaskingEmail = document.getElementById("person-masking-email");
     const btnMaskingEmail = document.getElementById("btnMaskingEmail");
 
     // 인증 번호 입력 이벤트
@@ -76,21 +76,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 수정 버튼에 이벤트 리스너 등록
     document
-        .querySelectorAll(".BtnType.SizeS.btn_modify")
+        .querySelectorAll(".BtnType.SizeS.btn-modify")
         .forEach((modifyButton) => {
             modifyButton.addEventListener("click", (event) => {
                 const fieldRow = event.target.closest("tr.field");
                 const activeFieldBody = fieldRow.querySelector(
-                    "div.field_body:not(.inactive)"
+                    "div.field-body:not(.inactive)"
                 );
                 const inactiveFieldBody = fieldRow.querySelector(
-                    "div.field_body.inactive"
+                    "div.field-body.inactive"
                 );
                 const confirmButton = fieldRow.querySelector(
-                    ".BtnType.SizeS.btn_confirm"
+                    ".BtnType.SizeS.btn-confirm"
                 );
                 const cancelButton = fieldRow.querySelector(
-                    ".BtnType.SizeS.btn_modify_cancel"
+                    ".BtnType.SizeS.btn-modify-cancel"
                 );
 
                 fieldRow.classList.add("active");
@@ -105,21 +105,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 취소 버튼에 이벤트 리스너 등록
     document
-        .querySelectorAll(".BtnType.SizeS.btn_modify_cancel")
+        .querySelectorAll(".BtnType.SizeS.btn-modify-cancel")
         .forEach((cancelButton) => {
             cancelButton.addEventListener("click", (event) => {
                 const fieldRow = event.target.closest("tr.field");
                 const activeFieldBody = fieldRow.querySelector(
-                    "div.field_body:not(.inactive)"
+                    "div.field-body:not(.inactive)"
                 );
                 const inactiveFieldBody = fieldRow.querySelector(
-                    "div.field_body.inactive"
+                    "div.field-body.inactive"
                 );
                 const confirmButton = fieldRow.querySelector(
-                    ".BtnType.SizeS.btn_confirm"
+                    ".BtnType.SizeS.btn-confirm"
                 );
                 const modifyButton = fieldRow.querySelector(
-                    ".BtnType.SizeS.btn_modify"
+                    ".BtnType.SizeS.btn-modify"
                 );
 
                 activeFieldBody?.classList.add("inactive");
@@ -143,18 +143,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // 사진 업로드 버튼 클릭 시 팝업 열기
 document.getElementById("btnPhotoEdit").addEventListener("click", () => {
     const popup = document.querySelector(
-        ".layer_pop_manage.layer_photo.mypage"
+        ".layer-pop-manage.layer-photo.mypage"
     );
     popup.style.display = "block"; // 팝업 표시
     editButton.style.display = "none";
 });
 
 // 닫기 버튼 클릭 시 팝업 닫기
-const closeButtons = document.querySelectorAll(".btn_close");
+const closeButtons = document.querySelectorAll(".btn-close");
 
 closeButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        const popup = button.closest(".layer_pop_manage.layer_photo.mypage");
+        const popup = button.closest(".layer-pop-manage.layer-photo.mypage");
         popup.style.display = "none"; // 해당 팝업 숨기기
     });
 });
@@ -171,7 +171,7 @@ deleteButton.addEventListener("click", () => {
     }
 });
 
-const withdraw = document.querySelector(".btn_withdraw");
+const withdraw = document.querySelector(".btn-withdraw");
 
 withdraw.addEventListener("click", () => {
     const isConfirmed = confirm("탈퇴하실건가요?");
@@ -194,7 +194,7 @@ function startTimer() {
         const seconds = Math.floor(remaining / 1000); // 밀리초를 초로 변환
 
         // 화면에 남은 시간 표시 (mm:ss 형식)
-        document.getElementById("remain_time_mail").textContent = `${String(
+        document.getElementById("remain-time-mail").textContent = `${String(
             Math.floor(seconds / 60)
         ).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
 
@@ -209,7 +209,7 @@ function startTimer() {
 
 function resetTimer() {
     clearInterval(intervalId); // 타이머 정지
-    document.getElementById("remain_time_mail").textContent = "3:00"; // 초기화된 시간 표시
+    document.getElementById("remain-time-mail").textContent = "3:00"; // 초기화된 시간 표시
 }
 
 // 버튼 클릭 이벤트에 startTimer 및 resetTimer 연결
@@ -247,7 +247,7 @@ function previewImage(event) {
 
 // 사진을 등록하는 함수
 function savePhoto() {
-    const profilePhotoSpan = document.getElementById("myhome_profile_photo"); // ID로 요소 선택
+    const profilePhotoSpan = document.getElementById("myhome-profile-photo"); // ID로 요소 선택
     profilePhotoSpan.innerHTML = `<img src="${uploadedImageSrc}" 
         style="max-width: 100%; max-height: 100%;" />`; // 사진을 span 안에 추가
 }

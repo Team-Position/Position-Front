@@ -875,14 +875,15 @@ ol, ul, li {
     width: 54px;
 }
  .row {
-    position: absolute;
-    padding: 32px 0 32px 40px;
+    border-top: 1px solid #eaedf4;
+    
+    padding: 32px 0 0px 40px;
     border-bottom: 1px solid #eaedf4;
     color: var(--gray120);
 }
  .list_status .col_summary {
-    padding-right: 155px;
-    width: 660px;
+    padding-right: 0px;
+    width: 615px;
 }
  .row>div {
     position: relative;
@@ -1004,7 +1005,16 @@ ol, ul, li {
     background: url('http://www.w3.org/2000/svg');
     content: "";
 }
+.list_status{
+    display: flex;
+    position: relative;
+}
+.col_history{
+    position: absolute;
+}
  .list_status .col_btns {
+    bottom: 130px;
+    left: 550px;
     padding: 0 132px 0 108px;
     width: 380px;
 }
@@ -1092,7 +1102,8 @@ button, label {
 }
  .col_history {
     display: none;
-    margin-top: 32px;
+    margin-top: -20px;
+    margin-bottom: 10px;
     padding: 8px 32px;
     width: 100%;
     border-radius: 8px;
@@ -1124,4 +1135,23 @@ button, label {
     padding-right: 20px;
     color: var(--gray120);
     vertical-align: top;
+}
+.col_history .timeline .desc>span {
+    display: inline-block;
+    padding-right: 8px;
+    vertical-align: top;
+}
+.col_history .timeline .desc button.txt {
+    text-decoration: underline;
+}
+.col_history .timeline .desc .txt {
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    color: var(--gray120);
+    line-height: 20px;
+    vertical-align: top;
+}
+.btn_history.active:after {
+    transform: translate(-50%, -50%) rotate(315deg); /* 클릭 시 화살표 방향 변경 */
 }

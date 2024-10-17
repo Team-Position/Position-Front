@@ -1,0 +1,894 @@
+#container {
+    position: relative;
+}
+
+body.no_gnb {
+    min-width: 1280px;
+}
+.no_gnb #sri_section {
+    min-width: 1260px;
+    grid-template-areas:
+        "main"
+        "footer";
+    grid-template-columns: auto;
+}
+
+#sri_section {
+    display: grid;
+    grid-template-areas:
+        "gnb main"
+        "gnb footer";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    min-width: 1560px;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+#sri_wrap {
+    grid-area: main;
+    display: table-row;
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    position: relative;
+    margin: 88px auto 136px;
+    width: 1248px;
+}
+
+/* 왼쪽 사이드바 */
+.resume_wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+.resume_snb {
+    position: relative;
+    width: 294px;
+}
+
+.resume_snb .snb_box {
+    padding: 24px 16px 24px;
+    width: 294px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(21, 39, 111, 0.08);
+}
+
+.resume_snb .snb_box .snb_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.resume_snb .snb_box .snb_top .tit {
+    color: var(--gray120);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.resume_snb .snb_box .snb_top .tit, .resume_snb .snb_box .snb_top .persent {
+    color: var(--gray120);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.resume_snb .snb_box .progress_bar {
+    position: relative;
+    margin: 16px 0;
+}
+
+.resume_snb .snb_box .progress_bar:before {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+    background: var(--gray30);
+    content: "";
+}
+
+.resume_snb .snb_box .progress_bar.per100:after {
+    width: 100%;
+}
+
+.resume_snb .snb_box .progress_bar:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    border-radius: 100px;
+    background: linear-gradient(270deg, #5189fa 0%, #bcd1fc 100%);
+    transition: transform 0.5s ease;
+    transform-origin: left center;
+    content: "";
+}
+.resume_snb .snb_box .txt {
+    color: var(--gray100);
+    font-size: 13px;
+    line-height: 20px;
+}
+.resume_snb .snb_box .txt em {
+    color: var(--blue90);
+}
+.resume_snb .item_list {
+    margin-top: 16px;
+    padding: 16px 0;
+    border-top: 1px solid var(--gray40);
+}
+.resume_snb .item_list .item.active {
+    border-radius: 4px;
+    background: var(--gray20);
+}
+
+.resume_snb .item_list .item {
+    display: flex;
+    padding: 5px 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resume_snb .item_list .item .con_link {
+    border: none;
+    color: var(--gray80);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+    background: none;
+}
+
+[class*="BtnType"] {
+    display: inline-flex;
+    position: relative;
+    border: 1px solid var(--blue90);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    text-align: center;
+    vertical-align: top;
+    background-color: var(--blue90);
+    justify-content: center;
+    align-items: center;
+}
+
+.resume_snb .item_list .item.essential:after {
+    color: var(--gray80);
+    font-size: 12px;
+    line-height: 20px;
+    content: "필수";
+}
+
+.resume_snb .item_list .item.add .con_link {
+    color: var(--blue90);
+    font-weight: bold;
+}
+
+.resume_snb .resume_snb_guide {
+    display: flex;
+    margin-top: 16px;
+    padding: 0 20px;
+    width: 294px;
+    height: 64px;
+    border: 1px solid #eff5ff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #475067;
+    font-size: 14px;
+    line-height: 20px;
+    background: #eff5ff;
+    align-items: center;
+}
+
+.resume_snb .resume_snb_guide:before {
+    display: inline-block;
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
+    background: url('/static/images/my-page/electric-bulb.svg') no-repeat;
+    content: "";
+}
+
+.resume_snb .resume_snb_guide:after {
+    display: inline-block;
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    background: url('/static/images/my-page/next-arrow-resume.svg') no-repeat;
+    content: "";
+}
+
+/* 이력서 작성 바디 */
+.resume_con {
+    width: 930px;
+}
+
+
+
+.resume_view {
+    position: relative;
+}
+
+.resume_view .resume_top {
+    display: flex;
+    align-items: center;
+}
+
+.resume_view .resume_top .user_name {
+    overflow: hidden;
+    max-width: 460px;
+    color: var(--gray120);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.resume_view .resume_top .user_career {
+    margin-left: 8px;
+    width: 128px;
+}
+
+.InpBox {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.resume_view .resume_top .user_career select {
+    border-color: var(--gray40);
+}
+
+.InpBox.SizeS select {
+    height: 32px;
+    font-size: 13px;
+}
+
+.InpBox select {
+    padding: 0 28px 0 12px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    background: var(--white) url('/static/images/my-page/drop-down-resume.svg') no-repeat right 12px top 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.InpBox select:hover {
+    background-color: var(--gray20);
+}
+
+.resume_view .user_desc {
+    margin: 8px 0 20px;
+    color: var(--gray80);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.user_hide {
+    display: flex;
+    margin-bottom: 8px;
+    color: var(--gray80);
+    font-size: 13px;
+    line-height: 20px;
+    align-items: center;
+}
+
+.user_hide span {
+    display: flex;
+    margin-right: 8px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    color: var(--gray100);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    border: 1px solid var(--gray20);
+    background: var(--gray20);
+    align-items: center;
+    cursor: pointer;
+}
+.user_hide span:hover {
+    border-color: var(--gray40);
+}
+
+.user_hide.on span:before {
+    background: url('/static/images/my-page/hide-on-resume.svg') no-repeat;
+}
+
+.user_hide span:before {
+    display: block;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    background: url('/static/images/my-page/hide-resume.svg') no-repeat;
+    content: "";
+}
+
+.resume_view .user_info li {
+    display: inline-flex;
+    color: var(--gray120);
+    font-size: 15px;
+    line-height: 22px;
+    align-items: center;
+}
+
+.resume_view .user_info li.user_email:before {
+    background: url('/static/images/my-page/resume-mail.svg') no-repeat;
+}
+
+.resume_view .user_info li:before {
+    display: inline-block;
+    margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    content: "";
+    flex-shrink: 0;
+}
+
+.resume_view .user_info li.user_phone:before {
+    background: url('/static/images/my-page/resume-phone.svg') no-repeat;
+}
+
+.resume_view .user_info li.user_address {
+    display: block;
+    margin: 8px 0 0 0;
+}
+
+.resume_view .user_address {
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.resume_view .user_info li.user_address:before {
+    background: url('/static/images/my-page/resume-home.svg') no-repeat;
+}
+
+.resume_view .picture_box {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 64px;
+    width: 100px;
+    min-height: 100px;
+    max-height: 140px;
+    border: 1px solid var(--gray30);
+    border-radius: 4px;
+}
+
+.resume_view .picture_box .picture {
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    min-height: 100px;
+    max-height: 140px;
+}
+
+.resume_view .picture_box .picture img {
+    vertical-align: top;
+}
+.resume_view .picture_box .picture.none {
+    height: 140px;
+    border: none;
+    background: var(--gray20) url(https://www.saraminimage.co.kr/sri/resume/img_picture_none5.png) center / 100% no-repeat;
+}
+
+
+.resume_view .user_modify {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border-color: var(--white);
+    background: url('/static/images/my-page/resume-picture.svg') center no-repeat;
+}
+.resume_view .user_modify:hover {
+    background-color: var(--gray20);
+}
+.resume_view .user_info li+li {
+    margin-left: 60px;
+}
+.resume_con .resume_tit .box_tit .must {
+    margin-left: 8px;
+    color: var(--coral90);
+    font-size: 12px;
+    line-height: 20px;
+}
+.resume_con .resume_tit .box_tit .tit {
+    display: flex;
+    color: var(--gray120);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    align-items: center;
+}
+
+/* 학력 */
+.resume_con section+section {
+    padding-top: 60px;
+}
+.resume_con .resume_tit {
+    display: flex;
+    margin-bottom: 9px;
+    padding: 0 12px 0 20px;
+    height: 40px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.resume_con .resume_tit .box_tit {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+.resume_con .resume_tit .box_tit .career_txt {
+    display: flex;
+    align-items: center;
+}
+.career_txt {
+    margin-top: 8px;
+    color: var(--gray80);
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.resume_con .resume_tit .box_tit .career_txt span {
+    display: flex;
+    margin-left: 20px;
+    padding: 0 8px;
+    height: 24px;
+    border-radius: 4px;
+    color: var(--gray100);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    background: var(--gray20);
+    align-items: center;
+}
+
+.resume_con .resume_tit .box_tit .career_txt button {
+    display: flex;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume_con .resume_tit button {
+    display: flex;
+    padding: 6px 11px;
+    height: 40px;
+    border-color: var(--white);
+    border-radius: 4px;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: var(--white);
+    align-items: center;
+}
+
+.resume_con .resume_tit .box_tit .career_txt button svg {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    color: var(--blue80);
+    flex-shrink: 0;
+}
+
+.resume_con .resume_tit button svg {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    fill: var(--gray100);
+}
+
+.resume_con .resume_none {
+    padding: 40px 0;
+    border-top: 1px solid var(--gray40);
+    color: var(--gray80);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.resume_list {
+    border-top: 1px solid var(--gray40);
+}
+.resume_list .list {
+    display: flex;
+    position: relative;
+    margin: 0 28px;
+    padding: 28px 0;
+    line-height: 26px;
+    align-items: flex-start;
+}
+
+.resume_list .contents {
+    display: flex;
+    width: calc(100% - 40px);
+    flex-wrap: wrap;
+}
+
+.resume_list .contents .school_badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 24px;
+    margin-bottom: 4px;
+    padding: 0 8px;
+    color: var(--gray100);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    border-radius: 4px;
+    background: var(--gray20);
+}
+
+.resume_school .resume_list .contents .tit {
+    display: block;
+}
+
+.resume_list .contents .tit {
+    width: 100%;
+    color: var(--gray120);
+    font-size: 18px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.resume_school .resume_list .contents .tit span {
+    max-width: calc(100% - 60px);
+}
+
+.resume_school .resume_list .contents .tit span {
+    max-width: calc(100% - 60px);
+}
+
+.resume_list .contents .date {
+    display: inline-block;
+    color: var(--gray80);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.resume_list .contents .date:before {
+    display: inline-block;
+    margin: 0 8px;
+    width: 1px;
+    height: 12px;
+    background: var(--gray40);
+    content: "";
+}
+
+.resume_list .contents .desc {
+    margin-top: 8px;
+    width: 100%;
+    color: var(--gray120);
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-all;
+}
+
+.resume_list .faculty {
+    display: flex;
+    margin-top: 16px;
+    width: 100%;
+    color: var(--gray120);
+    font-size: 14px;
+    line-height: 20px;
+    flex-wrap: wrap;
+    gap: 4px 0;
+}
+
+.resume_list .contents_edit {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 12px;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.resume_list .contents_edit button {
+    min-width: 32px;
+    height: 32px;
+    border-color: var(--white);
+    background: var(--white);
+}
+
+.resume_list .contents_edit button svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    color: var(--gray80);
+}
+
+.resume_list .contents_edit button:hover {
+    background: var(--gray20);
+}
+
+.resume_con .resume_tit button:hover {
+    background: var(--gray20);
+}
+
+/* 학력 구분 선택 */
+.resume_edit {
+    position: relative;
+    padding: 32px 40px;
+    border-top: 2px solid var(--blue80);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 4px 16px 0 rgba(17, 42, 128, 0.08);
+}
+
+.resume_edit .item_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.resume_edit .item_m {
+    width: 278px;
+    flex-shrink: 0;
+}
+
+.InpBox.SizeL select {
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.resume_edit .resume_save {
+    display: flex;
+    margin-top: 24px;
+    justify-content: flex-end;
+}
+
+.resume_edit .resume_save button {
+    width: 80px;
+}
+
+[class*="BtnType"].BlueInvert {
+    border-color: var(--blue90);
+    color: var(--blue90);
+    background: var(--white);
+}
+
+[class*="BtnType"].SizeL {
+    padding: 10px 15px 12px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.resume_edit .resume_save button+button {
+    margin-left: 8px;
+}
+
+/* 초등학교 졸업 */
+.resume_edit .item_row.item_career {
+    margin-bottom: 16px;
+}
+
+.resume_edit .item_row.item_center {
+    align-items: center;
+}
+
+.resume_edit .item_row .item_check {
+    margin-left: 4px;
+}
+
+.InpBox .Chk {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.InpBox .Chk input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.InpBox .Chk.SizeL .Lbl {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.InpBox .Chk .Lbl {
+    display: block;
+    position: relative;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.InpBox .Chk.SizeL .Lbl:before {
+    width: 22px;
+    height: 22px;
+}
+
+.InpBox .Chk .Lbl:before {
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    vertical-align: top;
+    background: #fff;
+    content: '';
+}
+
+.resume_edit .item_row+.item_row {
+    margin-top: 20px;
+}
+
+.TypoBox.TypeBtn {
+    display: flex;
+    align-items: center;
+}
+
+.TypoBox.LblTop:has(.Typo.SizeXL)>.Lbl, .TypoBox.LblTop:has(.Typo.SizeML)>.Lbl, .TypoBox.LblTop:has(.Typo.SizeL)>.Lbl {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.TypoBox.LblTop .Lbl {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: var(--gray80);
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 300ms ease;
+    transform: translateY(-50%);
+    background-color: var(--white); /* 배경으로 레이블이 가리지 않게 함 */
+    padding: 0 10px;
+}
+
+
+.TypoBox label {
+    cursor: unset;
+}
+
+.TypoBox {
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.resume_edit .ability_box .TypoBox, .resume_edit .TypoBox .Typo {
+    width: 100%;
+}
+
+.TypoBox .Typo.SizeL {
+    padding: 12px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.TypoBox .Typo {
+    padding: 8px 12px;
+    width: 100%;
+    height: 38px;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: none;
+}
+
+
+.resume_edit .item_s {
+    width: 135px;
+    flex-shrink: 0;
+}
+
+.blind {
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+}
+
+.TypoBox.LblTop:has(.Typo.DatePic) .Lbl {
+    position: absolute;
+    left: 36px;
+}
+
+.TypoBox .Typo.DatePic {
+    padding-left: 36px;
+    background: url('/static/images/my-page/resume-date.svg') left 13px center no-repeat;
+}
+
+.TypoBox.LblTop:has(.Typo.DatePic:focus) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:-webkit-autofill) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:read-only) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:disabled) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic:valid) .Lbl, .TypoBox.LblTop:has(.Typo.DatePic.Invalid) .Lbl {
+    left: 12px;
+}
+
+.TypoBox.LblTop:has(.Typo:focus) .Lbl, .TypoBox.LblTop:has(.Typo:-webkit-autofill) .Lbl, .TypoBox.LblTop:has(.Typo:read-only) .Lbl, .TypoBox.LblTop:has(.Typo:disabled) .Lbl, .TypoBox.LblTop:has(.Typo:valid) .Lbl, .TypoBox.LblTop:has(.Typo.Invalid) .Lbl {
+    top: -10px;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: var(--white) !important;
+    transform: none;
+}
+
+.TypoBox:hover {
+    background: var(--gray20);
+
+}
+.TypoBox:hover .Lbl {
+    background-color: var(--gray20); /* 레이블의 배경을 hover 색상으로 변경 */
+
+}
+
+/* 초등 검정고시 */
+.resume_edit .item_close+.item_row {
+    margin-top: 0;
+}
+
+.InpBox .Chk input:checked~.Lbl:before {
+    border-color: var(--blue90);
+    background: var(--blue90);
+}
+
+.InpBox .Chk input:checked~.Lbl:after {
+    display: inline-block;
+    border-color: var(--white);
+}
+
+.InpBox .Chk.SizeL .Lbl:after {
+    top: 7px;
+    left: 6px;
+    width: 10px;
+    height: 5px;
+}
+
+.InpBox .Chk .Lbl:after {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 5px;
+    border-bottom: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    content: '';
+}
+

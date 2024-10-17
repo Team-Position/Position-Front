@@ -443,6 +443,12 @@ field_btn button {
 .field_body .input_group .TypoBox:first-child {
     width: 64px;
 }
+
+.field_body .input_group .TypoBox.address {
+    width: 200px;
+}
+
+
 .field_body .input_group .TypoBox {
     width: 52px;
 }

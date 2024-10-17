@@ -200,7 +200,40 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+                                        <div
+                                            class="selecter"
+                                            style="
+                                                margin-left: 630px;
+                                                margin-bottom: 10px;
+                                            "
+                                        >
+                                            <div class="InpBox sorting_select">
+                                                <select name="">
+                                                    <option value="closing_dt">
+                                                        알람여부 전체
+                                                    </option>
+                                                    <option value="reg_dt">
+                                                        열람
+                                                    </option>
+                                                    <option value="read_cnt">
+                                                        미열람
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="InpBox sorting_select">
+                                                <select name="">
+                                                    <option value="closing_dt">
+                                                        마감여부 전체
+                                                    </option>
+                                                    <option value="reg_dt">
+                                                        진행중
+                                                    </option>
+                                                    <option value="read_cnt">
+                                                        마감
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div class="area_recruiting">
                                             <div
                                                 class="wrap_loading"
@@ -616,14 +649,167 @@
                                                             <span
                                                                 class="txt_sub"
                                                                 >미열람</span
-                                                            ><!-- 알림표시 new 클래스 추가 -->
+                                                            >
                                                             <button
                                                                 type="button"
                                                                 class="btn_report _ai_report"
                                                                 data-recruitapply_idx="391601183"
                                                             >
-                                                                경쟁력분석</button
-                                                            ><!-- 지원자통계 stats 클래스 추가 -->
+                                                                경쟁력분석
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col_btns">
+                                                        <div class="action">
+                                                            <span
+                                                                class="date_end"
+                                                            ></span>
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="BtnType SizeM _apply_cancel"
+                                                            data-recruitapply_idx="391601183"
+                                                            data-company_nm="(주)지아이티"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
+                                                        >
+                                                            지원합격
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn_history _applicant_history"
+                                                            data-recruitapply_idx="391601183"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
+                                                        >
+                                                            지원내역
+                                                        </button>
+                                                    </div>
+
+                                                    <!--  주목! js에서 data-recruitapply_idx로 구분합니다 알아두세요!!!!! -->
+
+                                                    <div
+                                                        class="col_history"
+                                                        style="display: none"
+                                                        data-recruitapply_idx="391601183"
+                                                    >
+                                                        <ol class="timeline">
+                                                            <li class="now">
+                                                                <span
+                                                                    class="date"
+                                                                    >2024.10.17
+                                                                    13:37:30</span
+                                                                >
+                                                                <span
+                                                                    class="desc"
+                                                                >
+                                                                    <strong
+                                                                        >지원
+                                                                        완료</strong
+                                                                    >
+                                                                    <span
+                                                                        >지원서류<button
+                                                                            type="button"
+                                                                            class="txt"
+                                                                            onclick="viewApplyResume(391601183, 'print');"
+                                                                        >
+                                                                            이력서
+                                                                        </button></span
+                                                                    ><span
+                                                                        >지원
+                                                                        완료<button
+                                                                            type="button"
+                                                                            class="txt"
+                                                                            onclick="cancelLayer('.cancel_layerWrap', 'on', '(주)지아이티', 391601183);"
+                                                                        >
+                                                                            지원
+                                                                            취소
+                                                                        </button></span
+                                                                    >
+                                                                </span>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list_status">
+                                                <div
+                                                    class="row _apply_list"
+                                                    id="apply_list_391601183"
+                                                    data-name="오현준"
+                                                    data-recruitapply_idx="391601184"
+                                                    data-layer_check_status="n"
+                                                    data-csn="1298122435"
+                                                    data-rec_idx="49191684"
+                                                    data-company_nm="(주)지아이티"
+                                                    data-recruittitle="현대자동차그룹 (주)지아이티 재경부문(자금/재무결산) 채용"
+                                                    data-rec_division="재무(자금/재무결산)"
+                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo_web_ex.gif" width="152" height="42" />'
+                                                    data-is_ai_head_hunting="n"
+                                                    data-jumpit_rec_idx=""
+                                                >
+                                                    <!-- disabled 추가시 비활성 -->
+
+                                                    <div class="col_summary">
+                                                        <strong class="corp">
+                                                            <a
+                                                                href="/zf_user/company-info/view?csn=1298122435"
+                                                                target="_blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
+                                                            >
+                                                                ㈜지아이티
+                                                            </a>
+                                                        </strong>
+                                                        <div class="recruit">
+                                                            <a
+                                                                href="/zf_user/jobs/relay/view?rec_idx=49191684&amp;view_type=apply_status&amp;t_ref=apply_status_list&amp;t_ref_content=generic"
+                                                                target="_blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'recruit_title'});}catch(e){}"
+                                                            >
+                                                                <span
+                                                                    class="division"
+                                                                    >재무(자금/재무결산)</span
+                                                                >
+
+                                                                <div
+                                                                    class="TipBox"
+                                                                >
+                                                                    <span
+                                                                        class=""
+                                                                        >현대자동차그룹
+                                                                        (주)지아이티
+                                                                        재경부문(자금/재무결산)
+                                                                        채용</span
+                                                                    >
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="attached">
+                                                            ::before
+                                                            <button
+                                                                type="button"
+                                                                class="data _file_down_resume"
+                                                                data-recruitapply_idx="391601183"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
+                                                            >
+                                                                이력서
+                                                            </button>
+                                                        </div>
+                                                        <div class="status">
+                                                            <em
+                                                                class="txt_status"
+                                                            >
+                                                                지원완료
+                                                            </em>
+                                                            <span
+                                                                class="txt_sub"
+                                                                >미열람</span
+                                                            >
+                                                            <button
+                                                                type="button"
+                                                                class="btn_report _ai_report"
+                                                                data-recruitapply_idx="391601183"
+                                                            >
+                                                                경쟁력분석
+                                                            </button>
                                                         </div>
                                                     </div>
                                                     <div class="col_btns">
@@ -644,15 +830,204 @@
                                                         <button
                                                             type="button"
                                                             class="btn_history _applicant_history"
-                                                            data-recruitapply_idx="391601183"
+                                                            data-recruitapply_idx="391601184"
                                                             onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
                                                         >
                                                             지원내역
                                                         </button>
                                                     </div>
-                                                    <div class="col_history">
+
+                                                    <!--  주목! js에서 data-recruitapply_idx로 구분합니다 알아두세요!!!!! -->
+
+                                                    <div
+                                                        class="col_history"
+                                                        style="display: none"
+                                                        data-recruitapply_idx="391601184"
+                                                    >
                                                         <ol class="timeline">
-                                                            <!--관리내역 들어가는곳-->
+                                                            <li class="now">
+                                                                <span
+                                                                    class="date"
+                                                                    >2024.10.17
+                                                                    13:37:30</span
+                                                                >
+                                                                <span
+                                                                    class="desc"
+                                                                >
+                                                                    <strong
+                                                                        >지원
+                                                                        완료</strong
+                                                                    >
+                                                                    <span
+                                                                        >지원서류<button
+                                                                            type="button"
+                                                                            class="txt"
+                                                                            onclick="viewApplyResume(391601183, 'print');"
+                                                                        >
+                                                                            이력서
+                                                                        </button></span
+                                                                    ><span
+                                                                        >지원
+                                                                        완료<button
+                                                                            type="button"
+                                                                            class="txt"
+                                                                            onclick="cancelLayer('.cancel_layerWrap', 'on', '(주)지아이티', 391601183);"
+                                                                        >
+                                                                            지원
+                                                                            취소
+                                                                        </button></span
+                                                                    >
+                                                                </span>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list_status">
+                                                <div
+                                                    class="row _apply_list"
+                                                    id="apply_list_391601183"
+                                                    data-name="오현준"
+                                                    data-recruitapply_idx="391601185"
+                                                    data-layer_check_status="n"
+                                                    data-csn="1298122435"
+                                                    data-rec_idx="49191684"
+                                                    data-company_nm="(주)지아이티"
+                                                    data-recruittitle="현대자동차그룹 (주)지아이티 재경부문(자금/재무결산) 채용"
+                                                    data-rec_division="재무(자금/재무결산)"
+                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo_web_ex.gif" width="152" height="42" />'
+                                                    data-is_ai_head_hunting="n"
+                                                    data-jumpit_rec_idx=""
+                                                >
+                                                    <!-- disabled 추가시 비활성 -->
+
+                                                    <div class="col_summary">
+                                                        <strong class="corp">
+                                                            <a
+                                                                href="/zf_user/company-info/view?csn=1298122435"
+                                                                target="_blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
+                                                            >
+                                                                ㈜지아이티
+                                                            </a>
+                                                        </strong>
+                                                        <div class="recruit">
+                                                            <a
+                                                                href="/zf_user/jobs/relay/view?rec_idx=49191684&amp;view_type=apply_status&amp;t_ref=apply_status_list&amp;t_ref_content=generic"
+                                                                target="_blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'recruit_title'});}catch(e){}"
+                                                            >
+                                                                <span
+                                                                    class="division"
+                                                                    >재무(자금/재무결산)</span
+                                                                >
+
+                                                                <div
+                                                                    class="TipBox"
+                                                                >
+                                                                    <span
+                                                                        class=""
+                                                                        >현대자동차그룹
+                                                                        (주)지아이티
+                                                                        재경부문(자금/재무결산)
+                                                                        채용</span
+                                                                    >
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="attached">
+                                                            ::before
+                                                            <button
+                                                                type="button"
+                                                                class="data _file_down_resume"
+                                                                data-recruitapply_idx="391601183"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
+                                                            >
+                                                                이력서
+                                                            </button>
+                                                        </div>
+                                                        <div class="status">
+                                                            <em
+                                                                class="txt_status"
+                                                            >
+                                                                지원완료
+                                                            </em>
+                                                            <span
+                                                                class="txt_sub"
+                                                                >미열람</span
+                                                            >
+                                                            <button
+                                                                type="button"
+                                                                class="btn_report _ai_report"
+                                                                data-recruitapply_idx="391601183"
+                                                            >
+                                                                경쟁력분석
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col_btns">
+                                                        <div class="action">
+                                                            <span
+                                                                class="date_end"
+                                                            ></span>
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="BtnType SizeM _apply_cancel"
+                                                            data-recruitapply_idx="391601183"
+                                                            data-company_nm="(주)지아이티"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
+                                                        >
+                                                            지원취소
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn_history _applicant_history"
+                                                            data-recruitapply_idx="391601185"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
+                                                        >
+                                                            지원내역
+                                                        </button>
+                                                    </div>
+
+                                                    <!--  주목! js에서 data-recruitapply_idx로 구분합니다 알아두세요!!!!! -->
+
+                                                    <div
+                                                        class="col_history"
+                                                        style="display: none"
+                                                        data-recruitapply_idx="391601185"
+                                                    >
+                                                        <ol class="timeline">
+                                                            <li class="now">
+                                                                <span
+                                                                    class="date"
+                                                                    >2024.10.17
+                                                                    13:37:30</span
+                                                                >
+                                                                <span
+                                                                    class="desc"
+                                                                >
+                                                                    <strong
+                                                                        >지원
+                                                                        완료</strong
+                                                                    >
+                                                                    <input
+                                                                        type="file"
+                                                                    />
+
+                                                                    <span
+                                                                        >지원
+                                                                        완료<button
+                                                                            type="button"
+                                                                            class="txt"
+                                                                            onclick="cancelLayer('.cancel_layerWrap', 'on', '(주)지아이티', 391601183);"
+                                                                        >
+                                                                            지원
+                                                                            취소
+                                                                        </button></span
+                                                                    >
+                                                                </span>
+                                                            </li>
                                                         </ol>
                                                     </div>
                                                 </div>

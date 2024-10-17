@@ -1,11 +1,11 @@
-#sri_wrap {
+#sri-wrap {
     grid-area: main;
     display: table-row;
     width: 100%;
     height: 100%;
 }
 
-.layout_home #content {
+.layout-home #content {
     margin-bottom: 0;
 }
 #content {
@@ -13,33 +13,33 @@
     margin: 88px auto 136px;
     width: 1248px;
 }
-.wrap_my_home {
+.wrap-my-home {
     position: relative;
 }
 
-.wrap_my_home .wrap_title_box .wrap_title {
+.wrap-my-home .wrap-title-box .wrap-title {
     display: inline-block;
 }
 
-.wrap_title {
+.wrap-title {
     color: #373f57;
     font-size: 36px;
     font-weight: bold;
     line-height: 56px;
 }
 
-.wrap_my_home .wrap_title_box .btn_setting.job_state {
+.wrap-my-home .wrap-title-box .btn-setting.job-state {
     padding-right: 30px;
     border: 1px solid #eff5ff;
     color: #4876ef;
     font-weight: bold;
     background: #eff5ff right 14px center url('/static/images/my-page/next-arrow.svg') no-repeat;
 }
-.wrap_my_home .wrap_title_box .btn_setting.job_state:hover {
+.wrap-my-home .wrap-title-box .btn-setting.job-state:hover {
     background: #deebff right 14px center url('/static/images/my-page/next-arrow-hover.svg') no-repeat;
 }
 
-.wrap_my_home .wrap_title_box .btn_setting {
+.wrap-my-home .wrap-title-box .btn-setting {
     display: inline-block;
     margin: 12px 0 0 10px;
     padding: 6px 30px 6px 16px;
@@ -51,13 +51,13 @@
     vertical-align: top;
 }
 
-.my_notification {
+.my-notification {
     padding: 0 0 12px;
     width: 100%;
     border-bottom: 1px solid #eaedf4;
 }
 
-.my_notification .TabBox {
+.my-notification .TabBox {
     padding: 56px 0 22px;
 }
 
@@ -146,19 +146,19 @@
 }
 
 /* cards */
-.my_notification .wrap_cards {
+.my-notification .wrap-cards {
     position: relative;
     height: 234px;
 }
 
-.my_notification .sliders {
+.my-notification .sliders {
     overflow: hidden;
     position: relative;
     width: 1264px;
     height: 234px;
 }
 
-.my_notification .sliders .bx-viewport {
+.my-notification .sliders .bx-viewport {
     overflow: visible !important;
 }
 
@@ -166,15 +166,15 @@
     -webkit-transform: translatez(0);
 }
 
-.my_notification .slider.my li:nth-of-type(4n+3), .my_notification .slider.jobs li {
+.my-notification .slider.my li:nth-of-type(4n+3), .my-notification .slider.jobs li {
     border-color: #00d3ab;
     background: #00d3ab;
 }
-.my_notification .slider.my li:nth-of-type(4n+3), .my_notification .slider.messages li {
+.my-notification .slider.my li:nth-of-type(4n+3), .my-notification .slider.messages li {
     border-color: #00beea;
     background: #00beea;
 }
-.my_notification .slider li {
+.my-notification .slider li {
     float: left;
     position: relative;
     width: 300px;
@@ -185,7 +185,7 @@
     box-sizing: border-box;
 }
 
-.my_notification .slider .inner {
+.my-notification .slider .inner {
     position: relative;
     z-index: 1;
     padding: 23px;
@@ -193,7 +193,7 @@
     box-sizing: border-box;
 }
 
-.my_notification .slider .link_card {
+.my-notification .slider .link-card {
     position: absolute;
     top: 0;
     right: 0;
@@ -202,7 +202,7 @@
     z-index: 1;
 }
 
-.my_notification .slider .link_card:after {
+.my-notification .slider .link-card:after {
     display: block;
     position: absolute;
     top: 0;
@@ -214,7 +214,7 @@
     opacity: 0;
 }
 
-.my_notification .slider .flag {
+.my-notification .slider .flag {
     position: relative;
     margin-bottom: 34px;
     padding-left: 34px;
@@ -225,7 +225,7 @@
     opacity: 1;
 }
 
-.my_notification .slider .flag svg {
+.my-notification .slider .flag svg {
     position: absolute;
     top: 0;
     left: 0;
@@ -233,18 +233,18 @@
     height: 24px;
 }
 
-.my_notification .slider .flag svg use {
+.my-notification .slider .flag svg use {
     color: #fff;
 }
 
-.my_notification .slider li dl {
+.my-notification .slider li dl {
     position: absolute;
     top: 81px;
     right: 23px;
     bottom: 23px;
     left: 23px;
 }
-.my_notification .slider .title {
+.my-notification .slider .title {
     overflow: hidden;
     margin-bottom: 12px;
     width: 100%;
@@ -255,7 +255,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.my_notification .slider .txt {
+.my-notification .slider .txt {
     overflow: hidden;
     width: 100%;
     color: #f8fafc;
@@ -264,10 +264,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.my_notification .slider .txt.define, .my_notification .slider .txt.list {
+.my-notification .slider .txt.define, .my-notification .slider .txt.list {
     font-size: 0;
 }
-.my_notification .slider .txt {
+.my-notification .slider .txt {
     overflow: hidden;
     width: 100%;
     color: #f8fafc;
@@ -276,21 +276,21 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.my_notification .slider .txt.list span {
+.my-notification .slider .txt.list span {
     width: auto;
 }
-.my_notification .slider .txt span {
+.my-notification .slider .txt span {
     display: inline-block;
     width: 56px;
     font-size: 13px;
     line-height: 24px;
     vertical-align: top;
 }
-.my_notification .slider .txt.list span+span {
+.my-notification .slider .txt.list span+span {
     margin-left: 10px;
 }
 
-.my_notification .slider .btn_card {
+.my-notification .slider .btn-card {
     display: table;
     position: absolute;
     bottom: 23px;
@@ -299,12 +299,12 @@
     opacity: 0;
 }
 
-.my_notification .slider .btn_card>span {
+.my-notification .slider .btn-card>span {
     display: table-cell;
     min-width: 122px;
 }
 
-.sri_btn_ml {
+.sri-btn-ml {
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -316,13 +316,13 @@
     vertical-align: top;
     cursor: pointer;
 }
-.my_notification .slider .btn_card .sri_btn_ml {
+.my-notification .slider .btn-card .sri-btn-ml {
     width: 100%;
 }
-.my_notification .slider .btn_card .sri_btn_ml>span {
+.my-notification .slider .btn-card .sri-btn-ml>span {
     width: calc(100% - 2px);
 }
-.sri_btn_ml span {
+.sri-btn-ml span {
     display: inline-block;
     width: 118px;
     height: 38px;
@@ -334,17 +334,17 @@
     background: var(--white);
 }
 
-.my_notification .slider li:hover {
+.my-notification .slider li:hover {
     border-color: #d7dce5 !important;
     background: #fff !important;
     box-shadow: 2px 6px 16px 0 rgba(17, 42, 128, 0.08);
 }
 
-.my_notification .slider li:hover .flag {
+.my-notification .slider li:hover .flag {
     opacity: 0;
 }
 
-.my_notification .slider li:hover dl {
+.my-notification .slider li:hover dl {
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
     -webkit-transform: translateY(-58px);
@@ -352,32 +352,32 @@
     transform: translateY(-58px);
 }
 
-.my_notification .slider li:hover .title {
+.my-notification .slider li:hover .title {
     color: #373f57;
 }
 
-.my_notification .slider li:hover .txt {
+.my-notification .slider li:hover .txt {
     color: #8491a7;
 }
 
-.my_notification .slider li:hover .btn_card {
+.my-notification .slider li:hover .btn-card {
     opacity: 1;
 }
-.sri_btn_ml:hover span {
+.sri-btn-ml:hover span {
     background: var(--gray20);
 }
 
 /* 배너 버튼 */
-.my_notification .btn_slider:disabled {
+.my-notification .btn-slider:disabled {
     background: #fff;
     cursor: default;
 }
 
-.my_notification .btn_slider.btn_prev {
+.my-notification .btn-slider.btn-prev {
     right: 40px;
 }
 
-.my_notification .btn_slider {
+.my-notification .btn-slider {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -389,20 +389,20 @@
     background: #fff;
 }
 
-.my_notification .btn_slider.btn_prev:after {
+.my-notification .btn-slider.btn-prev:after {
     margin-left: 2px;
     border-width: 0 0 2px 2px;
 }
 
-.btn_prev.hidden, .btn_next.hidden {
+.btn-prev.hidden, .btn-next.hidden {
             display: none; /* hidden 클래스가 붙은 버튼 숨기기 */
         }
 
-.my_notification .btn_slider:disabled:after {
+.my-notification .btn-slider:disabled:after {
     border-color: #afbac8;
 }
 
-.my_notification .btn_slider:after {
+.my-notification .btn-slider:after {
     display: block;
     position: absolute;
     top: 50%;
@@ -417,33 +417,33 @@
     content: "";
 }
 
-.my_notification .btn_slider.btn_next:after {
+.my-notification .btn-slider.btn-next:after {
     margin-left: -2px;
     border-width: 2px 2px 0 0;
 }
 
-.my_notification .btn_slider:hover {
+.my-notification .btn-slider:hover {
     background: #f4f6fa;
 }
 
 /* 배너 밑 바로가기 */
 
-.onboarding_section {
+.onboarding-section {
     padding: 12px 0 32px;
 }
 
-.onboarding_section .career_inflow {
+.onboarding-section .career-inflow {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0 16px;
 }
 
-.onboarding_section .career_inflow_card {
+.onboarding-section .career-inflow-card {
     display: flex;
     background: var(--white);
 }
 
-.onboarding_section .career_inflow_card .link_inflow {
+.onboarding-section .career-inflow-card .link-inflow {
     display: flex;
     padding: 16px;
     width: 100%;
@@ -454,11 +454,11 @@
     align-items: center;
 }
 
-.onboarding_section .career_inflow_card .box_icon.type_class {
+.onboarding-section .career-inflow-card .box-icon.type-class {
     background: var(--blue20);
 }
 
-.onboarding_section .career_inflow_card .box_icon {
+.onboarding-section .career-inflow-card .box-icon {
     display: flex;
     margin-right: 12px;
     width: 64px;
@@ -469,35 +469,35 @@
     justify-content: center;
 }
 
-.onboarding_section .career_inflow_card .box_info {
+.onboarding-section .career-inflow-card .box-info {
     flex-grow: 1;
 }
 
-.onboarding_section .career_inflow_card .tit {
+.onboarding-section .career-inflow-card .tit {
     color: var(--gray120);
     font-size: 15px;
     line-height: 22px;
 }
 
-.onboarding_section .career_inflow_card .desc {
+.onboarding-section .career-inflow-card .desc {
     margin-top: 2px;
     color: var(--gray100);
     font-size: 14px;
     line-height: 20px;
 }
 
-.onboarding_section .career_inflow_card .link_inflow:hover {
+.onboarding-section .career-inflow-card .link-inflow:hover {
     border-color: var(--blue80);
     box-shadow: 0 10px 15px 0 rgba(34, 34, 34, 0.06);
 }
 /* 차곡차곡 한 걸음씩 */
 
-.wrap_my_home .wrap_col {
+.wrap-my-home .wrap-col {
     position: relative;
     width: 1248px;
 }
 
-.wrap_my_home .wrap_col:before {
+.wrap-my-home .wrap-col:before {
     display: block;
     position: absolute;
     top: 0;
@@ -509,7 +509,7 @@
     content: "";
 }
 
-.wrap_my_home .col1 {
+.wrap-my-home .col1 {
     float: left;
     position: relative;
     z-index: 3;
@@ -517,12 +517,12 @@
     width: 940px;
 }
 
-.my_timeline {
+.my-timeline {
     margin-bottom: 34px;
     padding: 38px 80px 0 0;
 }
 
-.my_timeline .title {
+.my-timeline .title {
     margin-bottom: 32px;
     color: #373f57;
     font-size: 24px;
@@ -530,7 +530,7 @@
     line-height: 32px;
 }
 
-.my_folio {
+.my-folio {
     position: absolute;
     top: 32px;
     right: 80px;
@@ -538,7 +538,7 @@
     font-size: 0;
 }
 
-.my_folio .link_folio {
+.my-folio .link-folio {
     display: inline-block;
     margin-left: 12px;
     padding: 10px 20px 14px;
@@ -548,7 +548,7 @@
     line-height: 24px;
     background: #373f57;
 }
-.my_folio .link_folio .txt {
+.my-folio .link-folio .txt {
     display: block;
     float: left;
     margin-top: 3px;
@@ -558,7 +558,7 @@
     line-height: 20px;
 }
 
-.my_folio .link_folio .count {
+.my-folio .link-folio .count {
     display: block;
     float: right;
     color: #00d3ab;
@@ -567,19 +567,19 @@
     line-height: 24px;
 }
 
-.my_folio .link_folio:after {
+.my-folio .link-folio:after {
     display: table;
     clear: both;
     content: "";
     table-layout: fixed;
 }
 
-.my_topic {
+.my-topic {
     position: relative;
     padding: 0 80px 0 0;
 }
 
-.my_topic .title {
+.my-topic .title {
     position: relative;
     padding: 0 0 0 79px;
     height: 28px;
@@ -589,7 +589,7 @@
     line-height: 24px;
 }
 
-.my_topic .title>span {
+.my-topic .title>span {
     position: absolute;
     top: 0;
     left: 0;
@@ -601,11 +601,11 @@
     text-align: center;
 }
 
-.my_topic .list {
+.my-topic .list {
     margin-top: 24px;
 }
 
-.my_topic .list li {
+.my-topic .list li {
     display: block;
     overflow: hidden;
     float: left;
@@ -619,18 +619,18 @@
     background: #eff5ff;
 }
 
-.my_topic .list dl {
+.my-topic .list dl {
     display: block;
     position: relative;
     padding: 75px 0 0 0;
 }
 
-.my_topic .list li.company dt {
+.my-topic .list li.company dt {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.my_topic .list dt {
+.my-topic .list dt {
     display: block;
     overflow: hidden;
     width: 100%;
@@ -640,13 +640,13 @@
     line-height: 24px;
 }
 
-.my_topic .list dd.meta {
+.my-topic .list dd.meta {
     margin-top: 8px;
     color: #5c667b;
     font-size: 14px;
 }
 
-.my_topic .list dd.meta span {
+.my-topic .list dd.meta span {
     display: block;
     overflow: hidden;
     width: 100%;
@@ -655,7 +655,7 @@
     white-space: nowrap;
 }
 
-.my_topic .list .copy {
+.my-topic .list .copy {
     position: absolute;
     top: 21px;
     right: 23px;
@@ -667,18 +667,18 @@
     opacity: 1;
 }
 
-.my_topic .list .copy svg {
+.my-topic .list .copy svg {
     display: block;
     margin-bottom: 8px;
     width: 24px;
     height: 24px;
 }
 
-.my_topic .list .copy svg use {
+.my-topic .list .copy svg use {
     color: #4876ef;
 }
 
-.my_topic .list .BtnType {
+.my-topic .list .BtnType {
     display: block;
     position: absolute;
     right: 23px;
@@ -711,13 +711,13 @@
     align-items: center;
 }
 
-.my_topic .list li:hover {
+.my-topic .list li:hover {
     border-color: #eff1f5;
     background: #fff;
     box-shadow: 2px 6px 16px 0 rgba(17, 42, 128, 0.08);
 }
 
-.my_topic .list li:hover dl {
+.my-topic .list li:hover dl {
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
     -webkit-transform: translateY(-70px);
@@ -725,33 +725,33 @@
     transform: translateY(-70px);
 }
 
-.my_topic .list li:hover .copy {
+.my-topic .list li:hover .copy {
     opacity: 0;
 }
 
-.my_topic .list li:hover .BtnType {
+.my-topic .list li:hover .BtnType {
     opacity: 1;
 }
 
-.my_folio .link_folio:hover {
+.my-folio .link-folio:hover {
     background: #292e41;
 }
 
-.my_topic .list .BtnType:hover {
+.my-topic .list .BtnType:hover {
     background: var(--blue20);
 }
-.my_topic .list li+li {
+.my-topic .list li+li {
     margin-left: 16px;
 }
 
-.my_topic .list li.job dt {
+.my-topic .list li.job dt {
     display: -webkit-box;
     height: 48px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
 
-.my_topic .list dd.company_name {
+.my-topic .list dd.company-name {
     overflow: hidden;
     margin-top: 5px;
     color: #5c667b;
@@ -761,14 +761,14 @@
     white-space: nowrap;
 }
 
-.my_topic .list dd.date {
+.my-topic .list dd.date {
     margin-top: 9px;
     color: #5c667b;
     font-size: 13px;
     line-height: 17px;
 }
 
-.wrap_my_home .col2 {
+.wrap-my-home .col2 {
     float: right;
     position: relative;
     z-index: 2;
@@ -776,44 +776,44 @@
     width: 307px;
 }
 
-.wrap_my_home .my_banner {
+.wrap-my-home .my-banner {
     padding: 38px 0 40px 40px;
 }
 
-.wrap_my_home .my_banner img {
+.wrap-my-home .my-banner img {
     display: block;
     width: 267px;
     height: 314px;
 }
 
 /* 지원 현황 */
-.my_notification .slider.my li:nth-of-type(4n+1), .my_notification .slider.apply li {
+.my-notification .slider.my li:nth-of-type(4n+1), .my-notification .slider.apply li {
     border-color: #5189fa;
     background: #5189fa;
 }
-.my_notification .slider .btn_card>span .BtnType, .my_notification .slider .btn_card .BtnType {
+.my-notification .slider .btn-card>span .BtnType, .my-notification .slider .btn-card .BtnType {
     width: 100%;
     color: var(--blue90);
     border-color: var(--blue90);
     background: var(--white);
 }
 
-.my_notification .slider .btn_card>span+span {
+.my-notification .slider .btn-card>span+span {
     padding-left: 8px;
 }
 
-.my_notification .slider .spacer {
+.my-notification .slider .spacer {
     line-height: 190px;
     padding: 0 23px;
 }
 
-.my_notification .slider .spacer .title {
+.my-notification .slider .spacer .title {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
 }
 
-.my_notification .slider .title {
+.my-notification .slider .title {
     overflow: hidden;
     margin-bottom: 12px;
     width: 100%;
@@ -825,7 +825,7 @@
     white-space: nowrap;
 }
 
-.my_notification .slider .spacer .title a {
+.my-notification .slider .spacer .title a {
     display: inline-block;
     margin-top: 8px;
     color: #f8fafc;
@@ -835,20 +835,20 @@
     text-decoration: underline;
     vertical-align: top;
 }
-.my_notification .slider .btn_card>span .BtnType:hover, .my_notification .slider .btn_card .BtnType:hover {
+.my-notification .slider .btn-card>span .BtnType:hover, .my-notification .slider .btn-card .BtnType:hover {
     background: var(--blue20);
 }
 
-.my_notification .slider li:hover .spacer .title a {
+.my-notification .slider li:hover .spacer .title a {
     color: #8491a7;
 }
-.my_notification .slider li:hover .spacer .title a:hover {
+.my-notification .slider li:hover .spacer .title a:hover {
     color: #373f57;
 }
 
-.wrap_slider {
+.wrap-slider {
     display: none; /* 기본적으로 모든 슬라이더를 숨깁니다 */
 }
-.wrap_slider.active {
+.wrap-slider.active {
     display: block; /* active 클래스가 붙은 슬라이더만 보이도록 설정 */
 }

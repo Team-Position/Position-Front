@@ -892,3 +892,10 @@ body.no_gnb {
     content: '';
 }
 
+/* 유효성 */
+.TypoBox:has(.Typo.Invalid) {
+    border-color: var(--coral110);
+}
+.InpBox.Invalid select {
+    border-color: var(--coral110);
+}

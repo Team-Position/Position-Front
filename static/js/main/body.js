@@ -1,10 +1,10 @@
 // window.addEventListener("changeTabMenu", function () {
-//     const topSwiper = document.querySelector(".wrap_slides")?.swiper;
+//     const topSwiper = document.querySelector(".wrap-slides")?.swiper;
 //     if (topSwiper) {
 //         topSwiper.update(); // 슬라이드 업데이트
 //         topSwiper.slideTo(0); // 첫 번째 슬라이드로 이동
 //     } else {
-//         new Swiper(".wrap_slides", {
+//         new Swiper(".wrap-slides", {
 //             slidesPerView: "auto", // 슬라이드가 자동으로 크기 설정
 //             cssMode: true, // CSS 기반 슬라이드 모드
 //             observer: true, // DOM 변화를 감지하고 슬라이드 업데이트
@@ -14,24 +14,24 @@
 //                 },
 //             },
 //             navigation: {
-//                 nextEl: ".main_cont .btn_next", // 다음 슬라이드 버튼
-//                 prevEl: ".main_cont .btn_prev", // 이전 슬라이드 버튼
+//                 nextEl: ".main-cont .btn-next", // 다음 슬라이드 버튼
+//                 prevEl: ".main-cont .btn-prev", // 이전 슬라이드 버튼
 //             },
 //         });
 //     }
 // });
 
 // 탭 메뉴 버튼을 선택 (예: .tab-menu 버튼이 클릭될 때)
-// const tabMenuButtons = document.querySelectorAll(".btn_next");
+// const tabMenuButtons = document.querySelectorAll(".btn-next");
 
 // tabMenuButtons.forEach((button) => {
 //     button.addEventListener("click", function () {
-//         const topSwiper = document.querySelector(".wrap_slides")?.swiper;
+//         const topSwiper = document.querySelector(".wrap-slides")?.swiper;
 //         if (topSwiper) {
 //             topSwiper.update(); // 슬라이드 업데이트
 //             topSwiper.slideTo(0); // 첫 번째 슬라이드로 이동
 //         } else {
-//             new Swiper(".wrap_slides", {
+//             new Swiper(".wrap-slides", {
 //                 slidesPerView: "auto", // 슬라이드가 자동으로 크기 설정
 //                 cssMode: true, // CSS 기반 슬라이드 모드
 //                 observer: true, // DOM 변화를 감지하고 슬라이드 업데이트
@@ -41,8 +41,8 @@
 //                     },
 //                 },
 //                 navigation: {
-//                     nextEl: ".main_cont .btn_next", // 다음 슬라이드 버튼
-//                     prevEl: ".main_cont .btn_prev", // 이전 슬라이드 버튼
+//                     nextEl: ".main-cont .btn-next", // 다음 슬라이드 버튼
+//                     prevEl: ".main-cont .btn-prev", // 이전 슬라이드 버튼
 //                 },
 //             });
 //         }
@@ -51,8 +51,8 @@
 
 const items = document.querySelector(".items");
 const slides = document.querySelectorAll(".items .item");
-const prevButton = document.querySelector(".btn_prev");
-const nextButton = document.querySelector(".btn_next");
+const prevButton = document.querySelector(".btn-prev");
+const nextButton = document.querySelector(".btn-next");
 
 let count = 1; // 현재 슬라이드 인덱스
 const totalSlides = slides.length - 1; // 총 슬라이드 개수
@@ -119,7 +119,7 @@ updateSlidePosition();
 
 // 배너 위 탭 요소 선택시
 const buttons = document.querySelectorAll(
-    "button.tab_recruit, button.tab_jobs_major, button.tab_jobs_public"
+    "button.tab-recruit, button.tab-jobs-major, button.tab-jobs-public"
 );
 
 // 각 버튼에 클릭 이벤트 추가
@@ -133,7 +133,7 @@ buttons.forEach((button) => {
     });
 });
 
-const btnTrackList = document.querySelectorAll(".btn_scrap.track_event");
+const btnTrackList = document.querySelectorAll(".btn-scrap.track-event");
 
 btnTrackList.forEach((btnTrack) => {
     btnTrack.addEventListener("click", (e) => {
@@ -146,7 +146,7 @@ btnTrackList.forEach((btnTrack) => {
     });
 });
 
-// const btnQuickList = document.querySelectorAll("._ga_quick");
+// const btnQuickList = document.querySelectorAll(".-ga-quick");
 // btnQuickList.forEach((btnQuick) => {
 //     btnQuick.addEventListener("click", (e) => {
 //         // 모든 버튼에서 'on' 클래스 제거
@@ -157,8 +157,8 @@ btnTrackList.forEach((btnTrack) => {
 //     });
 // });
 
-const btnQuickList = document.querySelectorAll("._ga_quick");
-const btnTop = document.querySelector(".btn_top");
+const btnQuickList = document.querySelectorAll(".-ga-quick");
+const btnTop = document.querySelector(".btn-top");
 
 // 각 버튼에 클릭 이벤트 추가
 btnQuickList.forEach((btnQuick) => {
@@ -170,7 +170,7 @@ btnQuickList.forEach((btnQuick) => {
         btnQuick.classList.add("on");
 
         // 클릭된 버튼의 value 속성값으로 대상 섹션 찾기
-        const targetId = `section_${btnQuick.value}`; // 'section_' 접두어 추가
+        const targetId = `section-${btnQuick.value}`; // 'section-' 접두어 추가
         const targetElement = document.getElementById(targetId);
 
         // 해당 위치로 즉시 이동

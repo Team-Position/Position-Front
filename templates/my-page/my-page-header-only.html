@@ -10,68 +10,68 @@
             href="/static/css/my-page/my-page-header-only.css"
         />
     </head>
-    <body id="container" class="layout_home vsc-initialized">
-        <header id="sri_header" class="sri_header">
+    <body id="container" class="layout-home vsc-initialized">
+        <header id="sri-header" class="sri-header">
             <a href="/" class="ci"
                 ><svg>
-                    <use xlink:href="#svg_saramin_ci"></use>
+                    <use xlink:href="#svg-saramin-ci"></use>
                 </svg>
             </a>
-            <div class="wrap_top_btns">
-                <a href="/zf_user/member/persons/main" class="link_home">
+            <div class="wrap-top-btns">
+                <a href="/zf-user/member/persons/main" class="link-home">
                     <svg>
-                        <use xlink:href="#svg_my_15"></use>
+                        <use xlink:href="#svg-my-15"></use>
                     </svg>
                     <span class="txt">MY홈</span>
                 </a>
-                <!-- <div class="rewards_point">
+                <!-- <div class="rewards-point">
                     <a
-                        href="/zf_user/member/career-mileage"
-                        onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'career_mileage','event-flow': 'icon','event-label': ''});}catch(e){}"
+                        href="/zf-user/member/career-mileage"
+                        onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'career-mileage','event-flow': 'icon','event-label': ''});}catch(e){}"
                     >
-                        <svg><use xlink:href="#svg_top_rewards"></use></svg>
-                        <span id="my_career_mileage">0</span>
+                        <svg><use xlink:href="#svg-top-rewards"></use></svg>
+                        <span id="my-career-mileage">0</span>
                     </a>
                 </div> -->
-                <div
-                    id="message_badge"
-                    class="wrap_messenger"
-                    data-el="chat_beta"
+                <!-- <div
+                    id="message-badge"
+                    class="wrap-messenger"
+                    data-el="chat-beta"
                 >
-                    <button type="button" class="btn_messenger">메신저</button>
+                    <button type="button" class="btn-messenger">메신저</button>
                     <span
-                        id="unread_message_count"
-                        class="push_num"
+                        id="unread-message-count"
+                        class="push-num"
                         style="display: none"
                         >0</span
                     >
-                </div>
-                <div class="wrap_my_layer">
-                    <button type="button" class="top_btn btn_record">
+                </div> -->
+                <div class="wrap-my-layer">
+                    <button type="button" class="top-btn btn-record">
                         <span class="blind">내저장 레이어 버튼</span>
-                        <svg class="img_record top_btn_icon">
+                        <svg class="img-record top-btn-icon">
                             <use
-                                xlink:href="#svg_top_flag"
-                                class="top_layer_icon"
+                                xlink:href="#svg-top-flag"
+                                class="top-layer-icon"
                             ></use>
                         </svg>
                     </button>
-                    <div class="top_layer_assist record_layer_content">
+                    <div class="top-layer-assist record-layer-content">
                         <strong class="title">내 저장</strong>
-                        <span class="view_status"
+                        <span class="view-status"
                             >최근 30일간 저장내역 노출</span
                         >
-                        <ul class="tab_btns">
+                        <ul class="tab-btns">
                             <li class="selected">
                                 <button
                                     type="button"
-                                    class="BtnType SizeM save_layer_tab"
-                                    data-tab_type="scrap"
+                                    class="BtnType SizeM save-layer-tab"
+                                    data-tab-type="scrap"
                                     onclick="showTab('scrap')"
                                 >
                                     <span class="blind">스크랩 버튼</span>
-                                    <svg class="icon_menu layer_tab_btn">
-                                        <use xlink:href="#svg_my_48"></use>
+                                    <svg class="icon-menu layer-tab-btn">
+                                        <use xlink:href="#svg-my-48"></use>
                                     </svg>
                                 </button>
                                 <p class="txt">스크랩</p>
@@ -79,13 +79,13 @@
                             <li>
                                 <button
                                     type="button"
-                                    class="BtnType SizeM save_layer_tab"
-                                    data-tab_type="suited"
+                                    class="BtnType SizeM save-layer-tab"
+                                    data-tab-type="suited"
                                     onclick="showTab('suited')"
                                 >
                                     <span class="blind">나의 검색 버튼</span>
-                                    <svg class="icon_menu layer_tab_btn">
-                                        <use xlink:href="#svg_my_52"></use>
+                                    <svg class="icon-menu layer-tab-btn">
+                                        <use xlink:href="#svg-my-52"></use>
                                     </svg>
                                 </button>
                                 <p class="txt">나의 검색</p>
@@ -93,54 +93,54 @@
                             <li>
                                 <button
                                     type="button"
-                                    class="BtnType SizeM save_layer_tab"
-                                    data-tab_type="favor_company"
-                                    onclick="showTab('favor_company')"
+                                    class="BtnType SizeM save-layer-tab"
+                                    data-tab-type="favor-company"
+                                    onclick="showTab('favor-company')"
                                 >
                                     <span class="blind">관심기업 버튼</span>
-                                    <svg class="icon_menu layer_tab_btn">
-                                        <use xlink:href="#svg_my_49"></use>
+                                    <svg class="icon-menu layer-tab-btn">
+                                        <use xlink:href="#svg-my-49"></use>
                                     </svg>
                                 </button>
                                 <p class="txt">관심기업</p>
                             </li>
                         </ul>
                         <a
-                            href="/zf_user/persons/scrap-recruit"
-                            class="BtnType SizeM page_link scrap_recruit_view"
+                            href="/zf-user/persons/scrap-recruit"
+                            class="BtnType SizeM page-link scrap-recruit-view"
                             style="display: block"
                             >전체 스크랩 공고 보기</a
                         >
                         <a
-                            href="/zf_user/member/suited-recruit-mail/list"
-                            class="BtnType SizeM page_link suited_recruit_view"
+                            href="/zf-user/member/suited-recruit-mail/list"
+                            class="BtnType SizeM page-link suited-recruit-view"
                             style="display: none"
                             >전체 나의검색 공고 보기</a
                         >
                         <a
-                            href="/zf_user/member/favor-company/list"
-                            class="BtnType SizeM page_link favor_recruit_view"
+                            href="/zf-user/member/favor-company/list"
+                            class="BtnType SizeM page-link favor-recruit-view"
                             style="display: none"
                             >전체 관심기업 공고 보기</a
                         >
                         <div
-                            class="save_list_area ScrollBar"
-                            id="scrap_list_area"
+                            class="save-list-area ScrollBar"
+                            id="scrap-list-area"
                             style="display: block"
                         >
                             <input
                                 type="hidden"
-                                name="scrap_request_page"
+                                name="scrap-request-page"
                                 value="1"
-                                id="scrap_request_page"
+                                id="scrap-request-page"
                             />
                             <input
                                 type="hidden"
-                                name="scrap_list_total_cnt"
+                                name="scrap-list-total-cnt"
                                 value="1"
-                                id="scrap_list_total_cnt"
+                                id="scrap-list-total-cnt"
                             />
-                            <div class="save_list">
+                            <div class="save-list">
                                 <span class="date">2024.10.13</span>
                                 <ul>
                                     <li>
@@ -149,28 +149,28 @@
                                             >[현대자동차 그룹사] 2025년 대졸
                                             신입 채용 모집</strong
                                         >
-                                        <ul class="inform_list">
+                                        <ul class="inform-list">
                                             <li>
                                                 신입&nbsp;&nbsp;대학교(4년)↑&nbsp;&nbsp;경기전체
                                             </li>
                                         </ul>
-                                        <div class="sri_btn_area">
+                                        <div class="sri-btn-area">
                                             <span class="deadline">D-1</span>
                                             <a
-                                                class="sri_btn_sm"
-                                                href="/zf_user/jobs/relay/view?view_type=list&amp;rec_idx=49104681"
-                                                target="_blank"
+                                                class="sri-btn-sm"
+                                                href="/zf-user/jobs/relay/view?view-type=list&amp;rec-idx=49104681"
+                                                target="-blank"
                                                 title="홈페이지 지원"
                                                 ><span
-                                                    class="sri_btn_homepage_apply"
+                                                    class="sri-btn-homepage-apply"
                                                     >홈페이지 지원</span
                                                 ></a
                                             >
                                         </div>
                                         <a
-                                            href="/zf_user/jobs/relay/view?view_type=list&amp;rec_idx=49104681"
-                                            class="page_link_btn"
-                                            target="_blank"
+                                            href="/zf-user/jobs/relay/view?view-type=list&amp;rec-idx=49104681"
+                                            class="page-link-btn"
+                                            target="-blank"
                                         >
                                             <span class="blind"
                                                 >공고뷰 링크버튼</span
@@ -181,21 +181,21 @@
                             </div>
                         </div>
                         <div
-                            class="save_list_area ScrollBar"
-                            id="suited_list_area"
+                            class="save-list-area ScrollBar"
+                            id="suited-list-area"
                             style="display: none"
                         >
-                            <div class="save_list">
+                            <div class="save-list">
                                 <span class="date">2024.10.08</span>
                                 <ul>
                                     <li>
-                                        <strong class="search_title">
+                                        <strong class="search-title">
                                             저장된 나의 검색1
-                                            <span class="new_count"
+                                            <span class="new-count"
                                                 >전체 <b>400</b>건</span
                                             >
                                         </strong>
-                                        <dl class="search_inform">
+                                        <dl class="search-inform">
                                             <dt>경력</dt>
                                             <dd>신입</dd>
                                             <dt>지역</dt>
@@ -203,17 +203,17 @@
                                         </dl>
                                         <button
                                             type="button"
-                                            class="more_btn layer_more_btn"
+                                            class="more-btn layer-more-btn"
                                         >
                                             <span class="blind"
                                                 >추가기능 메뉴 펼치기 버튼</span
                                             >
                                         </button>
-                                        <ul class="more_list">
-                                            <li class="alarm_on">
+                                        <ul class="more-list">
+                                            <li class="alarm-on">
                                                 <button
                                                     type="button"
-                                                    class="menu_option alarm"
+                                                    class="menu-option alarm"
                                                     value="25392959"
                                                 >
                                                     채용 알림 끄기
@@ -222,15 +222,15 @@
                                             <li class="modify">
                                                 <button
                                                     type="button"
-                                                    onclick="location.href='/zf_user/search?search_area=main&amp;search_history_layer=y'"
+                                                    onclick="location.href='/zf-user/search?search-area=main&amp;search-history-layer=y'"
                                                 >
                                                     조건 수정
                                                 </button>
                                             </li>
                                         </ul>
                                         <a
-                                            href="/zf_user/member/suited-recruit-mail/list?mail_seq=25392959"
-                                            class="page_link_btn"
+                                            href="/zf-user/member/suited-recruit-mail/list?mail-seq=25392959"
+                                            class="page-link-btn"
                                         >
                                             <span class="blind"
                                                 >검색 링크버튼</span
@@ -241,27 +241,27 @@
                             </div>
                         </div>
                         <div
-                            class="save_list_area ScrollBar"
-                            id="favor_list_area"
+                            class="save-list-area ScrollBar"
+                            id="favor-list-area"
                             style="display: none"
                         >
                             <input
                                 type="hidden"
-                                name="favor_request_page"
+                                name="favor-request-page"
                                 value="1"
-                                id="favor_request_page"
+                                id="favor-request-page"
                             />
                             <input
                                 type="hidden"
-                                name="favor_list_total_cnt"
+                                name="favor-list-total-cnt"
                                 value="0"
-                                id="favor_list_total_cnt"
+                                id="favor-list-total-cnt"
                             />
-                            <div class="empty_list">
+                            <div class="empty-list">
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
                                 />
-                                <div class="empty_txt">
+                                <div class="empty-txt">
                                     <strong
                                         >최근 30일간 저장된 관심기업이
                                         없습니다.</strong
@@ -271,7 +271,7 @@
                                         받아보세요!</span
                                     >
                                     <a
-                                        href="/zf_user/persons/scrap-recruit"
+                                        href="/zf-user/persons/scrap-recruit"
                                         class="btnText"
                                     >
                                         <span>지원할만한 공고 보기</span>
@@ -281,11 +281,11 @@
                         </div>
 
                         <!-- 비어있을때 -->
-                        <!-- <div class="empty_list">
+                        <!-- <div class="empty-list">
                             <img
-                                src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
+                                src="//www.saraminimage.co.kr/sri/person/resume/img-empty-announce.png"
                             />
-                            <div class="empty_txt">
+                            <div class="empty-txt">
                                 <strong
                                     >최근 30일간 스크랩 공고가 없습니다.</strong
                                 >
@@ -294,7 +294,7 @@
                                     받아보세요!</span
                                 >
                                 <a
-                                    href="/zf_user/persons/scrap-recruit"
+                                    href="/zf-user/persons/scrap-recruit"
                                     class="btnText"
                                 >
                                     <span>스크랩하러 가기</span>
@@ -303,36 +303,36 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="wrap_my_layer">
+                <div class="wrap-my-layer">
                     <button
                         type="button"
-                        class="top_btn btn_alarm"
+                        class="top-btn btn-alarm"
                         id="myAlarmBlt"
                     >
                         <span class="blind">내알림 레이어 버튼</span
-                        ><svg class="img_alarm top_btn_icon">
+                        ><svg class="img-alarm top-btn-icon">
                             <use
-                                xlink:href="#svg_top_alarm_off"
-                                class="top_layer_icon"
+                                xlink:href="#svg-top-alarm-off"
+                                class="top-layer-icon"
                             ></use>
                         </svg>
                     </button>
-                    <div class="top_layer_assist alarm_layer_content">
+                    <div class="top-layer-assist alarm-layer-content">
                         <strong class="title">알림</strong>
-                        <span class="view_status"
+                        <span class="view-status"
                             >최근 30일간 저장내역 노출</span
                         >
-                        <div class="save_list_area alarm_area ScrollBar">
-                            <strong class="sub_title">TODAY</strong>
+                        <div class="save-list-area alarm-area ScrollBar">
+                            <strong class="sub-title">TODAY</strong>
                             <div
-                                class="alarm_list"
-                                id="today_list_content"
+                                class="alarm-list"
+                                id="today-list-content"
                                 style="display: block"
                             >
                                 <ul>
                                     <li style="display: block">
                                         <a
-                                            href="/zf_user/persons/scrap-recruit?sort=PC"
+                                            href="/zf-user/persons/scrap-recruit?sort=PC"
                                             target=""
                                         >
                                             <div class="header">
@@ -350,29 +350,29 @@
                                                 >
                                             </strong>
                                         </a>
-                                        <ul class="btn_list">
+                                        <ul class="btn-list">
                                             <a
-                                                href="/zf_user/persons/scrap-recruit?sort=PC"
+                                                href="/zf-user/persons/scrap-recruit?sort=PC"
                                                 target=""
                                             >
                                             </a>
                                             <li>
                                                 <a
-                                                    href="/zf_user/persons/scrap-recruit?sort=PC"
+                                                    href="/zf-user/persons/scrap-recruit?sort=PC"
                                                     target=""
                                                 ></a
                                                 ><a
-                                                    href="/zf_user/company-review-qst-and-ans"
-                                                    class="link_btn"
-                                                    target="_blank"
+                                                    href="/zf-user/company-review-qst-and-ans"
+                                                    class="link-btn"
+                                                    target="-blank"
                                                     >커뮤니티</a
                                                 >
                                             </li>
                                             <li>
                                                 <a
-                                                    href="/zf_user/career-information/senior-list"
-                                                    class="link_btn"
-                                                    target="_blank"
+                                                    href="/zf-user/career-information/senior-list"
+                                                    class="link-btn"
+                                                    target="-blank"
                                                     >현직자 인터뷰</a
                                                 >
                                             </li>
@@ -381,41 +381,41 @@
                                 </ul>
                                 <button
                                     type="button"
-                                    class="more today_more_button"
+                                    class="more today-more-button"
                                     style="display: none"
                                 >
                                     더보기<svg>
-                                        <use xlink:href="#svg_gnb_arrow"></use>
+                                        <use xlink:href="#svg-gnb-arrow"></use>
                                     </svg>
                                 </button>
                             </div>
                             <!-- 비어있을 때 -->
                             <div
-                                class="empty_list alarm_area"
-                                id="empty_today_list_content"
+                                class="empty-list alarm-area"
+                                id="empty-today-list-content"
                                 style="display: none"
                             >
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
                                 />
-                                <div class="empty_txt">
+                                <div class="empty-txt">
                                     <strong>주요 일정이 없습니다</strong>
                                 </div>
                             </div>
-                            <div class="my_activity" id="my-activity">
-                                <strong class="sub_title">나의 활동</strong>
+                            <div class="my-activity" id="my-activity">
+                                <strong class="sub-title">나의 활동</strong>
 
-                                <div class="alarm_list">
-                                    <div class="save_list">
+                                <div class="alarm-list">
+                                    <div class="save-list">
                                         <span class="date"
                                             >10/09(수) 00:20</span
                                         >
                                         <ul>
                                             <li class="activity">
                                                 <a
-                                                    href="/zf_user/persons/apply-status-list"
+                                                    href="/zf-user/persons/apply-status-list"
                                                 >
-                                                    <span class="activity_name">
+                                                    <span class="activity-name">
                                                         <b
                                                             >(주)다원씨아이에스</b
                                                         >
@@ -426,16 +426,16 @@
                                         </ul>
                                     </div>
 
-                                    <div class="save_list">
+                                    <div class="save-list">
                                         <span class="date"
                                             >10/09(수) 00:17</span
                                         >
                                         <ul>
                                             <li class="activity">
                                                 <a
-                                                    href="/zf_user/persons/apply-status-list"
+                                                    href="/zf-user/persons/apply-status-list"
                                                 >
-                                                    <span class="activity_name">
+                                                    <span class="activity-name">
                                                         <b
                                                             >(주)다원씨아이에스</b
                                                         >
@@ -446,16 +446,16 @@
                                         </ul>
                                     </div>
 
-                                    <div class="save_list">
+                                    <div class="save-list">
                                         <span class="date"
                                             >10/09(수) 00:08</span
                                         >
                                         <ul>
                                             <li class="activity">
                                                 <a
-                                                    href="/zf_user/resume/resume-manage"
+                                                    href="/zf-user/resume/resume-manage"
                                                 >
-                                                    <span class="activity_name">
+                                                    <span class="activity-name">
                                                         이력서 수정 완료
                                                     </span>
                                                 </a>
@@ -463,16 +463,16 @@
                                         </ul>
                                     </div>
 
-                                    <div class="save_list">
+                                    <div class="save-list">
                                         <span class="date"
                                             >10/09(수) 00:08</span
                                         >
                                         <ul>
                                             <li class="activity">
                                                 <a
-                                                    href="/zf_user/member/resume-manage/block-setting"
+                                                    href="/zf-user/member/resume-manage/block-setting"
                                                 >
-                                                    <span class="activity_name">
+                                                    <span class="activity-name">
                                                         <b
                                                             >수락한 기업에게만
                                                             연락처 공개</b
@@ -484,7 +484,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="save_list">
+                                    <div class="save-list">
                                         <span class="date"
                                             >10/07(월) 00:00</span
                                         >
@@ -492,22 +492,22 @@
                                             <li class="activity">
                                                 <button
                                                     type="button"
-                                                    class="activity_name off"
+                                                    class="activity-name off"
                                                 >
                                                     <b>10월 첫째주</b> 활동
                                                     리포트 도착
                                                     <svg>
                                                         <use
-                                                            xlink:href="#svg_gnb_arrow"
+                                                            xlink:href="#svg-gnb-arrow"
                                                         ></use>
                                                     </svg>
                                                 </button>
-                                                <div class="activity_detail">
+                                                <div class="activity-detail">
                                                     <strong class="tit">
                                                         석상훈님은 전주와<br />
                                                         비슷하게 활동했어요 </strong
                                                     >]
-                                                    <ul class="record_list">
+                                                    <ul class="record-list">
                                                         <li>
                                                             <span class="name"
                                                                 >방문</span
@@ -517,7 +517,7 @@
                                                                     class="fluctuation"
                                                                     ><svg>
                                                                         <use
-                                                                            xlink:href="#svg_fluctuation_up"
+                                                                            xlink:href="#svg-fluctuation-up"
                                                                         ></use>
                                                                     </svg>
                                                                     0</span
@@ -533,7 +533,7 @@
                                                                     class="fluctuation"
                                                                     ><svg>
                                                                         <use
-                                                                            xlink:href="#svg_fluctuation_up"
+                                                                            xlink:href="#svg-fluctuation-up"
                                                                         ></use>
                                                                     </svg>
 
@@ -551,7 +551,7 @@
                                                                     class="fluctuation"
                                                                     ><svg>
                                                                         <use
-                                                                            xlink:href="#svg_fluctuation_up"
+                                                                            xlink:href="#svg-fluctuation-up"
                                                                         ></use></svg
                                                                     >0</span
                                                                 >
@@ -567,7 +567,7 @@
                                                                     class="fluctuation"
                                                                     ><svg>
                                                                         <use
-                                                                            xlink:href="#svg_fluctuation_up"
+                                                                            xlink:href="#svg-fluctuation-up"
                                                                         ></use></svg
                                                                     >0</span
                                                                 >
@@ -582,29 +582,29 @@
                                                                     class="fluctuation"
                                                                     ><svg>
                                                                         <use
-                                                                            xlink:href="#svg_fluctuation_up"
+                                                                            xlink:href="#svg-fluctuation-up"
                                                                         ></use></svg
                                                                     >0</span
                                                                 >
                                                             </div>
                                                         </li>
                                                     </ul>
-                                                    <div class="link_list">
+                                                    <div class="link-list">
                                                         <strong class="tit"
                                                             >더 달려보고
                                                             싶다면?</strong
                                                         >
                                                         <a
-                                                            href="/zf_user/persons/scrap-recruit"
+                                                            href="/zf-user/persons/scrap-recruit"
                                                             >지원할만한 공고</a
                                                         >
                                                         <a
-                                                            href="/zf_user/member/persons/get-know-company"
+                                                            href="/zf-user/member/persons/get-know-company"
                                                             >기업알아보기</a
                                                         >
                                                         <a
-                                                            href="/zf_user/interview-review"
-                                                            target="_blank"
+                                                            href="/zf-user/interview-review"
+                                                            target="-blank"
                                                             >면접후기</a
                                                         >
                                                     </div>
@@ -615,12 +615,12 @@
 
                                     <button
                                         type="button"
-                                        class="more btn_more_activity"
+                                        class="more btn-more-activity"
                                         data-page="2"
                                     >
                                         더보기<svg>
                                             <use
-                                                xlink:href="#svg_gnb_arrow"
+                                                xlink:href="#svg-gnb-arrow"
                                             ></use>
                                         </svg>
                                     </button>
@@ -631,53 +631,53 @@
                 </div>
             </div>
 
-            <div class="wrap_member">
-                <button type="button" class="btn_member">
-                    <span class="user_photo">
-                        <svg class="img_default">
-                            <use xlink:href="#svg_default_profile"></use>
+            <div class="wrap-member">
+                <button type="button" class="btn-member">
+                    <span class="user-photo">
+                        <svg class="img-default">
+                            <use xlink:href="#svg-default-profile"></use>
                         </svg>
                         <span
-                            id="gnb_personnal_photo_area_span"
+                            id="gnb-personnal-photo-area-span"
                             class="img"
                         ></span>
                     </span>
-                    <span class="user_name"> 석상훈 </span>
-                    <svg class="img_social">
-                        <use xlink:href="#svg_social_04"></use>
+                    <span class="user-name"> 석상훈 </span>
+                    <svg class="img-social">
+                        <use xlink:href="#svg-social-04"></use>
                     </svg>
-                    <svg class="img_arrow">
-                        <use xlink:href="#svg_profile_arrow"></use>
+                    <svg class="img-arrow">
+                        <use xlink:href="#svg-profile-arrow"></use>
                     </svg>
                 </button>
-                <div class="layer_member">
+                <div class="layer-member">
                     <ul>
                         <li>
                             <a
-                                href="/zf_user/persons/person-update"
-                                target="_blank"
+                                href="/zf-user/persons/person-update"
+                                target="-blank"
                             >
-                                <svg><use xlink:href="#svg_my_10"></use></svg>
+                                <svg><use xlink:href="#svg-my-10"></use></svg>
                                 <span class="txt">계정정보 설정</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/zf_user/member/set-incoming-email">
-                                <svg><use xlink:href="#svg_my_11"></use></svg>
+                            <a href="/zf-user/member/set-incoming-email">
+                                <svg><use xlink:href="#svg-my-11"></use></svg>
                                 <span class="txt">메일 수신 설정</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/zf_user/member/my-logins" target="_blank">
-                                <svg><use xlink:href="#svg_my_13"></use></svg>
+                            <a href="/zf-user/member/my-logins" target="-blank">
+                                <svg><use xlink:href="#svg-my-13"></use></svg>
                                 <span class="txt">로그인 관리</span>
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/zf_user/auth/logout?redirect=%2Fzf_user%2Fauth%3Fut%3Dp"
+                                href="/zf-user/auth/logout?redirect=%2Fzf-user%2Fauth%3Fut%3Dp"
                             >
-                                <svg><use xlink:href="#svg_my_55"></use></svg>
+                                <svg><use xlink:href="#svg-my-55"></use></svg>
                                 <span class="txt">로그아웃</span>
                             </a>
                         </li>
@@ -689,7 +689,7 @@
 
         <!-- svg -->
         <svg xmlns="http://www.w3.org/2000/svg">
-            <symbol id="svg_saramin_ci" viewBox="0 0 93 24">
+            <symbol id="svg-saramin-ci" viewBox="0 0 93 24">
                 <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -739,28 +739,28 @@
                     fill="#4876EF"
                 ></path>
             </symbol>
-            <symbol id="svg_my_10" viewBox="0 0 24 24">
+            <symbol id="svg-my-10" viewBox="0 0 24 24">
                 <path
                     fill="currentColor"
                     d="M8.947 0c.66 0 1.243.432 1.435 1.063l.357 1.177.022.008c.184.067.366.143.547.228l.03.015 1.09-.58c.537-.287 1.19-.218 1.654.161l.112.101.633.633c.467.467.573 1.184.263 1.767l-.581 1.087.136.304.114.295 1.178.36c.586.178 1 .693 1.056 1.294l.007.14v.894c0 .66-.432 1.243-1.063 1.435l-1.178.358-.115.298-.12.272-.016.028.582 1.09c.287.537.218 1.19-.162 1.654l-.101.112-.633.633c-.467.467-1.184.573-1.767.263l-1.089-.582-.028.015c-.18.085-.363.162-.547.229l-.024.007-.357 1.178c-.179.586-.694 1-1.295 1.056l-.14.007h-.894c-.66 0-1.243-.431-1.435-1.063L6.26 14.76l-.295-.114-.304-.136-1.087.58c-.538.288-1.19.219-1.655-.161l-.112-.101-.633-.633c-.466-.467-.573-1.184-.262-1.766l.58-1.09-.136-.301-.107-.274-.008-.023-1.177-.357c-.586-.179-1-.694-1.056-1.295L0 8.948v-.895c0-.66.431-1.243 1.063-1.435l1.177-.359.115-.294.12-.272.016-.032-.58-1.089c-.287-.537-.218-1.19.161-1.654l.102-.112.632-.632c.467-.467 1.184-.574 1.766-.263l1.089.58.303-.136.295-.114.36-1.178c.178-.586.693-1 1.294-1.056L8.053 0zm0 1h-.894c-.22 0-.414.144-.478.354L7.14 2.778c-.048.158-.171.282-.329.331-.31.097-.618.227-.928.388-.146.076-.32.075-.466-.002l-1.316-.702c-.194-.103-.433-.068-.589.088l-.632.632c-.156.156-.191.395-.088.589l.702 1.316c.077.145.078.32.002.466-.162.311-.292.619-.389.928-.049.158-.173.28-.331.329l-1.423.434c-.21.064-.354.258-.354.478v.895c0 .22.144.414.354.478l1.423.433c.158.048.282.171.331.329.098.31.228.62.389.926.076.147.076.322-.002.467l-.702 1.317c-.104.194-.068.433.088.589l.632.633c.156.155.395.19.589.087l1.316-.702c.146-.078.32-.078.467-.002.309.162.616.291.926.388.158.049.282.173.33.331l.434 1.424c.064.21.258.354.478.354h.894c.22 0 .414-.144.478-.354l.433-1.423c.049-.159.172-.283.33-.332.312-.097.62-.227.926-.387.146-.077.321-.077.468.001l1.316.702c.194.104.433.068.589-.087l.633-.633c.155-.156.191-.395.087-.589l-.702-1.316c-.078-.147-.078-.322-.001-.468.16-.305.29-.614.387-.925.049-.158.173-.282.332-.33l1.423-.433c.21-.064.354-.258.354-.479v-.894c0-.22-.144-.414-.354-.478l-1.424-.434c-.158-.048-.282-.172-.331-.33-.097-.31-.226-.617-.388-.926-.076-.146-.076-.321.002-.467l.702-1.316c.104-.194.068-.433-.087-.589l-.633-.632c-.156-.156-.395-.192-.589-.088l-1.317.702c-.145.078-.32.078-.467.002-.307-.162-.616-.291-.926-.388-.158-.049-.281-.173-.33-.332l-.433-1.423C9.361 1.144 9.167 1 8.947 1zM8.5 6C9.88 6 11 7.119 11 8.5S9.881 11 8.5 11 6 9.881 6 8.5 7.12 6 8.5 6zm0 1C7.671 7 7 7.671 7 8.5S7.671 10 8.5 10 10 9.329 10 8.5 9.329 7 8.5 7z"
                     transform="translate(-446 -645) translate(446 645) translate(4 3)"
                 ></path>
             </symbol>
-            <symbol id="svg_my_11" viewBox="0 0 24 24">
+            <symbol id="svg-my-11" viewBox="0 0 24 24">
                 <path
                     fill="currentColor"
                     d="M15 0c1.105 0 2 .895 2 2v9c0 1.105-.895 2-2 2H2c-1.105 0-2-.895-2-2V2C0 .895.895 0 2 0zm-4.512 7.528l-.727.592c-.689.56-1.657.594-2.38.104l-.142-.104-.728-.592-4.67 4.338c-.041.038-.087.068-.134.09.092.029.19.044.293.044h13c.102 0 .201-.015.294-.044-.022-.01-.043-.021-.063-.034l-.071-.056-4.672-4.338zM1 3.051V11c0 .103.015.202.044.295.015-.034.033-.065.055-.094l.06-.067L5.728 6.89 1 3.051zm15-.001l-4.728 3.842 4.568 4.242c.05.046.09.101.116.16.029-.092.044-.191.044-.294V3.05zM15 1H2c-.477 0-.876.334-.976.781l6.845 5.562c.334.272.8.296 1.158.074l.104-.074 6.845-5.562C15.876 1.334 15.477 1 15 1z"
                     transform="translate(-678 -645) translate(446 645) translate(232) translate(4 5)"
                 ></path>
             </symbol>
-            <symbol id="svg_my_13" viewBox="0 0 24 24">
+            <symbol id="svg-my-13" viewBox="0 0 24 24">
                 <path
                     fill="currentColor"
                     d="M7.5 0c1.707 0 3.071 1.489 3.071 3.305V5H13c1.054 0 1.918.816 1.995 1.85L15 7v8c0 1.105-.895 2-2 2H2c-1.105 0-2-.895-2-2V7c0-1.105.895-2 2-2h2.428V3.305c0-1.753 1.273-3.202 2.897-3.3zM13 6H2c-.552 0-1 .448-1 1v8c0 .552.448 1 1 1h11c.552 0 1-.448 1-1V7c0-.552-.448-1-1-1zM7.5 8.5c.829 0 1.5.671 1.5 1.5 0 .653-.417 1.208-1 1.414V13.5c0 .276-.224.5-.5.5-.245 0-.45-.177-.492-.41L7 13.5v-2.085c-.583-.206-1-.762-1-1.415 0-.829.671-1.5 1.5-1.5zm0-7.5C6.366 1 5.429 2.023 5.429 3.305L5.428 5h4.143V3.305c0-1.226-.857-2.216-1.924-2.3z"
                     transform="translate(-1123 -645) translate(446 645) translate(677) translate(5 3)"
                 ></path>
             </symbol>
-            <symbol id="svg_my_15" viewBox="0 0 24 24">
+            <symbol id="svg-my-15" viewBox="0 0 24 24">
                 <path
                     d="M4 20C4.89057 16.5541 8.13453 14 12 14C15.8655 14 19.1094 16.5541 20 20"
                     stroke="currentColor"
@@ -777,7 +777,7 @@
                     fill="transparent"
                 ></circle>
             </symbol>
-            <symbol id="svg_my_48" viewBox="0 0 24 24">
+            <symbol id="svg-my-48" viewBox="0 0 24 24">
                 <g
                     fill="currentColor"
                     transform="translate(-679 -2085) translate(390 900) translate(289 1185)"
@@ -789,7 +789,7 @@
                     ></path>
                 </g>
             </symbol>
-            <symbol id="svg_my_49" viewBox="0 0 24 24">
+            <symbol id="svg-my-49" viewBox="0 0 24 24">
                 <g
                     fill="currentColor"
                     transform="translate(-900 -2085) translate(390 900) translate(510 1185)"
@@ -802,7 +802,7 @@
                 </g>
             </symbol>
 
-            <symbol id="svg_my_52" viewBox="0 0 24 24">
+            <symbol id="svg-my-52" viewBox="0 0 24 24">
                 <g
                     fill="currentColor"
                     transform="translate(-681 -2190) translate(390 900) translate(289 1289)"
@@ -815,7 +815,7 @@
                 </g>
             </symbol>
 
-            <symbol id="svg_my_55" viewBox="0 0 24 24">
+            <symbol id="svg-my-55" viewBox="0 0 24 24">
                 <path
                     fill="currentColor"
                     d="M16 0c1.134 0 1.78.72 1.953 1.847.032.15.047.304.047.458v10.133c0 1.148-.78 2.148-1.894 2.426l-4.62 1.155c-.918.23-1.845-.214-2.261-1.018L6.5 15c-1.325 0-2.41-1.032-2.495-2.336L4 12.5v-3c0-.276.224-.5.5-.5.245 0 .45.177.492.41L5 9.5v3c0 .78.595 1.42 1.356 1.493L6.5 14H9V3.562c0-1.09.705-2.047 1.73-2.379l.164-.047.543-.136H6.5c-.78 0-1.42.595-1.493 1.356L5 2.5v3c0 .276-.224.5-.5.5-.245 0-.45-.177-.492-.41L4 5.5v-3C4 1.175 5.032.09 6.336.005L6.5 0H16zm.922 1.863c-.223-.62-.884-.982-1.537-.819l-4.249 1.062C10.468 2.273 10 2.873 10 3.562v10.517c0 .082.01.163.03.242.134.536.677.862 1.213.728l4.62-1.155c.669-.167 1.137-.767 1.137-1.456V2.492l-.004-.175c-.004-.097-.012-.189-.023-.275l-.012-.052zM2.854 5.146c.173.174.192.443.057.638l-.057.07L1.706 7H6.5c.276 0 .5.224.5.5 0 .245-.177.45-.41.492L6.5 8H1.706l1.148 1.146c.173.174.192.443.057.638l-.057.07c-.174.173-.443.192-.638.057l-.07-.057-2-2C-.027 7.68-.046 7.41.09 7.216l.057-.07 2-2c.196-.195.512-.195.708 0z"
@@ -823,7 +823,7 @@
                 ></path>
             </symbol>
 
-            <symbol id="svg_profile_arrow" viewBox="0 0 16 16">
+            <symbol id="svg-profile-arrow" viewBox="0 0 16 16">
                 <path
                     fill="#D7DCE5"
                     d="M92 18L100 18 96 23z"
@@ -831,7 +831,7 @@
                 ></path>
             </symbol>
 
-            <symbol id="svg_default_profile" viewBox="0 0 32 32">
+            <symbol id="svg-default-profile" viewBox="0 0 32 32">
                 <circle cx="16" cy="16" r="16" fill="#ccd0d6"></circle>
                 <path
                     stroke="#FFF"
@@ -848,7 +848,7 @@
                     d="M16 8h3.5c.276 0 .5.224.5.5V12c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4z"
                 ></path>
             </symbol>
-            <symbol id="svg_gnb_arrow" viewBox="0 0 10 7">
+            <symbol id="svg-gnb-arrow" viewBox="0 0 10 7">
                 <g fill="none">
                     <path
                         stroke="currentColor"
@@ -857,7 +857,7 @@
                     ></path>
                 </g>
             </symbol>
-            <symbol id="svg_top_flag" viewBox="0 0 24 24">
+            <symbol id="svg-top-flag" viewBox="0 0 24 24">
                 <g fill="none" fill-rule="evenodd">
                     <g
                         transform="translate(-1672 -201) translate(0 169) translate(1664 24)"
@@ -871,7 +871,7 @@
                     </g>
                 </g>
             </symbol>
-            <symbol id="svg_top_alarm_off" viewBox="0 0 24 24">
+            <symbol id="svg-top-alarm-off" viewBox="0 0 24 24">
                 <g fill="none" fill-rule="evenodd">
                     <g fill="currentColor" fill-rule="nonzero">
                         <path
@@ -881,7 +881,7 @@
                     </g>
                 </g>
             </symbol>
-            <symbol id="svg_top_alarm_on" viewBox="0 0 24 24">
+            <symbol id="svg-top-alarm-on" viewBox="0 0 24 24">
                 <g fill="none" fill-rule="evenodd">
                     <g fill-rule="nonzero">
                         <g>
@@ -899,7 +899,7 @@
                     </g>
                 </g>
             </symbol>
-            <symbol id="svg_fluctuation_down" viewBox="0 0 16 16">
+            <symbol id="svg-fluctuation-down" viewBox="0 0 16 16">
                 <g fill="none" fill-rule="evenodd">
                     <path
                         fill="currentColor"
@@ -908,7 +908,7 @@
                     ></path>
                 </g>
             </symbol>
-            <symbol id="svg_fluctuation_up" viewBox="0 0 16 16">
+            <symbol id="svg-fluctuation-up" viewBox="0 0 16 16">
                 <g fill="none" fill-rule="evenodd">
                     <path
                         fill="currentColor"

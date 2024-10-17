@@ -7,7 +7,7 @@ body {
 }
 
 /*헤더*/
-#sri_header.integrated_header {
+#sri-header.integrated-header {
     padding: 18px 40px 0 0;
     border-bottom: 1px solid #eaedf4;
     display: flex;
@@ -16,7 +16,7 @@ body {
     min-width: 700px;
 }
 
-#sri_header {
+#sri-header {
     position: fixed;
     top: 0;
     right: 0;
@@ -29,7 +29,7 @@ body {
     text-align: right;
 }
 
-#sri_header:before {
+#sri-header:before {
     position: absolute;
     top: 0;
     right: 0;
@@ -41,16 +41,16 @@ body {
     opacity: 0.95;
 }
 
-#sri_header.integrated_header .area_logo {
+#sri-header.integrated-header .area-logo {
     margin-left: 64px;
     padding-top: 4px;
 }
 
-#sri_header.integrated_header .area_logo .link_saramin_logo {
+#sri-header.integrated-header .area-logo .link-saramin-logo {
     margin-right: 6px;
 }
 
-#sri_section {
+#sri-section {
     display: grid;
     grid-template-areas:
         "gnb main"
@@ -63,16 +63,16 @@ body {
     box-sizing: border-box;
 }
 
-.sri_gnb_section #sri_gnb_wrap.sri_gnb_wrap {
+.sri-gnb-section #sri-gnb-wrap.sri-gnb-wrap {
     margin-top: 64px;
     padding-top: 36px;
 }
 
-.sri_gnb_section #sri_gnb_wrap {
+.sri-gnb-section #sri-gnb-wrap {
     padding-top: 96px;
 }
 
-#sri_gnb_wrap {
+#sri-gnb-wrap {
     grid-area: gnb;
     position: sticky;
     top: 0;
@@ -84,16 +84,16 @@ body {
     transition: width 0.5s;
 }
 
-#sri_gnb_wrap .gnb {
+#sri-gnb-wrap .gnb {
     margin: 0 auto;
     width: 240px;
 }
 
-#sri_gnb_wrap .gnb>li {
+#sri-gnb-wrap .gnb>li {
     position: relative;
 }
 
-#sri_gnb_wrap .gnb>li>a {
+#sri-gnb-wrap .gnb>li>a {
     display: block;
     position: relative;
     padding: 10px 0 14px 56px;
@@ -101,15 +101,15 @@ body {
     box-sizing: border-box;
 }
 
-#sri_gnb_wrap .gnb>li.only.selected>a:before {
+#sri-gnb-wrap .gnb>li.only.selected>a:before {
     opacity: 1;
 }
 
-#sri_gnb_wrap .gnb>li.selected>a:before {
+#sri-gnb-wrap .gnb>li.selected>a:before {
     background: #eff5ff;
 }
 
-#sri_gnb_wrap .gnb>li>a:before {
+#sri-gnb-wrap .gnb>li>a:before {
     display: block;
     position: absolute;
     top: 0;
@@ -124,7 +124,7 @@ body {
     opacity: 0;
 }
 
-#sri_gnb_wrap .gnb>li>a>svg {
+#sri-gnb-wrap .gnb>li>a>svg {
     display: block;
     position: absolute;
     top: 10px;
@@ -134,20 +134,20 @@ body {
     height: 24px;
 }
 
-#sri_gnb_wrap .gnb>li.selected>a svg use {
+#sri-gnb-wrap .gnb>li.selected>a svg use {
     color: #4876ef;
 }
 
-#sri_gnb_wrap .gnb>li>a>svg use {
+#sri-gnb-wrap .gnb>li>a>svg use {
     color: #afbac8;
 }
 
-#sri_gnb_wrap .gnb>li.selected>a>.txt {
+#sri-gnb-wrap .gnb>li.selected>a>.txt {
     color: #4876ef;
     font-weight: bold;
 }
 
-#sri_gnb_wrap .gnb>li>a>.txt {
+#sri-gnb-wrap .gnb>li>a>.txt {
     display: block;
     position: relative;
     z-index: 2;
@@ -156,16 +156,16 @@ body {
     line-height: 24px;
 }
 
-#sri_gnb_wrap .gnb>li+li {
+#sri-gnb-wrap .gnb>li+li {
     margin-top: 8px;
 }
 
-#sri_gnb_wrap .gnb>li {
+#sri-gnb-wrap .gnb>li {
     position: relative;
 }
 
 /* 바디 */
-#sri_wrap {
+#sri-wrap {
     grid-area: main;
     display: table-row;
     width: 100%;
@@ -178,22 +178,22 @@ body {
     width: 1248px;
 }
 
-.wrapper_narrow .wrap_title {
+.wrapper-narrow .wrap-title {
     margin-bottom: 45px;
 }
 
-.wrap_title {
+.wrap-title {
     color: #373f57;
     font-size: 36px;
     font-weight: bold;
     line-height: 56px;
 }
 
-.password_confirm_wrap {
+.password-confirm-wrap {
     margin-top: 56px;
 }
 
-.password_confirm_subtitle {
+.password-confirm-subtitle {
     margin-bottom: 16px;
     height: 40px;
     color: var(--gray110);
@@ -203,14 +203,14 @@ body {
     text-align: center;
 }
 
-.password_confirm_desc {
+.password-confirm-desc {
     color: var(--gray90);
     font-size: 14px;
     line-height: 1.43;
     text-align: center;
 }
 
-.password_confirm_field {
+.password-confirm-field {
     margin: 40px auto 64px;
     width: 500px;
     border-collapse: collapse;
@@ -224,7 +224,7 @@ table {
     line-height: 100%;
 }
 
-.password_confirm_field th {
+.password-confirm-field th {
     margin: 12px 64px 20px 0;
     width: 144px;
     color: var(--gray90);
@@ -233,7 +233,7 @@ table {
     line-height: 1.43;
 }
 
-.password_confirm_field th, .password_confirm_field td {
+.password-confirm-field th, .password-confirm-field td {
     padding: 0;
     height: 72px;
     border-bottom: 1px solid var(--gray30);
@@ -271,12 +271,12 @@ table {
     background: none;
 }
 
-.password_confirm .btn_group {
+.password-confirm .btn-group {
     margin: 64px auto 136px;
     text-align: center;
 }
 
-.password_confirm_caution {
+.password-confirm-caution {
     margin-bottom: 24px;
     height: 24px;
     color: var(--gray70);
@@ -284,13 +284,13 @@ table {
     line-height: 1.43;
 }
 
-.password_confirm .icon_exclam {
+.password-confirm .icon-exclam {
     width: 16px;
     height: 16px;
     vertical-align: middle;
 }
 
-.password_confirm .btn_submit {
+.password-confirm .btn-submit {
     width: 104px;
 }
 

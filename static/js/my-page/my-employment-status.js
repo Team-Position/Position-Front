@@ -14,18 +14,76 @@ btn.addEventListener("click", () => {
     }
 });
 
-const applicantHistoryBtns = document.querySelectorAll(".btn_history"); // 지원내역 버튼들
-const historySections = document.querySelectorAll(".col_history"); // 히스토리 섹션들
+const applicantHistoryBtns = document.querySelectorAll(".btn_history");
+const historySections = document.querySelectorAll(".col_history");
 
 applicantHistoryBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         const history = historySections[index];
 
-        // 현재 표시 상태에 따라 토글
         if (history.style.display === "none" || history.style.display === "") {
-            history.style.display = "block"; // 보이게 설정
+            history.style.display = "block";
         } else {
-            history.style.display = "none"; // 숨기기
+            history.style.display = "none";
         }
     });
+});
+
+const selectAll = document.getElementById("selectAll");
+const individualCheckboxes = document.querySelectorAll(
+    'input[type="checkbox"].checkbox_id'
+);
+
+// 전체선택 체크박스 클릭 시 모든 개별 체크박스 상태 동기화
+selectAll.addEventListener("change", () => {
+    const isChecked = selectAll.checked;
+    individualCheckboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    });
+});
+
+individualCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+        const allChecked = Array.from(individualCheckboxes).every(
+            (cb) => cb.checked
+        );
+        selectAll.checked = allChecked;
+    });
+});
+
+const selectAllCheckbox = document.getElementById("selectAll");
+const individualCheckboxes2 = document.querySelectorAll("input.checkbox_idx");
+
+// 전체선택 체크박스 클릭 시 모든 개별 체크박스 상태 동기화
+selectAllCheckbox.addEventListener("change", () => {
+    const isChecked = selectAllCheckbox.checked;
+    individualCheckboxes2.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    });
+});
+
+// 개별 체크박스 상태 변경 시 전체선택 체크박스 상태 동기화
+individualCheckboxes2.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+        const allChecked = Array.from(individualCheckboxes2).every(
+            (cb) => cb.checked
+        );
+        selectAllCheckbox.checked = allChecked;
+    });
+});
+
+const hideButton = document.getElementById("list_hide_btn");
+const tipContent = document.querySelector(".TipCont.TopLeft");
+
+// 초기 상태: 숨기기
+tipContent.style.display = "none";
+
+// 마우스 오버 시 TipCont 보이기
+hideButton.addEventListener("mouseover", () => {
+    tipContent.style.display = "block";
+});
+
+// 마우스가 버튼에서 떠날 때 TipCont 숨기기
+hideButton.addEventListener("mouseout", () => {
+    tipContent.style.display = "none";
 });

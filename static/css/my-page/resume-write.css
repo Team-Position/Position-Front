@@ -899,3 +899,307 @@ body.no_gnb {
 .InpBox.Invalid select {
     border-color: var(--coral110);
 }
+
+/* 스킬 */
+.resume_con .resume_tit .TipBox {
+    margin-left: 8px;
+}
+
+.TipBox {
+    position: relative;
+}
+
+.resume_con .resume_tit .TipBox svg {
+    width: 16px;
+    height: 16px;
+    color: var(--gray80);
+}
+
+.skill_box.view {
+    width: 100%;
+}
+
+.skill_box {
+    display: flex;
+    margin-top: 12px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 4px;
+}
+
+.skill_box.view .skill_item {
+    border-color: var(--blue40);
+}.skill_box .skill_item {
+    display: inline-flex;
+    position: relative;
+    padding: 7px 11px;
+    height: 36px;
+    border: 1px solid var(--gray40);
+    border-radius: 32px;
+    box-sizing: border-box;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: var(--white);
+    align-items: center;
+    justify-content: center;
+}
+
+.skill_box.view .skill_item.skill_hide_add {
+    border: 1px dashed var(--gray40);
+    padding: 7px 6px 7px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--gray120);
+}
+.skill_box.view .skill_item.skill_hide_add:hover {
+    color: var(--blue90);
+}
+.skill_box.view .skill_item.skill_hide_add:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    background-image: url('/static/images/my-page/resume-plus.svg');
+    content: '';
+}
+.skill_box.view .skill_item.skill_hide_add:after {
+    padding: 1px 8px;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--blue90);
+    font-weight: bold;
+    border-radius: 54px;
+    box-sizing: border-box;
+    background-color: var(--blue20);
+    margin-left: 8px;
+    content: '서류합격률 UP';
+}
+.resume_edit .item_full {
+    width: 100%;
+}
+
+.resume_con .btn_delete {
+    flex-shrink: 0;
+}
+
+.resume_con .btn_delete svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: var(--gray70);
+    fill: var(--gray70);
+}
+
+.resume_con .btn_search {
+    margin: 0 12px 0 8px;
+    flex-shrink: 0;
+}
+
+.resume_con .btn_search svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+button:disabled svg {
+    color: var(--gray50);
+}
+
+.area_auto_search {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 49px;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    border: 1px solid #d7dce5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 2px 6px 16px rgba(17, 42, 128, 0.08);
+}
+
+
+
+.area_auto_search .auto_search {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 222px;
+}
+
+.area_auto_search .area_scroll {
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.area_auto_search.company_search .list_auto_search .area_link {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.area_auto_search .auto_search .list_auto_search .area_link {
+    display: block;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #373f57;
+    font-size: 13px;
+}
+
+.area_auto_search.company_search .list_auto_search .area_link div, .area_auto_search.company_search .list_auto_search .area_link div span {
+    width: 100%;
+}
+
+.area_auto_search .auto_search .list_auto_search .area_link:after {
+    display: table;
+    clear: both;
+    content: "";
+    table-layout: fixed;
+}
+
+
+
+
+.resume_edit .box_tit {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.resume_edit .tit_sub:first-child {
+    margin-top: 0;
+}
+
+.resume_edit .box_tit .tit_sub {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+.resume_edit .tit_sub {
+    display: flex;
+    margin: 32px 0 12px;
+    color: var(--gray100);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    align-items: center;
+}
+
+.resume_edit .box_tit .progress_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    border: 1px solid #DEEBFF;
+    border-radius: 50%;
+    background-color: white;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.resume_edit .box_tit .progress_circle .svg.step5.reverse {
+    animation: restore 1s ease-in-out both;
+}
+
+.resume_edit .box_tit .progress_circle svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.resume_edit .box_tit .progress_circle .border {
+    fill: none;
+    stroke: #D7DCE5;
+    stroke-width: 3;
+}
+
+.resume_edit .box_tit .progress_circle .svg.step2 .progress {
+    animation: step2 1s ease-in-out both;
+}
+
+.resume_edit .box_tit .progress_circle .progress, .progress_second {
+    fill: none;
+    stroke: #94B5FC;
+    stroke-width: 3;
+    stroke-dasharray: 37.68;
+    stroke-dashoffset: 37.68;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    animation: progress 2s ease-in-out both;
+}
+.resume_edit .box_tit .progress_circle .svg .progress_second {
+    stroke: #3769ED;
+    animation: step0 1s ease-in-out both;
+}
+.resume_edit .box_tit .progress_circle .svg.step1 .progress {
+    animation: step1 1s ease-in-out both;
+}
+
+.resume_edit .box_tit .txt {
+    font-size: 13px;
+    color: var(--gray80);
+}
+
+.resume_edit .box_tit .txt strong {
+    color: var(--blue90);
+}
+
+.skill_box.soft_add .skill_item .skill_modify {
+    color: var(--blue80);
+    display: flex;
+    align-items: center;
+}
+
+.skill_box.soft_add .skill_item .skill_modify em {
+    margin-right: 4px;
+}.skill_box .skill_item em {
+    color: var(--gray100);
+}
+.skill_box.soft_add .skill_item .skill_modify svg {
+    color: var(--gray80);
+}
+.skill_box svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.skill_box.soft_add .skill_delete {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: var(--gray70);
+}
+
+.skill_box.soft_add .skill_delete:before {
+    display: block;
+    width: 1px;
+    height: 16px;
+    background-color: var(--blue30);
+    position: absolute;
+    left: -4px;
+    content: '';
+}
+
+.skill_box.soft_add .skill_delete svg {
+    color: var(--gray80);
+    width: 20px;
+    height: 20px;
+}
+
+.skill_box.soft_add .skill_item {
+    border-color: var(--blue40);
+    padding: 8px 12px 8px 16px;
+}

@@ -74,10 +74,10 @@ html {
     --coral100: #eb413f;
     --coral110: #d63131;
     --coral120: #b81d1d;
-    --common_blue90: #2d65f2;
-    --common_blue100: #3157dd;
-    --color_primary: #373f57;
-    --color_secondary: #5c667b;
+    --common-blue90: #2d65f2;
+    --common-blue100: #3157dd;
+    --color-primary: #373f57;
+    --color-secondary: #5c667b;
 
     /* 지하철 노선 */
     /* 서울 */
@@ -131,7 +131,6 @@ html {
 html,
 body {
     width: 100%;
-    -webkit-text-size-adjust: none;
 }
 
 html,

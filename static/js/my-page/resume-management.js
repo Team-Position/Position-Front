@@ -1,6 +1,6 @@
 // 모든 더보기 버튼
 document
-    .querySelectorAll(".more_btn")
+    .querySelectorAll(".more-btn")
     .forEach((button) =>
         button.addEventListener("click", () => button.classList.toggle("on"))
     );
@@ -20,7 +20,7 @@ function getCurrentTimeString() {
 
 // 버튼에 클릭 이벤트 핸들러 추가
 document
-    .querySelector(".btnText.btn_action.ga_event")
+    .querySelector(".btnText.btn-action.ga-event")
     .addEventListener("click", () => {
         const dateElement = document.querySelector(".date");
         if (dateElement) {

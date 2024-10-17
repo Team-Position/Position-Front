@@ -31,8 +31,9 @@
                                 >
                                     <div class="main_option">
                                         <ul class="tab_section">
-                                            <!-- on되면 열림 -->
-                                            <li class="job_category_section on">
+                                            <!-- 직무 선택 -->
+                                            <!-- on되면 검은색 테두리 생김 -->
+                                            <li class="job_category_section">
                                                 <button
                                                     type="button"
                                                     class="btn_job_category btn_open_layer"
@@ -46,7 +47,8 @@
                                                     ></span>
                                                 </button>
                                             </li>
-                                            <li class="area_section">
+                                            <!-- 지역 선택 -->
+                                            <li class="area_section on">
                                                 <button
                                                     type="button"
                                                     class="btn_area btn_open_layer"
@@ -75,10 +77,11 @@
                                                 </button>
                                             </li>
                                         </ul>
+                                        <!-- 직무 카테고리 -->
                                         <div class="wrap_section_contents">
-                                            <!-- on 되면서 -->
+                                            <!-- on 되면 직무 카테고리 열림 -->
                                             <div
-                                                class="option_content job_category_section on"
+                                                class="option_content job_category_section"
                                             >
                                                 <h2 class="blind">직업 선택</h2>
                                                 <div class="select_keyword">
@@ -109,7 +112,7 @@
                                                                 삭제
                                                             </button>
                                                         </span>
-                                                        <!-- 검색어가 있을 때 ,display:none 됐다가 block 됐다가 함 -->
+                                                        <!-- 검색창 누르면 block 돼서 연관 검색어 뜸-->
                                                         <div
                                                             class="wrap_result has_result"
                                                             id="autocomplete_has_result"
@@ -167,7 +170,7 @@
                                                         </div>
                                                         <!-- 검색어가 없을때, display:none 시켜야됨 -->
                                                         <div
-                                                            class="wrap_result has_result"
+                                                            class="wrap_result no_result"
                                                             id="autocomplete_no_result"
                                                             style="
                                                                 display: none;
@@ -176,10 +179,22 @@
                                                             <p class="empty">
                                                                 검색결과가
                                                                 없습니다.
+                                                                <a
+                                                                    href="javascript:void(0)"
+                                                                    class="go_link"
+                                                                    ><span
+                                                                        class="txt_point"
+                                                                        >ㅇㄴㄹ</span
+                                                                    >
+                                                                    키워드
+                                                                    검색어로
+                                                                    추가</a
+                                                                >
                                                             </p>
                                                             <div
                                                                 class="area_btn"
                                                             >
+                                                                <!-- 버튼 누르면  wrap_result no_result 부분 display:none-->
                                                                 <button
                                                                     type="button"
                                                                     class="btn_close"
@@ -191,11 +206,19 @@
                                                     </div>
                                                 </div>
                                                 <!-- 카테고리 depth -->
-                                                <div class="details">
+                                                <!-- 위에 직업 카테고리가 선택 되면 style="max-height: 202px;" -->
+                                                <div
+                                                    class="details"
+                                                    style="max-height: 202px"
+                                                >
                                                     <h4 class="blind">
                                                         카테고리 선택
                                                     </h4>
-                                                    <div class="box_jobs">
+                                                    <!-- 카테고리 선택되면 style="display:none" -->
+                                                    <div
+                                                        class="box_jobs"
+                                                        style="display: none"
+                                                    >
                                                         <button
                                                             type="button"
                                                             class="btn_job"
@@ -344,9 +367,10 @@
                                                             공공·복지
                                                         </button>
                                                     </div>
+                                                    <!-- 큰 옵션 선택 시 -->
                                                     <div
                                                         class="box_detail_jobs"
-                                                        style="display: none"
+                                                        style="display: block"
                                                     >
                                                         <div
                                                             class="box_onedepth"
@@ -391,7 +415,7 @@
                                                                             top: 0px;
                                                                         "
                                                                     >
-                                                                        <!-- list 예시 -->
+                                                                        <!-- list 예시 forEach로? -->
                                                                         <li
                                                                             class="item_job depth1_btn_wrapper on"
                                                                             id="depth1_btn_16"
@@ -415,6 +439,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!-- 선택되면 display: block -->
                                                         <div
                                                             class="box_detail_depth on"
                                                             id="sp_job_category_subDepth_16"
@@ -500,7 +525,19 @@
                                                                                 </dt>
                                                                                 <dd
                                                                                     class="area_list"
-                                                                                ></dd>
+                                                                                >
+                                                                                    <!-- 직무.직업 버튼 예시 -->
+                                                                                    <button
+                                                                                        type="button"
+                                                                                        class="btn_three_depth"
+                                                                                    >
+                                                                                        광고PD
+                                                                                        <span
+                                                                                            class="count"
+                                                                                            >(361)</span
+                                                                                        >
+                                                                                    </button>
+                                                                                </dd>
                                                                             </dl>
                                                                             <dl
                                                                                 class="row_item"
@@ -519,7 +556,20 @@
                                                                                 </dt>
                                                                                 <dd
                                                                                     class="area_list"
-                                                                                ></dd>
+                                                                                >
+                                                                                    <!-- 직무.직업 버튼 예시 -->
+                                                                                    <button
+                                                                                        type="button"
+                                                                                        class="btn_three_depth"
+                                                                                    >
+                                                                                        검색
+                                                                                        광고
+                                                                                        <span
+                                                                                            class="count"
+                                                                                            >(361)</span
+                                                                                        >
+                                                                                    </button>
+                                                                                </dd>
                                                                             </dl>
                                                                         </div>
                                                                     </div>
@@ -530,13 +580,247 @@
                                                     <!-- after -->
                                                 </div>
                                             </div>
+                                            <!-- 지역 카테고리 -->
                                             <div
-                                                class="option_content area_section"
+                                                class="option_content area_section on"
                                             >
                                                 <h2 class="blind">지역 선택</h2>
+                                                <div class="select_keyword">
+                                                    <div
+                                                        class="wrap_auto_keyword"
+                                                    >
+                                                        <span
+                                                            class="ipt_keyword"
+                                                        >
+                                                            <label
+                                                                for="area_ipt_keyword"
+                                                                class="blind"
+                                                                >지역명
+                                                                입력</label
+                                                            >
+                                                            <input
+                                                                type="text"
+                                                                name="loc"
+                                                                id="area_ipt_keyword"
+                                                                placeholder="지역명 입력"
+                                                                autocomplete="off"
+                                                            />
+                                                            <button
+                                                                type="button"
+                                                                class="btn_delete"
+                                                            >
+                                                                삭제
+                                                            </button>
+                                                        </span>
+                                                        <div
+                                                            class="wrap_result has_result"
+                                                            id="autocomplete_has_result"
+                                                            style="
+                                                                display: none;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="wrap_scroll"
+                                                                style="
+                                                                    height: 183px;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="ScrollBar"
+                                                                >
+                                                                    <div
+                                                                        class="track"
+                                                                    >
+                                                                        <div
+                                                                            class="thumb"
+                                                                        >
+                                                                            <div
+                                                                                class="end"
+                                                                            ></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="viewport"
+                                                                >
+                                                                    <div
+                                                                        class="overview"
+                                                                        style="
+                                                                            top: 0px;
+                                                                        "
+                                                                    >
+                                                                        <ul
+                                                                            class="list_keyword"
+                                                                        ></ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="area_btn"
+                                                            >
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn_close"
+                                                                >
+                                                                    닫기
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="wrap_result no_result"
+                                                            id="autocomplete_no_result"
+                                                            style="
+                                                                display: none;
+                                                            "
+                                                        >
+                                                            <p class="empty">
+                                                                검색결과가
+                                                                없습니다.
+                                                            </p>
+                                                            <div
+                                                                class="area_btn"
+                                                            >
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn_close"
+                                                                >
+                                                                    닫기
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 지역 카테고리 depth -->
                                                 <div
-                                                    class="select_keyword"
-                                                ></div>
+                                                    class="wrap_depth_category"
+                                                >
+                                                    <h4 class="blind">
+                                                        카테고리 선택
+                                                    </h4>
+                                                    <div
+                                                        class="wrap_scroll depth1"
+                                                        style="height: 245px"
+                                                    >
+                                                        <div
+                                                            class="scrollbar"
+                                                            style="
+                                                                height: 245px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="track"
+                                                                style="
+                                                                    height: 245px;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="thumb"
+                                                                    style="
+                                                                        top: 4.23225px;
+                                                                        height: 115.211px;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="end"
+                                                                    ></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="viewport">
+                                                            <div
+                                                                class="overview"
+                                                                style="
+                                                                    top: -9px;
+                                                                "
+                                                            >
+                                                                <ul>
+                                                                    <li
+                                                                        class="depth1_btn_wrapper on"
+                                                                    >
+                                                                        <!-- 클래스명 바꿔야됨 -->
+                                                                        <button
+                                                                            type="button"
+                                                                            class="depth1_btn_101000"
+                                                                        >
+                                                                            <span
+                                                                                class="txt"
+                                                                                >서울
+                                                                            </span>
+                                                                            <span
+                                                                                class="count"
+                                                                                >(55,015)</span
+                                                                            >
+                                                                        </button>
+                                                                    </li>
+                                                                    <!-- 마지막 li 뒤에 after -->
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="wrap_scroll depth_check"
+                                                        style="height: 245px"
+                                                    >
+                                                        <div
+                                                            class="scrollbar"
+                                                            style="
+                                                                height: 245px;
+                                                            "
+                                                        >
+                                                            <div
+                                                                class="track"
+                                                                style="
+                                                                    height: 245px;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="thumb"
+                                                                    style="
+                                                                        top: 0px;
+                                                                        height: 179.179px;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="end"
+                                                                    ></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="viewport">
+                                                            <div
+                                                                class="overview"
+                                                                style="top: 0px"
+                                                            >
+                                                                <div
+                                                                    class="wrap_list_check"
+                                                                >
+                                                                    <ul
+                                                                        class="list_check"
+                                                                    >
+                                                                        <li>
+                                                                            <div
+                                                                                class="inpChk"
+                                                                            >
+                                                                                <input
+                                                                                    type="checkbox"
+                                                                                />
+                                                                                <label
+                                                                                    class="lbl"
+                                                                                >
+                                                                                    <span
+                                                                                        class="txt"
+                                                                                        >서울전체</span
+                                                                                    >
+                                                                                </label>
+                                                                                <!-- 여기서부터 -->
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div
                                                 class="option_content keyword_section"
@@ -547,7 +831,60 @@
                                     <div
                                         id="sp_preview"
                                         class="wrap_search_result preview_v2 resetting"
-                                    ></div>
+                                    >
+                                        <div class="add_keyword">
+                                            <div
+                                                id="sp_preview_selected"
+                                                class="keywords"
+                                            >
+                                                <span class="selected_keyword">
+                                                    마케팅·홍보·조사 &gt; 광고PD
+                                                    <button
+                                                        type="button"
+                                                        id="sp_preview_job_category"
+                                                        class="btn_del remove-btn"
+                                                    >
+                                                        삭제
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <p class="result_txt">
+                                                채용공고를 찾고 있습니다. 잠시만
+                                                기다려주세요.
+                                            </p>
+                                            <p class="reset_txt">
+                                                검색조건을 설정해 주세요.
+                                            </p>
+                                        </div>
+                                        <div class="area_btn">
+                                            <button
+                                                type="button"
+                                                class="btn_reset"
+                                            >
+                                                선택초기화
+                                            </button>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            id="search_btn"
+                                            class="btn_search active"
+                                        >
+                                            <span>
+                                                <span class="count"
+                                                    ><span id="search_count_txt"
+                                                        >선택된 </span
+                                                    ><b
+                                                        id="sp_preview_total_cnt"
+                                                        >362</b
+                                                    >건</span
+                                                >
+                                                <span id="search_btn_txt"
+                                                    >검색하기</span
+                                                >
+                                            </span>
+                                            <span class="ripple drop"></span>
+                                        </button>
+                                    </div>
                                 </div>
                             </fieldset>
                         </form>
@@ -1323,6 +1660,7 @@
                                 </li>
                             </ul>
                         </div>
+                        zzz
                     </div>
                 </div>
             </div>

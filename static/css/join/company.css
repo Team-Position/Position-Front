@@ -1,4 +1,4 @@
-.join_header {
+.join-header {
     display: flex;
     height: 64px;
     border-bottom: 1px solid #eaedf4;
@@ -6,11 +6,11 @@
     justify-content: space-between;
 }
 
-.join_header .area_logo {
+.join-header .area-logo {
     margin-left: 64px;
 }
 
-.join_header .area_logo .link_saramin_logo {
+.join-header .area-logo .link-saramin-logo {
     margin-right: 6px;
 }
 
@@ -18,11 +18,11 @@ a:link, a:visited, a:active, a:hover {
     text-decoration: none;
 }
 
-.join_header .area_util {
+.join-header .area-util {
     margin-right: 64px;
 }
 
-.join_header .area_util .util {
+.join-header .area-util .util {
     display: flex;
     height: 64px;
 }
@@ -32,12 +32,12 @@ ol, ul, li {
 }
 
 
-.join_header .area_util .util_item {
+.join-header .area-util .util-item {
     display: flex;
     align-items: center;
 }
 
-.join_header .area_util .util_menu {
+.join-header .area-util .util-menu {
     display: flex;
     color: var(--gray110);
     font-size: 13px;
@@ -45,18 +45,18 @@ ol, ul, li {
     align-items: center;
 }
 
-.join_header .area_util .menu_saramin:before {
+.join-header .area-util .menu-saramin:before {
     background-image: url(/static/images/login/saramin-home.svg);
 }
 
-.join_header .area_util .util_menu:before {
+.join-header .area-util .util-menu:before {
     margin-right: 5px;
     width: 18px;
     height: 18px;
     content: "";
 }
 
-.join_header .area_util .util_item+.util_item:before {
+.join-header .area-util .util-item+.util-item:before {
     margin: 0 16px;
     width: 1px;
     height: 12px;
@@ -64,11 +64,11 @@ ol, ul, li {
     content: "";
 }
 
-.join_header .area_util .menu_must:before {
+.join-header .area-util .menu-must:before {
     background-image: url(/static/images/login/saramin-must.svg);
 }
 
-#join_wrapper {
+#join-wrapper {
     position: relative;
     margin: 0 auto;
     width: 360px;
@@ -78,7 +78,7 @@ img, fieldset, button, input {
     border: 0 none;
 }
 
-.member_cate .tit_join_member {
+.member-cate .tit-join-member {
     margin-bottom: 32px;
     padding-top: 55px;
     color: #373f57;
@@ -88,13 +88,13 @@ img, fieldset, button, input {
     text-align: center;
 }
 
-.write_base .item {
+.write-base .item {
     clear: both;
     position: relative;
     padding-top: 24px;
 }
 
-.write_base .item label {
+.write-base .item label {
     display: block;
 }
 
@@ -102,14 +102,14 @@ button, label {
     cursor: pointer;
 }
 
-.write_base .item label strong {
+.write-base .item label strong {
     display: inline-block;
     margin-bottom: 8px;
     color: #373f57;
     font-size: 16px;
 }
 
-.write_base .item .TypoBox {
+.write-base .item .TypoBox {
     width: 100%;
 }
 
@@ -141,16 +141,16 @@ button, label {
     line-height: 24px;
 }
 
-.write_base .item input {
+.write-base .item input {
     width: 100%;
 }
 
-.write_base .item .alert_column.good_txt {
+.write-base .item .alert-column.good-txt {
     color: #2d65f2;
 }
 
 
-.write_base .item .msgInvalid {
+.write-base .item .msgInvalid {
     display: block;
     clear: both;
     margin-top: 8px;
@@ -159,11 +159,11 @@ button, label {
     line-height: 20px;
 }
 
-.write_base .item .alert_column.good_txt {
+.write-base .item .alert-column.good-txt {
     color: #2d65f2;
 }
 
-.write_base .item .alert_column {
+.write-base .item .alert-column {
     margin-top: 8px;
     font-size: 14px;
     line-height: 20px;
@@ -175,21 +175,21 @@ button, label {
     outline-offset: 2px;
 }
 
-.cont_division {
+.cont-division {
     position: relative;
     margin-top: 24px;
     width: 360px;
     box-sizing: border-box;
 }
 
-.cont_division .terms_agree, .cont_division .cont_tit {
+.cont-division .terms-agree, .cont-division .cont-tit {
     display: inline-block;
     margin-bottom: 8px;
     color: #373f57;
     font-size: 16px;
 }
 
-.area_corp_certification {
+.area-corp-certification {
     position: relative;
     padding: 24px 16px 20px;
     border: 1px dashed var(--blue80);
@@ -198,20 +198,20 @@ button, label {
     background: var(--blue20);
 }
 
-.area_corp_certification .corp_certification_tit {
+.area-corp-certification .corp-certification-tit {
     padding-bottom: 8px;
     color: var(--gray100);
     font-size: 15px;
     line-height: 22px;
 }
 
-.area_corp_certification .corp_certification_exam {
+.area-corp-certification .corp-certification-exam {
     display: flex;
     padding-bottom: 8px;
     justify-content: center;
 }
 
-.area_corp_certification .corp_certification_exam .box_exam {
+.area-corp-certification .corp-certification-exam .box-exam {
     position: relative;
     margin: 0 6px;
     width: 108px;
@@ -220,11 +220,11 @@ button, label {
     border-radius: 5px;
     background-color: var(--white);
 }
-.area_corp_certification .corp_certification_exam .exam_certification {
+.area-corp-certification .corp-certification-exam .exam-certification {
     background: var(--white) url(//www.saraminimage.co.kr/sri/join/img_exam_certification.png) 50% 18px no-repeat;
 }
 
-.area_corp_certification .corp_certification_exam .box_exam .exam_tit {
+.area-corp-certification .corp-certification-exam .box-exam .exam-tit {
     display: block;
     margin-top: 4px;
     color: var(--gray80);
@@ -233,22 +233,22 @@ button, label {
     text-align: center;
 }
 
-.area_corp_certification .txt_blue {
+.area-corp-certification .txt-blue {
     color: var(--blue90);
 }
 
-.area_corp_certification .corp_certification_exam .exam_certification:after {
+.area-corp-certification .corp-certification-exam .exam-certification:after {
     top: 48px;
     width: 51px;
     height: 51px;
     background-image: url(/static/images/join/o.svg);
 }
 
-.area_corp_certification .corp_certification_exam .exam_license {
+.area-corp-certification .corp-certification-exam .exam-license {
     background: var(--white) url(//www.saraminimage.co.kr/sri/join/img_exam_certification2.png) 50% 22px no-repeat;
 }
 
-.area_corp_certification .corp_certification_exam .box_exam {
+.area-corp-certification .corp-certification-exam .box-exam {
     position: relative;
     margin: 0 6px;
     width: 108px;
@@ -258,14 +258,14 @@ button, label {
     background-color: var(--white);
 }
 
-.area_corp_certification .corp_certification_exam .exam_license:after {
+.area-corp-certification .corp-certification-exam .exam-license:after {
     top: 56px;
     width: 40px;
     height: 40px;
     background-image: url(/static/images/join/x.svg);
 }
 
-.area_corp_certification .corp_certification_exam .box_exam:after {
+.area-corp-certification .corp-certification-exam .box-exam:after {
     display: block;
     position: absolute;
     right: 0;
@@ -274,7 +274,7 @@ button, label {
     content: "";
 }
 
-.area_corp_certification .corp_certification_exam .box_exam:after {
+.area-corp-certification .corp-certification-exam .box-exam:after {
     display: block;
     position: absolute;
     right: 0;
@@ -283,20 +283,20 @@ button, label {
     content: "";
 }
 
-.area_corp_certification .corp_certification_tit {
+.area-corp-certification .corp-certification-tit {
     padding-bottom: 8px;
     color: var(--gray100);
     font-size: 15px;
     line-height: 22px;
 }
 
-.area_corp_certification .box_file_upload {
+.area-corp-certification .box-file-upload {
     position: relative;
     padding: 148px 16px 16px;
     box-sizing: border-box;
 }
 
-.area_corp_certification .box_file_upload .file_input, .area_corp_certification .box_file_upload .file_label {
+.area-corp-certification .box-file-upload .file-input, .area-corp-certification .box-file-upload .file-label {
     display: block;
     position: absolute;
     top: 0;
@@ -305,11 +305,11 @@ button, label {
     height: 100%;
 }
 
-.area_corp_certification .box_file_upload .file_label {
+.area-corp-certification .box-file-upload .file-label {
     z-index: 5;
 }
 
-.area_corp_certification .box_file_upload .file_input, .area_corp_certification .box_file_upload .file_label {
+.area-corp-certification .box-file-upload .file-input, .area-corp-certification .box-file-upload .file-label {
     display: block;
     position: absolute;
     top: 0;
@@ -318,7 +318,7 @@ button, label {
     height: 100%;
 }
 
-.area_corp_certification .box_file_upload .file_view {
+.area-corp-certification .box-file-upload .file-view {
     position: absolute;
     top: 0;
     left: 0;
@@ -327,7 +327,7 @@ button, label {
     background-color: var(--blue20);
 }
 
-.area_corp_certification .box_file_upload .file_view:before {
+.area-corp-certification .box-file-upload .file-view:before {
     display: block;
     margin: 14px auto 0;
     width: 53px;
@@ -336,7 +336,7 @@ button, label {
     content: "";
 }
 
-.area_corp_certification .file_upload_name {
+.area-corp-certification .file-upload-name {
     overflow: hidden;
     margin-top: 12px;
     width: 100%;
@@ -349,14 +349,14 @@ button, label {
     background: transparent;
 }
 
-.area_corp_certification .file_txt_guide {
+.area-corp-certification .file-txt-guide {
     margin-top: 12px;
     color: var(--gray90);
     font-size: 13px;
     line-height: 17px;
 }
 
-.area_corp_certification .box_btn {
+.area-corp-certification .box-btn {
     margin: 12px 0;
 }
 
@@ -371,7 +371,7 @@ button, label {
     line-height: 24px;
 }
 
-.area_corp_certification .btn_certify_file {
+.area-corp-certification .btn-certify-file {
     width: 230px;
 }
 
@@ -455,17 +455,17 @@ button, label {
     outline-offset: 2px;
 }
 
-.area_corp_certification .file_upload_next .file_txt_guide3 {
+.area-corp-certification .file-upload-next .file-txt-guide3 {
     margin-top: 18px;
 }
 
-.area_corp_certification .file_txt_guide3 {
+.area-corp-certification .file-txt-guide3 {
     color: var(--gray100);
     font-size: 16px;
     line-height: 24px;
 }
 
-.cont_division {
+.cont-division {
     position: relative;
     margin-top: 24px;
     width: 360px;
@@ -473,7 +473,7 @@ button, label {
 }
 
 
-.fluid_tip {
+.fluid-tip {
     overflow-y: auto;
     padding: 24px 20px 30px;
     max-height: 270px;
@@ -484,7 +484,7 @@ button, label {
     box-shadow: 2px 6px 16px rgba(17, 42, 128, 0.08);
 }
 
-.fluid_tip {
+.fluid-tip {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -494,7 +494,7 @@ button, label {
     max-height: none;
 }
 
-.fluid_tip .tip_tit {
+.fluid-tip .tip-tit {
     display: flex;
     color: var(--gray110);
     font-size: 18px;
@@ -502,15 +502,15 @@ button, label {
     align-items: center;
 }
 
-.fluid_tip .tip_tit .svg {
+.fluid-tip .tip-tit .svg {
     margin-right: 4px;
 }
 
-.fluid_tip .tip_tit .svg {
+.fluid-tip .tip-tit .svg {
     margin-right: 4px;
 }
 
-.fluid_tip .tip_cont {
+.fluid-tip .tip-cont {
     margin-top: 14px;
 }
 
@@ -518,7 +518,7 @@ ol, ul, li {
     list-style-type: none;
 }
 
-.fluid_tip .tip_question {
+.fluid-tip .tip-question {
     color: var(--gray100);
     font-size: 15px;
     line-height: 22px;
@@ -531,20 +531,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
 }
 
-.fluid_tip .tip_answer {
+.fluid-tip .tip-answer {
     margin-top: 4px;
     padding: 6px 14px;
     border-radius: 5px;
     background-color: var(--blue20);
 }
 
-.fluid_tip .tip_answer .txt {
+.fluid-tip .tip-answer .txt {
     color: var(--gray100);
     font-size: 13px;
     line-height: 24px;
 }
 
-.fluid_tip .tip_answer .txt .txt_emph {
+.fluid-tip .tip-answer .txt .txt-emph {
     font-size: 14px;
 }
 
@@ -562,46 +562,46 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     align-items: center;
 }
 
-.fluid_tip .BtnType.bg_white {
+.fluid-tip .BtnType.bg-white {
     margin-top: 12px;
     width: 100%;
 }
 
-.BtnType.bg_white {
+.BtnType.bg-white {
     display: block;
     color: var(--blue90);
     background-color: var(--white);
 }
 
-.fluid_tip .list_tip .tip_item+.tip_item {
+.fluid-tip .list-tip .tip-item+.tip-item {
     margin-top: 12px;
 }
 
-.fluid_tip .tip_answer {
+.fluid-tip .tip-answer {
     margin-top: 4px;
     padding: 6px 14px;
     border-radius: 5px;
     background-color: var(--blue20);
 }
 
-.fluid_tip .tip_answer .txt .tip_answer_tit {
+.fluid-tip .tip-answer .txt .tip-answer-tit {
     display: flex;
     margin-bottom: 2px;
     color: var(--blue90);
     align-items: center;
 }
 
-.fluid_tip .tip_answer .txt .tip_answer_tit svg {
+.fluid-tip .tip-answer .txt .tip-answer-tit svg {
     margin-right: 4px;
 }
 
-.fluid_tip .tip_answer .txt .txt_emph2 {
+.fluid-tip .tip-answer .txt .txt-emph2 {
     color: var(--gray120);
     font-size: 14px;
     line-height: 20px;
 }
 
-.fluid_tip .tip_answer+.tip_answer {
+.fluid-tip .tip-answer+.tip-answer {
     margin-top: 8px;
 }
 
@@ -614,18 +614,18 @@ h4{
     color: #8491A7;
 }
 
-.write_base .item {
+.write-base .item {
     clear: both;
     position: relative;
     padding-top: 24px;
 }
 
-.BtnType.bg_white:hover {
+.BtnType.bg-white:hover {
     border-color: var(--blue90);
     background-color: var(--blue20);
 }
 
-.write_base .item .input_sebu_address {
+.write-base .item .input-sebu-address {
     margin-top: 8px;
 }
 
@@ -638,7 +638,7 @@ h4{
 
 
 
-.cont_division .sri_radio_wrap .InpBox {
+.cont-division .sri-radio-wrap .InpBox {
     margin: 16px 20px 16px 0;
 }
 
@@ -712,7 +712,7 @@ h4{
     line-height: 24px;
 }
 
-.cont_division .msgInvalid {
+.cont-division .msgInvalid {
     display: block;
     clear: both;
     margin-top: 8px;
@@ -721,17 +721,17 @@ h4{
     line-height: 20px;
 }
 
-.btn_identify_phone {
+.btn-identify-phone {
     width: 100%;
 }
 
-.cont_division .agree_box {
+.cont-division .agree-box {
     padding: 16px;
     border: 1px solid #d7dce5;
     border-radius: 4px;
 }
 
-.cont_division .agree_box .agree_article {
+.cont-division .agree-box .agree-article {
     padding-bottom: 16px;
     border-bottom: 1px solid #d7dce5;
     color: #5c667b;
@@ -758,29 +758,29 @@ h4{
     pointer-events: none;
 }
 
-.cont_division .agree_box .agree_article .all_agree {
+.cont-division .agree-box .agree-article .all-agree {
     font-size: 16px;
 }
 
-.cont_division .agree_box .agree_article .agree_txt {
+.cont-division .agree-box .agree-article .agree-txt {
     margin: 8px 0 0 40px;
     color: var(--gray100);
     font-size: 13px;
     line-height: 20px;
 }
 
-.cont_division .agree_box .agree_article.depth2 {
+.cont-division .agree-box .agree-article.depth2 {
     padding-bottom: 0;
     border: none;
 }
 
-.cont_division .agree_box .agree_article {
+.cont-division .agree-box .agree-article {
     padding-bottom: 16px;
     border-bottom: 1px solid #d7dce5;
     color: #5c667b;
 }
 
-.cont_division .agree_box .agree_article.depth2 li {
+.cont-division .agree-box .agree-article.depth2 li {
     position: relative;
     margin: 16px 0;
 }
@@ -793,15 +793,15 @@ h4{
     line-height: 20px;
 }
 
-.cont_division .agree_box .agree_article.depth2 span {
+.cont-division .agree-box .agree-article.depth2 span {
     font-size: 15px;
 }
 
-.cont_division .agree_box .agree_article.depth2 li:last-child {
+.cont-division .agree-box .agree-article.depth2 li:last-child {
     margin-bottom: 0;
 }
 
-.cont_division .agree_box .agree_article.depth2 li a {
+.cont-division .agree-box .agree-article.depth2 li a {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -811,7 +811,7 @@ h4{
     background-position: center right;
 }
 
-.btn_join {
+.btn-join {
     margin-top: 24px;
     padding-bottom: 100px;
 }
@@ -823,24 +823,24 @@ h4{
     line-height: 24px;
 }
 
-.btn_join button {
+.btn-join button {
     width: 100%;
 }
 
-.write_base .item input.defalt:focus {
+.write-base .item input.defalt:focus {
     border: 1px solid #2d65f2;
 }
 
-.write_base .item input.defalt:hover {
+.write-base .item input.defalt:hover {
     border: 1px solid #8491a7;
     background-color: #eff5ff;
 }
 
-.write_base .item .TypoBox.invalid {
+.write-base .item .TypoBox.invalid {
     border-color: #dc3434;
 }
 
-.flexbox.row_reverse {
+.flexbox.row-reverse {
     flex-direction: row-reverse;
 }
 
@@ -853,7 +853,7 @@ h4{
     white-space: nowrap;
 }
 
-.area_job_category {
+.area-job-category {
     position: relative;
     padding: 2px 12px 12px;
     min-height: 48px;
@@ -862,11 +862,11 @@ h4{
     justify-content: space-between;
 }
 
-.flexbox .form_typobox {
+.flexbox .form-typobox {
     width: 100%;
 }
 
-.area_job_category {
+.area-job-category {
     position: relative;
     padding: 2px 12px 12px;
     min-height: 48px;
@@ -875,20 +875,20 @@ h4{
     justify-content: space-between;
 }
 
-.form_placeholder {
+.form-placeholder {
     display: inline-block;
     color: var(--gray90);
     font-size: 16px;
     line-height: 24px;
 }
 
-.area_job_category .form_placeholder {
+.area-job-category .form-placeholder {
     position: absolute;
     top: 12px;
     left: 12px;
 }
 
-.form_typobox {
+.form-typobox {
     display: inline-block;
     position: relative;
     border: 1px solid var(--gray70);
@@ -897,23 +897,23 @@ h4{
     background-color: var(--white);
 }
 
-.area_corp_certification .file_upload_next .file_txt_guide3 {
+.area-corp-certification .file-upload-next .file-txt-guide3 {
     margin-top: 18px;
 }
 
-.area_corp_certification .file_txt_guide3 {
+.area-corp-certification .file-txt-guide3 {
     color: var(--gray100);
     font-size: 16px;
     line-height: 24px;
 }
 
-.layer_pop_manage .layer_manage_wrap {
+.layer-pop-manage .layer-manage-wrap {
     position: relative;
     z-index: 100;
     padding: 25px 30px 30px;
 }
 
-.layer_pop_manage .layer_manage_wrap h4 {
+.layer-pop-manage .layer-manage-wrap h4 {
     margin-bottom: 8px;
     color: #444;
     font-size: 19px;
@@ -921,7 +921,7 @@ h4{
     text-align: left;
 }
 
-.layer_hope .area_search_job {
+.layer-hope .area-search-job {
     margin-bottom: 16px;
     padding-top: 25px;
     height: 83px;
@@ -931,11 +931,11 @@ h4{
     background-color: #f7f7f7;
 }
 
-.area_search_job {
+.area-search-job {
     font-size: 13px;
 }
 
-.layer_hope .area_search_job .title_search_job {
+.layer-hope .area-search-job .title-search-job {
     display: inline-block;
     margin-right: 20px;
     color: #666;
@@ -943,12 +943,12 @@ h4{
     font-weight: bold;
 }
 
-.layer_hope .area_search_job .sri_input {
+.layer-hope .area-search-job .sri-input {
     width: 428px;
     box-sizing: border-box;
 }
 
-.sri_input[type="text"] {
+.sri-input[type="text"] {
     margin-right: 6px;
     padding: 0 11px 1px 11px;
     height: 32px;
@@ -961,25 +961,25 @@ h4{
     background: #fff;
 }
 
-.layer_pop_manage .txt {
+.layer-pop-manage .txt {
     margin-bottom: 5px;
     font-size: 13px;
     line-height: 20px;
 }
 
-.layer_hope .area_table_scroll {
+.layer-hope .area-table-scroll {
     overflow-x: hidden;
     overflow-y: scroll;
     max-height: 380px;
     border-top: 1px solid #444;
 }
 
-.sub_depth {
+.sub-depth {
     margin-top: -1px;
     border-top: 1px solid #eaeaea;
 }
 
-.sub_depth .title_sub_depth {
+.sub-depth .title-sub-depth {
     display: table-cell;
     padding: 0 0 0 20px;
     width: 120px;
@@ -992,7 +992,7 @@ h4{
     background-color: #f7f7f7;
 }
 
-.sub_depth2 {
+.sub-depth2 {
     display: table-cell;
     padding: 6px 0 15px 15px;
     width: 486px;
@@ -1000,22 +1000,22 @@ h4{
     border-left: 1px solid #eaeaea;
 }
 
-.list_depth2 {
+.list-depth2 {
     background-color: #fff;
 }
 
-.list_depth2 .item_depth2 {
+.list-depth2 .item-depth2 {
     float: left;
     margin-top: 6px;
     width: 151px;
     vertical-align: top;
 }
 
-.sri_check.small {
+.sri-check.small {
     height: 15px;
 }
 
-.sri_check {
+.sri-check {
     display: inline-block;
     position: relative;
     height: 18px;
@@ -1023,7 +1023,7 @@ h4{
     cursor: pointer;
 }
 
-.sri_check .inp_check {
+.sri-check .inp-check {
     position: absolute;
     top: 0;
     left: 0;
@@ -1033,7 +1033,7 @@ h4{
     opacity: 0.01;
     filter: alpha(opacity = 0.1);
 }
-.sri_check.small .inp_check {
+.sri-check.small .inp-check {
     top: 1px;
     width: 13px;
     height: 13px;
@@ -1047,11 +1047,11 @@ input[type="checkbox"], input[type="radio"] {
     vertical-align: -1px;
 }
 
-.sri_radio.small .txt_check {
+.sri-radio.small .txt-check {
     background-position: 0 -299px;
 }
 
-.sri_check.small .txt_check {
+.sri-check.small .txt-check {
     padding: 0 7px 0 20px;
     height: 15px;
     font-size: 12px;
@@ -1059,7 +1059,7 @@ input[type="checkbox"], input[type="radio"] {
     background-position: 0 -99px;
 }
 
-.sri_check .txt_check {
+.sri-check .txt-check {
     display: block;
     padding: 0 7px 0 29px;
     height: 18px;
@@ -1069,20 +1069,20 @@ input[type="checkbox"], input[type="radio"] {
     background: url(//www.saraminimage.co.kr/ui/form/ico_checkbox.png) 0 0 no-repeat;
 }
 
-.layer_pop_manage.layer_hope {
+.layer-pop-manage.layer-hope {
     margin: 0 0 0 -0;
     padding: 0;
     width: 684px;
 }
 
-.layer_pop_manage {
+.layer-pop-manage {
     top: 0;
     left: 50%;
     width: 630px;
     transform: translate(-50%, -50%);
 }
 
-.layer_pop_manage {
+.layer-pop-manage {
     position: absolute;
     left: 50%;
     z-index: 102;
@@ -1106,65 +1106,65 @@ body, input, button, textarea, select, table {
     line-height: 1.0;
 }
 
-.sri_radio.small.check_on .txt_check {
+.sri-radio.small.check-on .txt-check {
     background-position: 0 -349px;
 }
 
-.sub_depth3 {
+.sub-depth3 {
     position: relative;
     margin: 13px 0 14px;
     border: 1px solid #bdc5f3;
     background-color: #f8f9ff;
 }
 
-.sub_depth3 .title_sub_depth3 {
+.sub-depth3 .title-sub-depth3 {
     display: inline-block;
     padding: 18px 0 0 20px;
     color: #566feb;
     font-size: 13px;
 }
 
-.sub_depth3 .title_sub_depth3 {
+.sub-depth3 .title-sub-depth3 {
     display: inline-block;
     padding: 18px 0 0 20px;
     color: #566feb;
     font-size: 13px;
 }
 
-.sub_depth3 .list_depth3 {
+.sub-depth3 .list-depth3 {
     padding: 0 0 20px 20px;
 }
 
-.sub_depth3 .list_depth3 .item_depth3 {
+.sub-depth3 .list-depth3 .item-depth3 {
     float: left;
     margin-top: 6px;
     width: 145px;
     vertical-align: top;
 }
 
-.sri_check.small {
+.sri-check.small {
     height: 15px;
 }
 
-.sub_depth3 .list_depth3 {
+.sub-depth3 .list-depth3 {
     padding: 0 0 20px 20px;
 }
 
-.sub_depth3 .list_depth3:after {
+.sub-depth3 .list-depth3:after {
     display: table;
     clear: both;
     content: "";
     table-layout: fixed;
 }
 
-.list_depth2:after {
+.list-depth2:after {
     display: table;
     clear: both;
     content: "";
     table-layout: fixed;
 }
 
-.sub_depth3:after {
+.sub-depth3:after {
     display: inline-block;
     position: absolute;
     top: -10px;
@@ -1176,7 +1176,7 @@ body, input, button, textarea, select, table {
     content: "";
 }
 
-.sub_depth .title_sub_depth {
+.sub-depth .title-sub-depth {
     display: table-cell;
     padding: 0 0 0 20px;
     width: 120px;
@@ -1189,15 +1189,15 @@ body, input, button, textarea, select, table {
     background-color: #f7f7f7;
 }
 
-.sri_check.small.check_on .txt_check {
+/* .sri-check.small.check-on .txt-check {
     background-position: 0 -149px;
-}
+} */
 
-.write_base .item .pass_box .field_eye.on:before {
+.write-base .item .pass-box .field-eye.on:before {
     background: url(/static/images/join/oneye.svg) no-repeat;
 }
 
-.write_base .item .pass_box .field_eye:before {
+.write-base .item .pass-box .field-eye:before {
     display: inline-block;
     width: 28px;
     height: 20px;
@@ -1205,7 +1205,7 @@ body, input, button, textarea, select, table {
     content: "";
 }
 
-.write_base .item .pass_box .field_eye {
+.write-base .item .pass-box .field-eye {
     position: absolute;
     top: 0;
     right: 12px;
@@ -1218,11 +1218,11 @@ button {
     background-color: transparent;
 }
 
-.write_base .item .alert_column.focus_txt {
+.write-base .item .alert-column.focus-txt {
     color: #5c667b;
 }
 
-.sri_check .txt_check {
+.sri-check .txt-check {
     display: block;
     padding: 0 7px 0 29px;
     height: 18px;
@@ -1232,19 +1232,19 @@ button {
     background: url(//www.saraminimage.co.kr/ui/form/ico_checkbox.png) 0 0 no-repeat;
 }
 
-.sri_radio.small .txt_check {
+.sri-radio.small .txt-check {
     background-position: 0 -299px;
 }
 
-.sri_radio.small.check_on .txt_check {
+.sri-radio.small.check-on .txt-check {
     background-position: 0 -349px;
 }
 
-.sri_check.small.check_on .txt_check {
+/* .sri-check.small.check-on .txt-check {
     background-position: 0 -149px;
-}
+} */
 
-.list_job_check {
+.list-job-check {
     padding: 14px 30px;
     min-height: 78px;
     border: 1px solid #666;
@@ -1252,11 +1252,11 @@ button {
     font-size: 13px;
 }
 
-.list_job_check .item_check {
+.list-job-check .item-check {
     line-height: 24px;
 }
 
-.list_job_check .item_check .btn_delete {
+.list-job-check .item-check .btn-delete {
     width: 13px;
     height: 13px;
     border: 0;
@@ -1265,16 +1265,16 @@ button {
     background: url(//www.saraminimage.co.kr/sri/person/btn/btn_close.png) 0 0 no-repeat;
 }
 
-.layer_pop_manage .bottom_btn_wrap {
+.layer-pop-manage .bottom-btn-wrap {
     margin-top: 10px;
     text-align: center;
 }
 
-.layer_pop_manage .bottom_btn_wrap button:first-child, .layer_pop_manage .bottom_btn_wrap a:first-child {
+.layer-pop-manage .bottom-btn-wrap button:first-child, .layer-pop-manage .bottom-btn-wrap a:first-child {
     margin-left: 0;
 }
 
-.btn_basic_type05 {
+.btn-basic-type05 {
     display: inline-block;
     padding: 5px 13px 9px;
     height: 32px;
@@ -1286,7 +1286,7 @@ button {
     background-color: #6b80f1;
 }
 
-.btn_basic_type01 {
+.btn-basic-type01 {
     display: inline-block;
     padding: 5px 13px 9px;
     height: 32px;
@@ -1298,7 +1298,7 @@ button {
     background-color: #fff;
 }
 
-.btn_basic_type03 {
+.btn-basic-type03 {
     display: inline-block;
     padding: 5px 13px 9px;
     height: 32px;
@@ -1311,7 +1311,7 @@ button {
     background-color: #f8f8f8;
 }
 
-.layer_pop_manage .btn_layer_close span {
+.layer-pop-manage .btn-layer-close span {
     overflow: hidden;
     font-size: 0;
     line-height: 0;
@@ -1319,7 +1319,7 @@ button {
     white-space: nowrap;
 }
 
-.layer_pop_manage .btn_layer_close {
+.layer-pop-manage .btn-layer-close {
     position: absolute;
     top: 14px;
     right: 14px;
@@ -1328,3 +1328,52 @@ button {
     border: 0 none;
     background: url(//www.saraminimage.co.kr/ui/layout/person_mypage_2017/btn_layer_close.png) no-repeat 50% 50%;
 }
+
+.area-search-job .charge-job-select {
+    overflow: hidden;
+    position: absolute;
+    left: 178px;
+    z-index: 1;
+    margin-top: -1px;
+    width: 428px;
+    border: 1px solid #686868;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.area-search-job .list-job-charge {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 8px 0;
+    min-height: 163px;
+}
+
+.area-search-job .list-job-charge li.no-list {
+    color: #666;
+    font-size: 12px;
+}
+
+.area-search-job .list-job-charge li {
+    padding: 4px 15px;
+    text-align: left;
+}
+
+
+.charge-job-select .btn-select {
+    padding: 7px 0;
+    border-top: 1px solid #e4e4e4;
+    background-color: #fbfbfb;
+}
+
+.charge-job-select .btn-select .btn-basic-type01, .charge-job-select .btn-select .btn-basic-type05 {
+    padding: 1px 9px 5px;
+    height: 23px;
+    font-size: 12px;
+}
+
+.charge-job-select .btn-select {
+    padding: 7px 0;
+    border-top: 1px solid #e4e4e4;
+    background-color: #fbfbfb;
+}
+

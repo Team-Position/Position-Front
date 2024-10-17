@@ -172,8 +172,6 @@ typoBoxes.forEach((typoBox) => {
 
 // =======================================================================
 
-console.log(passwordFocus);
-
 // 비밀번호 입력 시 안내 메시지와 눈알 등장
 passwordInput.addEventListener("focus", (e) => {
     // 경고 메시지가 표시 중이면 안내 문구를 숨김
@@ -182,10 +180,10 @@ passwordInput.addEventListener("focus", (e) => {
         passwordRepWarn.style.display === "block";
 
     if (!isWarningVisible) {
-        passwordFocus[1].style.display = "block"; // 안내 문구 표시
+        passwordFocus[0].style.display = "block"; // 안내 문구 표시
         console.log(passwordFocus);
     } else {
-        passwordFocus[1].style.display = "none"; // 경고 시 안내 문구 숨김
+        passwordFocus[0].style.display = "none"; // 경고 시 안내 문구 숨김
     }
 });
 
@@ -295,6 +293,7 @@ const updateAllAgreeStatus = () => {
 mandatoryCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
         updateAllAgreeStatus();
+        refreshSubmitButtonState();
     });
 });
 
@@ -302,3 +301,5 @@ mandatoryCheckboxes.forEach((checkbox) => {
 optionalCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", updateAllAgreeStatus);
 });
+
+// ================================업종 선택==================================

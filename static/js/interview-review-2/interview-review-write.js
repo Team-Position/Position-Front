@@ -54,23 +54,23 @@ document.getElementById("interviewDateYear").addEventListener("change", (e) => {
 // 직무,직업쪽 자바스크립트
 
 // 1단계 자바스크립트
-// document
-//     .querySelector(".interview-write-btn-add-modify")
-//     .addEventListener("click", function () {
-//         const jobCategorySection = document.querySelector(
-//             ".interview-write-box-jobs"
-//         );
+document
+    .querySelector(".interview-write-btn-add-modify")
+    .addEventListener("click", function () {
+        const jobCategorySection = document.querySelector(
+            ".interview-write-box-jobs"
+        );
 
-//         if (jobCategorySection.classList.contains("on")) {
-//             jobCategorySection.classList.remove("on");
-//             jobCategorySection.style.display = "none";
-//         } else {
-//             jobCategorySection.classList.add("on");
-//             jobCategorySection.style.display = "block";
-//         }
-//     });
+        if (jobCategorySection.classList.contains("on")) {
+            jobCategorySection.classList.remove("on");
+            jobCategorySection.style.display = "none";
+        } else {
+            jobCategorySection.classList.add("on");
+            jobCategorySection.style.display = "block";
+        }
+    });
 
-// // 2단계: box-jobs와 box-detail-jobs 사이 토글
+// 2단계: box-jobs와 box-detail-jobs 사이 토글
 document
     .querySelector(".interview-write-btn-job")
     .addEventListener("click", function () {
@@ -84,36 +84,36 @@ document
         boxDetailJobs.style.display = "block";
     });
 
-// // 3단계: box-detail-jobs가 표시되도록 설정
-// document.addEventListener("DOMContentLoaded", function () {
-//     const boxDetailJobs = document.querySelector(
-//         ".interview-write-box-detail-jobs"
-//     );
-//     if (boxDetailJobs) {
-//         boxDetailJobs.style.display = "none"; // 초기 상태 설정
-//     }
-// });
+// 3단계: box-detail-jobs가 표시되도록 설정
+document.addEventListener("DOMContentLoaded", function () {
+    const boxDetailJobs = document.querySelector(
+        ".interview-write-box-detail-jobs"
+    );
+    if (boxDetailJobs) {
+        boxDetailJobs.style.display = "none"; // 초기 상태 설정
+    }
+});
 
-// // 버튼 클릭 이벤트 리스너 등록
-// document
-//     .querySelector(".interview-write-btn-expand")
-//     .addEventListener("click", function () {
-//         // dl 태그에 expand 클래스 토글
-//         const dlElement = document.querySelector(".interview-write-row-item");
-//         dlElement.classList.toggle("expand");
+// 버튼 클릭 이벤트 리스너 등록
+document
+    .querySelector(".interview-write-btn-expand")
+    .addEventListener("click", function () {
+        // dl 태그에 expand 클래스 토글
+        const dlElement = document.querySelector(".interview-write-row-item");
+        dlElement.classList.toggle("expand");
 
-//         // div.interview-write-box-onedepth에 on 클래스 토글
-//         const boxOnedepth = document.querySelector(
-//             ".interview-write-box-onedepth"
-//         );
-//         boxOnedepth.classList.toggle("on");
+        // div.interview-write-box-onedepth에 on 클래스 토글
+        const boxOnedepth = document.querySelector(
+            ".interview-write-box-onedepth"
+        );
+        boxOnedepth.classList.toggle("on");
 
-//         // div.interview-write-row.interview-write-list에 on 클래스 토글
-//         const rowList = document.querySelector(
-//             ".interview-write-row.interview-write-list"
-//         );
-//         rowList.classList.toggle("on");
-//     });
+        // div.interview-write-row.interview-write-list에 on 클래스 토글
+        const rowList = document.querySelector(
+            ".interview-write-row.interview-write-list"
+        );
+        rowList.classList.toggle("on");
+    });
 
 // 대카 중카 소카 자바스크립트 코드
 const categorys = {
@@ -2449,40 +2449,97 @@ const categorys = {
 };
 
 // let text = ``;
-// Object.keys(categorys).forEach((categoryA) => {
+
+// // 대분류 카테고리만 반복
+// Object.keys(category).forEach((디자인) => {
 //     text += `
-//             <li
-//                 class="interview-write-item-job interview-write-depth1-btn-wrapper on"
-//                 data-mcls-cd-no="16"
-//             >
-//                 <button
-//                     type="button"
-//                     data-mcls-cd-no="16"
-//                     class="interview-write-first-depth"
-//                 >
-//                     <span
-//                         class="interview-write-txt"
-//                         >${categoryA}</span
-//                     >
-//                 </button>
-//             </li>
-//                 `;
-//     Object.keys(categorys[categoryA]).forEach((categoryB) => {
-//         text += `
-//                     <dt>
-//                         <button>
-//                             <span>${categoryB}</span>
-//                         </button>
-//                     </dt>
-//                 `;
-//         categorys[categoryA][categoryB].forEach((categoryC) => {
-//             text += `
-//                     <dd>
-//                         <button>${categoryC}</button>
-//                     </dd>
-//                 `;
+//       <li class="item_job depth1_btn_wrapper">
+//         <button type="button" class="first_depth">
+//           <span class="txt">${디자인}</span>
+//         </button>
+//       </li>
+//     `;
+// });
+
+// console.log(category.디자인);
+
+// // ul 요소에 생성된 HTML을 삽입
+// const lists = document.querySelector(
+//     ".interview-write-list.ineterview-write.overview"
+// );
+// console.log(lists);
+// // .innerHTML += text;
+
+// 대분류 카테고리만 반복
+// forEach 다음에는 변수명 선언..
+// 대카테고리에 클릭이벤트, 클릭이벤트 2번
+
+// let text = ``;
+// Object.keys(categorys).forEach((category) => {
+//     text += `
+//       <li class="item_job depth1_btn_wrapper">
+//         <button type="button" class="first_depth">
+//           <span class="txt">${category}</span>
+//         </button>
+//       </li>
+//     `;
+// });
+
+// console.log(text);
+
+// Object.keys(categorys).forEach((mainCategory) => {
+//     console.log(`대분류 카테고리: ${mainCategory}`);
+
+//     // 하위 항목들 (직무·직업, 전문분야 등) 출력
+//     Object.keys(categorys[mainCategory]).forEach((subCategory) => {
+//         console.log(` 중카테고리: ${subCategory}`);
+
+//         // 각 하위 카테고리에 속하는 세부 항목들 출력
+//         categorys[mainCategory][subCategory].forEach((item) => {
+//             console.log(` 소카테고리: ${item}`);
 //         });
 //     });
 // });
 
-// console.log(text);
+// Object.keys(categorys).forEach((mainCategory) => {
+//     console.log(mainCategory);
+// });
+
+let text = ``;
+Object.keys(categorys).forEach((categoryA) => {
+    text += `
+            <li
+                class="interview-write-item-job interview-write-depth1-btn-wrapper on"
+                data-mcls-cd-no="16"
+            >
+                <button
+                    type="button"
+                    data-mcls-cd-no="16"
+                    class="interview-write-first-depth"
+                >
+                    <span
+                        class="interview-write-txt"
+                        >${categoryA}</span
+                    >
+                </button>
+            </li>
+                `;
+    Object.keys(categorys[categoryA]).forEach((categoryB) => {
+        text += `
+                    <dt>
+                        <button>
+                            <span>${categoryB}</span>
+                        </button>
+                    </dt>
+                `;
+        categorys[categoryA][categoryB].forEach((categoryC) => {
+            text += `
+                    <dd>
+                        <button>${categoryC}</button>
+                    </dd>
+                `;
+        });
+    });
+});
+
+console.log(text);

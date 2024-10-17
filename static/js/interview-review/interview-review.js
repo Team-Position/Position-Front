@@ -1,13 +1,19 @@
-// // 모든 interview-box-review 요소에 클릭 이벤트 리스너를 추가합니다
-// document.querySelectorAll(".interview-box-review").forEach((item) => {
-//     item.addEventListener("click", function () {
-//         // open 클래스를 토글하여 드롭다운을 활성화하거나 비활성화
-//         item.classList.toggle("open");
-//     });
-// });
+// 방향 버튼
+const btnView = document.querySelector(".btn-view");
 
-document.querySelectorAll(".interview-box-review").forEach((item) => {
-    item.addEventListener("click", () => {
-        item.classList.toggle("open");
-    });
+// 목록 상세 div
+const viewCont = document.querySelector(".view-cont");
+let isOpen = false; // 상태를 저장할 변수
+
+// 버튼 클릭시 이벤트
+btnView.addEventListener("click", () => {
+    if (isOpen) {
+        viewCont.style.display = "none";
+        btnView.classList.remove("open");
+    } else {
+        viewCont.style.display = "block";
+        btnView.classList.add("open");
+    }
+    // 상태 반전 -40 -> -80 (이미지 위치)
+    isOpen = !isOpen;
 });

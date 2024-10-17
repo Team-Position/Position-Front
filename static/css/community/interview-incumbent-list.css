@@ -1,4 +1,4 @@
-#sri_section {
+#sri-section {
     display: table;
     overflow: hidden;
     position: relative;
@@ -7,7 +7,7 @@
     height: 100%;
     box-sizing: border-box;
 }
-#sri_wrap {
+#sri-wrap {
     display: table-row;
     width: 100%;
     height: 100%;
@@ -18,14 +18,14 @@
     margin: 56px auto 80px auto;
     width: 960px;
 }
-.wrap_title_recruit.title_type2 {
+.wrap-title-recruit.title-type2 {
     border-bottom: 1px solid #444;
 }
-.wrap_title_recruit {
+.wrap-title-recruit {
     position: relative;
     padding: 0 0 50px;
 }
-.title_common {
+.title-common {
     display: inline-block;
     color: #444;
     font-size: 32px;
@@ -33,10 +33,10 @@
     line-height: 36px;
     vertical-align: top;
 }
-.wrap_category_type {
+.wrap-category-type {
     padding-bottom: 12px;
 }
-.wrap_category_type .list_category {
+.wrap-category-type .list-category {
     overflow: hidden;
     padding: 25px 0 12px 26px;
     border: 1px solid #eaeaea;
@@ -48,7 +48,7 @@ ul,
 li {
     list-style: none;
 }
-.wrap_category_type .list_category li {
+.wrap-category-type .list-category li {
     float: left;
     padding-bottom: 14px;
     width: 179px;
@@ -58,41 +58,41 @@ li {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.wrap_category_type .list_category li a:hover,
-.wrap_category_type .list_category .on a {
+.wrap-category-type .list-category li a:hover,
+.wrap-category-type .list-category .on a {
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.wrap_category_type .list_category li a {
+.wrap-category-type .list-category li a {
     color: #444;
     line-height: 17px;
 }
 
-.wrap_board.board_interview {
+.wrap-board.board-interview {
     margin-top: 32px;
 }
-.wrap_board.board_interview .search_area {
+.wrap-board.board-interview .search-area {
     padding: 0;
 }
-.wrap_board .wrap_count {
+.wrap-board .wrap-count {
     display: inline-block;
     padding-top: 10px;
     color: #444;
     font-size: 14px;
     line-height: 20px;
 }
-.wrap_board.board_interview .search_right.sort {
+.wrap-board.board-interview .search-right.sort {
     gap: 0;
 }
-.wrap_board .search_right.sort {
+.wrap-board .search-right.sort {
     display: grid;
     grid-template-columns: auto auto;
     gap: 0 8px;
     grid-template-rows: auto;
 }
-.wrap_board .search_right {
+.wrap-board .search-right {
     float: right;
 }
 .searchTypoBox {
@@ -147,23 +147,23 @@ li {
     background: url(//www.saraminimage.co.kr/sri/common/ico/ico_search_btn_reset.png)
         no-repeat -2px -2px;
 }
-.wrap_board .search_area:after {
+.wrap-board .search-area:after {
     display: table;
     clear: both;
     content: "";
     table-layout: fixed;
 }
-.recruilt_list_wrap {
+.recruilt-list-wrap {
     margin-bottom: 40px;
 }
-.job_interview_list ul.wrap_list_interview {
+.job-interview-list ul.wrap-list-interview {
     width: 972px;
 }
-.job_interview_list ul {
+.job-interview-list ul {
     overflow: hidden;
     margin: -13px 0 0 -12px;
 }
-.job_interview_list li {
+.job-interview-list li {
     float: left;
     position: relative;
     margin: 12px 0 0 12px;
@@ -173,16 +173,16 @@ li {
     border: 1px solid #ebebeb;
     box-sizing: border-box;
 }
-.job_interview_list li .inlist_box {
+.job-interview-list li .inlist-box {
     display: block;
 }
-.job_interview_list .sub_title {
+.job-interview-list .sub-title {
     display: flex;
     margin-top: -2px;
     flex-flow: row wrap;
     justify-content: space-between;
 }
-.job_interview_list .in_subtit {
+.job-interview-list .in-subtit {
     display: inline-block;
     overflow: hidden;
     width: 73%;
@@ -194,7 +194,7 @@ li {
     white-space: nowrap;
     word-break: break-all;
 }
-.job_interview_list .flag_applying {
+.job-interview-list .flag-applying {
     display: inline-block;
     padding: 1px 2px;
     border: 1px solid #f76a6a;
@@ -203,20 +203,20 @@ li {
     font-size: 12px;
     vertical-align: top;
 }
-.job_interview_list .title {
+.job-interview-list .title {
     overflow: hidden;
     position: relative;
     padding-top: 31px;
     height: 60px;
 }
-.job_interview_list .title em {
+.job-interview-list .title em {
     color: #444;
     font-size: 20px;
     font-weight: bold;
     line-height: 31px;
     word-break: break-all;
 }
-.job_interview_list .title:after {
+.job-interview-list .title:after {
     display: block;
     position: absolute;
     top: 17px;
@@ -226,14 +226,14 @@ li {
     background: #222;
     content: "";
 }
-.job_interview_list .box_info {
+.job-interview-list .box-info {
     padding-top: 58px;
 }
-.job_interview_list .box_info .txt_detail {
+.job-interview-list .box-info .txt-detail {
     float: left;
     width: 140px;
 }
-.job_interview_list .box_info .company_name {
+.job-interview-list .box-info .company-name {
     overflow: hidden;
     padding-top: 6px;
     color: #666;
@@ -241,17 +241,17 @@ li {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.job_interview_list .box_info .company_part {
+.job-interview-list .box-info .company-part {
     padding-top: 3px;
     color: #888;
     font-size: 13px;
     line-height: 20px;
 }
-.job_interview_list .box_info .company_part .inpart {
+.job-interview-list .box-info .company-part .inpart {
     display: block;
     word-break: break-all;
 }
-.job_interview_list .box_info .company_part .inname {
+.job-interview-list .box-info .company-part .inname {
     display: block;
     overflow: hidden;
     width: 100%;
@@ -259,10 +259,10 @@ li {
     white-space: nowrap;
     word-break: break-all;
 }
-.job_interview_list .box_info .day_line {
+.job-interview-list .box-info .day-line {
     padding-top: 12px;
 }
-.day_line span.day:after {
+.day-line span.day:after {
     display: block;
     position: absolute;
     top: 5px;
@@ -272,17 +272,17 @@ li {
     background: #d1d1d1;
     content: "";
 }
-.job_interview_list .box_info .day_line span {
+.job-interview-list .box-info .day-line span {
     color: #888;
     font-size: 13px;
     vertical-align: top;
 }
-.day_line span.view_count {
+.day-line span.view-count {
     display: inline-block;
     position: relative;
     padding-left: 34px;
 }
-.day_line span.view_count:after {
+.day-line span.view-count:after {
     display: block;
     position: absolute;
     top: 4px;
@@ -293,30 +293,30 @@ li {
         0 no-repeat;
     content: "";
 }
-.job_interview_list .box_info .img_view {
+.job-interview-list .box-info .img-view {
     float: left;
     margin-left: 12px;
     width: 98px;
     height: 98px;
 }
-.job_interview_list .box_info .img_view .img {
+.job-interview-list .box-info .img-view .img {
     display: block;
     overflow: hidden;
     width: 98px;
     height: 98px;
     border-radius: 50%;
 }
-.job_interview_list .box_info .img_view .img img {
+.job-interview-list .box-info .img-view .img img {
     width: auto;
     height: 98px;
 }
-.job_interview_list .box_info:after {
+.job-interview-list .box-info:after {
     display: table;
     clear: both;
     content: "";
     table-layout: fixed;
 }
-.job_interview_list li:after {
+.job-interview-list li:after {
     display: table;
     clear: both;
     content: "";

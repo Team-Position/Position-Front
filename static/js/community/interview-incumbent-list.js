@@ -1,29 +1,29 @@
-const ulElement = document.querySelector(".wrap_list_interview");
+const ulElement = document.querySelector(".wrap-list-interview");
 
 for (let i = 0; i < 9; i++) {
     const liElement = document.createElement("li");
     liElement.innerHTML = `
-        <a class="inlist_box">
-            <p class="sub_title">
-                <span class="in_subtit">브랜딩, 브랜드마케팅, 마케팅</span>
-                <em class="flag_applying">채용중</em>
+        <a class="inlist-box">
+            <p class="sub-title">
+                <span class="in-subtit">브랜딩, 브랜드마케팅, 마케팅</span>
+                <em class="flag-applying">채용중</em>
             </p>
             <p class="title">
                 <em>브랜딩과 마케팅커뮤니케이션의 전반적인 업무를 총괄해요</em>
             </p>
-            <div class="box_info">
-                <div class="txt_detail">
-                    <p class="company_name">에스디생명공학</p>
-                    <p class="company_part">
+            <div class="box-info">
+                <div class="txt-detail">
+                    <p class="company-name">에스디생명공학</p>
+                    <p class="company-part">
                         <em class="inpart">마케팅팀</em>
                         <em class="inname">김리원</em>
                     </p>
-                    <p class="day_line">
+                    <p class="day-line">
                         <span class="day">24.09.20</span>
-                        <span class="view_count">1011</span>
+                        <span class="view-count">1011</span>
                     </p>
                 </div>
-                <div class="img_view">
+                <div class="img-view">
                     <span class="img">
                         <img src="https://pds.saramin.co.kr/career-information/asset_thumbnail/202409/20/sk3ns4_ffxp-2so1pr_asset.png" 
                         alt="직무인터뷰 관계자 사진" />
@@ -36,7 +36,7 @@ for (let i = 0; i < 9; i++) {
     ulElement.appendChild(liElement);
 }
 
-const categoryList = document.querySelector(".list_category");
+const categoryList = document.querySelector(".list-category");
 
 categoryList.addEventListener("click", (event) => {
     const clickedItem = event.target.closest("li");
@@ -97,7 +97,7 @@ const categories = [
     { name: "UI/UX", count: 100 },
 ];
 
-const ul = document.querySelector(".list_category");
+const ul = document.querySelector(".list-category");
 
 categories.forEach((category) => {
     const li = document.createElement("li");
@@ -106,7 +106,7 @@ categories.forEach((category) => {
     a.textContent = `${category.name} (${category.count})`;
     a.setAttribute(
         "onmousedown",
-        "try{n_trackEvent('public', 'job-interview', 'category', '');}catch(e){}"
+        "try{n-trackEvent('public', 'job-interview', 'category', '');}catch(e){}"
     );
 
     li.appendChild(a);

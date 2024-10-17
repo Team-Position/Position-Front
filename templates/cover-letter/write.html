@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자소서 작성</title>
+        <link rel="stylesheet" href="/static/css/main.css" />
+        <link rel="stylesheet" href="/static/css/cover-letter/write.css" />
+    </head>
+    <body>
+        <div id="next">
+            <div class="personlayout-wrapper">
+                <header></header>
+                <main class="personlayout-main">
+                    <div class="edit-edit">
+                        <div class="edit-edit-wrap">
+                            <div class="title-edit-title">
+                                <div class="title-edit-title-input-wrap">
+                                    <div
+                                        class="input-input input-size title-edit-title-input"
+                                    >
+                                        <input
+                                            type="text"
+                                            id=""
+                                            name=""
+                                            placeholder="제목을 입력해주세요."
+                                            autocomplete="off"
+                                            maxlength="25"
+                                            class="input-input-input"
+                                            value=""
+                                        />
+                                    </div>
+                                    <button
+                                        type="button"
+                                        class="button-button button-button-color-borderless button-button-size-s title-edit-title-delete"
+                                    >
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            class="button-button-icon button-button-icon-only"
+                                            aria-hidden="false"
+                                        >
+                                            <use xlink:href="#delete"></use>
+                                        </svg>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="button-button button-button-color-blue button-button-size-s"
+                                    >
+                                        확인
+                                    </button>
+                                </div>
+                                <div class="title-edit-title-tootip-wrap">
+                                    <button
+                                        type="button"
+                                        class="title-edit-title-tootip-btn"
+                                    >
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            aria-hidden="false"
+                                        >
+                                            <use
+                                                xlink:href="#information"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                    <div
+                                        class="tooltip-tooltip tooltip-nomal tooltip-tooltip-toright"
+                                    >
+                                        <span
+                                            class="tooltip-tooltip-tail"
+                                        ></span>
+                                        <div class="tooltip-tooltip-txt">
+                                            <div class="tooltip-tooltip-tit">
+                                                자기소개서 이름 관리
+                                            </div>
+                                            자기소개서 관리를 위한 이름을
+                                            설정해주세요. 설정한 이름은 향후<br />자기소개서를
+                                            수정하거나 조회할 때 필요합니다.
+                                            자기소개서 이름<br />은 본인만
+                                            확인할 수 있으며, 자유롭게 설정하실
+                                            수 있습니다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit-edit-questions">
+                                <div
+                                    class="questionitem-question-item questionitem-question-item-current"
+                                    id="0"
+                                    style="z-index: 15"
+                                >
+                                    <div
+                                        class="questionedit-question-edit questionedit-question-edit-expand"
+                                    >
+                                        <h3
+                                            class="questionedit-question-edit-title"
+                                        >
+                                            문항
+                                        </h3>
+                                        <input
+                                            type="checkbox"
+                                            class="questionedit-question-edit-check"
+                                            id="question-on-off"
+                                        />
+                                        <label
+                                            for="question-on-off"
+                                            class="questionedit-question-edit-label"
+                                            >* 문항을 끌 수 있습니다.</label
+                                        >
+                                        <div
+                                            class="input-input-2 input-input-size-i input-input-ea questioninput-question-edit-input"
+                                        >
+                                            <input
+                                                type="text"
+                                                name=""
+                                                id=""
+                                                placeholder="지원 동기, 입사 후 포부와 같은 문항을 입력해 주세요."
+                                                autocomplete="off"
+                                                maxlength="500"
+                                                class="input-input-input"
+                                                value=""
+                                            />
+                                        </div>
+                                        <button
+                                            type="button"
+                                            class="button-button button-button-color-ea button-button-size-i questionedit-question-btn"
+                                        >
+                                            문항 예시보기
+                                        </button>
+                                    </div>
+                                    <div class="contentedit-content-edit-wrap">
+                                        <h4
+                                            class="contentedit-content-edit-title"
+                                        >
+                                            내용
+                                        </h4>
+                                        <div class="contentedit-content-edit">
+                                            <textarea
+                                                class="contentedit-content-edit-content"
+                                                contenteditable="true"
+                                            ></textarea>
+                                            <span
+                                                class="contentedit-content-placeholder contentedit-content-placeholder-show"
+                                                >내용을 입력해주세요.</span
+                                            >
+                                        </div>
+                                        <div class="contentcount-content-count">
+                                            <span>0</span>
+                                            / 500자 (공백포함)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="utilitybar-utility-bar">
+                            <div class="utilitybar-utility-bar-wrap">
+                                <div class="utilitybar-utility-bar-export">
+                                    <button
+                                        type="button"
+                                        class="button-button button-button-color-borderless button-button-size-i"
+                                    >
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            class="button-button-icon"
+                                            aria-hidden="true"
+                                        >
+                                            <use xlink:href="#download"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="utilitybar-utility-bar-msg"></div>
+                                <button
+                                    type="button"
+                                    class="button-button button-button-color-blueinvert button-button-size-i button-button-round"
+                                >
+                                    자소서 중간저장
+                                </button>
+                                <button
+                                    type="button"
+                                    class="button-button button-button-color-blue button-button-size-i button-button-round"
+                                >
+                                    작성완료
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer></footer>
+            </div>
+        </div>
+    </body>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="position: absolute; width: 0; height: 0"
+        aria-hidden="true"
+        id="__SVG_SPRITE_NODE__"
+    >
+        <symbol
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            id="delete"
+        >
+            <g fill="none">
+                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                <path d="M9 9L15 15" stroke="white"></path>
+                <path d="M15 9L9 15" stroke="white"></path>
+            </g>
+        </symbol>
+        <symbol
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="none"
+            id="information"
+        >
+            <circle
+                cx="8"
+                cy="8"
+                r="7.4"
+                stroke="currentColor"
+                stroke-width="1.2"
+            ></circle>
+            <g fill="currentColor">
+                <path
+                    d="M8 6C8.552 6 9 5.552 9 5C9 4.4475 8.552 4 8 4C7.448 4 7 4.4475 7 5C7 5.552 7.448 6 8 6Z"
+                ></path>
+                <path
+                    d="M8.79462 7.9067C8.74841 7.50883 8.41027 7.2 8 7.2C7.55817 7.2 7.2 7.55817 7.2 8V11.6L7.20538 11.6933C7.25159 12.0912 7.58973 12.4 8 12.4C8.44183 12.4 8.8 12.0418 8.8 11.6V8L8.79462 7.9067Z"
+                ></path>
+            </g>
+        </symbol>
+    </svg>
+</html>

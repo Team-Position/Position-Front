@@ -4,14 +4,14 @@ const labels = document.querySelectorAll(".Lbl");
 labels.forEach((label) => {
     label.addEventListener("click", function () {
         // 각 폼을 숨기기
-        document.getElementById("sms_confirm_form").style.display = "none";
-        document.getElementById("email_confirm_form").style.display = "none";
+        document.getElementById("sms-confirm-form").style.display = "none";
+        document.getElementById("email-confirm-form").style.display = "none";
 
         // 클릭한 라벨에 따라 해당 폼만 보이기
-        if (label.getAttribute("for") === "confirm_sms") {
-            document.getElementById("sms_confirm_form").style.display = "block";
-        } else if (label.getAttribute("for") === "confirm_email") {
-            document.getElementById("email_confirm_form").style.display =
+        if (label.getAttribute("for") === "confirm-sms") {
+            document.getElementById("sms-confirm-form").style.display = "block";
+        } else if (label.getAttribute("for") === "confirm-email") {
+            document.getElementById("email-confirm-form").style.display =
                 "block";
         }
     });
@@ -20,7 +20,7 @@ labels.forEach((label) => {
 // 전화번호 유효성 검사
 document.getElementById("cell").addEventListener("input", function () {
     const cellInput = document.getElementById("cell");
-    const cellMessage = document.getElementById("cell_message");
+    const cellMessage = document.getElementById("cell-message");
 
     // 입력 값 가져오기
     const cellValue = cellInput.value.trim();
@@ -45,10 +45,10 @@ document.getElementById("cell").addEventListener("input", function () {
 });
 
 // // 인증번호 유효성 검사
-// document.getElementById("sms_code").addEventListener("input", function () {
-//     const smsCodeInput = document.getElementById("sms_code");
-//     const smsCodeMessage = document.getElementById("sms_code_message");
-//     const smsConfirmBtn = document.getElementById("sms_confirm_btn");
+// document.getElementById("sms-code").addEventListener("input", function () {
+//     const smsCodeInput = document.getElementById("sms-code");
+//     const smsCodeMessage = document.getElementById("sms-code-message");
+//     const smsConfirmBtn = document.getElementById("sms-confirm-btn");
 
 //     // 입력 값 가져오기
 //     const smsCodeValue = smsCodeInput.value.trim();
@@ -102,19 +102,19 @@ function validateInput(inputId, messageId, buttonId) {
 }
 
 // SMS 코드 유효성 검사
-document.getElementById("sms_code").addEventListener("input", function () {
-    validateInput("sms_code", "sms_code_message", "sms_confirm_btn");
+document.getElementById("sms-code").addEventListener("input", function () {
+    validateInput("sms-code", "sms-code-message", "sms-confirm-btn");
 });
 
 // 이메일 코드 유효성 검사
-document.getElementById("email_code").addEventListener("input", function () {
-    validateInput("email_code", "email_code_message", "email_confirm_btn");
+document.getElementById("email-code").addEventListener("input", function () {
+    validateInput("email-code", "email-code-message", "email-confirm-btn");
 });
 
 // 이메일 유효성 검사
 document.getElementById("email").addEventListener("input", function () {
     const emailInput = document.getElementById("email");
-    const emailMessage = document.getElementById("email_message");
+    const emailMessage = document.getElementById("email-message");
 
     // 입력 값 가져오기
     const emailValue = emailInput.value.trim();
@@ -141,27 +141,27 @@ const inpBoxes = document.querySelectorAll(".InpBox");
 
 inpBoxes.forEach((inpBox) => {
     inpBox.addEventListener("click", function () {
-        // social_check 클래스를 가진 모든 요소 선택
-        const socialChecks = document.querySelectorAll(".social_check");
+        // social-check 클래스를 가진 모든 요소 선택
+        const socialChecks = document.querySelectorAll(".social-check");
 
-        // 모든 social_check에서 .line_bottom 클래스 제거
+        // 모든 social-check에서 .line-bottom 클래스 제거
         socialChecks.forEach((socialCheck) => {
-            socialCheck.classList.remove("line_bottom");
+            socialCheck.classList.remove("line-bottom");
         });
 
         // 클릭된 라벨의 id 확인
         const label = this.querySelector("label");
-        if (label.getAttribute("for") === "confirm_email") {
-            // confirm_email 클릭 시 부모 social_check에 .line_bottom 추가
-            const socialCheck = label.closest(".social_check");
+        if (label.getAttribute("for") === "confirm-email") {
+            // confirm-email 클릭 시 부모 social-check에 .line-bottom 추가
+            const socialCheck = label.closest(".social-check");
             socialCheck.classList.remove("line");
-            socialCheck.classList.add("line_bottom");
-        } else if (label.getAttribute("for") === "confirm_sms") {
-            // confirm_sms 클릭 시 아래에 있는 social_check에 .line_bottom 추가
+            socialCheck.classList.add("line-bottom");
+        } else if (label.getAttribute("for") === "confirm-sms") {
+            // confirm-sms 클릭 시 아래에 있는 social-check에 .line-bottom 추가
             const nextSocialCheck =
                 socialChecks[
                     Array.from(socialChecks).indexOf(
-                        label.closest(".social_check")
+                        label.closest(".social-check")
                     ) + 1
                 ];
             if (nextSocialCheck) {

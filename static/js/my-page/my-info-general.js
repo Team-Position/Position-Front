@@ -1,7 +1,7 @@
 // 테스트 용
 // 비밀번호 틀리면 alert창으로 경고창 띄우기
 document
-    .querySelector(".BtnType.SizeL.btn_submit")
+    .querySelector(".BtnType.SizeL.btn-submit")
     .addEventListener("click", function () {
         // HTML에서 아이디와 비밀번호 가져오기
         const username = document.querySelector(".usrid").textContent.trim();

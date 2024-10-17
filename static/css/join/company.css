@@ -1218,3 +1218,113 @@ button {
     background-color: transparent;
 }
 
+.write_base .item .alert_column.focus_txt {
+    color: #5c667b;
+}
+
+.sri_check .txt_check {
+    display: block;
+    padding: 0 7px 0 29px;
+    height: 18px;
+    color: #444;
+    font-size: 13px;
+    line-height: 15px;
+    background: url(//www.saraminimage.co.kr/ui/form/ico_checkbox.png) 0 0 no-repeat;
+}
+
+.sri_radio.small .txt_check {
+    background-position: 0 -299px;
+}
+
+.sri_radio.small.check_on .txt_check {
+    background-position: 0 -349px;
+}
+
+.sri_check.small.check_on .txt_check {
+    background-position: 0 -149px;
+}
+
+.list_job_check {
+    padding: 14px 30px;
+    min-height: 78px;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.list_job_check .item_check {
+    line-height: 24px;
+}
+
+.list_job_check .item_check .btn_delete {
+    width: 13px;
+    height: 13px;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background: url(//www.saraminimage.co.kr/sri/person/btn/btn_close.png) 0 0 no-repeat;
+}
+
+.layer_pop_manage .bottom_btn_wrap {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.layer_pop_manage .bottom_btn_wrap button:first-child, .layer_pop_manage .bottom_btn_wrap a:first-child {
+    margin-left: 0;
+}
+
+.btn_basic_type05 {
+    display: inline-block;
+    padding: 5px 13px 9px;
+    height: 32px;
+    border: 1px solid #5f75eb;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 13px;
+    vertical-align: top;
+    background-color: #6b80f1;
+}
+
+.btn_basic_type01 {
+    display: inline-block;
+    padding: 5px 13px 9px;
+    height: 32px;
+    border: 1px solid #ababab;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+.btn_basic_type03 {
+    display: inline-block;
+    padding: 5px 13px 9px;
+    height: 32px;
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    line-height: normal;
+    vertical-align: top;
+    background-color: #f8f8f8;
+}
+
+.layer_pop_manage .btn_layer_close span {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -100%;
+    white-space: nowrap;
+}
+
+.layer_pop_manage .btn_layer_close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 17px;
+    height: 17px;
+    border: 0 none;
+    background: url(//www.saraminimage.co.kr/ui/layout/person_mypage_2017/btn_layer_close.png) no-repeat 50% 50%;
+}

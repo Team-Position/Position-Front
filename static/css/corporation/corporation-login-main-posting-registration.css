@@ -660,7 +660,7 @@ ol, ul, li {
     left: 0;
     width: 16px;
     height: 16px;
-    background-image: url(http://www.saraminimage.co.kr/sri/recruit/icon_location.png);
+    background-image: url(/static/images/corporation/icon_location.png);
     background-size: cover;
     transform: translateY(-50%);
     content: "";
@@ -675,7 +675,7 @@ ol, ul, li {
     left: 0;
     width: 16px;
     height: 16px;
-    background-image: url(http://www.saraminimage.co.kr/sri/recruit/icon_career.png);
+    background-image: url(/static/images/corporation/icon_career.png);
     background-size: cover;
     transform: translateY(-50%);
     content: "";
@@ -687,7 +687,7 @@ ol, ul, li {
     left: 0;
     width: 16px;
     height: 16px;
-    background-image: url(http://www.saraminimage.co.kr/sri/recruit/icon_education.png);
+    background-image: url(/static/images/corporation/icon_education.png);
     background-size: cover;
     transform: translateY(-50%);
     content: "";
@@ -757,10 +757,13 @@ ol, ul, li {
     justify-content: center;
 }
 .PageBox span.BtnType {
+    margin: 0px 2px;
+}
+.PageBox span.BtnType.SizeS.active {
     border: 1px solid var(--gray60);
     font-weight: bold;
-    margin: 0px 3px;
 }
+
 .PageBox .BtnType {
     display: flex;
     position: relative;
@@ -831,4 +834,45 @@ ol, ul, li {
     margin-top: 5px;
     color: var(--gray80);
     font-size: 13px;
+}
+.PageBox .BtnPrev {
+    margin-left: 0;
+    margin-right: 16px;
+    padding: 0 7px 0 20px;
+    width: 54px;
+}
+.PageBox .BtnPrev:after {
+    left: 14px;
+    border-width: 0 0 1px 1px;
+}
+.PageBox .BtnPrev:after, .PageBox .BtnNext:after {
+    position: absolute;
+    top: calc(50% + 1px);
+    z-index: 2;
+    width: 6px;
+    height: 6px;
+    top: 16px;
+    border: solid var(--gray80);
+    transform: translate(-50%, -50%) rotate(45deg);
+    content: "";
+    border-width: 0 0 1px 1px;
+}
+.PageBox .BtnPrev:hover, .PageBox .BtnNext:hover {
+    color: var(--gray100);
+}
+.PageBox .BtnType:hover {
+    background: var(--gray30);
+}
+.PageBox .BtnType+.BtnNext {
+    margin-left: 7px;
+}
+.PageBox .BtnNext:after {
+    right: 6px;
+    border-width: 1px 1px 0 0;
+}
+.PageBox .BtnNext {
+    margin-left: 0;
+    margin-right: 16px;
+    padding: 0 7px 0 0px;
+    width: 54px;
 }

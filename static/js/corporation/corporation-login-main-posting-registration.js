@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (loadingDiv) {
                     loadingDiv.style.display = "block";
 
-                    // 공고 데이터 불러오는 시간 시뮬레이션 (2초)
+                    // 공고 데이터 불러오는 시간 시뮬레이션 ()
                     setTimeout(() => {
                         loadingDiv.style.display = "none";
-                    }, 1000);
+                    }, 300);
                 }
             }
         });

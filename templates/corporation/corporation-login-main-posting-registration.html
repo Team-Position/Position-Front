@@ -70,7 +70,7 @@
                                 <nav class="company_navi">
                                     <ul class="menu_list">
                                         <!-- li가 selected되면 -->
-                                        <li class="menu_item selected">
+                                        <li class="menu_item">
                                             <button
                                                 type="button"
                                                 class="btn_menu ga_data_layer"
@@ -84,7 +84,7 @@
                                                 기업소개
                                             </button>
                                         </li>
-                                        <li class="menu_item">
+                                        <li class="menu_item selected">
                                             <button
                                                 type="button"
                                                 class="btn_menu"
@@ -322,7 +322,8 @@
                                                         data-tab="all"
                                                         onmousedown="try {dataLayer.push({'event': 'ga_lead', 'category': 'company_view', 'event-flow': 'jobs_rec', 'event-label': 'all'});} catch (e) {}"
                                                     >
-                                                        전체<span class="Badge"
+                                                        진행 중<span
+                                                            class="Badge"
                                                             >3</span
                                                         >
                                                     </button>
@@ -334,7 +335,7 @@
                                                         data-tab="carrer"
                                                         onmousedown="try {dataLayer.push({'event': 'ga_lead', 'category': 'company_view', 'event-flow': 'jobs_rec', 'event-label': 'experience'});} catch (e) {}"
                                                     >
-                                                        경력<span class="Badge"
+                                                        마감<span class="Badge"
                                                             >3</span
                                                         >
                                                     </button>

@@ -1,3 +1,50 @@
+// 스킬
+// 요소의 display 스타일을 변경하는 함수
+const setDisplay = (element, display) => {
+    if (element) element.style.display = display;
+};
+
+// 버튼 클릭 핸들러
+const handleButtonClick = (event) => {
+    const clickedButton = event.currentTarget; // 클릭된 버튼
+    const parentContainer = clickedButton.closest(".resume_skill"); // 부모 컨테이너 탐색
+
+    // 각 요소를 부모 컨테이너 내에서 찾기
+    setDisplay(clickedButton, "none"); // 클릭된 버튼 숨김
+    setDisplay(parentContainer.querySelector(".TipBox"), "block"); // TipBox 표시
+    setDisplay(parentContainer.querySelector(".resume_list"), "none"); // resume_list 숨김
+    setDisplay(
+        parentContainer.querySelector(".resume_edit.wrapHiddenForm"),
+        "block"
+    ); // resume_edit 표시
+};
+// 삭제 버튼 클릭 핸들러
+const handleDeleteButtonClick = (event) => {
+    const clickedButton = event.currentTarget; // 클릭된 삭제 버튼
+    const parentContainer = clickedButton.closest(".resume_skill"); // 부모 컨테이너 탐색
+
+    // 부모 컨테이너 내 요소의 display 스타일 복구
+    setDisplay(parentContainer.querySelector(".btn_add.evtWriteItem"), "block"); // 추가 버튼 표시
+    setDisplay(parentContainer.querySelector(".TipBox"), "none"); // TipBox 숨김
+    setDisplay(parentContainer.querySelector(".resume_list"), "block"); // resume_list 표시
+    setDisplay(
+        parentContainer.querySelector(".resume_edit.wrapHiddenForm"),
+        "none"
+    ); // resume_edit 숨김
+};
+
+// 모든 삭제 버튼에 이벤트 리스너 등록
+document
+    .querySelectorAll(".BtnType.SizeL.BlueInvert.evtLayerClose.w50")
+    .forEach((button) => {
+        button.addEventListener("click", handleDeleteButtonClick);
+    });
+
+// 모든 버튼에 이벤트 리스너 등록
+document.querySelectorAll(".btn_add.evtWriteItem").forEach((button) => {
+    button.addEventListener("click", handleButtonClick);
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     // 프라이버시 보기 버튼 선택
     const showPrivacyButton = document.querySelector(".showPrivacy");
@@ -50,6 +97,8 @@ const addButton = document.querySelector(".btn_add.evtWriteItem");
 const modifyElement = document.querySelector(
     ".btn_modify.evtOpenLastSchoolNudge"
 );
+const evtEditItem = document.querySelector(".BtnType.view_modify.evtEditItem");
+
 const resumeList = document.querySelector(".resume_list");
 const app = document.getElementById("app");
 
@@ -947,6 +996,16 @@ addButton.addEventListener("click", () => {
     resumeList.style.display = "none";
     showView("A"); // View A 표시
 });
+
+// 수정 버튼 클릭시
+evtEditItem.addEventListener("click", () => {
+    addButton.style.display = "none";
+    modifyElement.style.display = "none";
+    resumeList.style.display = "none";
+    // 사용자가 전에 입력했던 거 가져와야 함
+    showView("C"); // View A 표시
+});
+
 // 1. Typo SizeL input 요소들에 실시간 입력 이벤트 위임
 document.addEventListener("input", (event) => {
     if (event.target.matches("input.Typo.SizeL.check")) {

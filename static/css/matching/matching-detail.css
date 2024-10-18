@@ -1,0 +1,669 @@
+/* main */
+#sri_header.simple ~ #srch_wrap,
+#sri_header.simple.fixed ~ #srch_wrap {
+    height: 72px;
+}
+#sri_header ~ #srch_wrap {
+    height: 96px;
+}
+#sri_header.simple ~ #sri_section {
+    margin-top: 0;
+}
+#sri_header.simple ~ #srch_wrap .quick-search,
+#sri_header.simple.fixed ~ #srch_wrap .quick-search {
+    top: 59px;
+}
+
+#sri_section {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#sri_wrap {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+}
+#content {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 39px 0 40px;
+    width: 100%;
+    min-height: 2000px;
+    background: #f1f3f9;
+}
+#content {
+    position: relative;
+    z-index: 1;
+    margin: 56px auto 80px auto;
+    /* width: 960px; */
+}
+.wrap_jview {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding-right: 300px;
+    width: 960px;
+}
+.jview {
+    position: relative;
+    /* background-color: #fff; */
+}
+.jview > .wrap_jv_cont {
+    position: relative;
+    padding: 40px 44px 100px;
+    border: 1px solid #e5e6eb;
+    background: #fff;
+}
+/* header */
+.wrap_jv_header {
+    padding-bottom: 30px;
+    min-height: 75px;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+.jv_header {
+    position: relative;
+    padding-right: 270px;
+    color: #222;
+    min-height: 74px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+.jv_header .title_inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 28px;
+}
+.jv_header .company {
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 8px;
+    padding-right: 2px;
+    max-width: 380px;
+    height: 28px;
+    color: #222;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.jview .title_inner .btn_jview {
+    border-color: #e4e4e4;
+}
+.jview .btn_interest {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.jview .btn_jview {
+    display: inline-block;
+    padding: 0 9px 3px;
+    height: 28px;
+    border: 1px solid #8491a7;
+    box-sizing: border-box;
+    font-size: 0;
+    vertical-align: top;
+    background-color: #fff;
+}
+.jview .btn_interest svg {
+    margin-right: 2px;
+}
+.jv_header .tit_job {
+    flex: 0 0 100%;
+    margin-top: 4px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 39px;
+}
+.jv_header .btn_scrap {
+    position: absolute;
+    top: 14px;
+    right: 195px;
+}
+.jview .btn_scrap {
+    display: block;
+    padding: 11px 0 7px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #8491a7;
+}
+.jview .btn_scrap .txt_scrap {
+    display: block;
+    padding-top: 24px;
+    width: 100%;
+    height: 100%;
+    color: #5c667b;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 14px;
+}
+.jview .btn_scrap .txt_scrap:before {
+    position: absolute;
+    left: 50%;
+    top: 11px;
+    margin-left: -10px;
+    width: 19px;
+    height: 19px;
+    background-position: -60px 0;
+}
+.btn_scrap .txt_scrap:before {
+    display: inline-block;
+    vertical-align: top;
+    background: url(//www.saraminimage.co.kr/sri/common/spr/spr_scrap.png)
+        no-repeat 0 0;
+    content: "";
+}
+.jv_header .btn_apply {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 185px;
+    text-align: center;
+}
+.jv_header .btn_apply .dday {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding: 0 8px;
+    height: 21px;
+    border: 1px solid #ff6d6a;
+    border-radius: 21px;
+    color: #d63131;
+    font-size: 12px;
+    line-height: 18px;
+    background: #fff;
+}
+.jv_header .btn_apply .sri_btn_lg {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+}
+.jview .sri_btn_lg {
+    display: block;
+    width: 185px;
+}
+.sri_btn_lg {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 212px;
+    height: 60px;
+    border: 0;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+}
+.jv_header .btn_apply .sri_btn_lg span.sri_btn_recruitin_apply,
+.jv_howto .cont.box .sri_btn_lg span.sri_btn_recruitin_apply,
+.jv_header .btn_apply .sri_btn_lg span.sri_btn_immediately,
+.jv_howto .cont.box .sri_btn_lg span.sri_btn_immediately {
+    border: 1px solid #ff5656;
+    color: #fff;
+    background: #ff5656;
+}
+.jv_header .btn_apply .sri_btn_lg span,
+.jv_howto .cont.box .sri_btn_lg span {
+    border: 1px solid #8491a7;
+    color: #666;
+    background: #fff;
+}
+.jview .sri_btn_lg span {
+    width: 183px;
+}
+.sri_btn_lg span.sri_btn_immediately,
+.sri_btn_lg span.sri_btn_recruitin_apply {
+    position: relative;
+    border: 1px solid var(--coral110);
+    color: var(--coral110);
+}
+.sri_btn_lg span {
+    display: inline-block;
+    width: 210px;
+    height: 58px;
+    border: 1px solid var(--gray80);
+    color: var(--gray100);
+    font-size: 20px !important;
+    font-weight: bold;
+    line-height: 54px;
+    background: var(--white);
+}
+
+.jview .title_inner .btn_jview {
+    border-color: #e4e4e4;
+}
+.jview .btn_interest {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.jview .btn_jview {
+    display: inline-block;
+    padding: 0 9px 3px;
+    height: 28px;
+    border: 1px solid #8491a7;
+    box-sizing: border-box;
+    font-size: 0;
+    vertical-align: top;
+    background-color: #fff;
+}
+.jview .btn_interest svg {
+    margin-right: 2px;
+}
+.jview .btn_jview span {
+    color: var(--color_secondary);
+    font-size: 13px;
+    font-weight: normal;
+}
+.jview .sri_btn_lg span {
+    width: 183px;
+}
+/* summary */
+.wrap_jv_header + .jv_cont {
+    margin-top: 0;
+}
+.jv_cont {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+}
+.jv_cont > .cont {
+    position: relative;
+}
+.jv_summary .col {
+    float: left;
+    padding: 24px 0;
+    width: 420px;
+    border-top: 1px solid #e5e6eb;
+    font-size: 14px;
+}
+.jv_summary .col > dl:first-child {
+    margin-top: 0;
+}
+.jv_summary .col > dl {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    margin-top: 5px;
+    min-height: 24px;
+}
+.jv_summary .col > dl > dt {
+    width: 86px;
+    color: #5c667b;
+    line-height: 24px;
+}
+.jv_summary .col > dl > dd {
+    width: calc(100% - 86px);
+    color: #373f57;
+    line-height: 24px;
+}
+.jv_summary .col > dl > dd strong {
+    color: #2d65f2;
+    font-weight: normal;
+}
+.jv_summary .col > dl > dd {
+    width: calc(100% - 86px);
+    color: #373f57;
+    line-height: 24px;
+}
+.jv_summary .col > dl > dd .etc {
+    color: #888;
+    font-size: 13px;
+}
+.jv_summary .col + .col {
+    margin-left: 30px;
+}
+.jv_summary .col {
+    float: left;
+    padding: 24px 0;
+    width: 420px;
+    border-top: 1px solid #e5e6eb;
+    font-size: 14px;
+}
+.jv_summary .col > dl:first-child {
+    margin-top: 0;
+}
+.jv_summary .col > dl {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    margin-top: 5px;
+    min-height: 24px;
+}
+.jv_summary .col > dl > dt {
+    width: 86px;
+    color: #5c667b;
+    line-height: 24px;
+}
+.jv_summary .col > dl > dd {
+    width: calc(100% - 86px);
+    color: #373f57;
+    line-height: 24px;
+}
+.jv_summary .meta {
+    clear: both;
+    position: relative;
+    padding-top: 12px;
+    border-top: 1px solid #e5e6eb;
+    font-size: 0;
+    line-height: 18px;
+    text-align: right;
+}
+.jv_summary .meta:before {
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 420px;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+    content: "";
+}
+.jv_summary .meta .salary_desc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+}
+.jv_summary .meta .salary_desc strong {
+    color: var(--common_blue90);
+    font-weight: normal;
+}
+.jv_summary .meta .list_meta {
+    margin-top: 8px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.jv_summary .meta .list_meta > li {
+    position: relative;
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+}
+.jv_summary .meta .list_meta > li strong {
+    color: #666;
+    font-weight: bold;
+}
+.jv_summary .meta .list_meta > li + li {
+    margin-left: 8px;
+    padding-left: 10px;
+}
+.jv_summary .meta .list_meta > li {
+    position: relative;
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+}
+.jv_summary .meta .list_meta > li + li:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    width: 2px;
+    height: 2px;
+    background: #bebfc3;
+    content: "";
+}
+.jv_summary .meta .share {
+    margin-left: 0;
+    vertical-align: top;
+}
+.jv_summary .meta .share .btn_share {
+    padding: 0;
+    height: 18px;
+    border: 0;
+    color: #666;
+}
+.jview .btn_jview {
+    display: inline-block;
+    padding: 0 9px 3px;
+    height: 28px;
+    border: 1px solid #8491a7;
+    box-sizing: border-box;
+    font-size: 0;
+    vertical-align: top;
+    background-color: #fff;
+}
+.jview .btn_share .ic {
+    margin-right: 5px;
+    width: 12px;
+    height: 13px;
+    vertical-align: -1px;
+}
+.jv_summary .meta .share .list_share {
+    top: 28px;
+}
+.jview .share .list_share {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    margin-left: -62px;
+    padding: 2px;
+    width: 123px;
+    height: 30px;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+.jview .share .list_share li:first-child {
+    border-left: 0;
+}
+.jview .share .list_share li {
+    float: left;
+    border-left: 1px solid #eee;
+}
+.jview .share .list_share .spr_jview {
+    display: block;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+.jv_summary .meta .list_meta > li + li {
+    margin-left: 8px;
+    padding-left: 10px;
+}
+.jv_summary .meta .list_meta > li {
+    position: relative;
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+}
+.jv_summary .meta .list_meta > li + li:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    width: 2px;
+    height: 2px;
+    background: #bebfc3;
+    content: "";
+}
+.jv_summary .meta .btn_report {
+    color: #666;
+}
+.jview .btn_report .ic {
+    margin-right: 5px;
+    width: 12px;
+    height: 13px;
+    vertical-align: -1px;
+}
+.toolTipWrap {
+    display: inline-block;
+    position: relative;
+}
+.jv_summary .col .btn_tooltip {
+    padding: 0;
+    font-size: 12px;
+    height: 24px;
+}
+.jv_summary .col .btn_jview {
+    padding: 0 8px 3px;
+    height: 23px;
+    border: 0;
+}
+.jview .btn_jview {
+    display: inline-block;
+    padding: 0 9px 3px;
+    height: 28px;
+    border: 1px solid #8491a7;
+    box-sizing: border-box;
+    font-size: 0;
+    vertical-align: top;
+    background-color: #fff;
+}
+.jv_summary .col .btn_jview span {
+    color: #666;
+    font-size: 12px;
+}
+.jview .btn_jview span {
+    color: var(--color_secondary);
+    font-size: 13px;
+    font-weight: normal;
+}
+.jv_summary .col .btn_jview span {
+    color: #666;
+    font-size: 12px;
+}
+.jview .btn_jview span {
+    color: var(--color_secondary);
+    font-size: 13px;
+    font-weight: normal;
+}
+.jv_summary .col .btn_tooltip .ic {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3px;
+}
+.jv_summary .col .btn_move_map {
+    margin-left: 13px;
+    padding: 0;
+    height: 24px;
+    text-decoration: underline;
+}
+.toolTip {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    padding: 18px 22px 20px 22px;
+    min-width: 33px;
+    border: 1px solid #444;
+    border-radius: 2px;
+    color: #222;
+    font-size: 13px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px #d8d8d8;
+}
+.jv_summary .toolTip {
+    margin: 10px 0 0 -118px;
+    width: 262px;
+}
+.jv_summary .preferred .toolTip {
+    margin: 10px 0 0 0;
+}
+.jview .toolTipWrap.opened .toolTip {
+    display: block;
+}
+.toolTip .tail.tail_top_left {
+    top: -7px;
+    left: 25px;
+    width: 11px;
+    height: 7px;
+    background-position: 0 -7px;
+}
+.toolTip .tail {
+    position: absolute;
+    background: url(//www.saraminimage.co.kr/sri/common/tooltip_tail.png)
+        no-repeat;
+}
+.jview .toolTip .toolTipCont {
+    font-size: 12px;
+}
+.toolTip .toolTipCont.txtLeft {
+    text-align: left;
+}
+.toolTip .toolTipCont {
+    line-height: 20px;
+}
+.toolTip .toolTipCont .toolTipTxt {
+    margin-right: 12px;
+}
+.jview .toolTip ul {
+    display: block;
+    font-size: 12px;
+}
+.jview .toolTip ul > li:first-child {
+    margin-top: 0;
+}
+.jview .toolTip ul > li {
+    position: relative;
+    margin-top: 6px;
+    padding-left: 66px;
+    min-height: 20px;
+    color: #444;
+    line-height: 20px;
+}
+.jview .toolTip ul > li > span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 66px;
+    color: #5c667b;
+    line-height: 20px;
+}
+.jview .toolTip .txt_noti {
+    margin-top: 10px;
+    padding: 8px 15px 10px;
+    color: #5c667b;
+    font-size: 11px;
+    line-height: 17px;
+    background-color: #f9f9f9;
+}
+.jview .toolTip .toolTipTit,
+.jview .toolTip p {
+    color: #666;
+    word-break: break-all;
+}
+.toolTip .btnClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 15px 10px 10px;
+    border: 0;
+    background: none;
+}
+.toolTip .btnClose:after {
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url(//www.saraminimage.co.kr/ui/layer/button/spr_lefttop_arrow.png)
+        0 0 no-repeat;
+    content: "";
+}
+.spr_jview:before,
+.spr_jview:after {
+    display: inline-block;
+    vertical-align: top;
+    background: url(//www.saraminimage.co.kr/sri/person/jobs_view/spr_jview_220126.png)
+        no-repeat;
+}

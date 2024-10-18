@@ -217,6 +217,7 @@
                                     <!-- 학력 구분 선택 -->
                                     <div id="app"></div>
                                 </section>
+                                <!-- 스킬 -->
                                 <section id="skill" class="resume_skill">
                                     <div class="resume_tit">
                                         <div class="box_tit">
@@ -278,16 +279,523 @@
                                                         type="button"
                                                         class="skill_item skill_hide_add evtEditItem"
                                                         value="resumeSkill_1729145317370"
-                                                        onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'resume_PC','event-flow': 'skill','event-label': 'skill_induce_3'});}catch(e){}"
                                                     >
                                                         숨겨진 내 스킬 추가
                                                     </button>
                                                 </div>
                                             </div>
+                                            <div class="contents_edit">
+                                                <button
+                                                    type="button"
+                                                    value="resumeSkill_1729145317370"
+                                                    class="BtnType view_modify evtEditItem"
+                                                    id="skill-update-btn"
+                                                >
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="#view_modify"
+                                                        ></use>
+                                                    </svg>
+                                                    <span class="blind"
+                                                        >수정하기</span
+                                                    >
+                                                </button>
+                                            </div>
                                         </li>
                                     </ul>
+                                    <div
+                                        id="resumeSkill_1729145317370"
+                                        class="resume_edit wrapHiddenForm"
+                                        style="display: none"
+                                    >
+                                        <div class="item_row item_center">
+                                            <div
+                                                class="TypoBox TypeBtn item_full"
+                                            >
+                                                <label
+                                                    class="blind"
+                                                    for="searchSkill"
+                                                    >툴/직무역량/소프트스킬을
+                                                    입력해주세요</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    name="search_skill"
+                                                    id="searchSkill"
+                                                    class="Typo SizeL autoCompleteIng"
+                                                    placeholder="툴/직무역량/소프트스킬을 입력해주세요"
+                                                    maxlength="45"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    class="btn_delete autoCompleteUi"
+                                                    style="display: none"
+                                                >
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="#search_delete"
+                                                        ></use>
+                                                    </svg>
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn_search autoCompleteUi"
+                                                    disabled=""
+                                                    tabindex="-1"
+                                                    style=""
+                                                >
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="#search_btn"
+                                                        ></use>
+                                                    </svg>
+                                                </button>
+                                                <div
+                                                    class="area_auto_search company_search autoCompleteList autoCompleteUi"
+                                                >
+                                                    <div
+                                                        class="auto_search area_scroll"
+                                                    >
+                                                        <ul
+                                                            class="list_auto_search"
+                                                        >
+                                                            <li
+                                                                class="area_link"
+                                                            >
+                                                                <div
+                                                                    class="InpBox"
+                                                                >
+                                                                    <span
+                                                                        class="Chk"
+                                                                    >
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            id="skillAutoComplete1"
+                                                                            name="autocomplete_skill_cd[]"
+                                                                            class="evtReturnAutoComplete"
+                                                                            value="1"
+                                                                        />
+                                                                        <label
+                                                                            class="Lbl"
+                                                                            for="skillAutoComplete1"
+                                                                        >
+                                                                            <span
+                                                                                class="keyword"
+                                                                                ><strong
+                                                                                    >야</strong
+                                                                                >구</span
+                                                                            >
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li
+                                                                class="area_link"
+                                                            >
+                                                                <div
+                                                                    class="InpBox"
+                                                                >
+                                                                    <span
+                                                                        class="Chk"
+                                                                    >
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            id="skillAutoComplete2"
+                                                                            name="autocomplete_skill_cd[]"
+                                                                            class="evtReturnAutoComplete"
+                                                                            value="2"
+                                                                        />
+                                                                        <label
+                                                                            class="Lbl"
+                                                                            for="skillAutoComplete2"
+                                                                        >
+                                                                            <span
+                                                                                class="keyword"
+                                                                                >축구</span
+                                                                            >
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li
+                                                                class="area_link"
+                                                            >
+                                                                <div
+                                                                    class="InpBox"
+                                                                >
+                                                                    <span
+                                                                        class="Chk"
+                                                                    >
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            id="skillAutoComplete3"
+                                                                            name="autocomplete_skill_cd[]"
+                                                                            class="evtReturnAutoComplete"
+                                                                            value="3"
+                                                                        />
+                                                                        <label
+                                                                            class="Lbl"
+                                                                            for="skillAutoComplete3"
+                                                                        >
+                                                                            <span
+                                                                                class="keyword"
+                                                                                >자바</span
+                                                                            >
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li
+                                                                class="area_link"
+                                                            >
+                                                                <div
+                                                                    class="InpBox"
+                                                                >
+                                                                    <span
+                                                                        class="Chk"
+                                                                    >
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            id="skillAutoComplete4"
+                                                                            name="autocomplete_skill_cd[]"
+                                                                            class="evtReturnAutoComplete"
+                                                                            value="4"
+                                                                        />
+                                                                        <label
+                                                                            class="Lbl"
+                                                                            for="skillAutoComplete4"
+                                                                        >
+                                                                            <span
+                                                                                class="keyword"
+                                                                                >HTML</span
+                                                                            >
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="box_tit wrapBasicSkill"
+                                            style=""
+                                        >
+                                            <h5 class="tit_sub basicSkill">
+                                                나의 스킬
+                                            </h5>
+                                            <div
+                                                class="progress_circle induceSkill"
+                                                style=""
+                                            >
+                                                <svg class="svg">
+                                                    <circle
+                                                        r="6"
+                                                        cx="8"
+                                                        cy="8"
+                                                        class="border"
+                                                    ></circle>
+                                                    <circle
+                                                        r="6"
+                                                        cx="8"
+                                                        cy="8"
+                                                        class="progress"
+                                                    ></circle>
+                                                    <circle
+                                                        r="6"
+                                                        cx="8"
+                                                        cy="8"
+                                                        class="progress_second"
+                                                    ></circle>
+                                                </svg>
+                                            </div>
+                                            <div
+                                                class="txt induceSkill"
+                                                style=""
+                                            >
+                                                <em>5</em>개 스킬을 선택하면
+                                                <strong>합격할 확률</strong>이
+                                                높아져요
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="skill_box soft_add basicSkill"
+                                            style=""
+                                        >
+                                            <span
+                                                class="skill_item basicSkillItem"
+                                            >
+                                                <button
+                                                    type="button"
+                                                    class="skill_modify evtLayerSkillItemDetail"
+                                                >
+                                                    <em class="skillNm"
+                                                        >야구</em
+                                                    >
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="#view_modify"
+                                                        ></use>
+                                                    </svg>
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="skill_delete evtDeleteSkillItem"
+                                                >
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="#resume_skill_close"
+                                                        ></use>
+                                                    </svg>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <div class="resume_save notCached">
+                                            <button
+                                                type="button"
+                                                class="BtnType SizeL BlueInvert evtLayerClose w50"
+                                                id="skill-close-btn"
+                                            >
+                                                취소</button
+                                            ><button
+                                                type="button"
+                                                class="BtnType SizeL evtLayerSave w50"
+                                            >
+                                                저장
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="open_status" class="resume_open">
+                                    <div class="offer_setting">
+                                        <h2 class="tit_setting">
+                                            기업으로부터 제안을 받으시겠어요?
+                                        </h2>
+                                        <p
+                                            class="txt_setting resume_contact_close"
+                                        >
+                                            <strong
+                                                >기업 또는 사람인 리크루터 >에게
+                                                먼저 포지션 제안을 받고
+                                                있어요.</strong
+                                            >
+                                        </p>
+                                        <ul class="resume_open_option">
+                                            <li>
+                                                <div class="InpBox Bg White">
+                                                    <span class="Rdo">
+                                                        <input
+                                                            type="radio"
+                                                            id="openStatusActive"
+                                                            name="open_status"
+                                                            value="active"
+                                                            class="inp_check"
+                                                        />
+                                                        <label
+                                                            class="Lbl"
+                                                            for="openStatusActive"
+                                                        >
+                                                            적극 구직
+                                                            중이에요<br /><span
+                                                                >제안
+                                                                받을래요</span
+                                                            >
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="InpBox Bg White">
+                                                    <span class="Rdo">
+                                                        <input
+                                                            type="radio"
+                                                            id="openStatusRecomnd"
+                                                            name="open_status"
+                                                            value="recomnd"
+                                                            class="inp_check"
+                                                        />
+                                                        <label
+                                                            class="Lbl"
+                                                            for="openStatusRecomnd"
+                                                        >
+                                                            좋은 포지션이 있다면
+                                                            <br /><span
+                                                                >제안
+                                                                받을래요</span
+                                                            >
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="InpBox Bg White">
+                                                    <span class="Rdo">
+                                                        <input
+                                                            type="radio"
+                                                            id="openStatusClose"
+                                                            name="open_status"
+                                                            value="close"
+                                                            class="inp_check"
+                                                        />
+                                                        <label
+                                                            class="Lbl"
+                                                            for="openStatusClose"
+                                                        >
+                                                            제안 받지
+                                                            않을래요<br /><br />
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="tooltip_area">
+                                            <button type="button">
+                                                <svg>
+                                                    <use
+                                                        xlink:href="#svg_info"
+                                                    ></use>
+                                                </svg>
+                                                <span
+                                                    >수락 전까지 회원님의
+                                                    연락처가 공개되지 않으니
+                                                    안심하세요.</span
+                                                >
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="resume_open_notice">
+                                        <ul class="list_square">
+                                            <li>
+                                                현 직장 및 특정 기업을 열람 제한
+                                                기업으로 설정하실 수 있습니다.
+                                            </li>
+                                            <li>
+                                                개인정보 도용 방지를 위해서
+                                                휴대폰 및 이메일은 인증완료 후
+                                                제안 받으실 수 있습니다.
+                                            </li>
+                                            <li class="cell_open_notice">
+                                                포지션 제안 설정 및 이력서에
+                                                등록한 연락처로 제안 드립니다.
+                                            </li>
+                                            <li>
+                                                제안 내용과 다른 업무로 유도
+                                                또는 근무장소 외 장소로 면접
+                                                유도 등의 구직자 대상 범죄에
+                                                주의해주세요.
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </section>
                             </div>
+                        </div>
+                        <div class="resume_btm">
+                            <section id="resume_title">
+                                <div class="inner">
+                                    <div class="TipBox Click tit_recommend">
+                                        <div
+                                            class="tip_recommend show_resume_title"
+                                            tabindex="0"
+                                        >
+                                            <span class="blind"
+                                                >이력서 제목 추천</span
+                                            >
+                                        </div>
+                                        <div
+                                            class="TipCont BottomLeft resume_title_option"
+                                        >
+                                            <span class="Tail"
+                                                ><svg class="icon_tail">
+                                                    <use
+                                                        xlink:href="#TipBox_tail_side"
+                                                    ></use>
+                                                </svg>
+                                            </span>
+                                            <div
+                                                class="TipTxt resume_title_recommend_list"
+                                            >
+                                                <h5 class="tit">
+                                                    제목 추천 서비스! 입력하신
+                                                    내용을 조합해서, 이력서
+                                                    제목을 추천해드립니다.
+                                                </h5>
+                                                <button
+                                                    type="button"
+                                                    class="txt"
+                                                >
+                                                    밝은 성격으로 팀의 비타민이
+                                                    되겠습니다.</button
+                                                ><button
+                                                    type="button"
+                                                    class="txt"
+                                                >
+                                                    최선을 다하여 확실한 결과를
+                                                    보여드리겠습니다.</button
+                                                ><button
+                                                    type="button"
+                                                    class="txt"
+                                                >
+                                                    남보다 한 걸음 더 내딛을
+                                                    지원자 석상훈입니다.</button
+                                                ><button
+                                                    type="button"
+                                                    class="txt"
+                                                >
+                                                    IT소프트웨어학과전공과
+                                                    다양한 실무 경험 보유!</button
+                                                ><button
+                                                    type="button"
+                                                    class="txt"
+                                                >
+                                                    함께 달리고 싶은 열정
+                                                    지원자, 석상훈입니다.</button
+                                                ><button
+                                                    type="button"
+                                                    class="btn_refresh"
+                                                >
+                                                    새로운 추천목록
+                                                </button>
+                                            </div>
+                                            <button
+                                                type="button"
+                                                class="BtnClose"
+                                            >
+                                                <span class="blind">닫기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <strong class="tit_resume"
+                                        >이력서 제목</strong
+                                    >
+                                    <label for="title" class="bar_title blind"
+                                        >이력서 제목</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="title"
+                                        name="title"
+                                        class="resume_title_input"
+                                        value=""
+                                        placeholder="이력서 제목 (미입력 시 기본 제목으로 자동 저장됩니다.)"
+                                        maxlength="100"
+                                        autocomplete="off"
+                                    />
+
+                                    <button
+                                        type="button"
+                                        class="BtnType BtnTypeRd SizeML btn_preview evtResumePreview"
+                                    >
+                                        이력서 미리보기
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="BtnType BtnTypeRd SizeML evtResumeSave"
+                                    >
+                                        작성완료
+                                    </button>
+                                </div>
+                            </section>
                         </div>
                     </form>
                 </div>
@@ -295,6 +803,18 @@
         </div>
 
         <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="resume_skill_close" viewBox="0 0 20 20">
+                <path
+                    d="M14 6L6 14"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                ></path>
+                <path
+                    d="M6 6L14 14"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                ></path>
+            </symbol>
             <symbol id="resume_minus" viewBox="0 0 16 16">
                 <rect
                     x="2.5"
@@ -325,6 +845,53 @@
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M2.37756 13.6388L2.93961 10.7224L9.11163 4.51829L11.4553 6.87266L5.28328 13.0767L2.37756 13.6388ZM12.3355 5.99242L13.5975 4.71979C13.7565 4.56071 13.7565 4.29558 13.5975 4.1259L11.8371 2.35482C11.678 2.19574 11.4129 2.19574 11.2538 2.35482L9.99183 3.62745L12.3355 5.98182V5.99242ZM1.74127 10.3618C1.77309 10.2027 1.84732 10.0436 1.96397 9.92697L10.3736 1.48519C11.0205 0.83827 12.0704 0.83827 12.7173 1.48519L14.4777 3.25627C15.1246 3.90319 15.1246 4.96371 14.4777 5.61063L6.06804 14.0524C5.95139 14.1691 5.80292 14.2539 5.64385 14.2857L2.01699 14.9857C1.44433 15.0917 0.935301 14.5933 1.05195 14.01L1.75187 10.3618H1.74127Z"
+                    fill="currentColor"
+                ></path>
+            </symbol>
+            <symbol id="resume_ex" viewBox="0 0 16 16">
+                <circle
+                    cx="8"
+                    cy="8"
+                    r="7.4"
+                    stroke="currentColor"
+                    fill="#fff"
+                    stroke-width="1.2"
+                ></circle>
+                <path
+                    d="M8 6C8.552 6 9 5.552 9 5C9 4.4475 8.552 4 8 4C7.448 4 7 4.4475 7 5C7 5.552 7.448 6 8 6Z"
+                    fill="currentColor"
+                ></path>
+                <path
+                    d="M8.79462 7.9067C8.74841 7.50883 8.41027 7.2 8 7.2C7.55817 7.2 7.2 7.55817 7.2 8V11.6L7.20538 11.6933C7.25159 12.0912 7.58973 12.4 8 12.4C8.44183 12.4 8.8 12.0418 8.8 11.6V8L8.79462 7.9067Z"
+                    fill="currentColor"
+                ></path>
+            </symbol>
+            <symbol id="search_delete" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8" fill="#8491A7"></circle>
+                <path d="M9 9L15 15" stroke="white"></path>
+                <path d="M15 9L9 15" stroke="white"></path>
+            </symbol>
+            <symbol id="search_btn" viewBox="0 0 24 24">
+                <rect opacity="0.01" width="24" height="24" fill="none"></rect>
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 4C14.866 4 18 7.13401 18 11C18 12.7559 17.3535 14.3608 16.2855 15.5896L16.3536 15.6464L19.7477 19.0406C19.9429 19.2358 19.9429 19.5524 19.7477 19.7477C19.5741 19.9212 19.3047 19.9405 19.1098 19.8055L19.0406 19.7477L15.6464 16.3536C15.6251 16.3323 15.6062 16.3095 15.5895 16.2856C14.3607 17.3535 12.7558 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z"
+                    fill="#4876EF"
+                ></path>
+            </symbol>
+            <symbol id="svg_info" fill="none" viewBox="0 0 16 16">
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zM1.2 8a6.8 6.8 0 1 1 13.6 0A6.8 6.8 0 0 1 1.2 8zM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.205 2.907A.8.8 0 0 0 7.2 8v3.6l.005.093A.8.8 0 0 0 8.8 11.6V8l-.005-.093z"
+                    fill="#B4C0D3"
+                ></path>
+            </symbol>
+            <symbol id="TipBox_tail_side" viewBox="0 0 32 32">
+                <path d="M31.5 26V9L21 18.5H0V26H31.5Z" fill="inherit"></path>
+                <path
+                    d="M31 10.2038L20.9472 19H0V18H20.5714L32 8V26H31V10.2038Z"
                     fill="currentColor"
                 ></path>
             </symbol>

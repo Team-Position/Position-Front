@@ -82,7 +82,7 @@ fileInput1.addEventListener("change", () => {
         }
 
         // 파일 삭제 버튼 이벤트 추가
-        listItem
+        document
             .querySelector(".evtDeleteResFile")
             .addEventListener("click", () => {
                 listItem.remove();

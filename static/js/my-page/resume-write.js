@@ -1,3 +1,215 @@
+// 이력서 팁 보기
+const toggleBtn = document.querySelector(".tip_recommend.show_resume_title"); // 클릭할 버튼
+const toggleContent = document.querySelector(
+    ".TipCont.BottomLeft.resume_title_option"
+); // 팁 내용
+const closeTip = document.querySelector(".BtnClose");
+// 팁 내용 버튼
+const buttons = document.querySelectorAll(".txt");
+const titleInput = document.getElementById("title"); // 팁 내용 뿌려주는 input 태그
+
+// 각 버튼에 클릭 이벤트 리스너 추가
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        // 클릭한 버튼의 텍스트를 input 태그에 설정
+        titleInput.value = button.textContent.replace(/\s+/g, " ");
+        toggleContent.style.display = "none";
+    });
+});
+
+toggleBtn.addEventListener("click", () => {
+    // display 속성을 토글
+    toggleContent.style.display =
+        toggleContent.style.display === "block" ? "none" : "block";
+});
+
+closeTip.addEventListener("click", () => {
+    // 항상 숨김
+    toggleContent.style.display = "none"; // 숨김
+});
+
+// 스킬에서 선택하면 아래에 데이터 뿌리기
+document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
+    checkbox.addEventListener("change", (e) => {
+        const skillList = document.querySelector(".soft_add"); // 스킬 목록 영역
+        const progressCircle = document.querySelector(".induceSkill .svg"); // SVG 요소
+
+        // 레이블에서 텍스트 가져오기
+        const label = e.target.nextElementSibling; // 체크박스의 다음 형제 요소는 레이블
+        const skillValue = label.querySelector(".keyword").textContent; // "야구"와 같은 텍스트 가져오기
+
+        // 스킬 개수에 따라 SVG 클래스 업데이트하는 함수
+        function updateSvgClass() {
+            const skillCount = skillList.children.length;
+            // 기존 단계 클래스 제거
+            progressCircle.classList.remove(
+                "step1",
+                "step2",
+                "step3",
+                "step4",
+                "step5"
+            );
+            // 스킬 수에 따라 새로운 단계 클래스 추가
+            if (skillCount > 0 && skillCount <= 5) {
+                progressCircle.classList.add(`step${skillCount}`);
+            }
+        }
+
+        // SVG 클래스 제거하는 함수
+        function removeSvgClass() {
+            const skillCount = skillList.children.length;
+            // 기존 단계 클래스 제거
+            progressCircle.classList.remove(
+                "step1",
+                "step2",
+                "step3",
+                "step4",
+                "step5"
+            );
+        }
+
+        if (e.target.checked) {
+            // 체크박스가 선택된 경우, 스킬 추가
+            const skillItem = document.createElement("span");
+            skillItem.className = "skill_item basicSkillItem";
+            skillItem.innerHTML = `
+                <button type="button" class="skill_modify evtLayerSkillItemDetail">
+                    <em class="skillNm">${skillValue}</em>
+                    <svg><use xlink:href="#view_modify"></use></svg>
+                </button>
+                <button type="button" class="skill_delete evtDeleteSkillItem">
+                    <svg><use xlink:href="#resume_skill_close"></use></svg>
+                </button>
+            `;
+
+            // 삭제 버튼 클릭 시 해당 스킬 삭제
+            skillItem
+                .querySelector(".evtDeleteSkillItem")
+                .addEventListener("click", () => {
+                    e.target.checked = false; // 체크박스 해제
+                    skillItem.remove(); // 스킬 아이템 삭제
+                    // updateSvgClass(); // 삭제 시 SVG 클래스 업데이트
+                    removeSvgClass(); // SVG 클래스 제거
+
+                    const skillCount = skillList.children.length; // 현재 스킬 개수 확인
+                    // 삭제된 후 상태에 따라 클래스 추가
+                    if (skillCount < 5) {
+                        progressCircle.classList.add(`step${skillCount + 1}`);
+                    }
+                    progressCircle.classList.add("reverse"); // 삭제 시 reverse 클래스 추가
+                });
+
+            skillList.appendChild(skillItem); // 스킬 목록에 추가
+            progressCircle.classList.remove("reverse"); // 추가 시 reverse 클래스 제거
+            updateSvgClass(); // 추가 후 SVG 클래스 업데이트
+        } else {
+            // 체크박스가 해제된 경우, 해당 스킬 삭제
+            const skillToRemove = Array.from(skillList.children).find(
+                (item) =>
+                    item.querySelector(".skillNm").textContent === skillValue
+            );
+            if (skillToRemove) {
+                skillToRemove.remove(); // 스킬 아이템 삭제
+                removeSvgClass(); // SVG 클래스 제거
+                const skillCount = skillList.children.length; // 현재 스킬 개수 확인
+                // 삭제된 후 상태에 따라 클래스 추가
+                if (skillCount < 5) {
+                    progressCircle.classList.add(`step${skillCount + 1}`);
+                }
+                progressCircle.classList.add("reverse"); // 삭제 시 reverse 클래스 추가
+            }
+        }
+    });
+});
+
+// 스킬 입력(검색)할때
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchSkill");
+    const btnDelete = document.querySelector(".btn_delete.autoCompleteUi");
+    const autoSearch = document.querySelector(
+        ".area_auto_search.company_search.autoCompleteList.autoCompleteUi"
+    );
+    const skillList = document.querySelector(".wrapBasicSkill");
+
+    searchInput.addEventListener("input", () => {
+        const inputValue = searchInput.value.trim();
+
+        if (inputValue) {
+            btnDelete.style.display = "block";
+            autoSearch.style.display = "block";
+            skillList.style.marginTop = "250px";
+        } else {
+            btnDelete.style.display = "none";
+            autoSearch.style.display = "none";
+            skillList.style.marginTop = "40px";
+        }
+
+        // 버튼 클릭 시 input 값 비우기 및 버튼 숨기기
+        btnDelete.addEventListener("click", () => {
+            searchInput.value = "";
+            btnDelete.style.display = "none";
+            autoSearch.style.display = "none";
+            skillList.style.marginTop = "40px";
+            searchInput.focus(); // 입력 필드에 포커스 유지
+        });
+    });
+});
+
+// 스킬
+// 요소의 display 스타일을 변경하는 함수
+const setDisplay = (element, display) => {
+    if (element) element.style.display = display;
+};
+
+// 버튼 클릭 핸들러
+const handleButtonClick = (event) => {
+    const clickedButton = event.currentTarget; // 클릭된 버튼
+    const parentContainer = clickedButton.closest(".resume_skill"); // 부모 컨테이너 탐색
+
+    // 각 요소를 부모 컨테이너 내에서 찾기
+    setDisplay(parentContainer.querySelector(".btn_add.evtWriteItem"), "none"); // 클릭된 버튼 숨김
+    setDisplay(parentContainer.querySelector(".TipBox"), "block"); // TipBox 표시
+    setDisplay(parentContainer.querySelector(".resume_list"), "none"); // resume_list 숨김
+    setDisplay(
+        parentContainer.querySelector(".resume_edit.wrapHiddenForm"),
+        "block"
+    ); // resume_edit 표시
+};
+// 삭제 버튼 클릭 핸들러
+const handleDeleteButtonClick = (event) => {
+    const clickedButton = event.currentTarget; // 클릭된 삭제 버튼
+    const parentContainer = clickedButton.closest(".resume_skill"); // 부모 컨테이너 탐색
+
+    // 부모 컨테이너 내 요소의 display 스타일 복구
+    setDisplay(parentContainer.querySelector(".btn_add.evtWriteItem"), "block"); // 추가 버튼 표시
+    setDisplay(parentContainer.querySelector(".TipBox"), "none"); // TipBox 숨김
+    setDisplay(parentContainer.querySelector(".resume_list"), "block"); // resume_list 표시
+    setDisplay(
+        parentContainer.querySelector(".resume_edit.wrapHiddenForm"),
+        "none"
+    ); // resume_edit 숨김
+};
+
+// 모든 삭제 버튼에 이벤트 리스너 등록
+document
+    .getElementById("skill-close-btn")
+    .addEventListener("click", handleDeleteButtonClick);
+
+// 모든 버튼에 이벤트 리스너 등록
+document.querySelectorAll(".btn_add.evtWriteItem").forEach((button) => {
+    button.addEventListener("click", handleButtonClick);
+});
+
+//숨겨진 내스킬 추가
+document
+    .querySelector(".skill_hide_add")
+    .addEventListener("click", handleButtonClick);
+
+// 스킬 수정 버튼 클릭
+document
+    .getElementById("skill-update-btn")
+    .addEventListener("click", handleButtonClick);
+
 document.addEventListener("DOMContentLoaded", () => {
     // 프라이버시 보기 버튼 선택
     const showPrivacyButton = document.querySelector(".showPrivacy");
@@ -50,6 +262,8 @@ const addButton = document.querySelector(".btn_add.evtWriteItem");
 const modifyElement = document.querySelector(
     ".btn_modify.evtOpenLastSchoolNudge"
 );
+const evtEditItem = document.querySelector(".BtnType.view_modify.evtEditItem");
+
 const resumeList = document.querySelector(".resume_list");
 const app = document.getElementById("app");
 
@@ -947,6 +1161,16 @@ addButton.addEventListener("click", () => {
     resumeList.style.display = "none";
     showView("A"); // View A 표시
 });
+
+// 수정 버튼 클릭시
+evtEditItem.addEventListener("click", () => {
+    addButton.style.display = "none";
+    modifyElement.style.display = "none";
+    resumeList.style.display = "none";
+    // 사용자가 전에 입력했던 거 가져와야 함
+    showView("C"); // View A 표시
+});
+
 // 1. Typo SizeL input 요소들에 실시간 입력 이벤트 위임
 document.addEventListener("input", (event) => {
     if (event.target.matches("input.Typo.SizeL.check")) {
@@ -997,7 +1221,8 @@ document.addEventListener("click", (event) => {
 
     if (event.target.classList.contains("evtLayerClose")) {
         const resumeEdit = event.target.closest(".resume_edit");
-        if (resumeEdit) resumeEdit.remove();
+        // if (resumeEdit) resumeEdit.remove();
+        if (resumeEdit) resumeEdit.style.display = "none";
         restoreUI(); // UI 상태 복원
     }
 
@@ -1109,236 +1334,3 @@ document.addEventListener("click", (event) => {
         }
     }
 });
-
-// 검정고시 선택
-// document.addEventListener("click", (event) => {
-//     console.log("클릭된 요소:", event.target);
-//     // 클릭된 요소가 Lbl인 경우
-//     if (event.target.classList.contains("Lbl")) {
-//         // item_row item_center item_career 요소 찾기
-//         const itemCareer = document.querySelector(
-//             ".item_row.item_center.item_career"
-//         );
-//         const itemCareerClose = document.querySelector(
-//             ".item_row.item_center.item_career.item_close"
-//         );
-
-//         // item_row item_center item_close 요소 찾기
-//         const itemClose = document.querySelector(
-//             ".item_row.item_center.item_close"
-//         );
-
-//         // item_row 요소들 찾기
-//         const itemRow = document.querySelector(".item_row.detail");
-
-//         // 클릭 시 동작
-//         if (itemCareer.classList.contains("item_close")) {
-//             // itemCareer에서 item_close 클래스를 제거하고 display를 flex로 설정
-//             itemCareerClose.classList.remove("item_close");
-//             itemCareerClose.style.display = "flex";
-
-//             // itemClose에 item_close 추가 및 display none 설정
-//             if (itemClose) {
-//                 itemClose.classList.add("item_close");
-//                 itemClose.style.display = "none";
-//             }
-//             if (itemRow) {
-//                 itemRow.classList.remove("item_close");
-//                 itemRow.style.display = "flex";
-//             }
-//         } else {
-//             // 다시 클릭한 경우
-//             // itemCareer에 item_close 클래스를 추가하고 display를 none으로 설정
-//             itemCareer.classList.add("item_close");
-//             itemCareer.style.display = "none";
-
-//             // itemClose에서 item_close 제거 및 display flex로 설정
-//             if (itemClose) {
-//                 itemClose.classList.remove("item_close");
-//                 itemClose.style.display = "flex";
-//             }
-
-//             if (itemRow) {
-//                 itemRow.classList.add("item_close");
-//                 itemRow.style.display = "none";
-//             }
-//         }
-//     }
-// });
-
-// 이전 작업
-// const addButton = document.querySelector(".btn_add.evtWriteItem");
-// const modifyElement = document.querySelector(
-//     ".btn_modify.evtOpenLastSchoolNudge"
-// );
-// const resumeList = document.querySelector(".resume_list");
-// const app = document.getElementById("app");
-
-// // View A를 생성하는 함수
-// function createViewA() {
-//     const div1 = document.createElement("div");
-//     div1.innerHTML = `
-//         <div
-//             id="resumeSchoolItem_${Date.now()}"
-//             class="resume_edit wrapHiddenForm"
-//             data-tpl="school-item"
-//         >
-//             <div class="item_row">
-//                 <div class="InpBox SizeL item_m">
-//                     <label for="schoolType" class="blind">학력구분</label>
-//                     <select name="school_type" class="evtChangeSchoolType">
-//                         <option value="" selected>학력 구분 선택 *</option>
-//                         <option value="primary">초등학교 졸업</option>
-//                         <option value="middle">중학교 졸업</option>
-//                         <option value="high">고등학교 졸업</option>
-//                         <option value="university">대학ㆍ대학원 이상 졸업</option>
-//                         <option value="academy">기타 학력 졸업</option>
-//                     </select>
-//                 </div>
-//             </div>
-//             <div class="resume_save notCached">
-//                 <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
-//                 <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
-//             </div>
-//         </div>
-//     `;
-
-//     // select 요소의 change 이벤트 리스너 추가
-//     const selectElement = div1.querySelector("select");
-//     selectElement.addEventListener("change", (event) => {
-//         if (event.target.value === "primary") {
-//             // div1을 숨기고 div2를 표시
-//             app.innerHTML = ""; // 기존 콘텐츠 비우기
-//             showView("B"); // div2를 보여줌
-//         }
-//         if (event.target.value === "middle") {
-//             // 현재 있는거를 숨기고 div3를 표시
-//             app.innerHTML = ""; // 기존 콘텐츠 비우기
-//             showView("C"); // div3를 보여줌
-//         }
-//     });
-
-//     return div1;
-// }
-
-// // 특정 뷰를 표시하는 함수
-// function showView(viewName) {
-//     if (viewName === "B") {
-//         const div2 = document.createElement("div");
-//         div2.innerHTML = `
-//             <h1>View B</h1>
-//             <p>This is the content of View B.</p>
-//         `;
-//         app.appendChild(div2);
-//     } else if (viewName === "C") {
-//         const div3 = document.createElement("div");
-//         div3.innerHTML = `
-//             <h1>View C</h1>
-//             <p>This is the content of View C.</p>
-//         `;
-//         app.appendChild(div3);
-//     }
-// }
-
-// // addButton 클릭 시 View A 표시
-// addButton.addEventListener("click", () => {
-//     addButton.style.display = "none";
-//     modifyElement.style.display = "none";
-//     resumeList.style.display = "none";
-//     app.appendChild(createViewA()); // View A를 추가
-// });
-
-// // 이벤트 위임을 사용해 동적으로 생성된 취소 버튼 핸들링
-// document.addEventListener("click", (event) => {
-//     if (event.target.classList.contains("evtLayerClose")) {
-//         const resumeEdit = event.target.closest(".resume_edit");
-
-//         if (resumeEdit) {
-//             resumeEdit.remove();
-//         }
-
-//         // UI 상태 복원
-//         modifyElement.style.display = "flex";
-//         resumeList.style.display = "block";
-//         addButton.style.display = "block";
-//     }
-// });
-
-// const addButton = document.querySelector(".btn_add.evtWriteItem");
-// const modifyElement = document.querySelector(
-//     ".btn_modify.evtOpenLastSchoolNudge"
-// );
-// const resumeList = document.querySelector(".resume_list");
-// const app = document.getElementById("app");
-
-// // View A를 생성하는 함수
-// function createViewA() {
-//     const div1 = document.createElement("div");
-//     div1.innerHTML = `
-//         <div
-//             id="resumeSchoolItem_${Date.now()}"
-//             class="resume_edit wrapHiddenForm"
-//             data-tpl="school-item"
-//         >
-//             <div class="item_row">
-//                 <div class="InpBox SizeL item_m">
-//                     <label for="schoolType" class="blind">학력구분</label>
-//                     <select name="school_type" class="evtChangeSchoolType">
-//                         <option value="" selected>학력 구분 선택 *</option>
-//                         <option value="primary">초등학교 졸업</option>
-//                         <option value="middle">중학교 졸업</option>
-//                         <option value="high">고등학교 졸업</option>
-//                         <option value="university">대학ㆍ대학원 이상 졸업</option>
-//                         <option value="academy">기타 학력 졸업</option>
-//                     </select>
-//                 </div>
-//             </div>
-//             <div class="resume_save notCached">
-//                 <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
-//                 <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
-//             </div>
-//         </div>
-//     `;
-//     return div1;
-// }
-
-// // 특정 뷰를 표시하는 함수
-// function showView(viewName) {
-//     app.innerHTML = ""; // 기존 콘텐츠 비우기
-
-//     if (viewName === "A") {
-//         app.appendChild(createViewA()); // 새로운 View A 생성 후 추가
-//     } else if (viewName === "B") {
-//         const div2 = document.createElement("div");
-//         div2.innerHTML = `<h1>View B</h1><p>This is the content of View B.</p>`;
-//         app.appendChild(div2);
-//     } else if (viewName === "C") {
-//         const div3 = document.createElement("div");
-//         div3.innerHTML = `<h1>View C</h1><p>This is the content of View C.</p>`;
-//         app.appendChild(div3);
-//     }
-// }
-
-// // addButton 클릭 시 View A 표시
-// addButton.addEventListener("click", () => {
-//     addButton.style.display = "none";
-//     modifyElement.style.display = "none";
-//     resumeList.style.display = "none";
-//     showView("A");
-// });
-
-// // 이벤트 위임을 사용해 동적으로 생성된 취소 버튼 핸들링
-// document.addEventListener("click", (event) => {
-//     if (event.target.classList.contains("evtLayerClose")) {
-//         const resumeEdit = event.target.closest(".resume_edit");
-
-//         if (resumeEdit) {
-//             resumeEdit.remove();
-//         }
-
-//         // UI 상태 복원
-//         modifyElement.style.display = "flex";
-//         resumeList.style.display = "block";
-//         addButton.style.display = "block";
-//     }
-// });

@@ -951,7 +951,7 @@ ol, ul, li {
     left: 0;
     width: 16px;
     height: 16px;
-    background: url(/static/images/corporation/이력서.svg);
+    background: url(/static/images/corporation/regist.svg);
     content: "";
 }
  .col_summary .attached .data {
@@ -1002,7 +1002,7 @@ ol, ul, li {
     width: 16px;
     height: 16px;
     vertical-align: top;
-    background: url('http://www.w3.org/2000/svg');
+    background: url(/static/images/corporation/competition.svg);
     content: "";
 }
 .list_status{

@@ -7,7 +7,7 @@ body {
 }
 /* header */
 
-#sri-header {
+#position-header {
     position: fixed;
     top: 0;
     right: 0;
@@ -19,10 +19,10 @@ body {
     font-size: 0;
     text-align: right;
 }
-.no-gnb #sri-header:before {
+.no-gnb #position-header:before {
     left: 0;
 }
-#sri-header:before {
+#position-header:before {
     position: absolute;
     top: 0;
     right: 0;
@@ -33,7 +33,7 @@ body {
     content: "";
     opacity: 0.95;
 }
-#sri-header .ci {
+#position-header .ci {
     display: block;
     position: absolute;
     top: 33px;
@@ -42,13 +42,13 @@ body {
     width: 93px;
     height: 24px;
 }
-#sri-header .ci svg {
+#position-header .ci svg {
     width: 100%;
     height: 100%;
 }
 
 
-#sri-header .wrap-top-btns {
+#position-header .wrap-top-btns {
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -56,7 +56,7 @@ body {
     vertical-align: top;
     margin-right: 16px;
 }
-#sri-header .wrap-top-btns>a.link-home {
+#position-header .wrap-top-btns>a.link-home {
     display: inline-flex;
     width: 78px;
     justify-content: center;
@@ -64,7 +64,7 @@ body {
     color: var(--gray90);
     margin-right: 8px;
 }
-#sri-header .wrap-top-btns>a {
+#position-header .wrap-top-btns>a {
     display: inline-block;
     position: relative;
     width: 40px;
@@ -72,10 +72,10 @@ body {
     box-sizing: border-box;
     vertical-align: top;
 }
-#sri-header .wrap-top-btns>a.link-home:before {
+#position-header .wrap-top-btns>a.link-home:before {
     border-radius: 20px;
 }
-#sri-header .wrap-top-btns>a:before {
+#position-header .wrap-top-btns>a:before {
     display: block;
     position: absolute;
     top: 0;
@@ -89,11 +89,11 @@ body {
     content: "";
     opacity: 0;
 }
-#sri-header .wrap-top-btns>a.link-home svg {
+#position-header .wrap-top-btns>a.link-home svg {
     position: static;
     flex-shrink: 0;
 }
-#sri-header .wrap-top-btns>a svg {
+#position-header .wrap-top-btns>a svg {
     display: block;
     position: absolute;
     top: 8px;
@@ -102,13 +102,13 @@ body {
     width: 24px;
     height: 24px;
 }
-#sri-header .wrap-top-btns>a:hover:before {
+#position-header .wrap-top-btns>a:hover:before {
     opacity: 1;
 }
-#sri-header .wrap-top-btns>a svg use {
+#position-header .wrap-top-btns>a svg use {
     color: var(--gray90);
 }
-#sri-header .wrap-top-btns>a .txt {
+#position-header .wrap-top-btns>a .txt {
     position: static;
     z-index: 1;
     font-size: 14px;
@@ -116,7 +116,7 @@ body {
     margin-left: 6px;
     white-space: nowrap;
 }
-#sri-header .wrap-top-btns .rewards-point {
+#position-header .wrap-top-btns .rewards-point {
     display: inline-block;
     position: relative;
     height: 40px;
@@ -124,7 +124,7 @@ body {
 }
 
 
-#sri-header .wrap-top-btns .rewards-point>a {
+#position-header .wrap-top-btns .rewards-point>a {
     display: inline-flex;
     height: 40px;
     padding: 0 8px 0 10px;
@@ -132,7 +132,7 @@ body {
     gap: 4px;
 }
 
-#sri-header .wrap-top-btns .rewards-point>a:before {
+#position-header .wrap-top-btns .rewards-point>a:before {
     display: block;
     position: absolute;
     top: 0;
@@ -146,22 +146,22 @@ body {
     content: "";
     opacity: 0;
 }
-#sri-header .wrap-top-btns .rewards-point>a:hover:before {
+#position-header .wrap-top-btns .rewards-point>a:hover:before {
     opacity: 1;
 }
 
 
-#sri-header .wrap-top-btns .rewards-point>a svg {
+#position-header .wrap-top-btns .rewards-point>a svg {
     position: static;
     z-index: 2;
     width: 24px;
     height: 24px;
 }
-#sri-header .wrap-top-btns .rewards-point>a svg use {
+#position-header .wrap-top-btns .rewards-point>a svg use {
     color: #4876ef;
 }
 
-#sri-header .wrap-top-btns .rewards-point>a span {
+#position-header .wrap-top-btns .rewards-point>a span {
     color: #5C667b;
     font-size: 14px;
     line-height: 24px;
@@ -169,7 +169,7 @@ body {
     z-index: 2;
 }
 
-#sri-header .wrap-top-btns .wrap-messenger {
+#position-header .wrap-top-btns .wrap-messenger {
     display: inline-block;
     position: relative;
     margin-left: 8px;
@@ -178,7 +178,7 @@ body {
     vertical-align: top;
 }
 
-#sri-header .wrap-top-btns .wrap-messenger button.btn-messenger {
+#position-header .wrap-top-btns .wrap-messenger button.btn-messenger {
     display: inline-block;
     position: relative;
     width: 40px;
@@ -186,14 +186,14 @@ body {
     border-radius: 50%;
     font-size: 0;
 }
-#sri-header .wrap-top-btns .wrap-messenger button.btn-messenger:hover {
+#position-header .wrap-top-btns .wrap-messenger button.btn-messenger:hover {
     background-color: #f4f6fa;
 }
-#sri-header .wrap-top-btns .wrap-my-layer button.top-btn:hover {
+#position-header .wrap-top-btns .wrap-my-layer button.top-btn:hover {
     background-color: #f4f6fa;
 }
 
-#sri-header .wrap-top-btns .wrap-messenger button.btn-messenger:before {
+#position-header .wrap-top-btns .wrap-messenger button.btn-messenger:before {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -204,7 +204,7 @@ body {
     content: "";
 }
 
-#sri-header .wrap-top-btns .wrap-messenger .push-num {
+#position-header .wrap-top-btns .wrap-messenger .push-num {
     display: none;
     position: absolute;
     top: 0;
@@ -224,21 +224,21 @@ body {
     background-color: #ff5656;
 }
 
-#sri-header .wrap-top-btns .wrap-my-layer {
+#position-header .wrap-top-btns .wrap-my-layer {
     display: inline-block;
     position: relative;
     margin-left: 8px;
 }
-#sri-header .wrap-top-btns .wrap-my-layer button.top-btn.on {
+#position-header .wrap-top-btns .wrap-my-layer button.top-btn.on {
     background-color: #eff5ff;
 }
 
-#sri-header .wrap-top-btns .wrap-my-layer button.top-btn {
+#position-header .wrap-top-btns .wrap-my-layer button.top-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
-#sri-header .wrap-top-btns .wrap-my-layer button.top-btn.on svg {
+#position-header .wrap-top-btns .wrap-my-layer button.top-btn.on svg {
     color: #4876ef;
 }
 
@@ -250,7 +250,7 @@ body {
     height: 1px;
 }
 
-#sri-header .wrap-top-btns .wrap-my-layer button.top-btn svg {
+#position-header .wrap-top-btns .wrap-my-layer button.top-btn svg {
     width: 24px;
     height: 24px;
     color: #5c667b;
@@ -271,7 +271,7 @@ body {
     background-color: #fff;
     box-shadow: 2px 6px 16px 0 rgba(17, 42, 128, 0.08);
 }
-#sri-header .wrap-top-btns .wrap-my-layer button.top-btn.on+.top-layer-assist {
+#position-header .wrap-top-btns .wrap-my-layer button.top-btn.on+.top-layer-assist {
     display: inline-block;
     z-index: 2;
 }
@@ -360,7 +360,9 @@ body {
 .top-layer-assist .tab-btns li:last-child {
     margin-right: 0;
 }
-
+.empty-list{
+    display: none;
+}
 .top-layer-assist .empty-list {
     padding-top: 110px;
     text-align: center;
@@ -602,13 +604,13 @@ body {
     white-space: nowrap;
 }
 
-.top-layer-assist .save-list-area .save-list>ul>li .sri-btn-area {
+.top-layer-assist .save-list-area .save-list>ul>li .position-btn-area {
     position: relative;
     width: 100%;
     height: 24px;
     text-align: right;
 }
-.top-layer-assist .save-list-area .save-list>ul>li .sri-btn-area .deadline {
+.top-layer-assist .save-list-area .save-list>ul>li .position-btn-area .deadline {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -617,16 +619,16 @@ body {
     font-size: 12px;
     line-height: 20px;
 }
-.top-layer-assist .save-list-area .save-list>ul>li .sri-btn-area .sri-btn-sm {
+.top-layer-assist .save-list-area .save-list>ul>li .position-btn-area .position-btn-sm {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 5;
 }
-.sri-btn-sm:hover span {
+.position-btn-sm:hover span {
     background: var(--gray20);
 }
-.sri-btn-sm {
+.position-btn-sm {
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -638,7 +640,7 @@ body {
     vertical-align: top;
     cursor: pointer;
 }
-.sri-btn-sm span {
+.position-btn-sm span {
     display: inline-block;
     width: 86px;
     height: 22px;
@@ -846,7 +848,7 @@ body {
     color: #8491a7;
 }
 
-#sri-header .wrap-member {
+#position-header .wrap-member {
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -854,7 +856,7 @@ body {
     vertical-align: top;
 }
 
-#sri-header .btn-member {
+#position-header .btn-member {
     display: block;
     position: relative;
     padding: 10px 27px 12px 46px;
@@ -862,7 +864,7 @@ body {
     font-size: 0;
 }
 
-#sri-header .btn-member:before {
+#position-header .btn-member:before {
     display: block;
     position: absolute;
     top: 0;
@@ -877,7 +879,7 @@ body {
     opacity: 0;
 }
 
-#sri-header .btn-member .user-photo {
+#position-header .btn-member .user-photo {
     display: block;
     overflow: hidden;
     position: absolute;
@@ -888,7 +890,7 @@ body {
     height: 32px;
     border-radius: 16px;
 }
-#sri-header .btn-member .user-photo .img-default {
+#position-header .btn-member .user-photo .img-default {
     position: absolute;
     top: 0;
     left: 0;
@@ -897,13 +899,13 @@ body {
     height: 100%;
 }
 
-#sri-header .btn-member .user-photo .img {
+#position-header .btn-member .user-photo .img {
     position: relative;
     z-index: 2;
     width: 100%;
 }
 
-#sri-header .btn-member .user-name {
+#position-header .btn-member .user-name {
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -917,7 +919,7 @@ body {
     white-space: nowrap;
 }
 
-#sri-header .btn-member .img-social {
+#position-header .btn-member .img-social {
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -927,7 +929,7 @@ body {
     vertical-align: top;
 }
 
-#sri-header .btn-member .img-arrow {
+#position-header .btn-member .img-arrow {
     display: block;
     position: absolute;
     top: 12px;
@@ -938,7 +940,7 @@ body {
     color: #ccd0d6;
 }
 
-#sri-header .layer-member {
+#position-header .layer-member {
     display: none;
     position: absolute;
     top: 48px;
@@ -952,11 +954,11 @@ body {
     box-shadow: 2px 6px 16px 0 rgba(17, 42, 128, 0.08);
 }
 
-#sri-header .layer-member ul {
+#position-header .layer-member ul {
     padding: 8px 0;
 }
 
-#sri-header .layer-member ul li a {
+#position-header .layer-member ul li a {
     display: block;
     position: relative;
     padding: 10px 0 12px 48px;
@@ -964,7 +966,7 @@ body {
     box-sizing: border-box;
 }
 
-#sri-header .layer-member ul li a svg {
+#position-header .layer-member ul li a svg {
     display: block;
     position: absolute;
     top: 8px;
@@ -973,11 +975,11 @@ body {
     width: 24px;
     height: 24px;
 }
-#sri-header .layer-member ul li a svg use {
+#position-header .layer-member ul li a svg use {
     color: #afbac8;
 }
 
-#sri-header .layer-member ul li a .txt {
+#position-header .layer-member ul li a .txt {
     position: relative;
     z-index: 2;
     color: #5c667b;
@@ -986,7 +988,7 @@ body {
     vertical-align: top;
 }
 
-#sri-header .layer-member ul li a:before {
+#position-header .layer-member ul li a:before {
     display: block;
     position: absolute;
     top: 0;
@@ -999,13 +1001,13 @@ body {
     content: "";
     opacity: 0;
 }
-#sri-header .wrap-member .btn-member.expanded+.layer-member {
+#position-header .wrap-member .btn-member.expanded+.layer-member {
     display: block;
 }
-#sri-header .btn-member:hover:before {
+#position-header .btn-member:hover:before {
     opacity: 1;
 }
-#sri-header .layer-member ul li a:hover:before {
+#position-header .layer-member ul li a:hover:before {
     opacity: 1;
 }
 
@@ -1152,8 +1154,69 @@ body {
     border-right: 1px solid #5c667b;
     vertical-align: middle;
     -webkit-transform: translateY(-1px) rotate(45deg);
-    -ms-transform: translateY(-1px) rotate(45deg);
     transform: translateY(-1px) rotate(45deg);
     content: "";
+}
+
+.top-layer-assist .save-list-area .save-list>ul>li .image {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.top-layer-assist .save-list-area .save-list>ul>li .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 38px;
+    max-height: 38px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.top-layer-assist .save-list-area .save-list>ul>li.favor-company>.name {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    left: 80px;
+    width: auto;
+}
+
+.top-layer-assist .save-list-area .save-list>ul>li.favor-company>.recruit-count {
+    display: inline-block;
+    position: absolute;
+    top: 42px;
+    right: 20px;
+    left: 80px;
+    color: #5c667b;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.top-layer-assist .save-list-area .save-list>ul>li .page-link-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: url(//www.saraminimage.co.kr/sri/person/resume/bg_alink.png) repeat;
+}
+
+.scrap-recruit-view, 
+#scrap-list-area,
+#today-list-content{
+    display:block;
+}
+.suited-recruit-view, 
+.favor-recruit-view, 
+#suited-list-area,
+#favor-list-area,
+.more.today-more-button{
+    display:none;
 }
 

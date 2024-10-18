@@ -1,4 +1,4 @@
-#sri-wrap {
+#position-wrap {
     grid-area: main;
     display: table-row;
     width: 100%;
@@ -304,7 +304,7 @@
     min-width: 122px;
 }
 
-.sri-btn-ml {
+.position-btn-ml {
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -316,13 +316,13 @@
     vertical-align: top;
     cursor: pointer;
 }
-.my-notification .slider .btn-card .sri-btn-ml {
+.my-notification .slider .btn-card .position-btn-ml {
     width: 100%;
 }
-.my-notification .slider .btn-card .sri-btn-ml>span {
+.my-notification .slider .btn-card .position-btn-ml>span {
     width: calc(100% - 2px);
 }
-.sri-btn-ml span {
+.position-btn-ml span {
     display: inline-block;
     width: 118px;
     height: 38px;
@@ -363,7 +363,7 @@
 .my-notification .slider li:hover .btn-card {
     opacity: 1;
 }
-.sri-btn-ml:hover span {
+.position-btn-ml:hover span {
     background: var(--gray20);
 }
 
@@ -457,7 +457,15 @@
 .onboarding-section .career-inflow-card .box-icon.type-class {
     background: var(--blue20);
 }
-
+.onboarding-section .career-inflow-card .box-icon.type-career-chat {
+    background: var(--green30);
+}
+.onboarding-section .career-inflow-card .box-icon.type-mentoring {
+    background: #def9fe;
+}
+.onboarding-section .career-inflow-card .box-icon.type-open-chat {
+    background: #f0e3fe;
+}
 .onboarding-section .career-inflow-card .box-icon {
     display: flex;
     margin-right: 12px;
@@ -851,4 +859,40 @@
 }
 .wrap-slider.active {
     display: block; /* active 클래스가 붙은 슬라이더만 보이도록 설정 */
+}
+
+.nest-standby-banner{
+    display:block;
+}
+
+
+
+/* wrap-slider 설정 */
+.wrap-slider {
+    max-width: 1248px;
+}
+
+/* bx-viewport 설정 */
+.bx-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 190px;
+}
+
+/* slider 설정 */
+.slider {
+    width: 4215%;
+    position: relative;
+    transition-duration: 0s;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/* slider-item 공통 설정 */
+.slider li {
+    float: left;
+    list-style: none;
+    position: relative;
+    width: 300px;
+    margin-right: 16px;
 }

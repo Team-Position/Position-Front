@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/static/css/my-page/my-info-general.css" />
     </head>
     <body id="container" class="vsc-initialized">
-        <header id="sri-header" class="integrated-header">
+        <header id="position-header" class="integrated-header">
             <div class="area-logo">
                 <a
                     href="/zf-user"
@@ -19,8 +19,6 @@
                         xmlns="http://www.w3.org/2000/svg"
                         width="82"
                         height="21"
-                        viewBox="0 0 82 21"
-                        fill="none"
                     >
                         <path
                             fill-rule="evenodd"
@@ -72,12 +70,10 @@
                         ></path>
                     </svg>
                 </a>
-                <span class="link-speed-logo" aria-label="통합회원 관리">
+                <span class="link-speed-logo">
                     <svg
                         width="101"
                         height="18"
-                        viewBox="0 0 101 18"
-                        fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
@@ -88,8 +84,8 @@
                 </span>
             </div>
         </header>
-        <div id="sri-section" class="sri-gnb-section">
-            <div id="sri-gnb-wrap" class="sri-gnb-wrap">
+        <div id="position-section" class="position-gnb-section">
+            <div id="position-gnb-wrap" class="position-gnb-wrap">
                 <ul class="gnb">
                     <li class="only selected">
                         <a href="/zf-user/persons/person-update">
@@ -103,7 +99,7 @@
                             <span class="txt">비밀번호 변경</span>
                         </a>
                     </li>
-                    <li class="only">
+                    <!-- <li class="only">
                         <a href="/zf-user/member/my-logins">
                             <svg><use xlink:href="#svg-my-13"></use></svg>
                             <span class="txt">로그인 관리</span>
@@ -114,7 +110,7 @@
                             <svg><use xlink:href="#svg-my-63"></use></svg>
                             <span class="txt">알림설정</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="only">
                         <a
                             a=""
@@ -126,18 +122,12 @@
                     </li>
                 </ul>
             </div>
-            <div id="sri-wrap">
+            <div id="position-wrap">
                 <div id="content">
                     <div class="wrapper-narrow">
                         <h1 class="wrap-title">계정정보 설정</h1>
                         <div class="password-confirm-wrap">
-                            <form
-                                class="password-confirm"
-                                id="confirmPasswd"
-                                method="post"
-                                action="/zf-user/persons/person-update"
-                                onsubmit="return false;"
-                            >
+                            <form class="password-confirm" id="confirmPasswd">
                                 <h2 class="password-confirm-subtitle">
                                     비밀번호 재확인
                                 </h2>
@@ -200,7 +190,7 @@
             </div>
             <!-- 여기에 푸터 -->
         </div>
-        <div class="svg-pattern" style="display: none">
+        <div class="svg-pattern">
             <svg xmlns="http://www.w3.org/2000/svg">
                 <symbol id="svg-my-10" viewBox="0 0 24 24">
                     <path

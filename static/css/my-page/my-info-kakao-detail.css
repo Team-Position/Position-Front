@@ -7,7 +7,7 @@ body {
 }
 
 /*헤더*/
-#sri-header.integrated-header {
+#position-header.integrated-header {
     padding: 18px 40px 0 0;
     border-bottom: 1px solid #eaedf4;
     display: flex;
@@ -16,7 +16,7 @@ body {
     min-width: 700px;
 }
 
-#sri-header {
+#position-header {
     position: fixed;
     top: 0;
     right: 0;
@@ -29,7 +29,7 @@ body {
     text-align: right;
 }
 
-#sri-header:before {
+#position-header:before {
     position: absolute;
     top: 0;
     right: 0;
@@ -41,16 +41,16 @@ body {
     opacity: 0.95;
 }
 
-#sri-header.integrated-header .area-logo {
+#position-header.integrated-header .area-logo {
     margin-left: 64px;
     padding-top: 4px;
 }
 
-#sri-header.integrated-header .area-logo .link-saramin-logo {
+#position-header.integrated-header .area-logo .link-saramin-logo {
     margin-right: 6px;
 }
 
-#sri-section {
+#position-section {
     display: grid;
     grid-template-areas:
         "gnb main"
@@ -63,16 +63,16 @@ body {
     box-sizing: border-box;
 }
 
-.sri-gnb-section #sri-gnb-wrap.sri-gnb-wrap {
+.position-gnb-section #position-gnb-wrap.position-gnb-wrap {
     margin-top: 64px;
     padding-top: 36px;
 }
 
-.sri-gnb-section #sri-gnb-wrap {
+.position-gnb-section #position-gnb-wrap {
     padding-top: 96px;
 }
 
-#sri-gnb-wrap {
+#position-gnb-wrap {
     grid-area: gnb;
     position: sticky;
     top: 0;
@@ -84,16 +84,16 @@ body {
     transition: width 0.5s;
 }
 
-#sri-gnb-wrap .gnb {
+#position-gnb-wrap .gnb {
     margin: 0 auto;
     width: 240px;
 }
 
-#sri-gnb-wrap .gnb>li {
+#position-gnb-wrap .gnb>li {
     position: relative;
 }
 
-#sri-gnb-wrap .gnb>li>a {
+#position-gnb-wrap .gnb>li>a {
     display: block;
     position: relative;
     padding: 10px 0 14px 56px;
@@ -101,15 +101,15 @@ body {
     box-sizing: border-box;
 }
 
-#sri-gnb-wrap .gnb>li.only.selected>a:before {
+#position-gnb-wrap .gnb>li.only.selected>a:before {
     opacity: 1;
 }
 
-#sri-gnb-wrap .gnb>li.selected>a:before {
+#position-gnb-wrap .gnb>li.selected>a:before {
     background: #eff5ff;
 }
 
-#sri-gnb-wrap .gnb>li>a:before {
+#position-gnb-wrap .gnb>li>a:before {
     display: block;
     position: absolute;
     top: 0;
@@ -124,7 +124,7 @@ body {
     opacity: 0;
 }
 
-#sri-gnb-wrap .gnb>li>a>svg {
+#position-gnb-wrap .gnb>li>a>svg {
     display: block;
     position: absolute;
     top: 10px;
@@ -134,20 +134,20 @@ body {
     height: 24px;
 }
 
-#sri-gnb-wrap .gnb>li.selected>a svg use {
+#position-gnb-wrap .gnb>li.selected>a svg use {
     color: #4876ef;
 }
 
-#sri-gnb-wrap .gnb>li>a>svg use {
+#position-gnb-wrap .gnb>li>a>svg use {
     color: #afbac8;
 }
 
-#sri-gnb-wrap .gnb>li.selected>a>.txt {
+#position-gnb-wrap .gnb>li.selected>a>.txt {
     color: #4876ef;
     font-weight: bold;
 }
 
-#sri-gnb-wrap .gnb>li>a>.txt {
+#position-gnb-wrap .gnb>li>a>.txt {
     display: block;
     position: relative;
     z-index: 2;
@@ -156,16 +156,16 @@ body {
     line-height: 24px;
 }
 
-#sri-gnb-wrap .gnb>li+li {
+#position-gnb-wrap .gnb>li+li {
     margin-top: 8px;
 }
 
-#sri-gnb-wrap .gnb>li {
+#position-gnb-wrap .gnb>li {
     position: relative;
 }
 
 /* 바디 제목*/
-#sri-wrap {
+#position-wrap {
     grid-area: main;
     display: table-row;
     width: 100%;
@@ -462,6 +462,9 @@ field-btn button {
 #select-month{
     width:52px;
 }
+#select-day{
+    width:52px;
+}
 .photo-edit-btn>button:hover, .photo-edit-btn>button:focus {
     background-color: var(--gray20);
 }
@@ -638,7 +641,7 @@ field-btn button {
     box-sizing: border-box;
     background: var(--white);
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
-}
+} 
 
 .layer-pop-manage .layer-manage-wrap {
     position: relative;
@@ -784,6 +787,7 @@ field-btn button {
 }
 
 .layer-pop-manage.layer-progress.photo-progress {
+    display:none;
     padding: 30px;
 }
 
@@ -850,4 +854,27 @@ field-btn button {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.svg-pattern{
+    display:none;
+}
+
+#view-name-empty{
+    display:none;
+}
+#view-birthDay-empty{
+    display:none;
+}
+
+.empty{
+    display:none;
+}
+
+#person-email{
+    display:none;
+}
+
+#photo-layer-dim{
+    display:none;
 }

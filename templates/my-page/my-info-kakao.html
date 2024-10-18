@@ -8,11 +8,10 @@
         <link rel="stylesheet" href="/static/css/my-page/my-info-kakao.css" />
     </head>
     <body id="container" class="vsc-initialized">
-        <header id="sri-header" class="integrated-header">
+        <header id="position-header" class="integrated-header">
             <div class="area-logo">
                 <a
                     href="/zf-user"
-                    onclick="pushDataLayer('ga-lead', 'company-join', 'company-join', 'logo');"
                     class="link-saramin-logo"
                     aria-label="사람인"
                 >
@@ -20,8 +19,6 @@
                         xmlns="http://www.w3.org/2000/svg"
                         width="82"
                         height="21"
-                        viewBox="0 0 82 21"
-                        fill="none"
                     >
                         <path
                             fill-rule="evenodd"
@@ -73,7 +70,7 @@
                         ></path>
                     </svg>
                 </a>
-                <span class="link-speed-logo" aria-label="통합회원 관리">
+                <span class="link-speed-logo">
                     <svg
                         width="101"
                         height="18"
@@ -89,8 +86,8 @@
                 </span>
             </div>
         </header>
-        <div id="sri-section" class="sri-gnb-section">
-            <div id="sri-gnb-wrap" class="sri-gnb-wrap">
+        <div id="position-section" class="position-gnb-section">
+            <div id="position-gnb-wrap" class="position-gnb-wrap">
                 <ul class="gnb">
                     <li class="only selected">
                         <a href="/zf-user/persons/person-update">
@@ -104,7 +101,7 @@
                             <span class="txt">비밀번호 변경</span>
                         </a>
                     </li>
-                    <li class="only">
+                    <!-- <li class="only">
                         <a href="/zf-user/member/my-logins">
                             <svg><use xlink:href="#svg-my-13"></use></svg>
                             <span class="txt">로그인 관리</span>
@@ -115,7 +112,7 @@
                             <svg><use xlink:href="#svg-my-63"></use></svg>
                             <span class="txt">알림설정</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="only">
                         <a
                             a=""
@@ -127,7 +124,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="sri-wrap">
+            <div id="position-wrap">
                 <div id="content">
                     <div class="wrapper-narrow">
                         <h1 class="wrap-title">계정정보 설정</h1>
@@ -175,10 +172,7 @@
                                                 >
                                             </span>
                                         </div>
-                                        <ul
-                                            id="sms-confirm-form"
-                                            style="display: none"
-                                        >
+                                        <ul id="sms-confirm-form">
                                             <li>
                                                 <div class="wrap-lab">
                                                     <label
@@ -210,7 +204,6 @@
                                                     <em
                                                         class="MsgTxt Invalid"
                                                         id="cell-message"
-                                                        style="display: none"
                                                         >정보가 일치하지
                                                         않습니다.</em
                                                     >
@@ -249,10 +242,7 @@
                                                             id="confirm-remain-sms-time-area"
                                                         ></span>
                                                     </span>
-                                                    <em
-                                                        class="MsgTxt Invalid"
-                                                        id="sms-code-message"
-                                                        style="display: none"
+                                                    <em class="MsgTxt Invalid"
                                                         >인증코드를 입력해
                                                         주세요</em
                                                     >
@@ -277,10 +267,7 @@
                                                 >
                                             </span>
                                         </div>
-                                        <ul
-                                            id="email-confirm-form"
-                                            style="display: none"
-                                        >
+                                        <ul id="email-confirm-form">
                                             <li>
                                                 <div class="wrap-lab">
                                                     <label
@@ -312,7 +299,6 @@
                                                     <em
                                                         class="MsgTxt Invalid"
                                                         id="email-message"
-                                                        style="display: none"
                                                         >정보가 일치하지
                                                         않습니다.</em
                                                     >
@@ -354,7 +340,6 @@
                                                     <em
                                                         class="MsgTxt Invalid"
                                                         id="email-code-message"
-                                                        style="display: none"
                                                         >인증코드를 입력해
                                                         주세요</em
                                                     >
@@ -370,7 +355,7 @@
             </div>
             <!-- 여기에 푸터 -->
         </div>
-        <div class="svg-pattern" style="display: none">
+        <div class="svg-pattern">
             <svg xmlns="http://www.w3.org/2000/svg">
                 <symbol id="svg-my-10" viewBox="0 0 24 24">
                     <path

@@ -11,7 +11,7 @@
         />
     </head>
     <body id="container" class="layout-home vsc-initialized">
-        <header id="sri-header" class="sri-header">
+        <header id="position-header" class="position-header">
             <a href="/" class="ci"
                 ><svg>
                     <use xlink:href="#svg-saramin-ci"></use>
@@ -66,7 +66,6 @@
                                 <button
                                     type="button"
                                     class="BtnType SizeM save-layer-tab"
-                                    data-tab-type="scrap"
                                     onclick="showTab('scrap')"
                                 >
                                     <span class="blind">스크랩 버튼</span>
@@ -80,21 +79,19 @@
                                 <button
                                     type="button"
                                     class="BtnType SizeM save-layer-tab"
-                                    data-tab-type="suited"
                                     onclick="showTab('suited')"
                                 >
-                                    <span class="blind">나의 검색 버튼</span>
+                                    <span class="blind">나의 후기 버튼</span>
                                     <svg class="icon-menu layer-tab-btn">
                                         <use xlink:href="#svg-my-52"></use>
                                     </svg>
                                 </button>
-                                <p class="txt">나의 검색</p>
+                                <p class="txt">나의 후기</p>
                             </li>
                             <li>
                                 <button
                                     type="button"
                                     class="BtnType SizeM save-layer-tab"
-                                    data-tab-type="favor-company"
                                     onclick="showTab('favor-company')"
                                 >
                                     <span class="blind">관심기업 버튼</span>
@@ -108,25 +105,21 @@
                         <a
                             href="/zf-user/persons/scrap-recruit"
                             class="BtnType SizeM page-link scrap-recruit-view"
-                            style="display: block"
                             >전체 스크랩 공고 보기</a
                         >
                         <a
                             href="/zf-user/member/suited-recruit-mail/list"
                             class="BtnType SizeM page-link suited-recruit-view"
-                            style="display: none"
                             >전체 나의검색 공고 보기</a
                         >
                         <a
                             href="/zf-user/member/favor-company/list"
                             class="BtnType SizeM page-link favor-recruit-view"
-                            style="display: none"
                             >전체 관심기업 공고 보기</a
                         >
                         <div
                             class="save-list-area ScrollBar"
                             id="scrap-list-area"
-                            style="display: block"
                         >
                             <input
                                 type="hidden"
@@ -154,15 +147,15 @@
                                                 신입&nbsp;&nbsp;대학교(4년)↑&nbsp;&nbsp;경기전체
                                             </li>
                                         </ul>
-                                        <div class="sri-btn-area">
+                                        <div class="position-btn-area">
                                             <span class="deadline">D-1</span>
                                             <a
-                                                class="sri-btn-sm"
+                                                class="position-btn-sm"
                                                 href="/zf-user/jobs/relay/view?view-type=list&amp;rec-idx=49104681"
                                                 target="-blank"
                                                 title="홈페이지 지원"
                                                 ><span
-                                                    class="sri-btn-homepage-apply"
+                                                    class="position-btn-homepage-apply"
                                                     >홈페이지 지원</span
                                                 ></a
                                             >
@@ -183,7 +176,6 @@
                         <div
                             class="save-list-area ScrollBar"
                             id="suited-list-area"
-                            style="display: none"
                         >
                             <div class="save-list">
                                 <span class="date">2024.10.08</span>
@@ -243,20 +235,37 @@
                         <div
                             class="save-list-area ScrollBar"
                             id="favor-list-area"
-                            style="display: none"
                         >
-                            <input
-                                type="hidden"
-                                name="favor-request-page"
-                                value="1"
-                                id="favor-request-page"
-                            />
-                            <input
-                                type="hidden"
-                                name="favor-list-total-cnt"
-                                value="0"
-                                id="favor-list-total-cnt"
-                            />
+                            <div class="save-list">
+                                <span class="date"> 2024.10.16 </span>
+                                <ul>
+                                    <li class="favor-company">
+                                        <div class="image">
+                                            <span class="blind"
+                                                >기업로고 이미지 영역</span
+                                            >
+                                            <img
+                                                src="https://pds.saramin.co.kr/company/logo/202110/18/r162u8_sjm3-ayg4bn_logo.jpg"
+                                                alt="기업로고"
+                                            />
+                                        </div>
+                                        <strong class="name"
+                                            >쿠팡로지스틱스서비스(유)</strong
+                                        >
+                                        <span class="recruit-count"
+                                            >채용중 <b>16</b>건</span
+                                        >
+                                        <a
+                                            href="/zf_user/company-info/view?csn=UHFGUDJkaVM2WjF1dVA4WUVkZTMxdz09"
+                                            class="page-link-btn"
+                                        >
+                                            <span class="blind"
+                                                >공고 링크버튼</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="empty-list">
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
@@ -324,13 +333,9 @@
                         >
                         <div class="save-list-area alarm-area ScrollBar">
                             <strong class="sub-title">TODAY</strong>
-                            <div
-                                class="alarm-list"
-                                id="today-list-content"
-                                style="display: block"
-                            >
+                            <div class="alarm-list" id="today-list-content">
                                 <ul>
-                                    <li style="display: block">
+                                    <li>
                                         <a
                                             href="/zf-user/persons/scrap-recruit?sort=PC"
                                             target=""
@@ -382,7 +387,6 @@
                                 <button
                                     type="button"
                                     class="more today-more-button"
-                                    style="display: none"
                                 >
                                     더보기<svg>
                                         <use xlink:href="#svg-gnb-arrow"></use>
@@ -393,7 +397,6 @@
                             <div
                                 class="empty-list alarm-area"
                                 id="empty-today-list-content"
-                                style="display: none"
                             >
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
@@ -552,8 +555,9 @@
                                                                     ><svg>
                                                                         <use
                                                                             xlink:href="#svg-fluctuation-up"
-                                                                        ></use></svg
-                                                                    >0</span
+                                                                        ></use>
+                                                                    </svg>
+                                                                    0</span
                                                                 >
                                                             </div>
                                                         </li>
@@ -568,8 +572,9 @@
                                                                     ><svg>
                                                                         <use
                                                                             xlink:href="#svg-fluctuation-up"
-                                                                        ></use></svg
-                                                                    >0</span
+                                                                        ></use>
+                                                                    </svg>
+                                                                    0</span
                                                                 >
                                                             </div>
                                                         </li>
@@ -583,8 +588,9 @@
                                                                     ><svg>
                                                                         <use
                                                                             xlink:href="#svg-fluctuation-up"
-                                                                        ></use></svg
-                                                                    >0</span
+                                                                        ></use>
+                                                                    </svg>
+                                                                    0</span
                                                                 >
                                                             </div>
                                                         </li>
@@ -616,7 +622,6 @@
                                     <button
                                         type="button"
                                         class="more btn-more-activity"
-                                        data-page="2"
                                     >
                                         더보기<svg>
                                             <use

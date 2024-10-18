@@ -1,4 +1,3 @@
-// 직무직업 부분 미완성
 // 버튼 클릭 시 on 클래스 토글
 document
     .getElementById("interview-write-selected-job")
@@ -72,18 +71,18 @@ document.getElementById("interviewDateYear").addEventListener("change", (e) => {
 //     });
 
 // // 2단계: box-jobs와 box-detail-jobs 사이 토글
-// document
-//     .querySelector(".interview-write-btn-job")
-//     .addEventListener("click", function () {
-//         const boxJobs = document.querySelector(".interview-write-box-jobs");
-//         const boxDetailJobs = document.querySelector(
-//             ".interview-write-box-detail-jobs"
-//         );
+document
+    .querySelector(".interview-write-btn-job")
+    .addEventListener("click", function () {
+        const boxJobs = document.querySelector(".interview-write-box-jobs");
+        const boxDetailJobs = document.querySelector(
+            ".interview-write-box-detail-jobs"
+        );
 
-//         // box-jobs 숨기고, box-detail-jobs 보여주기
-//         boxJobs.style.display = "none";
-//         boxDetailJobs.style.display = "block";
-//     });
+        // box-jobs 숨기고, box-detail-jobs 보여주기
+        boxJobs.style.display = "none";
+        boxDetailJobs.style.display = "block";
+    });
 
 // // 3단계: box-detail-jobs가 표시되도록 설정
 // document.addEventListener("DOMContentLoaded", function () {
@@ -2448,3 +2447,42 @@ const categorys = {
         ],
     },
 };
+
+// let text = ``;
+// Object.keys(categorys).forEach((categoryA) => {
+//     text += `
+//             <li
+//                 class="interview-write-item-job interview-write-depth1-btn-wrapper on"
+//                 data-mcls-cd-no="16"
+//             >
+//                 <button
+//                     type="button"
+//                     data-mcls-cd-no="16"
+//                     class="interview-write-first-depth"
+//                 >
+//                     <span
+//                         class="interview-write-txt"
+//                         >${categoryA}</span
+//                     >
+//                 </button>
+//             </li>
+//                 `;
+//     Object.keys(categorys[categoryA]).forEach((categoryB) => {
+//         text += `
+//                     <dt>
+//                         <button>
+//                             <span>${categoryB}</span>
+//                         </button>
+//                     </dt>
+//                 `;
+//         categorys[categoryA][categoryB].forEach((categoryC) => {
+//             text += `
+//                     <dd>
+//                         <button>${categoryC}</button>
+//                     </dd>
+//                 `;
+//         });
+//     });
+// });
+
+// console.log(text);

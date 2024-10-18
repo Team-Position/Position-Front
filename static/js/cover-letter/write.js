@@ -41,6 +41,46 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".input-input-input").value = "";
         });
 
+    // textarea 요소 선택
+    const textarea = document.querySelector(
+        ".contentedit-content-edit-content"
+    );
+    const placeholder = document.querySelector(
+        ".contentedit-content-placeholder"
+    );
+    const charCountSpan = document.querySelector(
+        ".contentcount-content-count span"
+    );
+    const contentCountDiv = document.querySelector(
+        ".contentcount-content-count"
+    );
+    const maxCharCount = 500; // 최대 글자 수
+
+    // 입력 이벤트 리스너 추가
+    textarea.addEventListener("input", function () {
+        const content = textarea.value;
+        const charCount = content.length;
+
+        // 글자가 입력되면 placeholder 숨기기
+        if (charCount > 0) {
+            placeholder.classList.remove(
+                "contentedit-content-placeholder-show"
+            );
+        } else {
+            placeholder.classList.add("contentedit-content-placeholder-show");
+        }
+
+        // 글자 수 업데이트
+        charCountSpan.textContent = charCount;
+
+        // 500자를 초과할 경우 글자 색상 빨간색으로 변경
+        if (charCount > maxCharCount) {
+            contentCountDiv.style.color = "red";
+        } else {
+            contentCountDiv.style.color = ""; // 기본 색상으로 복구
+        }
+    });
+
     // 질문 버튼 클릭 시 모달 열기
     document
         .querySelector(".questionedit-question-btn")

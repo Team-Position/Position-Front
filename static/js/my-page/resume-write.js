@@ -9,7 +9,7 @@ function calculateByteLength(str) {
 }
 
 function updateTextCount() {
-    const textarea = document.getElementById("file_res_desc");
+    const textarea = document.getElementById("file-res-desc");
     const text = textarea.value;
     const trimmedText = text.replace(/\s+/g, ""); // 공백 제거된 텍스트
 
@@ -25,10 +25,10 @@ function updateTextCount() {
     document.querySelector(".blankLen").textContent = blankLen;
     document.querySelector(".blankByte").textContent = blankByte;
 }
-const textarea = document.getElementById("file_res_desc");
+const textarea = document.getElementById("file-res-desc");
 textarea.addEventListener("input", updateTextCount);
 
-const fileInput1 = document.getElementById("dumi_file_res");
+const fileInput1 = document.getElementById("dumi-file-res");
 const fileAddBtn = document.getElementById("fileAddBtn");
 const uploadedFileRow = document.getElementById("uploadedFileRow");
 const fileList = document.getElementById("fileList");
@@ -53,9 +53,9 @@ fileInput1.addEventListener("change", () => {
                 <span>${fileName}</span>.${fileExtension}
             </p>
             <span class="data">${fileSizeKB}KB</span>
-            <button type="button" class="btn_delete evtDeleteResFile">
+            <button type="button" class="btn-delete evtDeleteResFile">
                 <svg>
-                    <use xlink:href="#search_delete"></use>
+                    <use xlink:href="#search-delete"></use>
                 </svg>
             </button>
         `;
@@ -78,7 +78,7 @@ fileInput1.addEventListener("change", () => {
         } else {
             // 이미지가 아닌 경우 기본 메시지 유지
             filePreview.innerHTML =
-                '<p class="txt_no_preview">썸네일을 찾을 수 없습니다.</p>';
+                '<p class="txt-no-preview">썸네일을 찾을 수 없습니다.</p>';
         }
 
         // 파일 삭제 버튼 이벤트 추가
@@ -87,7 +87,7 @@ fileInput1.addEventListener("change", () => {
             .addEventListener("click", () => {
                 listItem.remove();
                 filePreview.innerHTML =
-                    '<p class="txt_no_preview">썸네일을 찾을 수 없습니다.</p>';
+                    '<p class="txt-no-preview">썸네일을 찾을 수 없습니다.</p>';
                 if (fileList.children.length === 0) {
                     uploadedFileRow.style.display = "none";
                 }
@@ -98,7 +98,7 @@ fileInput1.addEventListener("change", () => {
 });
 
 // 파일 추가 모달창
-const modalFileBtn = document.querySelector(".btn_file_add");
+const modalFileBtn = document.querySelector(".btn-file-add");
 const wrapResumeNudge = document.getElementById("wrapResumeNudge");
 const closeModalBtns = document.querySelectorAll(".evtBtnClose");
 
@@ -111,13 +111,13 @@ closeModalBtns.forEach((button) => {
     });
 });
 // 파일 등록시 버튼 disable 삭제(활성화)
-const fileInput = document.getElementById("dumi_file_res");
+const fileInput = document.getElementById("dumi-file-res");
 const uploadButton = document.getElementById("uploadBtn");
-const modalUpload = document.getElementById("resume_file_uploaded_layer");
-const btnConfirm = document.querySelector(".btn_confirm"); //파일 등록 완료시 모달창 확인 버튼
-const fileSuccessModal = document.getElementById("resume_file_uploaded_layer");
-const previewFile = document.querySelector(".preview_file_area");
-const addFileArea = document.querySelector(".add_file_area");
+const modalUpload = document.getElementById("resume-file-uploaded-layer");
+const btnConfirm = document.querySelector(".btn-confirm"); //파일 등록 완료시 모달창 확인 버튼
+const fileSuccessModal = document.getElementById("resume-file-uploaded-layer");
+const previewFile = document.querySelector(".preview-file-area");
+const addFileArea = document.querySelector(".add-file-area");
 const dimmed = document.getElementById("dimmed"); //파일 등록 완료시 뒷 배경
 
 fileInput.addEventListener("change", () => {
@@ -141,9 +141,9 @@ btnConfirm.addEventListener("click", () => {
 });
 
 // 이력서 팁 보기
-const toggleBtn = document.querySelector(".tip_recommend.show_resume_title"); // 클릭할 버튼
+const toggleBtn = document.querySelector(".tip-recommend.show-resume-title"); // 클릭할 버튼
 const toggleContent = document.querySelector(
-    ".TipCont.BottomLeft.resume_title_option"
+    ".TipCont.BottomLeft.resume-title-option"
 ); // 팁 내용
 const closeTip = document.querySelector(".BtnClose");
 // 팁 내용 버튼
@@ -173,7 +173,7 @@ closeTip.addEventListener("click", () => {
 // 스킬에서 선택하면 아래에 데이터 뿌리기
 document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
     checkbox.addEventListener("change", (e) => {
-        const skillList = document.querySelector(".soft_add"); // 스킬 목록 영역
+        const skillList = document.querySelector(".soft-add"); // 스킬 목록 영역
         const progressCircle = document.querySelector(".induceSkill .svg"); // SVG 요소
 
         // 레이블에서 텍스트 가져오기
@@ -213,14 +213,14 @@ document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
         if (e.target.checked) {
             // 체크박스가 선택된 경우, 스킬 추가
             const skillItem = document.createElement("span");
-            skillItem.className = "skill_item basicSkillItem";
+            skillItem.className = "skill-item basicSkillItem";
             skillItem.innerHTML = `
-                <button type="button" class="skill_modify evtLayerSkillItemDetail">
+                <button type="button" class="skill-modify evtLayerSkillItemDetail">
                     <em class="skillNm">${skillValue}</em>
-                    <svg><use xlink:href="#view_modify"></use></svg>
+                    <svg><use xlink:href="#view-modify"></use></svg>
                 </button>
-                <button type="button" class="skill_delete evtDeleteSkillItem">
-                    <svg><use xlink:href="#resume_skill_close"></use></svg>
+                <button type="button" class="skill-delete evtDeleteSkillItem">
+                    <svg><use xlink:href="#resume-skill-close"></use></svg>
                 </button>
             `;
 
@@ -267,9 +267,9 @@ document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
 // 스킬 입력(검색)할때
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("searchSkill");
-    const btnDelete = document.querySelector(".btn_delete.autoCompleteUi");
+    const btnDelete = document.querySelector(".btn-delete.autoCompleteUi");
     const autoSearch = document.querySelector(
-        ".area_auto_search.company_search.autoCompleteList.autoCompleteUi"
+        ".area-auto-search.company-search.autoCompleteList.autoCompleteUi"
     );
     const skillList = document.querySelector(".wrapBasicSkill");
 
@@ -306,30 +306,30 @@ const setDisplay = (element, display) => {
 // 버튼 클릭 핸들러
 const handleButtonClick = (event) => {
     const clickedButton = event.currentTarget; // 클릭된 버튼
-    const parentContainer = clickedButton.closest(".resume_skill"); // 부모 컨테이너 탐색
+    const parentContainer = clickedButton.closest(".resume-skill"); // 부모 컨테이너 탐색
 
     // 각 요소를 부모 컨테이너 내에서 찾기
-    setDisplay(parentContainer.querySelector(".btn_add.evtWriteItem"), "none"); // 클릭된 버튼 숨김
+    setDisplay(parentContainer.querySelector(".btn-add.evtWriteItem"), "none"); // 클릭된 버튼 숨김
     setDisplay(parentContainer.querySelector(".TipBox"), "block"); // TipBox 표시
-    setDisplay(parentContainer.querySelector(".resume_list"), "none"); // resume_list 숨김
+    setDisplay(parentContainer.querySelector(".resume-list"), "none"); // resume-list 숨김
     setDisplay(
-        parentContainer.querySelector(".resume_edit.wrapHiddenForm"),
+        parentContainer.querySelector(".resume-edit.wrapHiddenForm"),
         "block"
-    ); // resume_edit 표시
+    ); // resume-edit 표시
 };
 // 삭제 버튼 클릭 핸들러
 const handleDeleteButtonClick = (event) => {
     const clickedButton = event.currentTarget; // 클릭된 삭제 버튼
-    const parentContainer = clickedButton.closest(".resume_skill"); // 부모 컨테이너 탐색
+    const parentContainer = clickedButton.closest(".resume-skill"); // 부모 컨테이너 탐색
 
     // 부모 컨테이너 내 요소의 display 스타일 복구
-    setDisplay(parentContainer.querySelector(".btn_add.evtWriteItem"), "block"); // 추가 버튼 표시
+    setDisplay(parentContainer.querySelector(".btn-add.evtWriteItem"), "block"); // 추가 버튼 표시
     setDisplay(parentContainer.querySelector(".TipBox"), "none"); // TipBox 숨김
-    setDisplay(parentContainer.querySelector(".resume_list"), "block"); // resume_list 표시
+    setDisplay(parentContainer.querySelector(".resume-list"), "block"); // resume-list 표시
     setDisplay(
-        parentContainer.querySelector(".resume_edit.wrapHiddenForm"),
+        parentContainer.querySelector(".resume-edit.wrapHiddenForm"),
         "none"
-    ); // resume_edit 숨김
+    ); // resume-edit 숨김
 };
 
 // 모든 삭제 버튼에 이벤트 리스너 등록
@@ -338,13 +338,13 @@ document
     .addEventListener("click", handleDeleteButtonClick);
 
 // 모든 버튼에 이벤트 리스너 등록
-document.querySelectorAll(".btn_add.evtWriteItem").forEach((button) => {
+document.querySelectorAll(".btn-add.evtWriteItem").forEach((button) => {
     button.addEventListener("click", handleButtonClick);
 });
 
 //숨겨진 내스킬 추가
 document
-    .querySelector(".skill_hide_add")
+    .querySelector(".skill-hide-add")
     .addEventListener("click", handleButtonClick);
 
 // 스킬 수정 버튼 클릭
@@ -357,11 +357,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const showPrivacyButton = document.querySelector(".showPrivacy");
 
     // 사용자 정보를 숨기는 div 선택
-    const userHideDiv = document.querySelector(".user_hide");
+    const userHideDiv = document.querySelector(".user-hide");
 
     // 이메일과 전화번호 선택
-    const emailItem = document.querySelector(".user_email");
-    const phoneItem = document.querySelector(".user_phone");
+    const emailItem = document.querySelector(".user-email");
+    const phoneItem = document.querySelector(".user-phone");
 
     // 원본 데이터 저장
     const originalEmail = emailItem.textContent.trim(); // 'sanghun1016@naver.com'
@@ -400,13 +400,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const addButton = document.querySelector(".btn_add.evtWriteItem");
+const addButton = document.querySelector(".btn-add.evtWriteItem");
 const modifyElement = document.querySelector(
-    ".btn_modify.evtOpenLastSchoolNudge"
+    ".btn-modify.evtOpenLastSchoolNudge"
 );
-const evtEditItem = document.querySelector(".BtnType.view_modify.evtEditItem");
+const evtEditItem = document.querySelector(".BtnType.view-modify.evtEditItem");
 
-const resumeList = document.querySelector(".resume_list");
+const resumeList = document.querySelector(".resume-list");
 const app = document.getElementById("app");
 
 // UI 상태를 복원하는 함수
@@ -420,11 +420,11 @@ function restoreUI() {
 function createViewA() {
     const div1 = document.createElement("div");
     div1.innerHTML = `
-        <div id="resumeSchoolItem" class="resume_edit wrapHiddenForm"">
-            <div class="item_row">
-                <div class="InpBox SizeL item_m">
+        <div id="resumeSchoolItem" class="resume-edit wrapHiddenForm"">
+            <div class="item-row">
+                <div class="InpBox SizeL item-m">
                     <label for="schoolType" class="blind">학력구분</label>
-                    <select name="school_type" class="evtChangeSchoolType">
+                    <select name="school-type" class="evtChangeSchoolType">
                         <option value="" selected>학력 구분 선택 *</option>
                         <option value="primary">초등학교 졸업</option>
                         <option value="middle">중학교 졸업</option>
@@ -434,7 +434,7 @@ function createViewA() {
                     </select>
                 </div>
             </div>
-            <div class="resume_save notCached">
+            <div class="resume-save notCached">
                 <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
                 <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
             </div>
@@ -454,7 +454,7 @@ function createViewA() {
         } else if (value === "middle") {
             showView("B_1"); // View B_1 표시
         } else if (value === "high") {
-            showView("B_2"); // View B_1 표시
+            showView("B_2"); // View B_2 표시
         }
     });
 
@@ -466,12 +466,12 @@ function createViewB() {
     const div2 = document.createElement("div");
     div2.innerHTML = `
                     <div id="resumeSchoolItem" 
-                class="resume_edit wrapHiddenForm">
+                class="resume-edit wrapHiddenForm">
                 
-                <div class="item_row item_center item_career">
-                    <div class="InpBox SizeL item_m">
+                <div class="item-row item-center item-career">
+                    <div class="InpBox SizeL item-m">
                         <label for="schoolType" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolType" 
+                        <select name="school-type" id="schoolType" 
                                 class="evtChangeSchoolType">
                             <option value="basic">학력 구분 선택 *</option>
                             <option value="primary" selected="">초등학교 졸업</option>
@@ -482,7 +482,7 @@ function createViewB() {
                         </select>
                     </div>
 
-                    <div class="InpBox item_check">
+                    <div class="InpBox item-check">
                         <span class="Chk SizeL">
                             <input type="checkbox"
                                 id="qualificationN" 
@@ -493,10 +493,10 @@ function createViewB() {
                         </span>
                     </div>
                 </div>
-                <div class="item_row item_center item_close" style="display: none;">
-                    <div class="InpBox SizeL item_s check">
+                <div class="item-row item-center item-close" style="display: none;">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolTypeQualification" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolTypeQualification" class="evtChangeSchoolType">
+                        <select name="school-type" id="schoolTypeQualification" class="evtChangeSchoolType">
                             <option value="basic">학력 구분 선택 *</option>
                             <option value="primary" selected="selected">초등학교 졸업</option>
                             <option value="middle">중학교 졸업</option>
@@ -506,7 +506,7 @@ function createViewB() {
                         </select>
                     </div>
 
-                    <div class="InpBox SizeL item_s">
+                    <div class="InpBox SizeL item-s">
                         <label for="schoolAreaCode" class="blind">지역</label>
                             <select id="schoolAreaCode">
                                 <option value="" selected="selected">지역 선택</option>
@@ -539,12 +539,12 @@ function createViewB() {
                             </select>
                     </div>
 
-                    <div class="TypoBox item item_s LblTop">
+                    <div class="TypoBox item item-s LblTop">
                         <label for="qualGraduationDt" class="Lbl">합격년월 *</label>
                         <input type="text" id="qualGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker check" maxlength="6" pattern="[0-9]*" placeholder="YYYYMM" required="">
                     </div>
 
-                    <div class="InpBox item_check">
+                    <div class="InpBox item-check">
                         <span class="Chk SizeL">
                             <input type="checkbox" id="qualificationY" class="evtChangeQualification" checked="">
                             <label class="Lbl test2" for="qualificationY">중입 검정고시(초졸)</label>
@@ -552,15 +552,15 @@ function createViewB() {
                     </div>
                 </div>
 
-                <div class="item_row detail">
-                    <div class="TypoBox TypeBtn item_m LblTop">
+                <div class="item-row detail">
+                    <div class="TypoBox TypeBtn item-m LblTop">
                         <label class="Lbl" for="schoolNm">학교명 *</label>
-                        <input type="text" name="school_nm[]" value="" 
+                        <input type="text" name="school-nm[]" value="" 
                             id="schoolNm" class="Typo SizeL check" 
                             maxlength="100" placeholder="학교명 *" required="" />
                     </div>
 
-                    <div class="InpBox SizeL item_s check">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolGraduationGb" class="blind">졸업여부</label>
                         <select id="schoolGraduationGb" required="">
                             <option value="">졸업여부 *</option>
@@ -569,7 +569,7 @@ function createViewB() {
                         </select>
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label for="schoolEntranceDt" class="Lbl">입학년월</label>
                         <input type="text" 
                             id="schoolEntranceDt" class="Typo SizeL onlyNumber DatePic datePicker" 
@@ -577,15 +577,15 @@ function createViewB() {
                             pattern="[0-9]*" placeholder="YYYYMM" required="" />
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label for="schoolGraduationDt" class="Lbl">졸업년월</label>
-                        <input type="text" name="school_graduation_dt[]" value="" 
+                        <input type="text" name="school-graduation-dt[]" value="" 
                             id="schoolGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker" 
                              maxlength="6" placeholder="YYYYMM" 
                             pattern="[0-9]*" required="" />
                     </div>
 
-                    <div class="InpBox SizeL item_s">
+                    <div class="InpBox SizeL item-s">
                         <label for="schoolAreaCode" class="blind">지역</label>
                         <select id="schoolAreaCode">
                             <option value="">지역 선택</option>
@@ -618,7 +618,7 @@ function createViewB() {
                         </select>
                     </div>
                 </div>
-                <div class="resume_save notCached">
+                <div class="resume-save notCached">
                     <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
                     <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
                 </div>
@@ -641,7 +641,7 @@ function createViewB() {
             } else if (value === "middle") {
                 showView("B_1"); // View B_1 표시
             } else if (value === "high") {
-                showView("B_2"); // View B_1 표시
+                showView("B_2"); // View B_2 표시
             }
         });
     });
@@ -653,12 +653,12 @@ function createViewB_1() {
     const div2_1 = document.createElement("div");
     div2_1.innerHTML = `
                     <div id="resumeSchoolItem" 
-                class="resume_edit wrapHiddenForm">
+                class="resume-edit wrapHiddenForm">
                 
-                <div class="item_row item_center item_career">
-                    <div class="InpBox SizeL item_m">
+                <div class="item-row item-center item-career">
+                    <div class="InpBox SizeL item-m">
                         <label for="schoolType" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolType" 
+                        <select name="school-type" id="schoolType" 
                                 class="evtChangeSchoolType">
                             <option value="basic">학력 구분 선택 *</option>
                             <option value="primary">초등학교 졸업</option>
@@ -669,7 +669,7 @@ function createViewB_1() {
                         </select>
                     </div>
 
-                    <div class="InpBox item_check">
+                    <div class="InpBox item-check">
                         <span class="Chk SizeL">
                             <input type="checkbox"
                                 id="qualificationN" 
@@ -680,10 +680,10 @@ function createViewB_1() {
                         </span>
                     </div>
                 </div>
-                <div class="item_row item_center item_close" style="display: none;">
-                    <div class="InpBox SizeL item_s check">
+                <div class="item-row item-center item-close" style="display: none;">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolTypeQualification" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolTypeQualification" class="evtChangeSchoolType">
+                        <select name="school-type" id="schoolTypeQualification" class="evtChangeSchoolType">
                             <option value="basic">학력 구분 선택 *</option>
                             <option value="primary">초등학교 졸업</option>
                             <option value="middle" selected="selected">중학교 졸업</option>
@@ -693,7 +693,7 @@ function createViewB_1() {
                         </select>
                     </div>
 
-                    <div class="InpBox SizeL item_s">
+                    <div class="InpBox SizeL item-s">
                         <label for="schoolAreaCode" class="blind">지역</label>
                             <select id="schoolAreaCode">
                                 <option value="" selected="selected">지역 선택</option>
@@ -726,12 +726,12 @@ function createViewB_1() {
                             </select>
                     </div>
 
-                    <div class="TypoBox item item_s LblTop">
+                    <div class="TypoBox item item-s LblTop">
                         <label for="qualGraduationDt" class="Lbl">합격년월 *</label>
                         <input type="text" id="qualGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker check" maxlength="6" pattern="[0-9]*" placeholder="YYYYMM" required="">
                     </div>
 
-                    <div class="InpBox item_check">
+                    <div class="InpBox item-check">
                         <span class="Chk SizeL">
                             <input type="checkbox" id="qualificationY" class="evtChangeQualification" checked="">
                             <label class="Lbl test2" for="qualificationY">고입 검정고시(중졸)</label>
@@ -739,15 +739,15 @@ function createViewB_1() {
                     </div>
                 </div>
 
-                <div class="item_row detail">
-                    <div class="TypoBox TypeBtn item_m LblTop">
+                <div class="item-row detail">
+                    <div class="TypoBox TypeBtn item-m LblTop">
                         <label class="Lbl" for="schoolNm">학교명 *</label>
-                        <input type="text" name="school_nm[]" value="" 
+                        <input type="text" name="school-nm[]" value="" 
                             id="schoolNm" class="Typo SizeL check" 
                             maxlength="100" placeholder="학교명 *" required="" />
                     </div>
 
-                    <div class="InpBox SizeL item_s check">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolGraduationGb" class="blind">졸업여부</label>
                         <select id="schoolGraduationGb" required="">
                             <option value="">졸업여부 *</option>
@@ -756,7 +756,7 @@ function createViewB_1() {
                         </select>
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label for="schoolEntranceDt" class="Lbl">입학년월</label>
                         <input type="text" 
                             id="schoolEntranceDt" class="Typo SizeL onlyNumber DatePic datePicker" 
@@ -764,15 +764,15 @@ function createViewB_1() {
                             pattern="[0-9]*" placeholder="YYYYMM" required="" />
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label for="schoolGraduationDt" class="Lbl">졸업년월</label>
-                        <input type="text" name="school_graduation_dt[]" value="" 
+                        <input type="text" name="school-graduation-dt[]" value="" 
                             id="schoolGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker" 
                              maxlength="6" placeholder="YYYYMM" 
                             pattern="[0-9]*" required="" />
                     </div>
 
-                    <div class="InpBox SizeL item_s">
+                    <div class="InpBox SizeL item-s">
                         <label for="schoolAreaCode" class="blind">지역</label>
                         <select id="schoolAreaCode">
                             <option value="">지역 선택</option>
@@ -805,7 +805,7 @@ function createViewB_1() {
                         </select>
                     </div>
                 </div>
-                <div class="resume_save notCached">
+                <div class="resume-save notCached">
                     <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
                     <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
                 </div>
@@ -828,7 +828,7 @@ function createViewB_1() {
             } else if (value === "middle") {
                 showView("B_1"); // View B_1 표시
             } else if (value === "high") {
-                showView("B_2"); // View B_1 표시
+                showView("B_2"); // View B_2 표시
             }
         });
     });
@@ -840,12 +840,12 @@ function createViewB_2() {
     const div2_2 = document.createElement("div");
     div2_2.innerHTML = `
                     <div id="resumeSchoolItem" 
-                class="resume_edit wrapHiddenForm">
+                class="resume-edit wrapHiddenForm">
                 
-                <div class="item_row item_center item_career">
-                    <div class="InpBox SizeL item_m">
+                <div class="item-row item-center item-career">
+                    <div class="InpBox SizeL item-m">
                         <label for="schoolType" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolType" 
+                        <select name="school-type" id="schoolType" 
                                 class="evtChangeSchoolType">
                             <option value="basic">학력 구분 선택 *</option>
                             <option value="primary">초등학교 졸업</option>
@@ -856,7 +856,7 @@ function createViewB_2() {
                         </select>
                     </div>
 
-                    <div class="InpBox item_check">
+                    <div class="InpBox item-check">
                         <span class="Chk SizeL">
                             <input type="checkbox"
                                 id="qualificationN" 
@@ -867,10 +867,10 @@ function createViewB_2() {
                         </span>
                     </div>
                 </div>
-                <div class="item_row item_center item_close" style="display: none;">
-                    <div class="InpBox SizeL item_s check">
+                <div class="item-row item-center item-close" style="display: none;">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolTypeQualification" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolTypeQualification" class="evtChangeSchoolType">
+                        <select name="school-type" id="schoolTypeQualification" class="evtChangeSchoolType">
                             <option value="basic">학력 구분 선택 *</option>
                             <option value="primary">초등학교 졸업</option>
                             <option value="middle" >중학교 졸업</option>
@@ -880,7 +880,7 @@ function createViewB_2() {
                         </select>
                     </div>
 
-                    <div class="InpBox SizeL item_s">
+                    <div class="InpBox SizeL item-s">
                         <label for="schoolAreaCode" class="blind">지역</label>
                             <select id="schoolAreaCode">
                                 <option value="" selected="selected">지역 선택</option>
@@ -913,12 +913,12 @@ function createViewB_2() {
                             </select>
                     </div>
 
-                    <div class="TypoBox item item_s LblTop">
+                    <div class="TypoBox item item-s LblTop">
                         <label for="qualGraduationDt" class="Lbl">합격년월 *</label>
                         <input type="text" id="qualGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker check" maxlength="6" pattern="[0-9]*" placeholder="YYYYMM" required="">
                     </div>
 
-                    <div class="InpBox item_check">
+                    <div class="InpBox item-check">
                         <span class="Chk SizeL">
                             <input type="checkbox" id="qualificationY" class="evtChangeQualification" checked="">
                             <label class="Lbl test2" for="qualificationY">대입 검정고시(고졸)</label>
@@ -926,15 +926,15 @@ function createViewB_2() {
                     </div>
                 </div>
 
-                <div class="item_row detail">
-                    <div class="TypoBox TypeBtn item_m LblTop">
+                <div class="item-row detail">
+                    <div class="TypoBox TypeBtn item-m LblTop">
                         <label class="Lbl" for="schoolNm">학교명 *</label>
-                        <input type="text" name="school_nm[]" value="" 
+                        <input type="text" name="school-nm[]" value="" 
                             id="schoolNm" class="Typo SizeL check" 
                             maxlength="100" placeholder="학교명 *" required="" />
                     </div>
 
-                    <div class="InpBox SizeL item_s check">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolGraduationGb" class="blind">졸업여부</label>
                         <select id="schoolGraduationGb" required="">
                             <option value="">졸업여부 *</option>
@@ -943,7 +943,7 @@ function createViewB_2() {
                         </select>
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label for="schoolEntranceDt" class="Lbl">입학년월</label>
                         <input type="text" 
                             id="schoolEntranceDt" class="Typo SizeL onlyNumber DatePic datePicker" 
@@ -951,15 +951,15 @@ function createViewB_2() {
                             pattern="[0-9]*" placeholder="YYYYMM" required="" />
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label for="schoolGraduationDt" class="Lbl">졸업년월</label>
-                        <input type="text" name="school_graduation_dt[]" value="" 
+                        <input type="text" name="school-graduation-dt[]" value="" 
                             id="schoolGraduationDt" class="Typo SizeL onlyNumber DatePic datePicker" 
                              maxlength="6" placeholder="YYYYMM" 
                             pattern="[0-9]*" required="" />
                     </div>
 
-                    <div class="InpBox SizeL item_s">
+                    <div class="InpBox SizeL item-s">
                         <label for="schoolAreaCode" class="blind">지역</label>
                         <select id="schoolAreaCode">
                             <option value="">지역 선택</option>
@@ -992,7 +992,7 @@ function createViewB_2() {
                         </select>
                     </div>
                 </div>
-                <div class="resume_save notCached">
+                <div class="resume-save notCached">
                     <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
                     <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
                 </div>
@@ -1015,7 +1015,7 @@ function createViewB_2() {
             } else if (value === "middle") {
                 showView("B_1"); // View B_1 표시
             } else if (value === "high") {
-                showView("B_2"); // View B_1 표시
+                showView("B_2"); // View B_2 표시
             }
         });
     });
@@ -1026,11 +1026,11 @@ function createViewB_2() {
 function createViewC() {
     const div3 = document.createElement("div");
     div3.innerHTML = `
-            <div id="resumeSchoolItem" class="resume_edit wrapHiddenForm">
-                <div class="item_row item_center">
-                    <div class="InpBox SizeL item_m">
+            <div id="resumeSchoolItem" class="resume-edit wrapHiddenForm">
+                <div class="item-row item-center">
+                    <div class="InpBox SizeL item-m">
                         <label for="schoolType" class="blind">학력구분</label>
-                        <select name="school_type" id="schoolType" class="evtChangeSchoolType">
+                        <select name="school-type" id="schoolType" class="evtChangeSchoolType">
                             <option value="basic">학력 구분 선택 *</option>
                             <option value="primary">초등학교 졸업</option>
                             <option value="middle">중학교 졸업</option>
@@ -1040,7 +1040,7 @@ function createViewC() {
                         </select>
                     </div>
 
-                    <div class="InpBox SizeL item_s check">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolGb" class="blind">대학구분</label>
                         <select id="schoolGb">
                             <option value="">대학구분 *</option>
@@ -1051,7 +1051,7 @@ function createViewC() {
                         </select>
                     </div>
 
-                    <div class="TypoBox TypeBtn item_m">
+                    <div class="TypoBox TypeBtn item-m">
                         <label class="blind" for="schoolNm">학교명 *</label>
                         <input 
                             type="text" 
@@ -1061,7 +1061,7 @@ function createViewC() {
                         />
                     </div>
 
-                    <div class="InpBox item_check">
+                    <div class="InpBox item-check">
                         <span class="Chk SizeL">
                             <input 
                                 type="checkbox" id="btnEntranceGb" 
@@ -1073,8 +1073,8 @@ function createViewC() {
                     </div>
                 </div>
 
-                <div class="item_row">
-                    <div class="TypoBox item_m LblTop">
+                <div class="item-row">
+                    <div class="TypoBox item-m LblTop">
                         <label class="Lbl" for="schoolMajor">전공 *</label>
                         <input 
                             type="text" 
@@ -1083,7 +1083,7 @@ function createViewC() {
                         />
                     </div>
 
-                    <div class="InpBox SizeL item_s check">
+                    <div class="InpBox SizeL item-s check">
                         <label for="schoolGraduationGb" class="blind"></label>
                         <select id="schoolGraduationGb" required="">
                             <option value="">졸업여부 *</option>
@@ -1097,7 +1097,7 @@ function createViewC() {
                         </select>
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label class="Lbl" for="schoolEntranceDt">입학년월</label>
                         <input 
                             type="text"
@@ -1107,7 +1107,7 @@ function createViewC() {
                         />
                     </div>
 
-                    <div class="TypoBox item_s LblTop">
+                    <div class="TypoBox item-s LblTop">
                         <label class="Lbl" for="schoolGraduationDt">졸업년월</label>
                         <input 
                             type="text" 
@@ -1117,7 +1117,7 @@ function createViewC() {
                         />
                     </div>
 
-                    <div class="InpBox SizeL item_s" style="display: none">
+                    <div class="InpBox SizeL item-s" style="display: none">
                         <label for="schoolDayNight" class="blind">주/야간</label>
                         <select id="schoolDayNight" class="additionalItem">
                             <option value="">주/야간 선택</option>
@@ -1127,7 +1127,7 @@ function createViewC() {
                     </div>
                 </div>
 
-                <div class="resume_save notCached">
+                <div class="resume-save notCached">
                     <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
                     <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
                 </div>
@@ -1149,7 +1149,7 @@ function createViewC() {
         } else if (value === "middle") {
             showView("B_1"); // View B_1 표시
         } else if (value === "high") {
-            showView("B_2"); // View B_1 표시
+            showView("B_2"); // View B_2 표시
         }
     });
 
@@ -1160,11 +1160,11 @@ function createViewC() {
 function createViewD() {
     const div4 = document.createElement("div");
     div4.innerHTML = `
-        <div id="resumeSchoolItem" class="resume_edit wrapHiddenForm">
-            <div class="item_row item_center">
-                <div class="InpBox SizeL item_m">
-                    <label for="schoolType_1729132115363" class="blind">학력구분</label>
-                    <select name="school_type" id="schoolType_1729132115363" class="evtChangeSchoolType">
+        <div id="resumeSchoolItem" class="resume-edit wrapHiddenForm">
+            <div class="item-row item-center">
+                <div class="InpBox SizeL item-m">
+                    <label for="schoolType-1729132115363" class="blind">학력구분</label>
+                    <select name="school-type" id="schoolType-1729132115363" class="evtChangeSchoolType">
                         <option value="basic">학력 구분 선택 *</option>
                         <option value="primary">초등학교 졸업</option>
                         <option value="middle">중학교 졸업</option>
@@ -1173,29 +1173,29 @@ function createViewD() {
                         <option value="academy" selected="">직업전문학원ㆍ학교 및 기타학력 졸업</option>
                     </select>
                 </div>
-                <div class="InpBox SizeL item_s check">
-                    <label for="academyAdmittedEducationCd_1729132115363" class="blind"></label>
-                    <select name="academy_admitted_education_cd[]" id="academyAdmittedEducationCd_1729132115363">
+                <div class="InpBox SizeL item-s check">
+                    <label for="academyAdmittedEducationCd-1729132115363" class="blind"></label>
+                    <select name="academy-admitted-education-cd[]" id="academyAdmittedEducationCd-1729132115363">
                         <option value="">인정학력 *</option>
                         <option value="2">대학(2,3년)</option>
                         <option value="3">대학교(4년)</option>
                     </select>
                 </div>
-                <div class="TypoBox TypeBtn item_m">
-                    <label for="academyNm_1729132115363" class="blind">학교/학원명 *</label>
-                    <input type="text" name="academy_nm[]" id="academyNm_1729132115363" 
+                <div class="TypoBox TypeBtn item-m">
+                    <label for="academyNm-1729132115363" class="blind">학교/학원명 *</label>
+                    <input type="text" name="academy-nm[]" id="academyNm-1729132115363" 
                         class="Typo SizeL check" maxlength="100" placeholder="학교/학원명 *" />
                 </div>
             </div>
-            <div class="item_row">
-                <div class="TypoBox item_m">
-                    <label for="academyMajor_1729132115363" class="blind">전공분야</label>
-                    <input type="text" name="academy_major[]" id="academyMajor_1729132115363" 
+            <div class="item-row">
+                <div class="TypoBox item-m">
+                    <label for="academyMajor-1729132115363" class="blind">전공분야</label>
+                    <input type="text" name="academy-major[]" id="academyMajor-1729132115363" 
                         class="Typo SizeL check" maxlength="50" placeholder="전공분야 *" />
                 </div>
-                <div class="InpBox SizeL item_s check">
-                    <label for="academyGraduationGb_1729132115363" class="blind">졸업구분</label>
-                    <select name="academy_graduation_gb[]" id="academyGraduationGb_1729132115363" required="">
+                <div class="InpBox SizeL item-s check">
+                    <label for="academyGraduationGb-1729132115363" class="blind">졸업구분</label>
+                    <select name="academy-graduation-gb[]" id="academyGraduationGb-1729132115363" required="">
                         <option value="">졸업구분 *</option>
                         <option value="1">졸업</option>
                         <option value="2">재학중</option>
@@ -1206,21 +1206,21 @@ function createViewD() {
                         <option value="6">졸업예정</option>
                     </select>
                 </div>
-                <div class="TypoBox item_s LblTop">
-                    <label for="academyEntranceDt_1729132115363" class="Lbl">입학년월 *</label>
-                    <input type="text" name="academy_entrance_dt[]" id="academyEntranceDt_1729132115363" 
+                <div class="TypoBox item-s LblTop">
+                    <label for="academyEntranceDt-1729132115363" class="Lbl">입학년월 *</label>
+                    <input type="text" name="academy-entrance-dt[]" id="academyEntranceDt-1729132115363" 
                         class="Typo SizeL onlyNumber DatePic datePicker check" data-dateformat="yymm" 
                         maxlength="6" placeholder="YYYYMM" inputmode="numeric" pattern="[0-9]*" required="" />
                 </div>
-                <div class="TypoBox item_s LblTop">
-                    <label for="academyGraduationDt_1729132115363" class="Lbl">졸업년월 *</label>
-                    <input type="text" name="academy_graduation_dt[]" id="academyGraduationDt_1729132115363" 
+                <div class="TypoBox item-s LblTop">
+                    <label for="academyGraduationDt-1729132115363" class="Lbl">졸업년월 *</label>
+                    <input type="text" name="academy-graduation-dt[]" id="academyGraduationDt-1729132115363" 
                         class="Typo SizeL onlyNumber DatePic datePicker check" data-dateformat="yymm" 
                         maxlength="6" placeholder="YYYYMM" inputmode="numeric" pattern="[0-9]*" required="" />
                 </div>
-                <div class="InpBox SizeL item_s check">
-                    <label for="academyAreaCode_1729132115363" class="blind">지역</label>
-                    <select name="academy_area_code[]" id="academyAreaCode_1729132115363">
+                <div class="InpBox SizeL item-s check">
+                    <label for="academyAreaCode-1729132115363" class="blind">지역</label>
+                    <select name="academy-area-code[]" id="academyAreaCode-1729132115363">
                         <option value="">지역 *</option>
                         <option value="101000">서울</option>
                         <option value="102000">경기</option>
@@ -1251,7 +1251,7 @@ function createViewD() {
                     </select>
                 </div>
             </div>
-            <div class="resume_save notCached">
+            <div class="resume-save notCached">
                 <button type="button" class="BtnType SizeL BlueInvert evtLayerClose w50">취소</button>
                 <button type="button" class="BtnType SizeL evtLayerSave w50">저장</button>
             </div>
@@ -1272,7 +1272,7 @@ function createViewD() {
         } else if (value === "middle") {
             showView("B_1"); // View B_1 표시
         } else if (value === "high") {
-            showView("B_2"); // View B_1 표시
+            showView("B_2"); // View B_2 표시
         }
     });
 
@@ -1335,11 +1335,11 @@ document.addEventListener("input", (event) => {
     }
 });
 
-// 2. InpBox SizeL item_s 내부 select 요소들에 실시간 변경 이벤트 위임
+// 2. InpBox SizeL item-s 내부 select 요소들에 실시간 변경 이벤트 위임
 document.addEventListener("change", (event) => {
-    if (event.target.matches(".InpBox.SizeL.item_s.check select")) {
+    if (event.target.matches(".InpBox.SizeL.item-s.check select")) {
         const selectElement = event.target;
-        const closestInpBox = selectElement.closest(".InpBox.SizeL.item_s");
+        const closestInpBox = selectElement.closest(".InpBox.SizeL.item-s");
 
         if (selectElement.value === "") {
             // 값이 선택되지 않은 경우 Invalid 추가
@@ -1362,7 +1362,7 @@ document.addEventListener("click", (event) => {
     if (checkboxY) checkboxY.checked = true; // 두 번째 체크박스: 항상 선택
 
     if (event.target.classList.contains("evtLayerClose")) {
-        const resumeEdit = event.target.closest(".resume_edit");
+        const resumeEdit = event.target.closest(".resume-edit");
         // if (resumeEdit) resumeEdit.remove();
         if (resumeEdit) resumeEdit.style.display = "none";
         restoreUI(); // UI 상태 복원
@@ -1381,12 +1381,12 @@ document.addEventListener("click", (event) => {
             }
         });
 
-        // 2. InpBox SizeL item_s 내부의 select 요소들 검사
+        // 2. InpBox SizeL item-s 내부의 select 요소들 검사
         const inpBoxSelects = document.querySelectorAll(
-            ".InpBox.SizeL.item_s.check select"
+            ".InpBox.SizeL.item-s.check select"
         );
         inpBoxSelects.forEach((selectElement) => {
-            const closestInpBox = selectElement.closest(".InpBox.SizeL.item_s");
+            const closestInpBox = selectElement.closest(".InpBox.SizeL.item-s");
             if (selectElement.value === "") {
                 // 값이 선택되지 않은 경우
                 if (closestInpBox) closestInpBox.classList.add("Invalid");
@@ -1407,68 +1407,68 @@ document.addEventListener("click", (event) => {
     if (event.target.classList.contains("Lbl")) {
         // "test1" 클래스를 가진 경우
         if (event.target.classList.contains("test1")) {
-            // item_row item_center item_career 요소 찾기
+            // item-row item-center item-career 요소 찾기
             const itemCareer = document.querySelector(
-                ".item_row.item_center.item_career"
+                ".item-row.item-center.item-career"
             );
 
-            // item_row item_center item_close 요소 찾기
+            // item-row item-center item-close 요소 찾기
             const itemClose = document.querySelector(
-                ".item_row.item_center.item_close"
+                ".item-row.item-center.item-close"
             );
 
-            // item_row 요소들 찾기
-            const itemRow = document.querySelector(".item_row.detail");
+            // item-row 요소들 찾기
+            const itemRow = document.querySelector(".item-row.detail");
 
-            itemCareer.classList.add("item_close");
+            itemCareer.classList.add("item-close");
             itemCareer.style.display = "none";
 
-            // itemClose에서 item_close 제거 및 display flex로 설정
+            // itemClose에서 item-close 제거 및 display flex로 설정
             if (itemClose) {
-                itemClose.classList.remove("item_close");
+                itemClose.classList.remove("item-close");
                 itemClose.style.display = "flex";
             }
 
             if (itemRow) {
-                itemRow.classList.add("item_close");
+                itemRow.classList.add("item-close");
                 itemRow.style.display = "none";
             }
         }
 
         // "test2" 클래스를 가진 경우
         if (event.target.classList.contains("test2")) {
-            // itemCareerClose는 item_close 클래스를 포함하는 요소
+            // itemCareerClose는 item-close 클래스를 포함하는 요소
             const itemCareerClose = document.querySelector(
-                ".item_row.item_center.item_career.item_close"
+                ".item-row.item-center.item-career.item-close"
             );
 
-            // itemClose는 item_center만 있는 요소 (item_close가 아닌)
+            // itemClose는 item-center만 있는 요소 (item-close가 아닌)
             const itemClose = document.querySelector(
-                ".item_row.item_center:not(.item_close)"
+                ".item-row.item-center:not(.item-close)"
             );
 
-            // item_row 요소들 찾기
+            // item-row 요소들 찾기
             const itemRowClose = document.querySelector(
-                ".item_row.detail.item_close"
+                ".item-row.detail.item-close"
             );
 
             // 동작
             if (itemCareerClose) {
-                itemCareerClose.classList.remove("item_close");
+                itemCareerClose.classList.remove("item-close");
                 itemCareerClose.style.display = "flex";
             } else {
                 console.log("itemCareerClose가 null입니다."); // 이 부분이 로그에 표시될 수 있습니다.
             }
 
             if (itemClose) {
-                itemClose.classList.add("item_close");
+                itemClose.classList.add("item-close");
                 itemClose.style.display = "none";
             } else {
                 console.log("itemClose가 null입니다."); // 이 부분이 로그에 표시될 수 있습니다.
             }
 
             if (itemRowClose) {
-                itemRowClose.classList.remove("item_close");
+                itemRowClose.classList.remove("item-close");
                 itemRowClose.style.display = "flex";
             } else {
                 console.log("itemRowClose가 null입니다."); // 이 부분이 로그에 표시될 수 있습니다.

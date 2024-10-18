@@ -9,22 +9,15 @@ btn.addEventListener("click", () => {
         : "none";
 });
 
-document.querySelectorAll(".btn_history").forEach((button) => {
-    button.addEventListener("click", () => {
-        button.classList.toggle("rotate");
-    });
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const applicantHistoryBtns = document.querySelectorAll(".btn_history");
 
-const applicantHistoryBtns = document.querySelectorAll(".btn_history");
-const historySections = document.querySelectorAll(".col_history");
+    applicantHistoryBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("rotate");
 
-applicantHistoryBtns.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        const history = historySections[index];
-        history.style.display =
-            history.style.display === "none" || history.style.display === ""
-                ? "block"
-                : "none";
+            console.log(`After: ${btn.classList}`);
+        });
     });
 });
 
@@ -72,6 +65,7 @@ const applyData = [
 ];
 
 const listContainer = document.querySelector(".list_status");
+const pageBox = document.querySelector(".PageBox");
 
 if (applyData.length > 0) {
     applyData.forEach((data) => {
@@ -161,7 +155,7 @@ if (applyData.length > 0) {
                                     <div class="no_row">
                                         <p class="txt">
                                             <b>입사지원 내역이 없어요</b>
-                                            이름 님에게 맞는 공고를
+                                            userName님에게 맞는 공고를
                                             소개해줄게요!
                                         </p>
                                         <a
@@ -173,6 +167,7 @@ if (applyData.length > 0) {
                                 </div>
                             </form>
     `;
+    pageBox.style.display = "none";
 }
 
 const selectAll = document.getElementById("selectAll");

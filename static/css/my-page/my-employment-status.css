@@ -389,6 +389,8 @@
     -webkit-transform: translate(-50%, -50%) rotate(135deg);
     -ms-transform: translate(-50%, -50%) rotate(135deg);
     transform: translate(-50%, -50%) rotate(135deg);
+    transition: transform 0.3s ease;
+
     content: "";
 }
 .NotiBox .question.open .btn:after {
@@ -736,8 +738,12 @@
     font-size: 14px;
     line-height: 40px;
 }
-
-.btn_history:after {
+.wrap_list .row.open .btn_history:after {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+    -ms-transform: translate(-50%, 0) rotate(-45deg);
+    transform: translate(-50%, 0) rotate(-45deg);
+}
+.wrap_list .col_btns .btn_history:after {
     position: absolute;
     top: 50%;
     right: 8px;
@@ -751,8 +757,11 @@
     -ms-transform: translate(-50%, -50%) rotate(135deg);
     transform: translate(-50%, -50%) rotate(135deg);
     content: "";
+    transition: transform 0.3s ease;
 }
-
+.wrap_list .col_btns .btn_history.rotate:after {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
 .wrap_list .row.open .col_history {
     display: none;
 }

@@ -1,3 +1,33 @@
+// 파일 소개 글자수 증가/감소
+function calculateByteLength(str) {
+    let byteCount = 0;
+    for (let i = 0; i < str.length; i++) {
+        const charCode = str.charCodeAt(i);
+        byteCount += charCode > 127 ? 2 : 1; // 한글: 2바이트, 그 외: 1바이트
+    }
+    return byteCount;
+}
+
+function updateTextCount() {
+    const textarea = document.getElementById("file_res_desc");
+    const text = textarea.value;
+    const trimmedText = text.replace(/\s+/g, ""); // 공백 제거된 텍스트
+
+    // 글자수와 바이트 수 계산
+    const totalLen = text.length;
+    const totalByte = calculateByteLength(text);
+    const blankLen = trimmedText.length;
+    const blankByte = calculateByteLength(trimmedText);
+
+    // HTML 요소에 값 업데이트
+    document.querySelector(".totalLen").textContent = totalLen;
+    document.querySelector(".totalByte").textContent = totalByte;
+    document.querySelector(".blankLen").textContent = blankLen;
+    document.querySelector(".blankByte").textContent = blankByte;
+}
+const textarea = document.getElementById("file_res_desc");
+textarea.addEventListener("input", updateTextCount);
+
 const fileInput1 = document.getElementById("dumi_file_res");
 const fileAddBtn = document.getElementById("fileAddBtn");
 const uploadedFileRow = document.getElementById("uploadedFileRow");

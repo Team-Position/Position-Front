@@ -1387,7 +1387,7 @@ button {
     background: none;
 }
 
-.list_job_check .item_check .btn_delete {
+.list-job-check .item-check .btn-delete {
     width: 13px;
     height: 13px;
     border: 0;
@@ -1396,16 +1396,16 @@ button {
     background: url(//www.saraminimage.co.kr/sri/person/btn/btn_close.png) 0 0 no-repeat;
 }
 
-.area_job_category .code-text {
+.area-job-category .code-text {
     font-size: 16px;
 }
 
-.area_job_category .code-text, .area_job_category .keyword {
+.area-job-category .code-text, .area-job-category .keyword {
     color: var(--gray120);
     line-height: 24px;
 }
 
-.area_job_category .keyword {
+.area-job-category .keyword {
     display: block;
     margin-top: 8px;
     padding-right: 32px;
@@ -1432,10 +1432,13 @@ button {
     justify-content: center;
 }
 
-.area-job-category .cate_txt-delete:after {
+.area-job-category .cate-txt-delete:after {
     width: 13px;
     height: 14px;
     background: url(/static/images/join/delete.svg) 50% no-repeat;
     content: "";
 }
 
+.form-typobox:hover {
+    background: var(--gray20);
+}

@@ -127,10 +127,10 @@ const createHTMLStructure = () => {
                                     return;
                                 }
                                 subLabel.classList.add("check-on");
-                                addSubKeyword(keyword, categoryLabel);
+                                addSubKeyword(keyword, categoryLabel, e.target); // 키워드 추가
                             } else {
                                 subLabel.classList.remove("check-on");
-                                removeSubKeyword(keyword); // 소분류만 삭제
+                                removeKeyword(keyword, e.target); // 체크 해제 시 키워드 삭제
                             }
                         });
                     });
@@ -177,10 +177,14 @@ const createHTMLStructure = () => {
     };
 
     // 소분류 키워드 추가 함수 (기존 `box-task-hover`에 추가)
-    const addSubKeyword = (keyword, categoryLabel) => {
+    const addSubKeyword = (keyword, categoryLabel, inputElement) => {
         const existingBox = document.querySelector(".box-task-hover");
         const subKeywordSpan = document.createElement("span");
         subKeywordSpan.className = "hope-jobs hope-depth";
+        subKeywordSpan.setAttribute(
+            "data-code",
+            inputElement.getAttribute("data-bcode")
+        ); // 데이터 속성 추가
         subKeywordSpan.innerHTML = `${keyword}&nbsp;<button type="button" class="btn-delete"><span class="blind">삭제</span></button>`;
         existingBox.appendChild(subKeywordSpan);
 
@@ -188,7 +192,7 @@ const createHTMLStructure = () => {
         subKeywordSpan
             .querySelector(".btn-delete")
             .addEventListener("click", () => {
-                removeSubKeyword(keyword);
+                removeKeyword(keyword, inputElement); // 추가된 함수 호출
                 subKeywordSpan.remove(); // box-task-hover에서 해당 소분류 삭제
             });
     };
@@ -200,11 +204,20 @@ const createHTMLStructure = () => {
     };
 
     // 소분류 삭제 함수
-    const removeSubKeyword = (keyword) => {
+    const removeKeyword = (keyword, inputElement) => {
         selectedKeywords = selectedKeywords.filter((k) => k !== keyword);
-        const inputElement = document.querySelector(
-            `input[value="${keyword}"]`
+
+        // 해당 키워드가 있는 span을 찾아 삭제
+        const keywordElement = document.querySelector(
+            `span.hope-depth[data-code="${inputElement.getAttribute(
+                "data-bcode"
+            )}"]`
         );
+        if (keywordElement) {
+            keywordElement.remove(); // 해당 키워드 엘리먼트 삭제
+        }
+
+        // 소분류 체크박스 해제 및 관련 클래스 제거
         if (inputElement) {
             inputElement.checked = false;
             inputElement.closest(".sri-check").classList.remove("check-on");
@@ -215,35 +228,6 @@ const createHTMLStructure = () => {
     const resetKeywords = () => {
         selectedKeywords = [];
         document.querySelector(".list-job-check ul").innerHTML = "";
-    };
-    // 키워드 삭제 함수
-    const removeKeyword = (keyword, targetInput) => {
-        selectedKeywords = selectedKeywords.filter((k) => k !== keyword);
-
-        const keywordElement = document.querySelector(
-            `span.hope-depth[data-code="${targetInput.getAttribute(
-                "data-code"
-            )}"]`
-        );
-        if (keywordElement) {
-            keywordElement.remove();
-        }
-
-        if (
-            !document.querySelector(
-                `.hope-depth[data-bcode="${targetInput.getAttribute(
-                    "data-bcode"
-                )}"]`
-            )
-        ) {
-            const bcodeElement = document.querySelector(
-                `li[data-bcode="${targetInput.getAttribute("data-bcode")}"]`
-            );
-            if (bcodeElement) bcodeElement.remove();
-        }
-
-        targetInput.closest(".sri-check").classList.remove("check-on");
-        targetInput.checked = false;
     };
 };
 
@@ -272,5 +256,95 @@ document.querySelector(".btn-reset").addEventListener("click", () => {
         .forEach((input) => {
             input.checked = false;
             input.closest(".sri-check").classList.remove("check-on");
+            document.querySelector(".sub-depth3").style.display = "none";
         });
 });
+
+// ================================완료 버튼 클릭 이벤트=============================
+// 완료 버튼 클릭 시 키워드 #industry-selected-area에 추가
+document
+    .querySelector(".btn-basic-type05.btn-save")
+    .addEventListener("click", () => {
+        const selectedArea = document.querySelector("#industry-selected-area");
+        document.querySelector(".layer-desire-industry").style.display = "none";
+
+        // 선택된 중분류, 소분류 키워드 가져오기
+        const mainCategoryElem = document.querySelector(
+            ".box-task-hover .hope-jobs"
+        );
+        const subCategoryElems = document.querySelectorAll(
+            ".box-task-hover .hope-depth"
+        );
+
+        // 기존에 있는 키워드 초기화
+        selectedArea.innerHTML = "";
+
+        // 중분류 추가
+        if (mainCategoryElem) {
+            const mainCategoryHTML = `
+            <div class="industry-code-${mainCategoryElem.getAttribute(
+                "data-bcode"
+            )} code-area" style="margin-top:10px">
+                <div class="code-text" data-bcode="${mainCategoryElem.getAttribute(
+                    "data-bcode"
+                )}">
+                    ${mainCategoryElem.textContent.trim().replace("삭제", "")}
+                </div>
+                <button type="button" class="cate-txt-delete" onclick="deleteKeyword(this)">
+                    <span class="blind">삭제</span>
+                </button>
+            </div>
+            `;
+            selectedArea.insertAdjacentHTML("beforeend", mainCategoryHTML);
+        }
+
+        // 소분류 추가
+        subCategoryElems.forEach((subElem) => {
+            const subCategoryHTML = `
+            <div class="keyword pt7" style="">
+                <span class="industry-keyword-${subElem.getAttribute(
+                    "data-code"
+                )}" data-code="${subElem.getAttribute("data-code")}">
+                    ${subElem.textContent.trim().replace("삭제", "")}
+                </span>
+            </div>
+            `;
+            selectedArea.insertAdjacentHTML("beforeend", subCategoryHTML);
+        });
+
+        // "수정" 버튼으로 변경
+        document.querySelector(".btn-job-category").textContent = "수정";
+    });
+
+// 삭제 버튼 클릭 시 중분류 및 해당 소분류 모두 삭제
+function deleteKeyword(button) {
+    const parentDiv = button.closest(".code-area");
+    const bcode = parentDiv
+        .querySelector(".code-text")
+        .getAttribute("data-bcode");
+
+    // 중분류 및 해당 소분류 삭제
+    const mainCategoryElement = document.querySelector(
+        `.box-task-hover .hope-jobs[data-bcode="${bcode}"]`
+    );
+    const subCategoryElements = document.querySelectorAll(
+        `.box-task-hover .hope-depth[data-bcode="${bcode}"]`
+    );
+
+    if (mainCategoryElement) {
+        mainCategoryElement.remove(); // 중분류 삭제
+    }
+
+    subCategoryElements.forEach((elem) => {
+        elem.remove(); // 소분류 삭제
+    });
+
+    // 키워드 영역에서 해당 내용 삭제
+    parentDiv.remove();
+
+    // 삭제 후 #industry-selected-area 비우기
+    document.querySelector("#industry-selected-area").innerHTML = "";
+
+    // "선택" 버튼으로 다시 변경
+    document.querySelector(".btn-job-category").textContent = "선택";
+}

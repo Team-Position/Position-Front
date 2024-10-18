@@ -35,33 +35,33 @@ hideButton.addEventListener("mouseout", () => {
 });
 
 const applyData = [
-    {
-        id: 1,
-        date: "2024.10.17 16:42",
-        company: "마린웍스㈜",
-        position: "플랫폼 서비스 개발",
-        description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
-        status: "지원완료",
-        viewStatus: "미열람",
-    },
-    {
-        id: 2,
-        date: "2024.10.17 16:42",
-        company: "마린웍스㈜",
-        position: "플랫폼 서비스 개발",
-        description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
-        status: "지원취소",
-        viewStatus: "미열람",
-    },
-    {
-        id: 3,
-        date: "2024.10.17 16:42",
-        company: "마린웍스㈜",
-        position: "플랫폼 서비스 개발",
-        description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
-        status: "지원대기",
-        viewStatus: "열람",
-    },
+    // {
+    //     id: 1,
+    //     date: "2024.10.17 16:42",
+    //     company: "마린웍스㈜",
+    //     position: "플랫폼 서비스 개발",
+    //     description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
+    //     status: "지원완료",
+    //     viewStatus: "미열람",
+    // },
+    // {
+    //     id: 2,
+    //     date: "2024.10.17 16:42",
+    //     company: "마린웍스㈜",
+    //     position: "플랫폼 서비스 개발",
+    //     description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
+    //     status: "지원취소",
+    //     viewStatus: "미열람",
+    // },
+    // {
+    //     id: 3,
+    //     date: "2024.10.17 16:42",
+    //     company: "마린웍스㈜",
+    //     position: "플랫폼 서비스 개발",
+    //     description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
+    //     status: "지원대기",
+    //     viewStatus: "열람",
+    // },
 ];
 
 const listContainer = document.querySelector(".list_status");

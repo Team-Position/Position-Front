@@ -23,7 +23,6 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 최상단에 모든 변수 선언
     const mailCertNumInput = document.getElementById("mailCertNum");
     const btnCertConfirmMail = document.getElementById("btnCertConfirmMail");
     const btnCertEmail = document.getElementById("btnCertEmail");

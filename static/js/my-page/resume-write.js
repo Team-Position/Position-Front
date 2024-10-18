@@ -1,3 +1,117 @@
+const fileInput1 = document.getElementById("dumi_file_res");
+const fileAddBtn = document.getElementById("fileAddBtn");
+const uploadedFileRow = document.getElementById("uploadedFileRow");
+const fileList = document.getElementById("fileList");
+const filePreview = document.getElementById("filePreview");
+
+// 파일 선택 시 처리
+fileInput1.addEventListener("change", () => {
+    const file = fileInput1.files[0]; // 첫 번째 파일만 처리
+    if (file) {
+        const { name, size, type } = file;
+        const fileSizeKB = Math.round(size / 1024);
+
+        // 파일 이름과 확장자 추출
+        const fileName = name.split(".").slice(0, -1).join(".");
+        const fileExtension = name.split(".").pop();
+
+        // 파일 정보 항목 생성
+        const listItem = document.createElement("li");
+        listItem.classList.add("list", "file");
+        listItem.innerHTML = `
+            <p class="tit">
+                <span>${fileName}</span>.${fileExtension}
+            </p>
+            <span class="data">${fileSizeKB}KB</span>
+            <button type="button" class="btn_delete evtDeleteResFile">
+                <svg>
+                    <use xlink:href="#search_delete"></use>
+                </svg>
+            </button>
+        `;
+
+        fileList.appendChild(listItem);
+        uploadedFileRow.style.display = "block";
+
+        // 이미지 파일인 경우 미리보기 표시
+        if (type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                img.style.maxWidth = "100px"; // 썸네일 이미지의 최대 너비
+                img.style.marginRight = "10px";
+
+                // 기존 내용 제거 후 이미지 추가
+                filePreview.innerHTML = "";
+                filePreview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        } else {
+            // 이미지가 아닌 경우 기본 메시지 유지
+            filePreview.innerHTML =
+                '<p class="txt_no_preview">썸네일을 찾을 수 없습니다.</p>';
+        }
+
+        // 파일 삭제 버튼 이벤트 추가
+        listItem
+            .querySelector(".evtDeleteResFile")
+            .addEventListener("click", () => {
+                listItem.remove();
+                filePreview.innerHTML =
+                    '<p class="txt_no_preview">썸네일을 찾을 수 없습니다.</p>';
+                if (fileList.children.length === 0) {
+                    uploadedFileRow.style.display = "none";
+                }
+                previewFile.style.display = "none";
+                addFileArea.style.display = "block";
+            });
+    }
+});
+
+// 파일 추가 모달창
+const modalFileBtn = document.querySelector(".btn_file_add");
+const wrapResumeNudge = document.getElementById("wrapResumeNudge");
+const closeModalBtns = document.querySelectorAll(".evtBtnClose");
+
+modalFileBtn.addEventListener("click", () => {
+    wrapResumeNudge.style.display = "block";
+});
+closeModalBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+        wrapResumeNudge.style.display = "none";
+    });
+});
+// 파일 등록시 버튼 disable 삭제(활성화)
+const fileInput = document.getElementById("dumi_file_res");
+const uploadButton = document.getElementById("uploadBtn");
+const modalUpload = document.getElementById("resume_file_uploaded_layer");
+const btnConfirm = document.querySelector(".btn_confirm"); //파일 등록 완료시 모달창 확인 버튼
+const fileSuccessModal = document.getElementById("resume_file_uploaded_layer");
+const previewFile = document.querySelector(".preview_file_area");
+const addFileArea = document.querySelector(".add_file_area");
+const dimmed = document.getElementById("dimmed"); //파일 등록 완료시 뒷 배경
+
+fileInput.addEventListener("change", () => {
+    if (fileInput.files.length > 0) {
+        uploadButton.removeAttribute("disabled");
+    } else {
+        uploadButton.setAttribute("disabled", "");
+    }
+});
+uploadButton.addEventListener("click", () => {
+    wrapResumeNudge.style.display = "none";
+    modalUpload.style.display = "block";
+    previewFile.style.display = "block";
+    addFileArea.style.display = "none";
+    dimmed.style.display = "block";
+});
+// 등록 완료시 모달 창에서 확인 버튼 클릭시
+btnConfirm.addEventListener("click", () => {
+    fileSuccessModal.style.display = "none";
+    dimmed.style.display = "none";
+});
+
 // 이력서 팁 보기
 const toggleBtn = document.querySelector(".tip_recommend.show_resume_title"); // 클릭할 버튼
 const toggleContent = document.querySelector(

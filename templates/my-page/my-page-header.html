@@ -25,12 +25,7 @@
                     data-el="chat-beta"
                 >
                     <button type="button" class="btn-messenger">메신저</button>
-                    <span
-                        id="unread-message-count"
-                        class="push-num"
-                        style="display: none"
-                        >0</span
-                    >
+                    <span id="unread-message-count" class="push-num">0</span>
                 </div>
                 <div class="wrap-my-layer">
                     <button type="button" class="top-btn btn-record">
@@ -94,25 +89,21 @@
                         <a
                             href="/zf-user/persons/scrap-recruit"
                             class="BtnType SizeM page-link scrap-recruit-view"
-                            style="display: block"
                             >전체 스크랩 공고 보기</a
                         >
                         <a
                             href="/zf-user/member/suited-recruit-mail/list"
                             class="BtnType SizeM page-link suited-recruit-view"
-                            style="display: none"
                             >전체 나의검색 공고 보기</a
                         >
                         <a
                             href="/zf-user/member/favor-company/list"
                             class="BtnType SizeM page-link favor-recruit-view"
-                            style="display: none"
                             >전체 관심기업 공고 보기</a
                         >
                         <div
                             class="save-list-area ScrollBar"
                             id="scrap-list-area"
-                            style="display: block"
                         >
                             <input
                                 type="hidden"
@@ -169,7 +160,6 @@
                         <div
                             class="save-list-area ScrollBar"
                             id="suited-list-area"
-                            style="display: none"
                         >
                             <div class="save-list">
                                 <span class="date">2024.10.08</span>
@@ -229,7 +219,6 @@
                         <div
                             class="save-list-area ScrollBar"
                             id="favor-list-area"
-                            style="display: none"
                         >
                             <input
                                 type="hidden"
@@ -243,6 +232,36 @@
                                 value="0"
                                 id="favor-list-total-cnt"
                             />
+                            <div class="save-list">
+                                <span class="date"> 2024.10.16 </span>
+                                <ul>
+                                    <li class="favor-company">
+                                        <div class="image">
+                                            <span class="blind"
+                                                >기업로고 이미지 영역</span
+                                            >
+                                            <img
+                                                src="https://pds.saramin.co.kr/company/logo/202110/18/r162u8_sjm3-ayg4bn_logo.jpg"
+                                                alt="기업로고"
+                                            />
+                                        </div>
+                                        <strong class="name"
+                                            >쿠팡로지스틱스서비스(유)</strong
+                                        >
+                                        <span class="recruit-count"
+                                            >채용중 <b>16</b>건</span
+                                        >
+                                        <a
+                                            href="/zf_user/company-info/view?csn=UHFGUDJkaVM2WjF1dVA4WUVkZTMxdz09"
+                                            class="page-link-btn"
+                                        >
+                                            <span class="blind"
+                                                >공고 링크버튼</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="empty-list">
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
@@ -310,13 +329,9 @@
                         >
                         <div class="save-list-area alarm-area ScrollBar">
                             <strong class="sub-title">TODAY</strong>
-                            <div
-                                class="alarm-list"
-                                id="today-list-content"
-                                style="display: block"
-                            >
+                            <div class="alarm-list" id="today-list-content">
                                 <ul>
-                                    <li style="display: block">
+                                    <li>
                                         <a
                                             href="/zf-user/persons/scrap-recruit?sort=PC"
                                             target=""
@@ -368,7 +383,6 @@
                                 <button
                                     type="button"
                                     class="more today-more-button"
-                                    style="display: none"
                                 >
                                     더보기<svg>
                                         <use xlink:href="#svg-gnb-arrow"></use>
@@ -379,7 +393,6 @@
                             <div
                                 class="empty-list alarm-area"
                                 id="empty-today-list-content"
-                                style="display: none"
                             >
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
@@ -756,7 +769,7 @@
                                     <span class="txt">스크랩/관심기업</span>
                                 </a>
                             </li>
-                            <li class="">
+                            <!-- <li class="">
                                 <a href="/zf-user/member/avatar/list">
                                     <svg>
                                         <use
@@ -823,8 +836,8 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="">
+                            </li> -->
+                            <li class="only">
                                 <a href="/zf-user/persons/apply-status-list">
                                     <svg>
                                         <use
@@ -832,15 +845,15 @@
                                         ></use>
                                     </svg>
                                     <span class="txt">지원내역</span>
-                                    <button type="button" class="btn-expand">
+                                    <!-- <button type="button" class="btn-expand">
                                         <svg>
                                             <use
                                                 xlink:href="#svg-gnb-arrow"
                                             ></use></svg
                                         ><span class="blind">더보기</span>
-                                    </button>
+                                    </button> -->
                                 </a>
-                                <ul class="depth2">
+                                <!-- <ul class="depth2">
                                     <li class="">
                                         <a
                                             href="/zf-user/persons/apply-status-list"
@@ -857,9 +870,10 @@
                                             >
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li class="">
+
+                            <!-- <li class="">
                                 <a href="/zf-user/member/my-siat">
                                     <svg>
                                         <use xlink:href="#svg-gnb-my-svq"></use>
@@ -891,7 +905,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li class="only">
                                 <a href="/zf-user/member/mock-exam">
                                     <svg>
@@ -899,7 +913,7 @@
                                             xlink:href="#svg-gnb-my-mockexam"
                                         ></use>
                                     </svg>
-                                    <span class="txt">공기업 모의고사</span>
+                                    <span class="txt">후기내역</span>
                                 </a>
                             </li>
                             <li class="only">
@@ -909,7 +923,7 @@
                                             xlink:href="#svg-gnb-my-interview"
                                         ></use>
                                     </svg>
-                                    <span class="txt">면접현황</span>
+                                    <span class="txt">게시글</span>
                                 </a>
                             </li>
                             <li class="only">
@@ -922,7 +936,7 @@
                                     <span class="txt">결제 내역</span>
                                 </a>
                             </li>
-                            <li class="">
+                            <!-- <li class="">
                                 <a href="/zf-user/member/career-mileage">
                                     <svg>
                                         <use
@@ -959,7 +973,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>

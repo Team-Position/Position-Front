@@ -1401,6 +1401,70 @@ body {
 #position-gnb-wrap .gnb>li>ul>li>a:hover:before {
     opacity: 1;
 }
+/* 관심기업 있을 때 추가 */
+
+.top-layer-assist .save-list-area .save-list>ul>li .image {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.top-layer-assist .save-list-area .save-list>ul>li .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 38px;
+    max-height: 38px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.top-layer-assist .save-list-area .save-list>ul>li.favor-company>.name {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    left: 80px;
+    width: auto;
+}
+
+.top-layer-assist .save-list-area .save-list>ul>li.favor-company>.recruit-count {
+    display: inline-block;
+    position: absolute;
+    top: 42px;
+    right: 20px;
+    left: 80px;
+    color: #5c667b;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.top-layer-assist .save-list-area .save-list>ul>li .page-link-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: url(//www.saraminimage.co.kr/sri/person/resume/bg_alink.png) repeat;
+}
 
 
+#unread-message-count,
+.suited-recruit-view,
+.favor-recruit-view,
+#suited-list-area,
+#favor-list-area,
+.more.today-more-button,
+.empty-list{
+    display: none;
+}
 
+.scrap-recruit-view,
+#scrap-list-area,
+#today-list-content{
+    display: block;
+}

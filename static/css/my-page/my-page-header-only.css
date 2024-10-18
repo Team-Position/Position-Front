@@ -1158,6 +1158,8 @@ body {
     content: "";
 }
 
+/* 관심기업 있을 때 추가 */
+
 .top-layer-assist .save-list-area .save-list>ul>li .image {
     display: inline-block;
     overflow: hidden;

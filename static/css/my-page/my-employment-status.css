@@ -219,6 +219,7 @@
     display: inline-block;
     vertical-align: top;
 }
+
 .InpBox select {
     padding: 0 28px 0 12px;
     width: 100%;
@@ -389,6 +390,11 @@
     -ms-transform: translate(-50%, -50%) rotate(135deg);
     transform: translate(-50%, -50%) rotate(135deg);
     content: "";
+}
+.NotiBox .question.open .btn:after {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+    -ms-transform: translate(-50%, 0) rotate(-45deg);
+    transform: translate(-50%, 0) rotate(-45deg);
 }
 .NotiBox .question .qa {
     display: none;
@@ -704,6 +710,9 @@
     border-color: var(--gray80);
     background: var(--white);
 }
+.wrap_list .col_btns .BtnType._apply_cancel:hover {
+    background: var(--gray20);
+}
 .wrap_list .col_btns .BtnType {
     margin-bottom: 8px;
     padding: 6px 6px 8px;
@@ -727,12 +736,8 @@
     font-size: 14px;
     line-height: 40px;
 }
-.wrap_list .row.open .btn_history:after {
-    -webkit-transform: translate(-50%, 0) rotate(-45deg);
-    -ms-transform: translate(-50%, 0) rotate(-45deg);
-    transform: translate(-50%, 0) rotate(-45deg);
-}
-.wrap_list .col_btns .btn_history:after {
+
+.btn_history:after {
     position: absolute;
     top: 50%;
     right: 8px;
@@ -747,6 +752,7 @@
     transform: translate(-50%, -50%) rotate(135deg);
     content: "";
 }
+
 .wrap_list .row.open .col_history {
     display: none;
 }
@@ -836,4 +842,31 @@
 .wrap_list .align .TipBox .del_apply_row dt {
     margin-bottom: 8px;
     font-weight: bold;
+}
+.PageBox {
+    display: flex;
+    margin: 40px 0 80px;
+    justify-content: center;
+}
+.PageBox span.BtnType {
+    border: 1px solid var(--gray60);
+    font-weight: bold;
+}
+.PageBox .BtnType {
+    display: flex;
+    position: relative;
+    width: 32px;
+    border: 0;
+    color: var(--gray80);
+    background: none;
+    align-items: center;
+    justify-content: center;
+}
+[class*="BtnType"].GrayInvert:hover {
+    background: var(--gray20);
+}
+[class*="BtnType"].GrayInvert {
+    border-color: var(--gray80);
+    color: var(--gray100);
+    background: var(--white);
 }

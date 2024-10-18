@@ -35,7 +35,7 @@ body.no_gnb {
 
 #content {
     position: relative;
-    margin: 88px auto 136px;
+    margin: 88px auto 0px;
     width: 1248px;
 }
 
@@ -851,7 +851,7 @@ body.no_gnb {
     background: var(--gray20);
 
 }
-.TypoBox:hover .Lbl {
+.TypoBox.LblTop:hover .Lbl {
     background-color: var(--gray20); /* 레이블의 배경을 hover 색상으로 변경 */
 
 }
@@ -1119,9 +1119,7 @@ button:disabled svg {
     stroke-width: 3;
 }
 
-.resume_edit .box_tit .progress_circle .svg.step2 .progress {
-    animation: step2 1s ease-in-out both;
-}
+
 
 .resume_edit .box_tit .progress_circle .progress, .progress_second {
     fill: none;
@@ -1136,10 +1134,181 @@ button:disabled svg {
 }
 .resume_edit .box_tit .progress_circle .svg .progress_second {
     stroke: #3769ED;
-    animation: step0 1s ease-in-out both;
+    animation: step0 1s ease-in-out both
 }
+
 .resume_edit .box_tit .progress_circle .svg.step1 .progress {
-    animation: step1 1s ease-in-out both;
+    animation: step1 1s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step2 .progress {
+    animation: step2 1s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step3 .progress {
+    animation: step3 1s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step4 .progress {
+    animation: stepmaintain ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step4 .progress_second {
+    animation: step4 1s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step5 .progress {
+    animation: stepmaintain ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step5 .progress_second {
+    animation: step5 1s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step5 {
+    animation: complete 3s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step5 .border {
+    animation: step_set 3s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.reverse.step5 .border {
+    animation: restep_set 3s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.step1.reverse .progress {
+    animation-name: step1reverse;
+    animation-duration: 1s
+}
+
+.resume_edit .box_tit .progress_circle .svg.reverse.step2 .progress {
+    animation-name: step2reverse;
+    animation-duration: 1s;
+}
+
+.resume_edit .box_tit .progress_circle .svg.reverse.step3 .progress {
+    animation-name: step3reverse;
+    animation-duration: 1s
+}
+
+.resume_edit .box_tit .progress_circle .svg.reverse.step4 .progress_second {
+    animation-name: step4reverse;
+    animation-duration: 1s
+}
+
+.resume_edit .box_tit .progress_circle .svg.reverse.step5 {
+    animation: restore 1s ease-in-out both
+}
+
+.resume_edit .box_tit .progress_circle .svg.reverse.step5 .progress_second {
+    animation-name: step5reverse;
+    animation-duration: 1s
+}
+
+@keyframes step1 {
+    0% {
+        stroke-dashoffset: 37.68
+    }
+
+    100% {
+        stroke-dashoffset: 25.12
+    }
+}
+
+@keyframes step1reverse {
+    0% {
+        stroke-dashoffset: 25.12;
+    }
+
+    100% {
+        stroke-dashoffset: 37.68;
+    }
+}
+
+@keyframes step2 {
+    0% {
+        stroke-dashoffset: 25.12;
+    }
+
+    100% {
+        stroke-dashoffset: 12.56;
+    }
+}
+
+@keyframes step2reverse {
+    0% {
+        stroke-dashoffset: 12.56;
+    }
+
+    100% {
+        stroke-dashoffset: 25.12;
+    }
+}
+
+@keyframes step3 {
+    0% {
+        stroke-dashoffset: 12.56;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes step3reverse {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 12.56;
+    }
+}
+
+@keyframes step4 {
+    0% {
+        stroke-dashoffset: 37.68;
+    }
+
+    100% {
+        stroke-dashoffset: 19.84;
+    }
+}
+
+@keyframes step4reverse {
+    0% {
+        stroke-dashoffset: 19.84;
+    }
+
+    100% {
+        stroke-dashoffset: 37.68;
+    }
+}
+
+@keyframes step5 {
+    0% {
+        stroke-dashoffset: 18.84;
+    }
+
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+@keyframes step5reverse {
+    0% {
+        stroke-dashoffset: 0
+    }
+
+    100% {
+        stroke-dashoffset: 18.84
+    }
+}
+
+@keyframes stepmaintain {
+    100% {
+        stroke-dashoffset: 0
+    }
 }
 
 .resume_edit .box_tit .txt {
@@ -1203,3 +1372,392 @@ button:disabled svg {
     border-color: var(--blue40);
     padding: 8px 12px 8px 16px;
 }
+
+.area_auto_search .auto_search .list_auto_search .area_link:hover, .area_auto_search .auto_search .list_auto_search .area_link:focus {
+    background-color: #f8fafc;
+}
+
+
+/* 기업으로 부터 제안(만족도 조사?) */
+.resume_con section+.resume_open {
+    position: relative;
+    padding-top: 0;
+}
+
+.resume_open .offer_setting {
+    margin-top: 56px;
+    padding: 32px;
+    border: 1px solid #eaedf4;
+    border-radius: 16px;
+    background: #f8fafc;
+}
+
+.resume_open .offer_setting .tit_setting {
+    color: #373f57;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.resume_open .offer_setting .txt_setting {
+    display: flex;
+    margin: 24px 0;
+    color: #292e41;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.resume_open .offer_setting .txt_setting.resume_contact_close:before {
+    background-position: 1px 0;
+}
+
+.resume_open .offer_setting .txt_setting:before {
+    display: block;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    background: url(//www.saraminimage.co.kr/sri/person/ico/ico_offer.png) no-repeat;
+    content: "";
+}
+
+.resume_open .offer_setting .txt_setting strong {
+    color: #2d65f2;
+    font-weight: bold;
+}
+
+.resume_open .offer_setting .resume_open_option {
+    display: flex;
+    align-items: center;
+}
+
+.resume_open .offer_setting .resume_open_option li {
+    width: 100%;
+}
+
+.resume_open .offer_setting .resume_open_option li .InpBox {
+    width: 100%;
+}
+
+.InpBox .Rdo {
+    position: relative;
+}
+
+.InpBox .Rdo input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.InpBox.Bg:has(input:checked) {
+    border-color: var(--blue90);
+}
+.InpBox.Bg:has(input:checked) .Lbl {
+    padding: 15px 15px 15px 47px;
+    border: 2px solid var(--blue90);
+}
+.InpBox.Bg.White>span .Lbl, .InpBox.Bg.White>span:hover .Lbl {
+    background: var(--white);
+}
+.InpBox .Rdo input:checked~.Lbl:before {
+    border-color: var(--blue90);
+    background: var(--blue90);
+}
+
+.InpBox .Rdo input:checked~.Lbl:after {
+    background: var(--white);
+}
+
+.InpBox.Bg .Lbl {
+    display: block;
+    position: relative;
+    padding: 16px 16px 16px 48px;
+    border: 1px solid var(--gray30);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: var(--white);
+}
+
+.InpBox .Rdo .Lbl {
+    display: block;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.InpBox.Bg>span .Lbl:before {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.InpBox .Rdo .Lbl:before {
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gray70);
+    border-radius: 50%;
+    vertical-align: top;
+    background: var(--white);
+    content: '';
+}
+
+.InpBox.Bg>span .Lbl:after {
+    top: 21px;
+    left: 21px;
+    border-color: var(--blue10);
+}
+
+.InpBox .Rdo .Lbl:after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: '';
+}
+
+.resume_open .offer_setting .resume_open_option li+li {
+    margin-left: 8px;
+}
+
+.resume_open .offer_setting .tooltip_area {
+    margin-top: 24px;
+    display: flex;
+}
+
+.resume_open .offer_setting .tooltip_area button {
+    display: flex;
+    align-items: center;
+}
+
+.resume_open .offer_setting .tooltip_area button>svg {
+    width: 16px;
+    height: 16px;
+}
+
+.resume_open .offer_setting .tooltip_area button>span {
+    margin-left: 8px;
+    color: var(--gray80);
+    font-size: 14px;
+}
+
+.resume_open .resume_open_notice {
+    margin-top: 24px;
+}
+
+.resume_open .resume_open_notice .list_square {
+    color: #888;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.resume_open .resume_open_notice .list_square>li {
+    position: relative;
+    padding-left: 10px;
+}
+.resume_open .resume_open_notice .list_square>li:before {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #888;
+    content: "";
+}
+
+.resume_open .resume_open_notice .list_square>li+li {
+    margin-top: 8px;
+}
+
+.resume_open .resume_open_notice .list_square>li {
+    position: relative;
+    padding-left: 10px;
+}
+
+/* 아래 이력서 제목 및 작성버튼 */
+.resume_btm {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    padding: 8px 0;
+    width: 100%;
+    border-top: 1px solid var(--gray40);
+    background: #fff;
+}
+
+.resume_btm .inner {
+    display: flex;
+    margin: 0 auto;
+    width: 1248px;
+    align-items: center;
+}
+
+.resume_btm .inner .tit_resume {
+    flex-shrink: 0;
+    display: block;
+    margin-right: 8px;
+    color: var(--gray120);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.resume_btm .inner input {
+    width: 724px;
+    color: var(--gray110);
+    font-size: 20px;
+    line-height: 28px;
+    border: 2px solid var(--blue100);
+    border-radius: 8px;
+}.resume_btm .inner .BtnType.btn_preview {
+    margin: 0 12px 0 20px;
+    border-color: var(--blue90);
+    color: var(--blue90);
+    background: var(--white);
+}
+.resume_btm .inner .BtnType {
+    width: 180px;
+}
+[class*="BtnType"].BtnTypeRd {
+    border-radius: 35px;
+}
+
+
+[class*="BtnType"].SizeML {
+    padding: 13px 15px 15px;
+    height: 56px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.resume_btm .inner .tip_recommend {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    background: url('/static/images/my-page/resume-write-info.svg') no-repeat;
+    cursor: pointer;
+}
+
+.resume_btm .tit_recommend .TipCont {
+    width: 566px;
+}
+
+.TipBox.Click .TipCont {
+    padding-right: 44px;
+}
+
+.TipBox .TipCont.BottomLeft {
+    bottom: calc(100% + 17px);
+    left: 50%;
+}
+
+.TipCont {
+    display: none;
+    position: absolute;
+    padding: 12px 16px 14px;
+    white-space: nowrap;
+    border: 1px solid var(--gray70);
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: var(--white);
+    box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.TipCont.BottomLeft .Tail {
+    bottom: -19px;
+    left: -1px;
+    transform: rotate(180deg);
+}
+
+.TipCont.BottomLeft .Tail:has(>svg.icon_tail) {
+    background: none;
+}
+
+
+.TipCont .Tail {
+    position: absolute;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+}
+
+.TipCont.TopRight .Tail:has(>svg.icon_tail) svg.icon_tail, .TipCont.RightBottom .Tail:has(>svg.icon_tail) svg.icon_tail, .TipCont.BottomLeft .Tail:has(>svg.icon_tail) svg.icon_tail, .TipCont.LeftTop .Tail:has(>svg.icon_tail) svg.icon_tail {
+    width: 32px;
+    height: 32px;
+}
+
+.TipCont .Tail:has(>svg.icon_tail) svg.icon_tail {
+    color: var(--gray70);
+    fill: var(--white);
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.TipCont .TipTxt {
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.resume_btm .tit_recommend .tit {
+    margin-bottom: 4px;
+    color: var(--gray100);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.resume_btm .tit_recommend .txt {
+    display: block;
+    overflow: hidden;
+    width: calc(100% - 100px);
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    text-decoration: underline;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.resume_btm .tit_recommend .txt+.txt {
+    margin-top: 8px;
+}
+
+.resume_btm .tit_recommend .btn_refresh {
+    display: block;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: -32px;
+    padding: 0 8px;
+    text-align: right;
+    height: 32px;
+    color: var(--blue90);
+    font-size: 13px;
+    line-height: 20px;
+    border-radius: 4px;
+}
+
+.TipBox.Click .BtnClose {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+
+.TipBox.Click .BtnClose:after {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('/static/images/my-page/resume-tip-close.svg') no-repeat;
+    content: "";
+}
+

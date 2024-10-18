@@ -143,6 +143,245 @@
                                         </button>
                                     </div>
                                 </section>
+                                <!-- 이력서 파일 등록 -->
+                                <section id="resume_file" class="resume_file">
+                                    <input
+                                        type="hidden"
+                                        name="mfilebox_idx"
+                                        value=""
+                                        id="mfilebox_idx"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="file_res_path"
+                                        value=""
+                                        id="file_res_path"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="file_res_nm"
+                                        value=""
+                                        id="file_res_nm"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="file_res_size"
+                                        value="0"
+                                        id="file_res_size"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="file_res_ext"
+                                        value=""
+                                        id="file_res_ext"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="total_page"
+                                        value="0"
+                                        id="total_page"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="pvclt_fl"
+                                        value="y"
+                                        id="pvclt_fl"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="file_res_edit"
+                                        value="y"
+                                        id="file_res_edit"
+                                    />
+                                    <div class="resume_tit">
+                                        <div class="box_tit">
+                                            <h2 class="tit">
+                                                이력서 파일
+                                                <span class="must">필수</span>
+                                            </h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- 파일 등록 -->
+                                    <div
+                                        class="resume_edit add_file_area"
+                                        style="display: block"
+                                    >
+                                        <div class="item_row">
+                                            <div class="item item_full">
+                                                <label
+                                                    for="resume_file"
+                                                    class="blind"
+                                                    >파일 등록</label
+                                                >
+                                                <input
+                                                    type="file"
+                                                    name="file_res"
+                                                    id="file_res"
+                                                    accept=".pdf, .png, .jpg, .jpeg, .gif"
+                                                    data-require="true"
+                                                    autocomplete="off"
+                                                    style="display: none"
+                                                />
+
+                                                <button
+                                                    type="button"
+                                                    class="BtnType SizeL btn_file_add evtOpenNudgeAttachFile"
+                                                    id="fileAddBtn"
+                                                >
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="#resume_plus"
+                                                        ></use>
+                                                    </svg>
+                                                    파일 추가
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="item_txt_sub"
+                                            >* 최대 1개, 10MB이하의 파일을
+                                            등록할 수 있습니다.</span
+                                        >
+                                    </div>
+
+                                    <!-- 파일 미리보기 -->
+                                    <div
+                                        class="resume_edit preview_file_area"
+                                        style="display: none"
+                                    >
+                                        <!-- Row -->
+                                        <h5 class="tit_sub">파일미리보기</h5>
+                                        <div class="item_row">
+                                            <div
+                                                class="file_preview"
+                                                id="filePreview"
+                                            >
+                                                <p class="txt_no_preview">
+                                                    썸네일을 찾을 수 없습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="item_row uploaded_file"
+                                            id="uploadedFileRow"
+                                        >
+                                            <ul
+                                                class="file_box item_full"
+                                                id="fileList"
+                                            ></ul>
+                                        </div>
+
+                                        <div class="item_row">
+                                            <div
+                                                class="InpBox letter_box item_full"
+                                            >
+                                                <textarea
+                                                    id="file_res_desc"
+                                                    name="file_res_desc"
+                                                    class="textarea charCount"
+                                                    placeholder="파일에 대한 소개를 작성해주세요."
+                                                    title="파일설명"
+                                                ></textarea>
+                                                <div
+                                                    class="txt_count notCached"
+                                                >
+                                                    <span class="count"
+                                                        ><em>총 글자수</em>
+                                                        <span class="totalLen"
+                                                            >0</span
+                                                        >
+                                                        자 /
+                                                        <span class="totalByte"
+                                                            >0</span
+                                                        >
+                                                        byte</span
+                                                    ><span class="count"
+                                                        ><em>공백제외</em>
+                                                        <span class="blankLen"
+                                                            >0</span
+                                                        >
+                                                        자 /
+                                                        <span class="blankByte"
+                                                            >0</span
+                                                        >
+                                                        byte</span
+                                                    >
+                                                </div>
+                                                <!-- <div class="txt_count"></div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="ModalBox layer_uploaded ing"
+                                        id="resume_file_uploading_layer"
+                                        style="display: none"
+                                    >
+                                        <h4 class="Tit">파일 첨부</h4>
+                                        <div class="ModalCont uploaded_box">
+                                            <div class="uploaded_txt">
+                                                <div class="LoadingImg">
+                                                    <div
+                                                        class="LoadingCircle LoadingCircleC1"
+                                                    ></div>
+                                                    <div
+                                                        class="LoadingCircle LoadingCircleC2"
+                                                    ></div>
+                                                    <div
+                                                        class="LoadingCircle LoadingCircleC3"
+                                                    ></div>
+                                                </div>
+                                                <strong
+                                                    >파일 업로드
+                                                    중입니다</strong
+                                                >
+                                                <p>
+                                                    업로드하는데 1-3분 정도
+                                                    시간이 소요됩니다.<br />화면을
+                                                    나가면 업로드가 완료되지
+                                                    않습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="ModalBox layer_uploaded"
+                                        id="resume_file_uploaded_layer"
+                                        style="display: none"
+                                    >
+                                        <h4 class="Tit">파일 첨부</h4>
+                                        <div class="ModalCont uploaded_box">
+                                            <div class="uploaded_txt">
+                                                <strong
+                                                    >파일 업로드가
+                                                    완료되었습니다.</strong
+                                                >
+                                                <p>
+                                                    파일로는 설명이 부족한
+                                                    부분은<br />이력서 항목을
+                                                    추가하여 작성해보세요.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="BtmArea">
+                                            <button
+                                                type="button"
+                                                class="BtnType SizeM btn_confirm"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            class="BtnClose btn_close"
+                                        >
+                                            <span class="blind">닫기</span>
+                                        </button>
+                                    </div>
+                                </section>
+                                <!-- 학력 -->
                                 <section id="school" class="resume_school">
                                     <div class="resume_tit">
                                         <div class="box_tit">
@@ -798,10 +1037,99 @@
                             </section>
                         </div>
                     </form>
+                    <!-- 파일등록 모달창 -->
+                    <div id="wrapResumeNudge">
+                        <div
+                            class="ModalBox resume_file_manage"
+                            data-nudge="resume-file-upload"
+                        >
+                            <h4 class="Tit">
+                                파일 첨부
+                                <p class="Txt">
+                                    첨부파일은 아래의 확장자로 파일
+                                    업로드(10mb)가 가능합니다.
+                                </p>
+                            </h4>
+
+                            <div class="ModalCont ScrollBar">
+                                <div class="file_tab">
+                                    <div class="InpBox">
+                                        <span class="Rdo">
+                                            <input
+                                                type="radio"
+                                                name="attach_type"
+                                                value="upload"
+                                                id="attachTypeUpload"
+                                                checked=""
+                                            />
+                                            <label
+                                                class="Lbl"
+                                                for="attachTypeUpload"
+                                                >파일 등록</label
+                                            >
+                                        </span>
+                                    </div>
+                                    <!-- <div class="InpBox">
+                                        <span class="Rdo">
+                                            <input
+                                                type="radio"
+                                                name="attach_type"
+                                                value="load"
+                                                id="attachTypeLoad"
+                                                disabled=""
+                                            />
+                                            <label
+                                                class="Lbl"
+                                                for="attachTypeLoad"
+                                                >파일 불러오기</label
+                                            >
+                                        </span>
+                                    </div> -->
+                                </div>
+                                <div class="file_box">
+                                    <input
+                                        type="file"
+                                        name="dumi_file_res"
+                                        id="dumi_file_res"
+                                        accept=".pdf, .png, .jpg, .jpeg, .gif"
+                                        autocomplete="off"
+                                    />
+                                </div>
+                                <p class="desc">
+                                    *불필요한 개인정보가 포함되지 않도록 확인 후
+                                    첨부하세요.
+                                </p>
+                                <p class="notice">
+                                    등록가능한 파일 형식 및 확장자 : PDF, PNG,
+                                    JPG, JPEG, GIF<br />
+                                </p>
+                            </div>
+                            <div class="BtmArea bottom_btn">
+                                <button
+                                    type="button"
+                                    class="BtnType SizeM GrayInvert evtBtnClose"
+                                >
+                                    취소
+                                </button>
+                                <button
+                                    type="button"
+                                    class="BtnType SizeM evtUploadFile"
+                                    id="uploadBtn"
+                                    disabled=""
+                                >
+                                    등록
+                                </button>
+                            </div>
+                            <button type="button" class="BtnClose evtBtnClose">
+                                <span class="blind">닫기</span>
+                            </button>
+                        </div>
+                        <div class="sri_dimmed dimmed_person_attr"></div>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div id="dimmed" class="sri_dimmed" style="display: none"></div>
         <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="resume_skill_close" viewBox="0 0 20 20">
                 <path

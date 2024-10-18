@@ -1,5 +1,9 @@
 const selectAll = document.getElementById("selectAll");
 const jobList = document.getElementById("jobList");
+const tabBox = document.querySelector(".TabBox");
+const replyTab = document.getElementById("replyTab");
+const postTab = document.getElementById("postTab");
+const pageBox = document.querySelector(".PageBox"); // 페이지 박스 요소 선택
 
 // 서버에서 받을 데이터
 const applyData = [
@@ -39,140 +43,136 @@ const applyData = [
 ];
 
 const replyData = [
-    {
-        id: 1,
-        company: "마린웍스㈜ 댓글 데이터",
-        position: "플랫폼 서비스 개발",
-        description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
-        status: "신입 · 경력",
-        education: "대학교(4년)↑",
-        employmentType: "정규직",
-        location: "서울 종로구",
-        deadline: "~ 10/21(월)",
-    },
-    {
-        id: 1,
-        company: "마린웍스㈜ 댓글 데이터",
-        position: "플랫폼 서비스 개발",
-        description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
-        status: "신입 · 경력",
-        education: "대학교(4년)↑",
-        employmentType: "정규직",
-        location: "서울 종로구",
-        deadline: "~ 10/21(월)",
-    },
-    {
-        id: 1,
-        company: "마린웍스㈜ 댓글 데이터",
-        position: "플랫폼 서비스 개발",
-        description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
-        status: "신입 · 경력",
-        education: "대학교(4년)↑",
-        employmentType: "정규직",
-        location: "서울 종로구",
-        deadline: "~ 10/21(월)",
-    },
+    // {
+    //     id: 1,
+    //     company: "댓글1",
+    //     position: "플랫폼 서비스 개발",
+    //     description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
+    //     status: "신입 · 경력",
+    //     education: "대학교(4년)↑",
+    //     employmentType: "정규직",
+    //     location: "서울 종로구",
+    //     deadline: "~ 10/21(월)",
+    // },
+    // {
+    //     id: 2,
+    //     company: "댓글2",
+    //     position: "AI 연구 개발",
+    //     description: "머신러닝 및 딥러닝 모델 개발",
+    //     status: "경력",
+    //     education: "대학교(4년)↑",
+    //     employmentType: "계약직",
+    //     location: "서울 강남구",
+    //     deadline: "~ 10/21(월)",
+    // },
+    // {
+    //     id: 3,
+    //     company: "댓글3",
+    //     position: "AI 연구 개발",
+    //     description: "머신러닝 및 딥러닝 모델 개발",
+    //     status: "경력",
+    //     education: "대학교(4년)↑",
+    //     employmentType: "계약직",
+    //     location: "서울 강남구",
+    //     deadline: "~10/24(수)",
+    // },
 ];
 
-// 동적으로 공고 리스트 생성
-applyData.forEach((data) => {
-    const li = document.createElement("li");
-    li.className = "row recruit_summary_basic";
-    li.innerHTML = `
-    <div class="InpBox scrap_check">
-      <span class="Chk Hide">
-        <input type="checkbox" id="recruit_check_${data.id}" class="idx_chk checkbox_idx" value="${data.id}" />
-        <label class="Lbl" for="recruit_check_${data.id}">선택</label>
-      </span>
-    </div>
-    <div class="col_corp type02">
-      <a target="_blank" id="${data.id}" class="relay-recruit-view relay-recruit-data">
-        ${data.company}
-      </a>
-    </div>
-    <div class="col_informs">
-      <strong class="tit">
-        <a href="/zf_user/jobs/relay/recruit-view?view_type=read_jobs&rec_idx=${data.id}" target="_blank">
-          ${data.description}
-        </a>
-      </strong>
-      <button class="like_btn scrap-${data.id}" scraped="n" rec_idx="${data.id}">
-        <span class="blind">찜하기 버튼</span>
-      </button>
-      <ul class="inform">
-        <li>${data.status}</li>
-        <li>${data.education}</li>
-        <li>${data.employmentType}</li>
-        <li>${data.location}</li>
-      </ul>
-    </div>
-    <div class="col_relation">
-      <p class="reason">내 선호조건과 비슷</p>
-      <span class="data">
-        <strong class="point">${data.location} X IT개발·데이터</strong>
-      </span>
-    </div>
-    <div class="col_btns">
-      <button class="sri_btn_ml">
-        <span class="sri_btn_immediately">입사지원</span>
-      </button>
-      <span class="date">
-        ${data.deadline}
-      </span>
-    </div>
-  `;
-    jobList.appendChild(li);
+// 탭 활성화 함수
+const setActiveTab = (selectedTab) => {
+    const tabs = tabBox.querySelectorAll("li");
+
+    // 모든 탭에서 .Select 클래스 제거
+    tabs.forEach((tab) => tab.classList.remove("Select"));
+
+    // 선택된 탭에 .Select 클래스 추가
+    selectedTab.parentElement.classList.add("Select");
+};
+
+// 리스트 렌더링 함수
+const renderList = (data) => {
+    jobList.innerHTML = "";
+
+    if (data.length > 0) {
+        data.forEach((item) => {
+            const li = document.createElement("li");
+            li.className = "row recruit_summary_basic";
+            li.innerHTML = `
+                <div class="InpBox scrap_check">
+                    <span class="Chk Hide">
+                        <input type="checkbox" id="recruit_check_${item.id}" class="idx_chk checkbox_idx" value="${item.id}" />
+                        <label class="Lbl" for="recruit_check_${item.id}">선택</label>
+                    </span>
+                </div>
+                <div class="col_corp type02">
+                    <a target="_blank" id="${item.id}" class="relay-recruit-view relay-recruit-data">
+                        ${item.company}
+                    </a>
+                </div>
+                <div class="col_informs">
+                    <strong class="tit">
+                        <a href="#" target="_blank">${item.description}</a>
+                    </strong>
+                    <button class="like_btn scrap-${item.id}" scraped="n" rec_idx="${item.id}">
+                        <span class="blind">찜하기 버튼</span>
+                    </button>
+                    <ul class="inform">
+                        <li>${item.status}</li>
+                        <li>${item.education}</li>
+                        <li>${item.employmentType}</li>
+                        <li>${item.location}</li>
+                    </ul>
+                </div>
+                <div class="col_relation">
+                    <p class="reason">내 선호조건과 비슷</p>
+                    <span class="data">
+                        <strong class="point">${item.location} X IT개발·데이터</strong>
+                    </span>
+                </div>
+                <div class="col_btns">
+                    <button class="sri_btn_ml">
+                        <span class="sri_btn_immediately">입사지원</span>
+                    </button>
+                    <span class="date">
+                        ${item.deadline}
+                    </span>
+                </div>
+            `;
+            jobList.appendChild(li);
+        });
+        pageBox.style.display = "block"; // 페이지 박스 표시
+    } else {
+        // 데이터가 없을 때의 처리
+        jobList.innerHTML = `
+            <form name="list_form_no_row" id="list_form_no_row">
+                <div class="list_status">
+                    <div class="no_row">
+                        <p class="txt">
+                            <b>입사지원 내역이 없어요</b>
+                            userName님에게 맞는 공고를 소개해줄게요!
+                        </p>
+                        <a href="" class="link_go">나에게 맞는 공고 보러가기</a>
+                    </div>
+                </div>
+            </form>
+        `;
+        pageBox.style.display = "none"; // 페이지 박스 숨기기
+    }
+};
+
+// 초기 렌더링
+renderList(applyData);
+
+// 탭 클릭 이벤트
+replyTab.addEventListener("click", () => {
+    renderList(replyData);
+    setActiveTab(replyTab);
 });
 
-const replyTab = document.getElementById("replyTab");
-const postTab = document.getElementById("postTab");
-
-function renderList(data) {
-    jobList.innerHTML = "";
-    data.forEach((item) => {
-        const li = document.createElement("li");
-        li.className = "row recruit_summary_basic";
-        li.innerHTML = `
-      <div class="InpBox scrap_check">
-        <span class="Chk Hide">
-          <input type="checkbox" id="recruit_check_${item.id}" class="idx_chk checkbox_idx" value="${item.id}" />
-          <label class="Lbl" for="recruit_check_${item.id}">선택</label>
-        </span>
-      </div>
-      <div class="col_corp type02">
-        <a target="_blank" id="${item.id}" class="relay-recruit-view relay-recruit-data">
-          ${item.company}
-        </a>
-      </div>
-      <div class="col_informs">
-        <strong class="tit">
-          <a href="#" target="_blank">${item.description}</a>
-        </strong>
-        <ul class="inform">
-          <li>${item.status}</li>
-          <li>${item.education}</li>
-          <li>${item.employmentType}</li>
-          <li>${item.location}</li>
-        </ul>
-      </div>
-      <div class="col_relation">
-        <p class="reason">내 선호조건과 비슷</p>
-        <span class="data">
-          <strong class="point">${item.location} X IT개발·데이터</strong>
-        </span>
-      </div>
-      <div class="col_btns">
-        <button class="sri_btn_ml">
-          <span class="sri_btn_immediately">입사지원</span>
-        </button>
-        <span class="date">
-        ${item.deadline}
-        </span>
-      </div>
-    `;
-        jobList.appendChild(li);
-    });
-}
+postTab.addEventListener("click", () => {
+    renderList(applyData);
+    setActiveTab(postTab);
+});
 
 // 찜하기 버튼(스크랩) 클릭 이벤트
 jobList.addEventListener("click", (event) => {
@@ -186,42 +186,25 @@ jobList.addEventListener("click", (event) => {
 });
 
 // 전체 선택 체크박스 로직
-const individualCheckboxes = document.querySelectorAll(
-    'input[type="checkbox"].checkbox_idx'
-);
-
 selectAll.addEventListener("change", () => {
     const isChecked = selectAll.checked;
+    const individualCheckboxes = document.querySelectorAll(
+        'input[type="checkbox"].checkbox_idx'
+    );
     individualCheckboxes.forEach((checkbox) => {
         checkbox.checked = isChecked;
     });
 });
 
-individualCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", () => {
+// 개별 체크박스 변경 시 전체 선택 체크박스 상태 업데이트
+jobList.addEventListener("change", (event) => {
+    if (event.target.classList.contains("checkbox_idx")) {
+        const individualCheckboxes = document.querySelectorAll(
+            'input[type="checkbox"].checkbox_idx'
+        );
         const allChecked = Array.from(individualCheckboxes).every(
             (cb) => cb.checked
         );
         selectAll.checked = allChecked;
-    });
-});
-const tabBox = document.querySelector(".TabBox");
-
-const setActiveTab = (selectedTab) => {
-    const tabs = tabBox.querySelectorAll("li");
-
-    // 모든 탭에서 .Select 클래스 제거
-    tabs.forEach((tab) => tab.classList.remove("Select"));
-
-    // 선택된 탭에 .Select 클래스 추가
-    selectedTab.parentElement.classList.add("Select");
-};
-
-replyTab.addEventListener("click", () => {
-    renderList(replyData);
-    setActiveTab(replyTab);
-});
-postTab.addEventListener("click", () => {
-    renderList(applyData);
-    setActiveTab(postTab);
+    }
 });

@@ -31,6 +31,7 @@
     font-weight: bold;
     line-height: 56px;
 }
+
 .support_announce .TabBox {
     padding: 50px 0 20px;
 }
@@ -512,4 +513,47 @@ option {
 }
 .TabBox li + li {
     margin-left: 32px;
+}
+.wrap_list .no_row {
+    padding: 72px 0 79px;
+    border-bottom: 1px solid #eaedf4;
+    text-align: center;
+}
+.wrap_list .no_row .txt {
+    padding: 163px 0 14px;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 24px;
+    background: url(//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png)
+        50% 0 no-repeat;
+}
+.wrap_list .no_row .txt b {
+    display: block;
+    padding-bottom: 4px;
+    color: var(--gray90);
+    font-size: 18px;
+    line-height: 32px;
+}
+.wrap_list .no_row .link_go {
+    display: inline-block;
+    position: relative;
+    padding: 10px 14px 10px 0;
+    color: #4876ef;
+    font-size: 14px;
+    vertical-align: top;
+}
+.wrap_list .no_row .link_go:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-left: -2px;
+    width: 5px;
+    height: 5px;
+    border: solid currentColor;
+    border-width: 1px 1px 0 0;
+    -webkit-transform: translate(-50%, -50%) scale(1.1428571429, 1)
+        rotate(45deg);
+    -ms-transform: translate(-50%, -50%) scale(1.1428571429, 1) rotate(45deg);
+    transform: translate(-50%, -50%) scale(1.1428571429, 1) rotate(45deg);
+    content: "";
 }

@@ -120,7 +120,7 @@
     transform: translateY(-50%);
     width: 46px;
     height: 20px;
-    background-image: url();
+    background-image: url(/static/images/corporation/private.svg);
     background-size: 34px 14px;
     background-position: center;
     background-repeat: no-repeat;
@@ -263,7 +263,7 @@ ol, ul, li {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url();
+    background-image: url(/static/images/corporation/school.svg);
     width: 20px;
     height: 20px;
     content: '';
@@ -327,7 +327,7 @@ ol, ul, li {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url();
+    background-image: url(/static/images/corporation/money.svg);
     width: 20px;
     height: 20px;
     content: '';
@@ -336,7 +336,7 @@ ol, ul, li {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url();
+    background-image: url(/static/images/corporation/pf.svg);
     width: 20px;
     height: 20px;
     content: '';

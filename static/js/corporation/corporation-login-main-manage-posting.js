@@ -34,30 +34,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const buttons = document.querySelectorAll(".btn_history");
+    const buttons = document.querySelectorAll(".btn-history");
 
     buttons.forEach((button) => {
         button.addEventListener("click", function () {
-            // 클릭된 버튼의 data-recruitapply_idx 값 가져오기
+            // 클릭된 버튼의 data-recruitapply-idx 값 가져오기
             const recruitApplyIdx = button.getAttribute(
-                "data-recruitapply_idx"
+                "data-recruitapply-idx"
             );
 
-            // 해당 data-recruitapply_idx 값을 가진 .col_history 찾기
+            // 해당 data-recruitapply-idx 값을 가진 .col-history 찾기
             const historyDiv = document.querySelector(
-                `.col_history[data-recruitapply_idx="${recruitApplyIdx}"]`
+                `.col-history[data-recruitapply-idx="${recruitApplyIdx}"]`
             );
 
             // 현재 보여지고 있는지 확인
             const isVisible = historyDiv.style.display === "block";
 
-            // 현재 클릭된 항목 외에 모든 .col_history 숨기기 및 버튼 스타일 원상태로
-            document.querySelectorAll(".col_history").forEach((history) => {
+            // 현재 클릭된 항목 외에 모든 .col-history 숨기기 및 버튼 스타일 원상태로
+            document.querySelectorAll(".col-history").forEach((history) => {
                 if (history !== historyDiv) {
                     history.style.display = "none";
                 }
             });
-            document.querySelectorAll(".btn_history").forEach((btn) => {
+            document.querySelectorAll(".btn-history").forEach((btn) => {
                 btn.classList.remove("active"); // 버튼에서 active 클래스 제거
             });
 

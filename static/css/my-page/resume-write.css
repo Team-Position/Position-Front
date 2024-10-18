@@ -309,7 +309,7 @@ body.no_gnb {
 }
 
 .user_hide.on span:before {
-    background: url('/static/images/my-page/hide-on-resume.svg') no-repeat;
+    background: url('/static/images/my-page/hide-resume.svg') no-repeat;
 }
 
 .user_hide span:before {
@@ -317,7 +317,7 @@ body.no_gnb {
     margin-right: 8px;
     width: 24px;
     height: 24px;
-    background: url('/static/images/my-page/hide-resume.svg') no-repeat;
+    background: url('/static/images/my-page/hide-on-resume.svg') no-repeat;
     content: "";
 }
 

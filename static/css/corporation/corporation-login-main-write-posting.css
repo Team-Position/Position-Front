@@ -1,30 +1,4 @@
-@charset "utf-8";
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 700;
-    font-display: swap;
-    src: local("Pretendard Bold"),
-        url(https://www.saraminimage.co.kr/sri/font/Pretendard-Bold.subset.woff2)
-            format("woff");
-}
 
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 600;
-    font-display: swap;
-    src: local("Pretendard SemiBold"),
-        url(https://www.saraminimage.co.kr/sri/font/Pretendard-SemiBold.subset.woff2)
-            format("woff");
-}
-
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 400;
-    font-display: swap;
-    src: local("Pretendard Regular"),
-        url(https://www.saraminimage.co.kr/sri/font/Pretendard-Regular.subset.woff2)
-            format("woff");
-}
 div,
 span,
 applet,

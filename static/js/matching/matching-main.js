@@ -1,119 +1,41 @@
-// 버튼 클릭 시 on 클래스 토글
-document
-    .getElementById("interview-write-selected-job")
-    .addEventListener("click", function () {
-        // 대상 요소 선택
-        const targetElement = document.querySelector(
-            ".interview-write-option-content.interview-write-job-category-section"
-        );
+const optionSelects = document.querySelectorAll(".tab_section li");
+const optionContents = document.querySelectorAll(".option_content ");
+// const optionSelectButtons = document.querySelectorAll(".tab_section li button");
+console.log(optionSelects);
+console.log(optionContents);
 
-        // on 클래스 추가
-        targetElement.classList.toggle("on");
-    });
+const viewports = document.querySelectorAll(".viewport");
+console.log(viewports);
+HTMLElement.prototype.forEach = Array.prototype.forEach;
+NodeList.prototype.filter = Array.prototype.filter;
+// console.log(optionSelectButtons);
 
-document.getElementById("interviewDateYear").addEventListener("change", (e) => {
-    const year = this.value;
-    const monthSelect = document.getElementById("interviewDateMonth");
-    let months = [];
+// optionSelectButtons.forEach((optionSelectButton) => {
+//     optionSelectButton.addEventListener("click", (e) => {
+//         console.log(e.target);
+//         // 부모 li의 클릭 이벤트 방지
+//     });
+// });
 
-    // 연도에 따라 월을 필터링
-    if (year === "2021") {
-        // 2021년은 11월과 12월만 가능
-        months = ["11", "12"];
-    } else if (year === "2024") {
-        // 2024년은 1월부터 10월까지만 가능
-        months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
-    } else {
-        // 2022년, 2023년은 1월부터 12월까지 가능
-        months = [
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-        ];
-    }
-
-    // 월 선택 초기화 및 옵션 동적 생성
-    monthSelect.innerHTML = `<option value="">월 선택</option>`; // 기본 옵션 추가
-    months.forEach((month) => {
-        const option = document.createElement("option");
-        option.value = month;
-        option.text = `${month}월`;
-        monthSelect.appendChild(option);
+optionSelects.forEach((optionSelect, index) => {
+    optionSelect.addEventListener("click", (e) => {
+        // console.log(e.target);
+        optionSelects.forEach((optionSelect) => {
+            optionSelect.classList.remove("on");
+        });
+        e.target.parentElement.classList.add("on");
+        optionContents.forEach((optionContent) => {
+            optionContent.classList.remove("on");
+        });
+        optionContents[index].classList.add("on");
     });
 });
 
-// 직무,직업쪽 자바스크립트
+const selectJobOneDepths = document.querySelector(
+    ".box_detail_jobs .box_onedepth .wrap_scroll .viewport ul"
+);
 
-// 1단계 자바스크립트
-document
-    .querySelector(".interview-write-btn-add-modify")
-    .addEventListener("click", function () {
-        const jobCategorySection = document.querySelector(
-            ".interview-write-box-jobs"
-        );
-
-        if (jobCategorySection.classList.contains("on")) {
-            jobCategorySection.classList.remove("on");
-            jobCategorySection.style.display = "none";
-        } else {
-            jobCategorySection.classList.add("on");
-            jobCategorySection.style.display = "block";
-        }
-    });
-
-// 2단계: box-jobs와 box-detail-jobs 사이 토글
-document
-    .querySelector(".interview-write-btn-job")
-    .addEventListener("click", function () {
-        const boxJobs = document.querySelector(".interview-write-box-jobs");
-        const boxDetailJobs = document.querySelector(
-            ".interview-write-box-detail-jobs"
-        );
-
-        // box-jobs 숨기고, box-detail-jobs 보여주기
-        boxJobs.style.display = "none";
-        boxDetailJobs.style.display = "block";
-    });
-
-// 3단계: box-detail-jobs가 표시되도록 설정
-document.addEventListener("DOMContentLoaded", function () {
-    const boxDetailJobs = document.querySelector(
-        ".interview-write-box-detail-jobs"
-    );
-    if (boxDetailJobs) {
-        boxDetailJobs.style.display = "none"; // 초기 상태 설정
-    }
-});
-
-// 버튼 클릭 이벤트 리스너 등록
-document
-    .querySelector(".interview-write-btn-expand")
-    .addEventListener("click", function () {
-        // dl 태그에 expand 클래스 토글
-        const dlElement = document.querySelector(".interview-write-row-item");
-        dlElement.classList.toggle("expand");
-
-        // div.interview-write-box-onedepth에 on 클래스 토글
-        const boxOnedepth = document.querySelector(
-            ".interview-write-box-onedepth"
-        );
-        boxOnedepth.classList.toggle("on");
-
-        // div.interview-write-row.interview-write-list에 on 클래스 토글
-        const rowList = document.querySelector(
-            ".interview-write-row.interview-write-list"
-        );
-        rowList.classList.toggle("on");
-    });
+console.log(selectJobOneDepths);
 
 // 대카 중카 소카 자바스크립트 코드
 const categorys = {
@@ -2447,99 +2369,90 @@ const categorys = {
         ],
     },
 };
-
-// let text = ``;
-
-// // 대분류 카테고리만 반복
-// Object.keys(category).forEach((디자인) => {
-//     text += `
-//       <li class="item_job depth1_btn_wrapper">
-//         <button type="button" class="first_depth">
-//           <span class="txt">${디자인}</span>
-//         </button>
-//       </li>
-//     `;
-// });
-
-// console.log(category.디자인);
-
-// // ul 요소에 생성된 HTML을 삽입
-// const lists = document.querySelector(
-//     ".interview-write-list.ineterview-write.overview"
-// );
-// console.log(lists);
-// // .innerHTML += text;
-
-// 대분류 카테고리만 반복
-// forEach 다음에는 변수명 선언..
-// 대카테고리에 클릭이벤트, 클릭이벤트 2번
-
-// let text = ``;
-// Object.keys(categorys).forEach((category) => {
-//     text += `
-//       <li class="item_job depth1_btn_wrapper">
-//         <button type="button" class="first_depth">
-//           <span class="txt">${category}</span>
-//         </button>
-//       </li>
-//     `;
-// });
-
-// console.log(text);
-
-// Object.keys(categorys).forEach((mainCategory) => {
-//     console.log(`대분류 카테고리: ${mainCategory}`);
-
-//     // 하위 항목들 (직무·직업, 전문분야 등) 출력
-//     Object.keys(categorys[mainCategory]).forEach((subCategory) => {
-//         console.log(` 중카테고리: ${subCategory}`);
-
-//         // 각 하위 카테고리에 속하는 세부 항목들 출력
-//         categorys[mainCategory][subCategory].forEach((item) => {
-//             console.log(` 소카테고리: ${item}`);
-//         });
-//     });
-// });
-
-// Object.keys(categorys).forEach((mainCategory) => {
-//     console.log(mainCategory);
-// });
-
-let text = ``;
+console.log(categorys);
+console.log(selectJobOneDepths);
+// text += Object.keys(categorys.categoryA);
+console.log(Object.keys(categorys));
+// Object.keys(categorys).forEach((key) => {
+let textA = ``;
+let textB = ``;
+// let textC = ``;/
+let i = 0;
+// let j = 0;
 Object.keys(categorys).forEach((categoryA) => {
-    text += `
-            <li
-                class="interview-write-item-job interview-write-depth1-btn-wrapper on"
-                data-mcls-cd-no="16"
+    i++;
+    // j++;
+    textA = `
+        <li class="item_job depth1_btn_wrapper" >
+            <button
+                type="button"
+                data-mcls_cd_no="16"
+                class="first_depth depth1_btn_16"
             >
-                <button
-                    type="button"
-                    data-mcls-cd-no="16"
-                    class="interview-write-first-depth"
-                >
-                    <span
-                        class="interview-write-txt"
-                        >${categoryA}</span
-                    >
-                </button>
-            </li>
-                `;
+                <span class="txt">${categoryA}</span>
+                <span class="count">(10,857)</span>
+            </button>
+        </li>`;
     Object.keys(categorys[categoryA]).forEach((categoryB) => {
-        text += `
+        textB += `
                     <dt>
                         <button>
-                            <span>${categoryB}</span>
+                            <span class="depth2-${i}">${categoryB}</span>
                         </button>
                     </dt>
                 `;
         categorys[categoryA][categoryB].forEach((categoryC) => {
-            text += `
+            textB += `
                     <dd>
-                        <button>${categoryC}</button>
+                        <button class="depth3-${i}">${categoryC}</button>
                     </dd>
                 `;
         });
     });
+    selectJobOneDepths.innerHTML += textA;
+    // viewports[2].innerHTML += textB;
+
+    // console.log(textA);
 });
 
-console.log(text);
+// });
+const selectJobLists = document.querySelectorAll(
+    ".item_job.depth1_btn_wrapper"
+);
+console.log(selectJobLists);
+console.log(selectJobOneDepths.children);
+
+const DeepDepthElements = [...selectJobOneDepths.children];
+
+DeepDepthElements.forEach((DeepDepthElement) => {
+    console.log(DeepDepthElement.children);
+    DeepDepthElement.children.addEventListener("click", (e) => {
+        console.log(e.target);
+        viewports[2].children.forEach((child) => {
+            child.style.display = "none";
+        });
+        const blockChildren = viewports[2].children.filter(
+            (child) =>
+                child.classList.contains(`depth2-${i}`) ||
+                child.classList.contains(`depth3-${i}`)
+        );
+        blockChildren.forEach((blockChild) => {
+            blockChild.style.display = "block";
+        });
+    });
+});
+
+// selectJobOneDepths.innerHTML
+// text= `
+//     <li class="item_job depth1_btn_wrapper on" id="depth1_btn_16">
+//         <button
+//             type="button"
+//             data-mcls_cd_no="16"
+//             class="first_depth depth1_btn_16"
+//         >
+//             <span class="txt">${categorys}</span>
+//             <span class="count">(10,857)</span>
+//         </button>
+//     </li>
+// `;
+// selectJobOneDepths.forEach()

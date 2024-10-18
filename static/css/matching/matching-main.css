@@ -290,6 +290,19 @@
     margin-left: 5px;
     color: #888;
 }
+.wrap_main_panel .tab_section:after {
+    display: table;
+    clear: both;
+    content: "";
+    table-layout: fixed;
+}
+.wrap_section_contents .select_keyword {
+    border-bottom: 0;
+}
+.option_content.job_category_section.on {
+    min-height: auto;
+}
+
 /* 아래 옵션 선택 */
 .option_content.job_category_section.on {
     min-height: auto;
@@ -323,7 +336,7 @@
 }
 .wrap_section_contents .select_keyword {
     border-bottom: 0;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .wrap_section_contents .select_keyword {
     padding: 12px 0 0 15px;

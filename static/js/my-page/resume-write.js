@@ -39,8 +39,6 @@ fileInput1.addEventListener("change", () => {
             reader.onload = (e) => {
                 const img = document.createElement("img");
                 img.src = e.target.result;
-                img.style.maxWidth = "100px"; // 썸네일 이미지의 최대 너비
-                img.style.marginRight = "10px";
 
                 // 기존 내용 제거 후 이미지 추가
                 filePreview.innerHTML = "";

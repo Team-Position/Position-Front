@@ -2157,3 +2157,6 @@ button:disabled svg {
     background: var(--white);
     cursor: pointer;
 }
+.resume_file .file_preview img {
+    width: 100%;
+}

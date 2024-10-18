@@ -236,6 +236,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+.Select {
+    margin-right: 26px;
+}
 
 input,
 button,

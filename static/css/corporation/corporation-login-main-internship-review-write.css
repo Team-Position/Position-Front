@@ -1,8 +1,8 @@
-#sri_section.layout_full {
+#sri-section.layout-full {
     margin: 0;
     width: 100%;
 }
-#sri_section {
+#sri-section {
     display: table;
     overflow: hidden;
     position: relative;
@@ -11,12 +11,12 @@
     height: 100%;
     box-sizing: border-box;
 }
-#sri_wrap {
+#sri-wrap {
     display: table-row;
     width: 100%;
     height: 100%;
 }
-#sri_section.layout_full #content {
+#sri-section.layout-full #content {
     margin: 0;
     margin-bottom: 80px;
     width: 100%;
@@ -27,25 +27,25 @@
     margin: 56px auto 80px auto;
     width: 960px;
 }
-.company_honest_qna .contents_container {
+.company-honest-qna .contents-container {
     margin: 0 auto;
     width: 1260px;
     min-height: 700px;
 }
-.contents_container.qna_write_wrap {
+.contents-container.qna-write-wrap {
     width: 960px;
 }
-.qna_write_wrap .qna_write_selection {
+.qna-write-wrap .qna-write-selection {
     display: flex;
     padding: 73px 0 22px;
     font-size: 24px;
     line-height: 24px;
     align-items: center;
 }
-.qna_write_wrap .qna_category_tit {
+.qna-write-wrap .qna-category-tit {
     color: #5c667b;
 }
-.qna_subject_input {
+.qna-subject-input {
     display: block;
     padding: 13px 24px;
     width: 100%;
@@ -57,21 +57,21 @@
     font-size: 15px;
     line-height: 22px;
 }
-.qna_write_post {
+.qna-write-post {
     position: relative;
     margin-top: 32px;
     min-height: 240px;
     border: 1px solid #d7dce5;
     border-radius: 4px;
 }
-.editor_wrap.h_max {
+.editor-wrap.h-max {
     overflow: hidden;
     overflow-y: auto;
     padding: 20px 24px;
     height: 497px;
     border-bottom: 1px solid #d7dce5;
 }
-.editor_wrap {
+.editor-wrap {
     position: relative;
     padding: 20px 24px;
     width: 100%;
@@ -83,20 +83,20 @@
     font-size: 14px;
     line-height: 24px;
 }
-.editor_wrap:empty:not(:focus)::before {
+.editor-wrap:empty:not(:focus)::before {
     display: inline-block;
     color: #8491a7;
     white-space: pre;
     content: attr(data-ph);
     pointer-events: none;
 }
-.qna_write_post .qna_input_bottom {
+.qna-write-post .qna-input-bottom {
     position: relative;
     padding: 20px 150px 20px 20px;
     min-height: 58px;
     box-sizing: border-box;
 }
-.qna_write_post .qna_input_bottom .btn_image_add {
+.qna-write-post .qna-input-bottom .btn-image-add {
     display: inline-block;
     position: relative;
     margin-right: 8px;
@@ -105,7 +105,7 @@
     color: #373f57;
     font-size: 14px;
 }
-.qna_write_post .qna_input_bottom .btn_image_add:before {
+.qna-write-post .qna-input-bottom .btn-image-add:before {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -115,7 +115,7 @@
     background: url(//www.saraminimage.co.kr/sri/company_review/icons.png) no-repeat 0 -200px;
     content: "";
 }
-.qna_write_post .qna_input_bottom .post_count {
+.qna-write-post .qna-input-bottom .post-count {
     display: block;
     position: absolute;
     top: 16px;
@@ -124,10 +124,10 @@
     font-size: 13px;
     text-align: right;
 }
-.qna_write_post .qna_input_bottom .post_count em {
+.qna-write-post .qna-input-bottom .post-count em {
     color: #4876ef;
 }
-.qna_write_foot {
+.qna-write-foot {
     margin-top: 60px;
     text-align: center;
 }
@@ -151,7 +151,7 @@
     justify-content: center;
     align-items: center;
 }
-.btn_qna_write {
+.btn-qna-write {
     width: 320px;
 }
 button, label {
@@ -170,11 +170,11 @@ button, label {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
     transform: translateY(-50%) translateX(-50%) translateZ(0);
 }
-.layer_qna_alert {
+.layer-qna-alert {
     display: none;
     width: 390px;
 }
-.layer_qna_alert.ModalBox .ModalCont {
+.layer-qna-alert.ModalBox .ModalCont {
     color: var(--gray110);
 }
 .ModalBox .ModalCont {
@@ -196,7 +196,7 @@ button, label {
     font-size: 14px;
     line-height: 24px;
 }
-.layer_qna_alert .btn_confirm {
+.layer-qna-alert .btn-confirm {
     width: 266px;
 }
 .ModalBox .BtnClose {
@@ -219,7 +219,7 @@ button, label {
     background: url(/static/images/corporation/x.svg);
     content: "";
 }
-.sri_dimmed {
+.sri-dimmed {
     overflow: auto;
     position: fixed;
     top: 0;

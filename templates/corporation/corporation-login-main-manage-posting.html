@@ -11,14 +11,14 @@
         <title>공고, 지원자 관리</title>
     </head>
     <body>
-        <div id="sri_section" class="layout_full">
-            <div id="sri_wrap">
+        <div id="sri-section" class="layout-full">
+            <div id="sri-wrap">
                 <div id="content">
-                    <div class="wrap_company_view fixed">
+                    <div class="wrap-company-view fixed">
                         <div class="sidebar recommendation">
                             <div class="scroller">
-                                <div class="company_info">
-                                    <div class="box_logo">
+                                <div class="company-info">
+                                    <div class="box-logo">
                                         <img
                                             id="쿠팡(주)의 기업로고"
                                             alt="쿠팡(주)의 기업로고"
@@ -27,35 +27,39 @@
                                             height="38"
                                         />
                                     </div>
-                                    <div class="box_title">
+                                    <div class="box-title">
                                         <h1
-                                            class="tit_company"
+                                            class="tit-company"
                                             title="쿠팡(주)"
                                         >
-                                            쿠팡(주)<span class="txt_info"
+                                            쿠팡(주)<span class="txt-info"
                                                 >기업정보</span
                                             >
                                         </h1>
-                                        <p class="txt_job">전자상거래 소매업</p>
+                                        <p class="txt-job">전자상거래 소매업</p>
                                     </div>
-                                    <div class="box_btns">
+                                    <div class="box-btns">
                                         <!-- onclick부분 나중에 js 작업 할 때 참고하기 
-                                            interested_on되면 하트-->
+                                            interested-on되면 하트-->
                                         <button
                                             type="button"
-                                            class="interested_corp ga_data_layer interested_on"
+
+                                            class="interested-corp ga-data-layer interested-on"
                                             csn="RzBaRnNqKzJuWVdVeHNDLzlFVjcrQT09"
-                                            del_fl="n"
-                                            first_nudge="off"
-                                            onclick="try{Saramin.btnJob('favor', this, '', 'company_view');}catch(e){}"
+                                            del-fl="n"
+                                            first-nudge="off"
+                                            onclick="try{Saramin.btnJob('favor', this, '', 'company-view');}catch(e){}"
                                             aria-pressed="true"
+
+                                            class="interested_corp ga_data_layer interested_on"
+
                                         >
                                             <svg
                                                 width="16"
                                                 height="16"
                                                 viewBox="0 0 16 16"
                                                 fill="none"
-                                                class="icon_interested"
+                                                class="icon-interested"
                                             >
                                                 <path
                                                     d="M6.02498 12.7861L5.64593 12.4305L5.26661 12.0676L4.9045 11.7145L4.57727 11.3886L4.30315 11.1078L4.09798 10.8878L3.60986 10.3434L3.3016 9.99345L3.02797 9.67542L2.79004 9.38984L2.58897 9.13749L2.42437 8.91736L2.35722 8.8214C2.09522 8.43618 1.89245 8.04622 1.73708 7.6185C1.41094 6.38491 1.4304 5.39882 1.73942 4.62739C2.06107 3.82442 2.56896 3.24401 3.25465 2.87112C3.97841 2.47923 4.74412 2.39639 5.56989 2.63105C6.18765 2.82443 6.71818 3.1964 7.16412 3.7682L7.29598 3.94787L7.58589 4.37863L8.00062 4.99485L8.41545 4.3787L8.71259 3.93737C9.13803 3.32866 9.65597 2.91815 10.2666 2.68825L10.4462 2.62682C11.2606 2.39707 12.0242 2.47999 12.7465 2.87106C13.4323 3.24395 13.9403 3.82439 14.262 4.62745C14.5705 5.39767 14.5909 6.3831 14.2537 7.6522C14.1088 8.04661 13.9058 8.43727 13.6424 8.82404C13.6227 8.85295 13.6015 8.88333 13.5787 8.9152L13.4124 9.13756L13.2113 9.38998L12.9737 9.67507L12.549 10.1656L12.1189 10.6483L12.1177 10.6497L11.8097 10.99L11.569 11.2414L11.2664 11.5467L10.7343 12.0681L10.3555 12.4306L9.97658 12.786L9.61564 13.1169L9.28863 13.4077C9.1893 13.4942 9.09986 13.57 9.0226 13.6331C9.02237 13.6333 9.02214 13.6335 9.02192 13.6336L8.00223 14.461L7.999 14.4634L6.85007 13.5257C6.76132 13.4504 6.66238 13.3642 6.55569 13.2693L6.20886 12.9558C6.20844 12.9554 6.20801 12.955 6.20759 12.9546C6.148 12.9 6.08733 12.844 6.02592 12.787C6.02561 12.7867 6.0253 12.7864 6.02498 12.7861Z"
@@ -67,31 +71,35 @@
                                         </button>
                                     </div>
                                 </div>
-                                <nav class="company_navi">
-                                    <ul class="menu_list">
+                                <nav class="company-navi">
+                                    <ul class="menu-list">
                                         <!-- li가 selected되면 -->
-                                        <li class="menu_item">
+                                        <li class="menu-item">
                                             <button
                                                 type="button"
+
+                                                class="btn-menu ga-data-layer"
+                                                data-ga-data-layer="ga-lead|company-view|tab|com-intro"
+
                                                 class="btn_menu ga_data_layer"
-                                                data-ga_data_layer="ga_lead|company_view|tab|com_intro"
+
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_building"
+                                                        xlink:href="#ico-building"
                                                     ></use>
                                                 </svg>
                                                 기업소개
                                             </button>
                                         </li>
-                                        <li class="menu_item">
+                                        <li class="menu-item">
                                             <button
                                                 type="button"
-                                                class="btn_menu"
+                                                class="btn-menu"
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_supporting"
+                                                        xlink:href="#ico-supporting"
                                                     ></use>
                                                 </svg>
                                                 공고 등록
@@ -101,32 +109,32 @@
                                             </button>
                                         </li>
                                         <li
-                                            class="menu_item ga_data_layer selected"
+                                            class="menu-item ga-data-layer selected"
                                         >
                                             <button
                                                 type="button"
-                                                class="btn_menu ga_data_layer"
+                                                class="btn-menu ga-data-layer"
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_person"
+                                                        xlink:href="#ico-person"
                                                     ></use>
                                                 </svg>
                                                 공고·지원자 관리
 
-                                                <span class="badge badge_new"
+                                                <span class="badge badge-new"
                                                     >N</span
                                                 >
                                             </button>
                                         </li>
-                                        <li class="menu_item">
+                                        <li class="menu-item">
                                             <button
                                                 type="button"
-                                                class="btn_menu ga_data_layer"
+                                                class="btn-menu ga-data-layer"
                                             >
                                                 <svg class="ico">
                                                     <use
-                                                        xlink:href="#ico_chart"
+                                                        xlink:href="#ico-chart"
                                                     ></use>
                                                 </svg>
                                                 문의하기
@@ -137,20 +145,20 @@
                                 <!-- <div class="banner"></div> -->
                             </div>
                         </div>
-                        <div class="main_content cont_introduce">
+                        <div class="main-content cont-introduce">
                             <!-- 여기 안에 들어감 -->
                             <section class="section">
-                                <h2 class="section_tit">
+                                <h2 class="section-tit">
                                     (뒤로가기 버튼)공고 정보
                                 </h2>
                             </section>
                             <div
-                                class="box_company_view recruit_ing"
-                                id="company_info_recruit_info_ing"
+                                class="box-company-view recruit-ing"
+                                id="company-info-recruit-info-ing"
                             >
-                                <section class="section section_type2">
-                                    <div class="section_header">
-                                        <h2 class="section_tit">
+                                <section class="section section-type2">
+                                    <div class="section-header">
+                                        <h2 class="section-tit">
                                             진행중 공고
                                             <span class="count"
                                                 ><strong class="num">3</strong
@@ -158,15 +166,15 @@
                                             >
                                         </h2>
                                     </div>
-                                    <div class="section_content">
-                                        <div class="area_sorting">
+                                    <div class="section-content">
+                                        <div class="area-sorting">
                                             <ul class="TabBox">
                                                 <li class="Select">
                                                     <button
                                                         type="button"
                                                         class="BtnType"
                                                         data-tab="all"
-                                                        onmousedown="try {dataLayer.push({'event': 'ga_lead', 'category': 'company_view', 'event-flow': 'jobs_rec', 'event-label': 'all'});} catch (e) {}"
+                                                        onmousedown="try {dataLayer.push({'event': 'ga-lead', 'category': 'company-view', 'event-flow': 'jobs-rec', 'event-label': 'all'});} catch (e) {}"
                                                     >
                                                         지원<span class="Badge"
                                                             >3</span
@@ -178,7 +186,7 @@
                                                         type="button"
                                                         class="BtnType"
                                                         data-tab="carrer"
-                                                        onmousedown="try {dataLayer.push({'event': 'ga_lead', 'category': 'company_view', 'event-flow': 'jobs_rec', 'event-label': 'experience'});} catch (e) {}"
+                                                        onmousedown="try {dataLayer.push({'event': 'ga-lead', 'category': 'company-view', 'event-flow': 'jobs-rec', 'event-label': 'experience'});} catch (e) {}"
                                                     >
                                                         면접<span class="Badge"
                                                             >3</span
@@ -190,7 +198,7 @@
                                                         type="button"
                                                         class="BtnType"
                                                         data-tab="carrer"
-                                                        onmousedown="try {dataLayer.push({'event': 'ga_lead', 'category': 'company_view', 'event-flow': 'jobs_rec', 'event-label': 'experience'});} catch (e) {}"
+                                                        onmousedown="try {dataLayer.push({'event': 'ga-lead', 'category': 'company-view', 'event-flow': 'jobs-rec', 'event-label': 'experience'});} catch (e) {}"
                                                     >
                                                         인턴쉽<span
                                                             class="Badge"
@@ -207,36 +215,36 @@
                                                 margin-bottom: 10px;
                                             "
                                         >
-                                            <div class="InpBox sorting_select">
+                                            <div class="InpBox sorting-select">
                                                 <select name="">
-                                                    <option value="closing_dt">
+                                                    <option value="closing-dt">
                                                         알람여부 전체
                                                     </option>
-                                                    <option value="reg_dt">
+                                                    <option value="reg-dt">
                                                         열람
                                                     </option>
-                                                    <option value="read_cnt">
+                                                    <option value="read-cnt">
                                                         미열람
                                                     </option>
                                                 </select>
                                             </div>
-                                            <div class="InpBox sorting_select">
+                                            <div class="InpBox sorting-select">
                                                 <select name="">
-                                                    <option value="closing_dt">
+                                                    <option value="closing-dt">
                                                         마감여부 전체
                                                     </option>
-                                                    <option value="reg_dt">
+                                                    <option value="reg-dt">
                                                         진행중
                                                     </option>
-                                                    <option value="read_cnt">
+                                                    <option value="read-cnt">
                                                         마감
                                                     </option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="area_recruiting">
+                                        <div class="area-recruiting">
                                             <div
-                                                class="wrap_loading"
+                                                class="wrap-loading"
                                                 id="ingRecruitLoading"
                                                 style="display: none"
                                             >
@@ -251,11 +259,11 @@
                                                         class="LoadingCircle LoadingCircleC3"
                                                     ></div>
                                                 </div>
-                                                <strong class="loading_tit"
+                                                <strong class="loading-tit"
                                                     >공고를 불러오고
                                                     있습니다</strong
                                                 >
-                                                <p class="loading_txt">
+                                                <p class="loading-txt">
                                                     잠시만 기다려주세요
                                                 </p>
                                             </div>
@@ -269,7 +277,7 @@
                                                     height="14"
                                                     viewBox="0 0 14 14"
                                                     fill="none"
-                                                    id="rec_title_tag_emoji_reward"
+                                                    id="rec-title-tag-emoji-reward"
                                                 >
                                                     <path
                                                         fill-rule="evenodd"
@@ -299,7 +307,7 @@
                                                     height="14"
                                                     viewBox="0 0 14 14"
                                                     fill="none"
-                                                    id="rec_title_tag_emoji_comInfo"
+                                                    id="rec-title-tag-emoji-comInfo"
                                                 >
                                                     <path
                                                         d="M12.0889 9.14732C11.5331 6.9873 10.4974 4.30948 8.66578 3.29897L9.84046 2.14948C10.2699 1.73265 9.97941 1 9.37312 1L4.81317 1.00009C4.20689 1.00009 3.9163 1.73271 4.34583 2.14957L5.52051 3.29905C3.68897 4.30959 2.65317 6.98743 2.09739 9.14741C1.64266 10.9032 2.83001 12.6589 4.62368 12.8611C5.33102 12.9368 6.15213 13 7.08681 13C8.02156 13 8.84258 12.9495 9.54994 12.8611C11.3564 12.6715 12.531 10.9031 12.0891 9.14741L12.0889 9.14732ZM9.18367 8.0863H8.69104L8.60258 8.43998H8.94365C9.13309 8.43998 9.29733 8.59153 9.29733 8.79366C9.29733 8.9831 9.14578 9.14734 8.94365 9.14734H8.43844L8.22372 10.0189C8.18583 10.1705 8.04688 10.2842 7.88265 10.2842C7.7311 10.2842 7.59215 10.1832 7.54158 10.0316L7.08684 8.44003L6.6447 10.0316C6.60681 10.1831 6.46786 10.2842 6.30363 10.2842C6.13939 10.2842 6.00045 10.1705 5.96256 10.0189L5.74792 9.14737H5.24271C5.05327 9.14737 4.88903 8.99582 4.88903 8.79369C4.88903 8.60425 5.04058 8.44001 5.24271 8.44001H5.5711L5.48264 8.08632H4.99001C4.80058 8.08632 4.63633 7.93477 4.63633 7.73264C4.63633 7.54321 4.78788 7.37896 4.99001 7.37896H5.31848L5.17953 6.81057C5.12904 6.62114 5.2427 6.43161 5.43213 6.38113C5.62156 6.33065 5.8111 6.4569 5.86158 6.63373L6.32892 8.55364L6.74576 7.05048C6.78364 6.89893 6.92259 6.79787 7.08683 6.79787C7.25106 6.79787 7.37733 6.89894 7.4279 7.05048L7.84474 8.55364L8.31208 6.64632C8.36257 6.45688 8.5521 6.34314 8.74152 6.39371C8.93096 6.4442 9.0447 6.63373 8.99413 6.82316L8.85518 7.37896H9.17097C9.3604 7.37896 9.52465 7.53051 9.52465 7.73264C9.52465 7.92208 9.3731 8.08632 9.18366 8.08632L9.18367 8.0863Z"
@@ -313,7 +321,7 @@
                                                     height="14"
                                                     viewBox="0 0 14 14"
                                                     fill="none"
-                                                    id="rec_title_tag_emoji_invest"
+                                                    id="rec-title-tag-emoji-invest"
                                                 >
                                                     <path
                                                         d="M11.3556 5.52199C11.3556 5.82253 11.1117 6.06644 10.8112 6.06644H9.17786C8.87733 6.06644 8.63342 5.82253 8.63342 5.52199V4.97755C8.63342 4.67702 8.87733 4.43311 9.17786 4.43311H10.8112C11.1117 4.43311 11.3556 4.67702 11.3556 4.97755V5.52199ZM5.36675 5.52199C5.36675 5.82253 5.12284 6.06644 4.82231 6.06644H3.18898C2.88844 6.06644 2.64453 5.82253 2.64453 5.52199V4.97755C2.64453 4.67702 2.88844 4.43311 3.18898 4.43311H4.82231C5.12284 4.43311 5.36675 4.67702 5.36675 4.97755V5.52199Z"
@@ -359,10 +367,10 @@
                                                     height="14"
                                                     viewBox="0 0 14 14"
                                                     fill="none"
-                                                    id="rec_title_tag_emoji_mActive"
+                                                    id="rec-title-tag-emoji-mActive"
                                                 >
                                                     <g
-                                                        clip-path="url(#clip0_5376_4332)"
+                                                        clip-path="url(#clip0-5376-4332)"
                                                     >
                                                         <path
                                                             d="M10.3036 4.52267C10.3036 5.50082 9.97758 6.80503 8.41253 7.32671C8.869 6.21814 8.93421 5.10956 8.60816 4.0662C8.15169 2.69678 6.65185 1.65342 5.60849 1.06653C5.34765 0.870896 4.89118 1.13174 4.95639 1.523C4.95639 2.24031 4.76076 3.28367 3.65218 4.39225C2.21756 5.82687 1.50024 7.32671 1.50024 8.76133C1.50024 10.6524 2.80445 13 5.41286 13C2.80445 10.3916 4.76076 8.10923 4.76076 8.10923C5.28244 11.9566 8.02127 13 9.32547 13C10.434 13 12.586 12.2175 12.586 8.82654C12.586 6.80503 11.7383 5.23998 11.0209 4.32704C10.8253 4.00099 10.3688 4.19662 10.3036 4.52267Z"
@@ -371,7 +379,7 @@
                                                     </g>
                                                     <defs>
                                                         <clipPath
-                                                            id="clip0_5376_4332"
+                                                            id="clip0-5376-4332"
                                                         >
                                                             <rect
                                                                 width="14"
@@ -386,7 +394,7 @@
                                                 <symbol
                                                     viewBox="0 0 14 14"
                                                     fill="none"
-                                                    id="rec_title_tag_emoji_hot"
+                                                    id="rec-title-tag-emoji-hot"
                                                 >
                                                     <path
                                                         d="M11.7639 6.61947L8.54689 5.48716L7.3456 1.74337C7.29933 1.599 7.1587 1.5 7 1.5C6.8413 1.5 6.70067 1.599 6.6544 1.74337L5.45347 5.48716L2.23606 6.61947C2.09399 6.66966 2 6.79787 2 6.94191C2 7.08559 2.09399 7.2145 2.23606 7.26434L5.45167 8.39631L6.65332 12.2542C6.69886 12.4 6.83985 12.5 7 12.5C7.15979 12.5 7.30114 12.4 7.34669 12.2539L8.54833 8.39597L11.7643 7.264C11.9056 7.2145 12 7.08594 12 6.94191C12 6.79822 11.9056 6.66966 11.7639 6.61947Z"
@@ -404,7 +412,7 @@
                                                     height="14"
                                                     viewBox="0 0 14 14"
                                                     fill="none"
-                                                    id="rec_title_tag_emoji_welfare"
+                                                    id="rec-title-tag-emoji-welfare"
                                                 >
                                                     <path
                                                         d="M11.5168 6.91163C11.5168 6.7747 11.4841 6.64621 11.4294 6.52943C11.0644 5.35179 9.35535 5.43781 6.9244 5.38038C6.51798 5.37085 6.75045 4.89092 6.8931 3.83742C6.98593 3.15224 6.54411 2.1001 5.80149 2.1001C4.57703 2.1001 5.75494 3.06594 4.67231 5.45442C4.09384 6.7306 2.80078 6.01574 2.80078 7.29764V10.2156C2.80078 10.7146 2.84978 11.1942 3.55157 11.2732C4.23185 11.3497 4.07886 11.8345 5.06023 11.8345H9.9722C10.4725 11.8345 10.8795 11.4272 10.8795 10.9269C10.8795 10.7195 10.8068 10.5305 10.6895 10.3776C10.9672 10.2221 11.1577 9.92866 11.1577 9.58839C11.1577 9.3815 11.0853 9.19258 10.9683 9.03986C11.2467 8.88469 11.4378 8.59096 11.4378 8.25014C11.4378 8.00269 11.3377 7.77838 11.1762 7.61423C11.3823 7.4479 11.5168 7.19637 11.5168 6.91163Z"
@@ -418,11 +426,11 @@
 
                                                 <!--    개인화 이력서 관련-->
                                                 <symbol
-                                                    id="search_tag_svg_scale"
+                                                    id="search-tag-svg-scale"
                                                     viewBox="0 0 16 16"
                                                 >
                                                     <g
-                                                        clip-path="url(#clip0_136_7455)"
+                                                        clip-path="url(#clip0-136-7455)"
                                                     >
                                                         <path
                                                             d="M15.1109 5.77778C15.1109 6.01353 15.0172 6.23962 14.8505 6.40632C14.6838 6.57302 14.4578 6.66667 14.222 6.66667H11.5553C11.3196 6.66667 11.0935 6.57302 10.9268 6.40632C10.7601 6.23962 10.6664 6.01353 10.6664 5.77778V4.88889C10.6664 4.65314 10.7601 4.42705 10.9268 4.26035C11.0935 4.09365 11.3196 4 11.5553 4H14.222C14.4578 4 14.6838 4.09365 14.8505 4.26035C15.0172 4.42705 15.1109 4.65314 15.1109 4.88889V5.77778ZM5.33312 5.77778C5.33312 6.01353 5.23947 6.23962 5.07277 6.40632C4.90607 6.57302 4.67998 6.66667 4.44423 6.66667H1.77756C1.54181 6.66667 1.31572 6.57302 1.14902 6.40632C0.982322 6.23962 0.888672 6.01353 0.888672 5.77778V4.88889C0.888672 4.65314 0.982322 4.42705 1.14902 4.26035C1.31572 4.09365 1.54181 4 1.77756 4H4.44423C4.67998 4 4.90607 4.09365 5.07277 4.26035C5.23947 4.42705 5.33312 4.65314 5.33312 4.88889V5.77778Z"
@@ -463,7 +471,7 @@
                                                     </g>
                                                     <defs>
                                                         <clipPath
-                                                            id="clip0_136_7455"
+                                                            id="clip0-136-7455"
                                                         >
                                                             <rect
                                                                 width="16"
@@ -474,11 +482,11 @@
                                                     </defs>
                                                 </symbol>
                                                 <symbol
-                                                    id="search_tag_svg_unicorn"
+                                                    id="search-tag-svg-unicorn"
                                                     viewBox="0 0 16 16"
                                                 >
                                                     <g
-                                                        clip-path="url(#clip0_136_7444)"
+                                                        clip-path="url(#clip0-136-7444)"
                                                     >
                                                         <path
                                                             d="M16.0001 8.82383C14.897 4.41005 11.1139 0.848277 7.12502 3.03628C7.12502 3.03628 5.11524 2.37139 4.82546 2.1705C4.54324 1.97494 4.0988 1.76872 4.42013 2.36428C4.60813 2.71183 4.80902 3.10739 5.48813 3.8385C3.55569 5.75894 4.12413 8.11628 3.44146 9.6665C2.86191 10.9829 2.29613 11.7701 2.85924 12.7669C3.44458 13.8025 4.96102 14.3056 5.97835 13.2381C6.53124 12.6572 6.18769 12.3772 7.37035 11.3705C8.58057 11.1292 9.32324 10.5745 9.32324 9.42605C9.32324 9.42605 9.67657 9.25628 10.1348 12.0967C10.3375 13.3492 10.065 14.5998 10.1175 16.0003H16.0001V8.82383Z"
@@ -515,7 +523,7 @@
                                                     </g>
                                                     <defs>
                                                         <clipPath
-                                                            id="clip0_136_7444"
+                                                            id="clip0-136-7444"
                                                         >
                                                             <rect
                                                                 width="16"
@@ -526,11 +534,11 @@
                                                     </defs>
                                                 </symbol>
                                                 <symbol
-                                                    id="search_tag_svg_edu"
+                                                    id="search-tag-svg-edu"
                                                     viewBox="0 0 16 16"
                                                 >
                                                     <g
-                                                        clip-path="url(#clip0_136_7453)"
+                                                        clip-path="url(#clip0-136-7453)"
                                                     >
                                                         <path
                                                             d="M10.6669 6.22217H5.33355C5.33355 6.22217 3.11133 8.88883 3.11133 10.6666C3.11133 12.4444 8.00022 15.5555 8.00022 15.5555C8.00022 15.5555 12.8891 12.4444 12.8891 10.6666C12.8891 8.88883 10.6669 6.22217 10.6669 6.22217Z"
@@ -563,7 +571,7 @@
                                                     </g>
                                                     <defs>
                                                         <clipPath
-                                                            id="clip0_136_7453"
+                                                            id="clip0-136-7453"
                                                         >
                                                             <rect
                                                                 width="16"
@@ -577,39 +585,39 @@
 
                                             <!-- 지원, 면접, 인턴쉽이냐에 따라 아래 내용이 달라져요 참고해주세요 -->
 
-                                            <div class="list_status">
+                                            <div class="list-status">
                                                 <div
-                                                    class="row _apply_list"
-                                                    id="apply_list_391601183"
+                                                    class="row -apply-list"
+                                                    id="apply-list-391601183"
                                                     data-name="오현준"
-                                                    data-recruitapply_idx="391601183"
-                                                    data-layer_check_status="n"
+                                                    data-recruitapply-idx="391601183"
+                                                    data-layer-check-status="n"
                                                     data-csn="1298122435"
-                                                    data-rec_idx="49191684"
-                                                    data-company_nm="(주)지아이티"
+                                                    data-rec-idx="49191684"
+                                                    data-company-nm="(주)지아이티"
                                                     data-recruittitle="현대자동차그룹 (주)지아이티 재경부문(자금/재무결산) 채용"
-                                                    data-rec_division="재무(자금/재무결산)"
-                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo_web_ex.gif" width="152" height="42" />'
-                                                    data-is_ai_head_hunting="n"
-                                                    data-jumpit_rec_idx=""
+                                                    data-rec-division="재무(자금/재무결산)"
+                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo-web-ex.gif" width="152" height="42" />'
+                                                    data-is-ai-head-hunting="n"
+                                                    data-jumpit-rec-idx=""
                                                 >
                                                     <!-- disabled 추가시 비활성 -->
 
-                                                    <div class="col_summary">
+                                                    <div class="col-summary">
                                                         <strong class="corp">
                                                             <a
-                                                                href="/zf_user/company-info/view?csn=1298122435"
-                                                                target="_blank"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
+                                                                href="/zf-user/company-info/view?csn=1298122435"
+                                                                target="-blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
                                                             >
                                                                 ㈜지아이티
                                                             </a>
                                                         </strong>
                                                         <div class="recruit">
                                                             <a
-                                                                href="/zf_user/jobs/relay/view?rec_idx=49191684&amp;view_type=apply_status&amp;t_ref=apply_status_list&amp;t_ref_content=generic"
-                                                                target="_blank"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'recruit_title'});}catch(e){}"
+                                                                href="/zf-user/jobs/relay/view?rec-idx=49191684&amp;view-type=apply-status&amp;t-ref=apply-status-list&amp;t-ref-content=generic"
+                                                                target="-blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'recruit-title'});}catch(e){}"
                                                             >
                                                                 <span
                                                                     class="division"
@@ -633,63 +641,63 @@
                                                             ::before
                                                             <button
                                                                 type="button"
-                                                                class="data _file_down_resume"
-                                                                data-recruitapply_idx="391601183"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
+                                                                class="data -file-down-resume"
+                                                                data-recruitapply-idx="391601183"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
                                                             >
                                                                 이력서
                                                             </button>
                                                         </div>
                                                         <div class="status">
                                                             <em
-                                                                class="txt_status"
+                                                                class="txt-status"
                                                             >
                                                                 지원완료
                                                             </em>
                                                             <span
-                                                                class="txt_sub"
+                                                                class="txt-sub"
                                                                 >미열람</span
                                                             >
                                                             <button
                                                                 type="button"
-                                                                class="btn_report _ai_report"
-                                                                data-recruitapply_idx="391601183"
+                                                                class="btn-report -ai-report"
+                                                                data-recruitapply-idx="391601183"
                                                             >
                                                                 경쟁력분석
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="col_btns">
+                                                    <div class="col-btns">
                                                         <div class="action">
                                                             <span
-                                                                class="date_end"
+                                                                class="date-end"
                                                             ></span>
                                                         </div>
                                                         <button
                                                             type="button"
-                                                            class="BtnType SizeM _apply_cancel"
-                                                            data-recruitapply_idx="391601183"
-                                                            data-company_nm="(주)지아이티"
-                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
+                                                            class="BtnType SizeM -apply-cancel"
+                                                            data-recruitapply-idx="391601183"
+                                                            data-company-nm="(주)지아이티"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
                                                         >
                                                             지원합격
                                                         </button>
                                                         <button
                                                             type="button"
-                                                            class="btn_history _applicant_history"
-                                                            data-recruitapply_idx="391601183"
-                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
+                                                            class="btn-history -applicant-history"
+                                                            data-recruitapply-idx="391601183"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
                                                         >
                                                             지원내역
                                                         </button>
                                                     </div>
 
-                                                    <!--  주목! js에서 data-recruitapply_idx로 구분합니다 알아두세요!!!!! -->
+                                                    <!--  주목! js에서 data-recruitapply-idx로 구분합니다 알아두세요!!!!! -->
 
                                                     <div
-                                                        class="col_history"
+                                                        class="col-history"
                                                         style="display: none"
-                                                        data-recruitapply_idx="391601183"
+                                                        data-recruitapply-idx="391601183"
                                                     >
                                                         <ol class="timeline">
                                                             <li class="now">
@@ -718,7 +726,7 @@
                                                                         완료<button
                                                                             type="button"
                                                                             class="txt"
-                                                                            onclick="cancelLayer('.cancel_layerWrap', 'on', '(주)지아이티', 391601183);"
+                                                                            onclick="cancelLayer('.cancel-layerWrap', 'on', '(주)지아이티', 391601183);"
                                                                         >
                                                                             지원
                                                                             취소
@@ -730,39 +738,39 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="list_status">
+                                            <div class="list-status">
                                                 <div
-                                                    class="row _apply_list"
-                                                    id="apply_list_391601183"
+                                                    class="row -apply-list"
+                                                    id="apply-list-391601183"
                                                     data-name="오현준"
-                                                    data-recruitapply_idx="391601184"
-                                                    data-layer_check_status="n"
+                                                    data-recruitapply-idx="391601184"
+                                                    data-layer-check-status="n"
                                                     data-csn="1298122435"
-                                                    data-rec_idx="49191684"
-                                                    data-company_nm="(주)지아이티"
+                                                    data-rec-idx="49191684"
+                                                    data-company-nm="(주)지아이티"
                                                     data-recruittitle="현대자동차그룹 (주)지아이티 재경부문(자금/재무결산) 채용"
-                                                    data-rec_division="재무(자금/재무결산)"
-                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo_web_ex.gif" width="152" height="42" />'
-                                                    data-is_ai_head_hunting="n"
-                                                    data-jumpit_rec_idx=""
+                                                    data-rec-division="재무(자금/재무결산)"
+                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo-web-ex.gif" width="152" height="42" />'
+                                                    data-is-ai-head-hunting="n"
+                                                    data-jumpit-rec-idx=""
                                                 >
                                                     <!-- disabled 추가시 비활성 -->
 
-                                                    <div class="col_summary">
+                                                    <div class="col-summary">
                                                         <strong class="corp">
                                                             <a
-                                                                href="/zf_user/company-info/view?csn=1298122435"
-                                                                target="_blank"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
+                                                                href="/zf-user/company-info/view?csn=1298122435"
+                                                                target="-blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
                                                             >
                                                                 ㈜지아이티
                                                             </a>
                                                         </strong>
                                                         <div class="recruit">
                                                             <a
-                                                                href="/zf_user/jobs/relay/view?rec_idx=49191684&amp;view_type=apply_status&amp;t_ref=apply_status_list&amp;t_ref_content=generic"
-                                                                target="_blank"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'recruit_title'});}catch(e){}"
+                                                                href="/zf-user/jobs/relay/view?rec-idx=49191684&amp;view-type=apply-status&amp;t-ref=apply-status-list&amp;t-ref-content=generic"
+                                                                target="-blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'recruit-title'});}catch(e){}"
                                                             >
                                                                 <span
                                                                     class="division"
@@ -786,63 +794,63 @@
                                                             ::before
                                                             <button
                                                                 type="button"
-                                                                class="data _file_down_resume"
-                                                                data-recruitapply_idx="391601183"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
+                                                                class="data -file-down-resume"
+                                                                data-recruitapply-idx="391601183"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
                                                             >
                                                                 이력서
                                                             </button>
                                                         </div>
                                                         <div class="status">
                                                             <em
-                                                                class="txt_status"
+                                                                class="txt-status"
                                                             >
                                                                 지원완료
                                                             </em>
                                                             <span
-                                                                class="txt_sub"
+                                                                class="txt-sub"
                                                                 >미열람</span
                                                             >
                                                             <button
                                                                 type="button"
-                                                                class="btn_report _ai_report"
-                                                                data-recruitapply_idx="391601183"
+                                                                class="btn-report -ai-report"
+                                                                data-recruitapply-idx="391601183"
                                                             >
                                                                 경쟁력분석
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="col_btns">
+                                                    <div class="col-btns">
                                                         <div class="action">
                                                             <span
-                                                                class="date_end"
+                                                                class="date-end"
                                                             ></span>
                                                         </div>
                                                         <button
                                                             type="button"
-                                                            class="BtnType SizeM _apply_cancel"
-                                                            data-recruitapply_idx="391601183"
-                                                            data-company_nm="(주)지아이티"
-                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
+                                                            class="BtnType SizeM -apply-cancel"
+                                                            data-recruitapply-idx="391601183"
+                                                            data-company-nm="(주)지아이티"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
                                                         >
                                                             지원취소
                                                         </button>
                                                         <button
                                                             type="button"
-                                                            class="btn_history _applicant_history"
-                                                            data-recruitapply_idx="391601184"
-                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
+                                                            class="btn-history -applicant-history"
+                                                            data-recruitapply-idx="391601184"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
                                                         >
                                                             지원내역
                                                         </button>
                                                     </div>
 
-                                                    <!--  주목! js에서 data-recruitapply_idx로 구분합니다 알아두세요!!!!! -->
+                                                    <!--  주목! js에서 data-recruitapply-idx로 구분합니다 알아두세요!!!!! -->
 
                                                     <div
-                                                        class="col_history"
+                                                        class="col-history"
                                                         style="display: none"
-                                                        data-recruitapply_idx="391601184"
+                                                        data-recruitapply-idx="391601184"
                                                     >
                                                         <ol class="timeline">
                                                             <li class="now">
@@ -871,7 +879,7 @@
                                                                         완료<button
                                                                             type="button"
                                                                             class="txt"
-                                                                            onclick="cancelLayer('.cancel_layerWrap', 'on', '(주)지아이티', 391601183);"
+                                                                            onclick="cancelLayer('.cancel-layerWrap', 'on', '(주)지아이티', 391601183);"
                                                                         >
                                                                             지원
                                                                             취소
@@ -883,39 +891,39 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="list_status">
+                                            <div class="list-status">
                                                 <div
-                                                    class="row _apply_list"
-                                                    id="apply_list_391601183"
+                                                    class="row -apply-list"
+                                                    id="apply-list-391601183"
                                                     data-name="오현준"
-                                                    data-recruitapply_idx="391601185"
-                                                    data-layer_check_status="n"
+                                                    data-recruitapply-idx="391601185"
+                                                    data-layer-check-status="n"
                                                     data-csn="1298122435"
-                                                    data-rec_idx="49191684"
-                                                    data-company_nm="(주)지아이티"
+                                                    data-rec-idx="49191684"
+                                                    data-company-nm="(주)지아이티"
                                                     data-recruittitle="현대자동차그룹 (주)지아이티 재경부문(자금/재무결산) 채용"
-                                                    data-rec_division="재무(자금/재무결산)"
-                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo_web_ex.gif" width="152" height="42" />'
-                                                    data-is_ai_head_hunting="n"
-                                                    data-jumpit_rec_idx=""
+                                                    data-rec-division="재무(자금/재무결산)"
+                                                    data-logo='<img id="(주)지아이티" alt="(주)지아이티" src="//www.saraminimage.co.kr/common/logo-web-ex.gif" width="152" height="42" />'
+                                                    data-is-ai-head-hunting="n"
+                                                    data-jumpit-rec-idx=""
                                                 >
                                                     <!-- disabled 추가시 비활성 -->
 
-                                                    <div class="col_summary">
+                                                    <div class="col-summary">
                                                         <strong class="corp">
                                                             <a
-                                                                href="/zf_user/company-info/view?csn=1298122435"
-                                                                target="_blank"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
+                                                                href="/zf-user/company-info/view?csn=1298122435"
+                                                                target="-blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'company'});}catch(e){}"
                                                             >
                                                                 ㈜지아이티
                                                             </a>
                                                         </strong>
                                                         <div class="recruit">
                                                             <a
-                                                                href="/zf_user/jobs/relay/view?rec_idx=49191684&amp;view_type=apply_status&amp;t_ref=apply_status_list&amp;t_ref_content=generic"
-                                                                target="_blank"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'recruit_title'});}catch(e){}"
+                                                                href="/zf-user/jobs/relay/view?rec-idx=49191684&amp;view-type=apply-status&amp;t-ref=apply-status-list&amp;t-ref-content=generic"
+                                                                target="-blank"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'recruit-title'});}catch(e){}"
                                                             >
                                                                 <span
                                                                     class="division"
@@ -939,63 +947,63 @@
                                                             ::before
                                                             <button
                                                                 type="button"
-                                                                class="data _file_down_resume"
-                                                                data-recruitapply_idx="391601183"
-                                                                onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
+                                                                class="data -file-down-resume"
+                                                                data-recruitapply-idx="391601183"
+                                                                onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'resume'});}catch(e){}"
                                                             >
                                                                 이력서
                                                             </button>
                                                         </div>
                                                         <div class="status">
                                                             <em
-                                                                class="txt_status"
+                                                                class="txt-status"
                                                             >
                                                                 지원완료
                                                             </em>
                                                             <span
-                                                                class="txt_sub"
+                                                                class="txt-sub"
                                                                 >미열람</span
                                                             >
                                                             <button
                                                                 type="button"
-                                                                class="btn_report _ai_report"
-                                                                data-recruitapply_idx="391601183"
+                                                                class="btn-report -ai-report"
+                                                                data-recruitapply-idx="391601183"
                                                             >
                                                                 경쟁력분석
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="col_btns">
+                                                    <div class="col-btns">
                                                         <div class="action">
                                                             <span
-                                                                class="date_end"
+                                                                class="date-end"
                                                             ></span>
                                                         </div>
                                                         <button
                                                             type="button"
-                                                            class="BtnType SizeM _apply_cancel"
-                                                            data-recruitapply_idx="391601183"
-                                                            data-company_nm="(주)지아이티"
-                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
+                                                            class="BtnType SizeM -apply-cancel"
+                                                            data-recruitapply-idx="391601183"
+                                                            data-company-nm="(주)지아이티"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'cancel'});}catch(e){}"
                                                         >
                                                             후기작성(인턴쉽)
                                                         </button>
                                                         <button
                                                             type="button"
-                                                            class="btn_history _applicant_history"
-                                                            data-recruitapply_idx="391601185"
-                                                            onmousedown="try{dataLayer.push({'event': 'ga_lead','category': 'pc_my_apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
+                                                            class="btn-history -applicant-history"
+                                                            data-recruitapply-idx="391601185"
+                                                            onmousedown="try{dataLayer.push({'event': 'ga-lead','category': 'pc-my-apply','event-flow': 'apply','event-label': 'history'});}catch(e){}"
                                                         >
                                                             지원내역
                                                         </button>
                                                     </div>
 
-                                                    <!--  주목! js에서 data-recruitapply_idx로 구분합니다 알아두세요!!!!! -->
+                                                    <!--  주목! js에서 data-recruitapply-idx로 구분합니다 알아두세요!!!!! -->
 
                                                     <div
-                                                        class="col_history"
+                                                        class="col-history"
                                                         style="display: none"
-                                                        data-recruitapply_idx="391601185"
+                                                        data-recruitapply-idx="391601185"
                                                     >
                                                         <ol class="timeline">
                                                             <li class="now">
@@ -1020,7 +1028,7 @@
                                                                         완료<button
                                                                             type="button"
                                                                             class="txt"
-                                                                            onclick="cancelLayer('.cancel_layerWrap', 'on', '(주)지아이티', 391601183);"
+                                                                            onclick="cancelLayer('.cancel-layerWrap', 'on', '(주)지아이티', 391601183);"
                                                                         >
                                                                             지원
                                                                             취소
@@ -1033,7 +1041,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="similar_recruit"></div>
+                                            <div class="similar-recruit"></div>
 
                                             <div class="PageBox">
                                                 <button
@@ -1064,12 +1072,12 @@
             </div>
         </div>
         <!-- 닫기 -->
-        <!-- company_info_svg -->
-        <div class="company_info_svg" style="display: none">
+        <!-- company-info-svg -->
+        <div class="company-info-svg" style="display: none">
             <svg xmlns="http://www.w3.org/2000/svg">
                 <!-- 인재풀에서 공통 사용하는 SVG 아이콘으로 9월 오픈 예정으로 svg 경로 확정 시 변경 예정 -->
-                <symbol id="search_tag_svg_scale" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7455)">
+                <symbol id="search-tag-svg-scale" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7455)">
                         <path
                             d="M15.1109 5.77778C15.1109 6.01353 15.0172 6.23962 14.8505 6.40632C14.6838 6.57302 14.4578 6.66667 14.222 6.66667H11.5553C11.3196 6.66667 11.0935 6.57302 10.9268 6.40632C10.7601 6.23962 10.6664 6.01353 10.6664 5.77778V4.88889C10.6664 4.65314 10.7601 4.42705 10.9268 4.26035C11.0935 4.09365 11.3196 4 11.5553 4H14.222C14.4578 4 14.6838 4.09365 14.8505 4.26035C15.0172 4.42705 15.1109 4.65314 15.1109 4.88889V5.77778ZM5.33312 5.77778C5.33312 6.01353 5.23947 6.23962 5.07277 6.40632C4.90607 6.57302 4.67998 6.66667 4.44423 6.66667H1.77756C1.54181 6.66667 1.31572 6.57302 1.14902 6.40632C0.982322 6.23962 0.888672 6.01353 0.888672 5.77778V4.88889C0.888672 4.65314 0.982322 4.42705 1.14902 4.26035C1.31572 4.09365 1.54181 4 1.77756 4H4.44423C4.67998 4 4.90607 4.09365 5.07277 4.26035C5.23947 4.42705 5.33312 4.65314 5.33312 4.88889V5.77778Z"
                             fill="#DAC8B1"
@@ -1108,13 +1116,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7455">
+                        <clipPath id="clip0-136-7455">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg_unicorn" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7444)">
+                <symbol id="search-tag-svg-unicorn" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7444)">
                         <path
                             d="M16.0001 8.82383C14.897 4.41005 11.1139 0.848277 7.12502 3.03628C7.12502 3.03628 5.11524 2.37139 4.82546 2.1705C4.54324 1.97494 4.0988 1.76872 4.42013 2.36428C4.60813 2.71183 4.80902 3.10739 5.48813 3.8385C3.55569 5.75894 4.12413 8.11628 3.44146 9.6665C2.86191 10.9829 2.29613 11.7701 2.85924 12.7669C3.44458 13.8025 4.96102 14.3056 5.97835 13.2381C6.53124 12.6572 6.18769 12.3772 7.37035 11.3705C8.58057 11.1292 9.32324 10.5745 9.32324 9.42605C9.32324 9.42605 9.67657 9.25628 10.1348 12.0967C10.3375 13.3492 10.065 14.5998 10.1175 16.0003H16.0001V8.82383Z"
                             fill="#BCD1FC"
@@ -1149,13 +1157,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7444">
+                        <clipPath id="clip0-136-7444">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg3" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_139_8138)">
+                <symbol id="search-tag-svg3" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-139-8138)">
                         <rect
                             width="16"
                             height="16"
@@ -1171,12 +1179,12 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_139_8138">
+                        <clipPath id="clip0-139-8138">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg_sales" viewBox="0 0 16 16">
+                <symbol id="search-tag-svg-sales" viewBox="0 0 16 16">
                     <path
                         d="M9.77821 14.6666C9.77821 15.6484 8.98221 16 8.00043 16C7.01866 16 6.22266 15.6484 6.22266 14.6666L6.6671 10.6666C6.6671 9.68485 7.01866 9.77774 8.00043 9.77774C8.98221 9.77774 9.33377 9.68485 9.33377 10.6666L9.77821 14.6666Z"
                         fill="#662113"
@@ -1218,8 +1226,8 @@
                         fill="#5C913B"
                     ></path>
                 </symbol>
-                <symbol id="search_tag_svg_invest" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7457)">
+                <symbol id="search-tag-svg-invest" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7457)">
                         <path
                             d="M14.1767 10.6391C13.9109 7.69778 12.4442 6.22222 12.4442 6.22222L9.77756 2.66667H6.22201L3.55534 6.22222C3.55534 6.22222 2.92467 6.85911 2.41445 8.12222C1.53045 8.41556 0.888672 9.23956 0.888672 10.2222C0.889055 10.5277 0.952805 10.8298 1.07589 11.1094C1.19898 11.389 1.37873 11.6401 1.60378 11.8467C1.4285 12.1662 1.33548 12.5244 1.33312 12.8889C1.33312 13.7591 1.83801 14.5049 2.56645 14.8693C3.13667 15.7236 3.89845 16 4.44423 16H11.5553C12.1682 16 13.0544 15.6538 13.6344 14.5289C14.4927 14.2218 15.1109 13.4089 15.1109 12.4444C15.1104 12.0908 15.0254 11.7424 14.8629 11.4284C14.7004 11.1143 14.4651 10.8437 14.1767 10.6391ZM7.99978 2.66667C8.24423 2.66667 8.47001 2.59644 8.66645 2.48178C8.86334 2.59644 9.08912 2.66667 9.33312 2.66667C10.0696 2.66667 11.1109 1.62489 11.1109 0.888889C11.1109 0.888889 11.1109 0 10.222 0C9.87178 0 9.77756 0.444444 9.33312 0.444444C8.88867 0.444444 8.88867 0 7.99978 0C7.11089 0 7.11089 0.444444 6.66645 0.444444C6.22201 0.444444 6.12823 0 5.77756 0C4.88867 0 4.88867 0.888889 4.88867 0.888889C4.88867 1.62489 5.93045 2.66667 6.66645 2.66667C6.91045 2.66667 7.13623 2.59644 7.33312 2.48178C7.53001 2.59644 7.75578 2.66667 7.99978 2.66667Z"
                             fill="#FDD888"
@@ -1234,13 +1242,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7457">
+                        <clipPath id="clip0-136-7457">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg6" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7453)">
+                <symbol id="search-tag-svg6" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7453)">
                         <path
                             d="M10.6669 6.22217H5.33355C5.33355 6.22217 3.11133 8.88883 3.11133 10.6666C3.11133 12.4444 8.00022 15.5555 8.00022 15.5555C8.00022 15.5555 12.8891 12.4444 12.8891 10.6666C12.8891 8.88883 10.6669 6.22217 10.6669 6.22217Z"
                             fill="#31373D"
@@ -1271,13 +1279,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7453">
+                        <clipPath id="clip0-136-7453">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg7" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7482)">
+                <symbol id="search-tag-svg7" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7482)">
                         <path
                             d="M7.99989 0C3.827 0 0.444336 3.38267 0.444336 7.55556H0.457225V15.1111C0.457225 15.6 0.857225 16 1.34611 16H14.6666C15.1554 16 15.5554 15.6 15.5554 15.1111V7.55556C15.5554 3.38267 12.1728 0 7.99989 0Z"
                             fill="#AAB8C2"
@@ -1300,13 +1308,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7482">
+                        <clipPath id="clip0-136-7482">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg8" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7447)">
+                <symbol id="search-tag-svg8" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7447)">
                         <path
                             d="M11.9999 12H4.44434V16H13.7777V13.7778C13.7777 13.3063 13.5904 12.8541 13.257 12.5207C12.9236 12.1873 12.4714 12 11.9999 12Z"
                             fill="#FA743E"
@@ -1349,13 +1357,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7447">
+                        <clipPath id="clip0-136-7447">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg9" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7438)">
+                <symbol id="search-tag-svg9" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7438)">
                         <path
                             d="M13.3333 11.5556C13.3333 12.0271 13.146 12.4792 12.8126 12.8126C12.4792 13.146 12.0271 13.3333 11.5556 13.3333H1.77778C1.30628 13.3333 0.854097 13.146 0.520699 12.8126C0.187301 12.4792 0 12.0271 0 11.5556V1.77778C0 1.30628 0.187301 0.854097 0.520699 0.520699C0.854097 0.187301 1.30628 0 1.77778 0L11.5556 0C12.0271 0 12.4792 0.187301 12.8126 0.520699C13.146 0.854097 13.3333 1.30628 13.3333 1.77778V11.5556Z"
                             fill="#CCD6DC"
@@ -1430,13 +1438,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7438">
+                        <clipPath id="clip0-136-7438">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg_hot" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7452)">
+                <symbol id="search-tag-svg-hot" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7452)">
                         <path
                             d="M8 3.55556L4.88889 0H0L6.22222 7.55556L11.3427 5.44444L8 3.55556Z"
                             fill="#55ACEE"
@@ -1459,13 +1467,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7452">
+                        <clipPath id="clip0-136-7452">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg11" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7434)">
+                <symbol id="search-tag-svg11" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7434)">
                         <path
                             d="M10.2141 8.41951C10.1906 9.33151 10.0933 10.1986 9.93503 10.976C9.29301 11.0549 8.64716 11.0986 8.00036 11.1071V8.44395C8.83947 8.44262 9.57325 8.43418 10.2141 8.41951ZM9.46436 2.37906C9.86748 2.45062 10.2559 2.54395 10.6248 2.65062C10.1518 2.24563 9.60202 1.94 9.00836 1.75195C9.16925 1.92884 9.3217 2.13773 9.46436 2.37906ZM5.63103 4.97195C6.27166 4.925 6.91361 4.89817 7.55592 4.89151V2.67329C7.14703 2.68395 6.7497 2.72084 6.36881 2.77995C6.0657 3.3564 5.81103 4.10529 5.63103 4.97195ZM1.61903 6.10484C1.46524 6.61292 1.37507 7.13812 1.35059 7.6684C1.49681 7.71106 1.79681 7.7564 2.23103 7.79951C2.24494 7.13771 2.33744 6.47992 2.50659 5.83995C2.03059 5.9444 1.72303 6.04084 1.61903 6.10484ZM7.55592 7.99906V5.33551C6.84392 5.34084 6.16925 5.37195 5.54792 5.41951C5.4061 6.26173 5.33474 7.11432 5.33459 7.9684C6.00392 7.98662 6.74659 7.99729 7.55592 7.99906ZM6.09192 2.37906C6.2222 2.15495 6.37515 1.94482 6.54836 1.75195C5.9547 1.94 5.40497 2.24563 4.93192 2.65062C5.30036 2.54395 5.68881 2.45062 6.09192 2.37906Z"
                             fill="#ADE3FF"
@@ -1496,12 +1504,12 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7434">
+                        <clipPath id="clip0-136-7434">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg12" viewBox="0 0 16 16">
+                <symbol id="search-tag-svg12" viewBox="0 0 16 16">
                     <path
                         d="M0.888889 3.88867C0 3.88867 0 4.77756 0 4.77756V14.1109C0 14.1109 0 14.9998 0.888889 14.9998H15.1111C16 14.9998 16 14.1109 16 14.1109V4.77756C16 4.77756 16 3.88867 15.1111 3.88867H0.888889Z"
                         fill="#5C913B"
@@ -1531,7 +1539,7 @@
                         fill="#5C913B"
                     ></path>
                 </symbol>
-                <symbol id="search_tag_svg13" viewBox="0 0 16 16">
+                <symbol id="search-tag-svg13" viewBox="0 0 16 16">
                     <path
                         d="M3.11111 5.33312C3.11111 5.45099 3.06429 5.56404 2.98094 5.64739C2.89759 5.73074 2.78454 5.77756 2.66667 5.77756H0.444444C0.32657 5.77756 0.213524 5.73074 0.130175 5.64739C0.0468253 5.56404 0 5.45099 0 5.33312C0 5.21524 0.0468253 5.1022 0.130175 5.01885C0.213524 4.9355 0.32657 4.88867 0.444444 4.88867H2.66667C2.78454 4.88867 2.89759 4.9355 2.98094 5.01885C3.06429 5.1022 3.11111 5.21524 3.11111 5.33312ZM2.22222 7.55534C2.22222 7.67321 2.1754 7.78626 2.09205 7.86961C2.0087 7.95296 1.89565 7.99978 1.77778 7.99978H0.444444C0.32657 7.99978 0.213524 7.95296 0.130175 7.86961C0.0468253 7.78626 0 7.67321 0 7.55534C0 7.43746 0.0468253 7.32442 0.130175 7.24107C0.213524 7.15772 0.32657 7.11089 0.444444 7.11089H1.77778C1.89565 7.11089 2.0087 7.15772 2.09205 7.24107C2.1754 7.32442 2.22222 7.43746 2.22222 7.55534ZM1.33333 9.77756C1.33333 9.89543 1.28651 10.0085 1.20316 10.0918C1.11981 10.1752 1.00676 10.222 0.888889 10.222H0.444444C0.32657 10.222 0.213524 10.1752 0.130175 10.0918C0.0468253 10.0085 0 9.89543 0 9.77756C0 9.65969 0.0468253 9.54664 0.130175 9.46329C0.213524 9.37994 0.32657 9.33312 0.444444 9.33312H0.888889C1.00676 9.33312 1.11981 9.37994 1.20316 9.46329C1.28651 9.54664 1.33333 9.65969 1.33333 9.77756Z"
                         fill="#55ACEE"
@@ -1553,8 +1561,8 @@
                         fill="#E1E8ED"
                     ></path>
                 </symbol>
-                <symbol id="search_tag_svg14" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7449)">
+                <symbol id="search-tag-svg14" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7449)">
                         <path
                             d="M15.9486 5.25931C15.9486 2.83709 13.985 0.873535 11.5632 0.873535C10.093 0.873535 8.79567 1.59931 7.99967 2.70865C7.20367 1.59931 5.90634 0.873535 4.43656 0.873535C2.01434 0.873535 0.0507812 2.83665 0.0507812 5.25931C0.0507812 5.60242 0.0943368 5.93487 0.169003 6.25531C0.777892 10.0389 4.98456 14.0304 7.99967 15.1264C11.0143 14.0304 15.2214 10.0389 15.8294 6.25576C15.905 5.93531 15.9486 5.60287 15.9486 5.25931Z"
                             fill="#F4ABBA"
@@ -1569,13 +1577,13 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7449">
+                        <clipPath id="clip0-136-7449">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="search_tag_svg15" viewBox="0 0 16 16">
-                    <g clip-path="url(#clip0_136_7439)">
+                <symbol id="search-tag-svg15" viewBox="0 0 16 16">
+                    <g clip-path="url(#clip0-136-7439)">
                         <path
                             d="M14.3567 10.8207C14.0478 10.3718 14.2203 9.72288 14.1434 9.00643C14.0642 7.83755 13.562 6.7051 12.5878 5.79932L9.26958 2.71399C9.26958 2.71399 8.61581 2.10555 8.00692 2.75977C7.39892 3.41355 8.05314 4.02199 8.05314 4.02199L9.45492 5.32599L10.67 6.45577C10.67 6.45577 10.3656 6.78288 9.02069 5.53221L4.47847 1.30732C4.47847 1.30732 3.82381 0.699323 3.21536 1.35355C2.60736 2.00732 3.26114 2.61577 3.26114 2.61577L7.55625 6.61088C7.54692 6.60199 7.23136 6.91843 7.22558 6.9131L2.63003 2.63888C2.63003 2.63888 1.97581 2.03043 1.36736 2.68466C0.758917 3.33888 1.41314 3.94688 1.41314 3.94688L6.00914 8.22199C6.01447 8.22732 5.71847 8.56155 5.72736 8.56999L1.76292 4.88199C1.76292 4.88199 1.10869 4.27355 0.50025 4.92777C-0.108194 5.58199 0.546028 6.19043 0.546028 6.19043L4.76114 10.1104C4.79981 10.1464 4.53892 10.514 4.58736 10.5589L1.55003 7.73399C1.55003 7.73399 0.895806 7.12555 0.287362 7.78021C-0.321083 8.43443 0.333139 9.04288 0.333139 9.04288L5.28736 13.6487C6.11447 14.418 6.96381 14.8073 7.98781 14.95C8.19625 14.9789 8.46292 14.9789 8.57225 14.9927C8.91758 15.0362 9.22069 15.1589 9.62647 15.4078C10.1487 15.7278 10.9323 15.8611 11.3825 15.3798L12.9176 13.7375L14.3349 12.2211C14.7847 11.7402 14.7043 11.3251 14.3567 10.8207Z"
                             fill="#D2A077"
@@ -1590,14 +1598,14 @@
                         ></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_136_7439">
+                        <clipPath id="clip0-136-7439">
                             <rect width="16" height="16" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </symbol>
 
                 <!-- WMG-36086 추가된 아이콘 / 인재풀 공통 svg 경로에 추가할지 기업정보에서 추가할지 논의 필요 -->
-                <symbol id="search_tag_svg16" fill="none" viewBox="0 0 20 20">
+                <symbol id="search-tag-svg16" fill="none" viewBox="0 0 20 20">
                     <path
                         d="M13.889.5H6.11A1.111 1.111 0 0 0 5 1.613v5.111s0 .167.556.722l3.571 2.778h1.746l3.571-2.778C15 6.89 15 6.723 15 6.723v-5.11A1.111 1.111 0 0 0 13.889.5Z"
                         fill="#55ACEE"
@@ -1624,7 +1632,7 @@
                     ></path>
                 </symbol>
                 <symbol
-                    id="search_tag_svg_curation"
+                    id="search-tag-svg-curation"
                     fill="none"
                     viewBox="0 0 20 20"
                 >
@@ -1657,7 +1665,7 @@
                 </symbol>
 
                 <!-- WMG-36086 사이드바 네비 아이콘 -->
-                <symbol id="ico_building" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-building" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1665,7 +1673,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_person" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-person" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1673,7 +1681,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_supporting" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-supporting" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1681,7 +1689,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_money" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-money" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1689,7 +1697,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_chart" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-chart" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1697,7 +1705,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_partnership" fill="none" viewBox="0 0 24 16">
+                <symbol id="ico-partnership" fill="none" viewBox="0 0 24 16">
                     <g clip-path="url(#aa)">
                         <path
                             d="M23.37 7.61 20 .76a.69.69 0 0 0-.4-.35.724.724 0 0 0-.54.03l-2.94 1.45a.7.7 0 0 0-.32.94l3.03 6.16c-.85 1.33-3.09 2.71-3.93 3.14l-4.82 2.35c-.09.05-.17.04-.22.03a.283.283 0 0 1-.06-.52l.1-.06.1-.06h.01l2.92-1.71a.65.65 0 0 0-.66-1.12l-3 1.76-1.44.8c-.09.05-.17.04-.21.03a.267.267 0 0 1-.17-.13c-.06-.1.02-.26-.02-.24l4.45-2.57c.31-.18.42-.58.24-.89a.654.654 0 0 0-.89-.24l-4.42 2.56s-.08.02-.12.04c-.06.04-.15.04-.24.02a.334.334 0 0 1-.2-.14.285.285 0 0 1-.03-.21c.01-.04.04-.12.13-.17l4.45-2.57c.31-.18.42-.58.24-.89a.654.654 0 0 0-.89-.24L6.27 10.2c-.28.13-.4.02-.48-.12a.285.285 0 0 1-.03-.21c.01-.04.04-.12.12-.16L8.1 8.52c.32-.17.44-.56.27-.88a.697.697 0 0 0-.28-.26h.08c1.86 0 2.98-1.1 3.49-2.06l1.89.47c.29.07.58.08.86.04 1.4-.21 1.65-1.07 1.69-1.44.06-.56-.19-1.23-.79-1.44l-4.94-1.58c-1.16-.4-1.78-.1-2.01.07-.55.32-1.07.27-1.37.2a.702.702 0 0 0-.43-.46L3.73.22a.69.69 0 0 0-.88.43L.59 7.21a.7.7 0 0 0 .43.89l2.81.97c.07.03.15.04.23.04a.69.69 0 0 0 .66-.47l1.97-5.73c.56.12 1.45.17 2.41-.41 0 0 .23-.11.84.1l4.85 1.55s.01.07 0 .09c-.02.19-.42.27-.59.3-.11.02-.23.01-.35-.02l-2.43-.61a.665.665 0 0 0-.78.43c-.08.25-.827 2.035-3.05 1.62-.35-.11-.8.075-.9.415-.11.34-.044.626.3.836.42.13.23.06.6.1-.04.01-.08.01-.12.03l-2.24 1.2a1.575 1.575 0 0 0-.58 2.16c.11.19.25.34.41.47-.05.09-.08.19-.11.3-.11.41-.05.83.16 1.2.21.36.57.63.99.75h.04c0 .23.06.47.19.7a1.554 1.554 0 0 0 1.37.79c.26 0 .51-.07.74-.19.03.1.07.19.13.28a1.554 1.554 0 0 0 1.38.79c.27 0 .53-.07.74-.19l4.79-2.33c.13-.07 2.85-1.49 4.21-3.24.04 0 .07.02.11.02.11 0 .21-.02.31-.07l2.94-1.45a.7.7 0 0 0 .32-.94v.02Zm-19.75-.1L2.14 7l1.8-5.23 1.48.51-1.8 5.23Zm16.5.92-2.75-5.59 1.68-.83L21.8 7.6l-1.68.83Z"
@@ -1714,7 +1722,7 @@
                         </clipPath>
                     </defs>
                 </symbol>
-                <symbol id="ico_mocktest" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-mocktest" fill="none" viewBox="0 0 24 24">
                     <path
                         d="M16.295 17L22.9001 10.4022C23.0333 10.2686 23.0333 10.0528 22.9001 9.91921L21.0866 8.1002C20.9534 7.9666 20.7383 7.9666 20.6051 8.1002L14 14.698V17H16.295Z"
                         fill="#292E41"
@@ -1749,7 +1757,7 @@
                     ></path>
                 </symbol>
                 <!-- WMG-36086 복지혜택 아이콘 -->
-                <symbol id="ico_benefit_book" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-benefit-book" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1763,7 +1771,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_benefit_gift" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-benefit-gift" fill="none" viewBox="0 0 24 24">
                     <path
                         d="M5.1 8.8h13.8V18a1.2 1.2 0 0 1-1.2 1.2H6.3A1.2 1.2 0 0 1 5.1 18V8.8ZM12 9v10"
                         stroke="#292E41"
@@ -1788,7 +1796,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_benefit_person" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-benefit-person" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1797,7 +1805,7 @@
                     ></path>
                 </symbol>
                 <symbol
-                    id="ico_benefit_refresh"
+                    id="ico-benefit-refresh"
                     fill="none"
                     viewBox="0 0 24 24"
                 >
@@ -1814,7 +1822,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_benefit_bag" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-benefit-bag" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1822,7 +1830,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_benefit_car" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-benefit-car" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1830,7 +1838,7 @@
                         fill="#292E41"
                     ></path>
                 </symbol>
-                <symbol id="ico_benefit_pay" fill="none" viewBox="0 0 24 24">
+                <symbol id="ico-benefit-pay" fill="none" viewBox="0 0 24 24">
                     <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -1839,7 +1847,7 @@
                     ></path>
                 </symbol>
                 <symbol
-                    id="ico_benefit_papermoney"
+                    id="ico-benefit-papermoney"
                     fill="none"
                     viewBox="0 0 24 24"
                 >
@@ -1853,7 +1861,7 @@
 
                 <!-- WMG-36086 기업 로고 없을 경우 -->
                 <symbol
-                    id="icon_no_company_logo"
+                    id="icon-no-company-logo"
                     fill="none"
                     viewBox="0 0 24 24"
                 >
@@ -1867,7 +1875,7 @@
 
                 <!-- WMG-36086 230830 추가 사항 - 기업태그 아이콘 추가 -->
                 <symbol
-                    id="search_tag_svg_subway"
+                    id="search-tag-svg-subway"
                     fill="none"
                     viewBox="0 0 17 18"
                 >
@@ -1909,7 +1917,7 @@
                         fill="#269"
                     ></path>
                 </symbol>
-                <symbol id="icon_company_tag2" fill="none" viewBox="0 0 20 20">
+                <symbol id="icon-company-tag2" fill="none" viewBox="0 0 20 20">
                     <path
                         d="M13.889.5H6.11A1.111 1.111 0 0 0 5 1.613v5.111s0 .167.556.722l3.571 2.778h1.746l3.571-2.778C15 6.89 15 6.723 15 6.723v-5.11A1.111 1.111 0 0 0 13.889.5Z"
                         fill="#55ACEE"
@@ -1935,7 +1943,7 @@
                         fill="#FFAC33"
                     ></path>
                 </symbol>
-                <symbol id="icon_company_tag3" fill="none" viewBox="0 0 18 18">
+                <symbol id="icon-company-tag3" fill="none" viewBox="0 0 18 18">
                     <path
                         d="M8.056 1.045a1.889 1.889 0 0 1 1.888 0l5.473 3.16c.584.337.944.96.944 1.636v6.318c0 .675-.36 1.299-.944 1.636l-5.473 3.16a1.889 1.889 0 0 1-1.888 0l-5.473-3.16a1.889 1.889 0 0 1-.944-1.636V5.841c0-.675.36-1.299.944-1.636l5.473-3.16Z"
                         fill="#FBC500"
@@ -1963,7 +1971,7 @@
                         stroke-linecap="round"
                     ></path>
                 </symbol>
-                <symbol id="icon_company_tag4" fill="none" viewBox="0 0 20 20">
+                <symbol id="icon-company-tag4" fill="none" viewBox="0 0 20 20">
                     <path
                         d="M16.222 7.889c0 .43-.349.778-.778.778h-2.333a.778.778 0 0 1-.778-.778V7.11c0-.43.348-.778.778-.778h2.333c.43 0 .778.349.778.778v.778Zm-8.556 0c0 .43-.348.778-.778.778H4.555a.778.778 0 0 1-.778-.778V7.11c0-.43.349-.778.778-.778h2.333c.43 0 .778.349.778.778v.778Z"
                         fill="#DAC8B1"
@@ -2003,13 +2011,13 @@
                 </symbol>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-                <symbol id="icon_login_naver" viewBox="0 0 20 20" fill="none">
+                <symbol id="icon-login-naver" viewBox="0 0 20 20" fill="none">
                     <path
                         d="M13.5615 10.704L6.14588 0H0V20H6.43845V9.296L13.8541 20H20V0H13.5615V10.704Z"
                         fill="white"
                     ></path>
                 </symbol>
-                <symbol id="icon_login_kakao" viewBox="0 0 24 22" fill="none">
+                <symbol id="icon-login-kakao" viewBox="0 0 24 22" fill="none">
                     <path
                         d="M12 -0.00012207C5.37092 -0.00012207 0 4.23616 0 9.46609C0 12.868 2.27684 15.8528 5.69401 17.5215C5.44314 18.4545 4.78556 20.9082 4.65252 21.4316C4.48907 22.0839 4.89199 22.0725 5.15426 21.8981C5.35952 21.7616 8.44219 19.6681 9.77257 18.7654C10.4948 18.8716 11.2398 18.9285 12 18.9285C18.6291 18.9285 24 14.6922 24 9.4623C24 4.23237 18.6291 -0.00012207 12 -0.00012207Z"
                         fill="#181600"

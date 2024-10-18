@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>내 게시글 & 댓글</title>
+        <link rel="stylesheet" href="../../static/css/main.css" />
+        <link
+            rel="stylesheet"
+            href="../../static/css/my-page/my-post-reply.css"
+        />
+    </head>
+    <body>
+        <div id="sri_section">
+            <div id="sri_wrap">
+                <div id="content">
+                    <div class="wrapper_narrow support_announce">
+                        <h1 class="wrap_title">내 공고 활동</h1>
+                        <ul class="TabBox">
+                            <li class="Select">
+                                <a href="#" class="BtnType">
+                                    최근본<span
+                                        id="readJobTotalCount"
+                                        class="Badge"
+                                        >20</span
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="BtnType"
+                                    onmousedown="gaEvent('reclist_tab', 'my_search')"
+                                >
+                                    나의 검색<span
+                                        id="suitedTotalCount"
+                                        class="Badge"
+                                        >389</span
+                                    >
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="top_btns">
+                            <div class="align">
+                                <div class="InpBox topCheckBox">
+                                    <span class="Chk Hide">
+                                        <input type="checkbox" id="selectAll" />
+                                        <label class="Lbl" for="selectAll"
+                                            >전체선택</label
+                                        >
+                                    </span>
+                                </div>
+                                <button
+                                    type="button"
+                                    class="BtnType SizeM GrayInvert btn_invert select_scrap_btn"
+                                >
+                                    스크랩
+                                </button>
+                                <button
+                                    type="button"
+                                    id="selectDelete"
+                                    class="BtnType SizeM GrayInvert btn_invert"
+                                >
+                                    삭제
+                                </button>
+                            </div>
+                            <div class="align">
+                                <div class="InpBox Line filter">
+                                    <span class="Chk">
+                                        <input
+                                            type="checkbox"
+                                            id="quick_apply"
+                                            value="y"
+                                        />
+                                        <label class="Lbl" for="quick_apply"
+                                            >입사지원만 보기</label
+                                        >
+                                    </span>
+                                    <span class="Chk">
+                                        <input
+                                            type="checkbox"
+                                            id="ai_head_hunting"
+                                            value="y"
+                                        />
+                                        <label class="Lbl" for="ai_head_hunting"
+                                            >취업축하금만 보기</label
+                                        >
+                                    </span>
+                                </div>
+
+                                <div class="InpBox filter">
+                                    <select
+                                        name="sort"
+                                        id="sort"
+                                        class="sorting"
+                                    >
+                                        <option
+                                            value="rd"
+                                            label="최근 조회순"
+                                            selected="selected"
+                                        >
+                                            최근 조회순
+                                        </option>
+                                        <option value="ed" label="마감일순">
+                                            마감일순
+                                        </option>
+                                        <option value="rod" label="등록일순">
+                                            등록일순
+                                        </option>
+                                        <option value="md" label="수정일순">
+                                            수정일순
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activity_list">
+                            <span class="blind">공고 리스트</span>
+                            <div class="list_recruit">
+                                <ul class="wrap_list">
+                                    <li class="row recruit_summary_basic">
+                                        <div class="InpBox scrap_check">
+                                            <span class="Chk Hide">
+                                                <input
+                                                    type="checkbox"
+                                                    name="row_idx[]"
+                                                    id="recruit_check_48839623"
+                                                    class="idx_chk checkbox_idx"
+                                                    value="48839623"
+                                                />
+                                                <label
+                                                    class="Lbl"
+                                                    for="recruit_check_48839623"
+                                                    >선택</label
+                                                >
+                                            </span>
+                                        </div>
+                                        <div class="col_corp type02">
+                                            <a
+                                                target="_blank"
+                                                id="48839623"
+                                                class="relay-recruit-view relay-recruit-data"
+                                                >마린웍스(주)</a
+                                            >
+                                        </div>
+                                        <div class="col_informs">
+                                            <strong class="tit"
+                                                ><a
+                                                    href="/zf_user/jobs/relay/recruit-view?view_type=read_jobs&amp;rec_idx=48839623"
+                                                    target="_blank"
+                                                    id="48839623"
+                                                    class="relay-recruit-view relay-recruit-data"
+                                                    >IoT, 제어, 빅데이타 및 C#
+                                                    기반 어플리케이션 개발자
+                                                    채용</a
+                                                ></strong
+                                            >
+                                            <button
+                                                class="like_btn scrap-48839623"
+                                                scraped="n"
+                                                rec_idx="48839623"
+                                            >
+                                                <span class="blind"
+                                                    >찜하기 버튼</span
+                                                >
+                                            </button>
+
+                                            <ul class="inform">
+                                                <a
+                                                    target="_blank"
+                                                    id="48839623"
+                                                    class="relay-recruit-view relay-recruit-data"
+                                                >
+                                                    <li>신입 · 경력</li>
+                                                    <li>대학교(4년)↑</li>
+                                                    <li>정규직</li>
+                                                    <li>서울 종로구</li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="col_relation">
+                                            <p class="reason">
+                                                내 선호조건과 비슷
+                                            </p>
+                                            <span class="data"
+                                                ><strong class="point"
+                                                    >서울전체 X
+                                                    IT개발·데이터</strong
+                                                ></span
+                                            >
+                                        </div>
+                                        <div class="col_btns">
+                                            <button class="sri_btn_ml">
+                                                <span
+                                                    class="sri_btn_immediately"
+                                                    >입사지원</span
+                                                >
+                                            </button>
+                                            <span class="date"
+                                                ><b
+                                                    style="
+                                                        font-weight: bold;
+                                                        color: #d63131;
+                                                    "
+                                                    >오늘마감</b
+                                                ></span
+                                            >
+                                        </div>
+                                    </li>
+                                    <svg
+                                        class="img_svg_hidden"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <defs>
+                                            <symbol
+                                                id="icon-star"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    fill="none"
+                                                    fill-rule="evenodd"
+                                                >
+                                                    <path
+                                                        fill="#FFFFFF"
+                                                        d="M-922-1549H998V873H-922z"
+                                                    ></path>
+                                                    <path
+                                                        stroke="#D7DCE5"
+                                                        stroke-linejoin="round"
+                                                        d="M12 3.5c-.476 0-.91.26-1.112.668L8.966 8.046l-4.424.639a1.21 1.21 0 0 0-.979.78c-.146.414-.034.875.286 1.179l3.241 3.144-.752 4.362c-.073.444.124.89.504 1.137.388.257.888.283 1.301.068L12 17.338l3.858 2.017c.185.097.39.144.594.144.248 0 .496-.07.707-.212.383-.256.58-.698.503-1.137l-.752-4.362 3.242-3.144c.32-.304.432-.765.286-1.179a1.21 1.21 0 0 0-.979-.78l-4.423-.64-1.924-3.877A1.235 1.235 0 0 0 12 3.5z"
+                                                    ></path>
+                                                </g>
+                                            </symbol>
+                                        </defs>
+                                    </svg>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="../../static/js/my-page/my-post-reply.js"></script>
+</html>

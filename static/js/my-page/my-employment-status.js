@@ -34,7 +34,6 @@ const individualCheckboxes = document.querySelectorAll(
     'input[type="checkbox"].checkbox_id'
 );
 
-// 전체선택 체크박스 클릭 시 모든 개별 체크박스 상태 동기화
 selectAll.addEventListener("change", () => {
     const isChecked = selectAll.checked;
     individualCheckboxes.forEach((checkbox) => {
@@ -54,7 +53,6 @@ individualCheckboxes.forEach((checkbox) => {
 const selectAllCheckbox = document.getElementById("selectAll");
 const individualCheckboxes2 = document.querySelectorAll("input.checkbox_idx");
 
-// 전체선택 체크박스 클릭 시 모든 개별 체크박스 상태 동기화
 selectAllCheckbox.addEventListener("change", () => {
     const isChecked = selectAllCheckbox.checked;
     individualCheckboxes2.forEach((checkbox) => {
@@ -75,15 +73,12 @@ individualCheckboxes2.forEach((checkbox) => {
 const hideButton = document.getElementById("list_hide_btn");
 const tipContent = document.querySelector(".TipCont.TopLeft");
 
-// 초기 상태: 숨기기
 tipContent.style.display = "none";
 
-// 마우스 오버 시 TipCont 보이기
 hideButton.addEventListener("mouseover", () => {
     tipContent.style.display = "block";
 });
 
-// 마우스가 버튼에서 떠날 때 TipCont 숨기기
 hideButton.addEventListener("mouseout", () => {
     tipContent.style.display = "none";
 });

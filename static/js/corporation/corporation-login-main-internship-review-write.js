@@ -1,6 +1,6 @@
-// editor_wrap 내부의 텍스트를 카운트하는 함수
-const editorWrap = document.getElementById("qust_detail");
-const postCount = document.querySelector(".post_count em");
+// editor-wrap 내부의 텍스트를 카운트하는 함수
+const editorWrap = document.getElementById("qust-detail");
+const postCount = document.querySelector(".post-count em");
 
 editorWrap.addEventListener("input", function () {
     let textLength = editorWrap.innerText.length;
@@ -8,12 +8,12 @@ editorWrap.addEventListener("input", function () {
     // 글자 수를 실시간으로 업데이트
     postCount.textContent = textLength;
 });
-document.querySelector(".btn_qna_write").addEventListener("click", function () {
-    const titleInput = document.getElementById("qst_title");
-    const contentInput = document.getElementById("qust_detail");
+document.querySelector(".btn-qna-write").addEventListener("click", function () {
+    const titleInput = document.getElementById("qst-title");
+    const contentInput = document.getElementById("qust-detail");
     const dimmed = document.getElementById("dimmed");
-    const modalAlert = document.getElementById("layer_qna_alert");
-    const alertText = document.getElementById("alert_text");
+    const modalAlert = document.getElementById("layer-qna-alert");
+    const alertText = document.getElementById("alert-text");
 
     // 제목이 비어있을 경우
     if (titleInput.value.trim() === "") {
@@ -37,14 +37,14 @@ document.querySelector(".btn_qna_write").addEventListener("click", function () {
 
 // 모달 닫기 버튼 (X 버튼) 클릭 시 모달 닫기
 document
-    .querySelector(".btn_layer_close")
+    .querySelector(".btn-layer-close")
     .addEventListener("click", function () {
         document.getElementById("dimmed").style.display = "none";
-        document.getElementById("layer_qna_alert").style.display = "none";
+        document.getElementById("layer-qna-alert").style.display = "none";
     });
 
 // 확인 버튼 클릭 시 모달 닫기
-document.querySelector(".btn_confirm").addEventListener("click", function () {
+document.querySelector(".btn-confirm").addEventListener("click", function () {
     document.getElementById("dimmed").style.display = "none";
-    document.getElementById("layer_qna_alert").style.display = "none";
+    document.getElementById("layer-qna-alert").style.display = "none";
 });

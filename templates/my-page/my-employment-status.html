@@ -8,61 +8,67 @@
             rel="stylesheet"
             href="../../static/css/my-page/my-employment-status.css"
         />
-        <title>입사지원 현황</title>
+        <title>나의 지원 현황</title>
     </head>
     <body>
-        <div id="sri_section">
-            <div id="sri_wrap">
+        <div id="position-section">
+            <div id="position-wrap">
                 <div id="content">
-                    <div class="wrap_my_apply" id="apply_status_div">
-                        <h1 class="wrap_title">입사지원 현황</h1>
-                        <div class="tab_inc_btn">
+                    <div class="wrap-my-apply" id="apply-status-div">
+                        <h1 class="wrap-title">나의 지원 현황</h1>
+                        <div class="tab-inc-btn">
                             <ul class="TabBox">
                                 <li class="Select">
                                     <a
-                                        href="/zf_user/persons/apply-status-list"
+                                        href="/zf-user/persons/apply-status-list"
                                         class="BtnType"
-                                        >전체<span class="Badge">0</span></a
+                                        >지원내역<span class="Badge">0</span></a
                                     >
                                 </li>
                                 <li>
                                     <a
-                                        href="/zf_user/persons/apply-status-pause-list"
+                                        href="/zf-user/persons/apply-status-pause-list"
                                         class="BtnType"
-                                        >지원서 작성중<span class="Badge"
+                                        >이수 내역<span class="Badge"
+                                            >0</span
+                                        ></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="/zf-user/persons/apply-status-list"
+                                        class="BtnType"
+                                        >면접 내역<span class="Badge"
                                             >0</span
                                         ></a
                                     >
                                 </li>
                             </ul>
                         </div>
-                        <div class="wrap_list" id="apply_status_list_div">
-                            <div class="status_board">
-                                <div class="item _dashboardDiv">
+                        <div class="wrap-list" id="apply-status-list-div">
+                            <div class="status-board">
+                                <div class="item -dashboardDiv">
                                     <button
                                         type="button"
-                                        class="dash_tab _dashboardBtn"
-                                        data-type="waiting"
+                                        class="dash-tab -dashboardBtn"
                                     >
                                         <em>지원완료</em>
                                         <span class="num">0</span>
                                     </button>
                                 </div>
-                                <div class="item _dashboardDiv">
+                                <div class="item -dashboardDiv">
                                     <button
                                         type="button"
-                                        class="dash_tab _dashboardBtn"
-                                        data-type="ing"
+                                        class="dash-tab -dashboardBtn"
                                     >
                                         <em>전형 진행중</em>
                                         <span class="num">0</span>
                                     </button>
                                 </div>
-                                <div class="item _dashboardDiv">
+                                <div class="item -dashboardDiv">
                                     <button
                                         type="button"
-                                        class="dash_tab _dashboardBtn"
-                                        data-type="result"
+                                        class="dash-tab -dashboardBtn"
                                     >
                                         <em>최종발표</em>
                                         <span class="num">0</span>
@@ -70,18 +76,14 @@
                                 </div>
                             </div>
                             <form
-                                name="list_search_form"
-                                id="list_search_form"
-                                action="/zf_user/persons/apply-status-list"
+                                name="list-search-form"
+                                id="list-search-form"
+                                action="/zf-user/persons/apply-status-list"
                             >
-                                <input
-                                    type="hidden"
-                                    name="status_type"
-                                    value=""
-                                />
+                                <input type="hidden" name="status-type" />
                                 <div
-                                    class="top_btns"
-                                    id="apply_status_list_search"
+                                    class="top-btns"
+                                    id="apply-status-list-search"
                                 >
                                     <div class="align">
                                         <div class="InpBox topCheckBox">
@@ -100,15 +102,15 @@
                                         <div class="TipBox">
                                             <button
                                                 type="button"
-                                                class="BtnType SizeM btn_invert GrayInvert"
-                                                id="list_hide_btn"
+                                                class="BtnType SizeM btn-invert GrayInvert"
+                                                id="list-hide-btn"
                                             >
                                                 숨기기
                                             </button>
                                             <div class="TipCont TopLeft">
                                                 <span class="Tail"></span>
                                                 <div class="TipTxt">
-                                                    <dl class="del_apply_row">
+                                                    <dl class="del-apply-row">
                                                         <dt>
                                                             잠깐! 내역 숨기기는
                                                             [지원취소]와
@@ -141,13 +143,12 @@
                                             <div class="TypoBox TypeBtn">
                                                 <input
                                                     type="text"
-                                                    id="start_date"
-                                                    name="start_date"
-                                                    class="Typo DatePic type_calendar hasDatepicker"
+                                                    id="start-date"
+                                                    name="start-date"
+                                                    class="Typo DatePic type-calendar hasDatepicker"
                                                     maxlength="10"
                                                     value="2024-09-17"
                                                     placeholder="YYYY-MM-DD"
-                                                    autocomplete="off"
                                                 /><button
                                                     type="button"
                                                     class="ui-datepicker-trigger"
@@ -159,13 +160,12 @@
                                             <div class="TypoBox TypeBtn">
                                                 <input
                                                     type="text"
-                                                    id="end_date"
-                                                    name="end_date"
-                                                    class="Typo DatePic type_calendar hasDatepicker"
+                                                    id="end-date"
+                                                    name="end-date"
+                                                    class="Typo DatePic type-calendar hasDatepicker"
                                                     maxlength="10"
                                                     value="2024-10-17"
                                                     placeholder="YYYY-MM-DD"
-                                                    autocomplete="off"
                                                 /><button
                                                     type="button"
                                                     class="ui-datepicker-trigger"
@@ -176,8 +176,8 @@
                                         </div>
                                         <div class="InpBox">
                                             <select
-                                                name="search_period"
-                                                id="search_period"
+                                                name="search-period"
+                                                id="search-period"
                                                 title="기간 설정"
                                             >
                                                 <option value="week">
@@ -205,10 +205,10 @@
                                         </div>
                                         <div class="InpBox">
                                             <select
-                                                name="read_status"
-                                                id="status_02"
+                                                name="read-status"
+                                                id="status-02"
                                                 title="열람여부"
-                                                class="_auto_search"
+                                                class="-auto-search"
                                             >
                                                 <option value="tot" selected="">
                                                     열람여부 전체
@@ -223,10 +223,10 @@
                                         </div>
                                         <div class="InpBox">
                                             <select
-                                                name="recruit_status"
-                                                id="status_01"
+                                                name="recruit-status"
+                                                id="status-01"
                                                 title="마감여부"
-                                                class="_auto_search"
+                                                class="-auto-search"
                                             >
                                                 <option value="tot">
                                                     마감여부 전체
@@ -241,12 +241,12 @@
                                         </div>
                                         <div class="InpBox">
                                             <select
-                                                name="order_type"
-                                                id="order_type"
+                                                name="order-type"
+                                                id="order-type"
                                                 title="업데이트순"
-                                                class="_auto_search"
+                                                class="-auto-search"
                                             >
-                                                <option value="apply_reg">
+                                                <option value="apply-reg">
                                                     입사지원순
                                                 </option>
                                                 <option
@@ -257,7 +257,7 @@
                                                 </option>
                                             </select>
                                         </div>
-                                        <div class="TypoBox search_area">
+                                        <div class="TypoBox search-area">
                                             <input
                                                 type="text"
                                                 class="Typo search"
@@ -268,14 +268,14 @@
                                             />
                                             <button
                                                 type="button"
-                                                id="keyword_search"
+                                                id="keyword-search"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
                                                     width="24"
                                                     height="24"
-                                                    class="icon_search"
+                                                    class="icon-search"
                                                 >
                                                     <path
                                                         fill="currentColor"
@@ -289,16 +289,16 @@
                                 </div>
                             </form>
 
-                            <form name="list_form" id="list_form">
-                                <div class="list_status"></div>
+                            <form name="list-form" id="list-form">
+                                <div class="list-status"></div>
                             </form>
 
-                            <div class="bottom_btns">
+                            <div class="bottom-btns">
                                 <div class="align">
                                     <button
                                         type="button"
                                         class="BtnType SizeS GrayInvert"
-                                        id="certificate_btn"
+                                        id="certificate-btn"
                                     >
                                         구직활동 확인서 발급하기
                                     </button>

@@ -5,13 +5,9 @@
 //         item.classList.toggle("open");
 //     });
 // });
-const interviewToggleBoxes = document.querySelectorAll(".interview-box-review");
-interviewToggleBoxes.forEach((box) => {
-    box.addEventListener("click", (e) => {
-        console.log(e.target);
-        interviewToggleBoxes.forEach((box) => {
-            box.classList.remove("open");
-        });
-        box.classList.add("open");
+
+document.querySelectorAll(".interview-box-review").forEach((item) => {
+    item.addEventListener("click", () => {
+        item.classList.toggle("open");
     });
 });

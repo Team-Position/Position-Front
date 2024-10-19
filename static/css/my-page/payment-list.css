@@ -1,4 +1,4 @@
-#sri_section {
+#position-section {
     display: grid;
     grid-template-areas:
         "gnb main"
@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-#sri_gnb_wrap {
+#position-gnb-wrap {
     grid-area: gnb;
     position: sticky;
     top: 0;
@@ -23,7 +23,7 @@
     transition: width 0.5s;
 }
 
-#sri_wrap {
+#position-wrap {
     grid-area: main;
     display: table-row;
     width: 100%;
@@ -36,14 +36,14 @@
     width: 1248px;
 }
 
-.wrap_title {
+.wrap-title {
     color: #373f57;
     font-size: 36px;
     font-weight: bold;
     line-height: 56px;
 }
 
-.wrap_pay .list_title {
+.wrap-pay .list-title {
     color: var(--gray110);
     font-size: 20px;
     line-height: 28px;
@@ -51,7 +51,7 @@
     display: block;
 }
 
-.wrap_pay .top_filter {
+.wrap-pay .top-filter {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +81,7 @@
     -webkit-appearance: none;
 }
 
-.wrap_pay .search_interview .search_area {
+.wrap-pay .search-interview .search-area {
     display: inline-block;
     position: relative;
     width: 160px;
@@ -96,7 +96,7 @@
     background-color: var(--white);
 }
 
-.wrap_pay .search_interview .search_area input[type=text] {
+.wrap-pay .search-interview .search-area input[type=text] {
     padding-right: 36px;
     width: 100%;
 }
@@ -114,30 +114,30 @@
     background: none;
 }
 
-.wrap_pay .search_interview .search_area button {
+.wrap-pay .search-interview .search-area button {
     display: inline-block;
     position: absolute;
     top: 6px;
     right: 4px;
     width: 32px;
     height: 32px;
-    background: url(https://www.saraminimage.co.kr/sri/person/resume/bg_alink.png) repeat;
+    background: url(https://www.saraminimage.co.kr/sri/person/resume/bg-alink.png) repeat;
 }
 
-.wrap_pay .search_interview .search_area button .icon_search {
+.wrap-pay .search-interview .search-area button .icon-search {
     width: 24px;
     height: 24px;
     color: #575d6d;
 }
 
-.wrap_pay .list_rewards {
+.wrap-pay .list-rewards {
     position: relative;
     z-index: 1;
     border-bottom: 1px solid #eaedf4;
 }
 
 
-.wrap_pay .list_rewards .item {
+.wrap-pay .list-rewards .item {
     display: flex;
     align-items: center;
     position: relative;
@@ -146,22 +146,22 @@
     box-sizing: border-box;
     border-top: 1px solid #d7dce5;
 }
-.list_rewards .item:first-child {
+.list-rewards .item:first-child {
     border-top: none; /* 첫 번째 아이템 상단에 border 제거 */
 }
 
 
-.wrap_pay .list_rewards .item .info_status {
+.wrap-pay .list-rewards .item .info-status {
     margin-right: 24px;
 }
 
-.wrap_pay .list_rewards .item .info_status .order_num {
+.wrap-pay .list-rewards .item .info-status .order-num {
     color: var(--gray80);
     font-size: 14px;
     line-height: 20px;
 }
 
-.wrap_pay .list_rewards .item .info_status .date {
+.wrap-pay .list-rewards .item .info-status .date {
     display: block;
     color: var(--gray120);
     font-size: 14px;
@@ -169,13 +169,13 @@
     margin: 8px 0;
 }
 
-.wrap_pay .list_rewards .item .info_status .status {
+.wrap-pay .list-rewards .item .info-status .status {
     color: var(--blue90);
     font-size: 14px;
     line-height: 20px;
 }
 
-.wrap_pay .list_rewards .item .title {
+.wrap-pay .list-rewards .item .title {
     font-size: 20px;
     color: var(--gray120);
     line-height: 32px;
@@ -184,7 +184,7 @@
     padding: 0 12px;
 }
 
-.wrap_pay .list_rewards .item .price {
+.wrap-pay .list-rewards .item .price {
     font-size: 14px;
     color: var(--gray120);
     line-height: 20px;
@@ -192,13 +192,13 @@
     padding: 0 32px;
 }
 
-.wrap_pay .list_rewards .item .info {
+.wrap-pay .list-rewards .item .info {
     padding: 0 32px;
     width: 240px;
     box-sizing: border-box;
 }
 
-.wrap_pay .list_rewards .item .info .info_card {
+.wrap-pay .list-rewards .item .info .info-card {
     color: var(--gray120);
     font-size: 14px;
     line-height: 20px;
@@ -206,7 +206,7 @@
     margin-bottom: 8px;
 }
 
-/* .wrap_pay .list_rewards .item .wrap_btn {
+/* .wrap-pay .list-rewards .item .wrap-btn {
     width: 168px;
     padding-left: 32px;
     box-sizing: border-box;
@@ -238,7 +238,7 @@
     justify-content: center;
 }
 
-.PageBox span.BtnType {
+.BtnType.SizeS.select {
     border: 1px solid var(--gray60);
     font-weight: bold;
 }
@@ -350,7 +350,7 @@
 }
 
 
-.exam_inspection_wrap .self_inspection_wrap .self_exam_list>li {
+.exam-inspection-wrap .self-inspection-wrap .self-exam-list>li {
     display: block;
     border-top: 1px solid #d7dce5;
     position: relative;

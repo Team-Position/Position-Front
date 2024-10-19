@@ -175,15 +175,16 @@ document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
     checkbox.addEventListener("change", (e) => {
         const skillList = document.querySelector(".soft-add"); // 스킬 목록 영역
         const progressCircle = document.querySelector(".induceSkill .svg"); // SVG 요소
+        const skillBoxView = document.querySelector(".skill-box.view"); // 스킬 표시 영역
+        const hiddenSkillButton = skillBoxView.querySelector(".skill-hide-add"); // 숨겨진 내 스킬 추가 버튼
 
         // 레이블에서 텍스트 가져오기
         const label = e.target.nextElementSibling; // 체크박스의 다음 형제 요소는 레이블
-        const skillValue = label.querySelector(".keyword").textContent; // "야구"와 같은 텍스트 가져오기
+        const skillValue = label.querySelector(".keyword").textContent; // 예: "야구"
 
         // 스킬 개수에 따라 SVG 클래스 업데이트하는 함수
         function updateSvgClass() {
             const skillCount = skillList.children.length;
-            // 기존 단계 클래스 제거
             progressCircle.classList.remove(
                 "step1",
                 "step2",
@@ -191,7 +192,6 @@ document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
                 "step4",
                 "step5"
             );
-            // 스킬 수에 따라 새로운 단계 클래스 추가
             if (skillCount > 0 && skillCount <= 5) {
                 progressCircle.classList.add(`step${skillCount}`);
             }
@@ -199,8 +199,6 @@ document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
 
         // SVG 클래스 제거하는 함수
         function removeSvgClass() {
-            const skillCount = skillList.children.length;
-            // 기존 단계 클래스 제거
             progressCircle.classList.remove(
                 "step1",
                 "step2",
@@ -224,20 +222,30 @@ document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
                 </button>
             `;
 
-            // 삭제 버튼 클릭 시 해당 스킬 삭제
+            // skillBoxView에 동일한 구조로 스킬 추가
+            const viewSkillItem = document.createElement("span");
+            viewSkillItem.className = "skill-item TipBox";
+            viewSkillItem.textContent = skillValue;
+            // 숨겨진 내 스킬 추가 버튼 앞에 추가
+            skillBoxView.insertBefore(viewSkillItem, hiddenSkillButton);
+
+            // 삭제 버튼 클릭 시 스킬 삭제 처리
             skillItem
                 .querySelector(".evtDeleteSkillItem")
                 .addEventListener("click", () => {
                     e.target.checked = false; // 체크박스 해제
                     skillItem.remove(); // 스킬 아이템 삭제
-                    // updateSvgClass(); // 삭제 시 SVG 클래스 업데이트
-                    removeSvgClass(); // SVG 클래스 제거
 
+                    // skillBoxView에서 해당 스킬도 제거
+                    const skillToRemoveInView = Array.from(
+                        skillBoxView.children
+                    ).find((item) => item.textContent === skillValue);
+                    if (skillToRemoveInView) skillToRemoveInView.remove();
+
+                    removeSvgClass(); // SVG 클래스 제거
                     const skillCount = skillList.children.length; // 현재 스킬 개수 확인
-                    // 삭제된 후 상태에 따라 클래스 추가
-                    if (skillCount < 5) {
+                    if (skillCount < 5)
                         progressCircle.classList.add(`step${skillCount + 1}`);
-                    }
                     progressCircle.classList.add("reverse"); // 삭제 시 reverse 클래스 추가
                 });
 
@@ -245,19 +253,24 @@ document.querySelectorAll(".evtReturnAutoComplete").forEach((checkbox) => {
             progressCircle.classList.remove("reverse"); // 추가 시 reverse 클래스 제거
             updateSvgClass(); // 추가 후 SVG 클래스 업데이트
         } else {
-            // 체크박스가 해제된 경우, 해당 스킬 삭제
+            // 체크박스 해제된 경우, 해당 스킬 삭제
             const skillToRemove = Array.from(skillList.children).find(
                 (item) =>
                     item.querySelector(".skillNm").textContent === skillValue
             );
             if (skillToRemove) {
                 skillToRemove.remove(); // 스킬 아이템 삭제
+
+                // skillBoxView에서 해당 스킬도 제거
+                const skillToRemoveInView = Array.from(
+                    skillBoxView.children
+                ).find((item) => item.textContent === skillValue);
+                if (skillToRemoveInView) skillToRemoveInView.remove();
+
                 removeSvgClass(); // SVG 클래스 제거
                 const skillCount = skillList.children.length; // 현재 스킬 개수 확인
-                // 삭제된 후 상태에 따라 클래스 추가
-                if (skillCount < 5) {
+                if (skillCount < 5)
                     progressCircle.classList.add(`step${skillCount + 1}`);
-                }
                 progressCircle.classList.add("reverse"); // 삭제 시 reverse 클래스 추가
             }
         }

@@ -5,7 +5,7 @@
 body.no-gnb {
     min-width: 1280px;
 }
-.no-gnb #sri-section {
+.no-gnb #position-section {
     min-width: 1260px;
     grid-template-areas:
         "main"
@@ -13,7 +13,7 @@ body.no-gnb {
     grid-template-columns: auto;
 }
 
-#sri-section {
+#position-section {
     display: grid;
     grid-template-areas:
         "gnb main"
@@ -26,7 +26,7 @@ body.no-gnb {
     box-sizing: border-box;
 }
 
-#sri-wrap {
+#position-wrap {
     grid-area: main;
     display: table-row;
     width: 100%;
@@ -902,6 +902,7 @@ body.no-gnb {
 
 /* 스킬 */
 .resume-con .resume-tit .TipBox {
+    display:none;
     margin-left: 8px;
 }
 
@@ -1763,6 +1764,7 @@ button:disabled svg {
 
 /* 이력서 파일 등록 */
 .resume-edit.add-file-area{
+    display:block;
     border-top: 1px solid var(--gray40);
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -2134,7 +2136,7 @@ button:disabled svg {
     content: "";
 }
 
-.sri-dimmed {
+.position-dimmed {
     overflow: auto;
     position: fixed;
     top: 0;
@@ -2143,6 +2145,9 @@ button:disabled svg {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+}
+#dimmed{
+    display:none;
 }
 
 .resume-file-manage .file-box input[type=file]::file-selector-button {
@@ -2159,4 +2164,21 @@ button:disabled svg {
 }
 .resume-file .file-preview img {
     width: 100%;
+}
+
+#file-res,
+.resume-edit.preview-file-area,
+#resume-file-uploading-layer,
+#resume-file-uploaded-layer,
+#resumeSkill,
+.btn-delete{
+    display: none;
+}
+
+.btn-add.evtWriteItem{
+    display: flex;
+}
+
+.evtDeleteResFile{
+    display:block;
 }

@@ -9,8 +9,8 @@
     </head>
     <body>
         <header></header>
-        <div id="sri-section">
-            <div id="sri-wrap">
+        <div id="position-section">
+            <div id="position-wrap">
                 <div id="content">
                     <form action="">
                         <!-- input hidden -->
@@ -197,16 +197,13 @@
                                         <div class="box-tit">
                                             <h2 class="tit">
                                                 이력서 파일
-                                                <span class="must">필수</span>
+                                                <!-- <span class="must">필수</span> -->
                                             </h2>
                                         </div>
                                     </div>
 
                                     <!-- 파일 등록 -->
-                                    <div
-                                        class="resume-edit add-file-area"
-                                        style="display: block"
-                                    >
+                                    <div class="resume-edit add-file-area">
                                         <div class="item-row">
                                             <div class="item item-full">
                                                 <label
@@ -221,7 +218,6 @@
                                                     accept=".pdf, .png, .jpg, .jpeg, .gif"
                                                     data-require="true"
                                                     autocomplete="off"
-                                                    style="display: none"
                                                 />
 
                                                 <button
@@ -245,10 +241,7 @@
                                     </div>
 
                                     <!-- 파일 미리보기 -->
-                                    <div
-                                        class="resume-edit preview-file-area"
-                                        style="display: none"
-                                    >
+                                    <div class="resume-edit preview-file-area">
                                         <!-- Row -->
                                         <h5 class="tit-sub">파일미리보기</h5>
                                         <div class="item-row">
@@ -316,7 +309,6 @@
                                     <div
                                         class="ModalBox layer-uploaded ing"
                                         id="resume-file-uploading-layer"
-                                        style="display: none"
                                     >
                                         <h4 class="Tit">파일 첨부</h4>
                                         <div class="ModalCont uploaded-box">
@@ -349,7 +341,6 @@
                                     <div
                                         class="ModalBox layer-uploaded"
                                         id="resume-file-uploaded-layer"
-                                        style="display: none"
                                     >
                                         <h4 class="Tit">파일 첨부</h4>
                                         <div class="ModalCont uploaded-box">
@@ -461,10 +452,7 @@
                                     <div class="resume-tit">
                                         <div class="box-tit">
                                             <h2 class="tit">스킬</h2>
-                                            <div
-                                                class="TipBox"
-                                                style="display: none"
-                                            >
+                                            <div class="TipBox">
                                                 <svg>
                                                     <use
                                                         xlink:href="#resume-ex"
@@ -476,7 +464,6 @@
                                             type="button"
                                             value="resumeSkill-1729142954349"
                                             class="btn-add evtWriteItem"
-                                            style="display: flex"
                                         >
                                             <svg>
                                                 <use
@@ -486,29 +473,11 @@
                                             추가
                                         </button>
                                     </div>
-                                    <ul
-                                        class="resume-list"
-                                        style="display: block"
-                                    >
+                                    <ul class="resume-list">
                                         <li class="list">
                                             <div class="contents">
                                                 <h3 class="tit">나의 스킬</h3>
                                                 <div class="skill-box view">
-                                                    <span
-                                                        class="skill-item TipBox"
-                                                    >
-                                                        프론트엔드
-                                                    </span>
-                                                    <span
-                                                        class="skill-item TipBox"
-                                                    >
-                                                        풀스택
-                                                    </span>
-                                                    <span
-                                                        class="skill-item TipBox"
-                                                    >
-                                                        MySQL
-                                                    </span>
                                                     <span
                                                         class="skill-item TipBox"
                                                     >
@@ -543,9 +512,8 @@
                                         </li>
                                     </ul>
                                     <div
-                                        id="resumeSkill-1729145317370"
+                                        id="resumeSkill"
                                         class="resume-edit wrapHiddenForm"
-                                        style="display: none"
                                     >
                                         <div class="item-row item-center">
                                             <div
@@ -568,7 +536,6 @@
                                                 <button
                                                     type="button"
                                                     class="btn-delete autoCompleteUi"
-                                                    style="display: none"
                                                 >
                                                     <svg>
                                                         <use
@@ -580,7 +547,6 @@
                                                     type="button"
                                                     class="btn-search autoCompleteUi"
                                                     disabled=""
-                                                    tabindex="-1"
                                                 >
                                                     <svg>
                                                         <use
@@ -806,9 +772,9 @@
                                             class="txt-setting resume-contact-close"
                                         >
                                             <strong
-                                                >간단한 설문조사를 통해 더욱
-                                                성장하는 Position이
-                                                되겠습니다.</strong
+                                                >간단한 설문조사에 참여해주시면
+                                                저희가 더 나은 서비스를 제공하는
+                                                데 큰 도움이 됩니다.</strong
                                             >
                                         </p>
                                         <ul class="resume-open-option">
@@ -826,7 +792,7 @@
                                                             class="Lbl"
                                                             for="openStatusActive"
                                                         >
-                                                            좋아요<br /><span></span>
+                                                            만족해요<br /><span></span>
                                                         </label>
                                                     </span>
                                                 </div>
@@ -845,7 +811,7 @@
                                                             class="Lbl"
                                                             for="openStatusRecomnd"
                                                         >
-                                                            그냥 그래요
+                                                            보통이에요
                                                             <br /><span></span>
                                                         </label>
                                                     </span>
@@ -865,7 +831,7 @@
                                                             class="Lbl"
                                                             for="openStatusClose"
                                                         >
-                                                            불편해요<br />
+                                                            불편했어요<br />
                                                         </label>
                                                     </span>
                                                 </div>
@@ -945,38 +911,45 @@
                                                     type="button"
                                                     class="txt"
                                                 >
-                                                    밝은 성격으로 팀의 비타민이
-                                                    되겠습니다.</button
-                                                ><button
+                                                    밝은 성격으로 팀의 활력을
+                                                    불어넣겠습니다.
+                                                </button>
+                                                <button
                                                     type="button"
                                                     class="txt"
                                                 >
-                                                    최선을 다하여 확실한 결과를
-                                                    보여드리겠습니다.</button
-                                                ><button
+                                                    최선을 다해 확실한 성과를
+                                                    만들어내겠습니다.
+                                                </button>
+                                                <button
                                                     type="button"
                                                     class="txt"
                                                 >
-                                                    남보다 한 걸음 더 내딛을
-                                                    지원자 석상훈입니다.</button
-                                                ><button
+                                                    항상 한 걸음 더 나아가는
+                                                    열정적인 인재입니다.
+                                                </button>
+                                                <button
                                                     type="button"
                                                     class="txt"
                                                 >
-                                                    IT소프트웨어학과전공과
-                                                    다양한 실무 경험 보유!</button
-                                                ><button
+                                                    다양한 전공지식과 실무
+                                                    경험을 보유한 준비된
+                                                    지원자입니다.
+                                                </button>
+                                                <button
                                                     type="button"
                                                     class="txt"
                                                 >
-                                                    함께 달리고 싶은 열정
-                                                    지원자, 석상훈입니다.</button
-                                                ><button
+                                                    함께 성장하며 도전할 열정을
+                                                    가진 인재입니다.
+                                                </button>
+
+                                                <!-- <button
                                                     type="button"
                                                     class="btn-refresh"
                                                 >
                                                     새로운 추천목록
-                                                </button>
+                                                </button> -->
                                             </div>
                                             <button
                                                 type="button"
@@ -1000,7 +973,6 @@
                                         value=""
                                         placeholder="이력서 제목 (미입력 시 기본 제목으로 자동 저장됩니다.)"
                                         maxlength="100"
-                                        autocomplete="off"
                                     />
 
                                     <button
@@ -1106,12 +1078,12 @@
                                 <span class="blind">닫기</span>
                             </button>
                         </div>
-                        <div class="sri-dimmed dimmed-person-attr"></div>
+                        <div class="position-dimmed dimmed-person-attr"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="dimmed" class="sri-dimmed" style="display: none"></div>
+        <div id="dimmed" class="position-dimmed"></div>
         <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="resume-skill-close" viewBox="0 0 20 20">
                 <path

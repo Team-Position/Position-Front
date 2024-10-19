@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const hideButton = document.getElementById("list-hide-btn");
-const tipContent = document.querySelector(".TipCont.TopLeft");
+// const hideButton = document.getElementById("list-hide-btn");
+// const tipContent = document.querySelector(".TipCont.TopLeft");
 
-tipContent.style.display = "none";
+// tipContent.style.display = "none";
 
-hideButton.addEventListener("mouseover", () => {
-    tipContent.style.display = "block";
-});
+// hideButton.addEventListener("mouseover", () => {
+//     tipContent.style.display = "block";
+// });
 
-hideButton.addEventListener("mouseout", () => {
-    tipContent.style.display = "none";
-});
+// hideButton.addEventListener("mouseout", () => {
+//     tipContent.style.display = "none";
+// });
 
 const applyData = [
     {
@@ -200,3 +200,34 @@ individualCheckboxes.forEach((checkbox) => {
 // 전체 선택 체크박스의 상태를 업데이트
 // 모든 체크박스가 체크된 경우 전체 선택 체크박스도 체크됨
 // 하나라도 체크 해제된 경우 전체 선택 체크박스도 해제됨
+
+// 클래스가 BtnType인 모든 버튼을 선택합니다.
+const btnTypes = document.querySelectorAll(".BtnType");
+// BtnType 버튼들과 list-review 요소들을 모두 선택합니다.
+const reviews = document.querySelectorAll(".row.-apply-list.open");
+
+// 초기 설정: 첫 번째 리뷰를 보이게 하고, 첫 번째 버튼의 부모 li에 'Select' 클래스 추가
+reviews.forEach((review, index) => {
+    review.style.display = index === 0 ? "block" : "none"; // 첫 번째 리뷰만 보이게 설정
+});
+
+// 각 버튼에 클릭 이벤트를 추가합니다.
+btnTypes.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        // 모든 li 요소에서 'Select' 클래스를 제거합니다.
+        document
+            .querySelectorAll("li")
+            .forEach((li) => li.classList.remove("Select"));
+
+        // 클릭된 버튼의 부모 li 요소에 'Select' 클래스를 추가합니다.
+        btn.closest("li").classList.add("Select");
+
+        // 모든 리뷰를 숨기기
+        reviews.forEach((review) => {
+            review.style.display = "none";
+        });
+
+        // 클릭된 버튼과 같은 인덱스의 리뷰만 표시
+        reviews[index].style.display = "block";
+    });
+});

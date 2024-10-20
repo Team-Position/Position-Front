@@ -11,6 +11,54 @@ document
         targetElement.classList.toggle("on");
     });
 
+// document.getElementById("interviewDateYear").addEventListener("change", (e) => {
+//     const year = this.value;
+//     const monthSelect = document.getElementById("interviewDateMonth");
+
+//     // 모든 월 옵션 초기화
+//     monthSelect.innerHTML = `
+//             <option value>월 선택</option>
+//             <option value="01">01월</option>
+//             <option value="02">02월</option>
+//             <option value="03">03월</option>
+//             <option value="04">04월</option>
+//             <option value="05">05월</option>
+//             <option value="06">06월</option>
+//             <option value="07">07월</option>
+//             <option value="08">08월</option>
+//             <option value="09">09월</option>
+//             <option value="10">10월</option>
+//             <option value="11">11월</option>
+//             <option value="12">12월</option>
+//         `;
+
+//     // 연도에 따라 월을 필터링
+//     if (year === "2021") {
+//         // 2021년은 11월과 12월만 가능
+//         monthSelect.innerHTML = `
+//                 <option value>월 선택</option>
+//                 <option value="11">11월</option>
+//                 <option value="12">12월</option>
+//             `;
+//     } else if (year === "2024") {
+//         // 2024년은 1월부터 10월까지만 가능
+//         monthSelect.innerHTML = `
+//                 <option value>월 선택</option>
+//                 <option value="01">01월</option>
+//                 <option value="02">02월</option>
+//                 <option value="03">03월</option>
+//                 <option value="04">04월</option>
+//                 <option value="05">05월</option>
+//                 <option value="06">06월</option>
+//                 <option value="07">07월</option>
+//                 <option value="08">08월</option>
+//                 <option value="09">09월</option>
+//                 <option value="10">10월</option>
+//             `;
+//     }
+//     // 2022년, 2023년은 모든 월 가능 (기본값 유지)
+// });
+
 document.getElementById("interviewDateYear").addEventListener("change", (e) => {
     const year = this.value;
     const monthSelect = document.getElementById("interviewDateMonth");
@@ -51,7 +99,7 @@ document.getElementById("interviewDateYear").addEventListener("change", (e) => {
     });
 });
 
-// 직무,직업쪽 자바스크립트
+// // 직무,직업쪽 자바스크립트
 
 // // 1단계 자바스크립트
 // document

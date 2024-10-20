@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/static/css/my-page/my-page-header.css" />
     </head>
     <body id="container" class="layout-home vsc-initialized">
-        <header id="sri-header" class="sri-header">
+        <header id="position-header" class="position-header">
             <div class="wrap-top-btns">
                 <!-- <div class="rewards-point">
                     <a
@@ -25,12 +25,7 @@
                     data-el="chat-beta"
                 >
                     <button type="button" class="btn-messenger">메신저</button>
-                    <span
-                        id="unread-message-count"
-                        class="push-num"
-                        style="display: none"
-                        >0</span
-                    >
+                    <span id="unread-message-count" class="push-num">0</span>
                 </div>
                 <div class="wrap-my-layer">
                     <button type="button" class="top-btn btn-record">
@@ -94,25 +89,21 @@
                         <a
                             href="/zf-user/persons/scrap-recruit"
                             class="BtnType SizeM page-link scrap-recruit-view"
-                            style="display: block"
                             >전체 스크랩 공고 보기</a
                         >
                         <a
                             href="/zf-user/member/suited-recruit-mail/list"
                             class="BtnType SizeM page-link suited-recruit-view"
-                            style="display: none"
                             >전체 나의검색 공고 보기</a
                         >
                         <a
                             href="/zf-user/member/favor-company/list"
                             class="BtnType SizeM page-link favor-recruit-view"
-                            style="display: none"
                             >전체 관심기업 공고 보기</a
                         >
                         <div
                             class="save-list-area ScrollBar"
                             id="scrap-list-area"
-                            style="display: block"
                         >
                             <input
                                 type="hidden"
@@ -140,15 +131,15 @@
                                                 신입&nbsp;&nbsp;대학교(4년)↑&nbsp;&nbsp;경기전체
                                             </li>
                                         </ul>
-                                        <div class="sri-btn-area">
+                                        <div class="position-btn-area">
                                             <span class="deadline">D-1</span>
                                             <a
-                                                class="sri-btn-sm"
+                                                class="position-btn-sm"
                                                 href="/zf-user/jobs/relay/view?view-type=list&amp;rec-idx=49104681"
                                                 target="-blank"
                                                 title="홈페이지 지원"
                                                 ><span
-                                                    class="sri-btn-homepage-apply"
+                                                    class="position-btn-homepage-apply"
                                                     >홈페이지 지원</span
                                                 ></a
                                             >
@@ -169,7 +160,6 @@
                         <div
                             class="save-list-area ScrollBar"
                             id="suited-list-area"
-                            style="display: none"
                         >
                             <div class="save-list">
                                 <span class="date">2024.10.08</span>
@@ -229,7 +219,6 @@
                         <div
                             class="save-list-area ScrollBar"
                             id="favor-list-area"
-                            style="display: none"
                         >
                             <input
                                 type="hidden"
@@ -243,6 +232,36 @@
                                 value="0"
                                 id="favor-list-total-cnt"
                             />
+                            <div class="save-list">
+                                <span class="date"> 2024.10.16 </span>
+                                <ul>
+                                    <li class="favor-company">
+                                        <div class="image">
+                                            <span class="blind"
+                                                >기업로고 이미지 영역</span
+                                            >
+                                            <img
+                                                src="https://pds.saramin.co.kr/company/logo/202110/18/r162u8_sjm3-ayg4bn_logo.jpg"
+                                                alt="기업로고"
+                                            />
+                                        </div>
+                                        <strong class="name"
+                                            >쿠팡로지스틱스서비스(유)</strong
+                                        >
+                                        <span class="recruit-count"
+                                            >채용중 <b>16</b>건</span
+                                        >
+                                        <a
+                                            href="/zf_user/company-info/view?csn=UHFGUDJkaVM2WjF1dVA4WUVkZTMxdz09"
+                                            class="page-link-btn"
+                                        >
+                                            <span class="blind"
+                                                >공고 링크버튼</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="empty-list">
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
@@ -310,13 +329,9 @@
                         >
                         <div class="save-list-area alarm-area ScrollBar">
                             <strong class="sub-title">TODAY</strong>
-                            <div
-                                class="alarm-list"
-                                id="today-list-content"
-                                style="display: block"
-                            >
+                            <div class="alarm-list" id="today-list-content">
                                 <ul>
-                                    <li style="display: block">
+                                    <li>
                                         <a
                                             href="/zf-user/persons/scrap-recruit?sort=PC"
                                             target=""
@@ -368,7 +383,6 @@
                                 <button
                                     type="button"
                                     class="more today-more-button"
-                                    style="display: none"
                                 >
                                     더보기<svg>
                                         <use xlink:href="#svg-gnb-arrow"></use>
@@ -379,7 +393,6 @@
                             <div
                                 class="empty-list alarm-area"
                                 id="empty-today-list-content"
-                                style="display: none"
                             >
                                 <img
                                     src="//www.saraminimage.co.kr/sri/person/resume/img_empty_announce.png"
@@ -647,16 +660,16 @@
                                 <span class="txt">계정정보 설정</span>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="/zf-user/member/set-incoming-email">
                                 <svg><use xlink:href="#svg-my-11"></use></svg>
                                 <span class="txt">메일 수신 설정</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="/zf-user/member/my-logins" target="-blank">
-                                <svg><use xlink:href="#svg-my-13"></use></svg>
-                                <span class="txt">로그인 관리</span>
+                                <svg><use xlink:href="#svg-my-12"></use></svg>
+                                <span class="txt">비밀번호 변경</span>
                             </a>
                         </li>
                         <li>
@@ -672,10 +685,10 @@
             </div>
         </header>
         <!-- 바디 -->
-        <div id="sri-section">
+        <div id="position-section">
             <!-- 사이드 바 -->
-            <div id="sri-gnb-wrap">
-                <div id="sri-gnb-wrap">
+            <div id="position-gnb-wrap">
+                <div id="position-gnb-wrap">
                     <div class="gnb-inner">
                         <a href="/" class="ci">
                             <svg class="img-ci">
@@ -756,7 +769,7 @@
                                     <span class="txt">스크랩/관심기업</span>
                                 </a>
                             </li>
-                            <li class="">
+                            <!-- <li class="">
                                 <a href="/zf-user/member/avatar/list">
                                     <svg>
                                         <use
@@ -823,8 +836,8 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="">
+                            </li> -->
+                            <li class="only">
                                 <a href="/zf-user/persons/apply-status-list">
                                     <svg>
                                         <use
@@ -832,15 +845,15 @@
                                         ></use>
                                     </svg>
                                     <span class="txt">지원내역</span>
-                                    <button type="button" class="btn-expand">
+                                    <!-- <button type="button" class="btn-expand">
                                         <svg>
                                             <use
                                                 xlink:href="#svg-gnb-arrow"
                                             ></use></svg
                                         ><span class="blind">더보기</span>
-                                    </button>
+                                    </button> -->
                                 </a>
-                                <ul class="depth2">
+                                <!-- <ul class="depth2">
                                     <li class="">
                                         <a
                                             href="/zf-user/persons/apply-status-list"
@@ -857,9 +870,10 @@
                                             >
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li class="">
+
+                            <!-- <li class="">
                                 <a href="/zf-user/member/my-siat">
                                     <svg>
                                         <use xlink:href="#svg-gnb-my-svq"></use>
@@ -891,7 +905,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li class="only">
                                 <a href="/zf-user/member/mock-exam">
                                     <svg>
@@ -899,7 +913,7 @@
                                             xlink:href="#svg-gnb-my-mockexam"
                                         ></use>
                                     </svg>
-                                    <span class="txt">공기업 모의고사</span>
+                                    <span class="txt">후기내역</span>
                                 </a>
                             </li>
                             <li class="only">
@@ -909,7 +923,7 @@
                                             xlink:href="#svg-gnb-my-interview"
                                         ></use>
                                     </svg>
-                                    <span class="txt">면접현황</span>
+                                    <span class="txt">게시글</span>
                                 </a>
                             </li>
                             <li class="only">
@@ -922,7 +936,7 @@
                                     <span class="txt">결제 내역</span>
                                 </a>
                             </li>
-                            <li class="">
+                            <!-- <li class="">
                                 <a href="/zf-user/member/career-mileage">
                                     <svg>
                                         <use
@@ -959,7 +973,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -979,6 +993,12 @@
                     fill="currentColor"
                     d="M15 0c1.105 0 2 .895 2 2v9c0 1.105-.895 2-2 2H2c-1.105 0-2-.895-2-2V2C0 .895.895 0 2 0zm-4.512 7.528l-.727.592c-.689.56-1.657.594-2.38.104l-.142-.104-.728-.592-4.67 4.338c-.041.038-.087.068-.134.09.092.029.19.044.293.044h13c.102 0 .201-.015.294-.044-.022-.01-.043-.021-.063-.034l-.071-.056-4.672-4.338zM1 3.051V11c0 .103.015.202.044.295.015-.034.033-.065.055-.094l.06-.067L5.728 6.89 1 3.051zm15-.001l-4.728 3.842 4.568 4.242c.05.046.09.101.116.16.029-.092.044-.191.044-.294V3.05zM15 1H2c-.477 0-.876.334-.976.781l6.845 5.562c.334.272.8.296 1.158.074l.104-.074 6.845-5.562C15.876 1.334 15.477 1 15 1z"
                     transform="translate(-678 -645) translate(446 645) translate(232) translate(4 5)"
+                ></path>
+            </symbol>
+            <symbol id="svg-my-12" viewBox="0 0 24 24">
+                <path
+                    fill="currentColor"
+                    d="M18,15 C19.6491029,15 20.984644,16.3436645 20.984644,17.9998621 C20.984644,19.6560954 19.6490678,21 18,21 L18,21 L5.96928795,21 C4.32022012,21 2.98464398,19.6560954 2.98464398,17.9998621 C2.98464398,16.3436645 4.32018501,15 5.96928795,15 L5.96928795,15 Z M18,16 L5.96928795,16 C4.87383179,16 3.98464398,16.8945963 3.98464398,17.9998621 C3.98464398,19.1051974 4.87390125,20 5.96928795,20 L5.96928795,20 L18,20 C19.0953867,20 19.984644,19.1051974 19.984644,17.9998621 C19.984644,16.8945963 19.0954562,16 18,16 L18,16 Z M8.2302033,17.4998621 L8.2302033,18.4998621 L6.98464398,18.4998621 L6.98464398,17.4998621 L8.2302033,17.4998621 Z M11.1360474,17.4998621 L11.1360474,18.4998621 L9.89075923,18.4998621 L9.89075923,17.4998621 L11.1360474,17.4998621 Z M14.0422982,17.4998621 L14.0422982,18.4998621 L12.7967389,18.4998621 L12.7967389,17.4998621 L14.0422982,17.4998621 Z M16.9484406,17.4998621 L16.9484406,18.4998621 L15.7028813,18.4998621 L15.7028813,17.4998621 L16.9484406,17.4998621 Z M12,3 C13.1147755,3 14,3.96568558 14,5.13634009 L14,5.13634009 L14,6 C15.1045695,6 16,6.8954305 16,8 L16,8 L16,11 C16,12.1045695 15.1045695,13 14,13 L14,13 L10,13 C8.8954305,13 8,12.1045695 8,11 L8,11 L8,8 C8,6.8954305 8.8954305,6 10,6 L10,6 L10,5.13634009 C10,3.96568558 10.8852245,3 12,3 Z M14,7 L10,7 C9.44771525,7 9,7.44771525 9,8 L9,8 L9,11 C9,11.5522847 9.44771525,12 10,12 L10,12 L14,12 C14.5522847,12 15,11.5522847 15,11 L15,11 L15,8 C15,7.44771525 14.5522847,7 14,7 L14,7 Z M12.5,8.9 L12.5,10.1 L11.5,10.1 L11.5,8.9 L12.5,8.9 Z M12,4 C11.4578677,4 11,4.4994849 11,5.13634009 L11,5.13634009 L11,6 L13,6 L13,5.13634009 C13,4.54194191 12.6011463,4.06720852 12.1071922,4.00655251 L12.1071922,4.00655251 Z"
                 ></path>
             </symbol>
             <symbol id="svg-my-13" viewBox="0 0 24 24">

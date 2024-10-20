@@ -66,9 +66,9 @@
     justify-content: center;
     align-items: center;
 }
-/* .wrap-list .align .BtnType:last-child {
+.wrap-list .align .BtnType:last-child {
     left: 1103px;
-} */
+}
 .TabBox .Select .BtnType .Badge {
     background: var(--gray100);
     color: var(--white);
@@ -146,7 +146,7 @@
 }
 .wrap-list .top-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 12px 0;
     border-bottom: 1px solid #dcdee3;
 }
@@ -318,11 +318,7 @@
     min-width: 130px;
 }
 
-[class*="BtnType"].GrayInvert {
-    border-color: var(--gray80);
-    color: var(--gray100);
-    background: var(--white);
-}
+
 [class*="BtnType"].SizeS {
     padding: 4px 7px;
     height: 32px;
@@ -412,108 +408,8 @@
     padding: 3px 0 0 26px;
     color: #8491a7;
 }
-.wrap-list .row {
-    position: relative;
-    padding: 32px 0 32px 208px;
-    border-bottom: 1px solid #eaedf4;
-    color: var(--gray120);
-}
-.wrap-list .row .InpBox {
-    position: absolute;
-    top: 42px;
-    left: 0;
-    z-index: 1;
-}
-.wrap-list .row > div {
-    position: relative;
-    float: left;
-    box-sizing: border-box;
-    word-break: break-all;
-}
-.InpBox .Chk {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-}
-.InpBox .Chk input {
-    position: absolute;
-    top: 0;
-    width: 1px;
-    height: 1px;
-    outline: none;
-    opacity: 0;
-    pointer-events: none;
-}
-.InpBox .Chk.Hide .Lbl {
-    visibility: visible;
-    overflow: visible;
-    font-size: 0;
-}
-.InpBox .Chk .Lbl {
-    display: block;
-    position: relative;
-    color: var(--gray100);
-    font-size: 14px;
-    line-height: 20px;
-}
-.InpBox .Chk .Lbl:before {
-    display: inline-block;
-    margin-right: 8px;
-    width: 18px;
-    height: 18px;
-    border: 1px solid var(--gray70);
-    border-radius: 4px;
-    vertical-align: top;
-    background: #fff;
-    content: "";
-}
-.InpBox .Chk input:checked ~ .Lbl:after {
-    display: inline-block;
-    border-color: var(--white);
-}
-.InpBox .Chk input:checked ~ .Lbl:after {
-    display: inline-block;
-    border-color: var(--white);
-}
-.InpBox .Chk .Lbl:after {
-    display: none;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 8px;
-    height: 5px;
-    border-bottom: 2px solid var(--white);
-    border-left: 2px solid var(--white);
-    border-radius: 1px;
-    transform: rotate(-45deg);
-    content: "";
-}
-.InpBox .Chk .Lbl:after {
-    display: none;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 8px;
-    height: 5px;
-    border-bottom: 2px solid var(--white);
-    border-left: 2px solid var(--white);
-    border-radius: 1px;
-    transform: rotate(-45deg);
-    content: "";
-}
-.InpBox .Chk input:checked ~ .Lbl:before {
-    border-color: var(--blue90);
-    background: var(--blue90);
-}
-.wrap-list .row .col-date {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 32px 0 0 32px;
-    color: var(--gray80);
-    font-size: 13px;
-    line-height: 40px;
-}
+
+
 .wrap-list .list-status .col-summary {
     padding-right: 155px;
     width: 660px;
@@ -543,13 +439,7 @@
 .wrap-list .list-status .col-summary .corp a:hover {
     text-decoration: underline;
 }
-.wrap-list .row > div a {
-    color: currentColor;
-}
-.wrap-list .row:not(.disabled) .col-summary .txt-sub,
-.wrap-list .row:not(.disabled) .col-summary .recruit {
-    color: var(--gray100);
-}
+
 .wrap-list .col-summary .recruit {
     padding: 8px 0 12px;
     color: var(--gray80);
@@ -726,132 +616,7 @@
     font-size: 14px;
     line-height: 24px;
 }
-.wrap-list .row.open .btn-history {
-    color: var(--gray110);
-}
-.wrap-list .col-btns .btn-history {
-    position: absolute;
-    top: 0;
-    right: 22px;
-    padding: 0 32px 0 16px;
-    color: var(--gray80);
-    font-size: 14px;
-    line-height: 40px;
-}
-.wrap-list .row.open .btn-history:after {
-    -webkit-transform: translate(-50%, 0) rotate(-45deg);
-    -ms-transform: translate(-50%, 0) rotate(-45deg);
-    transform: translate(-50%, 0) rotate(-45deg);
-}
-.wrap-list .col-btns .btn-history:after {
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    z-index: 1;
-    margin-left: -2px;
-    width: 5px;
-    height: 5px;
-    border: 1px solid currentColor;
-    border-width: 1px 1px 0 0;
-    -webkit-transform: translate(-50%, -50%) rotate(135deg);
-    -ms-transform: translate(-50%, -50%) rotate(135deg);
-    transform: translate(-50%, -50%) rotate(135deg);
-    content: "";
-    transition: transform 0.3s ease;
-}
-.wrap-list .col-btns .btn-history.rotate:after {
-    transform: translate(-50%, -50%) rotate(135deg);
-}
-.wrap-list .row.open .col-history {
-    display: none;
-}
-.wrap-list .col-history {
-    display: none;
-    margin-top: 32px;
-    padding: 16px 32px;
-    width: 100%;
-    border-radius: 8px;
-    background: #f4f6fa;
-}
-.wrap-list .col-history .timeline li:first-child {
-    border-top: 0;
-}
-.wrap-list .col-history .timeline .date {
-    float: left;
-    width: 143px;
-    color: var(--gray80);
-    font-size: 13px;
-    line-height: 20px;
-}
-.wrap-list .col-history .timeline .desc {
-    overflow: hidden;
-    display: block;
-    color: var(--gray80);
-    font-size: 14px;
-    line-height: 20px;
-}
-.wrap-list .col-history .timeline .desc > strong {
-    display: inline-block;
-    padding-right: 20px;
-    color: var(--gray120);
-    vertical-align: top;
-}
-.wrap-list .col-history .timeline .desc > span {
-    display: inline-block;
-    padding-right: 8px;
-    vertical-align: top;
-}
-.wrap-list .col-history .timeline .desc button.txt {
-    text-decoration: underline;
-}
-.wrap-list .col-history .timeline .desc .txt {
-    display: inline-block;
-    position: relative;
-    padding: 0 6px;
-    color: var(--gray120);
-    line-height: 20px;
-    vertical-align: top;
-}
-.wrap-list .col-history .timeline .desc button.txt {
-    text-decoration: underline;
-}
-.wrap-list .col-history .timeline .desc .txt {
-    display: inline-block;
-    position: relative;
-    padding: 0 6px;
-    color: var(--gray120);
-    line-height: 20px;
-    vertical-align: top;
-}
-.wrap-list .row:after {
-    display: table;
-    clear: both;
-    content: "";
-    table-layout: fixed;
-}
-.wrap-list .align .TipBox {
-    display: inline-block;
-    z-index: 10;
-    vertical-align: top;
-}
-[class*="BtnType"].BlueInvert {
-    border-color: var(--blue90);
-    color: var(--blue90);
-    background: var(--white);
-}
-.wrap-list .align .TipBox .TipCont.TopLeft {
-    left: 4px;
-    margin-top: 8px;
-}
-.wrap-list .align .TipBox .del-apply-row {
-    color: #5c667b;
-    font-size: 14px;
-    line-height: 20px;
-}
-.wrap-list .align .TipBox .del-apply-row dt {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
+
 .PageBox {
     display: flex;
     margin: 40px 0 80px;
@@ -871,11 +636,285 @@
     align-items: center;
     justify-content: center;
 }
-[class*="BtnType"].GrayInvert:hover {
-    background: var(--gray20);
+
+
+/* 후기 리스트 */
+.list-review {
+    position: relative;
+    border-top: 1px solid #444;
 }
-[class*="BtnType"].GrayInvert {
-    border-color: var(--gray80);
-    color: var(--gray100);
+.list-review .box-review:first-of-type {
+    margin-top: 0;
+    border-top: 0;
+}
+.box-review {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    padding: 0 38px;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+}
+.view-title {
+    padding: 30px 73px 30px 0;
+    height: 120px;
+    box-sizing: border-box;
+}
+.txt-company {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 80%;
+    color: #222;
+    font-size: 19px;
+    vertical-align: top;
+}
+.pass {
+    color: var(--blue80);
+}
+.list-review .view-title .txt-company .result {
+    display: inline-block;
+    margin: 4px 0 0 2px;
+    padding: 0 8px;
+    height: 20px;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    vertical-align: top;
     background: var(--white);
+}
+.txt-date {
+    display: block;
+    margin: -4px 0 -3px;
+    color: #929292;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: right;
+}
+.info-interview {
+    overflow: hidden;
+    height: 17px;
+}
+.info-interview li {
+    float: left;
+    padding-right: 9px;
+    color: #444;
+    font-size: 13px;
+    line-height: 17px;
+}
+.info-interview li:before {
+    display: inline-block;
+    margin: 2px 9px 0 0;
+    width: 1px;
+    height: 14px;
+    vertical-align: top;
+    background: #d8d8d8;
+    content: "";
+}
+.info-interview li:first-child:before {
+    content: none;
+}
+.info-interview li {
+    color: #444;
+    font-size: 13px;
+    line-height: 17px;
+}
+.btn-view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0 38px 4px 0;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    background: url(/static/images/interview-review/bg_transparent.png) repeat;
+}
+.blind {
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+}
+.list-review .view-title .btn-view:after {
+    float: right;
+    width: 33px;
+    height: 33px;
+    background-position: -40px 0;
+    content: "";
+}
+
+.list-review .view-title .btn-view.open:after {
+    background-position: -80px 0; /* 버튼이 열렸을 때의 이미지 */
+}
+
+.spr-review:after {
+    display: inline-block;
+    vertical-align: top;
+    background: url(/static/images/interview-review/spr_review_190220.png) no-repeat;
+}
+/* 아래화살표 누르면 나와야할 div 초기엔 none 버튼 누르면 block으로 바꿔야함 */
+.view-cont {
+    display: none;
+}
+.list-review .view-cont {
+    padding-bottom: 30px;
+}
+.list-review .info-emoticon {
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.list-review .info-emoticon .review {
+    float: left;
+    position: relative;
+    padding: 4px 0 0 47px;
+    width: 140px;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 14px;
+    line-height: 17px;
+}
+.list-review .info-emoticon .review dd {
+    padding-top: 3px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+}
+.list-review .info-emoticon .review .smile:before {
+    background-position: 0 -40px;
+}
+.list-review .info-emoticon .review dd:before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 33px;
+    height: 33px;
+    content: "";
+}
+.spr-review:before {
+    display: inline-block;
+    vertical-align: top;
+    background: url(/static/images/interview-review/spr_review_190220.png);
+}
+.review.difficulty {
+    padding-left: 52px;
+}
+.review dd {
+    padding-top: 3px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+}
+.list-review .review.difficulty dd:before {
+    width: 38px;
+    height: 35px;
+    background-position: 0 -80px;
+}
+.list_review .info_emoticon .review dd:before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    content: "";
+}
+.review dd {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+}
+.list-review .info-emoticon .review.result {
+    padding-left: 43px;
+}
+.list-review .info-emoticon .review.result .smile {
+    color: var(--blue80);
+}
+.list-review .info-emoticon .review.result dd:before {
+    top: 1px;
+    width: 30px;
+    height: 44px;
+    background-position: -40px -80px;
+}
+.list-review .info-emoticon .review dd:before {
+    position: absolute;
+    left: 0;
+    content: "";
+}
+.list-review .info-view {
+    padding: 9px 0;
+    font-size: 15px;
+    line-height: 25px;
+}
+.list-review .info-view .tit-view {
+    float: left;
+    padding: 6px 0;
+    width: 180px;
+    color: #222;
+}
+.list-review .info-view .list-item {
+    overflow: hidden;
+    padding-bottom: 5px;
+    color: #444;
+}
+.list-review .info-view .list-item li {
+    float: left;
+    margin: 0 12px 7px 0;
+    padding: 6px 18px 7px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    vertical-align: top;
+    background: #f8f8f8;
+}
+.list-review .info-view .txt-desc {
+    overflow: hidden;
+    padding: 6px 0;
+    color: #666;
+}
+.list-review .info-view .list-question {
+    overflow: hidden;
+    padding: 6px 0 4px;
+    color: #666;
+}
+.list-review .info-view .list-question li {
+    position: relative;
+    margin-bottom: 2px;
+    padding-left: 20px;
+}
+.list-review .info-view .list-question li:before {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    color: var(--blue80);
+    font-weight: bold;
+    content: "Q";
+}
+.info-view .list-item-1 li {
+    position: absolute;
+}
+.list-item-1 li {
+    transform: translateX(180px);
+    float: left;
+    margin: 0px;
+    padding: 6px 18px 7px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    vertical-align: top;
+    background: #f8f8f8;
+}
+
+.list-review,
+.view-cont{
+    display:none;
+}
+
+.list-item-1{
+    margin-bottom: 30px
+}
+.info-view{
+    margin-top: 20px;
 }

@@ -344,7 +344,9 @@ const handleDeleteButtonClick = (event) => {
         "none"
     ); // resume-edit 숨김
 };
-
+document
+    .getElementById("skill-save-btn")
+    .addEventListener("click", handleDeleteButtonClick);
 // 모든 삭제 버튼에 이벤트 리스너 등록
 document
     .getElementById("skill-close-btn")
@@ -1256,6 +1258,7 @@ function setupSchoolEventHandlers(container) {
         "#schoolGraduationGb"
     );
     const careerTxtSpan = document.querySelector(".career-txt span");
+    const date = document.querySelector(".date");
 
     // 저장 버튼 클릭 시 유효성 검사 및 학력 텍스트 업데이트
     const saveButton = container.querySelector(".evtLayerSave");
@@ -1275,6 +1278,7 @@ function setupSchoolEventHandlers(container) {
 
             // 학력과 졸업 여부 조합된 텍스트를 표시
             careerTxtSpan.textContent = `${schoolTypeText} (${graduationText})`;
+            date.textContent = `${graduationText}`;
         } else {
             console.log("Validation failed");
         }

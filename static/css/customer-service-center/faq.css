@@ -261,3 +261,151 @@ body {
     transform: translate(-50%, -50%) rotate(45deg);
     content: "";
 }
+.wrap_help .list_help li.select dd {
+    display: block;
+}
+.wrap_help .list_help dd.answer {
+    position: static;
+    bottom: auto;
+    padding: 33px 100px 90px 100px;
+    border-bottom: 1px solid #666;
+    color: #444;
+    background: #fbfbfb;
+}
+.wrap_help .list_help dd {
+    line-height: 24px;
+}
+.wrap_help .list_help dd.answer {
+    position: static;
+    bottom: auto;
+    padding: 33px 100px 90px 100px;
+    border-bottom: 1px solid #666;
+    color: #444;
+    background: #fbfbfb;
+}
+/* 버튼 누를시 */
+
+.answer-1 {
+    display: none;
+}
+.answer-2 {
+    display: none;
+}
+.answer-3 {
+    display: none;
+}
+.answer-4 {
+    display: none;
+}
+.date1 {
+    display: none;
+    position: absolute;
+    bottom: 27px;
+    color: #888;
+    font-size: 14px;
+    line-height: 24px;
+}
+.date2 {
+    display: none;
+    position: absolute;
+    bottom: 27px;
+    color: #888;
+    font-size: 14px;
+    line-height: 24px;
+}
+.view {
+    display: none;
+    position: absolute;
+    bottom: 27px;
+    color: #888;
+    font-size: 14px;
+    line-height: 24px;
+}
+.wrap_help .list_help dd.answer img {
+    max-width: 100%;
+}
+.wrap_help .list_help li.select dd {
+    display: block;
+}
+.wrap_help .list_help dd.date1 {
+    left: 100px;
+}
+.wrap_help .list_help dd.date2 {
+    left: 240px;
+}
+.wrap_help .list_help dd.view {
+    left: 380px;
+}
+.wrap_help .list_help li.select > button.close {
+    display: block;
+}
+.wrap_help .list_help li > button.close {
+    position: absolute;
+    bottom: 20px;
+    right: 27px;
+    width: 50px;
+    height: 24px;
+    color: #a2a2a2;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+}
+/* 접기버튼 */
+.close.btn_close {
+    display: none;
+}
+.wrap_help .list_help li > button.close > span {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.wrap_help .list_help li > button.close > span:after {
+    display: block;
+    border-bottom: 5px solid #a2a2a2;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    content: "";
+}
+.wrap_help .find_method {
+    margin-top: 80px;
+}
+.help_find .find_method {
+    padding: 40px 40px 39px 40px;
+    border: 1px solid #e4e5e7;
+    font-size: 0;
+    background: #f8f8f8;
+}
+.wrap_help .find_method .btn_report_enquiry {
+    padding-left: 35px;
+    background: #fff
+        url("https://www.saraminimage.co.kr/sri/common/ico/ico_help_spr_202104.png")
+        13px -291px no-repeat;
+}
+.help_find .find_method .btn_basic_type04,
+.help_find .find_method .btn_basic_type01,
+.help_find .find_method .btn_basic_type02 {
+    margin-right: 7px;
+}
+.btn_basic_type01 {
+    display: inline-block;
+    padding: 5px 13px 9px;
+    height: 32px;
+    border: 1px solid #ababab;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 13px;
+    line-height: normal;
+    vertical-align: top;
+    background-color: #fff;
+}
+.individual {
+    display: block;
+}
+.enterprise {
+    display: none;
+}
+.in-tab {
+    cursor: pointer;
+}

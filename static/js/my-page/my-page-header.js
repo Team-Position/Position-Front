@@ -86,7 +86,7 @@ document.querySelectorAll(".tab-btns li").forEach((tab) => {
 });
 
 document.querySelector(".btn-toggle-gnb").addEventListener("click", () => {
-    const section = document.getElementById("sri-section");
+    const section = document.getElementById("position-section");
     section.classList.toggle("closed");
 });
 

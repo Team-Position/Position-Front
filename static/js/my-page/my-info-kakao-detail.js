@@ -23,7 +23,6 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 최상단에 모든 변수 선언
     const mailCertNumInput = document.getElementById("mailCertNum");
     const btnCertConfirmMail = document.getElementById("btnCertConfirmMail");
     const btnCertEmail = document.getElementById("btnCertEmail");
@@ -251,3 +250,12 @@ function savePhoto() {
     profilePhotoSpan.innerHTML = `<img src="${uploadedImageSrc}" 
         style="max-width: 100%; max-height: 100%;" />`; // 사진을 span 안에 추가
 }
+
+// 사진 등록버튼 클릭시 창 닫기
+const btnSave = document.querySelector(".btn-save");
+const myPhotoModal = document.querySelector(
+    ".layer-pop-manage.layer-photo.mypage"
+);
+btnSave.addEventListener("click", () => {
+    myPhotoModal.style.display = "none";
+});

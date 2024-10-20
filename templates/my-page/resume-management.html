@@ -15,10 +15,10 @@
         <!-- 헤더 추가 해야 함-->
         <header></header>
         <!-- 전체 body -->
-        <div id="sri-section">
+        <div id="position-section">
             <!-- 사이드 바 추가 해야 함-->
-            <div id="sri-gnb-wrap"></div>
-            <div class="sri-wrap">
+            <div id="position-gnb-wrap"></div>
+            <div class="position-wrap">
                 <div id="content">
                     <div class="wrapper-narrow resume-manage-wrap">
                         <h1 class="wrap-title">이력서 관리</h1>
@@ -28,7 +28,7 @@
                                 <h3 class="blind">대표 이력서</h3>
                                 <div class="resume-item represent">
                                     <div class="header">
-                                        <span>포지션 제안받는 중</span>
+                                        <span>내가 작성한 이력서</span>
                                         <span class="date"
                                             >2024.10.15 15:52 수정</span
                                         >
@@ -37,8 +37,7 @@
                                     <a
                                         href="/zf-user/member/resume/view/edit-icon-fl/y/res-idx/30413242/mandb-view/n"
                                         class="tit"
-                                        onclick=""
-                                        >석상훈의 이력서 입니다
+                                        >이력서 제목
                                     </a>
                                     <ul class="option-list">
                                         <li class="career">
@@ -59,27 +58,23 @@
                                             <a
                                                 href="/zf-user/member/suggest/status-list"
                                                 class="BtnType SizeM resume-btn common ga-event"
-                                                data-action="send"
-                                                >받은 제안 현황</a
+                                                >스크랩한 공고</a
                                             >
                                             <span class="badge-count">0</span>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a
                                                 href="/zf-user/member/resume-manage/lookup-status"
                                                 class="BtnType SizeM resume-btn common ga-event"
                                                 data-layer="lookup-history"
-                                                data-action="open"
                                                 >이력서 열람 현황</a
                                             >
                                             <span class="badge-count">0</span>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <button
                                                 type="button"
                                                 class="BtnType SizeM resume-btn common btn-layer-open ga-event"
-                                                data-layer="job-manage"
-                                                data-action="application"
                                             >
                                                 입사 지원 내역
                                             </button>
@@ -89,7 +84,6 @@
                                             <a
                                                 href="/zf-user/persons/scrap-recruit"
                                                 class="BtnType SizeM resume-btn my-link ga-event"
-                                                data-action="public"
                                                 >내 공고활동 보러가기</a
                                             >
                                         </li>
@@ -99,14 +93,13 @@
                                                 class="BtnType SizeM BlueInvert btn-action ga-event"
                                                 data-action="copy"
                                             >
-                                                복사하기
+                                                삭제하기
                                             </button>
                                         </li>
                                         <li class="control">
                                             <button
                                                 type="button"
                                                 class="BtnType SizeM BlueInvert btn-action ga-event"
-                                                data-action="edit"
                                             >
                                                 수정하기
                                             </button>
@@ -115,7 +108,6 @@
                                             <button
                                                 type="button"
                                                 class="btnText btn-action ga-event"
-                                                data-action="update"
                                             >
                                                 오늘 날짜로 업데이트
                                             </button>
@@ -132,7 +124,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="print"
                                                 >
                                                     인쇄
                                                 </button>
@@ -141,7 +132,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="word"
                                                 >
                                                     MS워드로 저장
                                                 </button>
@@ -150,7 +140,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="pdf"
                                                 >
                                                     PDF로 저장
                                                 </button>
@@ -162,11 +151,10 @@
                                     <button
                                         type="button"
                                         class="btn-info btn-layer-open"
-                                        data-layer="file-url-guide"
                                     >
                                         빠르게 이력서를 등록하고 싶다면?
                                     </button>
-                                    <div class="TipBox">
+                                    <!-- <div class="TipBox">
                                         <a
                                             href="javascript:;"
                                             class="BtnType SizeM btn-action"
@@ -186,8 +174,8 @@
                                                 이미 이력서가 있나요?
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="TipBox">
+                                    </div> -->
+                                    <!-- <div class="TipBox">
                                         <a
                                             href="javascript:;"
                                             class="BtnType SizeM url-btn btn-action"
@@ -208,11 +196,10 @@
                                                 이력서가 있나요?
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <a
                                         href="javascript:;"
                                         class="BtnType SizeM btn-action"
-                                        data-action="write"
                                         >이력서 작성</a
                                     >
                                 </div>
@@ -228,7 +215,6 @@
                                     <select
                                         name="list-filter"
                                         id="list-filter"
-                                        title=""
                                         class="-auto-search"
                                     >
                                         <option value="" selected="">
@@ -265,7 +251,6 @@
                                     <a
                                         href="javascript:;"
                                         class="tit btn-action"
-                                        data-action="view"
                                     >
                                         <span>이력서 제목</span>
                                     </a>
@@ -292,7 +277,6 @@
                                             ><a
                                                 href="javascript:;"
                                                 class="btnText btnLink btn-action"
-                                                data-action="edit-condition"
                                                 >희망근무조건 수정</a
                                             >
                                         </li>
@@ -305,8 +289,6 @@
                                                 <a
                                                     href="javascript:;"
                                                     class="btn-layer-open ga-event"
-                                                    data-layer="job-manage"
-                                                    data-action="application"
                                                     >0건</a
                                                 >
                                             </div>
@@ -315,29 +297,24 @@
                                             <button
                                                 type="button"
                                                 class="BtnType SizeM BlueInvert btn-action ga-event"
-                                                data-action="copy"
                                             >
-                                                복사하기
+                                                삭제하기
                                             </button>
                                         </li>
                                         <li class="control">
                                             <a
                                                 href="javascript:;"
                                                 class="BtnType SizeM BlueInvert btn-action ga-event"
-                                                data-action="edit"
                                                 >수정하기</a
                                             >
                                         </li>
                                     </ul>
-                                    <span
+                                    <!-- <span
                                         class="InpBox TxtType SizeXS position-select"
                                     >
                                         <select
                                             class="btn-select"
                                             id="resumeOnOff-30427117"
-                                            data-open-fl="n"
-                                            data-before-recomnd-status="n"
-                                            onmousedown="event.stopPropagation();"
                                         >
                                             <option value="active">
                                                 적극 구직 중이에요. 제안
@@ -351,7 +328,7 @@
                                                 제안 받지 않을래요
                                             </option>
                                         </select>
-                                    </span>
+                                    </span> -->
                                     <div class="memo-box empty">
                                         <button
                                             type="button"
@@ -382,7 +359,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="print"
                                                 >
                                                     인쇄
                                                 </button>
@@ -391,7 +367,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="word"
                                                 >
                                                     MS워드로 저장
                                                 </button>
@@ -400,7 +375,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="pdf"
                                                 >
                                                     PDF로 저장
                                                 </button>
@@ -409,7 +383,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="delete"
                                                 >
                                                     삭제
                                                 </button>
@@ -421,7 +394,6 @@
                                     <a
                                         href="javascript:;"
                                         class="tit btn-action"
-                                        data-action="view"
                                     >
                                         <span>석상훈의 이력서 입니다</span>
                                     </a>
@@ -448,7 +420,6 @@
                                             ><a
                                                 href="javascript:;"
                                                 class="btnText btnLink btn-action"
-                                                data-action="edit-condition"
                                                 >희망근무조건 수정</a
                                             >
                                         </li>
@@ -460,8 +431,6 @@
                                                 <a
                                                     href="javascript:;"
                                                     class="btn-layer-open ga-event"
-                                                    data-layer="job-manage"
-                                                    data-action="application"
                                                     >0건</a
                                                 >
                                             </div>
@@ -470,28 +439,24 @@
                                             <button
                                                 type="button"
                                                 class="BtnType SizeM BlueInvert btn-action ga-event"
-                                                data-action="copy"
                                             >
-                                                복사하기
+                                                삭제하기
                                             </button>
                                         </li>
                                         <li class="control">
                                             <a
                                                 href="javascript:;"
                                                 class="BtnType SizeM BlueInvert btn-action ga-event"
-                                                data-action="edit"
                                                 >수정하기</a
                                             >
                                         </li>
                                     </ul>
-                                    <span
+                                    <!-- <span
                                         class="InpBox TxtType SizeXS position-select"
                                     >
                                         <select
                                             class="btn-select"
                                             id="resumeOnOff-30413242"
-                                            data-open-fl="n"
-                                            data-before-recomnd-status="y"
                                         >
                                             <option value="active">
                                                 적극 구직 중이에요. 제안
@@ -505,12 +470,11 @@
                                                 제안 받지 않을래요
                                             </option>
                                         </select>
-                                    </span>
+                                    </span> -->
                                     <div class="memo-box empty">
                                         <button
                                             type="button"
                                             class="btn-layer-open"
-                                            data-layer="resume-memo"
                                         >
                                             <span class="blind">메모 영역</span>
                                             <svg class="icon">
@@ -545,7 +509,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="word"
                                                 >
                                                     MS워드로 저장
                                                 </button>
@@ -554,7 +517,6 @@
                                                 <button
                                                     type="button"
                                                     class="menu-option btn-action"
-                                                    data-action="pdf"
                                                 >
                                                     PDF로 저장
                                                 </button>
@@ -562,7 +524,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="access-restriction-area">
+                                    <!-- <div class="access-restriction-area">
                                         <strong class="title"
                                             >현 직장 또는 특정 기업이 내
                                             이력서를 열람하는게
@@ -587,7 +549,7 @@
                                                 열람제한 기업 등록
                                             </button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </li>
                             </ul>
                         </div>

@@ -7,45 +7,9 @@ const pageBox = document.querySelector(".PageBox"); // 페이지 박스 요소 �
 
 // 서버에서 받을 데이터
 const applyData = [
-    {
-        id: 1,
-        company: "마린웍스㈜",
-        position: "플랫폼 서비스 개발",
-        description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
-        status: "신입 · 경력",
-        education: "대학교(4년)↑",
-        employmentType: "정규직",
-        location: "서울 종로구",
-        deadline: "~ 10/21(월)",
-    },
-    {
-        id: 2,
-        company: "테크빌리지",
-        position: "AI 연구 개발",
-        description: "머신러닝 및 딥러닝 모델 개발",
-        status: "경력",
-        education: "대학교(4년)↑",
-        employmentType: "계약직",
-        location: "서울 강남구",
-        deadline: "~ 10/21(월)",
-    },
-    {
-        id: 3,
-        company: "테크빌리지",
-        position: "AI 연구 개발",
-        description: "머신러닝 및 딥러닝 모델 개발",
-        status: "경력",
-        education: "대학교(4년)↑",
-        employmentType: "계약직",
-        location: "서울 강남구",
-        deadline: "~10/24(수)",
-    },
-];
-
-const replyData = [
     // {
     //     id: 1,
-    //     company: "댓글1",
+    //     company: "마린웍스㈜",
     //     position: "플랫폼 서비스 개발",
     //     description: "IoT, 제어, 빅데이터 및 C# 기반 어플리케이션 개발자 채용",
     //     status: "신입 · 경력",
@@ -56,7 +20,7 @@ const replyData = [
     // },
     // {
     //     id: 2,
-    //     company: "댓글2",
+    //     company: "테크빌리지",
     //     position: "AI 연구 개발",
     //     description: "머신러닝 및 딥러닝 모델 개발",
     //     status: "경력",
@@ -67,7 +31,7 @@ const replyData = [
     // },
     // {
     //     id: 3,
-    //     company: "댓글3",
+    //     company: "테크빌리지",
     //     position: "AI 연구 개발",
     //     description: "머신러닝 및 딥러닝 모델 개발",
     //     status: "경력",
@@ -76,6 +40,42 @@ const replyData = [
     //     location: "서울 강남구",
     //     deadline: "~10/24(수)",
     // },
+];
+
+const replyData = [
+    {
+        id: 1,
+        company: "댓글1",
+        position: "플랫폼 서비스 개발",
+        description: "댓글 데이터",
+        status: "신입 · 경력",
+        education: "대학교(4년)↑",
+        employmentType: "정규직",
+        location: "서울 종로구",
+        deadline: "~ 10/24(월)",
+    },
+    {
+        id: 2,
+        company: "댓글2",
+        position: "AI 연구 개발",
+        description: "머신러닝 및 딥러닝 모델 개발",
+        status: "경력",
+        education: "대학교(4년)↑",
+        employmentType: "계약직",
+        location: "서울 강남구",
+        deadline: "~ 10/25(월)",
+    },
+    {
+        id: 3,
+        company: "댓글3",
+        position: "AI 연구 개발",
+        description: "머신러닝 및 딥러닝 모델 개발",
+        status: "경력",
+        education: "대학교(4년)↑",
+        employmentType: "계약직",
+        location: "서울 강남구",
+        deadline: "~10/26(수)",
+    },
 ];
 
 // 탭 활성화 함수
@@ -140,7 +140,7 @@ const renderList = (data) => {
             `;
             jobList.appendChild(li);
         });
-        pageBox.style.display = "block"; // 페이지 박스 표시
+        pageBox.style.display = "flex"; // 페이지 박스 표시
     } else {
         // 데이터가 없을 때의 처리
         jobList.innerHTML = `

@@ -2,10 +2,10 @@
     position: relative;
 }
 
-body.no_gnb {
+body.no-gnb {
     min-width: 1280px;
 }
-.no_gnb #sri_section {
+.no-gnb #position-section {
     min-width: 1260px;
     grid-template-areas:
         "main"
@@ -13,7 +13,7 @@ body.no_gnb {
     grid-template-columns: auto;
 }
 
-#sri_section {
+#position-section {
     display: grid;
     grid-template-areas:
         "gnb main"
@@ -26,7 +26,7 @@ body.no_gnb {
     box-sizing: border-box;
 }
 
-#sri_wrap {
+#position-wrap {
     grid-area: main;
     display: table-row;
     width: 100%;
@@ -40,7 +40,7 @@ body.no_gnb {
 }
 
 /* 왼쪽 사이드바 */
-.resume_wrap {
+.resume-wrap {
     display: flex;
     flex-direction: row-reverse;
     position: relative;
@@ -48,12 +48,12 @@ body.no_gnb {
     justify-content: space-between;
 }
 
-.resume_snb {
+.resume-snb {
     position: relative;
     width: 294px;
 }
 
-.resume_snb .snb_box {
+.resume-snb .snb-box {
     padding: 24px 16px 24px;
     width: 294px;
     border-radius: 8px;
@@ -62,33 +62,33 @@ body.no_gnb {
     box-shadow: 0 4px 16px rgba(21, 39, 111, 0.08);
 }
 
-.resume_snb .snb_box .snb_top {
+.resume-snb .snb-box .snb-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.resume_snb .snb_box .snb_top .tit {
+.resume-snb .snb-box .snb-top .tit {
     color: var(--gray120);
     font-size: 15px;
     font-weight: bold;
     line-height: 22px;
 }
 
-.resume_snb .snb_box .snb_top .tit, .resume_snb .snb_box .snb_top .persent {
+.resume-snb .snb-box .snb-top .tit, .resume-snb .snb-box .snb-top .persent {
     color: var(--gray120);
     font-size: 15px;
     font-weight: bold;
     line-height: 22px;
 }
 
-.resume_snb .snb_box .progress_bar {
+.resume-snb .snb-box .progress-bar {
     position: relative;
     margin: 16px 0;
 }
 
-.resume_snb .snb_box .progress_bar:before {
+.resume-snb .snb-box .progress-bar:before {
     display: block;
     position: relative;
     width: 100%;
@@ -98,11 +98,11 @@ body.no_gnb {
     content: "";
 }
 
-.resume_snb .snb_box .progress_bar.per100:after {
+.resume-snb .snb-box .progress-bar.per100:after {
     width: 100%;
 }
 
-.resume_snb .snb_box .progress_bar:after {
+.resume-snb .snb-box .progress-bar:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,32 +114,32 @@ body.no_gnb {
     transform-origin: left center;
     content: "";
 }
-.resume_snb .snb_box .txt {
+.resume-snb .snb-box .txt {
     color: var(--gray100);
     font-size: 13px;
     line-height: 20px;
 }
-.resume_snb .snb_box .txt em {
+.resume-snb .snb-box .txt em {
     color: var(--blue90);
 }
-.resume_snb .item_list {
+.resume-snb .item-list {
     margin-top: 16px;
     padding: 16px 0;
     border-top: 1px solid var(--gray40);
 }
-.resume_snb .item_list .item.active {
+.resume-snb .item-list .item.active {
     border-radius: 4px;
     background: var(--gray20);
 }
 
-.resume_snb .item_list .item {
+.resume-snb .item-list .item {
     display: flex;
     padding: 5px 12px;
     align-items: center;
     justify-content: space-between;
 }
 
-.resume_snb .item_list .item .con_link {
+.resume-snb .item-list .item .con-link {
     border: none;
     color: var(--gray80);
     font-size: 15px;
@@ -162,19 +162,19 @@ body.no_gnb {
     align-items: center;
 }
 
-.resume_snb .item_list .item.essential:after {
+.resume-snb .item-list .item.essential:after {
     color: var(--gray80);
     font-size: 12px;
     line-height: 20px;
     content: "필수";
 }
 
-.resume_snb .item_list .item.add .con_link {
+.resume-snb .item-list .item.add .con-link {
     color: var(--blue90);
     font-weight: bold;
 }
 
-.resume_snb .resume_snb_guide {
+.resume-snb .resume-snb-guide {
     display: flex;
     margin-top: 16px;
     padding: 0 20px;
@@ -190,7 +190,7 @@ body.no_gnb {
     align-items: center;
 }
 
-.resume_snb .resume_snb_guide:before {
+.resume-snb .resume-snb-guide:before {
     display: inline-block;
     margin-right: 4px;
     width: 24px;
@@ -199,7 +199,7 @@ body.no_gnb {
     content: "";
 }
 
-.resume_snb .resume_snb_guide:after {
+.resume-snb .resume-snb-guide:after {
     display: inline-block;
     margin-left: auto;
     width: 16px;
@@ -209,22 +209,22 @@ body.no_gnb {
 }
 
 /* 이력서 작성 바디 */
-.resume_con {
+.resume-con {
     width: 930px;
 }
 
 
 
-.resume_view {
+.resume-view {
     position: relative;
 }
 
-.resume_view .resume_top {
+.resume-view .resume-top {
     display: flex;
     align-items: center;
 }
 
-.resume_view .resume_top .user_name {
+.resume-view .resume-top .user-name {
     overflow: hidden;
     max-width: 460px;
     color: var(--gray120);
@@ -235,7 +235,7 @@ body.no_gnb {
     white-space: nowrap;
 }
 
-.resume_view .resume_top .user_career {
+.resume-view .resume-top .user-career {
     margin-left: 8px;
     width: 128px;
 }
@@ -245,7 +245,7 @@ body.no_gnb {
     vertical-align: top;
 }
 
-.resume_view .resume_top .user_career select {
+.resume-view .resume-top .user-career select {
     border-color: var(--gray40);
 }
 
@@ -274,14 +274,14 @@ body.no_gnb {
     background-color: var(--gray20);
 }
 
-.resume_view .user_desc {
+.resume-view .user-desc {
     margin: 8px 0 20px;
     color: var(--gray80);
     font-size: 16px;
     line-height: 24px;
 }
 
-.user_hide {
+.user-hide {
     display: flex;
     margin-bottom: 8px;
     color: var(--gray80);
@@ -290,7 +290,7 @@ body.no_gnb {
     align-items: center;
 }
 
-.user_hide span {
+.user-hide span {
     display: flex;
     margin-right: 8px;
     padding: 6px 8px;
@@ -304,24 +304,24 @@ body.no_gnb {
     align-items: center;
     cursor: pointer;
 }
-.user_hide span:hover {
+.user-hide span:hover {
     border-color: var(--gray40);
 }
 
-.user_hide.on span:before {
-    background: url('/static/images/my-page/hide-on-resume.svg') no-repeat;
+.user-hide.on span:before {
+    background: url('/static/images/my-page/hide-resume.svg') no-repeat;
 }
 
-.user_hide span:before {
+.user-hide span:before {
     display: block;
     margin-right: 8px;
     width: 24px;
     height: 24px;
-    background: url('/static/images/my-page/hide-resume.svg') no-repeat;
+    background: url('/static/images/my-page/hide-on-resume.svg') no-repeat;
     content: "";
 }
 
-.resume_view .user_info li {
+.resume-view .user-info li {
     display: inline-flex;
     color: var(--gray120);
     font-size: 15px;
@@ -329,11 +329,11 @@ body.no_gnb {
     align-items: center;
 }
 
-.resume_view .user_info li.user_email:before {
+.resume-view .user-info li.user-email:before {
     background: url('/static/images/my-page/resume-mail.svg') no-repeat;
 }
 
-.resume_view .user_info li:before {
+.resume-view .user-info li:before {
     display: inline-block;
     margin-right: 12px;
     width: 16px;
@@ -342,16 +342,16 @@ body.no_gnb {
     flex-shrink: 0;
 }
 
-.resume_view .user_info li.user_phone:before {
+.resume-view .user-info li.user-phone:before {
     background: url('/static/images/my-page/resume-phone.svg') no-repeat;
 }
 
-.resume_view .user_info li.user_address {
+.resume-view .user-info li.user-address {
     display: block;
     margin: 8px 0 0 0;
 }
 
-.resume_view .user_address {
+.resume-view .user-address {
     display: flex;
     align-items: center;
     margin: 0 0 16px;
@@ -360,11 +360,11 @@ body.no_gnb {
     line-height: 20px;
 }
 
-.resume_view .user_info li.user_address:before {
+.resume-view .user-info li.user-address:before {
     background: url('/static/images/my-page/resume-home.svg') no-repeat;
 }
 
-.resume_view .picture_box {
+.resume-view .picture-box {
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -376,7 +376,7 @@ body.no_gnb {
     border-radius: 4px;
 }
 
-.resume_view .picture_box .picture {
+.resume-view .picture-box .picture {
     overflow: hidden;
     position: relative;
     width: 100px;
@@ -384,17 +384,17 @@ body.no_gnb {
     max-height: 140px;
 }
 
-.resume_view .picture_box .picture img {
+.resume-view .picture-box .picture img {
     vertical-align: top;
 }
-.resume_view .picture_box .picture.none {
+.resume-view .picture-box .picture.none {
     height: 140px;
     border: none;
     background: var(--gray20) url(https://www.saraminimage.co.kr/sri/resume/img_picture_none5.png) center / 100% no-repeat;
 }
 
 
-.resume_view .user_modify {
+.resume-view .user-modify {
     position: absolute;
     top: 0;
     right: 20px;
@@ -403,19 +403,19 @@ body.no_gnb {
     border-color: var(--white);
     background: url('/static/images/my-page/resume-picture.svg') center no-repeat;
 }
-.resume_view .user_modify:hover {
+.resume-view .user-modify:hover {
     background-color: var(--gray20);
 }
-.resume_view .user_info li+li {
+.resume-view .user-info li+li {
     margin-left: 60px;
 }
-.resume_con .resume_tit .box_tit .must {
+.resume-con .resume-tit .box-tit .must {
     margin-left: 8px;
     color: var(--coral90);
     font-size: 12px;
     line-height: 20px;
 }
-.resume_con .resume_tit .box_tit .tit {
+.resume-con .resume-tit .box-tit .tit {
     display: flex;
     color: var(--gray120);
     font-size: 20px;
@@ -425,10 +425,10 @@ body.no_gnb {
 }
 
 /* 학력 */
-.resume_con section+section {
+.resume-con section+section {
     padding-top: 60px;
 }
-.resume_con .resume_tit {
+.resume-con .resume-tit {
     display: flex;
     margin-bottom: 9px;
     padding: 0 12px 0 20px;
@@ -437,23 +437,23 @@ body.no_gnb {
     justify-content: flex-end;
 }
 
-.resume_con .resume_tit .box_tit {
+.resume-con .resume-tit .box-tit {
     display: flex;
     margin-right: auto;
     align-items: center;
 }
-.resume_con .resume_tit .box_tit .career_txt {
+.resume-con .resume-tit .box-tit .career-txt {
     display: flex;
     align-items: center;
 }
-.career_txt {
+.career-txt {
     margin-top: 8px;
     color: var(--gray80);
     font-size: 13px;
     line-height: 20px;
 }
 
-.resume_con .resume_tit .box_tit .career_txt span {
+.resume-con .resume-tit .box-tit .career-txt span {
     display: flex;
     margin-left: 20px;
     padding: 0 8px;
@@ -467,7 +467,7 @@ body.no_gnb {
     align-items: center;
 }
 
-.resume_con .resume_tit .box_tit .career_txt button {
+.resume-con .resume-tit .box-tit .career-txt button {
     display: flex;
     margin-left: 5px;
     width: 24px;
@@ -476,7 +476,7 @@ body.no_gnb {
     justify-content: center;
 }
 
-.resume_con .resume_tit button {
+.resume-con .resume-tit button {
     display: flex;
     padding: 6px 11px;
     height: 40px;
@@ -489,7 +489,7 @@ body.no_gnb {
     align-items: center;
 }
 
-.resume_con .resume_tit .box_tit .career_txt button svg {
+.resume-con .resume-tit .box-tit .career-txt button svg {
     margin: 0;
     width: 16px;
     height: 16px;
@@ -497,14 +497,14 @@ body.no_gnb {
     flex-shrink: 0;
 }
 
-.resume_con .resume_tit button svg {
+.resume-con .resume-tit button svg {
     margin-right: 4px;
     width: 16px;
     height: 16px;
     fill: var(--gray100);
 }
 
-.resume_con .resume_none {
+.resume-con .resume-none {
     padding: 40px 0;
     border-top: 1px solid var(--gray40);
     color: var(--gray80);
@@ -513,10 +513,10 @@ body.no_gnb {
     text-align: center;
 }
 
-.resume_list {
+.resume-list {
     border-top: 1px solid var(--gray40);
 }
-.resume_list .list {
+.resume-list .list {
     display: flex;
     position: relative;
     margin: 0 28px;
@@ -525,13 +525,13 @@ body.no_gnb {
     align-items: flex-start;
 }
 
-.resume_list .contents {
+.resume-list .contents {
     display: flex;
     width: calc(100% - 40px);
     flex-wrap: wrap;
 }
 
-.resume_list .contents .school_badge {
+.resume-list .contents .school-badge {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -546,11 +546,11 @@ body.no_gnb {
     background: var(--gray20);
 }
 
-.resume_school .resume_list .contents .tit {
+.resume-school .resume-list .contents .tit {
     display: block;
 }
 
-.resume_list .contents .tit {
+.resume-list .contents .tit {
     width: 100%;
     color: var(--gray120);
     font-size: 18px;
@@ -558,22 +558,22 @@ body.no_gnb {
     word-break: break-all;
 }
 
-.resume_school .resume_list .contents .tit span {
+.resume-school .resume-list .contents .tit span {
     max-width: calc(100% - 60px);
 }
 
-.resume_school .resume_list .contents .tit span {
+.resume-school .resume-list .contents .tit span {
     max-width: calc(100% - 60px);
 }
 
-.resume_list .contents .date {
+.resume-list .contents .date {
     display: inline-block;
     color: var(--gray80);
     font-size: 16px;
     font-weight: normal;
 }
 
-.resume_list .contents .date:before {
+.resume-list .contents .date:before {
     display: inline-block;
     margin: 0 8px;
     width: 1px;
@@ -582,7 +582,7 @@ body.no_gnb {
     content: "";
 }
 
-.resume_list .contents .desc {
+.resume-list .contents .desc {
     margin-top: 8px;
     width: 100%;
     color: var(--gray120);
@@ -591,7 +591,7 @@ body.no_gnb {
     word-break: break-all;
 }
 
-.resume_list .faculty {
+.resume-list .faculty {
     display: flex;
     margin-top: 16px;
     width: 100%;
@@ -602,7 +602,7 @@ body.no_gnb {
     gap: 4px 0;
 }
 
-.resume_list .contents_edit {
+.resume-list .contents-edit {
     display: flex;
     justify-content: space-between;
     margin-left: 12px;
@@ -610,30 +610,30 @@ body.no_gnb {
     gap: 8px;
 }
 
-.resume_list .contents_edit button {
+.resume-list .contents-edit button {
     min-width: 32px;
     height: 32px;
     border-color: var(--white);
     background: var(--white);
 }
 
-.resume_list .contents_edit button svg {
+.resume-list .contents-edit button svg {
     display: inline-block;
     width: 16px;
     height: 16px;
     color: var(--gray80);
 }
 
-.resume_list .contents_edit button:hover {
+.resume-list .contents-edit button:hover {
     background: var(--gray20);
 }
 
-.resume_con .resume_tit button:hover {
+.resume-con .resume-tit button:hover {
     background: var(--gray20);
 }
 
 /* 학력 구분 선택 */
-.resume_edit {
+.resume-edit {
     position: relative;
     padding: 32px 40px;
     border-top: 2px solid var(--blue80);
@@ -642,13 +642,13 @@ body.no_gnb {
     box-shadow: 0 4px 16px 0 rgba(17, 42, 128, 0.08);
 }
 
-.resume_edit .item_row {
+.resume-edit .item-row {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.resume_edit .item_m {
+.resume-edit .item-m {
     width: 278px;
     flex-shrink: 0;
 }
@@ -659,13 +659,13 @@ body.no_gnb {
     line-height: 24px;
 }
 
-.resume_edit .resume_save {
+.resume-edit .resume-save {
     display: flex;
     margin-top: 24px;
     justify-content: flex-end;
 }
 
-.resume_edit .resume_save button {
+.resume-edit .resume-save button {
     width: 80px;
 }
 
@@ -682,20 +682,20 @@ body.no_gnb {
     line-height: 24px;
 }
 
-.resume_edit .resume_save button+button {
+.resume-edit .resume-save button+button {
     margin-left: 8px;
 }
 
 /* 초등학교 졸업 */
-.resume_edit .item_row.item_career {
+.resume-edit .item-row.item-career {
     margin-bottom: 16px;
 }
 
-.resume_edit .item_row.item_center {
+.resume-edit .item-row.item-center {
     align-items: center;
 }
 
-.resume_edit .item_row .item_check {
+.resume-edit .item-row .item-check {
     margin-left: 4px;
 }
 
@@ -744,7 +744,7 @@ body.no_gnb {
     content: '';
 }
 
-.resume_edit .item_row+.item_row {
+.resume-edit .item-row+.item-row {
     margin-top: 20px;
 }
 
@@ -785,7 +785,7 @@ body.no_gnb {
     background-color: var(--white);
 }
 
-.resume_edit .ability_box .TypoBox, .resume_edit .TypoBox .Typo {
+.resume-edit .ability-box .TypoBox, .resume-edit .TypoBox .Typo {
     width: 100%;
 }
 
@@ -810,7 +810,7 @@ body.no_gnb {
 }
 
 
-.resume_edit .item_s {
+.resume-edit .item-s {
     width: 135px;
     flex-shrink: 0;
 }
@@ -857,7 +857,7 @@ body.no_gnb {
 }
 
 /* 초등 검정고시 */
-.resume_edit .item_close+.item_row {
+.resume-edit .item-close+.item-row {
     margin-top: 0;
 }
 
@@ -901,7 +901,8 @@ body.no_gnb {
 }
 
 /* 스킬 */
-.resume_con .resume_tit .TipBox {
+.resume-con .resume-tit .TipBox {
+    display:none;
     margin-left: 8px;
 }
 
@@ -909,17 +910,17 @@ body.no_gnb {
     position: relative;
 }
 
-.resume_con .resume_tit .TipBox svg {
+.resume-con .resume-tit .TipBox svg {
     width: 16px;
     height: 16px;
     color: var(--gray80);
 }
 
-.skill_box.view {
+.skill-box.view {
     width: 100%;
 }
 
-.skill_box {
+.skill-box {
     display: flex;
     margin-top: 12px;
     width: 100%;
@@ -927,9 +928,9 @@ body.no_gnb {
     gap: 8px 4px;
 }
 
-.skill_box.view .skill_item {
+.skill-box.view .skill-item {
     border-color: var(--blue40);
-}.skill_box .skill_item {
+}.skill-box .skill-item {
     display: inline-flex;
     position: relative;
     padding: 7px 11px;
@@ -945,7 +946,7 @@ body.no_gnb {
     justify-content: center;
 }
 
-.skill_box.view .skill_item.skill_hide_add {
+.skill-box.view .skill-item.skill-hide-add {
     border: 1px dashed var(--gray40);
     padding: 7px 6px 7px 12px;
     display: flex;
@@ -954,10 +955,10 @@ body.no_gnb {
     line-height: 22px;
     color: var(--gray120);
 }
-.skill_box.view .skill_item.skill_hide_add:hover {
+.skill-box.view .skill-item.skill-hide-add:hover {
     color: var(--blue90);
 }
-.skill_box.view .skill_item.skill_hide_add:before {
+.skill-box.view .skill-item.skill-hide-add:before {
     display: block;
     width: 16px;
     height: 16px;
@@ -965,7 +966,7 @@ body.no_gnb {
     background-image: url('/static/images/my-page/resume-plus.svg');
     content: '';
 }
-.skill_box.view .skill_item.skill_hide_add:after {
+.skill-box.view .skill-item.skill-hide-add:after {
     padding: 1px 8px;
     font-size: 12px;
     line-height: 22px;
@@ -977,15 +978,15 @@ body.no_gnb {
     margin-left: 8px;
     content: '서류합격률 UP';
 }
-.resume_edit .item_full {
+.resume-edit .item-full {
     width: 100%;
 }
 
-.resume_con .btn_delete {
+.resume-con .btn-delete {
     flex-shrink: 0;
 }
 
-.resume_con .btn_delete svg {
+.resume-con .btn-delete svg {
     display: block;
     width: 24px;
     height: 24px;
@@ -993,12 +994,12 @@ body.no_gnb {
     fill: var(--gray70);
 }
 
-.resume_con .btn_search {
+.resume-con .btn-search {
     margin: 0 12px 0 8px;
     flex-shrink: 0;
 }
 
-.resume_con .btn_search svg {
+.resume-con .btn-search svg {
     display: block;
     width: 24px;
     height: 24px;
@@ -1008,7 +1009,7 @@ button:disabled svg {
     color: var(--gray50);
 }
 
-.area_auto_search {
+.area-auto-search {
     display: none;
     overflow: hidden;
     position: absolute;
@@ -1025,23 +1026,23 @@ button:disabled svg {
 
 
 
-.area_auto_search .auto_search {
+.area-auto-search .auto-search {
     overflow-x: hidden;
     overflow-y: auto;
     max-height: 222px;
 }
 
-.area_auto_search .area_scroll {
+.area-auto-search .area-scroll {
     overflow-y: auto;
     box-sizing: border-box;
 }
 
-.area_auto_search.company_search .list_auto_search .area_link {
+.area-auto-search.company-search .list-auto-search .area-link {
     padding: 10px 16px;
     cursor: pointer;
 }
 
-.area_auto_search .auto_search .list_auto_search .area_link {
+.area-auto-search .auto-search .list-auto-search .area-link {
     display: block;
     padding: 16px;
     width: 100%;
@@ -1050,11 +1051,11 @@ button:disabled svg {
     font-size: 13px;
 }
 
-.area_auto_search.company_search .list_auto_search .area_link div, .area_auto_search.company_search .list_auto_search .area_link div span {
+.area-auto-search.company-search .list-auto-search .area-link div, .area-auto-search.company-search .list-auto-search .area-link div span {
     width: 100%;
 }
 
-.area_auto_search .auto_search .list_auto_search .area_link:after {
+.area-auto-search .auto-search .list-auto-search .area-link:after {
     display: table;
     clear: both;
     content: "";
@@ -1064,22 +1065,22 @@ button:disabled svg {
 
 
 
-.resume_edit .box_tit {
+.resume-edit .box-tit {
     display: flex;
     align-items: center;
     margin-top: 40px;
 }
 
-.resume_edit .tit_sub:first-child {
+.resume-edit .tit-sub:first-child {
     margin-top: 0;
 }
 
-.resume_edit .box_tit .tit_sub {
+.resume-edit .box-tit .tit-sub {
     margin-bottom: 0;
     margin-right: 20px;
 }
 
-.resume_edit .tit_sub {
+.resume-edit .tit-sub {
     display: flex;
     margin: 32px 0 12px;
     color: var(--gray100);
@@ -1089,7 +1090,7 @@ button:disabled svg {
     align-items: center;
 }
 
-.resume_edit .box_tit .progress_circle {
+.resume-edit .box-tit .progress-circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1103,17 +1104,17 @@ button:disabled svg {
     flex-shrink: 0;
 }
 
-.resume_edit .box_tit .progress_circle .svg.step5.reverse {
+.resume-edit .box-tit .progress-circle .svg.step5.reverse {
     animation: restore 1s ease-in-out both;
 }
 
-.resume_edit .box_tit .progress_circle svg {
+.resume-edit .box-tit .progress-circle svg {
     display: block;
     width: 16px;
     height: 16px;
 }
 
-.resume_edit .box_tit .progress_circle .border {
+.resume-edit .box-tit .progress-circle .border {
     fill: none;
     stroke: #D7DCE5;
     stroke-width: 3;
@@ -1121,7 +1122,7 @@ button:disabled svg {
 
 
 
-.resume_edit .box_tit .progress_circle .progress, .progress_second {
+.resume-edit .box-tit .progress-circle .progress, .progress-second {
     fill: none;
     stroke: #94B5FC;
     stroke-width: 3;
@@ -1132,76 +1133,76 @@ button:disabled svg {
     transform-origin: center;
     animation: progress 2s ease-in-out both;
 }
-.resume_edit .box_tit .progress_circle .svg .progress_second {
+.resume-edit .box-tit .progress-circle .svg .progress-second {
     stroke: #3769ED;
     animation: step0 1s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step1 .progress {
+.resume-edit .box-tit .progress-circle .svg.step1 .progress {
     animation: step1 1s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step2 .progress {
+.resume-edit .box-tit .progress-circle .svg.step2 .progress {
     animation: step2 1s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step3 .progress {
+.resume-edit .box-tit .progress-circle .svg.step3 .progress {
     animation: step3 1s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step4 .progress {
+.resume-edit .box-tit .progress-circle .svg.step4 .progress {
     animation: stepmaintain ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step4 .progress_second {
+.resume-edit .box-tit .progress-circle .svg.step4 .progress-second {
     animation: step4 1s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step5 .progress {
+.resume-edit .box-tit .progress-circle .svg.step5 .progress {
     animation: stepmaintain ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step5 .progress_second {
+.resume-edit .box-tit .progress-circle .svg.step5 .progress-second {
     animation: step5 1s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step5 {
+.resume-edit .box-tit .progress-circle .svg.step5 {
     animation: complete 3s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step5 .border {
-    animation: step_set 3s ease-in-out both
+.resume-edit .box-tit .progress-circle .svg.step5 .border {
+    animation: step-set 3s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.reverse.step5 .border {
-    animation: restep_set 3s ease-in-out both
+.resume-edit .box-tit .progress-circle .svg.reverse.step5 .border {
+    animation: restep-set 3s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.step1.reverse .progress {
+.resume-edit .box-tit .progress-circle .svg.step1.reverse .progress {
     animation-name: step1reverse;
     animation-duration: 1s
 }
 
-.resume_edit .box_tit .progress_circle .svg.reverse.step2 .progress {
+.resume-edit .box-tit .progress-circle .svg.reverse.step2 .progress {
     animation-name: step2reverse;
     animation-duration: 1s;
 }
 
-.resume_edit .box_tit .progress_circle .svg.reverse.step3 .progress {
+.resume-edit .box-tit .progress-circle .svg.reverse.step3 .progress {
     animation-name: step3reverse;
     animation-duration: 1s
 }
 
-.resume_edit .box_tit .progress_circle .svg.reverse.step4 .progress_second {
+.resume-edit .box-tit .progress-circle .svg.reverse.step4 .progress-second {
     animation-name: step4reverse;
     animation-duration: 1s
 }
 
-.resume_edit .box_tit .progress_circle .svg.reverse.step5 {
+.resume-edit .box-tit .progress-circle .svg.reverse.step5 {
     animation: restore 1s ease-in-out both
 }
 
-.resume_edit .box_tit .progress_circle .svg.reverse.step5 .progress_second {
+.resume-edit .box-tit .progress-circle .svg.reverse.step5 .progress-second {
     animation-name: step5reverse;
     animation-duration: 1s
 }
@@ -1311,35 +1312,35 @@ button:disabled svg {
     }
 }
 
-.resume_edit .box_tit .txt {
+.resume-edit .box-tit .txt {
     font-size: 13px;
     color: var(--gray80);
 }
 
-.resume_edit .box_tit .txt strong {
+.resume-edit .box-tit .txt strong {
     color: var(--blue90);
 }
 
-.skill_box.soft_add .skill_item .skill_modify {
+.skill-box.soft-add .skill-item .skill-modify {
     color: var(--blue80);
     display: flex;
     align-items: center;
 }
 
-.skill_box.soft_add .skill_item .skill_modify em {
+.skill-box.soft-add .skill-item .skill-modify em {
     margin-right: 4px;
-}.skill_box .skill_item em {
+}.skill-box .skill-item em {
     color: var(--gray100);
 }
-.skill_box.soft_add .skill_item .skill_modify svg {
+.skill-box.soft-add .skill-item .skill-modify svg {
     color: var(--gray80);
 }
-.skill_box svg {
+.skill-box svg {
     display: block;
     width: 16px;
     height: 16px;
 }
-.skill_box.soft_add .skill_delete {
+.skill-box.soft-add .skill-delete {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -1352,7 +1353,7 @@ button:disabled svg {
     color: var(--gray70);
 }
 
-.skill_box.soft_add .skill_delete:before {
+.skill-box.soft-add .skill-delete:before {
     display: block;
     width: 1px;
     height: 16px;
@@ -1362,29 +1363,29 @@ button:disabled svg {
     content: '';
 }
 
-.skill_box.soft_add .skill_delete svg {
+.skill-box.soft-add .skill-delete svg {
     color: var(--gray80);
     width: 20px;
     height: 20px;
 }
 
-.skill_box.soft_add .skill_item {
+.skill-box.soft-add .skill-item {
     border-color: var(--blue40);
     padding: 8px 12px 8px 16px;
 }
 
-.area_auto_search .auto_search .list_auto_search .area_link:hover, .area_auto_search .auto_search .list_auto_search .area_link:focus {
+.area-auto-search .auto-search .list-auto-search .area-link:hover, .area-auto-search .auto-search .list-auto-search .area-link:focus {
     background-color: #f8fafc;
 }
 
 
 /* 기업으로 부터 제안(만족도 조사?) */
-.resume_con section+.resume_open {
+.resume-con section+.resume-open {
     position: relative;
     padding-top: 0;
 }
 
-.resume_open .offer_setting {
+.resume-open .offer-setting {
     margin-top: 56px;
     padding: 32px;
     border: 1px solid #eaedf4;
@@ -1392,14 +1393,14 @@ button:disabled svg {
     background: #f8fafc;
 }
 
-.resume_open .offer_setting .tit_setting {
+.resume-open .offer-setting .tit-setting {
     color: #373f57;
     font-size: 20px;
     font-weight: bold;
     line-height: 32px;
 }
 
-.resume_open .offer_setting .txt_setting {
+.resume-open .offer-setting .txt-setting {
     display: flex;
     margin: 24px 0;
     color: #292e41;
@@ -1407,34 +1408,34 @@ button:disabled svg {
     line-height: 24px;
 }
 
-.resume_open .offer_setting .txt_setting.resume_contact_close:before {
+.resume-open .offer-setting .txt-setting.resume-contact-close:before {
     background-position: 1px 0;
 }
 
-.resume_open .offer_setting .txt_setting:before {
+.resume-open .offer-setting .txt-setting:before {
     display: block;
     margin-right: 8px;
     width: 24px;
     height: 24px;
-    background: url(//www.saraminimage.co.kr/sri/person/ico/ico_offer.png) no-repeat;
+    background: url(//www.saraminimage.co.kr/sri/person/ico/ico-offer.png) no-repeat;
     content: "";
 }
 
-.resume_open .offer_setting .txt_setting strong {
+.resume-open .offer-setting .txt-setting strong {
     color: #2d65f2;
     font-weight: bold;
 }
 
-.resume_open .offer_setting .resume_open_option {
+.resume-open .offer-setting .resume-open-option {
     display: flex;
     align-items: center;
 }
 
-.resume_open .offer_setting .resume_open_option li {
+.resume-open .offer-setting .resume-open-option li {
     width: 100%;
 }
 
-.resume_open .offer_setting .resume_open_option li .InpBox {
+.resume-open .offer-setting .resume-open-option li .InpBox {
     width: 100%;
 }
 
@@ -1521,46 +1522,46 @@ button:disabled svg {
     content: '';
 }
 
-.resume_open .offer_setting .resume_open_option li+li {
+.resume-open .offer-setting .resume-open-option li+li {
     margin-left: 8px;
 }
 
-.resume_open .offer_setting .tooltip_area {
+.resume-open .offer-setting .tooltip-area {
     margin-top: 24px;
     display: flex;
 }
 
-.resume_open .offer_setting .tooltip_area button {
+.resume-open .offer-setting .tooltip-area button {
     display: flex;
     align-items: center;
 }
 
-.resume_open .offer_setting .tooltip_area button>svg {
+.resume-open .offer-setting .tooltip-area button>svg {
     width: 16px;
     height: 16px;
 }
 
-.resume_open .offer_setting .tooltip_area button>span {
+.resume-open .offer-setting .tooltip-area button>span {
     margin-left: 8px;
     color: var(--gray80);
     font-size: 14px;
 }
 
-.resume_open .resume_open_notice {
+.resume-open .resume-open-notice {
     margin-top: 24px;
 }
 
-.resume_open .resume_open_notice .list_square {
+.resume-open .resume-open-notice .list-square {
     color: #888;
     font-size: 13px;
     line-height: 17px;
 }
 
-.resume_open .resume_open_notice .list_square>li {
+.resume-open .resume-open-notice .list-square>li {
     position: relative;
     padding-left: 10px;
 }
-.resume_open .resume_open_notice .list_square>li:before {
+.resume-open .resume-open-notice .list-square>li:before {
     position: absolute;
     top: 6px;
     left: 0;
@@ -1570,17 +1571,17 @@ button:disabled svg {
     content: "";
 }
 
-.resume_open .resume_open_notice .list_square>li+li {
+.resume-open .resume-open-notice .list-square>li+li {
     margin-top: 8px;
 }
 
-.resume_open .resume_open_notice .list_square>li {
+.resume-open .resume-open-notice .list-square>li {
     position: relative;
     padding-left: 10px;
 }
 
 /* 아래 이력서 제목 및 작성버튼 */
-.resume_btm {
+.resume-btm {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -1591,14 +1592,14 @@ button:disabled svg {
     background: #fff;
 }
 
-.resume_btm .inner {
+.resume-btm .inner {
     display: flex;
     margin: 0 auto;
     width: 1248px;
     align-items: center;
 }
 
-.resume_btm .inner .tit_resume {
+.resume-btm .inner .tit-resume {
     flex-shrink: 0;
     display: block;
     margin-right: 8px;
@@ -1608,20 +1609,20 @@ button:disabled svg {
     line-height: 26px;
 }
 
-.resume_btm .inner input {
+.resume-btm .inner input {
     width: 724px;
     color: var(--gray110);
     font-size: 20px;
     line-height: 28px;
     border: 2px solid var(--blue100);
     border-radius: 8px;
-}.resume_btm .inner .BtnType.btn_preview {
+}.resume-btm .inner .BtnType.btn-preview {
     margin: 0 12px 0 20px;
     border-color: var(--blue90);
     color: var(--blue90);
     background: var(--white);
 }
-.resume_btm .inner .BtnType {
+.resume-btm .inner .BtnType {
     width: 180px;
 }
 [class*="BtnType"].BtnTypeRd {
@@ -1637,7 +1638,7 @@ button:disabled svg {
     line-height: 26px;
 }
 
-.resume_btm .inner .tip_recommend {
+.resume-btm .inner .tip-recommend {
     margin-right: 10px;
     width: 24px;
     height: 24px;
@@ -1645,7 +1646,7 @@ button:disabled svg {
     cursor: pointer;
 }
 
-.resume_btm .tit_recommend .TipCont {
+.resume-btm .tit-recommend .TipCont {
     width: 566px;
 }
 
@@ -1676,7 +1677,7 @@ button:disabled svg {
     transform: rotate(180deg);
 }
 
-.TipCont.BottomLeft .Tail:has(>svg.icon_tail) {
+.TipCont.BottomLeft .Tail:has(>svg.icon-tail) {
     background: none;
 }
 
@@ -1688,12 +1689,12 @@ button:disabled svg {
     height: 32px;
 }
 
-.TipCont.TopRight .Tail:has(>svg.icon_tail) svg.icon_tail, .TipCont.RightBottom .Tail:has(>svg.icon_tail) svg.icon_tail, .TipCont.BottomLeft .Tail:has(>svg.icon_tail) svg.icon_tail, .TipCont.LeftTop .Tail:has(>svg.icon_tail) svg.icon_tail {
+.TipCont.TopRight .Tail:has(>svg.icon-tail) svg.icon-tail, .TipCont.RightBottom .Tail:has(>svg.icon-tail) svg.icon-tail, .TipCont.BottomLeft .Tail:has(>svg.icon-tail) svg.icon-tail, .TipCont.LeftTop .Tail:has(>svg.icon-tail) svg.icon-tail {
     width: 32px;
     height: 32px;
 }
 
-.TipCont .Tail:has(>svg.icon_tail) svg.icon_tail {
+.TipCont .Tail:has(>svg.icon-tail) svg.icon-tail {
     color: var(--gray70);
     fill: var(--white);
     background: none;
@@ -1708,7 +1709,7 @@ button:disabled svg {
     white-space: nowrap;
 }
 
-.resume_btm .tit_recommend .tit {
+.resume-btm .tit-recommend .tit {
     margin-bottom: 4px;
     color: var(--gray100);
     font-size: 15px;
@@ -1716,7 +1717,7 @@ button:disabled svg {
     line-height: 22px;
 }
 
-.resume_btm .tit_recommend .txt {
+.resume-btm .tit-recommend .txt {
     display: block;
     overflow: hidden;
     width: calc(100% - 100px);
@@ -1729,11 +1730,11 @@ button:disabled svg {
     white-space: nowrap;
 }
 
-.resume_btm .tit_recommend .txt+.txt {
+.resume-btm .tit-recommend .txt+.txt {
     margin-top: 8px;
 }
 
-.resume_btm .tit_recommend .btn_refresh {
+.resume-btm .tit-recommend .btn-refresh {
     display: block;
     margin-top: 8px;
     margin-left: auto;
@@ -1761,3 +1762,423 @@ button:disabled svg {
     content: "";
 }
 
+/* 이력서 파일 등록 */
+.resume-edit.add-file-area{
+    display:block;
+    border-top: 1px solid var(--gray40);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    box-shadow: none;
+}
+
+.resume-con .btn-file-add {
+    width: 100%;
+    border-color: var(--gray40);
+    color: var(--blue90);
+    background: var(--white);
+}
+
+.resume-con .btn-file-add svg {
+    display: block;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.resume-edit .item-txt-sub {
+    display: block;
+    margin-top: 12px;
+    color: var(--gray80);
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.resume-file .file-preview {
+    overflow: hidden;
+    position: relative;
+    width: 421px;
+    height: 236px;
+    border: 1px solid var(--gray40);
+    border-radius: 8px;
+}
+
+.resume-file .file-preview .txt-no-preview {
+    color: var(--gray80);
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.resume-file .resume-edit .file-box {
+    margin-top: 0;
+}
+
+.resume-edit .file-box {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.resume-edit .file-box .list {
+    display: flex;
+    padding: 12px 16px;
+    width: 100%;
+    border: 1px solid var(--gray30);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    word-break: break-all;
+    background: var(--gray20);
+    flex-wrap: wrap;
+    align-items: center;
+}
+.resume-edit .file-box .list.file:before {
+    background: url('/static/images/my-page/resume-write-image-upload.svg') no-repeat;
+}
+.resume-edit .file-box .list:before {
+    display: inline-block;
+    margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    content: "";
+}
+.resume-edit .file-box .list .tit {
+    color: var(--gray100);
+}
+.resume-edit .file-box .list .tit span {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 610px;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.resume-edit .file-box .list .data {
+    display: flex;
+    margin-left: 8px;
+    color: var(--gray80);
+    align-items: center;
+}
+.resume-edit .file-box .list button {
+    margin-left: auto;
+}
+.resume-file .item-row .btn-delete {
+    margin-right: 12px;
+}
+.InpBox textarea {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 24px;
+    width: 100%;
+    height: calc(100% - 25px);
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--gray120);
+    font-size: 14px;
+    line-height: 21px;
+    background-color: var(--white);
+    resize: none;
+}
+
+.resume-edit .letter-box .txt-count {
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: end;
+}
+
+.resume-edit .letter-box .txt-count .count {
+    color: var(--gray80);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.resume-edit .letter-box .txt-count .count em {
+    font-weight: bold;
+}
+
+/* 파일 업로드 중 */
+.layer-uploaded {
+    width: 560px;
+}
+.ModalBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 110;
+    padding: 40px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: var(--white);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) translateX(-50%) translateZ(0);
+}
+
+.ModalBox .Tit {
+    margin-bottom: 24px;
+    color: var(--gray120);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.layer-uploaded.ing .uploaded-box {
+    height: 468px;
+}
+
+.layer-uploaded .uploaded-box {
+    display: flex;
+    height: 404px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ModalBox .ModalCont {
+    color: var(--gray90);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.layer-uploaded .uploaded-txt {
+    color: var(--gray80);
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}.layer-uploaded.ing .uploaded-txt .LoadingImg {
+    margin-bottom: 8px;
+}
+
+.LoadingImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 0 auto;
+    width: 54px;
+    height: 54px;
+}
+
+.LoadingImg .LoadingCircle.LoadingCircleC1 {
+    animation-delay: 0s;
+}
+
+.LoadingImg .LoadingCircle {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: var(--blue80);
+    transform: translateY(2px);
+    animation: LoadingAni 1.1s ease-in-out infinite;
+}
+
+.LoadingImg .LoadingCircle.LoadingCircleC2 {
+    animation-delay: .2s;
+}
+
+.LoadingImg .LoadingCircle.LoadingCircleC3 {
+    animation-delay: .4s;
+}
+
+.layer-uploaded.ing .uploaded-txt strong {
+    font-size: 16px;
+}
+
+.layer-uploaded .uploaded-txt strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* 업로드 완료 */
+.ModalBox .BtmArea {
+    display: flex;
+    margin-top: 24px;
+    justify-content: center;
+}
+
+.ModalBox .BtmArea .BtnType {
+    min-width: 100px;
+}
+
+.ModalBox .BtnClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+}
+.layer-uploaded .uploaded-txt strong:before {
+    display: block;
+    margin: 0 auto 16px;
+    width: 80px;
+    height: 80px;
+    background: url('/static/images/my-page/resume-write-upload-sucess.svg') no-repeat;
+    content: "";
+}
+
+/* 파일 등록 모달 창 */
+
+#wrapResumeNudge{
+    display:none;
+}
+.resume-file-manage {
+    width: 560px;
+    height: 600px;
+    display:block;
+}
+
+.ModalBox .Tit .Txt {
+    display: block;
+    margin-top: 8px;
+    color: var(--gray100);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.resume-file-manage .ModalCont {
+    overflow: auto;
+    height: 375px;
+}
+
+.resume-file-manage .file-tab {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.InpBox .Rdo {
+    position: relative;
+}
+
+.resume-file-manage .file-box {
+    position: relative;
+}
+
+.resume-file-manage .file-box:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 387px;
+    height: 40px;
+    border: 1px solid var(--gray30);
+    border-radius: 4px;
+    background: var(--gray20) url('/static/images/my-page/resume-write-file.svg') center left 22px no-repeat;
+    content: "";
+}
+
+.resume-file-manage .file-box input[type=file] {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.resume-file-manage .desc {
+    margin-top: 8px;
+    color: var(--gray80);
+}
+
+.resume-file-manage .notice {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gray40);
+    color: var(--gray80);
+}
+
+.resume-file-manage .bottom-btn {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+[class*="BtnType"].GrayInvert {
+    border-color: var(--gray80);
+    color: var(--gray100);
+    background: var(--white);
+}
+
+.ModalBox .BtmArea .BtnType+.BtnType {
+    margin-left: 8px;
+}
+
+[class*="BtnType"]:disabled, [class*="BtnType"].disabled {
+    cursor: default;
+}
+
+[class*="BtnType"].disabled, [class*="BtnType"].disabled:hover, [class*="BtnType"]:disabled, [class*="BtnType"]:disabled:hover {
+    border-color: var(--gray40) !important;
+    color: var(--gray50) !important;
+    background-color: var(--gray20) !important;
+}
+
+[class*="BtnType"].SizeM {
+    padding: 6px 11px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.ModalBox .BtnClose:after {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('/static/images/my-page/resume-tip-close.svg') no-repeat;
+    content: "";
+}
+
+.position-dimmed {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+#dimmed{
+    display:none;
+}
+
+.resume-file-manage .file-box input[type=file]::file-selector-button {
+    margin-right: 55px;
+    width: 85px;
+    height: 40px;
+    border: 1px solid var(--gray40);
+    border-radius: 4px;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+    background: var(--white);
+    cursor: pointer;
+}
+.resume-file .file-preview img {
+    width: 100%;
+}
+
+#file-res,
+.resume-edit.preview-file-area,
+#resume-file-uploading-layer,
+#resume-file-uploaded-layer,
+#resumeSkill,
+.btn-delete{
+    display: none;
+}
+
+.btn-add.evtWriteItem{
+    display: flex;
+}
+
+.evtDeleteResFile{
+    display:block;
+}

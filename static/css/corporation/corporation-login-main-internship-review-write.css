@@ -44,6 +44,7 @@
 }
 .qna-write-wrap .qna-category-tit {
     color: #5c667b;
+    font-weight: 900;
 }
 .qna-subject-input {
     display: block;
@@ -112,7 +113,8 @@
     left: 0;
     width: 24px;
     height: 24px;
-    background: url(//www.saraminimage.co.kr/sri/company_review/icons.png) no-repeat 0 -200px;
+    background: url(//www.saraminimage.co.kr/sri/company_review/icons.png)
+        no-repeat 0 -200px;
     content: "";
 }
 .qna-write-post .qna-input-bottom .post-count {
@@ -154,7 +156,8 @@
 .btn-qna-write {
     width: 320px;
 }
-button, label {
+button,
+label {
     cursor: pointer;
 }
 .ModalBox {
@@ -205,7 +208,8 @@ button, label {
     right: 16px;
     z-index: 10;
 }
-.hidden, .blind {
+.hidden,
+.blind {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;

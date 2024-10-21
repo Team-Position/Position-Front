@@ -1,21 +1,5 @@
 const optionSelects = document.querySelectorAll(".tab-section li");
 const optionContents = document.querySelectorAll(".option-content ");
-// const optionSelectButtons = document.querySelectorAll(".tab-section li button");
-console.log(optionSelects);
-console.log(optionContents);
-
-const viewports = document.querySelectorAll(".viewport");
-console.log(viewports);
-HTMLElement.prototype.forEach = Array.prototype.forEach;
-NodeList.prototype.filter = Array.prototype.filter;
-// console.log(optionSelectButtons);
-
-// optionSelectButtons.forEach((optionSelectButton) => {
-//     optionSelectButton.addEventListener("click", (e) => {
-//         console.log(e.target);
-//         // 부모 li의 클릭 이벤트 방지
-//     });
-// });
 
 optionSelects.forEach((optionSelect, index) => {
     optionSelect.addEventListener("click", (e) => {
@@ -23,19 +7,17 @@ optionSelects.forEach((optionSelect, index) => {
         optionSelects.forEach((optionSelect) => {
             optionSelect.classList.remove("on");
         });
-        e.target.parentElement.classList.add("on");
-        optionContents.forEach((optionContent) => {
-            optionContent.classList.remove("on");
-        });
-        optionContents[index].classList.add("on");
+        if (index === 2) {
+            e.target.parentElement.classList.add("on");
+        } else {
+            e.target.parentElement.classList.add("on");
+            optionContents.forEach((optionContent) => {
+                optionContent.classList.remove("on");
+            });
+            optionContents[index].classList.add("on");
+        }
     });
 });
-
-const selectJobOneDepths = document.querySelector(
-    ".box-detail-jobs .box-onedepth .wrap-scroll .viewport ul"
-);
-
-console.log(selectJobOneDepths);
 
 // 대카 중카 소카 자바스크립트 코드
 const categorys = {
@@ -2369,89 +2351,3 @@ const categorys = {
         ],
     },
 };
-console.log(categorys);
-console.log(selectJobOneDepths);
-// text += Object.keys(categorys.categoryA);
-console.log(Object.keys(categorys));
-// Object.keys(categorys).forEach((key) => {
-let textA = ``;
-let textB = ``;
-// let textC = ``;/
-let i = 0;
-// let j = 0;
-Object.keys(categorys).forEach((categoryA) => {
-    i++;
-    // j++;
-    textA = `
-        <li class="item-job depth1-btn-wrapper" >
-            <button
-                type="button"
-                class="first-depth depth1-btn-16"
-            >
-                <span class="txt">${categoryA}</span>
-                <span class="count">(10,857)</span>
-            </button>
-        </li>`;
-    Object.keys(categorys[categoryA]).forEach((categoryB) => {
-        textB += `
-                    <dt>
-                        <button>
-                            <span class="depth2-${i}">${categoryB}</span>
-                        </button>
-                    </dt>
-                `;
-        categorys[categoryA][categoryB].forEach((categoryC) => {
-            textB += `
-                    <dd>
-                        <button class="depth3-${i}">${categoryC}</button>
-                    </dd>
-                `;
-        });
-    });
-    selectJobOneDepths.innerHTML += textA;
-    // viewports[2].innerHTML += textB;
-
-    // console.log(textA);
-});
-
-// });
-const selectJobLists = document.querySelectorAll(
-    ".item-job.depth1-btn-wrapper"
-);
-console.log(selectJobLists);
-console.log(selectJobOneDepths.children);
-
-const DeepDepthElements = [...selectJobOneDepths.children];
-
-DeepDepthElements.forEach((DeepDepthElement) => {
-    console.log(DeepDepthElement.children);
-    DeepDepthElement.children.addEventListener("click", (e) => {
-        console.log(e.target);
-        viewports[2].children.forEach((child) => {
-            child.style.display = "none";
-        });
-        const blockChildren = viewports[2].children.filter(
-            (child) =>
-                child.classList.contains(`depth2-${i}`) ||
-                child.classList.contains(`depth3-${i}`)
-        );
-        blockChildren.forEach((blockChild) => {
-            blockChild.style.display = "block";
-        });
-    });
-});
-
-// selectJobOneDepths.innerHTML
-// text= `
-//     <li class="item-job depth1-btn-wrapper on" id="depth1-btn-16">
-//         <button
-//             type="button"
-//             data-mcls-cd-no="16"
-//             class="first-depth depth1-btn-16"
-//         >
-//             <span class="txt">${categorys}</span>
-//             <span class="count">(10,857)</span>
-//         </button>
-//     </li>
-// `;
-// selectJobOneDepths.forEach()

@@ -1127,6 +1127,9 @@ body {
 #position-gnb-wrap .ci svg {
     width: 100%;
     height: 100%;
+}
+
+.img-ci {
     background: url('/static/images/my-page/position-logo-small.svg') no-repeat;
 }
 

@@ -1265,6 +1265,7 @@ function setupSchoolEventHandlers(container) {
     const selectGraduationStatus = container.querySelector(
         "#schoolGraduationGb"
     );
+    const schoolMajor = container.querySelector("#schoolMajor");
     const spanElement = container.querySelector(".Chk.SizeL");
     const labelText = spanElement.querySelector("label").textContent;
 
@@ -1291,6 +1292,7 @@ function setupSchoolEventHandlers(container) {
 
     const careerTxtSpan = document.querySelector(".career-txt span");
     const date = document.querySelector(".date");
+    const major = document.querySelector("#major");
     const schoolNameSpan = document.querySelector("#school-name span"); // 학교 이름 span 선택
 
     // 저장 버튼 클릭 시 유효성 검사 및 학력 텍스트 업데이트
@@ -1325,6 +1327,13 @@ function setupSchoolEventHandlers(container) {
 
             if (inputElements[1] && inputElements[1].value.trim()) {
                 schoolNameSpan.textContent = inputElements[1].value.trim(); // 학교 이름 업데이트
+            }
+
+            // input#schoolMajor 값 -> <p id="major">에 반영
+            if (schoolMajor && major) {
+                const majorText = schoolMajor.value.trim(); // input 값 가져오기
+                major.textContent = majorText || "전공 정보 없음"; // <p>에 설정
+                console.log(`Updated major: ${majorText}`);
             }
         } else {
             console.log("Validation failed");

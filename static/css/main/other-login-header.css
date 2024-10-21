@@ -142,6 +142,7 @@ header, footer, section, nav, article {
     position: relative;
     z-index: 2;
     width: 100%;
+    margin-left: -130px;
     grid-template-rows: 64px;
     gap: 15px;
     align-items: center;
@@ -235,6 +236,8 @@ header, footer, section, nav, article {
 #header .navigation .wrap_gnb>div:focus-within .depth2 {
     display: grid;
     z-index: 1;
+
+    
 }
 #header .navigation .wrap_gnb:hover>div:hover .depth2 {
     display: grid;

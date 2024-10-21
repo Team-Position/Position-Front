@@ -128,7 +128,7 @@ header, footer, section, nav, article {
     overflow: hidden;
     width: 134px;
     height: 34px;
-    background-image: url('/static/images/main/saramin.png');
+    background: url('/static/images/my-page/position-logo-small.svg') no-repeat;
 }
 #header.fixed .bi .frame, #header.simple.bubble .bi .frame {
     width: 36px;

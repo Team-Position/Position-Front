@@ -1,18 +1,18 @@
 // 모든 typoBox 요소 선택
-const typoBoxes = document.querySelectorAll(".typoBox");
+const typoBoxes = document.querySelectorAll(".typo-box");
 const passwordInput = document.querySelector("#password1");
 const passwordWarn = document.querySelector("#password1-warning-txt"); // 일반 경고
 const passwordRepWarn = document.querySelector("#password1-warning-txt-rep"); // 반복 문자 경고
 const passwordSafe = document.querySelector("#password1-good-txt"); // 유효한 메시지
 const passwordEye = document.querySelector("#masking-password"); // 눈알 버튼
-const passwordFocus = document.querySelectorAll("#password1FocusMsg"); // 안내 문구
+const passwordFocus = document.querySelectorAll("#password1-focus-msg"); // 안내 문구
 const passwordInputBox = document.querySelector(".pass-box"); // 부모 요소
 const corpCodeInput = document.getElementById("corp-code");
 const msgCorpCode = document.getElementById("msg-corp-code");
-const typoBox = corpCodeInput.closest(".TypoBox");
+const typoBox = corpCodeInput.closest(".typo-box");
 const areaInputCompany = document.getElementById("area-input-company"); // 기업명 입력 영역
-const idMessage = document.querySelector("#idCheckMsg1");
-const idMessageSafe = document.querySelector("#idCheckMsg2");
+const idMessage = document.querySelector("#id-check-msg1");
+const idMessageSafe = document.querySelector("#id-check-msg2");
 const idInput = document.querySelector("#id");
 
 // 각 typoBox에 포커스 이벤트 추가
@@ -82,7 +82,7 @@ corpCodeInput.addEventListener("blur", () => {
     if (validateCorpCode(corpCode)) {
         msgCorpCode.textContent =
             "사업자등록번호 확인완료, 기업인증에 사업자등록증명원을 첨부해 주세요.";
-        msgCorpCode.classList.remove("msgInvalid");
+        msgCorpCode.classList.remove("msg-invalid");
         msgCorpCode.classList.add("alert-column", "good-txt");
         typoBox.classList.remove("invalid");
 
@@ -91,7 +91,7 @@ corpCodeInput.addEventListener("blur", () => {
     } else {
         msgCorpCode.textContent = "유효하지 않은 사업자번호입니다.";
         msgCorpCode.classList.remove("alert-column", "good-txt");
-        msgCorpCode.classList.add("msgInvalid");
+        msgCorpCode.classList.add("msg-invalid");
         typoBox.classList.add("invalid");
 
         // 기업명 입력 영역 숨기기
@@ -128,7 +128,7 @@ idInput.addEventListener("input", () => validateUserId());
 const hideIdValidationMessages = () => {
     idMessage.style.display = "none";
     idMessageSafe.style.display = "none";
-    const idMessageWarn = document.querySelector("#idCheckMsgWarn");
+    const idMessageWarn = document.querySelector("#id-check-msg-warn");
     if (idMessageWarn) {
         idMessageWarn.style.display = "none";
     }
@@ -145,7 +145,7 @@ const validateUserId = () => {
         typoBoxes.forEach((box) => box.classList.remove("invalid")); // invalid 제거
     } else {
         hideIdValidationMessages(); // 다른 메시지 숨기기
-        const idMessageWarn = document.querySelector("#idCheckMsgWarn");
+        const idMessageWarn = document.querySelector("#id-check-msg-warn");
         idMessageWarn.style.display = "block"; // 경고 메시지 표시
         typoBoxes.forEach((box) => box.classList.add("invalid")); // TypoBox에 invalid 추가
     }
